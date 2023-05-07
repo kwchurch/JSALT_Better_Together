@@ -2,10 +2,14 @@
 
 <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a>
 
+Large data files are <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">here</a>
+
 To install
 ```sh
 git clone https://github.com/kwchurch/JSALT_Better_Together
 pip install -r requirements.txt
+# set environment variable JSALTsrc to the src directory in the repo.
+# set environment variable JSALTdir to your local copy of the large data files.
 ```
 
 Some examples of usage
