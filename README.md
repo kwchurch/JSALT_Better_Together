@@ -1,8 +1,9 @@
-# JSALT_Better_Together
+# Better Together Team Github
+# JSALT (Jelinek Summer Workshop on Speech and Language Technology): 
 
-<a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a>
+Team Page: <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a>
 
-Large data files are <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">here</a>
+If you have access to Globus, you can download large data files from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">here</a>.
 
 To install
 ```sh
