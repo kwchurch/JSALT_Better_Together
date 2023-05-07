@@ -25,10 +25,13 @@ def id_ify(s):
     if '/' in s: return s
     return 'CorpusId:' + s
 
+def one_line_ify(s):
+    return s.replace('\r', ' ').replace('\n', ' ')
+
 def print_paper(paper, link_type, query):
     # print(paper)
     if 'externalIds' in paper and not paper['externalIds'] is None:
-        print('\t'.join(map(str, [link_type, query, paper['externalIds']['CorpusId'], paper['citationCount'], paper['title']])))
+        print('\t'.join(map(str, [link_type, query, paper['externalIds']['CorpusId'], paper['citationCount'], one_line_ify(paper['title'])])))
     else:
         print('\t'.join(map(str, [link_type, query, '*** ERROR ***', paper])))
 
@@ -44,7 +47,7 @@ for line in sys.stdin:
         print(cmd)
         print(j)
 
-    print('\t'.join(map(str,['query', str(j['referenceCount']) + ' references', str(j['citationCount']) + ' citations', j['title']])))
+    print('\t'.join(map(str,['query', str(j['referenceCount']) + ' references', str(j['citationCount']) + ' citations', one_line_ify(j['title'])])))
 
     if 'references' in j and not j['references'] is None:
         for reference in j['references']:

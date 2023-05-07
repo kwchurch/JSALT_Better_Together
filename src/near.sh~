@@ -1,0 +1,23 @@
+#!/bin/sh
+
+query=$1
+
+JSALTdir=/work/k.church/JSALT-2023/
+JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+
+specter=$JSALTdir/semantic_scholar/embeddings/specter
+proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+
+echo 'Specter\n'
+
+# Find 10 papers near query (using specter embedding)
+echo $query | $JSALTsrc/C/near_with_floats --floats $specter/embedding.K768.f --record_size 768 --offset 5 --map $specter/map $specter/idx.???.i |
+cut -f1,3  | sort -nr -u | head |
+$JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/papers/corpusId_to_href --fields '-L'
+
+echo 'Proposed\n'
+
+# Same as above, but replace specter embedding with proposed embedding
+echo $query | $JSALTsrc/C/near_with_floats --floats $proposed/embedding.K280.f --record_size 280 --offset 5 --map $proposed/map $proposed/idx.??.i |
+cut -f1,3  | sort -nr -u | head |
+$JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/papers/corpusId_to_href --fields '-L'
