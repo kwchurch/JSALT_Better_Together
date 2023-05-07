@@ -26,7 +26,7 @@ cat $spectertmp $proposedtmp | cut -f2- | $JSALTsrc/C/pairs_to_cos  --floats $sp
 
 cat $spectertmp $proposedtmp | cut -f2- | $JSALTsrc/C/pairs_to_cos  --floats $proposed/embedding.K280.f --record_size 280 --map $proposed/map > $bothtmp.2
 
-paste $bothtmp.[12] | cut -f1,4,6 | awk -F'\t' '{printf "%0.3f\t%s\t%s\n", $1,$2,$3}' | 
+paste $bothtmp.[12] | cut -f1,4,6 | awk -F'\t' '{printf "%0.3f\t%0.3f\t%s\n", $1,$2,$3}' | 
 $JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/papers/corpusId_to_href --fields '--L' |
 awk 'BEGIN {OFS="\t"; method="Specter"; print "Method", "cosS", "cosP", "paper"}; 
            {print method, $0}

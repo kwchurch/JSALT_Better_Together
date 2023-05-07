@@ -80,6 +80,7 @@ output.
 $JSALTsrc/near.sh 3051291 5 | $JSALTsrc/tsv_to_html.sh
 ```
 
+
 <html><table><tr>
 <th>Method</th>
 <th>cosS</th>
@@ -89,61 +90,61 @@ $JSALTsrc/near.sh 3051291 5 | $JSALTsrc/tsv_to_html.sh
 <tr>
 <td>Specter</td>
 <td>1.000</td>
-<td>1.000000</td>
+<td>1.000</td>
 <td><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83">5853: DeepWalk: online learning of social representations</a></td>
 </tr>
 <tr>
 <td>Specter</td>
 <td>0.984</td>
-<td>0.826657</td>
+<td>0.827</td>
 <td><a href="https://www.semanticscholar.org/paper/93b050f5bf0567a675979cd564cbe66ff9c3a78f">0: Learning of Social Representations</a></td>
 </tr>
 <tr>
 <td>Specter</td>
 <td>0.809</td>
-<td>0.951167</td>
+<td>0.951</td>
 <td><a href="https://www.semanticscholar.org/paper/21ee2cc0bf41c1b74efb6104edd4df73416b46c1">2: Topic-aware latent models for representation learning on networks</a></td>
 </tr>
 <tr>
 <td>Specter</td>
 <td>0.797</td>
-<td>0.946531</td>
+<td>0.947</td>
 <td><a href="https://www.semanticscholar.org/paper/e294339b402ce055d5a5198becc35b2dbbd20a9a">4: SimWalk: Learning network latent representations with social relation similarity</a></td>
 </tr>
 <tr>
 <td>Specter</td>
 <td>0.783</td>
-<td>0.033244</td>
+<td>0.033</td>
 <td><a href="https://www.semanticscholar.org/paper/bb11bec51c2e069ef0ddba4eb3117c9dbc8a4584">0: Deep Representation Learning on Complex Graphs</a></td>
 </tr>
 <tr>
 <td>Proposed</td>
 <td>1.000</td>
-<td>1.000000</td>
+<td>1.000</td>
 <td><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83">5853: DeepWalk: online learning of social representations</a></td>
 </tr>
 <tr>
 <td>Proposed</td>
 <td>0.771</td>
-<td>0.999257</td>
+<td>0.999</td>
 <td><a href="https://www.semanticscholar.org/paper/36ee2c8bd605afd48035d15fdc6b8c8842363376">6007: node2vec: Scalable Feature Learning for Networks</a></td>
 </tr>
 <tr>
 <td>Proposed</td>
 <td>0.711</td>
-<td>0.998433</td>
+<td>0.998</td>
 <td><a href="https://www.semanticscholar.org/paper/0834e74304b547c9354b6d7da6fa78ef47a48fa8">3632: LINE: Large-scale Information Network Embedding</a></td>
 </tr>
 <tr>
 <td>Proposed</td>
 <td>0.664</td>
-<td>0.996686</td>
+<td>0.997</td>
 <td><a href="https://www.semanticscholar.org/paper/006906b6bbe5c1f378cde9fd86de1ce9e6b131da">1025: A Comprehensive Survey of Graph Embedding: Problems, Techniques, and Applications</a></td>
 </tr>
 <tr>
 <td>Proposed</td>
 <td>0.711</td>
-<td>0.996354</td>
+<td>0.996</td>
 <td><a href="https://www.semanticscholar.org/paper/c0af91371f426ff92117d2ccdadb2032bec23d2c">1157: metapath2vec: Scalable Representation Learning for Heterogeneous Networks</a></td>
 </tr>
 </table></html>
