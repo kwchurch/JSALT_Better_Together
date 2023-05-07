@@ -5,7 +5,7 @@
 
 void usage()
 {
-  fatal("usage: id_to_floats --floats floats --record_size K [--map xxx] [--new_map xxx.L] --binary_output < ids");
+  fatal("usage: id_to_floats --dir \n or\n id_to_floats --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
 }
 
 struct node_map{
@@ -137,6 +137,27 @@ void return_floats(float *fltlist, int how_many)
     }
 }
 
+void get_args_from_dir(char *dir)
+{
+  // fprintf(stderr, "get_args_from_dir: %s\n", dir);
+  char buf[1024];
+  sprintf(buf, "%s/record_size", dir);
+
+  FILE *fd = fopen(buf, "r");
+  fscanf(fd, "%d", &record_size);
+  fclose(fd);
+
+  // fprintf(stderr, "record_size = %d\n", record_size);
+  
+  sprintf(buf, "%s/embedding.f", dir);
+  floats = (float *)mmapfile(buf, &nfloats);
+  nfloats /= sizeof(float);
+
+  sprintf(buf, "%s/map", dir);
+  init_node_map(buf);
+  // fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
+}    
+
 int main(int ac, char **av)
 {
 
@@ -144,7 +165,8 @@ int main(int ac, char **av)
   int binary_output = 0;
   long prev_i=-1, i, j;
   for(i=1;i<ac;i++) {
-    if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
+    if(strcmp(av[i], "--dir") == 0) get_args_from_dir(av[++i]);
+    else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     else if(strcmp(av[i], "--floats") == 0) {
       floats = (float *)mmapfile(av[++i], &nfloats);
       nfloats /= sizeof(float);

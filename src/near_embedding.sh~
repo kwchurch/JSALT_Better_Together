@@ -1,0 +1,14 @@
+#!/bin/sh
+
+embeddingDir=$1
+nbest=$2
+
+JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+
+K=`cat $embeddingDir/record_size`
+emb=$embeddingDir/embedding.f
+map=$embeddingDir/map
+
+# Find nbest papers near query (using specter embedding)
+$JSALTsrc/C/near_with_floats --floats $emb --record_size $K --offset 5 --map $map $embeddingDir/idx.*.i |
+cut -f1-3  | sort -nr -u

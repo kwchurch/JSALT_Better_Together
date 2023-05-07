@@ -9,10 +9,11 @@ int verbose = 0;
 int show_details = 0;
 int find_best = 1;
 int threshold = 0;
+int record_size = -1;
 
 void usage()
 {
-  fatal("usage: echo papers | near_with_floats [--offset <n>] [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] index1 index2 index3 > report");
+  fatal("usage: echo papers | near_with_floats --dir <dir> [--offset <n>] [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] index1 index2 index3 > report");
 }
 
 
@@ -235,18 +236,40 @@ long *find_near(long paper, struct idx *idx, int offset, int *nfound)
   return idx->idx + start;
 }
 
+void get_args_from_dir(char *dir)
+{
+  fprintf(stderr, "get_args_from_dir: %s\n", dir);
+  char buf[1024];
+  sprintf(buf, "%s/record_size", dir);
+
+  FILE *fd = fopen(buf, "r");
+  fscanf(fd, "%d", &record_size);
+  fclose(fd);
+  
+  sprintf(buf, "%s/embedding.f", dir);
+  floats = (float *)mmapfile(buf, &nfloats);
+  nfloats /= sizeof(float);
+
+  sprintf(buf, "%s/map", dir);
+  init_node_map(buf);
+  fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
+}    
+
 int main(int ac, char **av)
 {
   int i;
   long old_paper_id;
   struct idx *indexes;
   int nindexes = -1;
-  int record_size = -1;
   int offset = -1;
   int no_map = 1;
 
   for(i=1;i<ac;i++) {
-    if(strcmp(av[i], "--help") == 0) usage();
+    if(strcmp(av[i], "--dir") == 0) {
+      no_map = 0;
+      get_args_from_dir(av[++i]);
+    }
+    else if(strcmp(av[i], "--help") == 0) usage();
     else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
     else if(strcmp(av[i], "--floats") == 0) {
@@ -265,8 +288,6 @@ int main(int ac, char **av)
     else if(strcmp(av[i], "--urls") == 0) init_urls(av[++i]);
     else {
       nindexes=ac-i;
-      // fprintf(stderr, "offset = %d, record_size = %d, nindexes = %d, ac = %d, av[%d] = %s\n", offset, record_size, nindexes, ac, i, av[i]);
-      // if(verbose) fprintf(stderr, "i = %d; threshold = %d; find_best = %d; show_details = %d\n", i, threshold, find_best, show_details);
       indexes = init_indexes(av+i, nindexes);
       break;
     }
@@ -279,11 +300,8 @@ int main(int ac, char **av)
 
   while(scanf("%ld", &old_paper_id) == 1) {
     long new_paper_id = map_node(old_paper_id, OLD_TO_NEW, no_map);
-    // fprintf(stderr, "old_paper_id = %ld, new_paper_id = %ld\n", old_paper_id, new_paper_id);
     for(i=0;i<nindexes;i++) {
-      // fprintf(stderr, "i = %d\n", i);
       if(good_index(indexes+i) && new_paper_id >= 0) {
-	// fprintf(stderr, "i = %d (good)\n", i);
 	int nfound;
 	long *found = find_near(new_paper_id, indexes + i, offset, &nfound);
 	long *end = found + nfound;

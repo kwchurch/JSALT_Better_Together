@@ -1,19 +1,33 @@
+Useful links:
 
-https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F
+* Github: https://github.com/kwchurch/JSALT_Better_Together
+* Team Page: <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a>
+* large datasets: https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F
+* Zoom Link: https://northeastern.zoom.us/j/8963791015
+* Meeting Notes: https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit
+
 JSALTdir=/work/k.church/JSALT-2023/
 JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
 specter=$JSALTdir/semantic_scholar/embeddings/specter
 proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 
+# We assume that both $specter and $proposed directories contain the following files
+* record_size: 768 for $specter and 280 for $proposed
+* map.new_to_old.i
+* map.old_to_new.i
+
+
+
+
 query=232040593
 
 # Find 10 papers near query (using specter embedding)
-echo $query | $JSALTsrc/C/near_with_floats --floats $specter/embedding.K768.f --record_size 768 --offset 5 --map $specter/map $specter/idx.???.i > /tmp/near.specter
+echo $query | $JSALTsrc/C/near_with_floats --dir $specter $specter/map $specter/idx.*.i > /tmp/near.specter
 cut -f1,3 < /tmp/near.specter | sort -nr -u | head
 
 # Same as above, but replace specter embedding with proposed embedding
-echo $query | $JSALTsrc/C/near_with_floats --floats $proposed/embedding.K280.f --record_size 280 --offset 5 --map $proposed/map $proposed/idx.??.i > /tmp/near.proposed
+echo $query | $JSALTsrc/C/near_with_floats --dir $proposed $proposed/idx.*.i > /tmp/near.proposed
 cut -f1,3 < /tmp/near.proposed | sort -nr -u | head
 
 # map ids in second col to URLs
@@ -33,17 +47,23 @@ echo $query |
      egrep -v ERROR > /tmp/references
 
 
-cat /tmp/references | $JSALTsrc/C/near_with_floats --floats $specter/embedding.K768.f --record_size 768 --offset 5 --map $specter/map $specter/idx.???.i > /tmp/references.specter
-cat /tmp/references | $JSALTsrc/C/near_with_floats --floats $proposed/embedding.K280.f --record_size 280 --offset 5 --map $proposed/map $proposed/idx.??.i > /tmp/references.proposed
+# This is too slow (needs to map in too much stuff)
+# THis will find papers near all the references
+# cat /tmp/references | $JSALTsrc/C/near_with_floats --floats $specter/embedding.K768.f --record_size 768 --offset 5 --map $specter/map $specter/idx.???.i > /tmp/references.specter
+# cat /tmp/references | $JSALTsrc/C/near_with_floats --floats $proposed/embedding.K280.f --record_size 280 --offset 5 --map $proposed/map $proposed/idx.??.i > /tmp/references.proposed
 
 cat /tmp/references | $JSALTsrc/C/id_to_floats --record_size 768 --map $specter/map --floats $specter/embedding.K768.f > /tmp/references.vec.specter
 cat /tmp/references | $JSALTsrc/C/id_to_floats --record_size 280 --map $proposed/map --floats $proposed/embedding.K280.f > /tmp/references.vec.proposed
 
+cat /tmp/references | $JSALTsrc/C/id_to_floats --dir $specter > /tmp/references.vec.specter
+cat /tmp/references | $JSALTsrc/C/id_to_floats --dir $proposed > /tmp/references.vec.proposed
+
+
 # Each line starts with two ids
 # followed by K floats
 awk '{print NF, FILENAME}' /tmp/references.vec.* | uniq -c
-    143 282 /tmp/references.proposed
-    143 770 /tmp/references.specter
+#    143 282 /tmp/references.proposed
+#     143 770 /tmp/references.specter
 
 cd /home/k.church/to_go/authors2/details
 for f in *

@@ -5,7 +5,7 @@
 
 void usage()
 {
-  fatal("usage: pairs_to_cos --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
+  fatal("usage: pairs_to_cos --dir \n or\n pairs_to_cos --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
 }
 
 struct node_map{
@@ -131,13 +131,36 @@ void init_node_map(char *filename)
   the_node_map->nnew_to_old /= sizeof(int);
 }
 
+void get_args_from_dir(char *dir)
+{
+  fprintf(stderr, "get_args_from_dir: %s\n", dir);
+  char buf[1024];
+  sprintf(buf, "%s/record_size", dir);
+
+  FILE *fd = fopen(buf, "r");
+  fscanf(fd, "%d", &record_size);
+  fclose(fd);
+  
+  sprintf(buf, "%s/embedding.f", dir);
+  floats = (float *)mmapfile(buf, &nfloats);
+  nfloats /= sizeof(float);
+
+  sprintf(buf, "%s/map", dir);
+  init_node_map(buf);
+  fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
+}    
+
 int main(int ac, char **av)
 {
 
   int no_map = 1;
   long prev_i=-1, i, j;
   for(i=1;i<ac;i++) {
-    if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
+    if(strcmp(av[i], "--dir") == 0) {
+      no_map = 0;
+      get_args_from_dir(av[++i]);
+    }
+    else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     else if(strcmp(av[i], "--floats") == 0) {
       floats = (float *)mmapfile(av[++i], &nfloats);
       nfloats /= sizeof(float);

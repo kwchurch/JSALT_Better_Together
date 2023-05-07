@@ -27,17 +27,17 @@ Some useful fields:
 <li>title</li>
 <li>abstract</li>
 <li>authors</li>
-<li>externalIds</li>
+<li>externalIds (Semantic Scholar receives data from 7 sources: MAG (182M papers), DOI (114M papers), PubMed (35M), DBLP (6M), PubMedCentral (5M), ArXiv (2M), ACL (80k) </li>
 <li>citationCount</li>
 <li>referenceCount</li>
-<li>citations</li>
-<li>references</li>
-<li>embedding</li>
+<li>citations (list of (up to 1000) papers)</li>
+<li>references (list of (up to 1000) papers)</li>
+<li>embedding (Specter 1 encoding of titles and abstracts)</li>
 <li>venue</li>
 <li>fieldsOfStudy</li>
 <li>s2fieldsOfStudy</li>
-<li>openAccessPdf</li>
-<li>tldr</li>
+<li>openAccessPdf (URL to pdf versions of paper)</li>
+<li>tldr (too long; didn't read -- summaries, often based on abstracts</li>
 </ol>
 
 
@@ -85,6 +85,7 @@ output.
 $JSALTsrc/near.sh 3051291 5 | $JSALTsrc/tsv_to_html.sh
 ```
 
+Many more examples can be found <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/examples/near/">here</a>.
 
 <html><table><tr>
 <th>Method</th>
@@ -132,7 +133,7 @@ $JSALTsrc/near.sh 3051291 5 | $JSALTsrc/tsv_to_html.sh
 <td>Proposed</td>
 <td>0.771</td>
 <td>0.999</td>
-<td><a href="https://www.semanticscholar.org/paper/36ee2c8bd605afd48035d15fdc6b8c8842363376">6007: node2vec: Scalable Feature Learning for Networks</a></td>
+https://www.semanticscholar.org/paper/36ee2c8bd605afd48035d15fdc6b8c8842363376<td><a href="https://www.semanticscholar.org/paper/36ee2c8bd605afd48035d15fdc6b8c8842363376">6007: node2vec: Scalable Feature Learning for Networks</a></td>
 </tr>
 <tr>
 <td>Proposed</td>
