@@ -45,3 +45,9 @@ awk '{print NF, FILENAME}' /tmp/references.vec.* | uniq -c
     143 282 /tmp/references.proposed
     143 770 /tmp/references.specter
 
+cd /home/k.church/to_go/authors2/details
+for f in *
+do
+echo $f
+sed 's/[.]html/.md/g' < $f/index.html > /work/k.church/githubs/JSALT_Better_Together/near/authors/details/$f/index.md
+done
