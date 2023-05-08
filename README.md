@@ -1,7 +1,7 @@
 # Better Together Team Github
 # JSALT (Jelinek Summer Workshop on Speech and Language Technology): 
 
-Useful links:
+<h2>Useful links</h2>
 <ol>
 <li>Github: https://github.com/kwchurch/JSALT_Better_Together</li>
 <li>Slides: included in Github</li>
@@ -11,6 +11,7 @@ Useful links:
 <li>Meeting Notes: <a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Google Doc</a></li>
 </ol>
 
+<h2>Deliverables</h2>
 <ol>
 <li>Better access to literature</li>
 <li>Resources: 
@@ -27,6 +28,13 @@ Useful links:
 <li>Improve methods for assigning papers to reviewers</li>
 <li>Theory: Unified framework of deep nets and Linear Algebra</li>
 </ol>
+
+<h2>Installation</h2>
+
+```sh
+git clone https://github.com/kwchurch/JSALT_Better_Together
+pip install -r requirements
+```
 
 Some useful environment variables; you may need to set these up differently, depending on where you put stuff.
 
@@ -46,6 +54,8 @@ proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 <li>ids.*.i: indexes for approximate nearest neighbors (ANN)</li>
 <li>ids.*.i.inv: inverse of above</li>
 </ol>
+
+<h2>Examples</h2>
 
 ```sh
 query=232040593
