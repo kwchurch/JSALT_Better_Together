@@ -6,10 +6,12 @@ Useful links:
 <li>Github: https://github.com/kwchurch/JSALT_Better_Together</li>
 <li>Slides: included in Github</li>
 <li>Team Page: <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a></li>
-<li>large datasets: https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F</li>
+<li>large datasets: <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">Globus</a></li>
 <li>Zoom Link: https://northeastern.zoom.us/j/8963791015</li>
-<li>Meeting Notes: https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit</li>
+<li>Meeting Notes: <a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Google Doc</a></li>
 </ol>
+
+Some useful environment variables; you may need to set these up differently, depending on where you put stuff.
 
 ```sh
 JSALTdir=/work/k.church/JSALT-2023/
@@ -22,8 +24,10 @@ proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 # We assume that both $specter and $proposed directories contain the following files
 <ol>
 <li>record_size: 768 for $specter and 280 for $proposed</li>
-<li>map.new_to_old.i</li>
-<li>map.old_to_new.i</li>
+<li>map.new_to_old.i: map offsets in embedding to corpusIds</li>
+<li>map.old_to_new.i: inverse of above</li>
+<li>ids.*.i: indexes for approximate nearest neighbors (ANN)</li>
+<li>ids.*.i.inv: inverse of above</li>
 </ol>
 
 ```sh
