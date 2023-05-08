@@ -58,8 +58,8 @@ echo $query |
 # cat /tmp/references | $JSALTsrc/C/near_with_floats --floats $specter/embedding.K768.f --record_size 768 --offset 5 --map $specter/map $specter/idx.???.i > /tmp/references.specter
 # cat /tmp/references | $JSALTsrc/C/near_with_floats --floats $proposed/embedding.K280.f --record_size 280 --offset 5 --map $proposed/map $proposed/idx.??.i > /tmp/references.proposed
 
-cat /tmp/references | $JSALTsrc/C/id_to_floats --record_size 768 --map $specter/map --floats $specter/embedding.K768.f > /tmp/references.vec.specter
-cat /tmp/references | $JSALTsrc/C/id_to_floats --record_size 280 --map $proposed/map --floats $proposed/embedding.K280.f > /tmp/references.vec.proposed
+cat /tmp/references | $JSALTsrc/C/id_to_floats --record_size 768 --map $specter/map --floats $specter/embedding.f > /tmp/references.vec.specter
+cat /tmp/references | $JSALTsrc/C/id_to_floats --record_size 280 --map $proposed/map --floats $proposed/embedding.f > /tmp/references.vec.proposed
 
 cat /tmp/references | $JSALTsrc/C/id_to_floats --dir $specter > /tmp/references.vec.specter
 cat /tmp/references | $JSALTsrc/C/id_to_floats --dir $proposed > /tmp/references.vec.proposed

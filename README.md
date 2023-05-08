@@ -33,7 +33,7 @@
 
 ```sh
 git clone https://github.com/kwchurch/JSALT_Better_Together
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 Some useful environment variables; you may need to set these up differently, depending on where you put stuff.
@@ -46,13 +46,13 @@ specter=$JSALTdir/semantic_scholar/embeddings/specter
 proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 ```
 
-# We assume that both $specter and $proposed directories contain the following files
+We assume that both $specter and $proposed directories contain the following files
 <ol>
 <li>record_size: 768 for $specter and 280 for $proposed</li>
 <li>map.new_to_old.i: map offsets in embedding to corpusIds</li>
 <li>map.old_to_new.i: inverse of above</li>
-<li>ids.*.i: indexes for approximate nearest neighbors (ANN)</li>
-<li>ids.*.i.inv: inverse of above</li>
+<li>idx.*.i: indexes for approximate nearest neighbors (ANN)</li>
+<li>idx.*.i.inv: inverse of above</li>
 </ol>
 
 <h2>Examples</h2>

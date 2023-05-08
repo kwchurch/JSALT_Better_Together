@@ -201,9 +201,8 @@ int main(int ac, char **av)
 	fatal("write failed");
     }
     else {
-      float *ken_i = floats + new_i * record_size;
       printf("%ld %ld", i, new_i);
-      return_floats(ken_i, record_size);
+      return_floats(floats + new_i * record_size, record_size);
       printf("\n");
     }
   }
