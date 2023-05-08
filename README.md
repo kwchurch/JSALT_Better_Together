@@ -11,6 +11,23 @@ Useful links:
 <li>Meeting Notes: <a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Google Doc</a></li>
 </ol>
 
+<ol>
+<li>Better access to literature</li>
+<li>Resources: 
+    <ol>
+    <li>Many embeddings for many papers</li>
+    <li>More models to be posted on HuggingFace</li>
+    <li>Code to be posted on GitHub</li></ol>
+</li>
+<li>Methods to compare and contrast across small (and large) collections of documents</li>
+<li>Support incremental updates to embeddings based on citation graphs</li>
+<li>Evaluation: Better numbers, as well as better benchmarks</li>
+<li>Establish that combinations of text and links are better together (than either by itself)</li>
+<li>Establish that citing sentences are useful</li>
+<li>Improve methods for assigning papers to reviewers</li>
+<li>Theory: Unified framework of deep nets and Linear Algebra</li>
+</ol>
+
 Some useful environment variables; you may need to set these up differently, depending on where you put stuff.
 
 ```sh
