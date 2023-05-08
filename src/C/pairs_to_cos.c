@@ -133,7 +133,7 @@ void init_node_map(char *filename)
 
 void get_args_from_dir(char *dir)
 {
-  fprintf(stderr, "get_args_from_dir: %s\n", dir);
+  // fprintf(stderr, "get_args_from_dir: %s\n", dir);
   char buf[1024];
   sprintf(buf, "%s/record_size", dir);
 
@@ -147,7 +147,7 @@ void get_args_from_dir(char *dir)
 
   sprintf(buf, "%s/map", dir);
   init_node_map(buf);
-  fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
+  // fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
 }    
 
 int main(int ac, char **av)

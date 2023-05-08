@@ -238,12 +238,13 @@ long *find_near(long paper, struct idx *idx, int offset, int *nfound)
 
 void get_args_from_dir(char *dir)
 {
-  fprintf(stderr, "get_args_from_dir: %s\n", dir);
+  // fprintf(stderr, "get_args_from_dir: %s\n", dir);
   char buf[1024];
   sprintf(buf, "%s/record_size", dir);
 
   FILE *fd = fopen(buf, "r");
   fscanf(fd, "%d", &record_size);
+  // fprintf(stderr, "record_size: %d\n", record_size);
   fclose(fd);
   
   sprintf(buf, "%s/embedding.f", dir);
@@ -252,7 +253,7 @@ void get_args_from_dir(char *dir)
 
   sprintf(buf, "%s/map", dir);
   init_node_map(buf);
-  fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
+  // fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
 }    
 
 int main(int ac, char **av)

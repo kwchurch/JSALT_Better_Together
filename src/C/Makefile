@@ -3,7 +3,7 @@ all: freq_row_piece freq_row check_order XY_to_bigrams print_bigrams unprint_big
 	cocitations floats_to_random_bytes index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
 	near near_with_floats calibrate_random_bytes cbind_bytes find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
-	x_to_y
+	x_to_y vector_near_with_floats
 
 util.o: util.c util.h
 	cc -c util.c
@@ -91,6 +91,9 @@ near: near.c util.o
 
 near_with_floats: near_with_floats.c util.o
 	cc -o near_with_floats near_with_floats.c util.o -lm
+
+vector_near_with_floats: vector_near_with_floats.c util.o
+	cc -o vector_near_with_floats vector_near_with_floats.c util.o -lm
 
 score_with_floats: score_with_floats.c util.o
 	cc -o score_with_floats score_with_floats.c util.o -lm

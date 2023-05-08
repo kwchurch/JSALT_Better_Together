@@ -22,6 +22,12 @@ proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 
 query=232040593
 
+# Find 5 papers near $query in Specter, and 5 more in Proposed
+
+$JSALTsrc/near.sh $query 5
+
+Under the covers (details on that script above):
+
 # Find 10 papers near query (using specter embedding)
 echo $query | $JSALTsrc/C/near_with_floats --dir $specter $specter/map $specter/idx.*.i > /tmp/near.specter
 cut -f1,3 < /tmp/near.specter | sort -nr -u | head
@@ -71,3 +77,6 @@ do
 echo $f
 sed 's/[.]html/.md/g' < $f/index.html > /work/k.church/githubs/JSALT_Better_Together/near/authors/details/$f/index.md
 done
+
+
+$JSALTsrc/C/floats_to_random_bytes 280 6  10 <  $proposed/embedding.f > $proposed/idx.10.i.B6

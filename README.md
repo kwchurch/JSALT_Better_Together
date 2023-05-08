@@ -1,6 +1,37 @@
 # Better Together Team Github
 # JSALT (Jelinek Summer Workshop on Speech and Language Technology): 
 
+Useful links:
+<ol>
+<li>Github: https://github.com/kwchurch/JSALT_Better_Together</li>
+<li>Slides: included in Github</li>
+<li>Team Page: <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a></li>
+<li>large datasets: https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F</li>
+<li>Zoom Link: https://northeastern.zoom.us/j/8963791015</li>
+<li>Meeting Notes: https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit</li>
+</ol>
+
+```sh
+JSALTdir=/work/k.church/JSALT-2023/
+JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+
+specter=$JSALTdir/semantic_scholar/embeddings/specter
+proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+```
+
+# We assume that both $specter and $proposed directories contain the following files
+<ol>
+<li>record_size: 768 for $specter and 280 for $proposed</li>
+<li>map.new_to_old.i</li>
+<li>map.old_to_new.i</li>
+</ol>
+
+```sh
+query=232040593
+# Find 5 papers near $query in Specter, and 5 more in Proposed
+$JSALTsrc/near.sh $query 5
+```
+
 Team Page: <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a>
 
 If you have access to Globus, you can download large data files from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">here</a>.

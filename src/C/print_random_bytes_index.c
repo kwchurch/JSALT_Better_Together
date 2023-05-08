@@ -65,7 +65,7 @@ int main(int ac, char **av)
   // char buf[1024];
 
   init_hamming_dist1_memos();
-  fprintf(stderr, "memos initialized\n");
+  // fprintf(stderr, "memos initialized\n");
 
   int mode=ASCII_MODE;
 

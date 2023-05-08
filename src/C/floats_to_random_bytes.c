@@ -111,8 +111,6 @@ int main(int ac, char **av)
   if(!float_buffer || !random_floats) fatal("malloc failed");
   
   init_random_floats(random_floats, K * N * 8);
-  // if(RAND_bytes((void *)random_floats, sizeof(float) * K * N * 8) != 1)
-  // fatal("random failed");
 
   while(fread(float_buffer, K4, 1, stdin) == 1)
     do_it(float_buffer, random_floats, K, N);
