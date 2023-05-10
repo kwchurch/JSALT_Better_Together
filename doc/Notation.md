@@ -3,7 +3,7 @@
 <ol>
 <li>Let <i>N</i> = 200M be the number of nodes (documents) in the collection</li>
 <li>Let <i>E</i> = 2B be the number of edges (citations) </li>
-<li>Let <i>G=(N,E)</i> be a graph with <i>N</i> nodes and <i>E</i> edges.  An example of a graph is $JSALTdir/citations.G.npz; see <a href="doc/graph.md">graph documentation</a> for an exmaple.</li>
+<li>Let <i>G=(N,E)</i> be a graph with <i>N</i> nodes and <i>E</i> edges.  An example of a graph is $JSALTdir/citations.G.npz; see <a href="graph.md">graph documentation</a> for an exmaple.</li>
 <li>Let <i>K</i> be the number of hidden dimensions</li>
 <li>Let <i>d</i> be a document (not hidden dimensions)</li>
 <li>Let <i>s</i> be a string</li>

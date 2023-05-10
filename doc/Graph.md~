@@ -13,13 +13,11 @@ f='/work/k.church/JSALT-2023/semantic_scholar/releases/2022-12-02/database/citat
 # Note: this is very slow.
 G=scipy.sparse.load_npz(f)
 
-# N by N matrix, with N approx 270M
 G.shape
 # (270000000, 270000000)
 G.dtype
 dtype('bool')
 
-# E edges, with E approx 2B
 G.count_nonzero()/1e9
 # 2.148022917
 
