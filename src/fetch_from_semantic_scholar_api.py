@@ -18,7 +18,7 @@ args = parser.parse_args()
 def id_ify(s):
     if args.search or len(s) == 40 or args.API == 'author':
         return s
-    for prefix in ['CorpusId:', 'PMID:', 'ACL:', 'arXiv:']:
+    for prefix in ['CorpusId:', 'PMID:', 'ACL:', 'arXiv:', 'DBLP:', 'MAG:', 'PMID:']:
         if s.startswith(prefix):
             return s
     if '/' in s: return s
