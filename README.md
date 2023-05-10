@@ -70,7 +70,7 @@ pip install -r requirements.txt
 
 <h2>Reading List (and Pre-computed Output)</h2>
 
-See <a href="examples/similar_documents">here</a>, and especially <a href="examples/similar_documents/readling_list">this</a>.
+See <a href="examples/similar_documents">here</a>, and especially <a href="examples/similar_documents/reading_list">this</a>.
 The last example starts with papers we should all be reading, and finds some documents similar to those.
 
 
