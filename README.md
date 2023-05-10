@@ -27,6 +27,12 @@ n    <ol>
 <li>Establish that citing sentences are useful</li>
 <li>Improve methods for assigning papers to reviewers</li>
 <li>Theory: Unified framework of deep nets and Linear Algebra</li>
+<li>Bibliometrics: 
+   <ol>
+   <li>Predict citations of a paper over time.</li>
+   <li>Predict h-index of an author over time.</li>
+   <li>Find authors that publish too many papers</li>
+   </ol></li>
 </ol>
 
 <h2>Installation</h2>
