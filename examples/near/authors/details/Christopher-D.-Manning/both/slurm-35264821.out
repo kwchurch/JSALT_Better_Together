@@ -1,3 +1,0 @@
-calling index_ints
-calling cumsum
-fatal: malloc_ints: failed
