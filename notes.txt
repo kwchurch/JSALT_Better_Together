@@ -23,8 +23,13 @@ proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 query=232040593
 
 # Find 5 papers near $query in Specter, and 5 more in Proposed
+# This is slow the first time you run it, but it gets faster
+# after some warmup
 
 $JSALTsrc/near.sh $query 5
+
+# same as above, but outputs HTML
+$JSALTsrc/near.sh $query 5 | $JSALTsrc/tsv_to_html.sh
 
 Under the covers (details on that script above):
 
