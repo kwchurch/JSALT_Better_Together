@@ -15,7 +15,7 @@
 <ol>
 <li>Better access to literature</li>
 <li>Resources: 
-n    <ol>
+    <ol>
     <li>Many embeddings for many papers</li>
     <li>More models to be posted on HuggingFace</li>
     <li>Code to be posted on GitHub</li></ol>
