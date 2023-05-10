@@ -5,15 +5,20 @@ Some recommendations:
 <ol>
 <li>Methods
     <ol>
-    <li><a href="https://aclanthology.org/2020.acl-main.207.pdf">Specter</a> (<a href="Specter.md">similar documents</a>)</li>
-    <li><a href="https://www.ijcai.org/proceedings/2019/0594.pdf">ProNE</a> (<a href="ProNE.md">similar documents</a>)</li>
-    <li><a href="https://dl.acm.org/doi/10.1145/2806416.2806512">GraRep</a></li>
+    <li><a href="https://aclanthology.org/2020.acl-main.207.pdf">Specter</a> (<a href="Specter.md">similar documents</a>)
+(<a href="https://huggingface.co/allenai/specter2">HuggingFace</a>)
+</li>
+    <li><a href="https://www.ijcai.org/proceedings/2019/0594.pdf">ProNE</a> (<a href="ProNE.md">similar documents</a>) 
+(<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/prone.py">code</a>)</li>
+    <li><a href="https://dl.acm.org/doi/10.1145/2806416.2806512">GraRep</a>
+(<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/grarep.py">code</a>)
+</li>
     </ol>
 </li>
 <li>Evaluation Benchmarks
     <ol>
     <li><a href="https://arxiv.org/pdf/2103.09430.pdf">OGB (Open Graph Benchmark) (<a href="OGB_Benchmarks.md">similar documents</a>)</a></li>
-    <li><a href="https://arxiv.org/abs/2211.13308">SciRepEval</a></li>
+    <li><a href="https://arxiv.org/abs/2211.13308">SciRepEval</a> (<a href="https://huggingface.co/datasets/allenai/scirepeval">HuggingFace</a>)</li>
     </ol>
 </li>
 <li>Text Books
