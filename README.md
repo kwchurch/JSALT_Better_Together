@@ -9,7 +9,8 @@
 <li><a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">large datasets from Globus</a></li>
 <li><a href="slides">Slides</li>
 <li><a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Meeting Notes</a></li>
-<li><a ref="doc/deliverables.md">Deliverables</a></li>
+<li><a href="doc/Notation.md">Notation</a></li>
+<li><a href="doc/deliverables.md">Deliverables</a></li>
 <li><a href="examples/similar_documents/reading_list">Reading List</a></li>
 </ol>
 
