@@ -1,4 +1,4 @@
-# Readling List
+# Reading List
 
 Some recommendations:
 
