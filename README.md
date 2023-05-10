@@ -3,36 +3,14 @@
 
 <h2>Useful links</h2>
 <ol>
-<li>Github: https://github.com/kwchurch/JSALT_Better_Together</li>
-<li>Slides: included in Github</li>
-<li>Team Page: <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Better Together: Text + Context</a></li>
-<li>large datasets: <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">Globus</a></li>
-<li>Zoom Link: https://northeastern.zoom.us/j/8963791015</li>
-<li>Meeting Notes: <a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Google Doc</a></li>
-</ol>
-
-<h2>Deliverables</h2>
-<ol>
-<li>Better access to literature</li>
-<li>Resources: 
-    <ol>
-    <li>Many embeddings for many papers</li>
-    <li>More models to be posted on HuggingFace</li>
-    <li>Code to be posted on GitHub</li></ol>
-</li>
-<li>Methods to compare and contrast across small (and large) collections of documents</li>
-<li>Support incremental updates to embeddings based on citation graphs</li>
-<li>Evaluation: Better numbers, as well as better benchmarks</li>
-<li>Establish that combinations of text and links are better together (than either by itself)</li>
-<li>Establish that citing sentences are useful</li>
-<li>Improve methods for assigning papers to reviewers</li>
-<li>Theory: Unified framework of deep nets and Linear Algebra</li>
-<li>Bibliometrics: 
-   <ol>
-   <li>Predict citations of a paper over time.</li>
-   <li>Predict h-index of an author over time.</li>
-   <li>Find authors that publish too many papers</li>
-   </ol></li>
+<li><a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Team Page</a></li>
+<li><a href="https://northeastern.zoom.us/j/8963791015"> Zoom Link</a></li>
+<li><a href="https://github.com/kwchurch/JSALT_Better_Together">Github with source code</a></li>
+<li><a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">large datasets from Globus</a></li>
+<li><a href="slides">Slides</li>
+<li><a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Meeting Notes</a></li>
+<li><a ref="doc/deliverables.md">Deliverables</a></li>
+<li><a href="examples/similar_documents/reading_list">Reading List</a></li>
 </ol>
 
 <h2>Installation</h2>
@@ -55,6 +33,10 @@ JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 specter=$JSALTdir/semantic_scholar/embeddings/specter
 proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 ```
+
+If you have access to the Northeastern Discovery Cluster,
+you can request access to the nlp group by filling out a ticket <a href="https://bit.ly/NURC-Software">here</a>,
+and then you can use my settings for these environment variables.
 
 We assume that both $specter and $proposed directories contain the following files
 <ol>
@@ -82,7 +64,14 @@ The last example starts with papers we should all be reading, and finds some doc
 
 <h2>Examples</h2>
 
+
 <ol>
-<li><a href="doc/semantic_scholar_API.md">Scripts for using Semantic Scholar API</a> (Depends on $JSALTsrc, but not JSALTdir)</li>
-<li><a href="doc/find_similar_docs.md">Find similar documents</a> (Depends on both $JSALTsrc and JSALTdir)</li>
+<li>Depend on $JSALTsrc, but not $JSALTdir
+   <ol>
+   <li><a href="doc/semantic_scholar_API.md">Scripts for using Semantic Scholar API</a></li>
+   <li><a href="doc/HuggingFace_embeddings.md">Scripts for using Models from HuggingFace</a></li>
+   </ol></li>
+<li>Depends on both $JSALTsrc and $JSALTdir
+   <ol><li><a href="doc/find_similar_docs.md">Find similar documents</a></li>
+   </ol></li>
 </ol>

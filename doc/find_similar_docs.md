@@ -1,7 +1,21 @@
 # Find Similar Documents
 
+<b>Note</b>, you will need large datasets from
+<a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">Globus</a></li>,
+unless you have access to the Discovery Cluster at Northeastern.
+<p>
+See <a href="../examples/similar_documents/">here</a> for more examples like the following.
+
 ```sh
 # make sure that $JSALTdir is assigned appropriately
+
+# Here are my enviornment variables:
+
+JSALTdir=/work/k.church/JSALT-2023/
+JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+
+specter=$JSALTdir/semantic_scholar/embeddings/specter
+proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 
 query=232040593
 
@@ -16,6 +30,7 @@ $JSALTsrc/near.sh $query 3 | $JSALTsrc/tsv_to_html.sh
 ```
 
 Here is the output from above:
+
 <html><table><tr>
 <th>Method</th>
 <th>cosS</th>
@@ -67,8 +82,6 @@ output.
 ```sh
 $JSALTsrc/near.sh 3051291 5 | $JSALTsrc/tsv_to_html.sh
 ```
-
-Many more examples can be found <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/examples/near/">here</a>.
 
 <html><table><tr>
 <th>Method</th>

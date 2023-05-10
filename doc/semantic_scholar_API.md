@@ -1,15 +1,32 @@
 # Scripts for Semantic Scholar API
 
+The Semantic Scholar API is <a href="https://www.semanticscholar.org/product/api">here</a>.
+The following scripts use that to:
+<ol>
+<li>Input paper ids; output useful fields (as json)</li>
+<li>Input paper ids; output references and citations (as tsv)</li>
+</ol>
+
+
 Some examples of usage
 
 ```sh
-echo 232040593 | src/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 232040593 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
 # {'paperId': '6d9727f1f058614cada3fe296eeebd8ec4fc512a', '
 #              externalIds': {'DBLP': 'conf/fat/BenderGMS21', 'DOI': '10.1145/3442188.3445922', 'CorpusId': 232040593},
 #              'title': 'On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜'}}`
 ```
 
-Some useful fields:
+There are many ways to specify paper ids.  All of these produce the same results:
+```sh
+echo 9558665 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 9e2caa39ac534744a180972a30a320ad0ae41ea3 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 'ACL:J90-1003' | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 'MAG:3031337294' | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 'DOI:10.3115/981623.981633' | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+```
+
+The argument to --fields can make use of the following:
 <ol>
 <li>title</li>
 <li>abstract</li>
@@ -19,26 +36,13 @@ Some useful fields:
 <li>referenceCount</li>
 <li>citations (list of (up to 1000) papers)</li>
 <li>references (list of (up to 1000) papers)</li>
-<li>embedding (Specter 1 encoding of titles and abstracts)</li>
+<li>embedding (vector of 768 floats from Specter 1, a BERT-like model; this vector encodes titles and abstracts)</li>
 <li>venue</li>
 <li>fieldsOfStudy</li>
 <li>s2fieldsOfStudy</li>
 <li>openAccessPdf (URL to pdf versions of paper)</li>
 <li>tldr (too long; didn't read -- summaries, often based on abstracts</li>
 </ol>
-
-
-```sh
-echo '232040593	On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?' | 
-src/text_to_embedding.py -o /tmp/foobar
-```
-
-This will read lines (tab delimited) with a corpusId in column 1 and text in column 2;
-output goes to /tmp/foobar.kwc.i and /tmp/foobar.kwc.f.
-The first file is a sequence of int32 (one for each input line);
-The second file is a sequence float32 (one record of K=768 for each input line).
-You can process these binary files in C or with numpy.fromfile.
-There is an optional --model argument which allows you to specify models from HuggingFace.
 
 <p>
 
