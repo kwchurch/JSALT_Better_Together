@@ -15,7 +15,7 @@
 <ol>
 <li>Better access to literature</li>
 <li>Resources: 
-    <ol>
+n    <ol>
     <li>Many embeddings for many papers</li>
     <li>More models to be posted on HuggingFace</li>
     <li>Code to be posted on GitHub</li></ol>
@@ -39,6 +39,8 @@ pip install -r requirements.txt
 Some useful environment variables; you may need to set these up differently, depending on where you put stuff.
 JSALTsrc should be assigned to the src directory in this repo.
 JSALTdir should be assigned to the data from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">Globus</a>.
+
+Some examples below depend on JSALTdir and some do not.  If you cannot download JSALTdir, try the examples that do not require that.
 
 ```sh
 JSALTdir=/work/k.church/JSALT-2023/
@@ -65,9 +67,16 @@ pip install -r requirements.txt
 # set environment variable JSALTsrc to the src directory in the repo.
 # set environment variable JSALTdir to your local copy of the large data files.
 ```
+
+<h2>Pre-computed Output</h2>
+
+See <a href="examples/similar_documents">here</a>, and especially <a href="examples/similar_documents/readling_list">this</a>.
+The last example starts with papers we should all be reading, and finds some documents similar to those.
+
+
 <h2>Examples</h2>
 
 <ol>
-<li><a href="doc/semantic_scholar_API.md">Scripts for using Semantic Scholar API</a></li>
-<li><a href="doc/find_similar_docs.md">Find similar documents</a></li>
+<li><a href="doc/semantic_scholar_API.md">Scripts for using Semantic Scholar API</a> (Depends on $JSALTsrc, but not JSALTdir)</li>
+<li><a href="doc/find_similar_docs.md">Find similar documents</a> (Depends on both $JSALTsrc and JSALTdir)</li>
 </ol>

@@ -1,0 +1,5 @@
+calling index_ints
+calling cumsum
+n = 4119116693
+/var/spool/slurmd/job35265604/slurm_script: line 7: 37679 Done                    cut -f2- < $HOME/to_go/both.52967399.21302.2
+     37680 Segmentation fault      | $src/C/cocitations $citedir/citations.G.symmetric.[XY].i > $HOME/to_go/both.52967399.21302.2.cocitations
