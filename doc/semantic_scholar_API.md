@@ -11,7 +11,7 @@ The following scripts use that to:
 Some examples of usage
 
 ```sh
-echo 232040593 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 232040593 | python $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
 # {'paperId': '6d9727f1f058614cada3fe296eeebd8ec4fc512a', '
 #              externalIds': {'DBLP': 'conf/fat/BenderGMS21', 'DOI': '10.1145/3442188.3445922', 'CorpusId': 232040593},
 #              'title': 'On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜'}}`
@@ -19,7 +19,7 @@ echo 232040593 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,ext
 
 There are many ways to specify paper ids.  All of these produce the same results:
 ```sh
-echo 9558665 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
+echo 9558665 | python $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
 echo 9e2caa39ac534744a180972a30a320ad0ae41ea3 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
 echo 'ACL:J90-1003' | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
 echo 'MAG:3031337294' | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds
@@ -55,7 +55,7 @@ query and the reference/citation.  The last two columns are the number
 of citations and the title of the paper.
 
 ```sh
-echo 232040593 | src/fetch_references_and_citations.py | head
+echo 232040593 | python $JSALTsrc/fetch_references_and_citations.py | head
 query	156 references	1113 citations	On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜
 reference	232040593	243950006	2	The Five Hundred Year Rebellion: Indigenous Movements and the Decolonization of History in Bolivia
 reference	232040593	243615599	57	The Argonauts
