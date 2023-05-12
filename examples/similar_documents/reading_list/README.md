@@ -25,7 +25,7 @@ Some recommendations:
 </li>
 <li>Text Books
     <ol>
-    <li><a href="https://www.cs.mcgill.ca/~wlh/grl_book/files/GRL_Book.pdf">Graph Representation Learning</a></li>
+    <li><a href="https://www.cs.mcgill.ca/~wlh/grl_book/files/GRL_Book.pdf">Graph Representation Learning</a> (<a href="Graph_Learning_Book.md">similar documents</a>)</li>
     </ol>
 </li>
 <li>Theory
@@ -33,6 +33,8 @@ Some recommendations:
     <li><a href="https://arxiv.org/pdf/0711.0189.pdf">A Tutorial on Spectral Clustering</a> (<a href="Spectral_Graph_Theory.md">similar documents</a>)</li>   
     <li><a href="https://arxiv.org/pdf/1710.02971.pdf">Network Embedding as Matrix Factorization: Unifying
 DeepWalk, LINE, PTE, and node2vec</a> (<a href="Unifying.md">similar documents</a>)</li>
+    <li><a href="https://arxiv.org/pdf/1709.07604.pdf">A Comprehensive Survey of Graph Embedding:
+Problems, Techniques and Applications</a> (<a href="Graph_Embedding_Survey.md">similar documents</a>)</li>
     </ol>
 </li>
 <li>Oldies but goodies
