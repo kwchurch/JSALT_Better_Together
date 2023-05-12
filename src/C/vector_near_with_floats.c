@@ -5,6 +5,7 @@
 #include <errno.h>
 #include <strings.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int verbose = 1;
 int show_details = 0;
