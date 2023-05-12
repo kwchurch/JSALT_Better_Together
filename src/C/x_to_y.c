@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void usage()
 {
@@ -7,7 +8,7 @@ void usage()
 One of them must be 'a' (ascii) and the other must be something else:\
 'i' (int)\
 's' (short)\
-'L' (long long)\
+'L' (long)\
 'f' (float)\
 'd' (double)\
 'c' (char)\n");
@@ -29,7 +30,7 @@ void case_ai()
 
 void case_as()
 {
-  short j;
+  int j;
   while(scanf("%d", &j) == 1)
     if(fwrite(&j, sizeof(j), 1, stdout) != 1) wfail();
 }
@@ -37,7 +38,7 @@ void case_as()
 
 void case_aL()
 {
-  long long j;
+  long j;
   while(scanf("%ld", &j) == 1)
     if(fwrite(&j, sizeof(j), 1, stdout) != 1) wfail();
 }
@@ -72,7 +73,7 @@ void case_si()
 
 void case_sL()
 {
-  long long j;
+  long j;
   while(scanf("%ld", &j) == 1)
     if(fwrite(&j, sizeof(j), 1, stdout) != 1) wfail();
 }
@@ -116,7 +117,7 @@ void case_sa()
 
 void case_La()
 {
-  long long j;
+  long j;
   while(fread(&j, sizeof(j), 1, stdin) == 1)
     printf("%ld\n", j);
 }

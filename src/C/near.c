@@ -139,7 +139,7 @@ void find_near(long *nearby_paper, int *nearby_distance, long paper, struct idx 
 
     if(verbose && offset > 1 && offset < idx->nhamming_distances +2) {
       fprintf(stderr, "paper: %ld, nearby distances: %ld, %ld, %ld, %ld\n", paper, idx->hamming_distances[offset-1], idx->hamming_distances[offset], idx->hamming_distances[offset+1], idx->hamming_distances[offset+2]);
-      fprintf(stderr, "paper: %ld, nearby papers: %d, %d, %d, %d\n", paper, idx->idx[offset-1], idx->idx[offset], idx->idx[offset+1], idx->idx[offset+2]);
+      fprintf(stderr, "paper: %ld, nearby papers: %ld, %ld, %ld, %ld\n", paper, idx->idx[offset-1], idx->idx[offset], idx->idx[offset+1], idx->idx[offset+2]);
     }
     *nearby_distance = idx->hamming_distances[offset];
     *nearby_paper = idx->idx[offset+1];

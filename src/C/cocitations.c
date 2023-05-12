@@ -1,8 +1,8 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <strings.h>
 #include "util.h"
 #include <memory.h>
+#include <stdlib.h>
 
 int verbose = 0;
 

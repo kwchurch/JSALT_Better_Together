@@ -4,6 +4,7 @@
 #include <math.h>
 #include <errno.h>
 #include <strings.h>
+#include <stdlib.h>
 
 int verbose = 1;
 int show_details = 0;

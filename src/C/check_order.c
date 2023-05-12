@@ -66,7 +66,7 @@ int main(int ac, char **av)
     freqp = freq(X+p, Xend);
     if(check_order(Y+p, Y+p + freqp) == EOF) {
       fprintf(stderr, "check_order failed: %s, X[%d] = %d\n", av[1], p, X[p]);
-      usage("failure");
+      fatal("failure");
     }
   }
 

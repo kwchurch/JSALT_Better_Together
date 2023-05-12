@@ -98,7 +98,7 @@ int main(int ac, char **av)
 
   if(mode == ASCII_MODE)
     for(i=1;i<nidx;i++) {
-      printf("%06d\t%10d\t%d\t", i, idx[i],  hamming_dist(random_bytes + idx[i-1] *N, random_bytes + idx[i] *N, N));
+      printf("%06ld\t%10ld\t%d\t", i, idx[i],  hamming_dist(random_bytes + idx[i-1] *N, random_bytes + idx[i] *N, N));
       hexify(i);
       putchar('\n');
     }
