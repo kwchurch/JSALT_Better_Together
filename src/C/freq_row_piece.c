@@ -249,7 +249,8 @@ int *ksmallest_endgame(int *result, int nresult, int *vals, int nvals, int k)
 
   if(nvals < nresult) {
     memcpy(result, vals, sizeof(int) * nvals );
-    qsort(result, nvals, sizeof(int), (__compar_fn_t)intcomp);
+    qsort(result, nvals, sizeof(int), intcomp);
+    // qsort(result, nvals, sizeof(int), (__compar_fn_t)intcomp);
     if(verbose > 10) fprintf(stderr, "leaving ksmallest_endgame\n");  
     return result;
   }
@@ -274,7 +275,8 @@ int *ksmallest(int *result, int nresult, int *vals, int nvals, int k)
 
     if(c >= k && c < nresult) {
       nresult = copy_below(result, vals, nvals, mid);
-      qsort(result, nresult, sizeof(int), (__compar_fn_t)intcomp);
+      qsort(result, nresult, sizeof(int), intcomp);
+      // qsort(result, nresult, sizeof(int), (__compar_fn_t)intcomp);
       if(verbose > 10) fprintf(stderr, "leaving ksmallest\n");  
       return result;
     }
@@ -286,7 +288,8 @@ int *ksmallest(int *result, int nresult, int *vals, int nvals, int k)
   fprintf(stderr, "Something is wrong in ksmallest; doing it the hardway for nvals = %d\n", nvals);
   int *buf = malloc_ints(nvals);
   memcpy(buf, vals, sizeof(int) * nvals);
-  qsort(buf, nvals, sizeof(int), (__compar_fn_t)intcomp);
+  qsort(buf, nvals, sizeof(int), intcomp);
+  // qsort(buf, nvals, sizeof(int), (__compar_fn_t)intcomp);
   memcpy(result, buf,sizeof(int) * k);
   free(buf);
   return result;
