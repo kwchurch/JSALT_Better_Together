@@ -11,7 +11,7 @@ Some recommendations:
     <li><a href="https://www.ijcai.org/proceedings/2019/0594.pdf">ProNE</a> (<a href="ProNE.md">similar documents</a>) 
 (<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/prone.py">code</a>)</li>
     <li><a href="https://dl.acm.org/doi/10.1145/2806416.2806512">GraRep</a>
-(<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/grarep.py">code</a>)
+(<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/grarep.py">code</a>) (<a href="GraRep.md">similar documents</a>)
 </li>
     </ol>
 </li>
