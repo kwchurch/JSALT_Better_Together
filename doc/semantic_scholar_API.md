@@ -4,7 +4,7 @@
 This can be set to a secret, which is important for heavy usage.  Ask me for the secret, if
 you are interested.
 <p>
-In addition to the functionality described here, there is also a bulk download process described <a href="semantic_scholar_bulk_download.md">here</a>.
+In addition to the functionality described here, there is also a bulk download process described <a href="bulk_download/semantic_scholar_bulk_download.md">here</a>.
 This file describes how to request much of that data by ad hoc requests.
 <p>
 The Semantic Scholar API is <a href="https://www.semanticscholar.org/product/api">here</a>.
