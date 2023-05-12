@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "util.h"
 #include <time.h>
-#include <values.h>
+// #include <values.h>
+#include <limits.h>
 // #include <openssl/rand.h>
 
 void usage()
@@ -77,7 +78,8 @@ void fancy_init_random_floats(float *res, int n)
     fatal("random failed");
 
   float *end = res + n;
-  double d = MAXINT;
+  double d = INT_MAX;
+  // double d = MAXINT;
   for(;res < end;res++)
     *res = ((int)(*res))/d;
 }
