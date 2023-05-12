@@ -72,17 +72,17 @@ void init_random_floats(float *res, int n)
 
 // Dead code -- we use the function above instead of this
 // Not sure why, but this generates a non-uniform sample
-void fancy_init_random_floats(float *res, int n)
-{
-  if(RAND_bytes((void *)res, sizeof(float) * n) != 1)
-    fatal("random failed");
+/* void fancy_init_random_floats(float *res, int n) */
+/* { */
+/*   if(RAND_bytes((void *)res, sizeof(float) * n) != 1) */
+/*     fatal("random failed"); */
 
-  float *end = res + n;
-  double d = INT_MAX;
-  // double d = MAXINT;
-  for(;res < end;res++)
-    *res = ((int)(*res))/d;
-}
+/*   float *end = res + n; */
+/*   double d = INT_MAX; */
+/*   // double d = MAXINT; */
+/*   for(;res < end;res++) */
+/*     *res = ((int)(*res))/d; */
+/* } */
 
 int main(int ac, char **av)
 {
