@@ -8,7 +8,7 @@ files=freq_row_piece freq_row check_order XY_to_bigrams print_bigrams unprint_bi
 all: ${files}
 
 clean: 
-	rm $files
+	rm ${files}
 
 util.o: util.c util.h
 	cc -c util.c
