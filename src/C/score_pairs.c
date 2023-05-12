@@ -4,6 +4,7 @@
 #include <math.h>
 #include <errno.h>
 #include <strings.h>
+#include <search.h>
 
 int verbose = 0;
 int show_details = 0;

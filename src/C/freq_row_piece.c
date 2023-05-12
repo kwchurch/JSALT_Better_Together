@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <strings.h>
 #include "util.h"
+#include <search.h>
 
 int verbose = 20; 
 

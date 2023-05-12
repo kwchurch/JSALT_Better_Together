@@ -3,6 +3,7 @@
 #include "util.h"
 #include <memory.h>
 #include <stdlib.h>
+#include <search.h>
 
 int verbose = 0;
 

@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <stdlib.h>
+#include <search.h>
 
 void usage()
 {

@@ -4,6 +4,7 @@
 #include <errno.h>
 #include <strings.h>
 #include <stdlib.h>
+#include <search.h>
 
 #define MAXLINE 200000
 

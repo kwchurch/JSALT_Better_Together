@@ -2,6 +2,7 @@
 #include "util.h"
 #include <memory.h>
 #include <stdlib.h>
+#include <search.h>
 
 void usage()
 {

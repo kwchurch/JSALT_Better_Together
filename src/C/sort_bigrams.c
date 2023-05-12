@@ -2,6 +2,7 @@
 #include <strings.h>
 #include "util.h"
 #include <stdlib.h>
+#include <search.h>
 
 void usage()
 {

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <strings.h>
 #include "util.h"
+#include <search.h>
 
 double lookup(struct bigram *query, char *fn)
 {
