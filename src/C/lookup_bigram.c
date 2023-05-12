@@ -9,7 +9,8 @@ double lookup(struct bigram *query, char *fn)
   long N;
   struct bigram *b = (struct bigram *)mmapfile(fn, &N);
   N /= sizeof(struct bigram);
-  struct bigram *found = (struct bigram *)bsearch(query, b, N, sizeof(struct bigram), (__compar_fn_t)bigram_compare);
+  struct bigram *found = (struct bigram *)bsearch(query, b, N, sizeof(struct bigram), bigram_compare);
+  // struct bigram *found = (struct bigram *)bsearch(query, b, N, sizeof(struct bigram), (__compar_fn_t)bigram_compare);
   if(!found) return 0;
   return found->val;
 }

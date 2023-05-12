@@ -131,7 +131,8 @@ int intersect(int *X, int Nx, int *Y, int Ny)
   int *tmp = malloc_ints(N);
   memcpy(tmp, X, Nx * sizeof(int));
   memcpy(tmp + Nx, Y, Ny * sizeof(int));
-  qsort(tmp, N, sizeof(int), (__compar_fn_t)intcomp);
+  qsort(tmp, N, sizeof(int), intcomp);
+  // qsort(tmp, N, sizeof(int), (__compar_fn_t)intcomp);
   int res = count_dups(tmp, N);
   free(tmp);
   return res;

@@ -54,7 +54,8 @@ long map_node(long node, int new_to_old)
 
 long map_author(long author_id, long *authors, long nauthors)
 {
-  long *found = bsearch(&author_id, authors, nauthors, sizeof(long), (__compar_fn_t)long_compare);
+  long *found = bsearch(&author_id, authors, nauthors, sizeof(long), long_compare);
+  // long *found = bsearch(&author_id, authors, nauthors, sizeof(long), (__compar_fn_t)long_compare);
   if(found) return found - authors;
   else return -1;
 }

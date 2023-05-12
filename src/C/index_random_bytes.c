@@ -62,7 +62,8 @@ void simple_case(int ac, char **av)
 
   fprintf(stderr, "calling qsort\n");
 
-  qsort(idx, nrandom_bytes, sizeof(long), (__compar_fn_t)mem_compare);
+  qsort(idx, nrandom_bytes, sizeof(long), mem_compare);
+  // qsort(idx, nrandom_bytes, sizeof(long), (__compar_fn_t)mem_compare);
 
   fprintf(stderr, "finished qsort\n");
 
@@ -102,7 +103,8 @@ int main(int ac, char **av)
 
   fprintf(stderr, "calling qsort\n");
 
-  qsort(idx, nrandom_bytes, sizeof(long), (__compar_fn_t)index_compare);
+  qsort(idx, nrandom_bytes, sizeof(long), index_compare);
+  // qsort(idx, nrandom_bytes, sizeof(long), (__compar_fn_t)index_compare);
 
   fprintf(stderr, "finished qsort\n");
 

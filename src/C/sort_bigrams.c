@@ -89,7 +89,8 @@ int main(int ac, char **av)
   N /= sizeof(struct bigram);
   fprintf(stderr, "found %ld bigrams in %s\n", N, av[1]);
 
-  qsort(b, N, sizeof(struct bigram), (__compar_fn_t)bigram_compare);
+  qsort(b, N, sizeof(struct bigram), bigram_compare);
+  // qsort(b, N, sizeof(struct bigram), (__compar_fn_t)bigram_compare);
   
   if(fwrite(b, sizeof(struct bigram), N, stdout) != N)
     fatal("write failed");

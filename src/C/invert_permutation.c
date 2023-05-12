@@ -34,7 +34,8 @@ int main(int ac, char **av)
   for(i=1;i<nidx;i++) 
     result[i] = i;
 
-  qsort(result, nidx, sizeof(long), (__compar_fn_t)my_compare);
+  qsort(result, nidx, sizeof(long), my_compare);
+  // qsort(result, nidx, sizeof(long), (__compar_fn_t)my_compare);
 
   if(fwrite(result, sizeof(long), nidx, stdout) != nidx)
     fatal("write failed");

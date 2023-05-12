@@ -242,7 +242,8 @@ int main(int ac, char **av)
     if(!new_offsets) fatal("malloc failed");
     memcpy(new_offsets, offsets, noffsets * sizeof(long));
     
-    qsort(new_offsets, noffsets, sizeof(long), (__compar_fn_t)my_compare);
+    qsort(new_offsets, noffsets, sizeof(long), my_compare);
+    // qsort(new_offsets, noffsets, sizeof(long), (__compar_fn_t)my_compare);
     char *fn = my_filename(buf, filename, "L");
     FILE *fd = fopen(fn, "wb");
     if(fwrite(new_offsets, sizeof(long), noffsets, fd) != noffsets)
