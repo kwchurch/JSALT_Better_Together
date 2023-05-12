@@ -113,7 +113,7 @@ Input a paper and output some recommendations.  The first two columns are the qu
 Col 3 is a cosine score.  Col 4 is a citation count.
 
 ```sh
-echo fff114cbba4f3ba900f33da574283e3de7f26c83 | /work/k.church/githubs/JSALT_Better_Together/src/fetch_semantic_scholar_recommendations.py
+echo fff114cbba4f3ba900f33da574283e3de7f26c83 | python $JSALTsrc/fetch_semantic_scholar_recommendations.py
 # fff114cbba4f3ba900f33da574283e3de7f26c83	258060205	0.7751482087719826	2	A Comprehensive Survey on Deep Graph Representation Learning
 # fff114cbba4f3ba900f33da574283e3de7f26c83	258011360	0.7550353496903267	0	Representation Learning for Texts and Graphs
 # fff114cbba4f3ba900f33da574283e3de7f26c83	258171578	0.7626156134161819	0	Multi-View Graph Representation Learning Beyond Homophily
