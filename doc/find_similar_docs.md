@@ -16,6 +16,7 @@ JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
 specter=$JSALTdir/semantic_scholar/embeddings/specter
 proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+```
 
 We assume that both $specter and $proposed directories contain the following files
 <ol>
@@ -27,6 +28,7 @@ We assume that both $specter and $proposed directories contain the following fil
 <li>idx.*.i.inv: inverse of above</li>
 </ol>
 
+```sh
 query=232040593
 
 # Find 3 papers near $query in Specter, and 3 more in Proposed
