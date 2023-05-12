@@ -4,8 +4,12 @@
 This can be set to a secret, which is important for heavy usage.  Ask me for the secret, if
 you are interested.
 <p>
+In addition to the functionality described here, there is also a bulk download process described <a href="semantic_scholar_bulk_download.md">here</a>.
+This file described how to request much of that data by ad hoc requests.
+<p>
 The Semantic Scholar API is <a href="https://www.semanticscholar.org/product/api">here</a>.
-The following scripts use that to:
+
+The following describes a number of simple scripts in this github that provide functions such as these:
 <ol>
 <li>Input paper ids; output useful fields (as json)</li>
 <li>Input paper ids; output references and citations (as tsv)</li>

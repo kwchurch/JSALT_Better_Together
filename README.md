@@ -41,7 +41,7 @@ export proposed
 ```
 
 If you have access to the Northeastern Discovery Cluster,
-you can request access to the nlp group by filling out a ticket <a href="https://bit.ly/NURC-Software">here</a>,
+you can request access to the cluster by filling out a ticket <a href="https://bit.ly/NURC-Software">here</a>,
 and then you can use my settings for these environment variables.
 You should also request to be added to the group: <i>nlp</i>.
 

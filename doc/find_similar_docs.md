@@ -35,7 +35,7 @@ query=232040593
 # This is slow the first time you run it, but it gets faster
 # after some warmup
 
-$JSALTsrc/near.sh $query 5
+$JSALTsrc/near.sh $query 3
 
 # same as above, but outputs HTML
 $JSALTsrc/near.sh $query 3 | $JSALTsrc/tsv_to_html.sh
