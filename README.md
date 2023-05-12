@@ -43,15 +43,7 @@ export proposed
 If you have access to the Northeastern Discovery Cluster,
 you can request access to the nlp group by filling out a ticket <a href="https://bit.ly/NURC-Software">here</a>,
 and then you can use my settings for these environment variables.
-
-We assume that both $specter and $proposed directories contain the following files
-<ol>
-<li>record_size: 768 for $specter and 280 for $proposed</li>
-<li>map.new_to_old.i: map offsets in embedding to corpusIds</li>
-<li>map.old_to_new.i: inverse of above</li>
-<li>idx.*.i: indexes for approximate nearest neighbors (ANN)</li>
-<li>idx.*.i.inv: inverse of above</li>
-</ol>
+You should also request to be added to the group: <i>nlp</i>.
 
 <h2>Installation</h2>
 

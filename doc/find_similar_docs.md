@@ -17,6 +17,16 @@ JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 specter=$JSALTdir/semantic_scholar/embeddings/specter
 proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 
+We assume that both $specter and $proposed directories contain the following files
+<ol>
+<li>embedding.f: seqeuence of N*K floats; N is big (10^8)</li>
+<li>record_size: K=768 for $specter and K=280 for $proposed</li>
+<li>map.new_to_old.i: map offsets in embedding to corpusIds</li>
+<li>map.old_to_new.i: inverse of above</li>
+<li>idx.*.i: indexes for approximate nearest neighbors (ANN); an index is a permutation on N so papers that are near one another in the index have large cosines</li>
+<li>idx.*.i.inv: inverse of above</li>
+</ol>
+
 query=232040593
 
 # Find 3 papers near $query in Specter, and 3 more in Proposed
