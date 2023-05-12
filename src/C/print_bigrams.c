@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "util.h"
 
-int main(int ac, char *av)
+int main(int ac, char **av)
 {
   struct bigram b;
   while(fread(&b, sizeof(b), 1, stdin) > 0) {

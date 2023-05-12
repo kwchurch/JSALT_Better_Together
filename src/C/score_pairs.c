@@ -27,7 +27,7 @@ void init_urls(char *fn) {
   urls = (struct urls *)malloc(sizeof(struct urls));
   urls->lines = (char *)mmapfile(fn, &urls->nlines);
   sprintf(buf, "%s.line_index.i", fn);
-  urls->idx = (int *)mmapfile(buf, &urls->nidx);
+  urls->idx = (unsigned int *)mmapfile(buf, &urls->nidx);
   urls->nidx /= sizeof(int);
 }
 

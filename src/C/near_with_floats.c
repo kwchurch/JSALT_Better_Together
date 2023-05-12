@@ -4,6 +4,7 @@
 #include <math.h>
 #include <errno.h>
 #include <strings.h>
+#include <stdlib.h>
 
 int verbose = 0;
 int show_details = 0;
@@ -29,7 +30,7 @@ void init_urls(char *fn) {
   urls = (struct urls *)malloc(sizeof(struct urls));
   urls->lines = (char *)mmapfile(fn, &urls->nlines);
   sprintf(buf, "%s.line_index.i", fn);
-  urls->idx = (int *)mmapfile(buf, &urls->nidx);
+  urls->idx = (unsigned int *)mmapfile(buf, &urls->nidx);
   urls->nidx /= sizeof(int);
 }
 

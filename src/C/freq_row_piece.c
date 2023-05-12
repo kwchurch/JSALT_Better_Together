@@ -303,14 +303,14 @@ void my_output(FILE **outf, int *X, int *Y, int n)
 
 int main(int ac, char **av)
 {
-  char filenames[4][1024];
+  char filenames[5][1024];
 
   if(ac != 5) usage();
 
   permutation = (int *)mmapfile(av[3], &npermutation);
   npermutation /= sizeof(int);
-  sprintf(filenames[6], "%sinv", av[3]);
-  ipermutation = (int *)mmapfile(filenames[6], &npermutation);
+  sprintf(filenames[4], "%sinv", av[3]);
+  ipermutation = (int *)mmapfile(filenames[4], &npermutation);
   npermutation /= sizeof(int);
 
   /* This should not be necessary */
@@ -323,7 +323,7 @@ int main(int ac, char **av)
   /* fprintf(stderr, "done.\n"); */
 
   int T = atoi(av[4]);
-  fprintf(stderr, "T = %ld\n", T);
+  fprintf(stderr, "T = %d\n", T);
 
   char *Xfilename = filename(filenames[0], av[1], "X");
   char *Yfilename = filename(filenames[1], av[1], "Y");

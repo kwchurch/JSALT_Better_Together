@@ -38,7 +38,7 @@ void case_as()
 void case_aL()
 {
   long long j;
-  while(scanf("%Ld", &j) == 1)
+  while(scanf("%ld", &j) == 1)
     if(fwrite(&j, sizeof(j), 1, stdout) != 1) wfail();
 }
 
@@ -73,7 +73,7 @@ void case_si()
 void case_sL()
 {
   long long j;
-  while(scanf("%Ld", &j) == 1)
+  while(scanf("%ld", &j) == 1)
     if(fwrite(&j, sizeof(j), 1, stdout) != 1) wfail();
 }
 
@@ -118,7 +118,7 @@ void case_La()
 {
   long long j;
   while(fread(&j, sizeof(j), 1, stdin) == 1)
-    printf("%Ld\n", j);
+    printf("%ld\n", j);
 }
 
 void case_fa()

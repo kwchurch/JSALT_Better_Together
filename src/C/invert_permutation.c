@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "util.h"
 #include <memory.h>
+#include <stdlib.h>
 
 void usage()
 {

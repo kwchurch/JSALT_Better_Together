@@ -3,6 +3,7 @@
 #include <memory.h>
 #include <errno.h>
 #include <strings.h>
+#include <stdlib.h>
 
 int verbose = 0;
 int show_details = 0;

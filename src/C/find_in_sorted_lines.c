@@ -262,7 +262,7 @@ int main(int ac, char **av)
       if(comp == 0) cnt[1]++;
       if(comp > 0) cnt[2]++;
       if(o%100000 == 0) {
-	fprintf(stderr, "\no = %9d, comps = %ld, %ld, %ld\n", o, cnt[0],cnt[1],cnt[2]);
+	fprintf(stderr, "\no = %9ld, comps = %ld, %ld, %ld\n", o, cnt[0],cnt[1],cnt[2]);
 	fprintf(stderr, "comp = %d, o = %ld, offsets[o-1] = %ld, offsets[o] = %ld, field = %d, delimiter = %c\n", comp, o, offsets[o-1], offsets[o], field, delimiter);
 	putline(stderr, file + offsets[o-1], file + nfile);
 	putline(stderr, file + offsets[o], file + nfile);

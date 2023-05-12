@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "util.h"
 #include <memory.h>
+#include <stdlib.h>
 
 void usage()
 {
@@ -49,7 +50,7 @@ void simple_case(int ac, char **av)
   random_bytes = (void *)mmapfile(av[1], &nrandom_bytes);
   nrandom_bytes /= N;
 
-  fprintf(stderr, "N = %d, nrandom_bytes=%ld\n", N, nrandom_bytes);
+  fprintf(stderr, "N = %ld, nrandom_bytes=%ld\n", N, nrandom_bytes);
 
   long *idx = (long *)malloc(sizeof(long) * nrandom_bytes);
 
@@ -87,9 +88,9 @@ int main(int ac, char **av)
   random_bytes = (void *)mmapfile(av[1], &nrandom_bytes);
   nrandom_bytes /= N;
 
-  fprintf(stderr, "N = %d, nrandom_bytes=%ld\n", N, nrandom_bytes);
+  fprintf(stderr, "N = %ld, nrandom_bytes=%ld\n", N, nrandom_bytes);
   for(i=0;i<N;i++)
-    fprintf(stderr, "random_permutation[%d] = %ld\n", i, random_permutation[i]);
+    fprintf(stderr, "random_permutation[%ld] = %ld\n", i, random_permutation[i]);
 
   long *idx = (long *)malloc(sizeof(long) * nrandom_bytes);
 
