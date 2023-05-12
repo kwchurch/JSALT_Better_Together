@@ -35,8 +35,9 @@ else:
         
         cmd=url + urllib.parse.quote(fields[0])
         j=requests.get(cmd, headers={"x-api-key": apikey}).json()
-        print('# %d matches:\t' % len(j['data']) + fields[0])
-        for m in j['data']:
-            print('\t'.join([m['paperId'], m['title']]) + suffix)
+        # print(j, file=sys.stderr)
+        print('# %d matches:\t' % len(j['matches']) + fields[0])
+        for m in j['matches']:
+            print('\t'.join([m['id'], m['title']]) + suffix)
         sys.stdout.flush()
     
