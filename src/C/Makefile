@@ -67,13 +67,13 @@ lookup_bigram: lookup_bigram.c util.o
 	cc -o lookup_bigram lookup_bigram.c util.o
 
 random_bigrams: random_bigrams.c util.o
-	cc -o random_bigrams random_bigrams.c util.o -lssl -lcrypto
+	cc -o random_bigrams random_bigrams.c util.o # -lssl -lcrypto
 
 cocitations: cocitations.c util.o
 	cc -o cocitations cocitations.c util.o
 
 floats_to_random_bytes: floats_to_random_bytes.c util.o
-	cc -o floats_to_random_bytes floats_to_random_bytes.c util.o -lssl -lcrypto
+	cc -o floats_to_random_bytes floats_to_random_bytes.c util.o # -lssl -lcrypto
 
 index_random_bytes: index_random_bytes.c util.o
 	cc -o index_random_bytes index_random_bytes.c util.o
