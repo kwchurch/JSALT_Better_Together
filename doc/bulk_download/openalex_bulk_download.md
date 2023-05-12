@@ -6,6 +6,7 @@ On May 4, 2021, Microsoft announced that <a href="https://www.microsoft.com/en-u
 would be retired.  They have subsequently transferred MAG to OpenAlex.
 <p>
 It is very easy to download data in bulk from OpenAlex.  Here is how I did it.
+
 ```sh
 cd /work/k.church/openalex
 aws s3 sync "s3://openalex" "openalex-snapshot" --no-sign-request

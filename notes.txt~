@@ -1,5 +1,0 @@
-JSALTdir=/work/k.church/JSALT-2023/
-JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
-
-query=232040593
-echo $query | $JSALTsrc/fetch
