@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "util.h"
 
-int main(int ac, char *av)
+int main(int ac, char **av)
 {
   struct bigram b;
 
