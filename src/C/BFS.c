@@ -24,7 +24,7 @@ long *malloc_longs(long n)
   if(!res) fatal("malloc_ints: failed");
   // should not be necessary
   memset(res, 0, n * sizeof(long));
-  fprintf(stderr, "malloc_longs: done\n", n);
+  fprintf(stderr, "malloc_longs: done\n");
   return res;
 }
 
