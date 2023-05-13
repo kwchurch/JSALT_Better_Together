@@ -39,9 +39,9 @@ Problems, Techniques and Applications</a> (<a href="Graph_Embedding_Survey.md">s
 </li>
 <li>Oldies but goodies
     <ol>
-    <li><a href="https://aclanthology.org/N19-1423.pdf">BERT</a></li>
-    <li><a href="https://arxiv.org/pdf/1402.3722.pdf">Word2vec Explained</a></li>
-    <li><a href="https://cs.stanford.edu/people/jure/pubs/node2vec-kdd16.pdf">Node2vec</a></li>
+    <li><a href="https://aclanthology.org/N19-1423.pdf">BERT</a> (<a href="BERT.md">similar documents</a>)</li>
+    <li><a href="https://arxiv.org/pdf/1402.3722.pdf">Word2vec Explained (<a href="Levy_and_Goldberg2014.md">similar documents</a>)</a></li>
+    <li><a href="https://cs.stanford.edu/people/jure/pubs/node2vec-kdd16.pdf">Node2vec (<a href="node2vec.md">similar documents</a>)</a></li>
     <li><a href="https://arxiv.org/pdf/1403.6652.pdf">DeepWalk</a> (<a href="DeepWalk.md">similar documents</a>)</li>
     </ol>
 </li>
