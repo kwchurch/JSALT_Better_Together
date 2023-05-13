@@ -6,11 +6,12 @@ Useful links:
 * Zoom Link: https://northeastern.zoom.us/j/8963791015
 * Meeting Notes: https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit
 
-JSALTdir=/work/k.church/JSALT-2023/
-JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+export JSALTdir=/work/k.church/JSALT-2023/
+export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
-specter=$JSALTdir/semantic_scholar/embeddings/specter
-proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+export specter=$JSALTdir/semantic_scholar/embeddings/specter
+export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+
 
 # We assume that both $specter and $proposed directories contain the following files
 * record_size: 768 for $specter and 280 for $proposed

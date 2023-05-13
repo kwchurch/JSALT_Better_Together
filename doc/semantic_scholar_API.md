@@ -63,6 +63,12 @@ The argument to --fields can make use of the following:
 <li>tldr (too long; didn't read -- summaries, often based on abstracts</li>
 </ol>
 
+For example, the following will return an embedding (in addition to the title and externalIds):
+
+```sh
+echo 9558665 | python $JSALTsrc/fetch_from_semantic_scholar_api.py --fields title,externalIds,embedding
+```
+
 In addition to ad hoc requests, Semantic Scholar also supports bulk downloads, where
 you can download many of these same fields for all papers in the system.  They provide
 snapshots (releases) every few weeks.
