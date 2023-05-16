@@ -1,4 +1,6 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
 argparse
+chardet
 csrgraph
 gensim
 hierarchy
@@ -10,8 +12,8 @@ numba
 numpy
 pandas
 preprocessing
+torch
 requests
 scipy
 scikit-learn
 transformers
-
