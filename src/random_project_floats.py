@@ -11,9 +11,15 @@ t0 = time.time()
 parser = argparse.ArgumentParser()
 # parser.add_argument("-i", "--input", required=True)
 # parser.add_argument("-o", "--output", required=True)
+parser.add_argument("--seed", type=int, help='set seet', default=None)
 parser.add_argument("-K", "--n_componenents", help='K (before), K (after)', required=True)
 parser.add_argument("-B", "--block_size", type=int, help='number of rows to read in at a time', default=1000)
 args = parser.parse_args()
+
+print('seed: ' + str(args.seed), file=sys.stderr)
+
+if not args.seed is None:
+    np.random.seed(args.seed)
 
 Ks = args.n_componenents.split(',')
 print('Ks: ' + str(Ks), file=sys.stderr)
@@ -41,7 +47,7 @@ def create_R_matrix(K_before, K_after):
     Y = np.random.choice(K_after, n * K_after, replace=True)
     V = np.concatenate([-np.ones(K_after * n//2), np.ones(K_after * n//2)])
     
-    R = scipy.sparse.csr_matrix((V, (X, Y)), shape=(K_before, K_after)).todense()
+    R = np.array(scipy.sparse.csr_matrix((V, (X, Y)), shape=(K_before, K_after)).todense())
     Rnorm = preprocessing.normalize(R, 'l2')
     return Rnorm.astype(np.float32)
 
