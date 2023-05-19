@@ -22,11 +22,17 @@ t0 = time.time()
 # compute the rotation matrix and save it
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--seed", type=int, help='set seet', default=None)
 parser.add_argument("-i", "--input_directories", help="two directories, comma separated", required=True)
 parser.add_argument("-o", "--output", required=True)
 parser.add_argument("-N", "--N", type=int, required=True)
 
 args = parser.parse_args()
+
+print('seed: ' + str(args.seed), file=sys.stderr)
+
+if not args.seed is None:
+    np.random.seed(args.seed)
 
 def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
@@ -66,7 +72,7 @@ choices = np.random.choice(min(len(map0), len(map1)), args.N)
 choices0 = map0[choices]
 choices1 = map1[choices]
 
-choices2 = np.array([i for i,choice0,choice1 in zip(choices,choices0,choices1) if choice0 > 0 and choice1 > 0 ])
+choices2 = sorted(np.array([i for i,choice0,choice1 in zip(choices,choices0,choices1) if choice0 > 0 and choice1 > 0 ]))
 
 # print('choices2: ' + str(choices2))
 

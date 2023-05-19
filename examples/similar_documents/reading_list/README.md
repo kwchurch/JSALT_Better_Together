@@ -9,10 +9,12 @@ Some recommendations:
 (<a href="https://huggingface.co/allenai/specter2">HuggingFace</a>)
 </li>
     <li><a href="https://www.ijcai.org/proceedings/2019/0594.pdf">ProNE</a> (<a href="ProNE.md">similar documents</a>) 
-(<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/prone.py">code</a>)</li>
+(<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/prone.py">code from nodevectors</a>)
+(<a href="https://karateclub.readthedocs.io/en/latest/_modules/karateclub/node_embedding/neighbourhood/grarep.html">code from karateclub</a>)</li>
     <li><a href="https://dl.acm.org/doi/10.1145/2806416.2806512">GraRep</a>
 (<a href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/grarep.py">code</a>) (<a href="GraRep.md">similar documents</a>)
 </li>
+<li><a href="https://karateclub.readthedocs.io/en/latest/modules/root.html?highlight=neighbourhood#neighbourhood-based-node-embedding">More code for more methods from karateclub</a></li>
     </ol>
 </li>
 <li>Evaluation Benchmarks, etc.
