@@ -38,14 +38,8 @@ Some recommendations to read:
     <li><a href="https://arxiv.org/abs/2208.09126">GraphTTA: Test Time Adaptation on Graph Neural Networks</a></li>
     </ol>
 </li>
-
 <li> Use Cases
      <ol>
-         <li>Finding topics
-	 	     <ol>
-		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
-		    </ol></li>
-
      	<li>Recommendation</li>	
 	<li>Routing submissions to reviewers
 		    <ol>
@@ -57,7 +51,10 @@ Some recommendations to read:
 		        <li><a href="https://dl.acm.org/doi/10.5555/3374430.3374464">Who knows: a system based on automatic representation of semantic structure</a> (<a href="Who_knows.md">similar documents</a>)</li>
 		        <li><a href="https://aclanthology.org/C10-2145/">Citation Author Topic Model in Expert Search</a> (<a href="Expert.md">similar documents</a>)</li>
 		    </ol></li>
-
+         <li>Finding topics
+	 	     <ol>
+		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
+		    </ol></li>
 	<li>Summarization</li>
      </ol>
 </li>
