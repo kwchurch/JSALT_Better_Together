@@ -6,6 +6,7 @@ The examples in this directory were created by commands like this:
 ```sh
 $JSALTsrc/near.sh 54609922 20 | $JSALTsrc/tsv_to_html.sh > Who_knows.md
 ```
+
 The two arguments to near.sh specify a corpus id (from Semantic Scholar) and
 a number of papers to find.  This will find 20 papers using Specter, plus 20 papers
 using Proposed method.  The tsv_to_html command outputs html tables.  You may not want to do that if you are
@@ -37,8 +38,14 @@ Some recommendations to read:
     <li><a href="https://arxiv.org/abs/2208.09126">GraphTTA: Test Time Adaptation on Graph Neural Networks</a></li>
     </ol>
 </li>
+
 <li> Use Cases
      <ol>
+         <li>Finding topics
+	 	     <ol>
+		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
+		    </ol></li>
+
      	<li>Recommendation</li>	
 	<li>Routing submissions to reviewers
 		    <ol>
@@ -49,10 +56,6 @@ Some recommendations to read:
                     <ol>
 		        <li><a href="https://dl.acm.org/doi/10.5555/3374430.3374464">Who knows: a system based on automatic representation of semantic structure</a> (<a href="Who_knows.md">similar documents</a>)</li>
 		        <li><a href="https://aclanthology.org/C10-2145/">Citation Author Topic Model in Expert Search</a> (<a href="Expert.md">similar documents</a>)</li>
-		    </ol></li>
-         <li>Finding topics
-	 	     <ol>
-		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
 		    </ol></li>
 
 	<li>Summarization</li>
