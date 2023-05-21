@@ -48,6 +48,7 @@ Some recommendations to read:
 		    </ol></li>
          <li>Finding experts
                     <ol>
+		        <li><a href="https://www.mitre.org/sites/default/files/pdf/06_1115.pdf">Expert Finding Systems</a> (<a href="Expert_finding.md">similar documents</a>)</li>
 		        <li><a href="https://dl.acm.org/doi/10.5555/3374430.3374464">Who knows: a system based on automatic representation of semantic structure</a> (<a href="Who_knows.md">similar documents</a>)</li>
 		        <li><a href="https://aclanthology.org/C10-2145/">Citation Author Topic Model in Expert Search</a> (<a href="Expert.md">similar documents</a>)</li>
 		    </ol></li>
