@@ -52,8 +52,7 @@ Some recommendations to read:
 		    </ol></li>
          <li>Finding topics
 	 	     <ol>
-		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information
-Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
+		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
 		    </ol></li>
 
 	<li>Summarization</li>
