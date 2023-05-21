@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+assert False, 'This is too slow; try C/BFS'
+
 import scipy.sparse,argparse,sys,time
 import numpy as np
 

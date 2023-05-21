@@ -2,7 +2,6 @@
 
 import os,sys,argparse,time
 import numpy as np
-from sklearn.preprocessing import normalize
 
 from scipy.linalg import orthogonal_procrustes
 
@@ -89,8 +88,8 @@ emb1 = configs[1]['embedding']
 print('emb0.shape: ' + str(emb0.shape))
 print('emb1.shape: ' + str(emb1.shape))
 
-emb0a = normalize(emb0[new_idx0,:])
-emb1a = normalize(emb1[new_idx1,:])
+emb0a = np.copy(emb0[new_idx0,:])
+emb1a = np.copy(emb1[new_idx1,:])
 
 print('emb0a.shape: ' + str(emb0a.shape))
 print('emb1a.shape: ' + str(emb1a.shape))
@@ -101,6 +100,4 @@ R,scale = orthogonal_procrustes(emb0a, emb1a)
 
 np.save(args.output, R)
 
-print(np.linalg.norm(emb0a @ R - emb1a, axis=1), file=sys.stderr)
-
-print('%0.f sec: done; scale = %f' % (time.time() - t0, scale))
+print('%0.f sec: done' % (time.time() - t0))

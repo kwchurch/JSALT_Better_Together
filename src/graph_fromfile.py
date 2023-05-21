@@ -10,6 +10,7 @@ parser.add_argument("-i", "--input", required=True)
 parser.add_argument("-o", "--output", required=True)
 parser.add_argument("-N", "--N", type=int, default=None)
 parser.add_argument("-d", "--dtype", default='int32')
+parser.add_argument("-T", '--text_mode', action='store_true')
 
 args = parser.parse_args()
 
@@ -18,8 +19,12 @@ dtypes = { 'int32' : np.int32,
 
 assert args.dtype in dtypes, 'bad dtype arg: ' + args.dtype
 
-X = np.fromfile(args.input + '.X', dtypes[args.dtype])
-Y = np.fromfile(args.input + '.Y', dtypes[args.dtype])
+if args.text_mode:
+    X = np.loadtxt(args.input + '.X.txt', dtypes[args.dtype])
+    Y = np.loadtxt(args.input + '.Y.txt', dtypes[args.dtype])
+else:
+    X = np.fromfile(args.input + '.X', dtypes[args.dtype])
+    Y = np.fromfile(args.input + '.Y', dtypes[args.dtype])
 
 print(str(time.time() - t0) + ' loaded X and Y', file=sys.stderr)
 sys.stderr.flush()

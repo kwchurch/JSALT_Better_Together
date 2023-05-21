@@ -3,6 +3,7 @@
 import os,sys,argparse,time
 import numpy as np
 from sklearn.preprocessing import normalize
+from sklearn.metrics.pairwise import cosine_similarity
 
 from scipy.linalg import orthogonal_procrustes
 
@@ -25,15 +26,18 @@ t0 = time.time()
 parser = argparse.ArgumentParser()
 parser.add_argument("--seed", type=int, help='set seet', default=None)
 parser.add_argument("-i", "--input_directories", help="two directories, comma separated", required=True)
-parser.add_argument("-o", "--output", required=True)
+# parser.add_argument("-o", "--output", required=True)
+parser.add_argument("-R", "--rotation_matrices", help="comma separated files in *.npy format", required=True)
 parser.add_argument("-N", "--N", type=int, required=True)
 
 args = parser.parse_args()
 
-print('seed: ' + str(args.seed), file=sys.stderr)
+# print('seed: ' + str(args.seed), file=sys.stderr)
 
 if not args.seed is None:
     np.random.seed(args.seed)
+
+rotation_matrices = [np.load(f) for f in args.rotation_matrices.split(',')]
 
 def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
@@ -86,21 +90,28 @@ new_idx1 = map1[choices2]
 emb0 = configs[0]['embedding']
 emb1 = configs[1]['embedding']
 
-print('emb0.shape: ' + str(emb0.shape))
-print('emb1.shape: ' + str(emb1.shape))
+# print('emb0.shape: ' + str(emb0.shape), file=sys.stderr)
+# print('emb1.shape: ' + str(emb1.shape), file=sys.stderr)
 
 emb0a = normalize(emb0[new_idx0,:])
 emb1a = normalize(emb1[new_idx1,:])
 
-print('emb0a.shape: ' + str(emb0a.shape))
-print('emb1a.shape: ' + str(emb1a.shape))
+norm0 = np.linalg.norm(emb0a, axis=1)
+norm1 = np.linalg.norm(emb1a, axis=1)
 
-print('%0.f sec: about to call orthogonal procrustes' % (time.time() - t0))
+# print('norm0: ' + str(norm0), file=sys.stderr)
+# print('norm1: ' + str(norm1), file=sys.stderr)
 
-R,scale = orthogonal_procrustes(emb0a, emb1a)
+# print('emb0a.shape: ' + str(emb0a.shape), file=sys.stderr)
+# print('emb1a.shape: ' + str(emb1a.shape), file=sys.stderr)
 
-np.save(args.output, R)
+def my_cos(X, Y):
+    return [ cosine_similarity(X[i,:].reshape(1,-1), Y[i,:].reshape(1,-1))[0,0] for i in range(X.shape[0]) ]
 
-print(np.linalg.norm(emb0a @ R - emb1a, axis=1), file=sys.stderr)
+scores = np.array([ my_cos(emb0a @ R,  emb1a) for R in rotation_matrices ])
+# scores = np.array([ np.linalg.norm(emb0a @ R - emb1a, axis=1) for R in rotation_matrices ])
 
-print('%0.f sec: done; scale = %f' % (time.time() - t0, scale))
+# print('scores.shape: ' + str(scores.shape), file=sys.stderr)
+# print('scores: ' + str(scores))
+
+np.savetxt(sys.stdout, scores.T, fmt='%0.3f')

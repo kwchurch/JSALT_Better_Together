@@ -20,7 +20,7 @@ M = my_load(args.graph)
 print(str(time.time() - t0) + ' connected_compenents: finished loading', file=sys.stderr)
 sys.stderr.flush()
 
-n,comp = scipy.sparse.csgraph.connected_components(M)
+n,comp = scipy.sparse.csgraph.connected_components(M,directed=False)
 
 print('n: ' + str(n), file=sys.stderr)
 print(str(time.time() - t0) + ' connected_compenents: finished computing connected components', file=sys.stderr)
@@ -29,7 +29,7 @@ sys.stderr.flush()
 np.save(args.components, comp)
 print(str(time.time() - t0) + ' connected_compenents: finished saving components', file=sys.stderr)
 
-freq = np.bincount(comp)
+freq = np.bincount(np.array(comp))
 freq2 = np.bincount(freq)
 for i,f in enumerate(freq2):
     if f > 0:
