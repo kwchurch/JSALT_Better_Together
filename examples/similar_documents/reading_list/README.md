@@ -28,10 +28,14 @@ Some recommendations:
 <li> Use Cases
      <ol>
      	<li>Recommendation</li>	
-	<li>Routing submissions to reviewers</li>
+	<li>Routing submissions to reviewers
 		    <ol>
 		        <li><a href="https://people.cs.umass.edu/~mccallum/papers/expertise-kdd2007s.pdf">Expertise Modeling for Matching Papers with Reviewers</a> (<a href="Expertise.md">similar documents</a>)</li>
 		        <li><a href="http://engineering.nyu.edu/~suel/papers/reviewer.pdf">A Robust Model for Paper-Reviewer Assignment</a> (<a href="Reviewer.md">similar documents</a>)</li>
+		    </ol></li>
+         <li>Finding experts
+                    <ol>
+		        <li><a href="https://aclanthology.org/C10-2145/">Citation Author Topic Model in Expert Search</a> (<a href="Expert.md">similar documents</a>)</li>
 		    </ol></li>
 	<li>Summarization</li>
      </ol>
