@@ -454,9 +454,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 
 
 Access Key ID:
-AKIAVPBCSN6KSDSUI445
+AKIAVPBCSN6KSDSUIxxx
 Secret Access Key:
-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
+azWI7PFXs9OH+I8PjdUR/LLK8vZMqKyhiNW7vxxx
 
 cd /work/k.church/semantic_scholar
 
@@ -6144,10 +6144,10 @@ https://s3.console.aws.amazon.com/s3/buckets/jsalt2023kwc?region=us-west-2&tab=p
 aws s3api get-object-acl --bucket s3://jsalt2023kwc/V1/ --key jsalt2023kwc
 
 cd /scratch/k.church/semantic_scholar/to_go2
-s3cmd put releases/ s3://jsalt2023kwc2/ --recursive --access_key=AKIAVPBCSN6KYQJXGIII --secret_key=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
+s3cmd put releases/ s3://jsalt2023kwc2/ --recursive --access_key=AKIAVPBCSN6KYQJXGxxx --secret_key=q8eceGyoVOZnJaO8RuY2Z4Rf9NHPXgyuSufZqxxx
 
 cd /scratch/k.church/semantic_scholar/to_go2/releases/2022-12-02/
-s3cmd put doc/ s3://jsalt2023kwc3/ --recursive --access_key=AKIAVPBCSN6KYQJXGIII --secret_key=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 --region us-east-1
+s3cmd put doc/ s3://jsalt2023kwc3/ --recursive --access_key=AKIAVPBCSN6KYQJXGxxx --secret_key=q8eceGyoVOZnJaO8RuY2Z4Rf9NHPXgyuSufZqxxx --region us-east-1
 
 cd /scratch/k.church/semantic_scholar/to_go2/releases/2022-12-02/
 s3cmd put doc/ s3://jsalt2023kwc3/ --recursive  --force
@@ -6160,7 +6160,7 @@ https://us-west-1.console.aws.amazon.com/settings/home?region=us-west-1#/
 s3://jsalt2023kwc2/2022-12-02/context/
 https://jsalt2023kwc2.s3.us-west-1.amazonaws.com/2022-12-02/context/
 
-s3cmd ls s3://ai2-s2-datadog-logs --access_key=AKIAVPBCSN6KYQJXGIII --secret_key=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
+s3cmd ls s3://ai2-s2-datadog-logs --access_key=AKIAVPBCSN6KYQJXGxxx --secret_key=q8eceGyoVOZnJaO8RuY2Z4Rf9NHPXgyuSufZqxxx
 
 /work/nlp/j.ortega/paper_recommender/semantic_scholar_specter/prone_benchmarks/get_prone_benchmarks.sh
 /work/nlp/j.ortega/paper_recommender/semantic_scholar_specter/prone_benchmarks

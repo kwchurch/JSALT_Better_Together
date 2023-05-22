@@ -7,7 +7,7 @@ import numpy as np
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input", help="a filename", default=None)
 parser.add_argument("-o", "--output", help="output file", required=True)
-parser.add_argument("-M", "--model", help="name of HuggingFace model such as allenai/specter, allenai/specter2 or malteos/scincl", 
+parser.add_argument("-M", "--model", help="name of HuggingFace model such as allenai/specter, allenai/specter2, michiyasunaga/LinkBERT-large or malteos/scincl", 
                     default='allenai/specter2')
 args = parser.parse_args()
 
