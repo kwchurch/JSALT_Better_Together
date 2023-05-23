@@ -82,6 +82,7 @@ Problems, Techniques and Applications</a> (<a href="Graph_Embedding_Survey.md">s
     <li><a href="https://arxiv.org/pdf/1402.3722.pdf">Word2vec Explained (<a href="Levy_and_Goldberg2014.md">similar documents</a>)</a></li>
     <li><a href="https://cs.stanford.edu/people/jure/pubs/node2vec-kdd16.pdf">Node2vec (<a href="node2vec.md">similar documents</a>)</a></li>
     <li><a href="https://arxiv.org/pdf/1403.6652.pdf">DeepWalk</a> (<a href="DeepWalk.md">similar documents</a>)</li>
+    <li><a href="https://arxiv.org/pdf/1609.02907.pdf">Semi-Supervised Classification with Graph Convolutional Networks</a> (<a href="Kipf.md">similar documents</a>)</li>
     </ol>
 </li>
 </ol>
