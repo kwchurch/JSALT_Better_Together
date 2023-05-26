@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-G", "--graph", help=".npz file", required=True)
 parser.add_argument("--citations", help=".npy file", required=True)
 parser.add_argument("-o", "--output", help="output filename", required=True)
-parser.add_argument("-T", "--threshold", type=int, help="threshold on size of connected components", default=0)
+parser.add_argument("-T", "--threshold", type=int, help="threshold on size on number of citations (defaults to 0)", default=0)
 # parser.add_argument("-S", "--sample", type=float, help="fraction of edges", default=1.0)
 args = parser.parse_args()
 
@@ -21,9 +21,11 @@ def my_load(f):
 citationCounts = np.load(args.citations).reshape(-1)
 goodp = (citationCounts > args.threshold)
 new_N = np.sum(goodp)
+old_N = len(citationCounts)
 
-print(str(time.time() - t0) + ' new_shrink_matrix: new_N: ' + str(new_N), file=sys.stderr)
+print(str(time.time() - t0) + ' new_shrink_matrix: new_N: %d, old_N: %d' % (new_N, old_N), file=sys.stderr)
 sys.stderr.flush()
+
 
 old_idx = np.arange(old_N, dtype=np.int32)
 new_to_old = old_idx[goodp]
