@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 
-import sys,scipy.sparse,time,argparse
+import sys,scipy.sparse,time,argparse,socket
 import numpy as np
 
+print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
+
 t0 = time.time()
+
+print(str(time.time() - t0) + ' host: %s, SLURM_JOB_ID: %s, SLURM_ARRAY_TASK_ID: %s' % (socket.gethostname(), os.environ.get('SLURM_JOB_ID'), os.environ.get('SLURM_ARRAY_TASK_ID')), file=sys.stderr)
+sys.stderr.flush()
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-G", "--graph", help=".npz file", required=True)

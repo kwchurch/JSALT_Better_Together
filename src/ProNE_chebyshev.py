@@ -10,9 +10,15 @@ import csrgraph as cg
 from scipy import sparse,special
 from scipy.sparse import load_npz, csr_matrix, save_npz
 from sklearn import preprocessing
-import os,sys,argparse,time,gc
+import os,sys,argparse,time,gc,socket
+
+print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
 
 t0 = time.time()
+
+print(str(time.time() - t0) + ' host: %s, SLURM_JOB_ID: %s, SLURM_ARRAY_TASK_ID: %s' % (socket.gethostname(), os.environ.get('SLURM_JOB_ID'), os.environ.get('SLURM_ARRAY_TASK_ID')), file=sys.stderr)
+sys.stderr.flush()
+
 
 parser = argparse.ArgumentParser()
 # parser.add_argument("-O", "--output", help="output file", required=True)
@@ -30,28 +36,48 @@ def save_file(mat, suffix, iteration):
 def load_file(suffix, iteration):
     return np.load('%s.%s.%d.npy' % (args.temp_file_prefix, suffix, iteration))    
 
-U = np.load(args.U)
+print(str(time.time() - t0) + ' about to load U: %s' % (str(args.U)), file=sys.stderr)
+sys.stderr.flush()
+
+U = np.load(args.U).astype(np.float32)
 N = U.shape[0]
 K = U.shape[1]
 i = args.iteration
 
 print('%0.2f sec: loaded U' % (time.time() - t0), file=sys.stderr)
+sys.stderr.flush()
 
-M_filename = args.temp_file_prefix + '.M.npz'
+M = None
+M_filename = '%s.K%d.M.npz' % (args.temp_file_prefix, K)
+
 if os.path.exists(M_filename):
     print('%0.2f sec: about to load M' % (time.time() - t0), file=sys.stderr)
-    M = load_npz(M_filename)
-else:
+    sys.stderr.flush()
+    try: 
+        M = load_npz(M_filename)
+    except:
+        print(str(time.time() - t0) + ' failed to load M in: %s' % (M_filename), file=sys.stderr)
+
+if M is None:
     print('%0.2f sec: about to compute M' % (time.time() - t0), file=sys.stderr)
+    sys.stderr.flush()
     G = load_npz(args.input_graph)
     A = sparse.eye(N) + G
     DA = preprocessing.normalize(A, norm='l1')
+
     # L is graph laplacian
     L = sparse.eye(N) - DA
-    M = L - args.mu * sparse.eye(N)
+    M = (L - args.mu * sparse.eye(N)).astype(np.float32)
+
+    A = DA = L = None
+    ngc = gc.collect()
+    print('%0.2f sec: garbage collect returned %d' % (time.time() - t0, ngc), file=sys.stderr)
+    print(gc.get_stats(), file=sys.stderr)
+
     save_npz(M_filename, M)    
 
 print('%0.2f sec: loaded M' % (time.time() - t0), file=sys.stderr)
+sys.stderr.flush()
 
 if i == 0:
     Lx0 = U
@@ -83,6 +109,11 @@ else:
     # del Lx2    # no point deleting this since we are essentially done
 
 print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
+sys.stderr.flush()
+
+Lx0 = Lx0.astype(np.float32)
+Lx1 = Lx1.astype(np.float32)
+conv = conv.astype(np.float32)
 
 save_file(Lx0, "Lx0", i)
 save_file(Lx1, "Lx1", i)

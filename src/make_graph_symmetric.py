@@ -10,7 +10,10 @@ import sys,argparse,time,os,socket
 
 t0 = time.time()
 
+print(sys.argv, file=sys.stderr)
+
 print(str(time.time() - t0) + ' host: %s, SLURM_JOB_ID: %s, SLURM_ARRAY_TASK_ID: %s' % (socket.gethostname(), os.environ.get('SLURM_JOB_ID'), os.environ.get('SLURM_ARRAY_TASK_ID')), file=sys.stderr)
+sys.stderr.flush()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-O", "--output", help="output file", required=True)
