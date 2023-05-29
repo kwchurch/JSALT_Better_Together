@@ -53,7 +53,7 @@ for line in infd:
     # if len(fields) < 2: continue
     try:
         e = embed_string(' '.join(fields[1:]))
-        cited = np.array(int(fields[0]), dtype=np.int32)
+	cited = np.array(int(fields[0]), dtype=np.int32)
         cited.tofile(nodefile)
         e.tofile(edgefile)
     except:
