@@ -1,8 +1,12 @@
 #!/bin/sh
 
-K=$1
-floats=$2
-B=$3
+
+# K=$1
+# floats=$2
+# B=$3
+
+floats=$1/embedding.f
+source $1/record_size.sh
 
 echo `date` starting floats_to_idx.sh
 
@@ -28,11 +32,11 @@ mkdir -p `dirname $tmp`
 
 seed=$SLURM_ARRAY_TASK_ID
 out=$floats.simple.seed$seed.K$K.B$B.idx.$SLURM_ARRAY_TASK_ID.i
-floats_to_random_bytes $K $B $seed < $floats > $tmp
+$JSALTsrc/C/floats_to_random_bytes $K $B $seed < $floats > $tmp
 
 echo `date` finished floats_to_random_bytes 
 
-index_random_bytes $tmp $B --simple_case > $out
+$JSALTsrc/C/index_random_bytes $tmp $B --simple_case > $out
 
 echo `date` finished index_random_bytes $out
 
@@ -42,7 +46,7 @@ echo `date` finished char_hist $tmp
 
 rm $tmp
 
-invert_permutation $out > $out.inv
+$JSALTsrc/C/invert_permutation $out > $out.inv
 
 echo `date` finished floats_to_idx.sh
 

@@ -1,7 +1,15 @@
 #!/usr/bin/env python
 
-import sys
+import sys,argparse
 import numpy as np
 
-p = np.random.permutation(int(sys.argv[1]))
-p.tofile(sys.argv[2])
+print('random_permutation: ' + str(sys.argv), file=sys.stderr)
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-N", "--N", type=int, help="N", required=True)
+parser.add_argument("-o", "--output", help="output file", required=True)
+args = parser.parse_args()
+
+p = np.random.permutation(int(args.N))
+p.tofile(args.output)
+

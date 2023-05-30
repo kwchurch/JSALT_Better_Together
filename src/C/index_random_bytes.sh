@@ -8,16 +8,23 @@ echo SLURM_ARRAY_TASK_ID = $SLURM_ARRAY_TASK_ID
 
 tmp=/tmp/random_permutation.$$.${SLURM_ARRAY_TASK_ID}.i
 
-infile=$1
-idx=$infile.idx.${SLURM_ARRAY_TASK_ID}
-N=$2
-K=$3
+# infile=$1
+# idx=$infile.idx.${SLURM_ARRAY_TASK_ID}
+# N=$2
+# K=$3
+
+infile=$1/embedding.f
+idx=$1/idx.${SLURM_ARRAY_TASK_ID}
+source $1/record_size.sh
+
+echo B = $B
+echo K = $K
 
 if [ ! -s $idx ]
 then
 echo `date` working on $idx
-random_permutation.py $N $tmp
-index_random_bytes $infile $tmp > $idx
+$JSALTsrc/random_permutation.py -N $B --output $tmp
+$JSALTsrc/C/index_random_bytes $infile $tmp > $idx
 rm $tmp
 fi
 
