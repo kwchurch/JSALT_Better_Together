@@ -67,11 +67,10 @@ Abstractive Summarization of Long Documents</a> (<a href="summarize.md">similar 
 				<li><a href="https://nlp.stanford.edu/pubs/bethard_2010_cikm_literature_search.pdf">Who Should I Cite?
 Learning Literature Search Models from Citation Behavior</a> (<a href="who_should_I_cite.md">similar documents</a>)</li>
 				<li><a href="https://aclanthology.org/P19-1102.pdf">Multi-News: a Large-Scale Multi-Document Summarization
-Dataset and Abstractive Hierarchical Model</a> (<a href="MultiNews.md">similar documents</a>) (<a href="https://paperswithcode.com/dataset/multi-news">papers with code</a></li>
+Dataset and Abstractive Hierarchical Model</a> (<a href="MultiNews.md">similar documents</a>) (<a href="https://paperswithcode.com/dataset/multi-news">papers with code</a>)</li>
 
 				<li><a href="https://aclanthology.org/K17-1021.pdf">A Supervised Approach to Extractive Summarisation of Scientific Papers</a> (<a href="Scientific_summarization.md">similar documents</a>)
-(a href="https://github.com/EdCo95/scientific-paper-summarisation">GitHub</a></li>
-
+(a href="https://github.com/EdCo95/scientific-paper-summarisation">GitHub</a>)</li>
 			</ol>
 </li>
      </ol>
