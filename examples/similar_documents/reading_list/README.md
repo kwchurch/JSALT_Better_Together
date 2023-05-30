@@ -66,6 +66,8 @@ Some recommendations to read:
 Abstractive Summarization of Long Documents</a> (<a href="summarize.md">similar documents</a>)</li>
 				<li><a href="https://nlp.stanford.edu/pubs/bethard_2010_cikm_literature_search.pdf">Who Should I Cite?
 Learning Literature Search Models from Citation Behavior</a> (<a href="who_should_I_cite.md">similar documents</a>)</li>
+				<li><a href="https://aclanthology.org/P19-1102.pdf">Multi-News: a Large-Scale Multi-Document Summarization
+Dataset and Abstractive Hierarchical Model</a> (<a href="MultiNews.md">similar documents</a>)</li>
 			</ol>
 </li>
      </ol>
