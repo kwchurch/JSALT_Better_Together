@@ -96,6 +96,8 @@ Problems, Techniques and Applications</a> (<a href="Graph_Embedding_Survey.md">s
     <li><a href="https://arxiv.org/pdf/1403.6652.pdf">DeepWalk</a> (<a href="DeepWalk.md">similar documents</a>)</li>
     <li><a href="https://arxiv.org/pdf/1609.02907.pdf">Semi-Supervised Classification with Graph Convolutional Networks</a> (<a href="Kipf.md">similar documents</a>)</li>
     <li><a href="https://arxiv.org/pdf/0912.3848.pdf">Wavelets on Graphs via Spectral Graph Theory</a> (<a href="Hammond.md">similar documents</a>); section 6 introduces the Chebyshev approximation (used in ProNE)</li>
+    <li><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=45bd1a97bde5ffe34638b37ad54d1b929568426d">Estimating the number of unseen species: How many
+words did Shakespeare know?</a> (<a href="Skakespeare.md">similar documents</a>); section 6 introduces the Chebyshev approximation (used in ProNE)</li>
     </ol>
 </li>
 </ol>
