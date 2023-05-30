@@ -59,7 +59,7 @@ Some recommendations to read:
 	 	     <ol>
 		        <li><a href="https://cocosci.princeton.edu/tom/papers/author_topics_kdd.pdf">Probabilistic Author-Topic Models for Information Discovery</a> (<a href="Author_Topic_Trends.md">similar documents</a>)</li>
 		    </ol></li>
-	<li>Summarization
+	<li>Muti-Document Summarization (<a href="https://paperswithcode.com/task/multi-document-summarization">papers with code</a>)
 			<ol>
 				<li><a href="https://aclanthology.org/2020.emnlp-main.648.pdf">Multi-XScience: A Large-scale Dataset for Extreme Multi-document Summarization of Scientific Articles</a> (<a href="automatic_related_work.md">similar documents</a>)</li>
 				<li><a href="https://aclanthology.org/N18-2097.pdf">A Discourse-Aware Attention Model for
@@ -67,7 +67,8 @@ Abstractive Summarization of Long Documents</a> (<a href="summarize.md">similar 
 				<li><a href="https://nlp.stanford.edu/pubs/bethard_2010_cikm_literature_search.pdf">Who Should I Cite?
 Learning Literature Search Models from Citation Behavior</a> (<a href="who_should_I_cite.md">similar documents</a>)</li>
 				<li><a href="https://aclanthology.org/P19-1102.pdf">Multi-News: a Large-Scale Multi-Document Summarization
-Dataset and Abstractive Hierarchical Model</a> (<a href="MultiNews.md">similar documents</a>)</li>
+Dataset and Abstractive Hierarchical Model</a> (<a href="MultiNews.md">similar documents</a>) (a href="https://paperswithcode.com/dataset/multi-news">papers with code</a></li>
+
 			</ol>
 </li>
      </ol>

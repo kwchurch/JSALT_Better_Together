@@ -44,7 +44,7 @@ fi
 if [ ! -s $idx.inv ]
 then 
 echo `date` working on $idx.inv
-invert_permutation $idx > $idx.inv
+$JSALTsrc/C/invert_permutation $idx > $idx.inv
 fi
 
 echo `date` finished index_random_bytes.sh
