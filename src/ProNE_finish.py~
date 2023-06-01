@@ -12,7 +12,7 @@ from scipy.sparse import load_npz, csr_matrix, save_npz
 from sklearn import preprocessing
 import os,sys,argparse,time,gc,socket
 
-print('ProNE_chebyshev: sys.argv = ' + str(sys.argv), file=sys.stderr)
+print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
 
 t0 = time.time()
 
@@ -44,7 +44,7 @@ N = U.shape[0]
 K = U.shape[1]
 i = args.iteration
 
-print('%0.2f sec: loaded U with shape: %s' % (time.time() - t0, str(U.shape)), file=sys.stderr)
+print('%0.2f sec: loaded U' % (time.time() - t0), file=sys.stderr)
 sys.stderr.flush()
 
 M = None

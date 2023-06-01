@@ -274,6 +274,7 @@ int main(int ac, char **av)
       get_args_from_dir(av[++i]);
     }
     else if(strcmp(av[i], "--help") == 0) usage();
+    else if(strcmp(av[i], "--verbose") == 0) verbose++;
     else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
     else if(strcmp(av[i], "--floats") == 0) {
@@ -304,7 +305,9 @@ int main(int ac, char **av)
 
   while(scanf("%ld", &old_paper_id) == 1) {
     long new_paper_id = map_node(old_paper_id, OLD_TO_NEW, no_map);
+    if(verbose) fprintf(stderr, "old_paper_id = %ld, new_paper_id = %ld\n", old_paper_id, new_paper_id);
     for(i=0;i<nindexes;i++) {
+      if(verbose) fprintf(stderr, "i=%d, good = %d\n", i, good_index(indexes+i));
       if(good_index(indexes+i) && new_paper_id >= 0) {
 	int nfound;
 	long *found = find_near(new_paper_id, indexes + i, offset, &nfound);

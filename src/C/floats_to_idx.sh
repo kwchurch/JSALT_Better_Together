@@ -31,7 +31,7 @@ echo
 mkdir -p `dirname $tmp`
 
 seed=$SLURM_ARRAY_TASK_ID
-out=$floats.simple.seed$seed.K$K.B$B.idx.$SLURM_ARRAY_TASK_ID.i
+out=idx.$SLURM_ARRAY_TASK_ID.i
 $JSALTsrc/C/floats_to_random_bytes $K $B $seed < $floats > $tmp
 
 echo `date` finished floats_to_random_bytes 

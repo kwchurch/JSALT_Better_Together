@@ -6,9 +6,11 @@
 #include <stdlib.h>
 #include <search.h>
 
+int verbose = 0;
+
 void usage()
 {
-  fatal("usage: pairs_to_cos --dir \n or\n pairs_to_cos --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
+  fatal("usage: pairs_to_cos --verbose --dir \n or\n pairs_to_cos --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
 }
 
 struct node_map{
@@ -137,7 +139,7 @@ void init_node_map(char *filename)
 
 void get_args_from_dir(char *dir)
 {
-  // fprintf(stderr, "get_args_from_dir: %s\n", dir);
+  if(verbose) fprintf(stderr, "get_args_from_dir: %s\n", dir);
   char buf[1024];
   sprintf(buf, "%s/record_size", dir);
 
@@ -160,7 +162,8 @@ int main(int ac, char **av)
   int no_map = 1;
   long prev_i=-1, i, j;
   for(i=1;i<ac;i++) {
-    if(strcmp(av[i], "--dir") == 0) {
+    if(strcmp(av[i], "--verbose") == 0) verbose++;
+    else if(strcmp(av[i], "--dir") == 0) {
       no_map = 0;
       get_args_from_dir(av[++i]);
     }
