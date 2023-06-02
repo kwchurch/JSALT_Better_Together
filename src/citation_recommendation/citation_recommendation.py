@@ -8,6 +8,7 @@ import urllib
 import os
 import requests
 import json
+import os
 
 from collections import defaultdict, namedtuple
 import urllib.request
@@ -225,9 +226,9 @@ def directory_to_config(dir):
 
 # In[ ]:
 
-
-specter = '/data2/jsalt2023/data/semantic_scholar/embeddings/specter'
-proposed = '/data2/jsalt2023/data/semantic_scholar/embeddings/proposed'
+# added by kwc
+specter = os.environ.get('specter')
+proposed = os.environ.get('proposed')
 
 
 # In[ ]:
