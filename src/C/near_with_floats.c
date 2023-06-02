@@ -93,7 +93,7 @@ long new_map_node(long node, int new_to_old)
     long *found = bsearch(&node, new_map, nnew_map, sizeof(long), long_compare);
     // long *found = bsearch(&node, new_map, nnew_map, sizeof(long), (__compar_fn_t)long_compare);
     if(!found) return -1;
-    if(found < new_map || found >= new_map + nnew_map) fatal("confusion in new_map_node");
+    if(found < new_map || found >= new_map + nnew_map) return -1; /* fatal("confusion in new_map_node"); */
     return found - new_map;
   }
 }
@@ -122,8 +122,8 @@ long map_node(long node, int new_to_old, int no_map)
 
   if(node < 0 || node >= N) {
     fprintf(stderr, "warning, node = %ld; N = %ld\n", node, N);
-    // return -1;
-    fatal("confusion in map_node");
+    return -1;
+    // fatal("confusion in map_node");
   }
 
   return MM[node];
@@ -316,9 +316,11 @@ int main(int ac, char **av)
 	  char buf[2][1024];
 	  long new_j = *found++;
 	  long old_j = map_node(new_j, NEW_TO_OLD, no_map);
+	  float score = my_cos(floats + new_j * record_size, floats + new_paper_id * record_size, record_size);
+	  if(score < -0.5) continue;
 	  if(verbose)
 	    printf("%f\t%s\t%s\t%ld\t%ld\t%ld\t%ld\n",
-		   my_cos(floats + new_j * record_size, floats + new_paper_id * record_size, record_size),
+		   score,
 		   id2url(buf[0], old_paper_id, new_paper_id),
 		   id2url(buf[1],  old_j, new_j)
 		   , old_paper_id, new_paper_id
@@ -326,7 +328,7 @@ int main(int ac, char **av)
 		   );
 	  else 
 	    printf("%f\t%s\t%s\t%ld\t%ld\t%ld\t%ld\t%d\t%s\n",
-		   my_cos(floats + new_j * record_size, floats + new_paper_id * record_size, record_size),
+		   score,
 		   id2url(buf[0], old_paper_id, new_paper_id),
 		   id2url(buf[1],  old_j, new_j),
 		   old_paper_id, old_j,

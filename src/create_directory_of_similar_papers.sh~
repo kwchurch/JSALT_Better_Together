@@ -1,0 +1,16 @@
+#!/bin/sh
+
+outdir=$1
+query=$2
+nbest=$3
+mkdir -p $outdir/near2
+
+echo $query | $JSALTsrc/fetch_references_and_citations.py |
+awk '/ERROR/ {next}; $1 == "reference" {print $2; print $3}' | 
+awk 'killroy[$1]++ < 1' > $outdir/ids.txt
+
+cat $outdir/ids.txt |
+while read p
+do
+$JSALTsrc/near2.sh $p $nbest > $outdir/near2/$p
+done

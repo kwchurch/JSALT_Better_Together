@@ -144,6 +144,11 @@ void get_args_from_dir(char *dir)
   sprintf(buf, "%s/record_size", dir);
 
   FILE *fd = fopen(buf, "r");
+  if(!fd) {
+    fprintf(stderr, "pairs_to_cos: %s/record_size\n", dir);
+    fatal("open failed");
+  }
+
   fscanf(fd, "%d", &record_size);
   fclose(fd);
   

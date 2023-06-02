@@ -1,0 +1,7 @@
+import sys
+import numpy as np
+
+lines = sys.readlines(sys.stdin)
+x = np.array(lines)
+y = x.reshape(int(sys.argv[1]), int(sys.argv[2]))
+np.savetxt(sys.stdout, y)

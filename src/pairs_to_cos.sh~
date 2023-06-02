@@ -1,0 +1,12 @@
+#!/bin/sh
+
+tmp=/tmp/pairs_to_cos.$$
+
+cat - > $tmp.input
+
+echo $* | tr ' ' '\t'
+
+for emb in $*
+do
+JSALTsrc/C/pairs_to_cos --dir $emb < $tmp.input | cut -f1 
+done | $JSALTsrc/reshape.py -1 `wc -l $tmp.input`
