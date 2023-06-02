@@ -12,6 +12,7 @@
 <li><a href="doc/Notation.md">Notation</a></li>
 <li><a href="doc/deliverables.md">Deliverables</a></li>
 <li><a href="examples/similar_documents/reading_list">Reading List</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1JMq-jR4M8KU119cvglUDmMwwzd60Z3vyvn3VqhPn9EY/view#gid=1450677429">SciRepEval Baselines</a></li>
 </ol>
 
 <h2>Installation</h2>

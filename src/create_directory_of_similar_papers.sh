@@ -22,8 +22,11 @@ $JSALTsrc/tsv_to_html.sh > $outdir/near2.md/$p.md
 
 done
 
-cat $outdir/near2/* | cut -f3- | awk '$1 != $2' | sort -u |
-$JSALTsrc/pairs_to_cos.sh > $outdir/scores.md
+echo `cat $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt` > $outdir/scores.txt
 
-# $JSALTsrc/tsv_to_html.sh < $outdir/scores.txt > $outdir/scores.md
+cat $outdir/near2/* | cut -f3- | awk '$1 != $2' | sort -u |
+$JSALTsrc/pairs_to_cos.sh >> $outdir/scores.txt
+
+$JSALTsrc/tsv_to_html.sh < $outdir/scores.txt > $outdir/scores.md
+
 
