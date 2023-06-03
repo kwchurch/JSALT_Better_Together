@@ -1,2 +1,0 @@
-/var/spool/slurmd/job35265451/slurm_script: line 7: 21607 Done                    cut -f2- < $HOME/to_go/both.52967399.21302.2
-     21608 Segmentation fault      | $src/C/cocitations $citedir/citations.G.symmetric.[XY].i > $HOME/to_go/both.52967399.21302.2.cocitations
