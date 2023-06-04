@@ -1,0 +1,8 @@
+#!/bin/sh
+
+N=$1
+
+x_to_y La |
+awk 'BEGIN {FS=OFS="\t"}; 
+      {for(i in ring_buffer) print $1, i+0}
+      {ring_buffer[NR % N] = $1}'

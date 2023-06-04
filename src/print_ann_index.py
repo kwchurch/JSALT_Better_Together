@@ -49,10 +49,12 @@ if outf is None:
 else:
     outf = open(outf, 'w')
 
+SMALL=1e-9
+
 def my_cos(a, b):
     la = np.linalg.norm(a)
     lb = np.linalg.norm(b)
-    if la == 0 or lb == 0: return -1.0
+    if la < SMALL or lb < SMALL: return -1.0
     return a.dot(b)/(la*lb)
 
 def record_size_from_dir():
