@@ -770,3 +770,262 @@ Frontiers:
 <td>Journal of Experimental Botany</td>
 </tr>
 </table></html>
+
+arXiv:
+
+<html><table><tr>
+<th>Evidence</th>
+<th>Venue</th>
+<th>Venue</th>
+</tr>
+<tr>
+<td>67424</td>
+<td>arXiv.org</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>7955</td>
+<td>arXiv.org</td>
+<td>Neural Information Processing Systems</td>
+</tr>
+<tr>
+<td>7522</td>
+<td>Neural Information Processing Systems</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>6959</td>
+<td>Computer Vision and Pattern Recognition</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>6558</td>
+<td>arXiv.org</td>
+<td>Computer Vision and Pattern Recognition</td>
+</tr>
+<tr>
+<td>6405</td>
+<td>International Conference on Machine Learning</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>6338</td>
+<td>arXiv.org</td>
+<td>International Conference on Machine Learning</td>
+</tr>
+<tr>
+<td>5989</td>
+<td>AAAI Conference on Artificial Intelligence</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>5983</td>
+<td>arXiv.org</td>
+<td>AAAI Conference on Artificial Intelligence</td>
+</tr>
+<tr>
+<td>5279</td>
+<td>International Conference on Learning Representations</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>5222</td>
+<td>IEEE Transactions on Information Theory</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>5152</td>
+<td>arXiv.org</td>
+<td>IEEE Transactions on Information Theory</td>
+</tr>
+<tr>
+<td>5095</td>
+<td>arXiv.org</td>
+<td>IEEE Access</td>
+</tr>
+<tr>
+<td>5078</td>
+<td>arXiv.org</td>
+<td>International Conference on Learning Representations</td>
+</tr>
+<tr>
+<td>4818</td>
+<td>IEEE Access</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>4535</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>4435</td>
+<td>Conference on Empirical Methods in Natural Language Processing</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>4052</td>
+<td>Annual Meeting of the Association for Computational Linguistics</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>3286</td>
+<td>IEEE International Conference on Computer Vision</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>2822</td>
+<td>International Joint Conference on Artificial Intelligence</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>2049</td>
+<td>International Symposium on Information Theory</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1984</td>
+<td>IEEE International Conference on Robotics and Automation</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1953</td>
+<td>IACR Cryptology ePrint Archive</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1945</td>
+<td>IEEE Transactions on Signal Processing</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1941</td>
+<td>Theoretical Computer Science</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1892</td>
+<td>IEEE Conference on Decision and Control</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1858</td>
+<td>Interspeech</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1737</td>
+<td>IEEE Transactions on Wireless Communications</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1678</td>
+<td>North American Chapter of the Association for Computational Linguistics</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1650</td>
+<td>IEEE Transactions on Image Processing</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1550</td>
+<td>International Conference on Information Photonics</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1539</td>
+<td>Italian National Conference on Sensors</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1539</td>
+<td>IEEE International Joint Conference on Neural Network</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1492</td>
+<td>IEEE Transactions on Pattern Analysis and Machine Intelligence</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1419</td>
+<td>IEEE/RJS International Conference on Intelligent RObots and Systems</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1412</td>
+<td>The Web Conference</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1391</td>
+<td>International Conference on Information and Knowledge Management</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1370</td>
+<td>IEEE Communications Letters</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1368</td>
+<td>ACM-SIAM Symposium on Discrete Algorithms</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1356</td>
+<td>Global Communications Conference</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1317</td>
+<td>International Conference on Pattern Recognition</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1314</td>
+<td>IEEE Workshop/Winter Conference on Applications of Computer Vision</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1301</td>
+<td>ACM Multimedia</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1288</td>
+<td>IEEE Transactions on Vehicular Technology</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1238</td>
+<td>Discrete Mathematics</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1199</td>
+<td>Adaptive Agents and Multi-Agent Systems</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1191</td>
+<td>Discrete Applied Mathematics</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1159</td>
+<td>Findings</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1153</td>
+<td>International Conference on Computational Linguistics</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>1143</td>
+<td>IEEE Wireless Communications and Networking Conference</td>
+<td>arXiv.org</td>
+</tr>
+</table></html>
