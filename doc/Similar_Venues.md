@@ -375,24 +375,9 @@ Here are the top 10 Venues machine 'Mach.*Trans':
 <th>Venue</th>
 </tr>
 <tr>
-<td>1592</td>
-<td>IEEE Transactions on Pattern Analysis and Machine Intelligence</td>
-<td>IEEE Transactions on Pattern Analysis and Machine Intelligence</td>
-</tr>
-<tr>
-<td>732</td>
-<td>IEEE Transactions on Pattern Analysis and Machine Intelligence</td>
-<td>IEEE Transactions on Image Processing</td>
-</tr>
-<tr>
 <td>686</td>
 <td>Machine Translation Summit</td>
 <td>Machine Translation Summit</td>
-</tr>
-<tr>
-<td>574</td>
-<td>Conference on Empirical Methods in Natural Language Processing</td>
-<td>Conference on Machine Translation</td>
 </tr>
 <tr>
 <td>493</td>
@@ -405,11 +390,6 @@ Here are the top 10 Venues machine 'Mach.*Trans':
 <td>Annual Meeting of the Association for Computational Linguistics</td>
 </tr>
 <tr>
-<td>388</td>
-<td>British Machine Vision Conference</td>
-<td>IEEE Transactions on Pattern Analysis and Machine Intelligence</td>
-</tr>
-<tr>
 <td>346</td>
 <td>Machine Translation Summit</td>
 <td>Annual Meeting of the Association for Computational Linguistics</td>
@@ -420,9 +400,29 @@ Here are the top 10 Venues machine 'Mach.*Trans':
 <td>European Association for Machine Translation Conferences/Workshops</td>
 </tr>
 <tr>
-<td>320</td>
-<td>International Conference on Language Resources and Evaluation</td>
+<td>285</td>
 <td>Machine Translation Summit</td>
+<td>International Workshop on Spoken Language Translation</td>
+</tr>
+<tr>
+<td>272</td>
+<td>European Association for Machine Translation Conferences/Workshops</td>
+<td>Machine Translation Summit</td>
+</tr>
+<tr>
+<td>260</td>
+<td>Conference of the Association for Machine Translation in the Americas</td>
+<td>Machine Translation Summit</td>
+</tr>
+<tr>
+<td>260</td>
+<td>Machine Translation Summit</td>
+<td>International Conference on Language Resources and Evaluation</td>
+</tr>
+<tr>
+<td>245</td>
+<td>Machine Translation Summit</td>
+<td>Conference of the Association for Machine Translation in the Americas</td>
 </tr>
 </table></html>
 
@@ -532,5 +532,241 @@ Here are top 20 matching NeurIPS:
 <td>4</td>
 <td>ViGIL@NeurIPS</td>
 <td>Neural Information Processing Systems</td>
+</tr>
+</table></html>
+
+Vision:
+
+<html><table><tr>
+<th>Evidence</th>
+<th>Venue</th>
+<th>Venue</th>
+</tr>
+<tr>
+<td>31754</td>
+<td>Vision Research</td>
+<td>Vision Research</td>
+</tr>
+<tr>
+<td>8083</td>
+<td>Computer Vision and Pattern Recognition</td>
+<td>Computer Vision and Pattern Recognition</td>
+</tr>
+<tr>
+<td>6959</td>
+<td>Computer Vision and Pattern Recognition</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>6167</td>
+<td>Journal of Vision</td>
+<td>Vision Research</td>
+</tr>
+<tr>
+<td>5783</td>
+<td>Journal of Vision</td>
+<td>Journal of Vision</td>
+</tr>
+<tr>
+<td>3456</td>
+<td>Computer Vision and Pattern Recognition</td>
+<td>IEEE International Conference on Computer Vision</td>
+</tr>
+<tr>
+<td>3286</td>
+<td>IEEE International Conference on Computer Vision</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>3278</td>
+<td>IEEE International Conference on Computer Vision</td>
+<td>Computer Vision and Pattern Recognition</td>
+</tr>
+<tr>
+<td>2944</td>
+<td>Journal of The Optical Society of America A-optics Image Science and Vision</td>
+<td>Journal of The Optical Society of America A-optics Image Science and Vision</td>
+</tr>
+<tr>
+<td>2786</td>
+<td>Optometry and Vision Science</td>
+<td>Optometry and Vision Science</td>
+</tr>
+</table></html>
+
+Speech:
+
+<html><table><tr>
+<th>Evidence</th>
+<th>Venue</th>
+<th>Venue</th>
+</tr>
+<tr>
+<td>12824</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+</tr>
+<tr>
+<td>4535</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>arXiv.org</td>
+</tr>
+<tr>
+<td>3803</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>IEEE Transactions on Signal Processing</td>
+</tr>
+<tr>
+<td>2215</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>European Signal Processing Conference</td>
+</tr>
+<tr>
+<td>2058</td>
+<td>Journal of Speech, Language and Hearing Research</td>
+<td>Journal of Speech, Language and Hearing Research</td>
+</tr>
+<tr>
+<td>1526</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>IEEE Signal Processing Letters</td>
+</tr>
+<tr>
+<td>1447</td>
+<td>Journal of Speech and Hearing Research</td>
+<td>Journal of Speech and Hearing Research</td>
+</tr>
+<tr>
+<td>1241</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>Signal Processing</td>
+</tr>
+<tr>
+<td>1060</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>IEEE Transactions on Communications</td>
+</tr>
+<tr>
+<td>1009</td>
+<td>IEEE International Conference on Acoustics, Speech, and Signal Processing</td>
+<td>IEEE Transactions on Information Theory</td>
+</tr>
+</table></html>
+
+Psychology:
+
+<html><table><tr>
+<th>Evidence</th>
+<th>Venue</th>
+<th>Venue</th>
+</tr>
+<tr>
+<td>3613</td>
+<td>Journal of Experimental Psychology</td>
+<td>Journal of Experimental Psychology</td>
+</tr>
+<tr>
+<td>3075</td>
+<td>Frontiers in Psychology</td>
+<td>Frontiers in Psychology</td>
+</tr>
+<tr>
+<td>3057</td>
+<td>Journal of Comparative and Physiological Psychology</td>
+<td>Journal of Comparative and Physiological Psychology</td>
+</tr>
+<tr>
+<td>2805</td>
+<td>Journal of Experimental Psychology: Human Perception and Performance</td>
+<td>Journal of Experimental Psychology: Human Perception and Performance</td>
+</tr>
+<tr>
+<td>2499</td>
+<td>Journal of Experimental Psychology. Learning, Memory and Cognition</td>
+<td>Journal of Experimental Psychology. Learning, Memory and Cognition</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>Journal of Experimental Psychology. Learning, Memory and Cognition</td>
+<td>Memory & Cognition</td>
+</tr>
+<tr>
+<td>2261</td>
+<td>Journal of Experimental Child Psychology</td>
+<td>Journal of Experimental Child Psychology</td>
+</tr>
+<tr>
+<td>2042</td>
+<td>Journal of Experimental Psychology: Human Perception and Performance</td>
+<td>Perception & Psychophysics</td>
+</tr>
+<tr>
+<td>1913</td>
+<td>Journal of Abnormal Psychology</td>
+<td>Journal of Abnormal Psychology</td>
+</tr>
+<tr>
+<td>1785</td>
+<td>Journal of Comparative and Physiological Psychology</td>
+<td>Physiology and Behavior</td>
+</tr>
+</table></html>
+
+Frontiers:
+
+<html><table><tr>
+<th>Evidence</th>
+<th>Venue</th>
+<th>Venue</th>
+</tr>
+<tr>
+<td>5253</td>
+<td>Frontiers in Microbiology</td>
+<td>Frontiers in Microbiology</td>
+</tr>
+<tr>
+<td>4448</td>
+<td>Frontiers in Plant Science</td>
+<td>Frontiers in Plant Science</td>
+</tr>
+<tr>
+<td>3615</td>
+<td>Frontiers in Immunology</td>
+<td>Frontiers in Immunology</td>
+</tr>
+<tr>
+<td>3075</td>
+<td>Frontiers in Psychology</td>
+<td>Frontiers in Psychology</td>
+</tr>
+<tr>
+<td>2452</td>
+<td>Frontiers in Microbiology</td>
+<td>PLoS ONE</td>
+</tr>
+<tr>
+<td>2263</td>
+<td>Frontiers in Plant Science</td>
+<td>Plant Physiology</td>
+</tr>
+<tr>
+<td>2027</td>
+<td>Frontiers in Immunology</td>
+<td>Journal of Immunology</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>Frontiers in Plant Science</td>
+<td>PLoS ONE</td>
+</tr>
+<tr>
+<td>1905</td>
+<td>Frontiers in Oncology</td>
+<td>Frontiers in Oncology</td>
+</tr>
+<tr>
+<td>1897</td>
+<td>Frontiers in Plant Science</td>
+<td>Journal of Experimental Botany</td>
 </tr>
 </table></html>
