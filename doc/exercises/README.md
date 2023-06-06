@@ -31,6 +31,9 @@ Do this for four models, <i>f</i>:
 <li><a href="https://huggingface.co/michiyasunaga/LinkBERT-base">michiyasunaga/LinkBERT-base</a></li>
 </ol>
 
+We will refer to vectors of d as f(d).  We will add subscripts to f as appropriate to make
+it clear which model we are using for f.
+
 <h2>Plotting Vectors</h2>
 
 For the vectors computed above, project them down to two dimensions and plot them as a scatter plot.
@@ -47,7 +50,7 @@ ds = datasets.load_dataset('allenai/scirepeval_test', 'scidocs_cite')
 
 <ol>
 <li>For as many documents, <i>d</i>, in <i>scidocs_cite</i> as you can afford to use,
-use the methods above to estimate vectors for <i>f(d)</i>.</li>
+use the methods, <i>f</i>, above to estimate vectors: <i>f(d)</i>.</li>
 <li>Estimate vectors for each of the references of <i>d</i>.</li>
 <li>Let dhat be the centroid of the vectors for the references of d.
 <li>Compute cosines: cos(d, dhat)</li>
