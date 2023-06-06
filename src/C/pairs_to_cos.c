@@ -10,7 +10,7 @@ int verbose = 0;
 
 void usage()
 {
-  fatal("usage: pairs_to_cos --verbose --dir \n or\n pairs_to_cos --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
+  fatal("usage: pairs_to_cos --input_new_pairs --verbose --dir \n or\n pairs_to_cos --floats floats --record_size K [--map xxx] [--new_map xxx.L] < pairs");
 }
 
 struct node_map{
@@ -163,11 +163,12 @@ void get_args_from_dir(char *dir)
 
 int main(int ac, char **av)
 {
-
+  int input_new_pairs = 0;
   int no_map = 1;
-  long prev_i=-1, i, j;
+  long prev_i=-1, i;
   for(i=1;i<ac;i++) {
     if(strcmp(av[i], "--verbose") == 0) verbose++;
+    else if(strcmp(av[i], "--input_new_pairs") == 0) input_new_pairs=1;
     else if(strcmp(av[i], "--dir") == 0) {
       no_map = 0;
       get_args_from_dir(av[++i]);
@@ -193,15 +194,31 @@ int main(int ac, char **av)
   if(nfloats <= 0) fatal("bad input: --floats");
 
   double d, alen = 0;
-  while(scanf("%ld%ld", &i, &j) == 2) {
-    long new_i = map_node(i, OLD_TO_NEW, no_map);
-    long new_j = map_node(j, OLD_TO_NEW, no_map);
-    if(prev_i != new_i) {
-      alen = norm(floats + new_i * record_size, record_size);
-      prev_i = new_i;
+  if (input_new_pairs > 0) {
+    long new_i, new_j;
+    while(scanf("%ld%ld", &new_i, &new_j) == 2) {
+      long old_i = map_node(new_i, NEW_TO_OLD, no_map);
+      long old_j = map_node(new_j, NEW_TO_OLD, no_map);
+      if(prev_i != new_i) {
+	alen = norm(floats + new_i * record_size, record_size);
+	prev_i = new_i;
+      }
+      d = my_cos(alen, floats + new_i * record_size, floats + new_j * record_size, record_size);
+      printf("%f\t%ld\t%ld\n", d, old_i, old_j);
     }
-    d = my_cos(alen, floats + new_i * record_size, floats + new_j * record_size, record_size);
-    printf("%f\t%ld\t%ld\n", d, i, j);
+  }
+  else {
+    long old_i, old_j;
+    while(scanf("%ld%ld", &old_i, &old_j) == 2) {
+      long new_i = map_node(old_i, OLD_TO_NEW, no_map);
+      long new_j = map_node(old_j, OLD_TO_NEW, no_map);
+      if(prev_i != new_i) {
+	alen = norm(floats + new_i * record_size, record_size);
+	prev_i = new_i;
+      }
+      d = my_cos(alen, floats + new_i * record_size, floats + new_j * record_size, record_size);
+      printf("%f\t%ld\t%ld\n", d, old_i, old_j);
+    }
   }
   
   exit(0);

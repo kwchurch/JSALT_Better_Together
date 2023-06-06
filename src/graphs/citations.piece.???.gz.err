@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/var/spool/slurmd/job36261028/slurm_script", line 9, in <module>
-    with gzip.open(f) as fd:
-  File "/shared/centos7/python/3.8.1/lib/python3.8/gzip.py", line 58, in open
-    binary_file = GzipFile(filename, gz_mode, compresslevel)
-  File "/shared/centos7/python/3.8.1/lib/python3.8/gzip.py", line 173, in __init__
-    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
-FileNotFoundError: [Errno 2] No such file or directory: 'citations.piece.???.gz'

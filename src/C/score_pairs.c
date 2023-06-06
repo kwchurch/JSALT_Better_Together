@@ -13,7 +13,7 @@ int threshold = 0;
 
 void usage()
 {
-  fatal("usage: echo <pairs of papers> | near_with_floats [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] > report");
+  fatal("usage: echo <pairs of papers> | near_with_floats [--input_new_pairs] [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] > report");
 }
 
 struct urls {
@@ -231,8 +231,11 @@ long *find_near(long paper, struct idx *idx, int offset, int *nfound)
 
 int main(int ac, char **av)
 {
+  fatal("deprecated: use pairs_to_cos");
+
   char buf[2][1024];
   int i;
+  int input_new_pairs = 0;
   long old_paper_id[2];
   long new_paper_id[2];
   // struct idx *indexes;
@@ -242,6 +245,7 @@ int main(int ac, char **av)
 
   for(i=1;i<ac;i++) {
     if(strcmp(av[i], "--help") == 0) usage();
+    else if(strcmp(av[i], "--input_new_pairs") == 0) input_new_pairs++;
     else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     // else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
     else if(strcmp(av[i], "--floats") == 0) {
@@ -266,6 +270,7 @@ int main(int ac, char **av)
     if(sscanf(buf[0], "%ld%ld", &old_paper_id[0], &old_paper_id[1]) != 2) 
       printf("-1\t%s", buf[0]);
     else {
+
       new_paper_id[0] = map_node(old_paper_id[0], OLD_TO_NEW);
       new_paper_id[1] = map_node(old_paper_id[1], OLD_TO_NEW);
 
