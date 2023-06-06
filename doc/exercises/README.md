@@ -51,8 +51,8 @@ use the methods above to estimate vectors for <i>f(d)</i>.</li>
 <li>Estimate vectors for each of the references of <i>d</i>.</li>
 <li>Let dhat be the centroid of the vectors for the references of d.
 <li>Compute cosines: cos(d, dhat)</li>
-<li>Do this for the four models above<li>
-<li>Plot boxplots of cos(d, dhat), for each of the four models<li>
+<li>Do this for the four models above</li>
+<li>Plot boxplots of cos(d, dhat), for each of the four models</li>
 </ol>
 
 
