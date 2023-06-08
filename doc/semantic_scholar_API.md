@@ -61,6 +61,7 @@ The argument to --fields can make use of the following:
 <li>s2fieldsOfStudy</li>
 <li>openAccessPdf (URL to pdf versions of paper)</li>
 <li>tldr (too long; didn't read -- summaries, often based on abstracts</li>
+<li>citationStyles (bibtex entries)</li>
 </ol>
 (See <a href="https://api.semanticscholar.org/api-docs/">here</a> for more information on these arguments (and more).)
 <p>
