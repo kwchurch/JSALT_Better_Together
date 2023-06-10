@@ -58,4 +58,11 @@ use the methods, <i>f</i>, above to estimate vectors: <i>f(d)</i>.</li>
 <li>Plot boxplots of cos(d, dhat), for each of the four models</li>
 </ol>
 
+<h2>Challenge!</h2>
+
+Download zip file: <a href="https://drive.google.com/file/d/1tVJAjRGiOhI3NSIAxGzwqOSNodl7KjGJ/view?usp=sharing">here</a>.
+<p>
+This is the SciDocs cite task.  Baselines are <a href="https://docs.google.com/spreadsheets/d/1JMq-jR4M8KU119cvglUDmMwwzd60Z3vyvn3VqhPn9EY/view#gid=1450677429">here</a>.
+<p>
+Good  luck!
 
