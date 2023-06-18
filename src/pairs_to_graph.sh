@@ -7,9 +7,9 @@ mkdir -p $tmpdir
 
 
 awk '$1 > T' T=$T $pairs > $tmpdir/pairs 
-cut -f1 < $tmpdir/pairs | $JSALTsrc/x_to_y af > $tmpdir/pairs.f
-cut -f2 < $tmpdir/pairs | $JSALTsrc/x_to_y ai > $tmpdir/pairs.X.i
-cut -f3 < $tmpdir/pairs | $JSALTsrc/x_to_y ai > $tmpdir/pairs.Y.i
+cut -f1 < $tmpdir/pairs | $JSALTsrc/C/x_to_y af > $tmpdir/pairs.f
+cut -f2 < $tmpdir/pairs | $JSALTsrc/C/x_to_y ai > $tmpdir/pairs.X.i
+cut -f3 < $tmpdir/pairs | $JSALTsrc/C/x_to_y ai > $tmpdir/pairs.Y.i
 
 $JSALTsrc/pairs_to_graph.py --input $tmpdir/pairs --output $pairs.npz
 
