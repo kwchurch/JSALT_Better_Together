@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+
+import sys,scipy.sparse,argparse,time
+import numpy as np
+
+t0 = time.time()
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-o", "--output", required=True)
+parser.add_argument("-N", "--N", type=int, default=270000000)
+parser.add_argument("-d", "--dtype", default='float16')
+args = parser.parse_args()
+
+dtypes = { 'int8' : np.int8,
+           'int16' : np.int16,
+           'int32' : np.int32,
+           'int64' : int,
+           'int' : int,
+           'float16' : np.float16,
+           'float32' : np.float32,
+           'float64' : float,
+           'float' : float}
+
+assert args.dtype in dtypes, 'bad dtype arg: ' + args.dtype
+
+pairs = np.loadtxt(sys.stdin, dtype=np.int32)
+
+print(str(time.time() - t0) + ' loaded pairs', file=sys.stderr)
+sys.stderr.flush()
+
+# V = pairs[:,0].reshape(-1)
+X = pairs[:,0]
+Y = pairs[:,1]
+V = np.ones(len(X),dtype=bool)
+M = scipy.sparse.csr_matrix((V, (X, Y)), shape=(args.N, args.N), dtype=bool)
+
+M += M.T
+
+print(str(time.time() - t0) + ' make symmetric', file=sys.stderr)
+sys.stderr.flush()
+
+
+
+scipy.sparse.save_npz(args.output, M)
+
+print(str(time.time() - t0) + ' done', file=sys.stderr)
+sys.stderr.flush()

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+pairs=$1
+T=$2
+
+awk '$1 > T' T=$T $pairs |
+# sort -T . -S '90%' -u |
+cut -f2- |
+# sort -T . -S '90%' -u |
+$JSALTsrc/pairs_to_graph.py --output $pairs.npz
+
+
+
+
+

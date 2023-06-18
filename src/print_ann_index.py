@@ -76,7 +76,12 @@ def map_int(fn):
 
 def map_float32(fn):
     fn_len = os.path.getsize(fn)
+    return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/4)), mode='r')
+
+def map_float(fn):
+    fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/8)), mode='r')
+
 
 def embedding_from_dir():
     K = record_size_from_dir()
