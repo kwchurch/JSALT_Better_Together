@@ -58,6 +58,20 @@ use the methods, <i>f</i>, above to estimate vectors: <i>f(d)</i>.</li>
 <li>Plot boxplots of cos(d, dhat), for each of the four models</li>
 </ol>
 
+<h2>Citing Sentences</h2>
+
+Pull citing sentences for Turing's paper with this:
+
+```sh
+echo 73712 | $JSALTsrc/fetch_from_semantic_scholar_api.py --citations --limit 1000 --fields contexts
+```
+
+Count frequency of ``Turing Machines'' and ``Halting Problem'' in
+these contexts.  How often do these terms appear in Turing's original
+paper?
+
+Create vectors for these contexts.  Use kmeans to create a few centroids for these vectors.
+
 <h2>Challenge!</h2>
 
 Download zip file: <a href="https://drive.google.com/file/d/1tVJAjRGiOhI3NSIAxGzwqOSNodl7KjGJ/view?usp=sharing">here</a>.
