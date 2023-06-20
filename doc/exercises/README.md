@@ -4,7 +4,7 @@
 
 See <a href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/doc/semantic_scholar_API.md">instructions for using Semantic Scholar API</a>.
 <p>
-Write a function that uses this API to input a list of paper ids and outputs a json object each id with:
+Write a function that uses this API to input a list of paper ids and outputs a json object for each id with:
 <ol>
 <li>title</li>
 <li>abstract</li>
