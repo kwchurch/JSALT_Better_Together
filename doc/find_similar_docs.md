@@ -19,6 +19,42 @@ export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
 ```
 
+Here are some examples:
+
+```sh
+query=232040593
+
+# Find 3 papers near $query in specter, proposed and scincl
+# This is slow the first time you run it, but it gets faster
+# after some warmup
+
+echo $query | $JSALTsrc/near_embedding.sh $specter
+echo $query | $JSALTsrc/near_embedding.sh $proposed 
+echo $query | $JSALTsrc/near_embedding.sh $scincl
+```
+
+The examples above output candiates, sorted by scores.  There
+are three columns for each candidate: score, query id, candidate id.
+<p>
+To see more fields about the top 10 candidate ids, you can pipe the output into this:
+
+```sh
+echo $query | $JSALTsrc/near_embedding.sh $scincl | head | cut -f3 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields citationCount,title,year
+```
+
+or
+
+```sh
+echo $query | $JSALTsrc/near_embedding.sh $proposed | head | cut -f3 | 
+$JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/papers/corpusId_to_href
+```
+
+The second option uses a cache, and the first option uses the API.  Cached values
+may be faster (but stale).
+
+<p>
+
 We assume that $specter, $proposed and $scincl directories contain the following files
 <ol>
 <li>embedding.f: seqeuence of N*K floats; N is big (10^8)</li>
@@ -28,6 +64,8 @@ We assume that $specter, $proposed and $scincl directories contain the following
 <li>idx.*.i: indexes for approximate nearest neighbors (ANN); an index is a permutation on N so papers that are near one another in the index have large cosines</li>
 <li>idx.*.i.inv: inverse of above</li>
 </ol>
+
+<h2>Simple Interface</h2>
 
 ```sh
 query=232040593
