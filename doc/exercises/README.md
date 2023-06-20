@@ -12,6 +12,7 @@ Write a function that uses this API to input a list of paper ids and outputs a j
 <li>embedding</li>
 <li>references</li>
 <li>citations</li>
+<li>bibtex entries</li>
 </ol>
 
 Run your function on the ``DeepWalk'' paper.
@@ -63,6 +64,7 @@ use the methods, <i>f</i>, above to estimate vectors: <i>f(d)</i>.</li>
 Pull citing sentences for Turing's paper with this:
 
 ```sh
+echo 73712 | $JSALTsrc/fetch_from_semantic_scholar_api.py --fields externalIds,title,authors,citationStyles,url
 echo 73712 | $JSALTsrc/fetch_from_semantic_scholar_api.py --citations --limit 1000 --fields contexts
 ```
 
