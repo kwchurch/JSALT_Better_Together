@@ -32,9 +32,7 @@ newM = [ m.resize(new_shape) for m in M ]
 print(str(time.time() - t0) + ' finished reshaping ', file=sys.stderr)
 sys.stderr.flush()
 
-MM = M[0]
-for m in M[1:]:
-    MM = np.maximum(MM, m)
+MM = sum(M)/len(M)
 
 GB = (MM.data.nbytes + MM.indices.nbytes + MM.indptr.nbytes)/1e9
 
