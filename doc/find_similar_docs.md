@@ -11,14 +11,15 @@ See <a href="../examples/similar_documents/">here</a> for more examples like the
 
 # Here are my enviornment variables:
 
-JSALTdir=/work/k.church/JSALT-2023/
-JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+export JSALTdir=/work/k.church/JSALT-2023/
+export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
-specter=$JSALTdir/semantic_scholar/embeddings/specter
-proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+export specter=$JSALTdir/semantic_scholar/embeddings/specter
+export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
 ```
 
-We assume that both $specter and $proposed directories contain the following files
+We assume that $specter, $proposed and $scincl directories contain the following files
 <ol>
 <li>embedding.f: seqeuence of N*K floats; N is big (10^8)</li>
 <li>record_size: K=768 for $specter and K=280 for $proposed</li>

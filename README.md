@@ -35,11 +35,13 @@ JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
 specter=$JSALTdir/semantic_scholar/embeddings/specter
 proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+scincl=$JSALTdir/semantic_scholar/embeddings/scincl
 
 export JSALTdir
 export JSALTsrc
 export specter
 export proposed
+export scincl
 ```
 
 If you have access to the Northeastern Discovery Cluster,
