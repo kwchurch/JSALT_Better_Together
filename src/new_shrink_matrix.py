@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys,scipy.sparse,time,argparse,socket
+import sys,scipy.sparse,time,argparse,socket,os
 import numpy as np
 
 print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
@@ -13,7 +13,7 @@ sys.stderr.flush()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-G", "--graph", help=".npz file", required=True)
-parser.add_argument("--citations", help=".npy file", required=True)
+parser.add_argument("--citations", help=".npy file", default=None)
 parser.add_argument("-o", "--output", help="output filename", required=True)
 parser.add_argument("-T", "--threshold", type=int, help="threshold on size on number of citations (defaults to 0)", default=0)
 # parser.add_argument("-S", "--sample", type=float, help="fraction of edges", default=1.0)
@@ -24,7 +24,19 @@ def my_load(f):
     sys.stderr.flush()
     return scipy.sparse.load_npz(f)
 
-citationCounts = np.load(args.citations).reshape(-1)
+M = my_load(args.graph)
+print(str(time.time() - t0) + ' new_shrink_matrix: finished loading', file=sys.stderr)
+sys.stderr.flush()
+
+if args.citations is None:
+    citationCounts = np.array(np.sum(M, axis=0))
+    np.save(args.graph + 'citations.axis0.npy', citationCounts)
+else:
+    citationCounts = np.load(args.citations)
+
+citationCounts = citationCounts.reshape(-1)
+print('citationCounts.shape: ' + str(citationCounts.shape), file=sys.stderr)
+
 goodp = (citationCounts > args.threshold)
 new_N = np.sum(goodp)
 old_N = len(citationCounts)
@@ -44,10 +56,6 @@ old_idx = new_idx = None
 
 np.savez(args.output, old_to_new=old_to_new, new_to_old=new_to_old)
 print(str(time.time() - t0) + ' new_shrink_matrix: finished relabling', file=sys.stderr)
-sys.stderr.flush()
-
-M = my_load(args.graph)
-print(str(time.time() - t0) + ' new_shrink_matrix: finished loading', file=sys.stderr)
 sys.stderr.flush()
 
 old_X,old_Y = M.nonzero()

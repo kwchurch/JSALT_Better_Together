@@ -66,9 +66,12 @@ Pull citing sentences for Turing's paper with this:
 echo 73712 | $JSALTsrc/fetch_from_semantic_scholar_api.py --citations --limit 1000 --fields contexts
 ```
 
-Count frequency of ``Turing Machines'' and ``Halting Problem'' in
-these contexts.  How often do these terms appear in Turing's original
-paper?
+Count frequency of <a
+href="https://plato.stanford.edu/entries/turing-machine/">Turing
+Machines</a> and <a
+href="https://en.wikipedia.org/wiki/Halting_problem">Halting
+Problem</a> in these contexts.  How often do these terms appear in
+Turing's original paper?
 
 Create vectors for these contexts.  Use kmeans to create a few centroids for these vectors.
 

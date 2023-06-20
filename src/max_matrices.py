@@ -2,6 +2,8 @@
 
 import sys,scipy.sparse,time
 
+print(sys.argv, file=sys.stderr)
+
 t0 = time.time()
 
 def my_load(f):
@@ -29,7 +31,9 @@ newM = [ m.resize(new_shape) for m in M ]
 print(str(time.time() - t0) + ' finished reshaping ', file=sys.stderr)
 sys.stderr.flush()
 
-MM = max(newM)
+MM = M[0]
+for m in M[1:]:
+    MM = np.maximum(MM, m)
 
 GB = (MM.data.nbytes + MM.indices.nbytes + MM.indptr.nbytes)/1e9
 
