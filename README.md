@@ -30,18 +30,13 @@ JSALTdir should be assigned to the data from <a href="https://app.globus.org/fil
 Some examples below depend on JSALTdir and some do not.  If you cannot download JSALTdir, try the examples that do not require that.
 
 ```sh
-JSALTdir=/work/k.church/JSALT-2023/
-JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+export JSALTdir=/work/k.church/JSALT-2023/
+export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
-specter=$JSALTdir/semantic_scholar/embeddings/specter
-proposed=$JSALTdir/semantic_scholar/embeddings/proposed
-scincl=$JSALTdir/semantic_scholar/embeddings/scincl
-
-export JSALTdir
-export JSALTsrc
-export specter
-export proposed
-export scincl
+export specter=$JSALTdir/semantic_scholar/embeddings/specter
+export specter2=$JSALTdir/semantic_scholar/embeddings/specter2
+export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
 ```
 
 If you have access to the Northeastern Discovery Cluster,

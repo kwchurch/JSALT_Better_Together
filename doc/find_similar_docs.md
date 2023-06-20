@@ -15,6 +15,7 @@ export JSALTdir=/work/k.church/JSALT-2023/
 export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
 
 export specter=$JSALTdir/semantic_scholar/embeddings/specter
+export specter2=$JSALTdir/semantic_scholar/embeddings/specter2
 export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
 ```
@@ -54,7 +55,17 @@ The second option uses a cache, and the first option uses the API.  Cached value
 may be faster (but stale).
 
 <p>
+The following may be useful for comparing methods:
 
+```sh
+echo $query | $JSALTsrc/near_embedding.sh $proposed | head | cut -f2,3 | $JSALTsrc/pairs_to_cos.sh 
+echo $query | $JSALTsrc/near_embedding.sh $specter | head | cut -f2,3 | $JSALTsrc/pairs_to_cos.sh 
+echo $query | $JSALTsrc/near_embedding.sh $specter2 | head | cut -f2,3 | $JSALTsrc/pairs_to_cos.sh 
+echo $query | $JSALTsrc/near_embedding.sh $scincl | head | cut -f2,3 | $JSALTsrc/pairs_to_cos.sh 
+```
+You may also want to pipe the output of the above into $JSALTsrc/tsv_to_html.sh
+
+<h2>Dependencies</h2>
 We assume that $specter, $proposed and $scincl directories contain the following files
 <ol>
 <li>embedding.f: seqeuence of N*K floats; N is big (10^8)</li>

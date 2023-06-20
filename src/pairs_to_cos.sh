@@ -6,7 +6,8 @@ cat - > $tmp.input
 
 $JSALTsrc/fetch_snippet.py < $tmp.input > $tmp.snippets
 
-echo $* | tr ' ' '\t'
+# echo $* | tr ' ' '\t'
+echo `awk -F/ '{print $NF}' $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt` | tr ' ' '\t'
 
 for emb in `cat $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt`
 do
