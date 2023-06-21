@@ -50,7 +50,6 @@ def embed_string(s):
 for line in infd:
     rline = line.rstrip()
     fields = rline.split('\t')
-    print(fields)
     # if len(fields) < 2: continue
     try:
         e = embed_string(' '.join(fields[1:]))
