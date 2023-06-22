@@ -119,6 +119,14 @@ reference	232040593	220265500	193	Large image datasets: A pyrrhic win for comput
 reference	232040593	219530686	90	Detecting Emergent Intersectional Biases: Contextualized Word Embeddings Contain a Distribution of Human-like Biases
 ```
 
+<h2>Citing Sentences</h2>
+
+Pull citing sentences for Turing's paper with this:
+
+```sh
+echo 73712 | $JSALTsrc/fetch_from_semantic_scholar_api.py --citations --limit 1000 --fields contexts
+```
+
 <h2>Recommendations</h2>
 
 Input a paper and output some recommendations.  The first two columns are the query id and the candidate id.
