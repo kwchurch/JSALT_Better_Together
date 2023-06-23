@@ -1,0 +1,59 @@
+query	55 references	3 citations	ArtELingo: A Million Emotion Annotations of WikiArt with Emphasis on Diversity over Language and Culture
+reference	253734458	248476411	583	Flamingo: a Visual Language Model for Few-Shot Learning
+reference	253734458	248227685	8	It is Okay to Not Be Okay: Overcoming Emotional Bias in Affective Image Captioning by Contrastive Data Collection
+reference	253734458	246294502	28	IGLUE: A Benchmark for Transfer Learning across Modalities, Tasks, and Languages
+reference	253734458	238198104	63	Visually Grounded Reasoning across Languages and Cultures
+reference	253734458	237091588	1148	On the Opportunities and Risks of Foundation Models
+reference	253734458	235266237	5	Gender Bias Hidden Behind Chinese Word Embeddings: The Case of Chinese Adjectives
+reference	253734458	233219449	9	What’s in Your Head? Emergent Behaviour in Multi-Task Transformer Models
+reference	253734458	232185153	19	Affect2MM: Affective Analysis of Multimedia Content Using Emotion Causality
+reference	253734458	232040593	1270	On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜
+reference	253734458	232092726	123	WIT: Wikipedia-based Image Text Dataset for Multimodal Multilingual Machine Learning
+reference	253734458	235351128	62	VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning
+reference	253734458	231639297	46	ArtEmis: Affective Language for Visual Art
+reference	253734458	231603388	160	Persistent Anti-Muslim Bias in Large Language Models
+reference	253734458	64416682	517	Language Contact
+reference	253734458	227230609	22	Monolingual and Multilingual Reduction of Gender Bias in Contextualized Representations
+reference	253734458	221136084	8	MLM: A Benchmark Dataset for Multitask Learning with Multiple Languages and Modalities
+reference	253734458	218486942	257	GoEmotions: A Dataset of Fine-Grained Emotions
+reference	253734458	210043153	73	What music makes us feel: At least 13 dimensions organize subjective experiences associated with music across different cultures
+reference	253734458	219635470	492	Meshed-Memory Transformer for Image Captioning
+reference	253734458	207880568	3190	Unsupervised Cross-lingual Representation Learning at Scale
+reference	253734458	202764256	24	DENS: A Dataset for Multi-class Emotion Analysis
+reference	253734458	204509627	3832	HuggingFace's Transformers: State-of-the-art Natural Language Processing
+reference	253734458	58563174	96	Mapping 24 emotions conveyed by brief human vocalization.
+reference	253734458	201666566	1899	A Survey on Bias and Fairness in Machine Learning
+reference	253734458	44111528	46	TeamUNCC at SemEval-2018 Task 1: Emotion Detection in English and Arabic Tweets using Deep Learning
+reference	253734458	4941467	521	SemEval-2018 Task 1: Affect in Tweets
+reference	253734458	21693606	40	WikiArt Emotions: An Annotated Dataset of Emotions Evoked by Art
+reference	253734458	3298854	2774	Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
+reference	253734458	1136704	23	EMOTIC: Emotions in Context Dataset
+reference	253734458	13756489	59973	Attention is All you Need
+reference	253734458	13092053	44	A Bilingual Attention Network for Code-switched Emotion Prediction
+reference	253734458	1704893	2121	Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings
+reference	253734458	10328909	43782	Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+reference	253734458	1055111	8595	Show, Attend and Tell: Neural Image Caption Generation with Visual Attention
+reference	253734458	5622279	1567	Emotion and decision making.
+reference	253734458	106861846	146	The Culture Map: Breaking Through the Invisible Boundaries of Global Business
+reference	253734458	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	253734458	219338876	3705	The weirdest people in the world?
+reference	253734458	17868666	39	Emotion Cause Events: Corpus Construction and Analysis
+reference	253734458	17207782	110	Construction of a Blog Emotion Corpus for Chinese Emotional Expression Analysis
+reference	253734458	11820063	2099	IEMOCAP: interactive emotional dyadic motion capture database
+reference	253734458	15590323	772	SemEval-2007 Task 14: Affective Text
+reference	253734458	9593500	652	Psychological universals: what are they and how can we know?
+reference	253734458	14362153	2541	Core affect, prototypical emotional episodes, and other things called emotion: dissecting the elephant.
+reference	253734458	1915014	64752	Long Short-Term Memory
+reference	253734458	143304661	1612	the romance of resistance: tracing transformations of power through Bedouin women
+reference	253734458	195040300	4801	The weirdest people in the world
+reference	253734458	15926286	34991	A Coefficient of Agreement for Nominal Scales
+reference	253734458	52967399	53787	BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+reference	253734458	53080764	128	CARER: Contextualized Affect Representations for Emotion Recognition
+reference	253734458	13985061	798	Emotion theory and research: highlights, unanswered questions, and emerging issues.
+reference	253734458	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Kilichbek Haydarov, Mohamed Elhoseiny, and Leonidas Guibas', 'citationCount': None}
+reference	253734458	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'End-to-end emotioncause pair extraction with graph convolutional network', 'citationCount': None}
+reference	253734458	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'McMillanMajor, and Shmargaret Shmitchell', 'citationCount': None}
+reference	253734458	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'MES-P: an emotional tonal speech dataset in mandarin chinese with distal and proximal labels', 'citationCount': None}
+citation	253734458	259076120	0	NLPositionality: Characterizing Design Biases of Datasets and Models
+citation	253734458	258059680	3	HRS-Bench: Holistic, Reliable and Scalable Benchmark for Text-to-Image Models
+citation	253734458	257206042	3	Fairness in Language Models Beyond English: Gaps and Challenges

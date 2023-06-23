@@ -1,0 +1,113 @@
+query	55 references	57 citations	Visual Instruction Tuning
+reference	258179774	257985497	55	Instruction Tuning with GPT-4
+reference	258179774	257771811	35	LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention
+reference	258179774	257766307	56	ChatGPT Outperforms Crowd-Workers for Text-Annotation Tasks
+reference	258179774	257637012	47	MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action
+reference	258179774	257532815	366	GPT-4 Technical Report
+reference	258179774	257505077	4	A Simple Framework for Open-Vocabulary Segmentation and Detection
+reference	258179774	257427307	52	Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection
+reference	258179774	257404891	105	Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models
+reference	258179774	257364842	119	PaLM-E: An Embodied Multimodal Language Model
+reference	258179774	257219404	637	LLaMA: Open and Efficient Foundation Language Models
+reference	258179774	257219775	63	Language Is Not All You Need: Aligning Perception with Language Models
+reference	258179774	256504063	36	Multimodal Chain-of-Thought Reasoning in Language Models
+reference	258179774	256390509	223	BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models
+reference	258179774	255942528	46	GLIGEN: Open-Set Grounded Text-to-Image Generation
+reference	258179774	255096269	56	OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization
+reference	258179774	254877310	158	Self-Instruct: Aligning Language Model with Self Generated Instructions
+reference	258179774	253581213	146	InstructPix2Pix: Learning to Follow Image Editing Instructions
+reference	258179774	253018554	286	Scaling Instruction-Finetuned Language Models
+reference	258179774	252917726	411	LAION-5B: An open large-scale dataset for training next generation image-text models
+reference	258179774	252383606	54	Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering
+reference	258179774	249926846	334	Scaling Autoregressive Models for Content-Rich Text-to-Image Generation
+reference	258179774	249152323	106	GIT: A Generative Image-to-text Transformer for Vision and Language
+reference	258179774	248986576	1206	Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding
+reference	258179774	248496292	694	OPT: Open Pre-trained Transformer Language Models
+reference	258179774	248476411	583	Flamingo: a Visual Language Model for Few-Shot Learning
+reference	258179774	248239757	38	ELEVATER: A Benchmark and Toolkit for Evaluating Language-Augmented Visual Models
+reference	258179774	248097655	1747	Hierarchical Text-Conditional Image Generation with CLIP Latents
+reference	258179774	248006101	82	Unified Contrastive Learning in Image-Text-Label Space
+reference	258179774	247951931	1317	PaLM: Scaling Language Modeling with Pathways
+reference	258179774	247628171	181	Make-A-Scene: Scene-Based Text-to-Image Generation with Human Priors
+reference	258179774	247618727	235	Visual Prompt Tuning
+reference	258179774	246426909	1493	Training language models to follow instructions with human feedback
+reference	258179774	245335280	1895	High-Resolution Image Synthesis with Latent Diffusion Models
+reference	258179774	245218534	123	RegionCLIP: Region-based Language-Image Pretraining
+reference	258179774	244920947	198	Grounded Language-Image Pre-training
+reference	258179774	244799619	112	A General Language Assistant as a Laboratory for Alignment
+reference	258179774	244477674	338	Florence: A New Foundation Model for Computer Vision
+reference	258179774	235658123	190	Habitat 2.0: Training Home Assistants to Rearrange their Habitat
+reference	258179774	231591445	5690	Learning Transferable Visual Models From Natural Language Supervision
+reference	258179774	231951742	348	Conceptual 12M: Pushing Web-Scale Image-Text Pre-Training To Recognize Long-Tail Visual Concepts
+reference	258179774	218971783	11546	Language Models are Few-Shot Learners
+reference	258179774	211296530	155	Towards Learning a Generic Agent for Vision-and-Language Navigation via Pre-Training
+reference	258179774	204838007	8111	Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+reference	258179774	4673790	797	Vision-and-Language Navigation: Interpreting Visually-Grounded Navigation Instructions in Real Environments
+reference	258179774	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	258179774	256416164	24	Grounding Language Models to Images for Multimodal Generation
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Openflamingo, March 2023', 'citationCount': None}
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Stanford alpaca: An instruction-following llama model', 'citationCount': None}
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'An open-source chatbot impressing gpt-4 with 90%* chatgpt quality', 'citationCount': None}
+reference	258179774	248227391	55	Benchmarking Generalization via In-Context Instructions on 1, 600+ Language Tasks
+reference	258179774	248496406	37	Combined Scaling for Open-Vocabulary Image Classiﬁcation
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Computer vision in the wild', 'citationCount': None}
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Languagedriven semantic segmentation', 'citationCount': None}
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Instructions for detailed image description. The list of instructions used to describe the image content in detail are shown in Table 9. They present the same meaning with natural language variance', 'citationCount': None}
+reference	258179774	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Visionlanguage pre-training: Basics, recent advances, and future trends. Foundations and Trends® in Computer Graphics and Vision', 'citationCount': None}
+citation	258179774	259203302	0	RemoteCLIP: A Vision Language Foundation Model for Remote Sensing
+citation	258179774	259203619	0	Path to Medical AGI: Unify Domain-specific Medical LLMs with the Lowest Cost
+citation	258179774	259165040	0	LVLM-eHub: A Comprehensive Evaluation Benchmark for Large Vision-Language Models
+citation	258179774	259165461	0	Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration
+citation	258179774	259164765	0	Towards AGI in Computer Vision: Lessons Learned from GPT and Large Language Models
+citation	258179774	259164452	0	AVIS: Autonomous Visual Information Seeking with Large Language Models
+citation	258179774	259137623	0	Sticker820K: Empowering Interactive Retrieval with Stickers
+citation	258179774	259138958	0	LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark
+citation	258179774	259129535	0	Leveraging Large Language Models for Scalable Vector Graphics-Driven Image Understanding
+citation	258179774	259108295	1	MIMIC-IT: Multi-Modal In-Context Instruction Tuning
+citation	258179774	259129468	1	Artificial General Intelligence for Medical Imaging
+citation	258179774	259095896	0	M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning
+citation	258179774	259075356	4	Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding
+citation	258179774	259064260	0	MetaVL: Transferring In-Context Learning Ability From Language Models to Vision-Language Models
+citation	258179774	258999820	3	LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day
+citation	258179774	258999941	2	AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration
+citation	258179774	258999962	0	GPT4Image: Can Large Pre-trained Models Help Vision Models on Perception Tasks?
+citation	258179774	258987899	1	Dense and Aligned Captions (DAC) Promote Compositional Reasoning in VL Models
+citation	258179774	258959011	0	Contextual Object Detection with Multimodal Large Language Models
+citation	258179774	258960368	0	CrossGET: Cross-Guided Ensemble of Tokens for Accelerating Vision-Language Transformers
+citation	258179774	258947177	0	On Evaluating Adversarial Robustness of Large Vision-Language Models
+citation	258179774	258959284	2	Generating Images with Multimodal Language Models
+citation	258179774	258887944	1	ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst
+citation	258179774	258888229	0	Towards Language-guided Interactive 3D Generation: LLMs as Layout Interpreter with Generative Feedback
+citation	258179774	258947721	6	PandaGPT: One Model To Instruction-Follow Them All
+citation	258179774	258887629	8	The False Promise of Imitating Proprietary LLMs
+citation	258179774	258865952	1	IdealGPT: Iteratively Decomposing Vision and Language Reasoning via Large Language Models
+citation	258179774	258865326	0	Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models
+citation	258179774	258865639	1	PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology
+citation	258179774	258865894	0	Cream: Visually-Situated Natural Language Understanding with Contrastive Reading Model and Frozen Large Language Models
+citation	258179774	258865923	0	Flan-MoE: Scaling Instruction-Finetuned Language Models with Sparse Mixture of Experts
+citation	258179774	258865718	3	EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought
+citation	258179774	258841347	0	Let's Think Frame by Frame: Evaluating Video Chain of Thought with Video Infilling and Prediction
+citation	258179774	258841195	0	ReSee: Responding through Seeing Fine-grained Visual Knowledge in Open-domain Dialogue
+citation	258179774	258841653	2	CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation
+citation	258179774	258833200	0	TheoremQA: A Theorem-driven Question Answering dataset
+citation	258179774	258833156	1	What Makes for Good Visual Tokenizers for Large Language Models?
+citation	258179774	258762579	6	VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks
+citation	258179774	258762519	0	Going Denser with Open-Vocabulary Part Segmentation
+citation	258179774	258762560	0	Listen, Think, and Understand
+citation	258179774	258762683	2	SpeechGPT: Empowering Large Language Models with Intrinsic Cross-Modal Conversational Abilities
+citation	258179774	258740697	3	Evaluating Object Hallucination in Large Vision-Language Models
+citation	258179774	258685422	2	On the Hidden Mystery of OCR in Large Multimodal Models
+citation	258179774	258615266	19	InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning
+citation	258179774	258588306	15	VideoChat: Chat-Centric Video Understanding
+citation	258179774	258564914	7	InternGPT: Solving Vision-Centric Tasks by Interacting with Chatbots Beyond Language
+citation	258179774	258557672	11	MultiModal-GPT: A Vision and Language Model for Dialogue with Humans
+citation	258179774	258558106	5	X-LLM: Bootstrapping Advanced Large Language Models by Treating Multi-Modalities as Foreign Languages
+citation	258179774	258546810	0	T-SciQ: Teaching Multimodal Chain-of-Thought Reasoning via Large Language Model Signals for Science Question Answering
+citation	258179774	258546868	1	LMEye: An Interactive Perception Network for Large Language Models
+citation	258179774	258547300	9	Otter: A Multi-Modal Model with In-Context Instruction Tuning
+citation	258179774	258479665	13	Principle-Driven Self-Alignment of Language Models from Scratch with Minimal Human Supervision
+citation	258179774	258418343	11	LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model
+citation	258179774	258212542	30	Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models
+citation	258179774	259164940	0	Accountable Textual-Visual Chat Learns to Reject Human Instructions in Image Re-creation
+citation	258179774	258546941	5	Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection
+citation	258179774	255372865	2	A Survey for In-context Learning

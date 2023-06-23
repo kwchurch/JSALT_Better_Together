@@ -1,0 +1,267 @@
+query	43 references	223 citations	BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models
+reference	256390509	254926627	7	From Images to Textual Prompts: Zero-shot VQA with Frozen Large Language Models
+reference	256390509	253510587	61	EVA: Exploring the Limits of Masked Visual Representation Learning at Scale
+reference	256390509	253018554	286	Scaling Instruction-Finetuned Language Models
+reference	256390509	252917791	17	Plug-and-Play VQA: Zero-shot VQA by Conjoining Large Pretrained Models with Zero Training
+reference	256390509	252873086	10	MAPL: Parameter-Efficient Adaptation of Unimodal Pre-Trained Models for Vision-Language Few-Shot Prompting
+reference	256390509	252222320	120	PaLI: A Jointly-Scaled Multilingual Language-Image Model
+reference	256390509	251719655	231	Image as a Foreign Language: BEiT Pretraining for All Vision and Vision-Language Tasks
+reference	256390509	248512473	372	CoCa: Contrastive Captioners are Image-Text Foundation Models
+reference	256390509	248476411	583	Flamingo: a Visual Language Model for Few-Shot Learning
+reference	256390509	247778764	451	Training Compute-Optimal Large Language Models
+reference	256390509	247447159	28	Enabling Multimodal Generation on CLIP via Vision-Language Knowledge Distillation
+reference	256390509	246411402	534	BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
+reference	256390509	244117175	184	LiT: Zero-Shot Transfer with Locked-image text Tuning
+reference	256390509	244117525	216	FILIP: Fine-grained Interactive Language-Image Pre-Training
+reference	256390509	241035439	151	VLMo: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts
+reference	256390509	241033103	356	LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs
+reference	256390509	239016231	42	A Good Prompt Is Worth Millions of Parameters: Low-resource Prompt-based Learning for Vision-Language Models
+reference	256390509	237291550	369	SimVLM: Simple Visual Language Model Pretraining with Weak Supervision
+reference	256390509	236034189	579	Align before Fuse: Vision and Language Representation Learning with Momentum Distillation
+reference	256390509	235658331	265	Multimodal Few-Shot Learning with Frozen Language Models
+reference	256390509	231591445	5690	Learning Transferable Visual Models From Natural Language Supervision
+reference	256390509	235351128	62	VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning
+reference	256390509	231951742	348	Conceptual 12M: Pushing Web-Scale Image-Text Pre-Training To Recognize Long-Tail Visual Concepts
+reference	256390509	231879586	1198	Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision
+reference	256390509	231802355	268	Unifying Vision-and-Language Tasks via Text Generation
+reference	256390509	230435588	111	VinVL: Making Visual Representations Matter in Vision-Language Models
+reference	256390509	218971783	11544	Language Models are Few-Shot Learners
+reference	256390509	215754208	1103	Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks
+reference	256390509	216080982	1211	UNITER: UNiversal Image-TExt Representation Learning
+reference	256390509	201103729	1539	LXMERT: Learning Cross-Modality Encoder Representations from Transformers
+reference	256390509	173991173	276	OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge
+reference	256390509	147704286	1077	Unified Language Model Pre-training for Natural Language Understanding and Generation
+reference	256390509	152282269	695	GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering
+reference	256390509	51876975	1191	Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning
+reference	256390509	53592270	8014	Decoupled Weight Decay Regularization
+reference	256390509	8081284	1660	Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering
+reference	256390509	4492210	3755	Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations
+reference	256390509	6941275	1182	Flickr30k Entities: Collecting Region-to-Phrase Correspondences for Richer Image-to-Sentence Models
+reference	256390509	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	256390509	14579301	989	Im2Text: Describing Images Using 1 Million Captioned Photographs
+reference	256390509	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'OFA: unifying architectures, tasks, and modalities through a simple sequence-tosequence learning framework', 'citationCount': None}
+reference	256390509	52967399	53782	BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+reference	256390509	56517630	172	nocaps: novel object captioning at scale
+citation	256390509	259224904	0	TaCA: Upgrading Your Visual Foundation Model with Task-agnostic Compatible Adapter
+citation	256390509	259224516	0	Generative Multimodal Entity Linking
+citation	256390509	259202555	0	RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model
+citation	256390509	259203436	0	Improving Image Captioning Descriptiveness by Ranking and LLM-based Fusion
+citation	256390509	259203790	0	Dense Video Object Captioning from Disjoint Supervision
+citation	256390509	259203302	0	RemoteCLIP: A Vision Language Foundation Model for Remote Sensing
+citation	256390509	259203619	0	Path to Medical AGI: Unify Domain-specific Medical LLMs with the Lowest Cost
+citation	256390509	259203911	0	MotionGPT: Finetuned LLMs are General-Purpose Motion Generators
+citation	256390509	259202917	0	LLMVA-GEBC: Large Language Model with Video Adapter for Generic Event Boundary Captioning
+citation	256390509	259187896	0	Investigating Prompting Techniques for Zero- and Few-Shot Visual Question Answering
+citation	256390509	259165040	0	LVLM-eHub: A Comprehensive Evaluation Benchmark for Large Vision-Language Models
+citation	256390509	259165371	0	Training Multimedia Event Extraction With Generated Images and Captions
+citation	256390509	259164552	0	COSA: Concatenated Sample Pretrained Vision-Language Foundation Model
+citation	256390509	259165297	0	Contrasting Intra-Modal and Ranking Cross-Modal Hard Negatives to Enhance Visio-Linguistic Fine-grained Understanding
+citation	256390509	259165461	0	Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration
+citation	256390509	259187891	0	Tell Me Where to Go: A Composable Framework for Context-Aware Embodied Robot Navigation
+citation	256390509	259164559	0	AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect, and Learn
+citation	256390509	259164765	0	Towards AGI in Computer Vision: Lessons Learned from GPT and Large Language Models
+citation	256390509	259165402	0	Babel-ImageNet: Massively Multilingual Evaluation of Vision-and-Language Representations
+citation	256390509	259144833	0	Retrieve Anyone: A General-purpose Person Re-identification Task with Instructions
+citation	256390509	259144837	0	Paste, Inpaint and Harmonize via Denoising: Subject-Driven Image Editing with Pre-Trained Diffusion Model
+citation	256390509	259144914	0	I See Dead People: Gray-Box Adversarial Attack on Image-To-Text Models
+citation	256390509	259145047	0	Image Captioners Are Scalable Vision Learners Too
+citation	256390509	259164452	0	AVIS: Autonomous Visual Information Seeking with Large Language Models
+citation	256390509	259025412	1	MemoriEase: An Interactive Lifelog Retrieval System for LSC’23
+citation	256390509	259138499	0	Fill-Up: Balancing Long-Tailed Data with Generative Models
+citation	256390509	259138706	0	Valley: Video Assistant with Large Language model Enhanced abilitY
+citation	256390509	259137821	0	Scalable 3D Captioning with Pretrained Models
+citation	256390509	259137602	0	A Survey of Vision-Language Pre-training from the Lens of Multimodal Machine Translation
+citation	256390509	259137623	0	Sticker820K: Empowering Interactive Retrieval with Stickers
+citation	256390509	259138650	1	Controlling Text-to-Image Diffusion by Orthogonal Finetuning
+citation	256390509	259138958	0	LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark
+citation	256390509	259129379	0	Customizing General-Purpose Foundation Models for Medical Report Generation
+citation	256390509	259129811	0	On the Challenges and Perspectives of Foundation Models for Medical Image Analysis
+citation	256390509	259137763	0	DocumentCLIP: Linking Figures and Main Body Text in Reflowed Documents
+citation	256390509	259108959	0	M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models
+citation	256390509	259108333	1	Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models
+citation	256390509	259108295	1	MIMIC-IT: Multi-Modal In-Context Instruction Tuning
+citation	256390509	259108774	0	Modular Visual Question Answering via Code Generation
+citation	256390509	259129468	1	Artificial General Intelligence for Medical Imaging
+citation	256390509	259129698	0	AircraftVerse: A Large-Scale Multimodal Dataset of Aerial Vehicle Designs
+citation	256390509	259095896	0	M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning
+citation	256390509	259096008	1	Fine-Grained Visual Prompting
+citation	256390509	259095579	0	Youku-mPLUG: A 10 Million Large-scale Chinese Video-Language Dataset for Pre-training and Benchmarks
+citation	256390509	259095728	0	Q: How to Specialize Large Vision-Language Models to Data-Scarce VQA Tasks? A: Self-Train on Unlabeled Images!
+citation	256390509	259089045	1	Zero-Shot 3D Shape Correspondence
+citation	256390509	259075356	4	Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding
+citation	256390509	259075254	0	Weakly-Supervised Conditional Embedding for Referred Visual Search
+citation	256390509	259076377	0	Learning Probabilistic Symmetrization for Architecture Agnostic Equivariance
+citation	256390509	259077070	1	GIMLET: A Unified Graph-Text Model for Instruction-Based Molecule Zero-Shot Learning
+citation	256390509	259089194	0	ChatGPT as a mapping assistant: A novel method to enrich maps with generative AI and content derived from street-level photographs
+citation	256390509	259075891	0	MoviePuzzle: Visual Narrative Reasoning through Multimodal Order Learning
+citation	256390509	259076349	0	Benchmarking Robustness of Adaptation Methods on Pre-trained Vision-Language Models
+citation	256390509	259075604	0	VisualGPTScore: Visio-Linguistic Reasoning with Multimodal Generative Pre-Training Scores
+citation	256390509	258999229	0	Vocabulary-free Image Classification
+citation	256390509	258999962	0	GPT4Image: Can Large Pre-trained Models Help Vision Models on Perception Tasks?
+citation	256390509	259064350	0	Evaluating the Capabilities of Multi-modal Reasoning Models with Synthetic Task Data
+citation	256390509	259000001	0	"Let's not Quote out of Context": Unified Vision-Language Pretraining for Context Assisted Image Captioning
+citation	256390509	258999763	1	The Hidden Language of Diffusion Models
+citation	256390509	258999728	0	Exploring Open-Vocabulary Semantic Segmentation without Human Labels
+citation	256390509	258999941	2	AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration
+citation	256390509	258999352	0	Using Visual Cropping to Enhance Fine-Detail Question Answering of BLIP-Family Models
+citation	256390509	258987679	0	Chatting Makes Perfect - Chat-based Image Retrieval
+citation	256390509	258987899	1	Dense and Aligned Captions (DAC) Promote Compositional Reasoning in VL Models
+citation	256390509	258987978	1	Boosting Text-to-Image Diffusion Models with Fine-Grained Semantic Rewards
+citation	256390509	258967291	0	PanoGen: Text-Conditioned Panoramic Environment Generation for Vision-and-Language Navigation
+citation	256390509	258967880	1	AlphaBlock: Embodied Finetuning for Vision-Language Reasoning in Robot Manipulation
+citation	256390509	258967184	3	GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction
+citation	256390509	258967796	0	Learning without Forgetting for Vision-Language Models
+citation	256390509	258967791	0	LANCE: Stress-testing Visual Models by Generating Language-guided Counterfactual Images
+citation	256390509	258967951	0	Real-World Image Variation by Aligning Diffusion Inversion Chain
+citation	256390509	258967855	0	Generate then Select: Open-ended Visual Question Answering Guided by World Knowledge
+citation	256390509	258959425	1	InstructEdit: Improving Automatic Masks for Diffusion-based Image Editing With User Instructions
+citation	256390509	258959011	0	Contextual Object Detection with Multimodal Large Language Models
+citation	256390509	258960586	0	GlyphControl: Glyph Conditional Control for Visual Text Generation
+citation	256390509	258967371	0	VAST: A Vision-Audio-Subtitle-Text Omni-Modality Foundation Model and Dataset
+citation	256390509	258960254	0	FuseCap: Leveraging Large Language Models to Fuse Visual Data into Enriched Image Captions
+citation	256390509	258960368	0	CrossGET: Cross-Guided Ensemble of Tokens for Accelerating Vision-Language Transformers
+citation	256390509	258960525	1	Towards Consistent Video Editing with Text-to-Image Diffusion Models
+citation	256390509	258947250	1	NavGPT: Explicit Reasoning in Vision-and-Language Navigation with Large Language Models
+citation	256390509	258947177	0	On Evaluating Adversarial Robustness of Large Vision-Language Models
+citation	256390509	258947631	0	A Reminder of its Brittleness: Language Reward Shaping May Hinder Learning for Instruction Following Agents
+citation	256390509	258947362	0	S4M: Generating Radiology Reports by A Single Model for Multiple Body Parts
+citation	256390509	258959284	2	Generating Images with Multimodal Language Models
+citation	256390509	258888143	1	Custom-Edit: Text-Guided Image Editing with Customized Diffusion Models
+citation	256390509	258887944	1	ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst
+citation	256390509	258887821	0	ChatCAD+: Towards a Universal and Reliable Interactive CAD using LLMs
+citation	256390509	258888242	0	Candidate Set Re-ranking for Composed Image Retrieval with Dual Multi-modal Encoder
+citation	256390509	258947721	6	PandaGPT: One Model To Instruction-Follow Them All
+citation	256390509	258865297	0	The Art of SOCRATIC QUESTIONING: Zero-shot Multimodal Reasoning with Recursive Thinking and Self-Questioning
+citation	256390509	258865326	0	Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models
+citation	256390509	258865894	0	Cream: Visually-Situated Natural Language Understanding with Contrastive Reading Model and Frozen Large Language Models
+citation	256390509	258865718	3	EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought
+citation	256390509	258866158	0	Interpretable by Design Visual Question Answering
+citation	256390509	258866097	0	ECHo: Event Causality Inference via Human-centric Reasoning
+citation	256390509	258866049	1	ImageNetVC: Zero-Shot Visual Commonsense Evaluation on 1000 ImageNet Categories
+citation	256390509	258865952	1	IdealGPT: Iteratively Decomposing Vision and Language Reasoning via Large Language Models
+citation	256390509	258865230	1	Visual Programming for Text-to-Image Generation and Evaluation
+citation	256390509	258865445	0	Exploring the Grounding Issues in Image Caption
+citation	256390509	258865473	0	BLIP-Diffusion: Pre-trained Subject Representation for Controllable Text-to-Image Generation and Editing
+citation	256390509	258865639	1	PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology
+citation	256390509	258865775	0	SmartTrim: Adaptive Tokens and Parameters Pruning for Efficient Vision-Language Models
+citation	256390509	258865250	0	Exploring Diverse In-Context Configurations for Image Captioning
+citation	256390509	258840973	0	Weakly-Supervised Learning of Visual Relations in Multimodal Pretraining
+citation	256390509	258841099	1	MemeCap: A Dataset for Captioning and Interpreting Memes
+citation	256390509	258841195	0	ReSee: Responding through Seeing Fine-grained Visual Knowledge in Open-domain Dialogue
+citation	256390509	258841035	1	LLM-grounded Diffusion: Enhancing Prompt Understanding of Text-to-Image Diffusion Models with Large Language Models
+citation	256390509	258841579	0	VisorGPT: Learning Visual Prior via Generative Pre-Training
+citation	256390509	258841764	2	DetGPT: Detect What You Need via Reasoning
+citation	256390509	258841699	0	S-CLIP: Semi-supervised Vision-Language Pre-training using Few Specialist Captions
+citation	256390509	258832615	1	Interactive Data Synthesis for Systematic Vision Adaptation via LLMs-AIGCs Collaboration
+citation	256390509	258833489	0	If at First You Don't Succeed, Try, Try Again: Faithful Diffusion-based Text-to-Image Generation by Selection
+citation	256390509	258832597	0	Enhance Reasoning Ability of Visual-Language Models via Large Language Models
+citation	256390509	258832650	0	AudioToken: Adaptation of Text-Conditioned Diffusion Models for Audio-to-Image Generation
+citation	256390509	258832930	0	VideoLLM: Modeling Video Sequence with Large Language Models
+citation	256390509	258833355	1	UVOSAM: A Mask-free Paradigm for Unsupervised Video Object Segmentation via Segment Anything Model
+citation	256390509	258833616	1	ViT-TTS: Visual Text-to-Speech with Scalable Diffusion Transformer
+citation	256390509	258833460	0	Prompt ChatGPT In MNER: Improved multimodal named entity recognition method based on auxiliary refining knowledge from ChatGPT
+citation	256390509	258833156	1	What Makes for Good Visual Tokenizers for Large Language Models?
+citation	256390509	258822817	1	Any-to-Any Generation via Composable Diffusion
+citation	256390509	258823213	0	Enhancing Vision-Language Pre-Training with Jointly Learned Questioner and Dense Captioner
+citation	256390509	258823258	0	LLM Itself Can Read and Generate CXR Images
+citation	256390509	258762479	4	VideoFactory: Swap Attention in Spatiotemporal Diffusions for Text-to-Video Generation
+citation	256390509	258762865	0	LLMScore: Unveiling the Power of Large Language Models in Text-to-Image Synthesis Evaluation
+citation	256390509	258762310	1	Paxion: Patching Action Knowledge in Video-Language Foundation Models
+citation	256390509	258762316	0	Vision-Language Pre-training with Object Contrastive Learning for 3D Scene Understanding
+citation	256390509	258762408	0	MedBLIP: Bootstrapping Language-Image Pre-training from 3D Medical Images and Texts
+citation	256390509	258762390	2	ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities
+citation	256390509	258762519	0	Going Denser with Open-Vocabulary Part Segmentation
+citation	256390509	258762579	6	VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks
+citation	256390509	258762314	0	Content-based Unrestricted Adversarial Attack
+citation	256390509	258762345	2	Efficient Prompting via Dynamic In-Context Learning
+citation	256390509	258762560	0	Listen, Think, and Understand
+citation	256390509	258762776	1	UniControl: A Unified Diffusion Model for Controllable Visual Generation In the Wild
+citation	256390509	258762871	1	X-IQE: eXplainable Image Quality Evaluation for Text-to-Image Generation with Visual Large Language Models
+citation	256390509	258740893	1	What You See is What You Read? Improving Text-Image Alignment Evaluation
+citation	256390509	258741360	1	PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering
+citation	256390509	258740697	3	Evaluating Object Hallucination in Large Vision-Language Models
+citation	256390509	258740710	2	FastComposer: Tuning-Free Multi-Subject Image Generation with Localized Attention
+citation	256390509	258762299	0	IMAD: IMage-Augmented multi-modal Dialogue
+citation	256390509	258741218	1	A Video Is Worth 4096 Tokens: Verbalize Story Videos To Understand Them In Zero Shot
+citation	256390509	258686590	2	Make-A-Protagonist: Generic Video Editing with An Ensemble of Experts
+citation	256390509	258686489	0	Edit As You Wish: Video Description Editing with Multi-grained Commands
+citation	256390509	258686381	1	Bridging the Domain Gap: Self-Supervised 3D Scene Understanding with Foundation Models
+citation	256390509	258947627	0	Semantic Composition in Visually Grounded Language Models
+citation	256390509	258686565	2	ULIP-2: Towards Scalable Multimodal Pre-training for 3D Understanding
+citation	256390509	258685422	2	On the Hidden Mystery of OCR in Large Multimodal Models
+citation	256390509	258676204	2	Measuring Progress in Fine-grained Vision-and-Language Understanding
+citation	256390509	258676618	0	ArtGPT-4: Artistic Vision-Language Understanding with Adapter-enhanced MiniGPT-4
+citation	256390509	258615266	19	InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning
+citation	256390509	258615748	0	Self-Chained Image-Language Model for Video Localization and Question Answering
+citation	256390509	258615154	0	Musketeer (All for One, and One for All): A Generalist Vision-Language Model with Task Explanation Prompts
+citation	256390509	258615698	0	Simple Token-Level Confidence Improves Caption Correctness
+citation	256390509	258588013	0	ChinaOpen: A Dataset for Open-world Multimodal Learning
+citation	256390509	258588306	15	VideoChat: Chat-Centric Video Understanding
+citation	256390509	258588275	0	Multi-Prompt with Depth Partitioned Cross-Modal Learning
+citation	256390509	258564914	7	InternGPT: Solving Vision-Centric Tasks by Interacting with Chatbots Beyond Language
+citation	256390509	258588032	1	Vision-Language Models in Remote Sensing: Current Progress and Future Trends
+citation	256390509	258558106	5	X-LLM: Bootstrapping Advanced Large Language Models by Treating Multi-Modalities as Foreign Languages
+citation	256390509	258546868	1	LMEye: An Interactive Perception Network for Large Language Models
+citation	256390509	258547135	0	Towards Applying Powerful Large AI Models in Classroom Teaching: Opportunities, Challenges and Prospects
+citation	256390509	258547300	9	Otter: A Multi-Modal Model with In-Context Instruction Tuning
+citation	256390509	258479994	4	Caption Anything: Interactive Image Description with Diverse Multimodal Controls
+citation	256390509	258480288	0	Image Captioners Sometimes Tell More Than Images They See
+citation	256390509	258480276	7	Personalize Segment Anything Model with One Shot
+citation	256390509	258436945	4	Transfer Visual Prompt Generator across LLMs
+citation	256390509	258436872	2	Segment Anything is A Good Pseudo-label Generator for Weakly Supervised Semantic Segmentation
+citation	256390509	258437064	0	Multimodal Neural Databases
+citation	256390509	258418343	11	LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model
+citation	256390509	258352455	20	mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality
+citation	256390509	258352505	2	ChatVideo: A Tracklet-centric Multimodal and Versatile Video Understanding System
+citation	256390509	258352289	0	TR0N: Translator Networks for 0-Shot Plug-and-Play Conditional Generation
+citation	256390509	258298127	2	SATIN: A Multi-Task Metadataset for Classifying Satellite Imagery using Vision-Language Models
+citation	256390509	258291870	1	Contrastive Language, Action, and State Pre-training for Robot Learning
+citation	256390509	259108842	1	SkinGPT-4: An Interactive Dermatology Diagnostic System with Visual Large Language Model
+citation	256390509	258291930	66	MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models
+citation	256390509	258212642	1	LLM as A Robotic Brain: Unifying Egocentric Memory and Control
+citation	256390509	258179774	57	Visual Instruction Tuning
+citation	256390509	258170513	1	MVP-SEG: Multi-View Prompt Learning for Open-Vocabulary Semantic Segmentation
+citation	256390509	258108138	4	What does CLIP know about a red circle? Visual prompt engineering for VLMs
+citation	256390509	258170346	13	On the Opportunities and Challenges of Foundation Models for Geospatial Artificial Intelligence
+citation	256390509	258059680	3	HRS-Bench: Holistic, Reliable and Scalable Benchmark for Text-to-Image Models
+citation	256390509	258048445	4	Video ChatCaptioner: Towards Enriched Spatiotemporal Descriptions
+citation	256390509	257913684	2	Not All Features Matter: Enhancing Few-shot CLIP with Adaptive Prior Refinement
+citation	256390509	258840933	0	GlyphDraw: Seamlessly Rendering Text with Intricate Spatial Structures in Text-to-Image Generation
+citation	256390509	257833784	2	A Study of Autoregressive Decoders for Multi-Tasking in Computer Vision
+citation	256390509	257771811	35	LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention
+citation	256390509	257766387	14	EVA-CLIP: Improved Training Techniques for CLIP at Scale
+citation	256390509	257766245	2	Equivariant Similarity for Vision-Language Foundation Models
+citation	256390509	257757320	13	Make-It-3D: High-Fidelity 3D Creation from A Single Image with Diffusion Prior
+citation	256390509	257985220	1	ChatGPT for Shaping the Future of Dentistry: The Potential of Multi-Modal Large Language Model
+citation	256390509	257636930	5	Large AI Models in Health Informatics: Applications, Challenges, and the Future
+citation	256390509	257663521	1	Fundamentals of Generative Large Language Models and Perspectives in Cyber-Defense
+citation	256390509	257636562	7	TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering
+citation	256390509	257637187	0	Contrastive Alignment of Vision to Language Through Parameter-Efficient Transfer Learning
+citation	256390509	257631498	6	EVA-02: A Visual Representation for Neon Genesis
+citation	256390509	257632157	5	Retrieving Multimodal Information for Augmented Generation: A Survey
+citation	256390509	257637012	47	MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action
+citation	256390509	257622604	2	IRGen: Generative Modeling for Image Retrieval
+citation	256390509	257632536	0	MRIS: A Multi-modal Retrieval Approach for Image Synthesis on Diverse Modalities
+citation	256390509	257505358	36	ViperGPT: Visual Inference via Python Execution for Reasoning
+citation	256390509	257495966	0	ODIN: On-demand Data Formulation to Mitigate Dataset Lock-in
+citation	256390509	257496100	3	Scaling Vision-Language Models with Sparse Mixture of Experts
+citation	256390509	257496810	6	Vision-Language Models as Success Detectors
+citation	256390509	257496749	5	Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images
+citation	256390509	257496234	10	ChatGPT Asks, BLIP-2 Answers: Automatic Questioning Towards Enriched Visual Descriptions
+citation	256390509	257404891	105	Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models
+citation	256390509	257405208	0	Interpretable Visual Question Answering Referring to Outside Knowledge
+citation	256390509	257405349	29	A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT
+citation	256390509	257365351	2	Human-Art: A Versatile Human-Centric Dataset Bridging Natural and Artificial Scenes
+citation	256390509	257219775	63	Language Is Not All You Need: Aligning Perception with Language Models
+citation	256390509	257102433	4	Can Pre-trained Vision and Language Models Answer Visual Information-Seeking Questions?
+citation	256390509	256846455	13	Learning gain differences between ChatGPT and human tutor generated algebra hints
+citation	256390509	256615888	6	Contrast with Reconstruct: Contrastive 3D Representation Learning Guided by Generative Pretraining
+citation	256390509	258832596	0	Bias-to-Text: Debiasing Unknown Visual Biases through Language Interpretation
+citation	256390509	255941669	0	Vision Learners Meet Web Image-Text Pairs
+citation	256390509	255372865	2	A Survey for In-context Learning
+citation	256390509	254974187	55	Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation
+citation	256390509	253581319	19	PromptCap: Prompt-Guided Task-Aware Image Captioning
+citation	256390509	257637217	1	P ROMPT C AP : Prompt-Guided Image Captioning for VQA with GPT-3
+citation	256390509	257833781	97	HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face
+citation	256390509	257900697	2	GlyphDraw: Learning to Draw Chinese Characters in Image Synthesis Models Coherently
+citation	256390509	258291755	1	SkinGPT: A Dermatology Diagnostic System with Vision Large Language Model

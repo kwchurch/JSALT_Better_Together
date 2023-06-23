@@ -1,0 +1,5 @@
+import numpy as np
+import sys
+
+x = np.loadtxt(sys.stdin)
+print(x.shape())

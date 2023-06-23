@@ -1,0 +1,69 @@
+query	49 references	19 citations	InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning
+reference	258615266	258352455	20	mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality
+reference	258615266	258291930	66	MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models
+reference	258615266	258179774	57	Visual Instruction Tuning
+reference	258615266	257364842	119	PaLM-E: An Embodied Multimodal Language Model
+reference	258615266	257353536	8	Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering
+reference	258615266	257219404	637	LLaMA: Open and Efficient Foundation Language Models
+reference	258615266	256390509	223	BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models
+reference	258615266	254926784	17	MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning
+reference	258615266	254877310	158	Self-Instruct: Aligning Language Model with Self Generated Instructions
+reference	258615266	254853659	40	Unnatural Instructions: Tuning Language Models with (Almost) No Human Labor
+reference	258615266	253581319	19	PromptCap: Prompt-Guided Task-Aware Image Captioning
+reference	258615266	253510587	61	EVA: Exploring the Limits of Masked Visual Representation Learning at Scale
+reference	258615266	253018554	286	Scaling Instruction-Finetuned Language Models
+reference	258615266	252383606	54	Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering
+reference	258615266	252367367	12	LAVIS: A Library for Language-Vision Intelligence
+reference	258615266	249375629	36	A-OKVQA: A Benchmark for Visual Question Answering using World Knowledge
+reference	258615266	249152323	106	GIT: A Generative Image-to-text Transformer for Vision and Language
+reference	258615266	248496506	12	Visual Spatial Reasoning
+reference	258615266	248476411	583	Flamingo: a Visual Language Model for Few-Shot Learning
+reference	258615266	253098274	103	Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks
+reference	258615266	246411402	534	BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
+reference	258615266	239885946	16	IconQA: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning
+reference	258615266	239009562	644	Multitask Prompted Training Enables Zero-Shot Task Generalization
+reference	258615266	237416585	723	Finetuned Language Models Are Zero-Shot Learners
+reference	258615266	236034189	579	Align before Fuse: Vision and Language Representation Learning with Momentum Distillation
+reference	258615266	235458009	599	LoRA: Low-Rank Adaptation of Large Language Models
+reference	258615266	231802355	268	Unifying Vision-and-Language Tasks via Text Generation
+reference	258615266	227238996	114	Just Ask: Learning to Answer Questions from Millions of Narrated Videos
+reference	258615266	218971783	11546	Language Models are Few-Shot Learners
+reference	258615266	218581273	263	The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes
+reference	258615266	214693197	85	TextCaps: a Dataset for Image Captioning with Reading Comprehension
+reference	258615266	208637304	78	Large-scale Pretraining for Visual Dialog: A Simple State-of-the-Art Baseline
+reference	258615266	208637516	370	12-in-1: Multi-Task Vision and Language Representation Learning
+reference	258615266	204838007	8111	Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+reference	258615266	209413409	76	OCR-VQA: Visual Question Answering by Reading Text in Images
+reference	258615266	173991173	276	OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge
+reference	258615266	85553602	287	Towards VQA Models That Can Read
+reference	258615266	152282269	695	GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering
+reference	258615266	3831582	292	VizWiz Grand Challenge: Answering Visual Questions from Blind People
+reference	258615266	53592270	8014	Decoupled Weight Decay Regularization
+reference	258615266	3864050	247	Video Question Answering via Gradually Refined Attention over Appearance and Motion
+reference	258615266	8081284	1660	Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering
+reference	258615266	1820614	706	Visual Dialog
+reference	258615266	8517067	4885	Deep Visual-Semantic Alignments for Generating Image Descriptions
+reference	258615266	9026666	2889	CIDEr: Consensus-based image description evaluation
+reference	258615266	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	258615266	3104920	1734	From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions
+reference	258615266	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Stanford alpaca: An instruction-following llama model', 'citationCount': None}
+reference	258615266	56517630	172	nocaps: novel object captioning at scale
+citation	258615266	259203302	0	RemoteCLIP: A Vision Language Foundation Model for Remote Sensing
+citation	258615266	259203619	0	Path to Medical AGI: Unify Domain-specific Medical LLMs with the Lowest Cost
+citation	258615266	259165040	0	LVLM-eHub: A Comprehensive Evaluation Benchmark for Large Vision-Language Models
+citation	258615266	259165461	0	Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration
+citation	258615266	259164559	0	AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect, and Learn
+citation	258615266	259165617	0	Toward Grounded Social Reasoning
+citation	258615266	259138706	0	Valley: Video Assistant with Large Language model Enhanced abilitY
+citation	258615266	259108959	0	M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models
+citation	258615266	259108333	1	Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models
+citation	258615266	259108295	1	MIMIC-IT: Multi-Modal In-Context Instruction Tuning
+citation	258615266	259129698	0	AircraftVerse: A Large-Scale Multimodal Dataset of Aerial Vehicle Designs
+citation	258615266	259095896	0	M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning
+citation	258615266	258987679	0	Chatting Makes Perfect - Chat-based Image Retrieval
+citation	258615266	258887944	1	ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst
+citation	258615266	258865894	0	Cream: Visually-Situated Natural Language Understanding with Contrastive Reading Model and Frozen Large Language Models
+citation	258615266	258865923	0	Flan-MoE: Scaling Instruction-Finetuned Language Models with Sparse Mixture of Experts
+citation	258615266	258841000	0	TVTSv2: Learning Out-of-the-box Spatiotemporal Visual Representations at Scale
+citation	258615266	258740697	3	Evaluating Object Hallucination in Large Vision-Language Models
+citation	258615266	255372865	2	A Survey for In-context Learning

@@ -1,0 +1,1054 @@
+query	53 references	8595 citations	Show, Attend and Tell: Neural Image Caption Generation with Visual Attention
+reference	1055111	623318	976	Describing Videos by Exploiting Temporal Structure
+reference	1055111	1930231	1810	DRAW: A Recurrent Neural Network For Image Generation
+reference	1055111	14814581	936	Multiple Object Recognition with Visual Attention
+reference	1055111	6628106	117860	Adam: A Method for Stochastic Optimization
+reference	1055111	3509328	1131	Deep Captioning with Multimodal Recurrent Neural Networks (m-RNN)
+reference	1055111	8517067	4885	Deep Visual-Semantic Alignments for Generating Image Descriptions
+reference	1055111	18028513	184	Learning a Recurrent Visual Representation for Image Caption Generation
+reference	1055111	9254582	1215	From captions to visual concepts and back
+reference	1055111	1169492	5165	Show and tell: A neural image caption generator
+reference	1055111	5736847	5449	Long-term recurrent convolutional networks for visual recognition and description
+reference	1055111	7732372	1199	Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models
+reference	1055111	13344783	251	TreeTalk: Composition and Compression of Trees for Image Descriptions
+reference	1055111	206592484	35845	Going deeper with convolutions
+reference	1055111	7961699	17292	Sequence to Sequence Learning with Neural Networks
+reference	1055111	17719760	2310	Recurrent Neural Network Regularization
+reference	1055111	14124313	78019	Very Deep Convolutional Networks for Large-Scale Image Recognition
+reference	1055111	11212020	23025	Neural Machine Translation by Jointly Learning to Align and Translate
+reference	1055111	2930547	31008	ImageNet Large Scale Visual Recognition Challenge
+reference	1055111	17195923	2995	Recurrent Models of Visual Attention
+reference	1055111	12365096	630	Multimodal Neural Language Models
+reference	1055111	5590763	18429	Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation
+reference	1055111	5923323	1597	Meteor Universal: Language Specific Translation Evaluation for Any Target Language
+reference	1055111	13289663	263	The dropout learning algorithm
+reference	1055111	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	1055111	3104920	1734	From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions
+reference	1055111	1152498	207	Input Warping for Bayesian Optimization of Non-Stationary Functions
+reference	1055111	16895865	4483	Stochastic Backpropagation and Approximate Inference in Deep Generative Models
+reference	1055111	216078090	22062	Auto-Encoding Variational Bayes
+reference	1055111	16440891	86	Learning Generative Models with Visual Attention
+reference	1055111	1870512	897	How to Construct Deep Recurrent Neural Networks
+reference	1055111	10282227	279	Image Description using Visual Dependency Representations
+reference	1055111	12639289	1358	Recurrent Continuous Translation Models
+reference	1055111	1697424	3564	Generating Sequences With Recurrent Neural Networks
+reference	1055111	928608	1082	Framing Image Description as a Ranking Task: Data, Models and Evaluation Metrics (Extended Abstract)
+reference	1055111	63260316	202	Technical Report 2012
+reference	1055111	195908774	98221	ImageNet classification with deep convolutional neural networks
+reference	1055111	8180128	1405	Theano: new features and speed improvements
+reference	1055111	10315654	351	Collective Generation of Natural Image Descriptions
+reference	1055111	632197	6118	Practical Bayesian Optimization of Machine Learning Algorithms
+reference	1055111	2972357	430	Midge: Generating Image Descriptions From Computer Vision Detections
+reference	1055111	6661488	197	Learning Where to Attend with Deep Architectures for Image Tracking
+reference	1055111	1539668	393	Corpus-Guided Sentence Generation of Natural Images
+reference	1055111	10702193	362	Composing Simple Image Descriptions using Web-scale N-grams
+reference	1055111	10116609	1038	Baby talk: Understanding and generating simple image descriptions
+reference	1055111	9634512	413	Learning to combine foveal glimpses with a third-order Boltzmann machine
+reference	1055111	1540678	10916	Control of goal-directed and stimulus-driven attention in the brain
+reference	1055111	7317294	222	The Optimal Reward Baseline for Gradient-Based Reinforcement Learning
+reference	1055111	1915014	64753	Long Short-Term Memory
+reference	1055111	2332513	6769	Simple statistical gradient-following algorithms for connectionist reinforcement learning
+reference	1055111	6844431	33391	Dropout: a simple way to prevent neural networks from overfitting
+reference	1055111	6740010	935	The Dynamic Representation of Scenes
+reference	1055111	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Lecture 6.5 - RMSProp', 'citationCount': None}
+reference	1055111	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Theano: a CPU and GPU math expression compiler', 'citationCount': None}
+citation	1055111	258594668	0	Dual-Spatial Normalized Transformer for image captioning
+citation	1055111	259203790	0	Dense Video Object Captioning from Disjoint Supervision
+citation	1055111	259203473	0	KiUT: Knowledge-injected U-Transformer for Radiology Report Generation
+citation	1055111	259203168	0	GraphGLOW: Universal and Generalizable Structure Learning for Graph Neural Networks
+citation	1055111	259164765	0	Towards AGI in Computer Vision: Lessons Learned from GPT and Large Language Models
+citation	1055111	259164363	0	Top-Down Viewing for Weakly Supervised Grounded Image Captioning
+citation	1055111	259112614	0	CMMT: Cross-Modal Meta-Transformer for Video-Text Retrieval
+citation	1055111	259112735	0	Multi-Label Meta Weighting for Long-Tailed Dynamic Scene Graph Generation
+citation	1055111	259112741	0	Video Retrieval for Everyday Scenes With Common Objects
+citation	1055111	259129379	0	Customizing General-Purpose Foundation Models for Medical Report Generation
+citation	1055111	259129555	0	Multimodal Explainable Artificial Intelligence: A Comprehensive Review of Methodological Advances and Future Research Directions
+citation	1055111	259120151	0	Image caption generation based on object detection and knowledge enhancement
+citation	1055111	259146113	0	WRANet: wavelet integrated residual attention U-Net network for medical image segmentation
+citation	1055111	259108635	0	2D Object Detection with Transformers: A Review
+citation	1055111	257361053	0	Structural representative network for remote sensing image captioning
+citation	1055111	259088987	0	On the Role of Attention in Prompt-tuning
+citation	1055111	259089019	0	Towards Adaptable and Interactive Image Captioning with Data Augmentation and Episodic Memory
+citation	1055111	259089361	0	Putting Humans in the Image Captioning Loop
+citation	1055111	259075367	0	ROME: Testing Image Captioning Systems via Recursive Object Melting
+citation	1055111	211477960	27	Attention and Long Short-Term Memory Network for Remaining Useful Lifetime Predictions of Turbofan Engine Degradation
+citation	1055111	258530639	0	Multi-Modal Food Classification in a Diet Tracking System with Spoken and Visual Inputs
+citation	1055111	258533470	0	Estimation of Visual Contents from Human Brain Signals via VQA Based on Brain-Specific Attention
+citation	1055111	258534452	0	Binauralization Robust To Camera Rotation Using 360° Videos
+citation	1055111	258534686	0	Visual Graph Reasoning Network
+citation	1055111	258535013	0	Decoupled Visual Causality for Robust Detection
+citation	1055111	258537447	0	Divcon: Learning Concept Sequences for Semantically Diverse Image Captioning
+citation	1055111	258539088	0	End-to-End Non-Autoregressive Image Captioning
+citation	1055111	259075891	0	MoviePuzzle: Visual Narrative Reasoning through Multimodal Order Learning
+citation	1055111	259064725	0	Pneumonia detection with QCSA network on chest X-ray
+citation	1055111	259075530	0	Table and Image Generation for Investigating Knowledge of Entities in Pre-trained Vision and Language Models
+citation	1055111	259075483	0	Recent Advances of Local Mechanisms in Computer Vision: A Survey and Outlook of Recent Work
+citation	1055111	247918049	1	Deep Reconstruction of 3-D Human Poses From Video
+citation	1055111	258999271	0	Using Genetic Programming to Build Self-Adaptivity into Software-Defined Networks
+citation	1055111	259000001	0	"Let's not Quote out of Context": Unified Vision-Language Pretraining for Context Assisted Image Captioning
+citation	1055111	259022411	0	Federated Learning on Multimodal Data: A Comprehensive Survey
+citation	1055111	259004375	1	LMDA-Net:A lightweight multi-dimensional attention network for general EEG-based brain-computer interfaces and interpretability
+citation	1055111	254341992	1	Multi-Granularity Aggregation Transformer for Joint Video-Audio-Text Representation Learning
+citation	1055111	258987570	0	Cross-Domain Car Detection Model with Integrated Convolutional Block Attention Mechanism
+citation	1055111	259209374	0	The multi-modal fusion in visual question answering: a review of attention mechanisms
+citation	1055111	258959340	0	HGT: A Hierarchical GCN-Based Transformer for Multimodal Periprosthetic Joint Infection Diagnosis Using CT Images and Text
+citation	1055111	258967358	0	GBG++: A Fast and Stable Granular Ball Generation Method for Classification
+citation	1055111	259089180	0	A Survey on Learning Objects' Relationship for Image Captioning
+citation	1055111	258960254	0	FuseCap: Leveraging Large Language Models to Fuse Visual Data into Enriched Image Captions
+citation	1055111	258911597	0	Multimodal Recipe Recommendation System Using Deep Learning and Rule-Based Approach
+citation	1055111	258947362	0	S4M: Generating Radiology Reports by A Single Model for Multiple Body Parts
+citation	1055111	258888004	0	HAAV: Hierarchical Aggregation of Augmented Views for Image Captioning
+citation	1055111	258887619	0	Refocusing Is Key to Transfer Learning
+citation	1055111	258832328	1	DiffCap: Exploring Continuous Diffusion on Image Captioning
+citation	1055111	259187917	0	Evolutionary Algorithms in the Light of SGD: Limit Equivalence, Minima Flatness, and Transfer Learning
+citation	1055111	258823258	0	LLM Itself Can Read and Generate CXR Images
+citation	1055111	258762230	0	Emergent Communication with Attention
+citation	1055111	258766442	0	A survey on automatic generation of medical imaging reports based on deep learning
+citation	1055111	258765588	0	G-DAIC: A Gaze Initialized Framework for Description and Aesthetic-Based Image Cropping
+citation	1055111	258764558	0	TransWeaver: Weave Image Pairs for Class Agnostic Common Object Detection
+citation	1055111	258741218	1	A Video Is Worth 4096 Tokens: Verbalize Story Videos To Understand Them In Zero Shot
+citation	1055111	258686489	0	Edit As You Wish: Video Description Editing with Multi-grained Commands
+citation	1055111	258729755	0	Dimensional emotion recognition based on two stream CNN fusion attention mechanism
+citation	1055111	258685336	0	Mask to reconstruct: Cooperative Semantics Completion for Video-text Retrieval
+citation	1055111	258676158	0	Automatic Radiology Report Generation by Learning with Increasingly Hard Negatives
+citation	1055111	258762424	0	Learning the Visualness of Text Using Large Vision-Language Models
+citation	1055111	258588162	0	Clothes-Invariant Feature Learning by Causal Intervention for Clothes-Changing Person Re-identification
+citation	1055111	258618782	0	Focal vs Diffuse: Mechanisms of attention mediated performance enhancement in a hierarchical model of the visual system
+citation	1055111	258548460	0	Reconstructing three-dimensional salinity field of the South China Sea from satellite observations
+citation	1055111	258557995	0	PromptRank: Unsupervised Keyphrase Extraction Using Prompt
+citation	1055111	258558701	0	Attention-Guided Transfer Learning for Identification of Filamentous Fungi Encountered in the Clinical Laboratory
+citation	1055111	258528855	0	A color attention mechanism based on YES color space for skin segmentation
+citation	1055111	258555356	0	Stochastic reconstruction of porous media based on attention mechanisms and multi-stage generative adversarial network
+citation	1055111	259122652	0	A Study on Various Approaches Towards Non-Factoid Question Answering Systems
+citation	1055111	258479994	4	Caption Anything: Interactive Image Description with Diverse Multimodal Controls
+citation	1055111	258480063	0	Incremental 3D Semantic Scene Graph Prediction from RGB Sequences
+citation	1055111	258480288	0	Image Captioners Sometimes Tell More Than Images They See
+citation	1055111	259121461	0	Hate Speech Detection using Multimodal Meme Analysis
+citation	1055111	258461216	0	Fairness in AI Systems: Mitigating gender bias from language-vision models
+citation	1055111	258461612	1	Multimodal Data Augmentation for Image Captioning using Diffusion Models
+citation	1055111	258461558	0	Transforming Visual Scene Graphs to Image Captions
+citation	1055111	259101212	0	Efficient Still Image Action Recognition by the Combination of Ensemble Learning and Knowledge Distillation
+citation	1055111	258858449	0	Infrared Image Caption Based on Object-Oriented Attention
+citation	1055111	257904221	0	A novel nonlinear automated multi-class skin lesion detection system using soft-attention based convolutional neural networks
+citation	1055111	253937490	0	Congestive Heart Failure Detection From ECG Signals Using Deep Residual Neural Network
+citation	1055111	255043636	0	High accuracy intelligent real-time framework for detecting infant drowning based on deep learning
+citation	1055111	258534758	1	YOLO-CIR: The network based on YOLO and ConvNeXt for infrared object detection
+citation	1055111	258537896	0	Prediction of Shooting Events in Soccer Videos Using Complete Bipartite Graphs and Players’ Spatial-Temporal Relations
+citation	1055111	258821830	0	Deep learning approaches to automatic radiology report generation: A systematic review
+citation	1055111	259216743	0	SAR Ship Detection Based on An Improved CNN with IoU-FL and Attention Mechanism
+citation	1055111	251990711	0	Adamr-Grus: Adaptive Momentum-Based Regularized Gru for Hmer Problems
+citation	1055111	258378175	0	Multimodal Graph Transformer for Multimodal Question Answering
+citation	1055111	258495858	0	Channel attention-based spatial-temporal graph neural networks for traffic prediction
+citation	1055111	258332048	1	Multi-Modality Deep Network for Extreme Learned Image Compression
+citation	1055111	258332659	0	Multi-classification deep neural networks for identification of fish species using camera captured images
+citation	1055111	258298032	1	Identifying Appropriate Intellectual Property Protection Mechanisms for Machine Learning Models: A Systematization of Watermarking, Fingerprinting, Model Access, and Attacks
+citation	1055111	258298547	0	A Review of Deep Learning for Video Captioning
+citation	1055111	258332184	0	Byzantine-Resilient Learning Beyond Gradients: Distributing Evolutionary Search
+citation	1055111	258212604	0	TieFake: Title-Text Similarity and Emotion-Aware Fake News Detection
+citation	1055111	258217740	0	Improved Image Caption Rating – Datasets, Game, and Model
+citation	1055111	258217958	0	Watch Out for Updates: Understanding the Effects of Model Explanation Updates in AI-Assisted Decision Making
+citation	1055111	258217991	0	“Explain What a Treemap is”: Exploratory Investigation of Strategies for Explaining Unfamiliar Chart to Blind and Low Vision Users
+citation	1055111	258235046	0	On the Principles and Decisions of New Word Translation in Sino-Japan Cross-Border e-Commerce: A Study in the Context of Cross-Cultural Communication
+citation	1055111	258179433	2	Causality-aware Visual Scene Discovery for Cross-Modal Question Reasoning
+citation	1055111	258179419	0	Interactive and Explainable Region-guided Radiology Report Generation
+citation	1055111	258179482	0	M2GNN: Metapath and Multi-interest Aggregated Graph Neural Network for Tag-based Cross-domain Recommendation
+citation	1055111	258170168	0	WYTIWYR: A User Intent-Aware Framework with Multi-modal Inputs for Visualization Retrieval
+citation	1055111	258078960	0	Learning Transferable Pedestrian Representation from Multimodal Information Supervision
+citation	1055111	258108272	0	CLIP-Guided Vision-Language Pre-training for Question Answering in 3D Scenes
+citation	1055111	258062663	0	CADNet: an advanced architecture for automatic detection of coronary artery calcification and shadow border in intravascular ultrasound (IVUS) images
+citation	1055111	258066076	0	Generative image captioning in Urdu using deep learning
+citation	1055111	258060211	0	ImageCaptioner2: Image Captioner for Image Captioning Bias Amplification Assessment
+citation	1055111	258049178	2	DetCLIPv2: Scalable Open-Vocabulary Object Detection Pre-training via Word-Region Alignment
+citation	1055111	258040970	1	Model-Agnostic Gender Debiased Image Captioning
+citation	1055111	257985306	1	Improving Visual Question Answering Models through Robustness Analysis and In-Context Learning with a Chain of Basic Questions
+citation	1055111	257952112	1	Towards Self-Explainability of Deep Neural Networks with Heatmap Captioning and Large-Language Models
+citation	1055111	257952511	1	METransformer: Radiology Report Generation by Transformer with Multiple Learnable Expert Tokens
+citation	1055111	257921928	0	Cross-Domain Image Captioning with Discriminative Finetuning
+citation	1055111	257913411	1	Changes to Captions: An Attentive Network for Remote Sensing Change Captioning
+citation	1055111	253343484	0	Towards Usable Neural Comment Generation via Code-Comment Linkage Interpretation: Method and Empirical Study
+citation	1055111	254483571	4	Hierarchical attention neural network for information cascade prediction
+citation	1055111	256452328	1	Leveraging Deep Reinforcement Learning With Attention Mechanism for Virtual Network Function Placement and Routing
+citation	1055111	257138070	0	Deep H2O: Cyber attacks detection in water distribution systems using deep learning
+citation	1055111	245361287	1	Region Attention Enhanced Unsupervised Cross-Domain Facial Emotion Recognition
+citation	1055111	244552812	1	Context-Aware and Time-Aware Attention-Based Model for Disease Risk Prediction With Interpretability
+citation	1055111	248870440	4	A Novel Deep Learning Framework Based Mask-Guided Attention Mechanism for Distant Metastasis Prediction of Lung Cancer
+citation	1055111	252094233	0	An Attention-Based Cycle-Consistent Generative Adversarial Network for IoT Data Generation and Its Application in Smart Energy Systems
+citation	1055111	255587726	1	Hierarchical Spatio–Temporal Graph Convolutional Networks and Transformer Network for Traffic Flow Forecasting
+citation	1055111	258014189	0	RecON: Online learning for sensorless freehand 3D ultrasound reconstruction.
+citation	1055111	258265051	0	Feature fusion via multi-target learning for ancient artwork captioning
+citation	1055111	258035249	0	Arabic Captioning for Images of Clothing Using Deep Learning
+citation	1055111	255288610	0	SCA-Net: Spatial and channel attention-based network for 3D point clouds
+citation	1055111	257471304	0	SARGAN: Spatial Attention-based Residuals for Facial Expression Manipulation
+citation	1055111	257804806	1	LMDA-Net: A lightweight multi-dimensional attention network for general EEG-based brain-computer interface paradigms and interpretability
+citation	1055111	257805175	0	SnakeVoxFormer: Transformer-based Single Image\\Voxel Reconstruction with Run Length Encoding
+citation	1055111	257851051	0	Pre-trained multilevel fuse network based on vision-conditioned reasoning and bilinear attentions for medical image visual question answering
+citation	1055111	257771410	0	Medical Image Analysis using Deep Relational Learning
+citation	1055111	257771612	2	X-Mesh: Towards Fast and Accurate Text-driven 3D Stylization via Dynamic Textual Guidance
+citation	1055111	257771453	1	Unify, Align and Refine: Multi-Level Semantic Alignment for Radiology Report Generation
+citation	1055111	257771835	0	Graph Sequence Learning for Premise Selection
+citation	1055111	257757219	0	Improving Prediction Performance and Model Interpretability through Attention Mechanisms from Basic and Applied Research Perspectives
+citation	1055111	257746034	0	Fine-Grained Motion Recognition in At-Home Fitness Monitoring with Smartwatch: A Comparative Analysis of Explainable Deep Neural Networks
+citation	1055111	257687381	1	Top-Down Visual Attention from Analysis by Synthesis
+citation	1055111	257687581	0	PointGame: Geometrically and Adaptively Masked Auto-Encoder on Point Clouds
+citation	1055111	257687656	0	Taking A Closer Look at Visual Relation: Unbiased Video Scene Graph Generation with Decoupled Label Learning
+citation	1055111	257755236	0	Supervised Deep Learning Techniques for Image Description: A Systematic Review
+citation	1055111	257724286	5	YOLOv5s-CA: A Modified YOLOv5s Network with Coordinate Attention for Underwater Target Detection
+citation	1055111	258592794	0	Handwritten OCR for word in Indic Language using Deep Networks
+citation	1055111	257103037	19	Catalyzing next-generation Artificial Intelligence through NeuroAI
+citation	1055111	257636561	25	A Complete Survey on Generative AI (AIGC): Is ChatGPT from GPT-4 to GPT-5 All You Need?
+citation	1055111	257637111	0	Context De-confounded Emotion Recognition
+citation	1055111	257663410	1	Positive-Augmented Constrastive Learning for Image and Video Captioning Evaluation
+citation	1055111	257683266	0	Rethinking symbolic and visual context in Referring Expression Generation
+citation	1055111	257636871	5	Sketch2Saliency: Learning to Detect Salient Objects from Human Drawings
+citation	1055111	257632452	0	Multi-modal reward for visual relationships-based image captioning
+citation	1055111	257632345	0	Blind Multimodal Quality Assessment: A Brief Survey and A Case Study of Low-light Images
+citation	1055111	257622700	0	Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation
+citation	1055111	257622944	0	GNNFormer: A Graph-based Framework for Cytopathology Report Generation
+citation	1055111	258260609	0	Image Caption Generation Related to Object Detection and Colour Recognition Using Transformer-Decoder
+citation	1055111	257557637	5	Visual-Linguistic Causal Intervention for Radiology Report Generation
+citation	1055111	257580169	0	Spatial-aware topic-driven-based image Chinese caption for disaster news
+citation	1055111	257532371	0	PR-MCS: Perturbation Robust Metric for MultiLingual Image Captioning
+citation	1055111	257505358	36	ViperGPT: Visual Inference via Python Execution for Reasoning
+citation	1055111	257783093	0	SFSS-Net:shape-awared filter and sematic-ranked sampler for voxel-based 3D object detection
+citation	1055111	257496152	2	Interventional Bag Multi-Instance Learning On Whole-Slide Pathological Images
+citation	1055111	257496389	0	Focus on Change: Mood Prediction by Learning Emotion Changes via Spatio-Temporal Attention
+citation	1055111	257496352	1	ZeroNLG: Aligning and Autoencoding Domains for Zero-Shot Multimodal and Multilingual Natural Language Generation
+citation	1055111	257496768	0	Learning Combinatorial Prompts for Universal Controllable Image Captioning
+citation	1055111	257365705	0	Comparative study of Transformer and LSTM Network with attention mechanism on Image Captioning
+citation	1055111	257365573	3	ConZIC: Controllable Zero-shot Image Captioning by Sampling-Based Polishing
+citation	1055111	258465567	0	Attention Based Evolutionary Approach for Image Classification
+citation	1055111	258869982	0	Deep Ensemble Architecture for Knee Osteoarthritis Severity Prediction and Report Generation*
+citation	1055111	259123166	0	Image Dense Captioning of Irregular Regions Based on Visual Saliency
+citation	1055111	255086691	1	Part-aware attention correctness for video salient object detection
+citation	1055111	256493601	1	Power quality improvement using Distribution Static Synchronous Compensator
+citation	1055111	257370183	0	Transformer-based local-global guidance for image captioning
+citation	1055111	245624487	0	Vision-and-Language Navigation Based on Cross-Modal Feature Fusion in Indoor Environment
+citation	1055111	252421522	1	Towards Zero-Shot Learning: A Brief Review and an Attention-Based Embedding Network
+citation	1055111	247102871	2	Multistream 3-D Convolution Neural Network With Parameter Sharing for Human State Estimation
+citation	1055111	257434562	0	A uniform transformer-based structure for feature fusion and enhancement for RGB-D saliency detection
+citation	1055111	257449695	0	Mineral Prospectivity Mapping Using Attention–based Convolutional Neural Network
+citation	1055111	257760613	0	SqueezExpNet: Dual-stage convolutional neural network for accurate facial expression recognition with attention mechanism
+citation	1055111	257870622	1	Wavelet-Seq2Seq-LSTM with attention for time series forecasting of level of dams in hydroelectric power plants
+citation	1055111	257891309	0	CAGCN: Causal attention graph convolutional network against adversarial attacks
+citation	1055111	257296801	0	Semantic enhancement methods for image captioning
+citation	1055111	258745851	0	Controllable Image Caption Based on Adaptive Weight and Optimization Strategy
+citation	1055111	257079667	0	Learning to Infer Product Attribute Values From Descriptive Texts and Images
+citation	1055111	257219734	8	Inseq: An Interpretability Toolkit for Sequence Generation Models
+citation	1055111	257243320	0	Prediction of State of Health of Lithium-Ion Battery Using Health Index Informed Attention Model
+citation	1055111	256630986	0	Understanding Social Media Cross-Modality Discourse in Linguistic Space
+citation	1055111	257171674	0	Research on CNN-based hyperspectral and multispectral image fusion methods
+citation	1055111	257124666	0	Temporal Pattern Attention for Multivariate Time Series of Tennis Strokes Classification
+citation	1055111	257121884	0	Research on image captioning based on LSTM and YOLOv5 fusion attention mechanism
+citation	1055111	257169742	0	Context-aware and co-attention network based image captioning model
+citation	1055111	257050658	2	Parallel Sentence-Level Explanation Generation for Real-World Low-Resource Scenarios
+citation	1055111	257106544	1	Reinforcement learning of non-additive joint steganographic embedding costs with attention mechanism
+citation	1055111	257721056	0	Captioning Remote Sensing Images Using Transformer Architecture
+citation	1055111	257071273	0	Hierarchical Attentive Network for Gestational Age Estimation in Low-Resource Settings
+citation	1055111	256901128	1	Retrieval-augmented Image Captioning
+citation	1055111	256905056	1	A Visual Attention-Based Model for Bengali Image Captioning
+citation	1055111	256826762	1	Large Scale Multi-Lingual Multi-Modal Summarization Dataset
+citation	1055111	257050403	0	See Your Heart: Psychological states Interpretation through Visual Creations
+citation	1055111	256827089	0	Sketch Less Face Image Retrieval: A New Challenge
+citation	1055111	256701737	0	Multilingual translation for zero-shot biomedical classification using BioTranslator
+citation	1055111	256808676	2	Long-Tailed Partial Label Learning via Dynamic Rebalancing
+citation	1055111	256758917	0	LBCRN: lightweight bidirectional correction residual network for image super-resolution
+citation	1055111	259139699	0	A Local Attention-based Neural Networks for Abstractive Text Summarization
+citation	1055111	256697198	0	Stacked Cross-modal Feature Consolidation Attention Networks for Image Captioning
+citation	1055111	256632251	1	Image caption generation using Visual Attention Prediction and Contextual Spatial Relation Extraction
+citation	1055111	256662201	0	Dual-interest Factorization-heads Attention for Sequential Recommendation
+citation	1055111	256664984	0	Enough Waiting for the Couriers — Learning to Estimate Package Pick-up Arrival Time from Couriers’ Spatial-Temporal Behaviors
+citation	1055111	258584034	0	Hybrid Image Captioning Model
+citation	1055111	257432237	0	A Survey on Attention mechanism in NLP
+citation	1055111	256615290	0	Transform, Contrast and Tell: Coherent Entity-Aware Multi-Image Captioning
+citation	1055111	256584708	0	A CNN-LSTM-based model for fashion image aesthetic captioning
+citation	1055111	256588446	0	Research on commodity image detection based on improved YOLOv5
+citation	1055111	253876383	0	Extracting Worker Unsafe Behaviors from Construction Images Using Image Captioning with Deep Learning–Based Attention Mechanism
+citation	1055111	254396466	1	Fusing high-resolution multispectral image with trajectory for user next travel location prediction
+citation	1055111	255534454	0	ELSA: Ensemble learning based sentiment analysis for diversified text
+citation	1055111	249526829	2	A 16-nm SoC for Noise-Robust Speech and NLP Edge AI Inference With Bayesian Sound Source Separation and Attention-Based DNNs
+citation	1055111	256827118	1	Towards Local Visual Modeling for Image Captioning
+citation	1055111	256936214	2	Human Action Recognition: A Taxonomy-Based Survey, Updates, and Opportunities
+citation	1055111	256646073	1	State of the Art of Visual Analytics for eXplainable Deep Learning
+citation	1055111	257649755	0	Conceptual Attention in StyleGAN
+citation	1055111	256492999	0	CNN deep learning-based image to vector depiction
+citation	1055111	256362104	0	Static information, K-neighbor, and self-attention aggregated scheme: a transient stability prediction model with enhanced interpretability
+citation	1055111	256453489	2	Text Sentiment Classification Based on BERT Embedding and Sliced Multi-Head Self-Attention Bi-GRU
+citation	1055111	256391173	0	DPACS: Hardware Accelerated Dynamic Neural Network Pruning through Algorithm-Architecture Co-design
+citation	1055111	256274557	0	Semi-Supervised Image Captioning by Adversarially Propagating Labeled Data
+citation	1055111	256274623	1	Open Problems in Applied Deep Learning
+citation	1055111	256358690	0	Style-Aware Contrastive Learning for Multi-Style Image Captioning
+citation	1055111	256194266	2	A two stages Deep Learning Architecture for Model Reduction of Parametric Time-Dependent Problems
+citation	1055111	256105770	0	Explaining Deep Learning Hidden Neuron Activations using Concept Induction
+citation	1055111	256105778	0	HRVQA: A Visual Question Answering Benchmark for High-Resolution Aerial Images
+citation	1055111	256288570	1	Fashion-Oriented Image Captioning with External Knowledge Retrieval and Fully Attentive Gates
+citation	1055111	256219792	0	Federated deep active learning for attention-based transaction classification
+citation	1055111	256105118	1	Summarize the Past to Predict the Future: Natural Language Descriptions of Context Boost Multimodal Object Interaction
+citation	1055111	255967032	0	Bottom-up and Top-down Object Inference Networks for Image Captioning
+citation	1055111	257082740	0	Opportunities and Challenges in Development of Support System for Visually Impaired: A Survey
+citation	1055111	255998461	3	Joint Representation Learning for Text and 3D Point Cloud
+citation	1055111	256021455	2	Supervised Attention-Based Bidirectional Long Short-Term Memory Network for Nonlinear Dynamic Soft Sensor Application
+citation	1055111	255998421	0	Embodied Agents for Efficient Exploration and Smart Scene Description
+citation	1055111	255942711	2	UATVR: Uncertainty-Adaptive Text-Video Retrieval
+citation	1055111	252316914	0	A Fine-Grained Attention Model for High Accuracy Operational Robot Guidance
+citation	1055111	255898632	0	Pyramid feature boosted network for single image dehazing
+citation	1055111	256808405	0	A Novel Improved Mask RCNN for Multiple Targets Detection in the Indoor Complex Scenes
+citation	1055111	255440590	0	Adaptively Clustering Neighbor Elements for Image Captioning
+citation	1055111	255497366	0	Visual question answering model for fruit tree disease decision-making based on multimodal deep learning
+citation	1055111	255393673	0	Further Improving Weakly-supervised Object Localization via Causal Knowledge Distillation
+citation	1055111	255638287	0	Pan-sharpening of remote sensing images based on gradient projection and cross fusion
+citation	1055111	248608518	0	Vagueness in Artificial Intelligence: The ‘Fuzzy Logic’ of AI-Related Patent Claims
+citation	1055111	256150898	0	Applications of machine learning in tabular document digitisation
+citation	1055111	256661156	2	Expert-defined Keywords Improve Interpretability of Retinal Image Captioning
+citation	1055111	250723571	0	Clinical Validation and Treatment Plan Evaluation Based on Autodelineation of the Clinical Target Volume for Prostate Cancer Radiotherapy
+citation	1055111	252630991	0	Deep arrhythmia classification based on SENet and lightweight context transform.
+citation	1055111	253691546	2	Fault diagnosis based on gated recurrent unit network with attention mechanism and transfer learning under few samples in nuclear power plants
+citation	1055111	251849518	0	TCRNet: A Trifurcated Cascaded Refinement Network for Salient Object Detection
+citation	1055111	251664268	1	Diverse Feature Learning Network With Attention Suppression and Part Level Background Suppression for Person Re-Identification
+citation	1055111	255675508	0	Contrastive pre-training and linear interaction attention-based transformer for universal medical reports generation
+citation	1055111	255713291	0	Graph attention reinforcement learning with flexible matching policies for multi-depot vehicle routing problems
+citation	1055111	255928607	0	Network representation learning via improved random walk with restart
+citation	1055111	256295391	0	Relational-Convergent Transformer for image captioning
+citation	1055111	256382651	1	Interpretable local flow attention for multi-step traffic flow prediction
+citation	1055111	256434453	0	Self-supervised recalibration network for person re-identification
+citation	1055111	256645559	1	Couplformer: Rethinking Vision Transformer with Coupling Attention
+citation	1055111	256646187	0	Aggregating Bilateral Attention for Few-Shot Instance Localization
+citation	1055111	256669074	0	Privacy-Aware Forecasting of Quality of Service in Mobile Edge Computing
+citation	1055111	255415872	2	Unpacking the "Black Box" of AI in Education
+citation	1055111	255340485	0	On the Interpretability of Attention Networks
+citation	1055111	259215746	0	Bengali Caption Generation for Images Using Deep Learning
+citation	1055111	255186699	0	SSR-Net: A Spatial Structural Relation Network for Vehicle Re-identification
+citation	1055111	255264583	0	Price movement prediction using deep learning: a case study of the China futures market
+citation	1055111	257083314	1	Traffic Captioning: Deep Learning-based Method to Understand and Describe Traffic Images
+citation	1055111	255186162	1	Noise-aware Learning from Web-crawled Image-Text Data for Image Captioning
+citation	1055111	255096964	0	Dynamic Convolution-based Encoder-Decoder Framework for Image Captioning in Hindi
+citation	1055111	255096479	1	Multi-Projection Fusion and Refinement Network for Salient Object Detection in 360° Omnidirectional Image
+citation	1055111	255096283	4	Do DALL-E and Flamingo Understand Each Other?
+citation	1055111	255081257	1	HSCA-Net: A Hybrid Spatial-Channel Attention Network in Multi-Scale Feature Pyramid for Document Layout Analysis
+citation	1055111	254877746	3	Does CLIP Bind Concepts? Probing Compositionality in Large Image Models
+citation	1055111	254926953	0	Cooperative Flight Control Using Visual-Attention - Air-Guardian
+citation	1055111	254877175	15	A Survey of Deep Learning for Mathematical Reasoning
+citation	1055111	254877727	3	Causal Inference for Knowledge Graph based Recommendation
+citation	1055111	254904999	0	Layer-wise enhanced transformer with multi-modal fusion for image caption
+citation	1055111	256315090	0	Improving Radiology Report Generation via Object Dropout Strategy and MLP-based Captioner
+citation	1055111	254735536	0	NumCap: A Number-controlled Multi-caption Image Captioning Network
+citation	1055111	257082825	0	Hard Contrastive Learning for Video Captioning
+citation	1055111	254636505	0	Design-time Fashion Popularity Forecasting in VR Environments
+citation	1055111	254715720	2	Topic-aware hierarchical multi-attention network for text classification
+citation	1055111	255994913	0	Dual-stream Self-attention Network for Image Captioning
+citation	1055111	254678801	1	Evaluating eXplainable artificial intelligence tools for hard disk drive predictive maintenance
+citation	1055111	254591182	1	ScanEnts3D: Exploiting Phrase-to-3D-Object Correspondences for Improved Visio-Linguistic Models in 3D Scenes
+citation	1055111	254563882	0	CLIP-TSA: CLIP-Assisted Temporal Self-Attention for Weakly-Supervised Video Anomaly Detection
+citation	1055111	254525679	0	SAdaBoundNc: an adaptive subgradient online learning algorithm with logarithmic regret bounds
+citation	1055111	259029108	0	Context Encoder Network with Channel-Wise Attention Mechanism for Nerve Fibers Detection in Corneal Confocal Microscopy Images
+citation	1055111	254535944	0	Modularity through Attention: Efficient Training and Transfer of Language-Conditioned Policies for Robot Manipulation
+citation	1055111	257102313	0	A Flexible Nadaraya-Watson Head Can Offer Explainable and Calibrated Classification
+citation	1055111	255180125	0	A Deep Reinforcement Learning Approach for Crowdshipping Vehicle Routing Problem
+citation	1055111	254275009	2	Switching to Discriminative Image Captioning by Relieving a Bottleneck of Reinforcement Learning
+citation	1055111	254275325	0	Genetic Sequence compression using Machine Learning and Arithmetic Encoding Decoding Techniques
+citation	1055111	254275438	4	Semantic-Conditional Diffusion Networks for Image Captioning
+citation	1055111	254275267	0	Document-Level Abstractive Summarization
+citation	1055111	255403917	0	Few-Shot Radiology Report Generation via Knowledge Transfer and Multi-modal Alignment
+citation	1055111	255417861	0	Clinically Coherent Radiology Report Generation with Imbalanced Chest X-rays
+citation	1055111	255418447	0	An Offline Assistance Tool for Visually Impaired People Based on Image Captioning
+citation	1055111	255597545	0	Attentive Knowledge Transfer for Short-term Load Forecasting
+citation	1055111	255600150	0	ChannelFed: Enabling Personalized Federated Learning via Localized Channel Attention
+citation	1055111	254247200	2	Generalizing Multiple Object Tracking to Unseen Domains by Introducing Natural Language Representation
+citation	1055111	256851695	1	Active Perception for Visual-Language Navigation
+citation	1055111	257786028	0	Sparse Attribute Network Representation Learning Method
+citation	1055111	254246894	0	Convolution, aggregation and attention based deep neural networks for accelerating simulations in mechanics
+citation	1055111	254806374	2	Approximating global illumination with ambient occlusion and environment light via generative adversarial networks
+citation	1055111	255036311	0	Uncertainty-Aware Scene Graph Generation
+citation	1055111	255042422	0	RCA-CycleGAN: Unsupervised underwater image enhancement using Red Channel attention optimized CycleGAN
+citation	1055111	255331590	1	Dysarthria severity classification using multi-head attention and multi-task learning
+citation	1055111	255362290	0	Exploring visual relationship for social media popularity prediction
+citation	1055111	252571173	1	Prediction of mechanical behavior of rocks with strong strain-softening effects by a deep-learning approach
+citation	1055111	246578418	5	Multichannel Spatio-Temporal Feature Fusion Method for NILM
+citation	1055111	254097189	1	Dual Scene Graph Convolutional Network for Motivation Prediction
+citation	1055111	254100391	1	Computer-aided diagnosis through medical image retrieval in radiology
+citation	1055111	254125448	0	Multilingual Communication System with Deaf Individuals Utilizing Natural and Visual Languages
+citation	1055111	254220860	0	Focus! Relevant and Sufficient Context Selection for News Image Captioning
+citation	1055111	251378057	0	BR-GAN: A Pedestrian Trajectory Prediction Model Combined With Behavior Recognition
+citation	1055111	252426946	0	Causal Temporal–Spatial Pedestrian Trajectory Prediction With Goal Point Estimation and Contextual Interaction
+citation	1055111	240449346	6	A Spatiotemporal Bidirectional Attention-Based Ride-Hailing Demand Prediction Model: A Case Study in Beijing During COVID-19
+citation	1055111	238866499	0	Partially Recurrent Network With Highway Connections
+citation	1055111	247643181	8	CapsGaNet: Deep Neural Network Based on Capsule and GRU for Human Activity Recognition
+citation	1055111	254529873	0	Trustworthy Breast Ultrasound Image Semantic Segmentation Based on Fuzzy Uncertainty Reduction
+citation	1055111	254517079	2	Interpretable and Predictive Deep Neural Network Modeling of the SARS-CoV-2 Spike Protein Sequence to Predict COVID-19 Disease Severity
+citation	1055111	251429643	1	Real-Time Driver Behavior Detection Based on Deep Deformable Inverted Residual Network With an Attention Mechanism for Human-Vehicle Co-Driving System
+citation	1055111	254616336	0	AWANet: Attentive-Aware Wide-Kernels Asymmetrical Network with Blended Contour Information for Salient Object Detection
+citation	1055111	255265563	0	Network Security Situation Prediction Implemented by Attention and BiLSTM
+citation	1055111	255268091	0	Exploring adaptive attention in memory transformer applied to coherent video paragraph captioning
+citation	1055111	253901197	0	Calculation of Photoionization Rates During Streamer Discharge Using Neural Networks
+citation	1055111	255522513	0	An Image captioning algorithm based on the Hybrid Deep Learning Technique (CNN+GRU)
+citation	1055111	255997084	0	A Comparative Study on Optimizers for Automatic Image Captioning
+citation	1055111	257408478	0	Relation-Aware Image Captioning for Explainable Visual Question Answering
+citation	1055111	257720950	0	Learning Dynamic Behavior Patterns for Fraud Detection
+citation	1055111	257809132	0	Deep Spatio-Temporal Residual Shrinkage Networks for Traffic Prediction
+citation	1055111	257809709	0	TB-Transformer: Integrating Mouse Trace with Object Bounding-box for Image Caption
+citation	1055111	258010281	0	A object detection method based on attention mechanism and reinforcement learning
+citation	1055111	258136639	0	A Gait Recognition Network With Attention-GaitNet
+citation	1055111	258789339	0	Improved Topic-bound Caption Generation with VGG-19, Batch Normalization, and Subword-based Tokenization
+citation	1055111	254096325	0	Uncertainty-Aware Image Captioning
+citation	1055111	254096441	0	Progressive Knowledge Transfer Based on Human Visual Perception Mechanism for Perceptual Quality Assessment of Point Clouds
+citation	1055111	255285642	1	Synthetic Data Generation and Shuffled Multi-Round Training Based Offline Handwritten Mathematical Expression Recognition
+citation	1055111	256662420	0	KENGIC: KEyword-driven and N-Gram Graph based Image Captioning
+citation	1055111	256744262	0	A Hybrid Vision Transformer Approach for Mathematical Expression Recognition
+citation	1055111	254069453	0	An Extreme-Adaptive Time Series Prediction Model Based on Probability-Enhanced LSTM Neural Networks
+citation	1055111	254020530	0	Cardiovascular magnetic resonance images with susceptibility artifacts: artificial intelligence with spatial-attention for ventricular volumes and mass assessment
+citation	1055111	254043934	1	CLIP2GAN: Towards Bridging Text with the Latent Space of GANs
+citation	1055111	254042631	0	An effective spatial relational reasoning networks for visual question answering
+citation	1055111	254121815	2	A Survey of Current Machine Learning Approaches to Student Free-Text Evaluation for Intelligent Tutoring
+citation	1055111	255850487	0	Generating X-ray Reports Using Global Attention
+citation	1055111	254120023	0	A transformer‐based end‐to‐end data‐driven model for multisensor time series monitoring of machine tool condition
+citation	1055111	254043927	0	Conditioning Covert Geo-Location (CGL) Detection on Semantic Class Information
+citation	1055111	254044466	0	CLID: Controlled-Length Image Descriptions with Limited Data
+citation	1055111	254018146	5	ComCLIP: Training-Free Compositional Image and Text Matching
+citation	1055111	257261599	0	Engagement measurement of a learner during e-learning: A deep learning architecture
+citation	1055111	253925539	0	A two-stage enhancement network with optimized effective receptive field for speckle image reconstruction
+citation	1055111	253761414	0	A Short Survey of Systematic Generalization
+citation	1055111	253828769	0	Separate Syntax and Semantics: Part-of-Speech-Guided Transformer for Image Captioning
+citation	1055111	253734525	0	ClipCrop: Conditioned Cropping Driven by Vision-Language Model
+citation	1055111	253735413	6	Exploring Discrete Diffusion Models for Image Captioning
+citation	1055111	255267476	0	An Image Caption Model Based on the Scene Graph and Semantic Prior Network
+citation	1055111	253734818	1	How to Describe Images in a More Funny Way? Towards a Modular Approach to Cross-Modal Sarcasm Generation
+citation	1055111	253734458	3	ArtELingo: A Million Emotion Annotations of WikiArt with Emphasis on Diversity over Language and Culture
+citation	1055111	253707836	3	Vision Transformers in Medical Imaging: A Review
+citation	1055111	253764007	2	Contextual and selective attention networks for image captioning
+citation	1055111	253786272	0	Explainable-AI in Automated Medical Report Generation Using Chest X-ray Images
+citation	1055111	253581370	1	CapEnrich: Enriching Caption Semantics for Web Images via Cross-modal Pre-trained Knowledge
+citation	1055111	253622375	0	Learning-Based Ordering Characters on Ancient Document
+citation	1055111	258834584	0	Multi-Scale Features Integration for Handwritten Mathematical Expression Recognition
+citation	1055111	253553494	3	AdaMAE: Adaptive Masking for Efficient Spatiotemporal Learning with Masked Autoencoders
+citation	1055111	253553771	0	AdaTriplet-RA: Domain Matching via Adaptive Triplet and Reinforced Attention for Unsupervised Domain Adaptation
+citation	1055111	255265500	0	A complete human verified Turkish caption dataset for MS COCO and performance evaluation with well-known image caption models trained against it
+citation	1055111	253162333	2	MapQA: A Dataset for Question Answering on Choropleth Maps
+citation	1055111	246732706	1	Data-Correlation-Aware Unsupervised Deep-Learning Model for Anomaly Detection in Cyber–Physical Systems
+citation	1055111	253511219	1	Zero-shot Image Captioning by Anchor-augmented Vision-Language Space Alignment
+citation	1055111	253546123	0	Guide and interact: scene-graph based generation and control of video captions
+citation	1055111	252819241	1	DeltaNet: Conditional Medical Report Generation for COVID-19 Diagnosis
+citation	1055111	253463182	0	A novel Multi-Layer Attention Framework for visual description prediction using bidirectional LSTM
+citation	1055111	253446917	2	Reliable Extraction of Semantic Information and Rate of Innovation Estimation for Graph Signals
+citation	1055111	253446846	0	VieCap4H-VLSP 2021: ObjectAoA - Enhancing performance of Object Relation Transformer with Attention on Attention for Vietnamese image captioning
+citation	1055111	255267908	0	Logic-Based Neural Network for Pattern Correction
+citation	1055111	254407743	0	A low-cost driving risk prediction system for hilly roads via surveillance cameras and onsite webcams: poster abstract
+citation	1055111	253420515	0	Interpretable Deep Reinforcement Learning for Green Security Games with Real-Time Information
+citation	1055111	253432584	0	A survey on syntactic processing techniques
+citation	1055111	253385643	4	The power of prediction: microservice auto scaling via workload learning
+citation	1055111	254931001	1	FeatureCut: An Adaptive Data Augmentation for Automated Audio Captioning
+citation	1055111	253383773	1	Bridging Speech and Textual Pre-trained Models with Unsupervised ASR
+citation	1055111	256195096	2	Real-Time Tracking of Smartwatch Orientation and Location by Multitask Learning
+citation	1055111	254098525	0	ThaiTC:Thai Transformer-based Image Captioning
+citation	1055111	253364200	0	Learning controlled and targeted communication with the centralized critic for the multi-agent system
+citation	1055111	253359148	0	Explainable machine learning in cybersecurity: A survey
+citation	1055111	253254835	2	Processing Long Legal Documents with Pre-trained Transformers: Modding LegalBERT and Longformer
+citation	1055111	253255247	0	Fair Visual Recognition via Intervention with Proxy Features
+citation	1055111	253314274	0	Improving Medical X-ray Report Generation by Using Knowledge Graph
+citation	1055111	253324320	5	Prediction of state of health and remaining useful life of lithium-ion battery using graph convolutional network with dual attention mechanisms
+citation	1055111	253327315	1	Describe like a pathologist: Glomerular immunofluorescence image caption based on hierarchical feature fusion attention network
+citation	1055111	253905588	1	Modeling graph-structured contexts for image captioning
+citation	1055111	249526914	4	Self-Attention-Based Machine Theory of Mind for Electric Vehicle Charging Demand Forecast
+citation	1055111	250504385	0	Knowledge-Based Visual Question Generation
+citation	1055111	253186597	4	Double-Stream Position Learning Transformer Network for Image Captioning
+citation	1055111	253265445	0	CheXPrune: sparse chest X-ray report generation model using multi-attention and one-shot global pruning
+citation	1055111	248634766	10	Cycle-SNSPGAN: Towards Real-World Image Dehazing via Cycle Spectral Normalized Soft Likelihood Estimation Patch GAN
+citation	1055111	253492801	2	An attention-based stacked BiLSTM framework for predicting remaining useful life of rolling bearings
+citation	1055111	256463088	0	FineFormer: Fine-Grained Adaptive Object Transformer for Image Captioning
+citation	1055111	256660451	0	A New Design of VQA System based on Weighted Contextual Features
+citation	1055111	258327885	0	A Survey of pet Action Recognition with action Recommendation based on HAR
+citation	1055111	253523304	0	Revisiting Attention Weights as Explanations from an Information Theoretic Perspective
+citation	1055111	256033858	0	A Multi-scale Approach for Vietnamese Image Captioning in Healthcare Domain
+citation	1055111	253241616	1	An intelligent approach to automatically discovering visual insights
+citation	1055111	253229681	0	Network Construction for Bearing Fault Diagnosis Based on Double Attention Mechanism
+citation	1055111	253276374	0	Chinese Named Entity Recognition Based on BERT and Lightweight Feature Extraction Model
+citation	1055111	254298536	0	Classification of Pathological Images of Skin Diseases Based on Deep Learning
+citation	1055111	255266058	0	OVLN: Object-aware Vision and Language Navigation for Domestic Robots
+citation	1055111	253157882	4	Masked Vision-language Transformer in Fashion
+citation	1055111	253157826	2	Explaining the Explainers in Graph Neural Networks: a Comparative Study
+citation	1055111	253224221	3	Layer-wise Shared Attention Network on Dynamical System Perspective
+citation	1055111	253116724	5	Bloom Library: Multimodal Datasets in 300+ Languages for a Variety of Downstream Tasks
+citation	1055111	253100257	2	Understanding the role of eye movement consistency in face recognition and autism through integrating deep neural networks and hidden Markov models
+citation	1055111	253107575	1	GliTr: Glimpse Transformers with Spatiotemporal Consistency for Online Action Prediction
+citation	1055111	255178715	1	Pedestrian Intention Prediction Based on Traffic-Aware Scene Graph Model
+citation	1055111	255569865	0	Generating Accurate and Faithful Discharge Instructions: Task, Dataset, and Model
+citation	1055111	253098668	0	Tools for Extracting Spatio-Temporal Patterns in Meteorological Image Sequences: From Feature Engineering to Attention-Based Neural Networks
+citation	1055111	253112766	2	Hybrid of Deep Learning and Word Embedding in Generating Captions: Image-Captioning Solution for Geological Rock Images
+citation	1055111	253080390	0	Describing Sets of Images with Textual-PCA
+citation	1055111	254154463	0	Brain-inspired Hierarchical Attention Recurrent CNN for Image Classification
+citation	1055111	253020083	1	MsRAN: a multi-scale residual attention network for multi-model image fusion
+citation	1055111	252992894	0	Hierarchical Multi-Interest Co-Network For Coarse-Grained Ranking
+citation	1055111	253031709	1	A Detection Model for Cucumber Root-Knot Nematodes Based on Modified YOLOv5-CMS
+citation	1055111	258060164	0	Prophet Attention: Predicting Attention with Future Attention for Image Captioning
+citation	1055111	252967948	0	Probing Cross-modal Semantics Alignment Capability from the Textual Perspective
+citation	1055111	253804030	0	Transformer Approaches in Image Captioning: A Literature Review
+citation	1055111	253880853	0	Cross-Linguistic Study on Affective Impression and Language for Visual Art Using Neural Speaker
+citation	1055111	252918583	1	Weakly Supervised Face Naming with Symmetry-Enhanced Contrastive Loss
+citation	1055111	252904698	3	Target Interest Distillation for Multi-Interest Recommendation
+citation	1055111	254100830	0	Saliency detection from subitizing processing: First Approximation
+citation	1055111	254460726	0	Chip-SAGAN: A Self-Attention Generative Adversarial Network for Chinese Ink Wash Painting Style Transfer
+citation	1055111	253334497	0	Optics Lens Design for Privacy-Preserving Scene Captioning
+citation	1055111	252917726	411	LAION-5B: An open large-scale dataset for training next generation image-text models
+citation	1055111	253348331	2	Attribute Conditioned Fashion Image Captioning
+citation	1055111	253320569	1	GCN-Based Multi-Modal Multi-Label Attribute Classification in Anime Illustration Using Domain-Specific Semantic Features
+citation	1055111	253346884	0	CSTNET: Enhancing Global-To-Local Interactions for Image Captioning
+citation	1055111	252917719	26	Toward Next-Generation Artificial Intelligence: Catalyzing the NeuroAI Revolution
+citation	1055111	252959598	2	Modelling Human Word Learning and Recognition Using Visually Grounded Speech
+citation	1055111	252898825	4	InFi: end-to-end learnable input filter for resource-efficient mobile-centric inference
+citation	1055111	252905461	0	LssDet: A Lightweight Deep Learning Detector for SAR Ship Detection in High-Resolution SAR Images
+citation	1055111	252907316	0	Not All Neighbors Are Worth Attending to: Graph Selective Attention Networks for Semi-supervised Learning
+citation	1055111	252903773	4	ICSDA: a multi-modal deep learning model to predict breast cancer recurrence and metastasis risk by integrating pathological, clinical and gene expression data
+citation	1055111	252873056	0	Few-Shot Visual Question Generation: A Novel Task and Benchmark Datasets
+citation	1055111	252846468	11	Multi-Granularity Cross-modal Alignment for Generalized Medical Visual Representation Learning
+citation	1055111	252891366	0	Improvement of attention modules for image captioning using pixel-wise semantic information
+citation	1055111	252889991	0	When Research Topic Trend Prediction Meets Fact-Based Annotations
+citation	1055111	252815401	1	APSNet: Attention Based Point Cloud Sampling
+citation	1055111	252815973	0	Like a bilingual baby: The advantage of visually grounding a bilingual language model
+citation	1055111	252782929	1	Caption-Aware Medical VQA via Semantic Focusing and Progressive Cross-Modality Comprehension
+citation	1055111	252521938	2	Effective Multimodal Encoding for Image Paragraph Captioning
+citation	1055111	252780170	3	CLIP-Diffusion-LM: Apply Diffusion Model on Image Captioning
+citation	1055111	252780391	1	Generating image captions with external encyclopedic knowledge
+citation	1055111	252782545	1	Multi-Level Region Matching for Fine-Grained Sketch-Based Image Retrieval
+citation	1055111	252782393	3	Point to Rectangle Matching for Image Text Retrieval
+citation	1055111	252782891	3	A Tree-Based Structure-Aware Transformer Decoder for Image-To-Markup Generation
+citation	1055111	252783048	0	Title-and-Tag Contrastive Vision-and-Language Transformer for Social Media Popularity Prediction
+citation	1055111	252783135	2	Unsupervised and Pseudo-Supervised Vision-Language Alignment in Visual Dialog
+citation	1055111	252782111	3	Progressive Tree-Structured Prototype Network for End-to-End Image Captioning
+citation	1055111	252782266	1	Non-Autoregressive Cross-Modal Coherence Modelling
+citation	1055111	252783053	1	Image-Text Matching with Fine-Grained Relational Dependency and Bidirectional Attention-Based Generative Networks
+citation	1055111	252782744	0	Understanding News Text and Images Connection with Context-enriched Multimodal Transformers
+citation	1055111	252783008	1	Robust Multimodal Depth Estimation using Transformer based Generative Adversarial Networks
+citation	1055111	255441409	0	B-AIS: An Automated Process for Black-box Evaluation of Visual Perception in AI-enabled Software against Domain Semantics
+citation	1055111	255996110	0	A More Efficient Approach for Pedestrian Attribute Recognition
+citation	1055111	252840716	0	Multi-feature fusion enhanced transformer with multi-layer fused decoding for image captioning
+citation	1055111	252780138	1	Fine-grained Anomaly Detection in Sequential Data via Counterfactual Explanations
+citation	1055111	253629797	0	BSAM: Research on image-text matching method based on Bert and self-attention mechanism
+citation	1055111	253630820	0	Interpretable Navigation Agents Using Attention-Augmented Memory
+citation	1055111	252781099	1	Contextual Modeling for 3D Dense Captioning on Point Clouds
+citation	1055111	252780197	0	Learning Fine-Grained Visual Understanding for Video Question Answering via Decoupling Spatial-Temporal Modeling
+citation	1055111	252762637	2	Quantitative Metrics for Evaluating Explanations of Video DeepFake Detectors
+citation	1055111	252780373	3	LOCL: Learning Object-Attribute Composition using Localization
+citation	1055111	252992954	2	CLEAR: Causal Explanations from Attention in Neural Recommenders
+citation	1055111	252735120	0	Improved Anomaly Detection by Using the Attention-Based Isolation Forest
+citation	1055111	252735204	5	AOE-Net: Entities Interactions Modeling with Adaptive Attention Mechanism for Temporal Action Proposals Generation
+citation	1055111	252735117	1	Vision+X: A Survey on Multimodal Learning in the Light of Data
+citation	1055111	252693009	1	Learning to Collocate Visual-Linguistic Neural Modules for Image Captioning
+citation	1055111	252715427	1	Affection: Learning Affective Explanations for Real-World Visual Data
+citation	1055111	253423925	0	Multi-view Attention with Memory Assistant for Image Captioning
+citation	1055111	252690658	1	ST-AGRNN: A Spatio-Temporal Attention-Gated Recurrent Neural Network for Traffic State Forecasting
+citation	1055111	254498343	0	Effortless and beneficial processing of natural languages using transformers
+citation	1055111	252684008	0	Music-to-Text Synaesthesia: Generating Descriptive Text from Music Recordings
+citation	1055111	248905984	5	Spatial-Temporal Based Multihead Self-Attention for Remote Sensing Image Change Detection
+citation	1055111	258068271	0	Lightweight Transformer with GRU Integrated Decoder for Image Captioning
+citation	1055111	251205472	2	FloorplanGAN: Vector residential floorplan adversarial generation
+citation	1055111	226487932	2	Deep Convolutional Neural Network Based Medical Concept Normalization
+citation	1055111	245781800	14	Triple Cross-Domain Attention on Human Activity Recognition Using Wearable Sensors
+citation	1055111	249220818	4	Vision-Enhanced and Consensus-Aware Transformer for Image Captioning
+citation	1055111	252813229	1	Interpreting sarcasm on social media using attention-based neural networks
+citation	1055111	252837171	1	RadioBERT: A deep learning-based system for medical report generation from chest X-ray images using contextual embeddings
+citation	1055111	252840857	2	Skin Lesion Classification on Imbalanced Data Using Deep Learning with Soft Attention
+citation	1055111	248170127	1	Action-State Joint Learning-Based Vehicle Taillight Recognition in Diverse Actual Traffic Scenes
+citation	1055111	249291298	4	Detecting Marine Organisms Via Joint Attention-Relation Learning for Marine Video Surveillance
+citation	1055111	252883197	0	DEAU-Net: Attention networks based on dual encoder for Medical Image Segmentation
+citation	1055111	252989633	0	Attentive differential convolutional neural networks for crowd flow prediction
+citation	1055111	253005739	1	ArCo: Attention-reinforced transformer with contrastive learning for image captioning
+citation	1055111	253060167	0	Position-guided transformer for image captioning
+citation	1055111	253068710	3	PredMaX: Predictive maintenance with explainable deep convolutional autoencoders
+citation	1055111	253072274	4	Convolutional Long-Short Term Memory Network with Multi-Head Attention Mechanism for Traffic Flow Prediction
+citation	1055111	253279843	1	An autoencoder-based feature level fusion for speech emotion recognition
+citation	1055111	258066479	0	Predicting and Explaining Hearing Aid Usage Using Encoder-Decoder with Attention Mechanism and SHAP
+citation	1055111	258219997	0	Language Driven Image Editing via Transformers
+citation	1055111	252646193	0	Research on imaging method of driver's attention area based on deep neural network
+citation	1055111	252668790	6	SmallCap: Lightweight Image Captioning Prompted with Retrieval Augmentation
+citation	1055111	252683237	5	MaskTune: Mitigating Spurious Correlations by Forcing to Explore
+citation	1055111	252768930	0	Image-Caption Model Based on Fusion Feature
+citation	1055111	252887122	0	Channel attention convolutional recurrent neural network on street view symbol recognition
+citation	1055111	252567837	2	Medical image captioning via generative pretrained transformers
+citation	1055111	252567841	0	InFi: End-to-End Learning to Filter Input for Resource-Efficiency in Mobile-Centric Inference
+citation	1055111	252641259	12	Improving Performance of Breast Lesion Classification Using a ResNet50 Model Optimized with a Novel Attention Mechanism
+citation	1055111	252576011	0	The Family of Onion Convolutions for Image Inpainting
+citation	1055111	252369179	1	RepsNet: Combining Vision with Language for Automated Medical Reports
+citation	1055111	252636483	1	Traffic Flow Prediction with Attention Mechanism Based on TS-NAS
+citation	1055111	252846488	0	Multimodality Multi-Lead ECG Arrhythmia Classification using Self-Supervised Learning
+citation	1055111	254121892	0	MPSHT: Multiple Progressive Sampling Hybrid Model Multi-Organ Segmentation
+citation	1055111	252507625	3	Affordance embeddings for situated language understanding
+citation	1055111	252519439	6	Semantic scene descriptions as an objective of human vision
+citation	1055111	253424246	0	Underwater Target Detection Based On Modified YOLOv5
+citation	1055111	253803769	0	A Survey of Image Caption Tasks
+citation	1055111	253803633	0	A Survey of Deep learning-based Image caption
+citation	1055111	252439240	1	DRAMA: Joint Risk Localization and Captioning in Driving
+citation	1055111	252437765	2	Improving language model of human genome for DNA–protein binding prediction based on task-specific pre-training
+citation	1055111	252407476	2	Show, Interpret and Tell: Entity-aware Contextualised Image Captioning in Wikipedia
+citation	1055111	252456246	0	Construction and Application Research of the Visual Image Obstacle Type Recognition Model Based on the Computer-Expanded Convolutional Neural Network
+citation	1055111	252507697	3	ACF: An Armed CCTV Footage Dataset for Enhancing Weapon Detection
+citation	1055111	252449039	0	Input enhanced asymmetric transformer for image captioning
+citation	1055111	252383199	0	Active Particle Filter Networks: Efficient Active Localization in Continuous Action Spaces and Large Maps
+citation	1055111	252356662	1	A scalable species-based genetic algorithm for reinforcement learning problems
+citation	1055111	251946798	1	Accelerating Neural Network Inference With Processing-in-DRAM: From the Edge to the Cloud
+citation	1055111	252216566	1	Dual Attentional Higher Order Factorization Machines
+citation	1055111	252364033	0	Caption Generation Based on Emotions Using CSPDenseNet and BiLSTM with Self-Attention
+citation	1055111	252367787	3	Learning Distinct and Representative Modes for Image Captioning
+citation	1055111	252361466	1	Automatic captioning for medical imaging (MIC): a rapid review of literature
+citation	1055111	254096996	2	Open-ended remote sensing visual question answering with transformers
+citation	1055111	252368295	1	Belief Revision Based Caption Re-ranker with Visual Semantic Information
+citation	1055111	252345354	2	A holistic approach for image-to-graph: application to optical music recognition
+citation	1055111	252344571	2	Multilevel attention and relation network based image captioning model
+citation	1055111	252280738	1	M^4I: Multi-modal Models Membership Inference
+citation	1055111	252322810	0	A Hybrid Model for Commercial Brand Marketing Prediction Based on Multiple Features with Image Processing
+citation	1055111	252314738	0	PathGAN: Local path planning with attentive generative adversarial networks
+citation	1055111	252324331	0	Visual content generation from textual description using improved adversarial network
+citation	1055111	252210688	0	Curiosity-Driven Salient Object Detection With Fragment Attention
+citation	1055111	252211715	0	Analysis of Self-Attention Head Diversity for Conformer-based Automatic Speech Recognition
+citation	1055111	252212296	7	Vision Transformers for Action Recognition: A Survey
+citation	1055111	252191974	0	Rotary transformer for image captioning
+citation	1055111	252531182	0	Evaluation of Question Answering Systems: Complexity of judging a natural language
+citation	1055111	252124026	2	Review of techniques and models used in optical chemical structure recognition in images and scanned documents
+citation	1055111	252118535	5	The neuroconnectionist research programme
+citation	1055111	252110828	11	A Weakly Supervised Learning Framework for Salient Object Detection via Hybrid Labels
+citation	1055111	257038528	1	Foundations and Trends in Multimodal Machine Learning: Principles, Challenges, and Open Questions
+citation	1055111	252110972	1	Parallel and Streaming Wavelet Neural Networks for Classification and Regression under Apache Spark
+citation	1055111	252110742	3	RF Fingerprinting Needs Attention: Multi-task Approach for Real-World WiFi and Bluetooth
+citation	1055111	252090097	0	Bridging Music and Text with Crowdsourced Music Comments: A Sequence-to-Sequence Framework for Thematic Music Comments Generation
+citation	1055111	252089825	6	MMKGR: Multi-hop Multi-modal Knowledge Graph Reasoning
+citation	1055111	252089865	0	vieCap4H-VLSP 2021: Vietnamese Image Captioning for Healthcare Domain using Swin Transformer and Attention-based LSTM
+citation	1055111	252045797	1	From Pixels to Semantics: Self-Supervised Video Object Segmentation With Multiperspective Feature Mining
+citation	1055111	250721440	5	Accurate Channel Prediction Based on Transformer: Making Mobility Negligible
+citation	1055111	252021495	2	Multi-Dimensional Attention Based Spatial-Temporal Networks for Traffic Forecasting
+citation	1055111	248066723	1	Bridging Video and Text: A Two-Step Polishing Transformer for Video Captioning
+citation	1055111	247353013	3	Adaptive Path Selection for Dynamic Image Captioning
+citation	1055111	252262812	2	Discriminative speaker embedding with serialized multi-layer multi-head attention
+citation	1055111	252219899	2	Temporal patterns selection for All-Cause Mortality prediction in T2D with ANNs
+citation	1055111	252224160	1	Unsafe Maneuver Classification From Dashcam Video and GPS/IMU Sensors Using Spatio-Temporal Attention Selector
+citation	1055111	252224223	6	Spatial–Temporal Convolutional Model for Urban Crowd Density Prediction Based on Mobile-Phone Signaling Data
+citation	1055111	252512783	2	AS-Net: An attention-aware downsampling network for point clouds oriented to classification tasks
+citation	1055111	252574390	2	Graph neural network-based visual relationship and multilevel attention for image captioning
+citation	1055111	255997150	0	Multi-Relational Pedestrian Trajectory Prediction in Complex Scenes
+citation	1055111	257082881	0	End-to-End Object Detection with Location-Sensitive Cues
+citation	1055111	257719607	0	Graph Alignment Transformer for More Grounded Image Captioning
+citation	1055111	252307267	0	Dynamic gate assignment algorithm based on attentional convolution network
+citation	1055111	251905221	0	Research on image content description in Chinese based on fusion of image global and local features
+citation	1055111	251942826	1	Attribution rollout: a new way to interpret visual transformer
+citation	1055111	251972007	4	H2A2Net: A Hybrid Convolution and Hybrid Resolution Network with Double Attention for Hyperspectral Image Classification
+citation	1055111	251888740	0	Hierarchical decoding with latent context for image captioning
+citation	1055111	251881356	0	EGFR Mutation Prediction of Lung Biopsy Images using Deep Learning
+citation	1055111	252851675	0	Video to Text Summarisation and Timestamp Generation to Detect Important Events
+citation	1055111	255995900	0	Correlation between Image and Text from Unstructured Data Using Deep Learning
+citation	1055111	251809865	0	Individualized tourism recommendation based on self-attention
+citation	1055111	251851865	0	Involvement of the intrinsic functional network of the red nucleus in complex behavioral processing
+citation	1055111	251800270	0	gSwin: Gated MLP Vision Model with Hierarchical Structure of Shifted Window
+citation	1055111	251741171	2	Large-Scale Traffic Congestion Prediction based on Multimodal Fusion and Representation Mapping
+citation	1055111	251814882	2	U-BERT for Fast and Scalable Text-Image Retrieval
+citation	1055111	255777414	0	Spatio-Temporal Feature Encryption Malicious Traffic Detection via Attention Mechanism
+citation	1055111	251711307	1	An Object Localization-based Dense Image Captioning Framework in Hindi
+citation	1055111	251719099	3	Mix-Pooling Strategy for Attention Mechanism
+citation	1055111	251719362	5	A Medical Semantic-Assisted Transformer for Radiographic Report Generation
+citation	1055111	251718908	2	CODER: Coupled Diversity-Sensitive Momentum Contrastive Learning for Image-Text Retrieval
+citation	1055111	251753350	0	Conditional Generative Adversarial Networks for Domain Transfer: A Survey
+citation	1055111	251750758	0	A Situation Awareness Approach for Network Security Using the Fusion Model
+citation	1055111	254100112	1	CAVAN: Commonsense Knowledge Anchored Video Captioning
+citation	1055111	254099973	0	Understanding attention-based encoder-decoder networks: a case study with chess scoresheet recognition
+citation	1055111	254101439	0	FEPC: Fairness Estimation Using Prototypes and Critics for Tabular Data
+citation	1055111	254101629	0	MHASAN: Multi-Head Angular Self Attention Network for Spoof Detection
+citation	1055111	254101414	0	Structural String Decoder for Handwritten Mathematical Expression Recognition
+citation	1055111	254101529	0	Generating Spatial-aware Captions for TextCaps
+citation	1055111	254102478	0	Frequency-aware Deep Dual-path Feature Enhancement Network for Image Dehazing
+citation	1055111	251731297	5	Semantic interdisciplinary evaluation of image captioning models
+citation	1055111	251719313	0	Offline Handwritten Mathematical Recognition using Adversarial Learning and Transformers
+citation	1055111	251716577	3	Multi-task learning for toxic comment classification and rationale extraction
+citation	1055111	251710136	1	Booster-SHOT: Boosting Stacked Homography Transformations for Multiview Pedestrian Detection with Attention
+citation	1055111	253421929	0	Hybrid-Spatial Transformer for Image Captioning
+citation	1055111	251643733	1	Sequence Prediction under Missing Data: An RNN Approach without Imputation
+citation	1055111	251623131	0	Look in Different Views: Multi-Scheme Regression Guided Cell Instance Segmentation
+citation	1055111	251694936	2	Deep learning for satellite image forecasting of vegetation greenness
+citation	1055111	251641833	1	Hierarchical attention-based context-aware network for long-term forecasting of chlorophyll
+citation	1055111	251565976	2	Debiased Scene Graph Generation for Dual Imbalance Learning
+citation	1055111	256877770	0	Driver Identification Based on Gear Shift Events and Attention-Based Bidirectional Long Short-Term Memory for Manual Transmission System
+citation	1055111	250150664	3	Hey, AI! Can You See What I See? Multimodal Transfer Learning-Based Design Metrics Prediction for Sketches With Text Descriptions
+citation	1055111	251518182	3	DICE: Domain-attack Invariant Causal Learning for Improved Data Privacy Protection and Adversarial Robustness
+citation	1055111	251574989	1	Improving detection and classification of diabetic retinopathy using CUDA and Mask RCNN
+citation	1055111	251564151	10	ExpansionNet v2: Block Static Expansion in fast end to end training for Image Captioning
+citation	1055111	253122507	0	Increasing Patient Specificity of the Recurrent Neural Network Based Insulin Sensitivity Prediction by Transfer Learning
+citation	1055111	251544167	0	Incorporating retrieval-based method for feature enhanced image captioning
+citation	1055111	251528959	1	Privacy-Preserving Image Captioning with Deep Learning and Double Random Phase Encoding
+citation	1055111	251442735	1	A Means-End Account of Explainable Artificial Intelligence
+citation	1055111	251479201	1	Improvement of Multiclass Classification of Pavement Objects Using Intensity and Range Images
+citation	1055111	251402559	2	Sparse Attentive Memory Network for Click-through Rate Prediction with Long Sequences
+citation	1055111	251403041	1	Distinctive Image Captioning via CLIP Guided Group Optimization
+citation	1055111	252469723	0	Multi-Stage Pyramid Parsing Network For Lane Marking Detection
+citation	1055111	254351737	0	The Role of Transformer-based Image Captioning for Indoor Environment Visual Understanding
+citation	1055111	251259616	1	A Parallel Convolution and Decision Fusion-Based Flower Classification Method
+citation	1055111	251320380	14	Fine-Grained Semantically Aligned Vision-Language Pre-Training
+citation	1055111	251336979	0	Accurate semantic segmentation of RGB-D images for indoor navigation
+citation	1055111	251661071	1	Multi-step forecasting of multivariate time series using multi-attention collaborative network
+citation	1055111	251681198	10	A Hybrid Attention-Based Paralleled Deep Learning model for tool wear prediction
+citation	1055111	251962068	4	Beyond word embeddings: A survey
+citation	1055111	251224029	1	Benchmarking Visual-Inertial Deep Multimodal Fusion for Relative Pose Regression and Odometry-aided Absolute Pose Regression
+citation	1055111	251324458	2	Cyberbullying and Cyberviolence Detection: A Triangular User-Activity-Content View
+citation	1055111	251325579	3	Visuals to Text: A Comprehensive Review on Automatic Image Captioning
+citation	1055111	251484336	2	Development of Novel Residual-Dense-Attention (RDA) U-Net Network Architecture for Hepatocellular Carcinoma Segmentation
+citation	1055111	251548791	2	Dynamic self-attention with vision synchronization networks for video question answering
+citation	1055111	251607197	6	CAAN: Context-Aware attention network for visual question answering
+citation	1055111	251751989	2	Dual-stream cross-modality fusion transformer for RGB-D action recognition
+citation	1055111	251454067	2	MIGAN: Mutual-Interaction Graph Attention Network for Collaborative Filtering
+citation	1055111	251875111	0	Local-global visual interaction attention for image captioning
+citation	1055111	251971495	0	Uncertainty-aware report generation for chest X-rays by variational topic inference
+citation	1055111	251990668	0	Global interpretation and generalizability of boosted regression models for the prediction of methylene blue adsorption by different clay minerals and alkali activated materials.
+citation	1055111	254206961	1	Human Pose Estimation Based on Multi-Spectral Attention and High Resolution Network
+citation	1055111	251273391	1	Detection of helmetless motorcycle riders by video captioning using deep recurrent neural network
+citation	1055111	257643851	0	Food Recognition Model Based on Deep Learning and Attention Mechanism
+citation	1055111	257667224	0	Food Recognition Model Based on Deep Learning and Attention Mechanism
+citation	1055111	251136159	1	Machine Learning-based Short-term Rainfall Prediction from Sky Data
+citation	1055111	251294662	1	Text-to-Image Generation Using Deep Learning
+citation	1055111	251185584	2	Reinforced attention method for real-time traffic line detection
+citation	1055111	252910623	1	Multiple-Perspective Caption Generation with Initial Attention Weights
+citation	1055111	251108880	0	SIG-Former: monocular surgical instruction generation with transformers
+citation	1055111	251830513	0	End-To-End Neural Network Based Captcha Recognition
+citation	1055111	251105159	0	Object-ABN: Learning to Generate Sharp Attention Maps for Action Recognition
+citation	1055111	251067133	8	Cross-Modal Causal Relational Reasoning for Event-Level Visual Question Answering
+citation	1055111	251066945	6	Multi-Attention Network for Compressed Video Referring Object Segmentation
+citation	1055111	251110693	1	Age and gender classification using Seg-Net based architecture and machine learning
+citation	1055111	254736683	0	Life prediction model of lithium-ion batteries in the early-cycle stage based on convolutional long short-term memory with attention mechanism
+citation	1055111	258079421	1	Innovations in Neural Data-to-text Generation: A Survey
+citation	1055111	251040680	1	Improved Super Resolution of MR Images Using CNNs and Vision Transformers
+citation	1055111	251040934	3	When Counting Meets HMER: Counting-Aware Network for Handwritten Mathematical Expression Recognition
+citation	1055111	251083056	0	An Entity-Matching System Based on Multimodal Data for Two Major E-Commerce Stores in Mexico
+citation	1055111	251018407	9	Rethinking the Reference-based Distinctive Image Captioning
+citation	1055111	251018605	4	Efficient Modeling of Future Context for Image Captioning
+citation	1055111	250698966	4	EleGANt: Exquisite and Locally Editable GAN for Makeup Transfer
+citation	1055111	250698884	24	GRIT: Faster and Better Image captioning Transformer Using Dual Visual Features
+citation	1055111	250929982	1	Design and Implementation of an Intelligent Assistive Cane for Visually Impaired People Based on an Edge-Cloud Collaboration Scheme
+citation	1055111	250964134	1	Research on Text Classification based on Deep Learning
+citation	1055111	250699062	3	Explicit Image Caption Editing
+citation	1055111	250699047	0	Deep Analysis of Visual Product Reviews
+citation	1055111	250644198	1	Relational Future Captioning Model for Explaining Likely Collisions in Daily Tasks
+citation	1055111	250624754	1	Weakly Supervised Text-based Actor-Action Video Segmentation by Clip-level Multi-instance Learning
+citation	1055111	250643949	4	Superficial White Matter Analysis: An Efficient Point-cloud-based Deep Learning Framework with Supervised Contrastive Learning for Consistent Tractography Parcellation across Populations and dMRI Acquisitions
+citation	1055111	251773150	0	Decide the Next Pitch: A Pitch Prediction Model Using Attention-Based LSTM
+citation	1055111	251847476	0	Multi-Head Attention Fusion Network for Visual Question Answering
+citation	1055111	252223728	0	An Explainable Mental Health Fuzzy Deep Active Learning Technique
+citation	1055111	252223925	1	Attention Temporal Graph Convolutional Network for Tennis Groundstrokes Phases Classification
+citation	1055111	252625147	0	PAV-Net: Point-wise Attention Keypoints Voting Network for Real-time 6D Object Pose Estimation
+citation	1055111	252625604	1	Image Captioning According to User's Intention and Style
+citation	1055111	252625773	0	Spatial Relationship-Driven Computer Vision Image Data Set Annotation
+citation	1055111	252625960	0	Transformer Gate Attention Model: An Improved Attention Model for Visual Question Answering
+citation	1055111	252626084	0	Towards Explainable Deep Learning for Image Captioning through Representation Space Perturbation
+citation	1055111	252626746	0	Attribute-driven Interest Modeling for Sequential Recommendation
+citation	1055111	252626775	0	Aspect-Dependent Heterogeneous Graph Convolutional Network for Aspect-Level Sentiment Analysis
+citation	1055111	250626931	12	Zero-Shot Temporal Action Detection via Vision-Language Prompting
+citation	1055111	252590283	1	Capformer: Pure Transformer for Remote Sensing Image Caption
+citation	1055111	252590413	1	Key Region Extraction Via Scene Classification Model
+citation	1055111	250599564	3	Deep learning for volatility forecasting in asset management
+citation	1055111	250496989	2	Adaptive Text Denoising Network for Image Caption Editing
+citation	1055111	252342447	0	Feature-Fusion Parallel Decoding Transformer for Image Captioning
+citation	1055111	250492224	3	Eliminating Gradient Conflict in Reference-based Line-Art Colorization
+citation	1055111	250451423	2	Skeletal Human Action Recognition using Hybrid Attention based Graph Convolutional Network
+citation	1055111	250475056	1	TiM-Net: Transformer in M-Net for Retinal Vessel Segmentation
+citation	1055111	250426368	1	Horizontal and Vertical Attention in Transformers
+citation	1055111	250425831	2	CoMER: Modeling Coverage for Transformer-based Handwritten Mathematical Expression Recognition
+citation	1055111	250426026	0	Seasonal Encoder-Decoder Architecture for Forecasting
+citation	1055111	251846732	0	Feature Enhancement Method for Text Information Generation of Remote Sensing Images
+citation	1055111	250334615	1	ExpansionNet: exploring the sequence length bottleneck in the Transformer for Image Captioning
+citation	1055111	250403989	3	Histopathological Tissue Segmentation of Lung Cancer with Bilinear CNN and Soft Attention
+citation	1055111	250377289	0	FGO-Net: Feature and Gaussian Optimization Network for visual saliency prediction
+citation	1055111	250379673	0	Rail Transit Prediction Based on Multi-View Graph Attention Networks
+citation	1055111	250279886	0	Vision-and-Language Pretraining
+citation	1055111	250279956	1	Scene-Aware Prompt for Multi-modal Dialogue Understanding and Generation
+citation	1055111	250323689	1	An ensemble approach for still image-based human action recognition
+citation	1055111	250264390	1	Attributed Abnormality Graph Embedding for Clinically Accurate X-Ray Report Generation
+citation	1055111	250279760	0	Are metrics measuring what they should? An evaluation of image captioning task metrics
+citation	1055111	250264288	1	Multi-scale alignment and Spatial ROI Module for COVID-19 Diagnosis
+citation	1055111	250280248	15	TM2T: Stochastic and Tokenized Modeling for the Reciprocal Generation of 3D Human Motions and Texts
+citation	1055111	250253261	1	Dual-Modal Transformer with Enhanced Inter- and Intra-Modality Interactions for Image Captioning
+citation	1055111	248836708	1	PhilaeX: Explaining the Failure and Success of AI Models in Malware Detection
+citation	1055111	250614133	1	A benchmark dataset for Turkish data-to-text generation
+citation	1055111	250218083	5	Personalized Blood Glucose Prediction for Type 1 Diabetes Using Evidential Deep Learning and Meta-Learning
+citation	1055111	252849437	0	Optimizing Image Captioning using Deep Learning based Object Detection
+citation	1055111	250118529	12	Toward Explainable Artificial Intelligence for Regression Models: A methodological perspective
+citation	1055111	250149763	5	SwinOCSR: end-to-end optical chemical structure recognition using a Swin Transformer
+citation	1055111	244622590	11	High-Order Interaction Learning for Image Captioning
+citation	1055111	250244111	0	Rethinking Query-Key Pairwise Interactions in Vision Transformers
+citation	1055111	250298024	1	Multimodal Image Aesthetic Prediction with Missing Modality
+citation	1055111	250411755	5	Explainable digital forensics AI: Towards mitigating distrust in AI-based digital forensics analysis using interpretable models
+citation	1055111	250714667	1	Affective word embedding in affective explanation generation for fine art paintings
+citation	1055111	250977970	1	Hierarchical attention-based context-aware network for red tide forecasting
+citation	1055111	251340824	0	The Effect of the Perceived Value of the Complex Shopping Mall on  the Happiness of Life
+citation	1055111	250636235	0	Goal Consistency: An Effective Multi-Agent Cooperative Method for Multistage Tasks
+citation	1055111	250638318	0	Captioning Bosch: A Twitter Bot
+citation	1055111	251773392	0	Trimmer: Cost-Efficient Deep Learning Auto-tuning for Cloud Datacenters
+citation	1055111	251946880	0	Molecular-InChI: Automated Recognition of Optical Chemical Structure
+citation	1055111	250365439	0	Transformer-based image captioning by leveraging sentence information
+citation	1055111	250630409	9	S2 Transformer for Image Captioning
+citation	1055111	252900995	0	Multi-granularity Weighted Federated Learning in Heterogeneous Mobile Edge Computing Systems
+citation	1055111	254102873	0	You Only Look & Listen Once: Towards Fast and Accurate Visual Grounding
+citation	1055111	256743955	0	Image Captioning: From Encoder-Decoder to Reinforcement Learning
+citation	1055111	250147403	4	Learning to Overcome Noise in Weak Caption Supervision for Object Detection
+citation	1055111	250243612	2	Personalized Showcases: Generating Multi-Modal Explanations for Recommendations
+citation	1055111	250189119	0	Development of an Effective Bootleg Videos Retrieval System as a Part of Content-Based Video Search Engine
+citation	1055111	250113855	10	Overview of Deep Learning-Based CSI Feedback in Massive MIMO Systems
+citation	1055111	250192188	2	Deep Vision Multimodal Learning: Methodology, Benchmark, and Trend
+citation	1055111	250275589	0	Using Artificial Intelligence Assisted Learning Technology on Augmented Reality-Based Manufacture Workflow
+citation	1055111	250429280	0	Towards FAIR Explainable AI: a standardized ontology for mapping XAI solutions to use cases, explanations, and AI systems
+citation	1055111	250113782	0	ZoDIAC: Zoneout Dropout Injection Attention Calculation
+citation	1055111	250301941	7	BATUDE: Budget-Aware Neural Network Compression Based on Tucker Decomposition
+citation	1055111	250298910	7	A Causal Debiasing Framework for Unsupervised Salient Object Detection
+citation	1055111	250288971	5	A Causal Inference Look at Unsupervised Video Anomaly Detection
+citation	1055111	250304038	7	Debiasing NLU Models via Causal Intervention and Counterfactual Reasoning
+citation	1055111	250301571	4	MLink: Linking Black-Box Models for Collaborative Multi-Model Inference
+citation	1055111	250288254	8	Attention-Aligned Transformer for Image Captioning
+citation	1055111	250299115	0	Towards Multimodal Vision-Language Models Generating Non-Generic Text
+citation	1055111	250073150	2	Consistency-preserving Visual Question Answering in Medical Imaging
+citation	1055111	250073125	2	Theoretical analysis of Adam using hyperparameters close to one without Lipschitz smoothness
+citation	1055111	249960256	0	Improve Image Captioning by Modeling Dynamic Scene Graph Extension
+citation	1055111	249960350	1	Ingredient-enriched Recipe Generation from Cooking Videos
+citation	1055111	249960378	1	OCR-oriented Master Object for Text Image Captioning
+citation	1055111	250090894	2	Dual Adversarial Attention Mechanism for Unsupervised Domain Adaptive Medical Image Segmentation
+citation	1055111	257222573	0	Improving text-image cross-modal retrieval with contrastive loss
+citation	1055111	253018972	0	Representative Teacher Keys for Knowledge Distillation Model Compression Based on Attention Mechanism for Image Classification
+citation	1055111	250107033	2	UAT: Universal Attention Transformer for Video Captioning
+citation	1055111	251762337	0	Image Captioning: Methods and Evaluation Metrics
+citation	1055111	250035987	0	Multi-head attention-based two-stream EfficientNet for action recognition
+citation	1055111	236460239	41	Competence-based Multimodal Curriculum Learning for Medical Report Generation
+citation	1055111	253735452	0	CLAMP: Prompt-based Contrastive Learning for Connecting Language and Animal Pose
+citation	1055111	249889040	0	Bypass Network for Semantics Driven Image Paragraph Captioning
+citation	1055111	249891795	3	Language models
+citation	1055111	249885869	8	Knowing What to Learn: A Metric-Oriented Focal Mechanism for Image Captioning
+citation	1055111	249935851	0	Automatic image caption generation using deep learning and multimodal attention
+citation	1055111	249877290	6	Flight Anomaly Detection via a Deep Hybrid Model
+citation	1055111	249890126	2	What is Where by Looking: Weakly-Supervised Open-World Phrase-Grounding without Text Inputs
+citation	1055111	249890082	2	A Self-Guided Framework for Radiology Report Generation
+citation	1055111	249848266	2	Cross-task Attention Mechanism for Dense Multi-task Learning
+citation	1055111	249776635	1	Explainable deep drug–target representations for binding affinity prediction
+citation	1055111	251324558	1	Automatic Liver Segmentation Method from CT Images Based on Improved 3D U-Net
+citation	1055111	251325646	0	Parallel Semantic Fusion Image Caption Generation Analysis Theory
+citation	1055111	249712427	0	Image Captioning based on Feature Refinement and Reflective Decoding
+citation	1055111	249804921	4	SPCA-Net: a based on spatial position relationship co-attention network for visual question answering
+citation	1055111	249805674	2	Image Captioning Encoder–Decoder Models Using CNN-RNN Architectures: A Comparative Study
+citation	1055111	249674537	2	Human Eyes Inspired Recurrent Neural Networks are More Robust Against Adversarial Noises
+citation	1055111	249642705	3	Automated testing of image captioning systems
+citation	1055111	249690622	1	Conditional Embedding Pre-Training Language Model for Image Captioning
+citation	1055111	249701974	0	The detection of distributional discrepancy for language GANs
+citation	1055111	249683526	0	A cooperative approach based on self-attention with interactive attribute for image caption
+citation	1055111	249578822	3	“So What? What's That to Do With Me?” Expectations of People With Visual Impairments for Image Descriptions in Their Personal Photo Activities
+citation	1055111	250387213	0	Correlation Analysis of Japanese Literature and Psychotherapy Effects Based on an Equation Diagnosis Algorithm
+citation	1055111	252123305	1	Streamer temporal action detection in live video by co-attention boundary matching
+citation	1055111	249579015	4	Entity Resolution with Hierarchical Graph Attention Networks
+citation	1055111	249581701	2	MBHAN: Motif-Based Heterogeneous Graph Attention Network
+citation	1055111	249587430	3	What’s a good prediction? Challenges in evaluating an agent’s knowledge
+citation	1055111	249461900	5	Challenges in Applying Explainability Methods to Improve the Fairness of NLP Models
+citation	1055111	249431622	0	Improving Image Captioning with Control Signal of Sentence Quality
+citation	1055111	249461711	1	Code-DKT: A Code-based Knowledge Tracing Model for Programming Tasks
+citation	1055111	251695968	0	Deep Orientation-Guided Gender Recognition from Face Images
+citation	1055111	249382600	2	Universal adversarial perturbations generative network
+citation	1055111	249384469	0	Learning semantic alignment from image for text-guided image inpainting
+citation	1055111	249383230	3	Multi-scale patch-GAN with edge detection for image inpainting
+citation	1055111	249283662	0	Prediction of Transcription Factor Binding Sites Using a Combined Deep Learning Approach
+citation	1055111	249335881	3	Multi-Modal Alignment of Visual Question Answering Based on Multi-Hop Attention Mechanism
+citation	1055111	249351554	1	Infusing Expert Knowledge Into a Deep Neural Network Using Attention Mechanism for Personalized Learning Environments
+citation	1055111	249282648	30	Transforming medical imaging with Transformers? A comparative review of key properties, current progresses, and future perspectives
+citation	1055111	249331858	1	Classification of Diabetic Retinopathy Based on Multiscale Hybrid Attention Mechanism and Residual Algorithm
+citation	1055111	249635199	0	Out-of-core outlier removal for large-scale indoor point clouds
+citation	1055111	250520562	11	Show, Deconfound and Tell: Image Captioning with Causal Inference
+citation	1055111	249240554	1	CLIP4IDC: CLIP for Image Difference Captioning
+citation	1055111	249395473	23	Invariant Grounding for Video Question Answering
+citation	1055111	249480572	5	Multimodal channel-wise attention transformer inspired by multisensory integration mechanisms of the brain
+citation	1055111	249562226	3	Personalized attention-based EEG channel selection for epileptic seizure prediction
+citation	1055111	249589185	0	SepNet: A neural network for directionally correlated data
+citation	1055111	249642656	26	Comprehending and Ordering Semantics for Image Captioning
+citation	1055111	249900864	0	Image Captioning- Bangladesh’s Heritage Perspective Using Deep Learning
+citation	1055111	249916633	11	DeeCap: Dynamic Early Exiting for Efficient Image Captioning
+citation	1055111	250055592	9	Dynamic Scene Graph Generation via Anticipatory Pre-training
+citation	1055111	250445927	10	EI-CLIP: Entity-aware Interventional Contrastive Learning for E-commerce Cross-modal Retrieval
+citation	1055111	250520130	3	VRDFormer: End-to-End Video Visual Relation Detection with Transformers
+citation	1055111	250569615	1	SpecTextor: End-to-End Attention-based Mechanism for Dense Text Generation in Sports Journalism
+citation	1055111	247932785	0	Fine-grained bidirectional attentional generation and knowledge-assisted networks for cross-modal retrieval
+citation	1055111	250602160	14	Towards General Purpose Vision Systems: An End-to-End Task-Agnostic Vision-Language Architecture
+citation	1055111	250980730	20	3DJCG: A Unified Framework for Joint Dense Captioning and Visual Grounding on 3D Point Clouds
+citation	1055111	251020112	14	The Unreasonable Effectiveness of CLIP Features for Image Captioning: An Experimental Analysis
+citation	1055111	249916829	2	Weakly-Supervised Generation and Grounding of Visual Descriptions with Conditional Generative Models
+citation	1055111	235026576	3	Learning Multipart Attention Neural Network for Zero-Shot Classification
+citation	1055111	249192212	1	BAN-Cap: A Multi-Purpose English-Bangla Image Descriptions Dataset
+citation	1055111	253462164	1	Pay Attention via Binarization: Enhancing Explainability of Neural Networks via Binarization of Activation
+citation	1055111	249164427	1	TwinNet: Twin Structured Knowledge Transfer Network for Weakly Supervised Action Localization
+citation	1055111	250516037	0	A Comparison Study of Pre-trained Language Models for Chinese Legal Document Classification
+citation	1055111	249097750	17	Fine-grained Image Captioning with CLIP Reward
+citation	1055111	249062795	11	Multimodal Knowledge Alignment with Reinforcement Learning
+citation	1055111	249062973	0	The Dialog Must Go On: Improving Visual Dialog via Generative Self-Training
+citation	1055111	253123579	0	Research on Data Sufficiency and Model Validity toward AI for Critical Systems
+citation	1055111	252647793	15	M-FFN: multi-scale feature fusion network for image captioning
+citation	1055111	249062729	0	Face2Text revisited: Improved data set and baseline results
+citation	1055111	248987717	5	SelfReformer: Self-Refined Network with Transformer for Salient Object Detection
+citation	1055111	249191770	1	Personalized Pagerank Graph Attention Networks
+citation	1055111	248971387	0	Research on the Image Description Algorithm of Double-Layer LSTM Based on Adaptive Attention Mechanism
+citation	1055111	248964947	0	Explainable Supervised Domain Adaptation
+citation	1055111	248965244	0	Explanatory machine learning for sequential human teaching
+citation	1055111	231647174	0	Let's Talk! Striking Up Conversations via Conversational Visual Question Generation
+citation	1055111	248887283	0	Support-Set Based Multi-Modal Representation Enhancement for Video Captioning
+citation	1055111	248863171	0	It Isn't Sh!tposting, It's My CAT Posting
+citation	1055111	248834170	1	Measuring Alignment Bias in Neural Seq2seq Semantic Parsers
+citation	1055111	250182648	2	Solving Time Alignment Issue of Multimodal Data for Accurate Prognostics with CNN-Transformer-LSTM Network
+citation	1055111	248812189	3	TagSeq: Malicious behavior discovery using dynamic analysis
+citation	1055111	251527026	1	Cellular Traffic Prediction Using Deep Convolutional Neural Network with Attention Mechanism
+citation	1055111	248811447	11	Promoting Saliency From Depth: Deep Unsupervised RGB-D Saliency Detection
+citation	1055111	248798621	5	Addressing Confounding Feature Issue for Causal Recommendation
+citation	1055111	248798666	1	Video-based assessment of intraoperative surgical skill
+citation	1055111	248782198	3	MSANet: Multi-scale attention networks for image classification
+citation	1055111	248795490	4	Survey on clothing image retrieval with cross-domain
+citation	1055111	252384338	0	Predicting the Progress of Vehicle Development Projects using an Attention-based Encoder-Decoder Model
+citation	1055111	248762420	3	Enhance understanding and reasoning ability for image captioning
+citation	1055111	248730944	0	Attention-embedding mesh saliency
+citation	1055111	248710855	0	Pre-trained CNNs as Feature-Extraction Modules for Image Captioning
+citation	1055111	248668872	2	deepSimDEF: deep neural embeddings of gene products and gene ontology terms for functional analysis of genes
+citation	1055111	248572429	13	Beyond a Pre-Trained Object Detector: Cross-Modal Textual and Visual Context for Image Captioning
+citation	1055111	248665931	4	A Song of (Dis)agreement: Evaluating the Evaluation of Explainable Artificial Intelligence in Natural Language Processing
+citation	1055111	249815460	0	A Simple Attention Block Embedded in Standard CNN for Image Classification
+citation	1055111	248571753	1	Attract me to Buy: Advertisement Copywriting Generation with Multimodal Multi-structured Information
+citation	1055111	248562812	11	From Easy to Hard: Learning Language-Guided Curriculum for Visual Question Answering on Remote Sensing Data
+citation	1055111	248524877	0	Unsupervised Mismatch Localization in Cross-Modal Sequential Data
+citation	1055111	248525064	40	Language Models Can See: Plugging Visual Controls in Text Generation
+citation	1055111	248604971	1	Spatial-temporal attention-based convolutional network with text and numerical information for stock price prediction
+citation	1055111	248514098	5	Automated Radiographic Report Generation Purely on Transformer: A Multicriteria Supervised Approach
+citation	1055111	248588000	1	Translating medical image to radiological report: Adaptive multilevel multi-attention approach
+citation	1055111	250190767	0	A fusion-based contrastive learning model for cross-modal remote sensing retrieval
+citation	1055111	248505931	3	Inducing and Using Alignments for Transition-based AMR Parsing
+citation	1055111	248514187	7	Spatiotemporal neural network with attention mechanism for El Niño forecasts
+citation	1055111	245954941	3	Diverse Image Captioning with Grounded Style
+citation	1055111	245494141	2	AI-Based Saliency-Aware Video Coding
+citation	1055111	248548242	0	Dynamic Co-Attention Networks for multi-horizon forecasting in multivariate time series
+citation	1055111	248589831	8	Deep learning and RGB-D based human action, human-human and human-object interaction recognition: A survey
+citation	1055111	248592829	4	Inference-aware convolutional neural network pruning
+citation	1055111	248785489	2	Hybrid attention network for image captioning
+citation	1055111	248791021	2	Visibility enhancement and dehazing: Research contribution challenges and direction
+citation	1055111	248932220	2	Visual context learning based on textual knowledge for image-text retrieval
+citation	1055111	248933447	4	Identifying the key frames: An attention-aware sampling method for action recognition
+citation	1055111	248976879	1	All-cause mortality prediction in T2D patients with iTirps
+citation	1055111	249024995	2	Importance of 3D convolution and physics on a deep learning coastal fog model
+citation	1055111	248785878	2	Exploiting Concepts of Instance Segmentation to Boost Detection in Challenging Environments
+citation	1055111	248709067	1	Deep Convolutional Gated Recurrent Unit Combined with Attention Mechanism to Classify Pre-Ictal from Interictal EEG with Minimized Number of Channels
+citation	1055111	249928796	1	Default: Mutual Information-based Crash Triage for Massive Crashes
+citation	1055111	252312145	0	A Survey of Image Captioning Algorithms Based on Deep Learning
+citation	1055111	248496157	3	Cracking White-box DNN Watermarks via Invariant Neuron Transforms
+citation	1055111	248419715	5	Effects of Explanations in AI-Assisted Decision Making: Principles and Comparisons
+citation	1055111	248427256	0	Controllable Image Captioning
+citation	1055111	248444395	3	Forecasting of Bicycle and Pedestrian Traffic Using Flexible and Efficient Hybrid Deep Learning Approach
+citation	1055111	236460168	40	Cross-modal Memory Networks for Radiology Report Generation
+citation	1055111	248427085	11	Attention mechanism in neural networks: where it comes and where it goes
+citation	1055111	248419718	3	VocabEncounter: NMT-powered Vocabulary Learning by Presenting Computer-Generated Usages of Foreign Words into Users’ Daily Lives
+citation	1055111	248391921	7	A Survey on Attention Mechanisms for Medical Applications: are we Moving Toward Better Algorithms?
+citation	1055111	248403987	0	Predicting Actions of Users Using Heterogeneous Online Signals
+citation	1055111	254655485	0	OnML: an ontology-based approach for interpretable machine learning
+citation	1055111	254275049	5	SceneTrilogy: On Human Scene-Sketch and its Complementarity with Photo and Text
+citation	1055111	248367493	3	Modality Matches Modality: Pretraining Modality-Disentangled Item Representations for Recommendation
+citation	1055111	248775481	7	CAttSleepNet: Automatic End-to-End Sleep Staging Using Attention-Based Deep Neural Networks on Single-Channel EEG
+citation	1055111	248366499	1	Recurrent Affine Transformation for Text-to-image Synthesis
+citation	1055111	248363499	1	Research on AI-assisted grading of math questions based on deep learning
+citation	1055111	248239638	13	Missingness Bias in Model Debugging
+citation	1055111	253456462	1	Behind the Machine's Gaze: Neural Networks with Biologically-inspired Constraints Exhibit Human-like Visual Attention
+citation	1055111	248219209	4	GrOD: Deep Learning with Gradients Orthogonal Decomposition for Knowledge Transfer, Distillation, and Adversarial Training
+citation	1055111	248227393	8	Causal Intervention for Subject-Deconfounded Facial Action Unit Recognition
+citation	1055111	248227935	16	Visual Attention Methods in Deep Learning: An In-Depth Survey
+citation	1055111	248218435	2	Guiding Attention using Partial-Order Relationships for Image Captioning
+citation	1055111	248218567	5	Improving Cross-Modal Understanding in Visual Dialog Via Contrastive Learning
+citation	1055111	248218734	1	Image Captioning In the Transformer Age
+citation	1055111	248227685	8	It is Okay to Not Be Okay: Overcoming Emotional Bias in Affective Image Captioning by Contrastive Data Collection
+citation	1055111	247997853	1	Interpretability of Machine Learning Methods Applied to Neuroimaging
+citation	1055111	248157275	5	A Review of Machine Learning Methods Applied to Structural Dynamics and Vibroacoustic
+citation	1055111	248118890	1	Video Captioning: a comparative review of where we are and which could be the route
+citation	1055111	248142461	4	Automatic Image Caption Generation Based on Some Machine Learning Algorithms
+citation	1055111	248118610	20	X-DETR: A Versatile Architecture for Instance-wise Vision-Language Tasks
+citation	1055111	248136145	0	A local representation-enhanced recurrent convolutional network for image captioning
+citation	1055111	248136771	4	Attention Map-Guided Visual Explanations for Deep Neural Networks
+citation	1055111	248118589	6	ProtoTEx: Explaining Model Decisions with Prototype Tensors
+citation	1055111	248093244	5	D-CNN: A New model for Generating Image Captions with Text Extraction Using Deep Learning for Visually Challenged Individuals
+citation	1055111	248069491	1	RubCSG at SemEval-2022 Task 5: Ensemble learning for identifying misogynous MEMEs
+citation	1055111	248069603	2	IA-GCN: Interactive Graph Convolutional Network for Recommendation
+citation	1055111	248053215	0	Attention V-Net: A Modified V-Net Architecture for Left Atrial Segmentation
+citation	1055111	248052909	16	Neural Natural Language Generation: A Survey on Multilinguality, Multimodality, Controllability and Learning
+citation	1055111	247987078	0	Deep neural combinational model (DNCM): digital image descriptor for child’s independent learning
+citation	1055111	247996722	3	OccamNets: Mitigating Dataset Bias by Favoring Simpler Hypotheses
+citation	1055111	247941867	0	One-sided design of protein-protein interaction motifs using deep learning
+citation	1055111	247980168	4	A brain-inspired object-based attention network for multiobject recognition and visual reasoning
+citation	1055111	247561148	0	Retinal OCT image report generation based on visual and semantic topic attention model
+citation	1055111	247962860	0	CIRAN: extracting crowd interaction with residual attention network for pedestrian trajectory prediction
+citation	1055111	247898373	0	Automatic characterization of breast lesions using multi-scale attention-guided deep learning of digital histology images
+citation	1055111	247164491	7	Attention meta-transfer learning approach for few-shot iris recognition
+citation	1055111	247262622	1	Vision-based apple quality grading with multi-view spatial network
+citation	1055111	247962959	23	An overview of deep learning methods for multimodal medical data mining
+citation	1055111	248213516	3	CADxReport: Chest x-ray report generation using co-attention mechanism and reinforcement learning
+citation	1055111	248220819	0	Scene captioning with deep fusion of images and point clouds
+citation	1055111	248329405	15	Transformer-based attention network for stock movement prediction
+citation	1055111	248284248	1	A Transformer-Based Bridge Structural Response Prediction Framework
+citation	1055111	248385284	6	COVID-19 prognosis using limited chest X-ray images
+citation	1055111	247939447	7	Consistency driven Sequential Transformers Attention Model for Partially Observable Scenes
+citation	1055111	247799011	0	Understanding Is a Process
+citation	1055111	247792897	7	Symbolic music generation conditioned on continuous-valued emotions
+citation	1055111	247894676	3	High-order attentive graph neural network for session-based recommendation
+citation	1055111	247904122	0	Sources of Understanding in Supervised Machine Learning Models
+citation	1055111	247778753	13	Vision Transformers in Medical Computer Vision - A Contemplative Retrospection
+citation	1055111	247778463	18	Quantifying Societal Bias Amplification in Image Captioning
+citation	1055111	247778466	19	End-to-End Transformer Based Model for Image Captioning
+citation	1055111	247778576	16	3D Shape Reconstruction from 2D Images with Disentangled Attribute Flow
+citation	1055111	247793745	7	NICGSlowDown: Evaluating the Efficiency Robustness of Neural Image Caption Generation Models
+citation	1055111	247776884	2	Learning Continuous-Time Dynamics With Attention
+citation	1055111	247788375	0	Towards a large-scale person search by vietnamese natural language: dataset and methods
+citation	1055111	247775479	2	End-to-end antigenic variant generation for H1N1 influenza HA protein using sequence to sequence models
+citation	1055111	247778636	25	X-Pool: Cross-Modal Language-Video Attention for Text-Video Retrieval
+citation	1055111	247779335	2	Text2Pos: Text-to-Point-Cloud Cross-Modal Localization
+citation	1055111	248407669	0	Class-Based Attention Mechanism for Chest Radiograph Multi-Label Categorization
+citation	1055111	247778061	3	Adaptive Multimodal Fusion With Attention Guided Deep Supervision Net for Grading Hepatocellular Carcinoma
+citation	1055111	248407999	2	EDDIE-Transformer: Enriched Disease Embedding Transformer for X-Ray Report Generation
+citation	1055111	243973878	38	A General Survey on Attention Mechanisms in Deep Learning
+citation	1055111	247762912	22	TREND: TempoRal Event and Node Dynamics for Graph Representation Learning
+citation	1055111	247727343	2	Learning cross-modality features for image caption generation
+citation	1055111	247627768	8	Transformers Meet Visual Learning Understanding: A Comprehensive Review
+citation	1055111	248085052	5	On the link between conscious function and general intelligence in humans and machines
+citation	1055111	248518528	0	Bahdanau Attention Based Bengali Image Caption Generation
+citation	1055111	247647272	0	Caption TLSTMs: combining transformer with LSTMs for image captioning
+citation	1055111	247583958	3	Mapping Data to Deep Understanding: Making the Most of the Deluge of SARS-CoV-2 Genome Sequences
+citation	1055111	247573568	1	Weakly Supervised Moment Localization with Decoupled Consistent Concept Prediction
+citation	1055111	249241288	2	Two-stage Attention-based Fusion Neural Network for Image-Text Sentiment Classification
+citation	1055111	250497091	5	The Study on the Text Classification Based on Graph Convolutional Network and BiLSTM
+citation	1055111	250496841	0	Twofold Siamese Network with Attentional Feature Fusion for Object Tracking
+citation	1055111	247550776	1	A spatiotemporal attention-based neural network to evaluate the route risk for unmanned aerial vehicles
+citation	1055111	247556297	4	UnCNN: A New Directed CNN Model for Isolated Arabic Handwritten Characters Recognition
+citation	1055111	238208093	29	AlignTransformer: Hierarchical Alignment of Visual Regions and Disease Tags for Medical Report Generation
+citation	1055111	247500268	1	Boosting Vision-and-Language Navigation with Direction Guiding and Backtracing
+citation	1055111	247528846	1	Machine learning for expert‐level image‐based identification of very similar species in the hyperdiverse plant bug family Miridae (Hemiptera: Heteroptera)
+citation	1055111	247499665	5	On Distinctive Image Captioning via Comparing and Reweighting
+citation	1055111	247491459	3	Semantic association enhancement transformer with relative position for image captioning
+citation	1055111	247439035	13	Sequential Recommendation with Multiple Contrast Signals
+citation	1055111	247447248	0	Modelling word learning and recognition using visually grounded speech
+citation	1055111	247447329	0	Grounding Commands for Autonomous Vehicles via Layer Fusion with Region-specific Dynamic Layer Attention
+citation	1055111	247447385	2	A Novel Perspective to Look At Attention: Bi-level Attention-based Explainable Topic Modeling for News Classification
+citation	1055111	247447339	0	Global2Local: A Joint-Hierarchical Attention for Video Captioning
+citation	1055111	247446031	2	Estimation of cyanobacteria pigments in the main rivers of South Korea using spatial attention convolutional neural network with hyperspectral imagery
+citation	1055111	247446635	33	BiBERT: Accurate Fully Binarized BERT
+citation	1055111	247447217	5	Concentration Network for Reinforcement Learning of Large-Scale Multi-Agent Systems
+citation	1055111	247421953	7	Deep learning-based extractive text summarization with word-level attention mechanism
+citation	1055111	247364168	3	Pocket2Drug: An Encoder-Decoder Deep Neural Network for the Target-Based Drug Design
+citation	1055111	247411433	0	DRTAM: Dual Rank-1 Tensor Attention Module
+citation	1055111	247429982	10	Hinge attention network: A joint model for diabetic retinopathy severity grading
+citation	1055111	247407181	24	Region-Object Relation-Aware Dense Captioning via Transformer.
+citation	1055111	247362647	1	Knowledge-Enriched Attention Network With Group-Wise Semantic for Visual Storytelling
+citation	1055111	247395982	1	Multilevel Attention and Multiscale Feature Fusion Network for Author Classification of Chinese Ink-Wash Paintings
+citation	1055111	247394725	0	Evidence Transfer: Learning Improved Representations According to External Heterogeneous Task Outcomes
+citation	1055111	247318427	2	Structure-Aware Flow Generation for Human Body Reshaping
+citation	1055111	247315334	5	Attention-Based Lip Audio-Visual Synthesis for Talking Face Generation in the Wild
+citation	1055111	247341016	5	V2T: video to text framework using a novel automatic shot boundary detection algorithm
+citation	1055111	247292826	5	Interpretable part-whole hierarchies and conceptual-semantic relationships in neural networks
+citation	1055111	233189654	4	Modeling Coreference Relations in Visual Dialog
+citation	1055111	247230106	0	Deep Hierarchical Attention Active Learning for Mental Disorder Unlabeled Data in AIoMT
+citation	1055111	247244506	12	FS-COCO: Towards Understanding of Freehand Sketches of Common Objects in Context
+citation	1055111	247315197	1	Adaptive Cross-Layer Attention for Image Restoration
+citation	1055111	247240162	0	When Pairs Meet Triplets: Improving Low-Resource Captioning via Multi-Objective Optimization
+citation	1055111	247273280	1	Tribe or Not? Critical Inspection of Group Differences Using TribalGram
+citation	1055111	247275742	6	Harmonious Multi-branch Network for Person Re-identification with Harder Triplet Loss
+citation	1055111	247258234	4	Graph Sequence Neural Network with an Attention Mechanism for Traffic Speed Prediction
+citation	1055111	247222861	9	Vision-Language Intelligence: Tasks, Representation Learning, and Large Models
+citation	1055111	247223024	3	A Deep Neural Framework for Image Caption Generation Using GRU-Based Attention Mechanism
+citation	1055111	247292015	0	Attention-based Region of Interest (ROI) Detection for Speech Emotion Recognition
+citation	1055111	247218430	15	X -Trans2Cap: Cross-Modal Knowledge Transfer using Transformer for 3D Dense Captioning
+citation	1055111	247218173	34	Audio self-supervised learning: A survey
+citation	1055111	246484818	2	An Empirical Investigation into the Use of Image Captioning for Automated Software Documentation
+citation	1055111	245507523	4	Broad learning system stacking with multi-scale attention for the diagnosis of gastric intestinal metaplasia
+citation	1055111	247299834	4	Personalized knowledge-aware recommendation with collaborative and attentive graph convolutional networks
+citation	1055111	247604105	10	Delve into Multiple Sclerosis (MS) lesion exploration: A modified attention U-Net for MS lesion segmentation in Brain MRI
+citation	1055111	247750988	5	CASMS: Combining clustering with attention semantic model for identifying security bug reports
+citation	1055111	247757966	0	Radiology report generation for proximal femur fractures using deep classification and language generation models

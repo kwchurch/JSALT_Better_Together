@@ -1,0 +1,542 @@
+query	49 references	492 citations	Meshed-Memory Transformer for Image Captioning
+reference	219635470	207982683	202	Entangled Transformer for Image Captioning
+reference	219635470	202540514	119	Hierarchy Parsing for Image Captioning
+reference	219635470	201698351	58	Reflective Decoding Network for Image Captioning
+reference	219635470	201070367	515	Attention on Attention for Image Captioning
+reference	219635470	195776151	83	Augmenting Self-attention with Persistent Memory
+reference	219635470	189898359	271	Image Captioning: Transforming Objects into Words
+reference	219635470	102483628	862	VideoBERT: A Joint Model for Video and Language Representation Learning
+reference	219635470	54460890	502	Auto-Encoding Scene Graphs for Image Captioning
+reference	219635470	53778132	130	Show, Control and Tell: A Framework for Generating Controllable and Grounded Captions
+reference	219635470	52304560	642	Exploring Visual Relationship for Image Captioning
+reference	219635470	50786845	195	Recurrent Fusion Network for Image Captioning
+reference	219635470	4406645	373	Neural Baby Talk
+reference	219635470	35543299	288	Convolutional Image Captioning
+reference	219635470	3292002	9132	Graph Attention Networks
+reference	219635470	3753452	3082	Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering
+reference	219635470	13756489	59973	Attention is All you Need
+reference	219635470	16747630	3426	Axiomatic Attribution for Deep Networks
+reference	219635470	18347865	1187	Knowing When to Look: Adaptive Attention via a Visual Sentinel for Image Captioning
+reference	219635470	15143565	177	Areas of Attention for Image Captioning
+reference	219635470	206594923	1353	Self-Critical Sequence Training for Image Captioning
+reference	219635470	9662636	168	Guided Open Vocabulary Image Captioning with Constrained Beam Search
+reference	219635470	3873857	342	Improved Image Captioning via Policy Gradient optimization of SPIDEr
+reference	219635470	8289133	733	Show and Tell: Lessons Learned from the 2015 MSCOCO Image Captioning Challenge
+reference	219635470	11933981	1271	SPICE: Semantic Propositional Image Caption Evaluation
+reference	219635470	3120635	1441	Image Captioning with Semantic Attention
+reference	219635470	4492210	3755	Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations
+reference	219635470	206594692	131497	Deep Residual Learning for Image Recognition
+reference	219635470	14521054	1020	DenseCap: Fully Convolutional Localization Networks for Dense Captioning
+reference	219635470	7147309	1400	Sequence Level Training with Recurrent Neural Networks
+reference	219635470	10328909	43782	Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+reference	219635470	1055111	8595	Show, Attend and Tell: Neural Image Caption Generation with Visual Attention
+reference	219635470	13740328	15181	Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification
+reference	219635470	6628106	117860	Adam: A Method for Stochastic Optimization
+reference	219635470	8517067	4885	Deep Visual-Semantic Alignments for Generating Image Descriptions
+reference	219635470	9026666	2889	CIDEr: Consensus-based image description evaluation
+reference	219635470	5736847	5449	Long-term recurrent convolutional networks for visual recognition and description
+reference	219635470	1169492	5165	Show and tell: A neural image caption generator
+reference	219635470	1957433	26793	GloVe: Global Vectors for Word Representation
+reference	219635470	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	219635470	6023198	304	I2T: Image Parsing to Text Description
+reference	219635470	9197086	238	Connecting modalities: Semi-supervised segmentation and annotation of images using unaligned text corpora
+reference	219635470	5575601	14832	Understanding the difficulty of training deep feedforward neural networks
+reference	219635470	7164502	3840	METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments
+reference	219635470	964287	9150	ROUGE: A Package for Automatic Evaluation of Summaries
+reference	219635470	11080756	19934	Bleu: a Method for Automatic Evaluation of Machine Translation
+reference	219635470	52967399	53786	BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+reference	219635470	56517630	172	nocaps: novel object captioning at scale
+reference	219635470	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'The Open Images Dataset V4: Unified image classification, object detection, and visual relationship detection at scale', 'citationCount': None}
+reference	219635470	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Polysemous visualsemantic embedding for cross-modal retrieval', 'citationCount': None}
+citation	219635470	259203473	0	KiUT: Knowledge-injected U-Transformer for Radiology Report Generation
+citation	219635470	259164363	0	Top-Down Viewing for Weakly Supervised Grounded Image Captioning
+citation	219635470	259113798	0	Seismic prediction of porosity in tight reservoirs based on transformer
+citation	219635470	259129746	1	Embodied Executable Policy Learning with Language-based Scene Summarization
+citation	219635470	259089361	0	Putting Humans in the Image Captioning Loop
+citation	219635470	259075726	0	Dynamic Interactive Relation Capturing via Scene Graph Learning for Robotic Surgical Report Generation
+citation	219635470	259000001	0	"Let's not Quote out of Context": Unified Vision-Language Pretraining for Context Assisted Image Captioning
+citation	219635470	259089180	0	A Survey on Learning Objects' Relationship for Image Captioning
+citation	219635470	258947362	0	S4M: Generating Radiology Reports by A Single Model for Multiple Body Parts
+citation	219635470	258888004	0	HAAV: Hierarchical Aggregation of Augmented Views for Image Captioning
+citation	219635470	258832384	0	A request for clarity over the End of Sequence token in the Self-Critical Sequence Training
+citation	219635470	258833472	0	Cross2StrA: Unpaired Cross-lingual Image Captioning with Cross-lingual Cross-modal Structure-pivoted Alignment
+citation	219635470	259095550	0	CLIP-VG: Self-paced Curriculum Adapting of CLIP for Visual Grounding
+citation	219635470	258639810	0	From Softmax to Nucleusmax: A Novel Sparse Language model for Chinese Radiology Report Summarization
+citation	219635470	258615242	0	Image-to-Text Translation for Interactive Image Recognition: A Comparative User Study with Non-Expert Users
+citation	219635470	258557717	0	Boosting Radiology Report Generation by Infusing Comparison Prior
+citation	219635470	258556969	0	UIT-OpenViIC: A Novel Benchmark for Evaluating Image Captioning in Vietnamese
+citation	219635470	258461558	0	Transforming Visual Scene Graphs to Image Captions
+citation	219635470	258858449	0	Infrared Image Caption Based on Object-Oriented Attention
+citation	219635470	258504649	0	Deep Image Captioning: A Review of Methods, Trends and Future Challenges
+citation	219635470	258821830	0	Deep learning approaches to automatic radiology report generation: A systematic review
+citation	219635470	257723350	0	Generating Emotion Descriptions for Fine Art Paintings Via Multiple Painting Representations
+citation	219635470	258418343	11	LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model
+citation	219635470	258258052	0	Describe, Spot and Explain: Interpretable Representation Learning for Discriminative Visual Reasoning
+citation	219635470	258179419	0	Interactive and Explainable Region-guided Radiology Report Generation
+citation	219635470	258073357	0	Radiology report generation using transformers conditioned with non-imaging data
+citation	219635470	257952511	1	METransformer: Radiology Report Generation by Transformer with Multiple Learnable Expert Tokens
+citation	219635470	259028453	0	Attending to Transforms: A Survey on Transformer-based Image Captioning
+citation	219635470	257994428	0	Multi-Modal Fake News Detection via Bridging the Gap between Modals
+citation	219635470	257805175	0	SnakeVoxFormer: Transformer-based Single Image\\Voxel Reconstruction with Run Length Encoding
+citation	219635470	257833577	0	Multimodal Image-Text Matching Improves Retrieval-based Chest X-Ray Report Generation
+citation	219635470	257771453	1	Unify, Align and Refine: Multi-Level Semantic Alignment for Radiology Report Generation
+citation	219635470	257766776	2	Zero-Shot Composed Image Retrieval with Textual Inversion
+citation	219635470	257755236	0	Supervised Deep Learning Techniques for Image Description: A Systematic Review
+citation	219635470	257663410	1	Positive-Augmented Constrastive Learning for Image and Video Captioning Evaluation
+citation	219635470	257622944	0	GNNFormer: A Graph-based Framework for Cytopathology Report Generation
+citation	219635470	257496352	1	ZeroNLG: Aligning and Autoencoding Domains for Zero-Shot Multimodal and Multilingual Natural Language Generation
+citation	219635470	257496497	0	SPOTR: Spatio-temporal Pose Transformers for Human Motion Prediction
+citation	219635470	257449322	0	A multimodal dialogue system for improving user satisfaction via knowledge-enriched response and image recommendation
+citation	219635470	257378523	0	Graph Neural Networks in Vision-Language Image Understanding: A Survey
+citation	219635470	257365705	0	Comparative study of Transformer and LSTM Network with attention mechanism on Image Captioning
+citation	219635470	257365573	3	ConZIC: Controllable Zero-shot Image Captioning by Sampling-Based Polishing
+citation	219635470	257683248	4	Vision–Language Model for Visual Question Answering in Medical Imagery
+citation	219635470	257296801	0	Semantic enhancement methods for image captioning
+citation	219635470	259123166	0	Image Dense Captioning of Irregular Regions Based on Visual Saliency
+citation	219635470	257106495	0	LG-MLFormer: local and global MLP for image captioning
+citation	219635470	257169742	0	Context-aware and co-attention network based image captioning model
+citation	219635470	256901128	1	Retrieval-augmented Image Captioning
+citation	219635470	257050403	0	See Your Heart: Psychological states Interpretation through Visual Creations
+citation	219635470	256632251	1	Image caption generation using Visual Attention Prediction and Contextual Spatial Relation Extraction
+citation	219635470	256658643	1	Sentimental Visual Captioning using Multimodal Transformer
+citation	219635470	257432444	0	A Survey on Causal Inference in Image Captioning
+citation	219635470	256597954	0	DEVICE: DEpth and VIsual ConcEpts Aware Transformer for TextCaps
+citation	219635470	256827118	1	Towards Local Visual Modeling for Image Captioning
+citation	219635470	257719718	0	CTA: Hardware-Software Co-design for Compressed Token Attention Mechanism
+citation	219635470	256385370	0	Image Captioning Generator and Comparison Study
+citation	219635470	256274557	0	Semi-Supervised Image Captioning by Adversarially Propagating Labeled Data
+citation	219635470	256288570	1	Fashion-Oriented Image Captioning with External Knowledge Retrieval and Fully Attentive Gates
+citation	219635470	256105220	0	Visual Semantic Relatedness Dataset for Image Captioning
+citation	219635470	255967032	0	Bottom-up and Top-down Object Inference Networks for Image Captioning
+citation	219635470	255998421	0	Embodied Agents for Efficient Exploration and Smart Scene Description
+citation	219635470	255905958	0	Vision Enhanced Generative Pre-trained Language Model for Multimodal Sentence Summarization
+citation	219635470	258009239	0	CITE: Compact Interactive TransformEr for Multilingual Image Captioning
+citation	219635470	255522451	2	End-to-End 3D Dense Captioning with Vote2Cap-DETR
+citation	219635470	255440590	0	Adaptively Clustering Neighbor Elements for Image Captioning
+citation	219635470	256652844	3	Fashion Image Retrieval with Text Feedback by Additive Attention Compositional Learning
+citation	219635470	255186162	1	Noise-aware Learning from Web-crawled Image-Text Data for Image Captioning
+citation	219635470	255096964	0	Dynamic Convolution-based Encoder-Decoder Framework for Image Captioning in Hindi
+citation	219635470	254974529	0	Confidence-Aware Paced-Curriculum Learning by Label Smoothing for Surgical Scene Understanding
+citation	219635470	254904999	0	Layer-wise enhanced transformer with multi-modal fusion for image caption
+citation	219635470	256315090	0	Improving Radiology Report Generation via Object Dropout Strategy and MLP-based Captioner
+citation	219635470	255994913	0	Dual-stream Self-attention Network for Image Captioning
+citation	219635470	254275438	4	Semantic-Conditional Diffusion Networks for Image Captioning
+citation	219635470	255417861	0	Clinically Coherent Radiology Report Generation with Imbalanced Chest X-rays
+citation	219635470	254247022	2	Controllable Image Captioning via Prompting
+citation	219635470	254045294	0	An integration of Pseudo Anomalies and Memory Augmented Autoencoder for Video Anomaly Detection
+citation	219635470	254096325	0	Uncertainty-Aware Image Captioning
+citation	219635470	254043612	0	Task-aware asynchronous multi-task model with class incremental contrastive learning for surgical scene understanding
+citation	219635470	254044466	0	CLID: Controlled-Length Image Descriptions with Limited Data
+citation	219635470	253828769	0	Separate Syntax and Semantics: Part-of-Speech-Guided Transformer for Image Captioning
+citation	219635470	253735413	6	Exploring Discrete Diffusion Models for Image Captioning
+citation	219635470	253734818	1	How to Describe Images in a More Funny Way? Towards a Modular Approach to Cross-Modal Sarcasm Generation
+citation	219635470	253735108	2	VER: Learning Natural Language Representations for Verbalizing Entities and Relations
+citation	219635470	253734458	3	ArtELingo: A Million Emotion Annotations of WikiArt with Emphasis on Diversity over Language and Culture
+citation	219635470	253581736	4	Language Conditioned Spatial Relation Reasoning for 3D Object Grounding
+citation	219635470	255265500	0	A complete human verified Turkish caption dataset for MS COCO and performance evaluation with well-known image caption models trained against it
+citation	219635470	253446846	0	VieCap4H-VLSP 2021: ObjectAoA - Enhancing performance of Object Relation Transformer with Attention on Attention for Vietnamese image captioning
+citation	219635470	253370358	1	OSIC: A New One-Stage Image Captioner Coined
+citation	219635470	253265349	0	CAMANet: Class Activation Map Guided Attention Network for Radiology Report Generation
+citation	219635470	253905588	1	Modeling graph-structured contexts for image captioning
+citation	219635470	253658119	0	Semantic space captioner: generating image captions step by step
+citation	219635470	253123249	2	ViA: A Novel Vision-Transformer Accelerator Based on FPGA
+citation	219635470	253186597	4	Double-Stream Position Learning Transformer Network for Image Captioning
+citation	219635470	249814970	1	SentiStory: A Multi-Layered Sentiment-Aware Generative Model for Visual Storytelling
+citation	219635470	256463088	0	FineFormer: Fine-Grained Adaptive Object Transformer for Image Captioning
+citation	219635470	256033858	0	A Multi-scale Approach for Vietnamese Image Captioning in Healthcare Domain
+citation	219635470	253097943	1	Towards Unifying Reference Expression Generation and Comprehension
+citation	219635470	253018728	1	Visual Spatial Description: Controlled Spatial-Oriented Image-to-Text Generation
+citation	219635470	258060164	0	Prophet Attention: Predicting Attention with Future Attention for Image Captioning
+citation	219635470	252904928	0	Look Twice as Much as You Say: Scene Graph Contrastive Learning for Self-Supervised Image Caption Generation
+citation	219635470	253346884	0	CSTNET: Enhancing Global-To-Local Interactions for Image Captioning
+citation	219635470	252907742	0	Vision Transformer Visualization: What Neurons Tell and How Neurons Behave?
+citation	219635470	252846468	11	Multi-Granularity Cross-modal Alignment for Generalized Medical Visual Representation Learning
+citation	219635470	252840716	0	Multi-feature fusion enhanced transformer with multi-layer fused decoding for image captioning
+citation	219635470	252782111	3	Progressive Tree-Structured Prototype Network for End-to-End Image Captioning
+citation	219635470	252782976	3	MMT: Image-guided Story Ending Generation with Multimodal Memory Transformer
+citation	219635470	252783076	1	Image Understanding by Captioning with Differentiable Architecture Search
+citation	219635470	252783135	2	Unsupervised and Pseudo-Supervised Vision-Language Alignment in Visual Dialog
+citation	219635470	248921640	0	LANBIQUE: LANguage-based Blind Image QUality Evaluation
+citation	219635470	252811365	1	PL-Transformer: a POS-aware and layer ensemble transformer for text classification
+citation	219635470	255394080	0	Progressive Text-to-Image Generation
+citation	219635470	252693009	1	Learning to Collocate Visual-Linguistic Neural Modules for Image Captioning
+citation	219635470	252715427	1	Affection: Learning Affective Explanations for Real-World Visual Data
+citation	219635470	253423925	0	Multi-view Attention with Memory Assistant for Image Captioning
+citation	219635470	253123908	0	Vi-DRSNet: A Novel Hybrid Model for Vietnamese Image Captioning in Healthcare Domain
+citation	219635470	253467044	1	Rethinking Feature Extraction: Gradient-Based Localized Feature Extraction for End-To-End Surgical Downstream Tasks
+citation	219635470	251205472	2	FloorplanGAN: Vector residential floorplan adversarial generation
+citation	219635470	249220818	4	Vision-Enhanced and Consensus-Aware Transformer for Image Captioning
+citation	219635470	258068271	0	Lightweight Transformer with GRU Integrated Decoder for Image Captioning
+citation	219635470	252768930	0	Image-Caption Model Based on Fusion Feature
+citation	219635470	252568043	1	Human-in-the-loop Robotic Grasping Using BERT Scene Representation
+citation	219635470	252531372	0	Word to Sentence Visual Semantic Similarity for Caption Generation: Lessons Learned
+citation	219635470	252531901	0	Paraphrasing Is All You Need for Novel Object Captioning
+citation	219635470	253803633	0	A Survey of Deep learning-based Image caption
+citation	219635470	252449039	0	Input enhanced asymmetric transformer for image captioning
+citation	219635470	252367787	3	Learning Distinct and Representative Modes for Image Captioning
+citation	219635470	252368295	1	Belief Revision Based Caption Re-ranker with Visual Semantic Information
+citation	219635470	252344571	2	Multilevel attention and relation network based image captioning model
+citation	219635470	252090065	2	Every picture tells a story: Image-grounded controllable stylistic story generation
+citation	219635470	247353013	3	Adaptive Path Selection for Dynamic Image Captioning
+citation	219635470	248587516	0	Energy-Efficient Online Scheduling of Transformer Inference Services on GPU Servers
+citation	219635470	252574390	2	Graph neural network-based visual relationship and multilevel attention for image captioning
+citation	219635470	257719607	0	Graph Alignment Transformer for More Grounded Image Captioning
+citation	219635470	252847304	0	MMCN: Multi-Modal Co-attention Network for Medical Visual Question Answering
+citation	219635470	254610997	0	Automatic Indonesian Image Captioning using CNN and Transformer-Based Model Approach
+citation	219635470	251711307	1	An Object Localization-based Dense Image Captioning Framework in Hindi
+citation	219635470	251743693	15	AAP-MIT: Attentive Atrous Pyramid Network and Memory Incorporated Transformer for Multisentence Video Description
+citation	219635470	251719362	5	A Medical Semantic-Assisted Transformer for Radiographic Report Generation
+citation	219635470	254099509	0	Improved Transformer with Parallel Encoders for Image Captioning
+citation	219635470	253421929	0	Hybrid-Spatial Transformer for Image Captioning
+citation	219635470	251643619	7	GSRFormer: Grounded Situation Recognition Transformer with Alternate Semantic Attention Refinement
+citation	219635470	251544167	0	Incorporating retrieval-based method for feature enhanced image captioning
+citation	219635470	251493180	11	HERO: HiErarchical spatio-tempoRal reasOning with Contrastive Action Correspondence for End-to-End Video Object Grounding
+citation	219635470	251403041	1	Distinctive Image Captioning via CLIP Guided Group Optimization
+citation	219635470	254351737	0	The Role of Transformer-based Image Captioning for Indoor Environment Visual Understanding
+citation	219635470	251370286	0	Sliding space-disparity transformer for stereo matching
+citation	219635470	252166889	0	Skipped-Connection Transformer for Image Captioning*
+citation	219635470	251875111	0	Local-global visual interaction attention for image captioning
+citation	219635470	251971495	0	Uncertainty-aware report generation for chest X-rays by variational topic inference
+citation	219635470	251196713	2	ALADIN: Distilling Fine-grained Alignment Scores for Efficient Image-Text Matching and Retrieval
+citation	219635470	251108880	0	SIG-Former: monocular surgical instruction generation with transformers
+citation	219635470	251104967	3	Iterative Scene Graph Generation
+citation	219635470	251104951	13	Retrieval-Augmented Transformer for Image Captioning
+citation	219635470	252395170	0	Image Caption Method Based on Graph Attention Network with Global Context
+citation	219635470	251040408	3	Is GPT-3 all you need for Visual Question Answering in Cultural Heritage?
+citation	219635470	251018407	9	Rethinking the Reference-based Distinctive Image Captioning
+citation	219635470	251018605	4	Efficient Modeling of Future Context for Image Captioning
+citation	219635470	250698884	24	GRIT: Faster and Better Image captioning Transformer Using Dual Visual Features
+citation	219635470	251847651	0	Dynamic Transformer for Image Captioning
+citation	219635470	250626683	5	Unifying Event Detection and Captioning as Sequence Generation via Pre-Training
+citation	219635470	251846986	1	Improving Image Paragraph Captioning with Dual Relations
+citation	219635470	251848067	0	Relational Graph Reasoning Transformer for Image Captioning
+citation	219635470	250496989	2	Adaptive Text Denoising Network for Image Caption Editing
+citation	219635470	252342447	0	Feature-Fusion Parallel Decoding Transformer for Image Captioning
+citation	219635470	250451078	2	A Baseline for Detecting Out-of-Distribution Examples in Image Captioning
+citation	219635470	250426167	6	Cross-modal Prototype Driven Network for Radiology Report Generation
+citation	219635470	250426135	1	FSHMEM: Supporting Partitioned Global Address Space on FPGAs for Large-Scale Hardware Acceleration Infrastructure
+citation	219635470	250426368	1	Horizontal and Vertical Attention in Transformers
+citation	219635470	250425831	2	CoMER: Modeling Coverage for Transformer-based Handwritten Mathematical Expression Recognition
+citation	219635470	250426538	2	BOSS: Bottom-up Cross-modal Semantic Composition with Hybrid Counterfactual Training for Robust Content-based Image Retrieval
+citation	219635470	250334615	1	ExpansionNet: exploring the sequence length bottleneck in the Transformer for Image Captioning
+citation	219635470	250264390	1	Attributed Abnormality Graph Embedding for Clinically Accurate X-Ray Report Generation
+citation	219635470	250279760	0	Are metrics measuring what they should? An evaluation of image captioning task metrics
+citation	219635470	250253261	1	Dual-Modal Transformer with Enhanced Inter- and Intra-Modality Interactions for Image Captioning
+citation	219635470	250630409	9	S2 Transformer for Image Captioning
+citation	219635470	250714667	1	Affective word embedding in affective explanation generation for fine art paintings
+citation	219635470	250244065	2	Rethinking Surgical Captioning: End-to-End Window-Based MLP Transformer Using Patches
+citation	219635470	251765356	2	A Spatio- Temporal Attentive Network for Video-Based Crowd Counting
+citation	219635470	250192188	2	Deep Vision Multimodal Learning: Methodology, Benchmark, and Trend
+citation	219635470	250288254	8	Attention-Aligned Transformer for Image Captioning
+citation	219635470	250113782	0	ZoDIAC: Zoneout Dropout Injection Attention Calculation
+citation	219635470	249960356	2	Improving Image Captioning via Enhancing Dual-Side Context Awareness
+citation	219635470	249960256	0	Improve Image Captioning by Modeling Dynamic Scene Graph Extension
+citation	219635470	249960378	1	OCR-oriented Master Object for Text Image Captioning
+citation	219635470	250107033	2	UAT: Universal Attention Transformer for Video Captioning
+citation	219635470	236460239	41	Competence-based Multimodal Curriculum Learning for Medical Report Generation
+citation	219635470	249926686	2	Surgical-VQA: Visual Question Answering in Surgical Scenes using Transformer
+citation	219635470	249885869	8	Knowing What to Learn: A Metric-Oriented Focal Mechanism for Image Captioning
+citation	219635470	249939755	2	A Mask-Guided Transformer Network with Topic Token for Remote Sensing Image Captioning
+citation	219635470	249642175	55	Multimodal Learning with Transformers: A Survey
+citation	219635470	249431622	0	Improving Image Captioning with Control Signal of Sentence Quality
+citation	219635470	249440365	2	Incorporating structured emotion commonsense knowledge and interpersonal relation into context-aware emotion recognition
+citation	219635470	249916633	11	DeeCap: Dynamic Early Exiting for Efficient Image Captioning
+citation	219635470	249642656	26	Comprehending and Ordering Semantics for Image Captioning
+citation	219635470	250520562	11	Show, Deconfound and Tell: Image Captioning with Causal Inference
+citation	219635470	250563752	7	DIFNet: Boosting Visual Information Flow for Image Captioning
+citation	219635470	251020112	14	The Unreasonable Effectiveness of CLIP Features for Image Captioning: An Experimental Analysis
+citation	219635470	250980730	20	3DJCG: A Unified Framework for Joint Dense Captioning and Visual Grounding on 3D Point Clouds
+citation	219635470	249191288	0	Variational Transformer: A Framework Beyond the Trade-off between Accuracy and Diversity for Image Captioning
+citation	219635470	252647793	15	M-FFN: multi-scale feature fusion network for image captioning
+citation	219635470	248768445	0	A variational auto-encoder framework with attention mechanism for image captioning
+citation	219635470	248762420	3	Enhance understanding and reasoning ability for image captioning
+citation	219635470	248693482	2	A Comprehensive Survey of Automated Audio Captioning
+citation	219635470	248572429	13	Beyond a Pre-Trained Object Detector: Cross-Modal Textual and Visual Context for Image Captioning
+citation	219635470	248562568	3	Dual-Level Decoupled Transformer for Video Captioning
+citation	219635470	248514098	5	Automated Radiographic Report Generation Purely on Transformer: A Multicriteria Supervised Approach
+citation	219635470	248496343	14	UTC: A Unified Transformer with Inter-Task Contrastive Learning for Visual Dialog
+citation	219635470	252312145	0	A Survey of Image Captioning Algorithms Based on Deep Learning
+citation	219635470	248602580	2	Effective Pre-Training Method and Its Compositional Intelligence for Image Captioning
+citation	219635470	248427256	0	Controllable Image Captioning
+citation	219635470	248405744	1	CapOnImage: Context-driven Dense-Captioning on Image
+citation	219635470	248391953	1	Super-Prompting: Utilizing Model-Independent Contextual Data to Reduce Data Annotation Required in Visual Commonsense Tasks
+citation	219635470	254275049	5	SceneTrilogy: On Human Scene-Sketch and its Complementarity with Photo and Text
+citation	219635470	248366424	10	Spatiality-guided Transformer for 3D Dense Captioning on Point Clouds
+citation	219635470	248300068	0	Perception Visualization: Seeing Through the Eyes of a DNN
+citation	219635470	248227560	8	Towards Lightweight Transformer Via Group-Wise Transformation for Vision-and-Language Tasks
+citation	219635470	248218435	2	Guiding Attention using Partial-Order Relationships for Image Captioning
+citation	219635470	248227685	8	It is Okay to Not Be Okay: Overcoming Emotional Bias in Affective Image Captioning by Contrastive Data Collection
+citation	219635470	248136145	0	A local representation-enhanced recurrent convolutional network for image captioning
+citation	219635470	248220819	0	Scene captioning with deep fusion of images and point clouds
+citation	219635470	248250638	5	Decoding Selective Auditory Attention with EEG using A Transformer Model.
+citation	219635470	247839345	20	TransEditor: Transformer-Based Dual-Space GAN for Highly Controllable Facial Editing
+citation	219635470	247793987	28	TubeDETR: Spatio-Temporal Video Grounding with Transformers
+citation	219635470	247839845	12	VL-InterpreT: An Interactive Visualization Tool for Interpreting Vision-Language Transformers
+citation	219635470	247778753	13	Vision Transformers in Medical Computer Vision - A Contemplative Retrospection
+citation	219635470	247778466	19	End-to-End Transformer Based Model for Image Captioning
+citation	219635470	247793745	7	NICGSlowDown: Evaluating the Efficiency Robustness of Neural Image Caption Generation Models
+citation	219635470	247788375	0	Towards a large-scale person search by vietnamese natural language: dataset and methods
+citation	219635470	243973878	38	A General Survey on Attention Mechanisms in Deep Learning
+citation	219635470	247727343	2	Learning cross-modality features for image caption generation
+citation	219635470	247647272	0	Caption TLSTMs: combining transformer with LSTMs for image captioning
+citation	219635470	238208093	29	AlignTransformer: Hierarchical Alignment of Visual Regions and Disease Tags for Medical Report Generation
+citation	219635470	247491459	3	Semantic association enhancement transformer with relative position for image captioning
+citation	219635470	247447136	1	Taking an Emotional Look at Video Paragraph Captioning
+citation	219635470	247411059	0	Font Shape-to-Impression Translation
+citation	219635470	247362647	1	Knowledge-Enriched Attention Network With Group-Wise Semantic for Visual Storytelling
+citation	219635470	247362532	5	StyleBabel: Artistic Style Tagging and Captioning
+citation	219635470	247362537	9	NLX-GPT: A Model for Natural Language Explanations in Vision and Vision-Language Tasks
+citation	219635470	247315573	4	Image Search with Text Feedback by Additive Attention Compositional Learning
+citation	219635470	247240162	0	When Pairs Meet Triplets: Improving Low-Resource Captioning via Multi-Objective Optimization
+citation	219635470	247218430	15	X -Trans2Cap: Cross-Modal Knowledge Transfer using Transformer for 3D Dense Captioning
+citation	219635470	247025790	11	CaMEL: Mean Teacher Learning for Image Captioning
+citation	219635470	246815287	11	Image captioning model using attention and object features to mimic human image understanding
+citation	219635470	246652429	3	Inference of captions from histopathological patches
+citation	219635470	246634787	0	Catch Me if You Can: A Novel Task for Detection of Covert Geo-Locations (CGL)
+citation	219635470	246566716	1	Image-Captioning Model Compression
+citation	219635470	246834890	5	Cross Encoder-Decoder Transformer with Global-Local Visual Extractor for Medical Image Captioning
+citation	219635470	244220470	9	Revisiting image captioning via maximum discrepancy competition
+citation	219635470	246430542	0	Deep Learning Approaches on Image Captioning: A Review
+citation	219635470	248178267	4	A Frustratingly Simple Approach for End-to-End Image Captioning
+citation	219635470	246240729	97	Transformers in Medical Imaging: A Survey
+citation	219635470	246240082	6	Improving Chest X-Ray Report Generation by Leveraging Warm-Starting
+citation	219635470	245987157	2	Backpropagation-Based Decoding for Multimodal Machine Translation
+citation	219635470	245948459	0	Incorporating attentive multi-scale context information for image captioning
+citation	219635470	245769906	5	Compact Bidirectional Transformer for Image Captioning
+citation	219635470	246872138	2	Improve Image Captioning by Estimating the Gazing Patterns from the Caption
+citation	219635470	246339563	10	Data-efficient image captioning of fine art paintings via virtual-real semantic alignment training
+citation	219635470	246420371	4	ACORT: A Compact Object Relation Transformer for Parameter Efficient Image Captioning
+citation	219635470	245537457	0	Synchronized Audio-Visual Frames with Fractional Positional Encoding for Transformers in Video-to-Text Translation
+citation	219635470	245537675	0	Extended Self-Critical Pipeline for Transforming Videos to Text (TRECVID-VTT Task 2021) - Team: MMCUniAugsburg
+citation	219635470	245424641	24	Cross Modal Retrieval with Querybank Normalisation
+citation	219635470	245218943	7	TransZero++: Cross Attribute-Guided Transformer for Zero-Shot Learning
+citation	219635470	245187599	4	Efficient Channel Attention Based Encoder–Decoder Approach for Image Captioning in Hindi
+citation	219635470	246532479	0	Image Captioning Based on An Improved Transformer with IoU Position Encoding
+citation	219635470	245124461	15	MAGIC: Multimodal relAtional Graph adversarIal inferenCe for Diverse and Unpaired Text-based Image Captioning
+citation	219635470	245117748	1	Visual Transformers with Primal Object Queries for Multi-Label Image Classification
+citation	219635470	245117789	29	Injecting Semantic Concepts into End-to-End Image Captioning
+citation	219635470	244896293	7	Hybrid Instance-aware Temporal Fusion for Online Video Instance Segmentation
+citation	219635470	244896547	29	TransZero: Attribute-guided Transformer for Zero-Shot Learning
+citation	219635470	244798910	4	Object-Centric Unsupervised Image Captioning
+citation	219635470	244862941	17	Aligning Source Visual and Target Language Domains for Unpaired Video Captioning
+citation	219635470	245205987	9	A CNN-transformer hybrid approach for decoding visual neural activity into text
+citation	219635470	240358907	2	Language Based Image Quality Assessment
+citation	219635470	244728216	14	Monte Carlo denoising via auxiliary feature guided self-attention
+citation	219635470	245839068	6	S2TD: A Tree-Structured Decoder for Image Paragraph Captioning
+citation	219635470	244556055	0	An Implementation of the "Guess Who?" Game Using CLIP
+citation	219635470	253176366	0	A Picture is Worth a Thousand Words: Using Cross-Modal Transformers and Variational AutoEncoders to Generate Images from Text
+citation	219635470	244714558	50	ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic
+citation	219635470	244729197	8	Neural attention for image captioning: review of outstanding methods
+citation	219635470	244527510	97	Scaling Up Vision-Language Pretraining for Image Captioning
+citation	219635470	247778870	6	Universal Captioner: Inducing Content-Style Separation in Vision-and-Language Model Training
+citation	219635470	246289766	4	Memory transformer with hierarchical attention for long document processing
+citation	219635470	244568974	16	A deep learning‐based image captioning method to automatically generate comprehensive explanations of bridge damage
+citation	219635470	244478553	7	L-Verse: Bidirectional Generation Between Image and Text
+citation	219635470	244092642	11	Bi-Directional Co-Attention Network for Image Captioning
+citation	219635470	243847892	35	Auto-Encoding Knowledge Graph for Unsupervised Medical Report Generation
+citation	219635470	244793492	5	Improving image captioning with Pyramid Attention and SC-GAN
+citation	219635470	239768222	4	Bangla Image Caption Generation through CNN-Transformer based Encoder-Decoder Network
+citation	219635470	244621925	0	RNIC-A retrospect network for image captioning
+citation	219635470	239012063	8	Direction Relation Transformer for Image Captioning
+citation	219635470	239011865	5	Latent Memory-augmented Graph Transformer for Visual Storytelling
+citation	219635470	239011704	33	Unifying Multimodal Transformer for Bi-directional Image and Text Generation
+citation	219635470	245802424	2	An Information Multiplexed Encoder-Decoder Network for Image Captioning in Hindi
+citation	219635470	239016866	10	Multimodal Dialogue Response Generation
+citation	219635470	239017032	2	Self-Annotated Training for Controllable Image Captioning
+citation	219635470	239009900	8	Guiding Visual Question Generation
+citation	219635470	238582778	9	Semi-Autoregressive Image Captioning
+citation	219635470	238419366	7	End-to-End Supermask Pruning: Learning to Prune Image Captioning Models
+citation	219635470	238253345	10	Geometry Attention Transformer with Position-aware LSTMs for Image Captioning
+citation	219635470	238634504	7	Topic Scene Graph Generation by Attention Distillation from Caption
+citation	219635470	239003783	8	SD-Net: joint surgical gesture recognition and skill assessment
+citation	219635470	244100442	20	Learning Unsupervised Metaformer for Anomaly Detection
+citation	219635470	244127479	46	3DVG-Transformer: Relation Modeling for Visual Grounding on Point Clouds
+citation	219635470	244430079	4	Partial Off-policy Learning: Balance Accuracy and Diversity for Human-Oriented Image Captioning
+citation	219635470	246558610	2	AESOP: Abstract Encoding of Stories, Objects, and Pictures
+citation	219635470	244531602	10	MedSkip: Medical Report Generation Using Skip Connections and Integrated Attention
+citation	219635470	238215724	1	Geometry-Entangled Visual Semantic Transformer for Image Captioning
+citation	219635470	238198699	5	CIDEr-R: Robust Consensus-based Image Description Evaluation
+citation	219635470	237571512	3	Towards Joint Intent Detection and Slot Filling via Higher-order Attention
+citation	219635470	237563113	1	Cross modification attention-based deliberation model for image captioning
+citation	219635470	236478107	15	Multimodal Incremental Transformer with Visual Grounding for Visual Dialogue Generation
+citation	219635470	236478170	20	GoG: Relation-aware Graph-over-Graph Network for Visual Dialog
+citation	219635470	237286569	1	An Interpretable Framework for Drug-Target Interaction with Gated Cross Attention
+citation	219635470	237532496	4	Label-Attention Transformer with Geometrically Coherent Objects for Image Captioning
+citation	219635470	237492247	10	Learning to Ground Visual Objects for Visual Dialog
+citation	219635470	240543355	5	Image captioning with adaptive incremental global context attention
+citation	219635470	237491998	1	Partially-supervised novel object captioning leveraging context from paired data
+citation	219635470	240536776	4	An Attentive Fourier-Augmented Image-Captioning Transformer
+citation	219635470	239845359	0	A deep dense captioning framework with joint localization and contextual reasoning
+citation	219635470	238862913	8	Decoding Methods in Neural Language Generation: A Survey
+citation	219635470	238253369	12	Zero-shot Natural Language Video Localization
+citation	219635470	237291550	369	SimVLM: Simple Visual Language Model Pretraining with Weak Supervision
+citation	219635470	237278308	17	Auto-Parsing Network for Image Captioning and Visual Question Answering
+citation	219635470	237260163	9	Group-based Distinctive Image Captioning with Memory Attention
+citation	219635470	237195095	19	X-modaler: A Versatile and High-performance Codebase for Cross-modal Analytics
+citation	219635470	236924384	32	Dual Graph Convolutional Networks with Transformer and Curriculum Learning for Image Captioning
+citation	219635470	236924276	26	TransRefer3D: Entity-and-Relation Aware Transformer for Fine-Grained 3D Visual Grounding
+citation	219635470	236915931	5	Generative image transformer (GIT): unsupervised continuous image generative and transformable model for [123I]FP-CIT SPECT images
+citation	219635470	236772372	7	Distributed Attention for Grounded Image Captioning
+citation	219635470	236493197	18	ReFormer: The Relational Transformer for Image Captioning
+citation	219635470	236428934	11	Boosting Entity-aware Image Captioning with Multi-modal Knowledge Graph
+citation	219635470	237247048	0	Saliency based Subject Selection for Diverse Image Captioning
+citation	219635470	236318328	12	Class-Incremental Domain Adaptation with Smoothing and Calibration for Surgical Report Generation
+citation	219635470	236155195	18	CL4AC: A Contrastive Loss for Audio Captioning
+citation	219635470	237597632	15	Attentive Contextual Network for Image Captioning
+citation	219635470	244772950	53	From Show to Tell: A Survey on Deep Learning-Based Image Captioning
+citation	219635470	235898907	6	Surgical Instruction Generation with Transformers
+citation	219635470	235694478	3	Egocentric Image Captioning for Privacy-Preserved Passive Dietary Intake Monitoring
+citation	219635470	235308013	6	Global-Attention-Based Neural Networks for Vision Language Intelligence
+citation	219635470	235670217	2	Contrastive Semantic Similarity Learning for Image Captioning Evaluation with Intrinsic Auto-encoder
+citation	219635470	235669729	5	Unified Questioner Transformer for Descriptive Question Generation in Goal-Oriented Visual Dialogue
+citation	219635470	235658160	6	Saying the Unseen: Video Descriptions via Dialog Agents
+citation	219635470	235489710	10	TCIC: Theme Concepts Learning Cross Language and Vision for Image Captioning
+citation	219635470	235458223	9	Semi-Autoregressive Transformer for Image Captioning
+citation	219635470	235435817	3	Kernel Identification Through Transformers
+citation	219635470	235422047	37	Contrastive Attention for Automatic Chest X-ray Report Generation
+citation	219635470	235368340	262	A Survey of Transformers
+citation	219635470	235313922	9	SMURF: SeMantic and linguistic UndeRstanding Fusion for Caption Evaluation via Typicality Analysis
+citation	219635470	235313880	5	Learning to Select: A Fully Attentive Approach for Novel Object Captioning
+citation	219635470	235298813	10	Context-Aware Graph Inference With Knowledge Distillation for Visual Dialog
+citation	219635470	235702714	85	RSTNet: Captioning with Adaptive Attention on Visual and Non-Visual Words
+citation	219635470	235703340	14	A Self-boosting Framework for Automated Radiographic Report Generation
+citation	219635470	234821262	14	Image captioning in Hindi language using transformer networks
+citation	219635470	235097492	0	Validity-Based Sampling and Smoothing Methods for Multiple Reference Image Captioning
+citation	219635470	235414966	39	ELSA: Hardware-Software Co-design for Efficient, Lightweight Self-Attention Mechanism in Neural Networks
+citation	219635470	235703415	15	Improving OCR-based Image Captioning by Incorporating Geometrical Relationship
+citation	219635470	235719012	44	Your “Flamingo” is My “Bird”: Fine-Grained, or Not
+citation	219635470	235719338	16	Image Change Captioning by Learning from an Auxiliary Task
+citation	219635470	234763111	1	Dependent Multi-Task Learning with Causal Intervention for Image Captioning
+citation	219635470	235306184	33	VIVO: Visual Vocabulary Pre-Training for Novel Object Captioning
+citation	219635470	235306391	12	Memory-Augmented Image Captioning
+citation	219635470	235306635	13	Partially Non-Autoregressive Image Captioning
+citation	219635470	234482635	13	Connecting What to Say With Where to Look by Modeling Human Attention Traces
+citation	219635470	234341935	2	Matching Visual Features to Hierarchical Semantic Topics for Image Paragraph Captioning
+citation	219635470	233864790	4	Exploring Explicit And Implicit Visual Relationships For Image Captioning
+citation	219635470	233544304	23	Exploring region relationships implicitly: Image captioning with visual relationship attention
+citation	219635470	247779362	1	RelTransformer: A Transformer-Based Long-Tail Visual Relationship Recognition
+citation	219635470	233347033	9	Aerial scene understanding in the wild: Multi-scene recognition via prototype-based memory networks
+citation	219635470	235077637	1	Pretrained Word Embeddings for Image Captioning
+citation	219635470	233307298	8	Detector-Free Weakly Supervised Grounding by Separation
+citation	219635470	233231301	1	Continual learning in cross-modal retrieval
+citation	219635470	233529437	6	Image captioning via proximal policy optimization
+citation	219635470	232428142	14	Learning Domain Adaptation with Model Calibration for Surgical Report Generation in Robotic Surgery
+citation	219635470	232380403	8	Describing and Localizing Multiple Changes with Transformers
+citation	219635470	232240625	18	Dense Interaction Learning for Video-based Person Re-identification
+citation	219635470	233625560	12	A Hindi Image Caption Generation Framework Using Deep Learning
+citation	219635470	232168618	16	Iterative Shrinking for Referring Expression Grounding Using Deep Reinforcement Learning
+citation	219635470	232135026	60	Causal Attention for Vision-Language Tasks
+citation	219635470	235351128	62	VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning
+citation	219635470	231979557	18	Progressive Transformer-Based Generation of Radiology Reports
+citation	219635470	231951742	348	Conceptual 12M: Pushing Web-Scale Image-Text Pre-Training To Recognize Long-Tail Visual Concepts
+citation	219635470	231719581	8	The Role of Syntactic Planning in Compositional Image Captioning
+citation	219635470	231698660	3	ECOL-R: Encouraging Copying in Novel Object Captioning with Reinforcement Learning
+citation	219635470	231663439	8	Vocabulary-Wide Credit Assignment for Training Image Captioning Models
+citation	219635470	231639297	46	ArtEmis: Affective Language for Visual Art
+citation	219635470	231632752	103	Dual-Level Collaborative Transformer for Image Captioning
+citation	219635470	231627699	1	Exploration of Visual Features and their weighted-additive fusion for Video Captioning
+citation	219635470	229152503	78	Improving Image Captioning by Leveraging Intra- and Inter-layer Global Representation in Transformer Network
+citation	219635470	228169159	17	Cross-Domain Image Captioning via Cross-Modal Retrieval and Model Adaptation
+citation	219635470	231684980	0	Joint Common Sense and Relation Reasoning for Dense Relational Captioning
+citation	219635470	227305513	48	Scan2Cap: Context-aware Dense Captioning in RGB-D Scans
+citation	219635470	229405361	3	Better Understanding: Stylized Image Captioning with Style Attention and Adversarial Training
+citation	219635470	227227779	312	AdaBins: Depth Estimation Using Adaptive Bins
+citation	219635470	233992838	2	A Survey on Different Deep Learning Architectures for Image Captioning
+citation	219635470	227014514	1	Your "Labrador" is My "Dog": Fine-Grained, or Not
+citation	219635470	226307260	689	A Review of Uncertainty Quantification in Deep Learning: Techniques, Applications and Challenges
+citation	219635470	226254547	19	DTGAN: Dual Attention Generative Adversarial Networks for Text-to-Image Generation
+citation	219635470	226227108	18	Diverse Image Captioning with Context-Object Split Latent Spaces
+citation	219635470	225062212	3	Show and Speak: Directly Synthesize Spoken Description of Images
+citation	219635470	224803298	54	Improving Factual Completeness and Consistency of Image-to-Text Radiology Report Generation
+citation	219635470	222278395	42	Cross-Modal Relation-Aware Networks for Audio-Visual Event Localization
+citation	219635470	222278116	5	VideoTRM: Pre-training for Video Captioning Challenge 2020
+citation	219635470	222278188	10	Visual Relation of Interest Detection
+citation	219635470	225160988	2	Learn and Tell: Learning Priors for Image Caption Generation
+citation	219635470	222125307	270	Contrastive Learning of Medical Visual Representations from Paired Images and Text
+citation	219635470	222066574	4	Teacher-Critical Training Strategies for Image Captioning
+citation	219635470	221995614	49	VIVO: Surpassing Human Performance in Novel Object Captioning with Visual Vocabulary Pre-Training
+citation	219635470	252547679	1	Denoising Large-Scale Image Captioning from Alt-text Data Using Content Selection Models
+citation	219635470	221640858	0	Weakly Supervised Content Selection for Improved Image Captioning
+citation	219635470	225327419	1	Image Caption Generation via Unified Retrieval and Generation-Based Method
+citation	219635470	225238566	17	Text Augmentation Using BERT for Image Captioning
+citation	219635470	221319740	3	Attr2Style: A Transfer Learning Approach for Inferring Fashion Styles via Apparel Attributes
+citation	219635470	220935903	0	Pre-training for Video Captioning Challenge 2020 Summary
+citation	219635470	220525530	11	Explore and Explain: Self-supervised Navigation and Recounting
+citation	219635470	220496733	22	RATT: Recurrent Attention to Transient Tasks for Continual Image Captioning
+citation	219635470	220350312	11	A unified cycle-consistent neural model for text and image retrieval
+citation	219635470	220045419	25	Improving Image Captioning Evaluation by Considering Inter References Variance
+citation	219635470	219966386	0	Off-Policy Self-Critical Training for Transformer in Visual Paragraph Generation
+citation	219635470	251903722	0	Rethinking and Improving Natural Language Generation with Layer-Wise Multi-View Decoding
+citation	219635470	216056244	6	ParaCNN: Visual Paragraph Generation via Adversarial Twin Contextual CNNs
+citation	219635470	214802871	6	B-SCST: Bayesian Self-Critical Sequence Training for Image Captioning
+citation	219635470	216562682	4	A Novel Attention-based Aggregation Function to Combine Vision and Language
+citation	219635470	211083022	1	Component Analysis for Visual Question Answering Architectures
+citation	219635470	236882711	14	Explain and improve: LRP-inference fine-tuning for image captioning models
+citation	219635470	209862061	5	Understanding Image Captioning Models beyond Visualizing Attention
+citation	219635470	202541612	31	A Semantics-Assisted Video Captioning Model Trained With Scheduled Sampling
+citation	219635470	38142936	0	Message from Program Chairs
+citation	219635470	256800128	0	Semantic-Guided Selective Representation for Image Captioning
+citation	219635470	257465202	0	Affective Image Captioning for Visual Artworks Using Emotion-Based Cross-Attention Mechanisms
+citation	219635470	257436138	0	EfficientNet-Transformer for image captioning in Bahasa
+citation	219635470	258287955	0	Semantic Representations With Attention Networks for Boosting Image Captioning
+citation	219635470	258685514	0	CLIP-VG: Self-paced Curriculum Adapting of CLIP via Exploiting Pseudo-Language Labels for Visual Grounding
+citation	219635470	245631613	2	Cycle-Free Weakly Referring Expression Grounding With Self-Paced Learning
+citation	219635470	259144857	0	Grounded Image Captioning in Top-down View
+citation	219635470	248780552	1	Combine to Describe: Evaluating Compositional Generalization in Image Captioning
+citation	219635470	253181144	0	Dense Captioning Objects in 3D Environments using Natural Language
+citation	219635470	248780363	9	ViLMedic: a framework for research at the intersection of vision and language in medical AI
+citation	219635470	252715488	0	Progressive Denoising Model for Fine-Grained Text-to-Image Generation
+citation	219635470	231620651	3	Prophet Attention: Predicting Attention with Future Attention for Improved Image Captioning
+citation	219635470	238639167	38	Multimodal research in vision and language: A review of current and emerging trends
+citation	219635470	245650923	1	Layer-Wise Multi-View Decoding for Improved Natural Language Generation
+citation	219635470	246889796	2	Using Neural Encoder-Decoder Models With Continuous Outputs for Remote Sensing Image Captioning
+citation	219635470	247516866	0	Learning to Automatically Generate Accurate ECG Captions
+citation	219635470	248392190	0	SceneTrilogy: On Scene Sketches and its Relationship with Text and Photo
+citation	219635470	248780118	10	Reinforced Cross-modal Alignment for Radiology Report Generation
+citation	219635470	248780337	4	Textomics: A Dataset for Genomics Data Summary Generation
+citation	219635470	248780026	1	Memory-aligned Knowledge Graph for Clinically Accurate Radiology Image Report Generation
+citation	219635470	250242120	0	VisualGPT Supplementary
+citation	219635470	250406694	0	Multi-Modal Image Captioning Ruth-Ann Armstrong
+citation	219635470	251521656	4	Exploring Transformer and Multilabel Classification for Remote Sensing Image Captioning
+citation	219635470	252124004	0	Generating Coherent and Informative Descriptions for Groups of Visual Objects and Categories: A Simple Decoding Approach
+citation	219635470	248358316	1	Image Captioning Model using Part-Of-Speech Guidance Module for Description with Diverse Vocabulary
+citation	219635470	247401381	1	EAES: Effective Augmented Embedding Spaces for Text-based Image Captioning
+citation	219635470	252624545	0	Examining the Effects of Language-and-Vision Data Augmentation for Generation of Descriptions of Human Faces
+citation	219635470	252818921	1	JPG - Jointly Learn to Align: Automated Disease Prediction and Radiology Report Generation
+citation	219635470	252818985	0	Building Joint Relationship Attention Network for Image-Text Generation
+citation	219635470	252698238	0	Important Region Estimation Using Image Captioning
+citation	219635470	253802643	0	Generating Landmark-based Manipulation Instructions from Image Pairs
+citation	219635470	254155480	0	Analysis of Knowledge Distillation on Image Captioning Models
+citation	219635470	254620737	1	Parallel Pathway Dense Video Captioning With Deformable Transformer
+citation	219635470	255149751	0	VieCap4H - VLSP 2021: A Transformer-Based Method for Healthcare Image Captioning in Vietnamese
+citation	219635470	256461120	0	Data-Efficient Playlist Captioning With Musical and Linguistic Knowledge
+citation	219635470	256461377	0	Disentangled Variational Topic Inference for Topic-Accurate Financial Report Generation
+citation	219635470	258463934	0	A Deep Learning based Framework for Image Paragraph Generation in Hindi
+citation	219635470	231985569	8	VisualGPT: Data-efficient Image Captioning by Balancing Visual Input and Linguistic Knowledge from Pretraining
+citation	219635470	235898873	36	From Show to Tell: A Survey on Image Captioning
+citation	219635470	244709303	9	Universal Captioner: Long-Tail Vision-and-Language Model Training through Content-Style Separation
+citation	219635470	246825621	3	AUDIO CAPTIONING WITH MESHED-MEMORY TRANSFORMER Technical Report
+citation	219635470	249226524	0	ARABIC IMAGECAPTIONINGUSINGDEEP LEARNINGWITHATTENTION by SABRIMONAF SABRI
+citation	219635470	245263638	3	Imageability- and Length-controllable Image Captioning
+citation	219635470	231977259	2	An Image Captioning Model Based on Bidirectional Depth Residuals and its Application
+citation	219635470	233394438	1	RelTransformer: Balancing the Visual Relationship Detection from Local Context, Scene and Memory
+citation	219635470	233877157	9	Text to Image Synthesis for Improved Image Captioning
+citation	219635470	235280321	2	A Survey on Recent Advances in Image Captioning
+citation	219635470	235307646	9	A Comprehensive Survey on Computational Aesthetic Evaluation of Visual Art Images: Metrics and Challenges
+citation	219635470	244404073	0	Supplementary Material for “ Semi-Autoregressive Transformer for Image Captioning ” 1
+citation	219635470	244531987	3	Leveraging CLIP for Image Emotion Recognition
+citation	219635470	245017831	9	Multi-modal Dependency Tree for Video Captioning
+citation	219635470	245355722	1	Relation Also Need Attention: Integrating Relation Information Into Image Captioning
+citation	219635470	244119615	1	Retrieval, Analogy, and Composition: A framework for Compositional Generalization in Image Captioning
+citation	219635470	248397068	16	Retrieval-Based Chest X-Ray Report Generation Using a Pre-trained Contrastive Language-Image Model
+citation	219635470	251047692	1	Applications of Reinforcement Learning and its Extension to Tactical Simulation Technologies
+citation	219635470	244522217	0	A Scientometric Visualization Analysis of Image Captioning Research from 2010 to 2020
+citation	219635470	240471209	5	Medical Image Captioning Model to Convey More Details: Methodological Comparison of Feature Difference Generation
+citation	219635470	252847558	1	A Scaled Encoder Decoder Network for Image Captioning in Hindi
+citation	219635470	253206889	0	Extendeded Self-Critical Pipeline for Transforming Videos to Text (VTT Task 2021) – Team: MMCUniAugsburg
+citation	219635470	259123789	0	Incorporating Textual Resources to Improve Visual Question Answering
+citation	219635470	228094087	0	A Sparse Transformer-Based Approach for Image Captioning
+citation	219635470	228097734	23	Automatic Image and Video Caption Generation With Deep Learning: A Concise Review and Algorithmic Overlap
+citation	219635470	227275661	28	Prophet Attention: Predicting Attention with Future Attention
+citation	219635470	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'FROM P AIRED I MAGES AND T EXT', 'citationCount': None}
+citation	219635470	248780337	4	Textomics: A Dataset for Genomics Data Summary Generation

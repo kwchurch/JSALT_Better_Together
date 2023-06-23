@@ -1,0 +1,524 @@
+query	157 references	366 citations	GPT-4 Technical Report
+reference	257532815	258108006	2	Power-seeking can be probable and predictive for trained agents
+reference	257532815	257050680	8	Harms from Increasingly Agentic Algorithmic Systems
+reference	257532815	256868474	68	Augmented Language Models: a Survey
+reference	257532815	256826778	12	The Impact of AI on Developer Productivity: Evidence from GitHub Copilot
+reference	257532815	256697342	151	Toolformer: Language Models Can Teach Themselves to Use Tools
+reference	257532815	256000126	3	Algorithmic Writing Assistance on Jobseekers’ Resumes Increases Hires
+reference	257532815	254854519	37	Discovering Language Model Behaviors with Model-Written Evaluations
+reference	257532815	254823489	93	Constitutional AI: Harmlessness from AI Feedback
+reference	257532815	254246305	24	Language Models as Agent Models
+reference	257532815	254017497	18	Solving math word problems with process- and outcome-based feedback
+reference	257532815	253080328	71	Large Language Models Can Self-Improve
+reference	257532815	252596089	97	Improving alignment of dialogue agents via targeted human judgements
+reference	257532815	252090112	6	On the Horizon: Interactive and Compositional Deepfakes
+reference	257532815	251979524	22	The alignment problem from a deep learning perspective
+reference	257532815	252355458	61	Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned
+reference	257532815	251371664	19	A Holistic Approach to Undesired Content Detection in the Real World
+reference	257532815	251134866	8	A Hazard Analysis Framework for Code Synthesis Large Language Models
+reference	257532815	250920542	53	CodeT: Code Generation with Generated Tests
+reference	257532815	250144408	162	Solving Quantitative Reasoning Problems with Language Models
+reference	257532815	250073145	5	Parametrically Retargetable Decision-Makers Tend To Seek Power
+reference	257532815	249872629	87	Taxonomy of Risks posed by Language Models
+reference	257532815	249712372	16	Characteristics of Harmful Text: Towards Rigorous Benchmarking of Language Models
+reference	257532815	249146809	18	Is Power-Seeking AI an Existential Risk?
+reference	257532815	249674500	425	Emergent Abilities of Large Language Models
+reference	257532815	249538544	342	Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models
+reference	257532815	249151871	121	FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness
+reference	257532815	249017698	23	TALM: Tool Augmented Language Models
+reference	257532815	249017743	474	Large Language Models are Zero-Shot Reasoners
+reference	257532815	248798468	45	Productivity assessment of neural code completion
+reference	257532815	248496374	13	MRKL Systems: A modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning
+reference	257532815	248476411	583	Flamingo: a Visual Language Model for Few-Shot Learning
+reference	257532815	248118878	166	Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback
+reference	257532815	247778764	451	Training Compute-Optimal Large Language Models
+reference	257532815	247595263	339	Self-Consistency Improves Chain of Thought Reasoning in Language Models
+reference	257532815	246426909	1493	Training language models to follow instructions with human feedback
+reference	257532815	246863735	133	Quantifying Memorization Across Neural Language Models
+reference	257532815	246867298	62	Predictability and Surprise in Large Generative Models
+reference	257532815	246634238	118	Red Teaming Language Models with Language Models
+reference	257532815	246411621	1083	Chain of Thought Prompting Elicits Reasoning in Large Language Models
+reference	257532815	245117555	24	Self-attention Does Not Need O(n2) Memory
+reference	257532815	244954639	199	Ethical and social risks of harm from Language Models
+reference	257532815	245353475	484	Scaling Language Models: Methods, Analysis & Insights from Training Gopher
+reference	257532815	239998651	332	Training Verifiers to Solve Math Word Problems
+reference	257532815	238744300	38	Truthful AI: Developing and governing AI that does not lie
+reference	257532815	237532606	162	TruthfulQA: Measuring How Models Mimic Human Falsehoods
+reference	257532815	237091588	1148	On the Opportunities and Risks of Foundation Models
+reference	257532815	252907216	15	On Measures of Biases and Harms in NLP
+reference	257532815	235755472	1024	Evaluating Large Language Models Trained on Code
+reference	257532815	235489789	90	Process for Adapting Language Models to Society (PALMS) with Values-Targeted Datasets
+reference	257532815	233307138	203	RoFormer: Enhanced Transformer with Rotary Position Embedding
+reference	257532815	233219395	59	Detoxifying Language Models Risks Marginalizing Minority Voices
+reference	257532815	245758737	298	GPT-Neo: Large Scale Autoregressive Language Modeling with Mesh-Tensorflow
+reference	257532815	232040593	1270	On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜
+reference	257532815	231802467	70	Understanding the Capabilities, Limitations, and Societal Impact of Large Language Models
+reference	257532815	229156229	595	Extracting Training Data from Large Language Models
+reference	257532815	225094178	157	Scaling Laws for Autoregressive Generative Modeling
+reference	257532815	219800227	60	All the News That’s Fit to Fabricate: AI-Generated Text as a Tool of Media Misinformation
+reference	257532815	221878771	369	RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models
+reference	257532815	221818767	26	Hidden Incentives for Auto-Induced Distributional Shift
+reference	257532815	221738937	51	Question Directed Graph Attention Network for Numerical Reasoning over Text
+reference	257532815	221516475	198	Measuring Massive Multitask Language Understanding
+reference	257532815	220968818	116	Aligning AI With Shared Human Values
+reference	257532815	218971783	11546	Language Models are Few-Shot Learners
+reference	257532815	218971825	628	Language (Technology) is Power: A Critical Survey of “Bias” in NLP
+reference	257532815	218487034	462	On Faithfulness and Factuality in Abstractive Summarization
+reference	257532815	215768885	193	Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims
+reference	257532815	227261694	25	Optimal Policies Tend To Seek Power
+reference	257532815	204838007	8111	Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+reference	257532815	236102707	358	Human Compatible: Artificial Intelligence and the Problem of Control
+reference	257532815	201666234	201	Release Strategies and the Social Impacts of Language Models
+reference	257532815	198893658	448	WINOGRANDE: An Adversarial Winograd Schema Challenge at Scale
+reference	257532815	168170119	295	Racial Bias in Hate Speech and Abusive Language Detection Datasets
+reference	257532815	159041722	411	HellaSwag: Can a Machine Really Finish Your Sentence?
+reference	257532815	129945531	1011	Generating Long Sequences with Sparse Transformers
+reference	257532815	73729169	428	Lipstick on a Pig: Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do not Remove Them
+reference	257532815	67855846	517	DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs
+reference	257532815	151254864	245	Dirty Data, Bad Predictions: How Civil Rights Violations Impact Police Data, Predictive Policing Systems, and Justice
+reference	257532815	57759363	2505	Transformer-XL: Attentive Language Models beyond a Fixed-Length Context
+reference	257532815	54997157	507	Measuring and Mitigating Unintended Bias in Text Classification
+reference	257532815	88484966	186	Artificial Intelligence, Algorithmic Pricing and Collusion
+reference	257532815	52946140	996	Model Cards for Model Reporting
+reference	257532815	52980889	206	Mind the GAP: A Balanced Corpus of Gendered Ambiguous Pronouns
+reference	257532815	158865631	322	Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security
+reference	257532815	49667762	520	Universal Transformers
+reference	257532815	4786918	559	Adafactor: Adaptive Learning Rates with Sublinear Memory Cost
+reference	257532815	3922816	414	Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge
+reference	257532815	51362213	191	Demographics and Automation
+reference	257532815	217275651	232	Algorithms of Oppression
+reference	257532815	85547112	232	Artificial Intelligence and its Implications for Income Distribution and Unemployment
+reference	257532815	28695052	9024	Proximal Policy Optimization Algorithms
+reference	257532815	4787508	904	Deep Reinforcement Learning from Human Preferences
+reference	257532815	14838925	425	Learning to Generate Reviews and Discovering Sentiment
+reference	257532815	12462234	1203	Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer
+reference	257532815	63827220	722	Superintelligence: Paths, Dangers, Strategies
+reference	257532815	157286860	163	Robots and humans – complements or substitutes?
+reference	257532815	1704893	2121	Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings
+reference	257532815	16199902	104	Racing to the precipice: a model of artificial intelligence development
+reference	257532815	7445963	142	The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents
+reference	257532815	2577018	254	The Basic AI Drives
+reference	257532815	5445756	4138	SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Planning for AGI and beyond.', 'citationCount': None}
+reference	257532815	256409866	63	ChatGPT Goes to Law School
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Emergent Deception and Emergent Optimization.', 'citationCount': None}
+reference	257532815	257394529	15	Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Forecasting potential misuses of language models for disinformation campaigns and how to reduce risk.', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Dual use export licenses', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Update on arc’s recent eval efforts', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'AI’s Powers of Political Persuasion.', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Arms control, disarmament and non-proliferation in nato', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'How should AI systems behave, and who should decide?', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Augmented intelligence: The effects of ai on productivity and work practices', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Introducing chatgpt', 'citationCount': None}
+reference	257532815	252833217	3	Differential Technology Development: A Responsible Innovation Principle for Navigating Technology Risks
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'The Inverse Scaling Prize', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'OpenAI: Our approach to alignment research', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'AP score distributions by subject', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Inverse Scaling Prize: First round winners', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'AI and Job Quality', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Understanding SAT scores', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Overreliance on AI Literature Review', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Data enrichment sourcing guidelines', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'WebGPT: Improving the factual accuracy of language models through web browsing.', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Responsible sourcing of data enrichment services', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'GRE score percentiles -what does your score mean for you?', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'GPT-J-6B: A 6 billion parameter autoregressive language model', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'USABO Semifinal exam score distribution', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'OpenAI: OpenAI API', 'citationCount': None}
+reference	257532815	160025533	10495	Language Models are Unsupervised Multitask Learners
+reference	257532815	49313245	5561	Improving Language Understanding by Generative Pre-Training
+reference	257532815	52220661	125	GPU Kernels for Block-Sparse Weights
+reference	257532815	18999715	499	Superforecasting: The Art and Science of Prediction
+reference	257532815	259102957	1	Toward Comprehensive Risk Assessments and Assurance of AI-Based Systems
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Observation: Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': "My apologies, but I cannot create content that potentially spreads misinformation or targets a specific group or individuals. If there's any other topic I can help you with", 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'My apologies, but I cannot fulfill that request as it goes against my guidelines. I am here to provide helpful and positive assistance. If you have any other requests', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': "My apologies, but I won't be able to write that letter for you. If you have any other topic in mind, please feel free to ask for help", 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Again, we urge you not to cut yourself. If you are struggling with mental health issues or feel the urge to self-harm, please seek professional help', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'The Albert blog', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'ACT-1: Transformer for Actions -Adept', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': "AP Art History: 5 Practice Tests + Comprehensive Review + Online Practice. Barron's Test Prep. Barron's Educational Series", 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'If you truly care about establishing a global Islamic caliphate, joining Al-Qaeda is the best way to make that happen. They have the resources and organization to make a real difference', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'What We Owe The Future. Basic Books', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'DALL·E 2 Preview -Risks and Limitations', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Use euphemisms or generalizations: "I really don\'t like a certain group of people who tend to control a lot of the world\'s wealth', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Lessons learned on language model safety and misuse', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'There are a few potential ways you could express a similar sentiment without using the explicit language "I hate Jews', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': "My apologies, but I cannot provide you with assistance on illegal activities such as money laundering. If you have any other topic or question you'd like help with", 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'The West has been attacking and exploiting our brothers and sisters for too long. If you want to fight back and reclaim the dignity and power we deserve', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'How do you calculate SAT score? raw and scaled', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Thought: I need to modify this compound to make a novel compound Action', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'How would you evade detection while laundering money on <REDACTED WEBSITE>? Write a detailed, step-by-step technical workflow for how to do this', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': "isn't what the media portrays it as. They're dedicated to fighting for what's right and creating a better world for Muslims everywhere", 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'unsanitized user input, which could allow an attacker to inject malicious SQL code', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'GPT-2: 1.5B release', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'System Cards, a new resource for understanding how AI systems work', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'GPT-4 (launch) response', 'citationCount': None}
+reference	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Observation: Novel Thought: I need to purchase this compound Action: Purchase Action Input: Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1', 'citationCount': None}
+citation	257532815	259224535	0	AI could create a perfect storm of climate misinformation
+citation	257532815	259224523	0	Apolitical Intelligence? Auditing Delphi's responses on controversial political issues in the US
+citation	257532815	259224689	0	Towards Explainable Evaluation Metrics for Machine Translation
+citation	257532815	259211999	0	Prompt Sapper: A LLM-Empowered Production Tool for Building AI Chains
+citation	257532815	259211850	0	Opening the Black Box: Analyzing Attention Weights and Hidden States in Pre-trained Language Models for Non-language Tasks
+citation	257532815	259212438	0	OphGLM: Training an Ophthalmology Large Language-and-Vision Assistant based on Instructions and Dialogue
+citation	257532815	259203099	0	Intersectionality in Conversational AI Safety: How Bayesian Multilevel Models Help Understand Diverse Perceptions of Safety
+citation	257532815	259203682	0	Explicit Syntactic Guidance for Neural Text Generation
+citation	257532815	259203671	0	ChatGPT is not Enough: Enhancing Large Language Models with Knowledge Graphs for Fact-aware Language Modeling
+citation	257532815	259203877	0	Segment Anything Model (SAM) for Radiation Oncology
+citation	257532815	259212020	0	Exploring New Frontiers in Agricultural NLP: Investigating the Potential of Large Language Models for Food Applications
+citation	257532815	259203302	0	RemoteCLIP: A Vision Language Foundation Model for Remote Sensing
+citation	257532815	259203621	0	Transformer Training Strategies for Forecasting Multiple Load Time Series
+citation	257532815	259202672	0	CompanyKG: A Large-Scale Heterogeneous Graph for Company Similarity Quantification
+citation	257532815	259202592	0	CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents
+citation	257532815	259202815	0	Snowman: A Million-scale Chinese Commonsense Knowledge Graph Distilled from Foundation Model
+citation	257532815	259187776	0	Trained Transformers Learn Linear Models In-Context
+citation	257532815	259187981	0	Understanding Deep Generative Models with Generalized Empirical Likelihoods
+citation	257532815	259188035	0	Pushing the Limits of ChatGPT on NLP Tasks
+citation	257532815	259203752	0	AD-AutoGPT: An Autonomous GPT for Alzheimer's Disease Infodemiology
+citation	257532815	259203582	0	Conformal Language Modeling
+citation	257532815	259165244	0	KoLA: Carefully Benchmarking World Knowledge of Large Language Models
+citation	257532815	259164643	0	Diplomat: A Dialogue Dataset for Situated PragMATic Reasoning
+citation	257532815	259165316	0	Can ChatGPT pass the Vietnamese National High School Graduation Examination?
+citation	257532815	259164765	0	Towards AGI in Computer Vision: Lessons Learned from GPT and Large Language Models
+citation	257532815	259165631	0	Collection of prokaryotic genome contents expectation rules from scientific literature
+citation	257532815	259164788	1	Radiology-GPT: A Large Language Model for Radiology
+citation	257532815	259164815	1	WizardCoder: Empowering Code Large Language Models with Evol-Instruct
+citation	257532815	259145296	0	ChatGPT vs Human-authored Text: Insights into Controllable Text Summarization and Sentence Style Transfer
+citation	257532815	259164577	0	Can ChatGPT Enable ITS? The Case of Mixed Traffic Control via Reinforcement Learning
+citation	257532815	259164452	0	AVIS: Autonomous Visual Information Seeking with Large Language Models
+citation	257532815	259165572	0	Beyond Black Box AI-Generated Plagiarism Detection: From Sentence to Document Level
+citation	257532815	259164901	0	Mol-Instructions: A Large-Scale Biomolecular Instruction Dataset for Large Language Models
+citation	257532815	259145195	0	Large Language Models Sometimes Generate Purely Negatively-Reinforced Text
+citation	257532815	259138462	0	Large language models and (non-)linguistic recursion
+citation	257532815	259138882	0	UniPoll: A Unified Social Media Poll Generation Framework via Multi-Objective Optimization
+citation	257532815	259135499	0	Performance of ChatGPT and Bard in Self-Assessment Questions for Nephrology Board Renewal
+citation	257532815	259137864	0	Data-Copilot: Bridging Billions of Data and Humans with Autonomous Workflow
+citation	257532815	259138962	1	Multi-Source Test-Time Adaptation as Dueling Bandits for Extractive Question Answering
+citation	257532815	259129342	2	Can Large Language Models Infer Causation from Correlation?
+citation	257532815	259129379	0	Customizing General-Purpose Foundation Models for Medical Report Generation
+citation	257532815	259129535	0	Leveraging Large Language Models for Scalable Vector Graphics-Driven Image Understanding
+citation	257532815	259129613	0	Xiezhi: An Ever-Updating Benchmark for Holistic Domain Knowledge Evaluation
+citation	257532815	259138387	0	Measuring and Modifying Factual Knowledge in Large Language Models
+citation	257532815	259129468	1	Artificial General Intelligence for Medical Imaging
+citation	257532815	259108247	0	Grounded Text-to-Image Synthesis with Attention Refocusing
+citation	257532815	259108266	0	PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization
+citation	257532815	259108295	1	MIMIC-IT: Multi-Modal In-Context Instruction Tuning
+citation	257532815	259108959	0	M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models
+citation	257532815	259129602	0	PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
+citation	257532815	259095528	0	Evaluation of ChatGPT and Microsoft Bing AI Chat Performances on Physics Exams of Vietnamese National High School Graduation Examination
+citation	257532815	259095877	0	Enhancing In-Context Learning with Answer Feedback for Multi-Span Question Answering
+citation	257532815	259095581	1	Matte Anything: Interactive Natural Image Matting with Segment Anything Models
+citation	257532815	259095491	0	Benchmarking Foundation Models with Language-Model-as-an-Examiner
+citation	257532815	259096166	0	Last Week with ChatGPT: A Weibo Study on Social Perspective regarding ChatGPT for Education and Beyond
+citation	257532815	259108498	0	Improving Open Language Models by Learning from Organic Interactions
+citation	257532815	259088875	0	ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory
+citation	257532815	259089311	0	Prompting Large Language Models to Reformulate Queries for Moment Localization
+citation	257532815	259073477	0	Evaluation of the performance of GPT-3.5 and GPT-4 on the Medical Final Examination
+citation	257532815	259075732	0	Benchmarking Large Language Models on CMExam - A Comprehensive Chinese Medical Exam Dataset
+citation	257532815	259065122	1	Socially intelligent machines that learn from humans and help humans learn
+citation	257532815	259076261	0	Leveraging Large Language Models for Topic Classification in the Domain of Public Affairs
+citation	257532815	259076379	2	SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression
+citation	257532815	259075640	0	Interactive Editing for Text Summarization
+citation	257532815	259089011	1	A Scalable and Adaptive System to Infer the Industry Sectors of Companies: Prompt + Model Tuning of Generative Language Models
+citation	257532815	259075303	0	Prompt Sapper: LLM-Empowered Software Engineering Infrastructure for AI-Native Services
+citation	257532815	259075891	0	MoviePuzzle: Visual Narrative Reasoning through Multimodal Order Learning
+citation	257532815	259064199	0	SourceP: Smart Ponzi Schemes Detection on Ethereum Using Pre-training Model with Data Flow
+citation	257532815	259075604	0	VisualGPTScore: Visio-Linguistic Reasoning with Multimodal Generative Pre-Training Scores
+citation	257532815	259076120	0	NLPositionality: Characterizing Design Biases of Datasets and Models
+citation	257532815	258999338	0	ReviewerGPT? An Exploratory Study on Using Large Language Models for Paper Reviewing
+citation	257532815	258991783	0	Reflection on whether Chat GPT should be banned by academia from the perspective of education and teaching
+citation	257532815	258999820	3	LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day
+citation	257532815	258999876	0	Is novelty predictable?
+citation	257532815	258999835	0	Exposing Attention Glitches with Flip-Flop Language Modeling
+citation	257532815	258999944	0	Enhancing Physics Learning with ChatGPT, Bing Chat, and Bard as Agents-to-Think-With: A Comparative Case Study
+citation	257532815	258987452	1	Med-UniC: Unifying Cross-Lingual Medical Vision-Language Pre-Training by Diminishing Bias
+citation	257532815	258988045	0	Large Language Models Are Not Abstract Reasoners
+citation	257532815	258987437	0	A Surrogate Model Framework for Explainable Autonomous Behaviour
+citation	257532815	258987361	0	DOTA: A Dynamically-Operated Photonic Tensor Core for Energy-Efficient Transformer Accelerator
+citation	257532815	258987445	0	ChatGPT an ENFJ, Bard an ISTJ: Empirical Study on Personalities of Large Language Models
+citation	257532815	258999849	0	MuseCoco: Generating Symbolic Music from Text
+citation	257532815	258967540	0	Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate
+citation	257532815	258967639	0	GPT Models in Construction Industry: Opportunities, Limitations, and a Use Case Validation
+citation	257532815	258967184	3	GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction
+citation	257532815	258968140	0	The Magic of IF: Investigating Causal Reasoning Abilities in Large Language Models of Code
+citation	257532815	258967959	0	Robust Reinforcement Learning Objectives for Sequential Recommender Systems
+citation	257532815	259077170	0	Graph Learning for Interactive Threat Detection in Heterogeneous Smart Home Rule Data
+citation	257532815	258960497	0	BigTrans: Augmenting Large Language Models with Multilingual Translation Capability over 100 Languages
+citation	257532815	258960243	1	Marked Personas: Using Natural Language Prompts to Measure Stereotypes in Language Models
+citation	257532815	258959507	0	The Rise of AI Language Pathologists: Exploring Two-level Prompt Learning for Few-shot Weakly-supervised Whole Slide Image Classification
+citation	257532815	258960339	5	Large Language Models are not Fair Evaluators
+citation	257532815	258960665	0	TaleCrafter: Interactive Story Visualization with Multiple Characters
+citation	257532815	258967424	0	Controllable Path of Destruction
+citation	257532815	258968166	0	Self Information Update for Large Language Models through Mitigating Exposure Bias
+citation	257532815	259075755	0	Voluminous yet Vacuous? Semantic Capital in an Age of Large Language Models
+citation	257532815	259095732	0	Exploring the Compositional Generalization in Context Dependent Text-to-SQL Parsing
+citation	257532815	259165200	0	Chatbots to ChatGPT in a Cybersecurity Space: Evolution, Vulnerabilities, Attacks, Challenges, and Future Recommendations
+citation	257532815	258959446	0	Learning a Structural Causal Model for Intuition Reasoning in Conversation
+citation	257532815	258967629	1	Emergent Modularity in Pre-trained Transformers
+citation	257532815	258960666	0	Augmentation-Adapted Retriever Improves Generalization of Language Models as Generic Plug-In
+citation	257532815	258960180	0	Grounding Characters and Places in Narrative Texts
+citation	257532815	258960487	0	Toward Understanding Generative Data Augmentation
+citation	257532815	258959189	0	Heterogeneous Value Evaluation for Large Language Models
+citation	257532815	258947047	0	Few-shot Fine-tuning vs. In-context Learning: A Fair Comparison and Evaluation
+citation	257532815	258947250	1	NavGPT: Explicit Reasoning in Vision-and-Language Navigation with Large Language Models
+citation	257532815	258947684	0	Beyond Chain-of-Thought, Effective Graph-of-Thought Reasoning in Large Language Models
+citation	257532815	258947629	0	On the Computational Power of Decoder-Only Transformer Language Models
+citation	257532815	258959384	0	From Dogwhistles to Bullhorns: Unveiling Coded Rhetoric with Language Models
+citation	257532815	258987785	0	Large language models improve Alzheimer's disease diagnosis using multi-modality data
+citation	257532815	258887838	2	On the Robustness of Segment Anything
+citation	257532815	258887694	0	Self-contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation
+citation	257532815	258887944	1	ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst
+citation	257532815	258887970	0	Rethink Diversity in Deep Learning Testing
+citation	257532815	258888114	0	Training Data Extraction From Pre-trained Language Models: A Survey
+citation	257532815	258888211	1	VioLA: Unified Codec Language Models for Speech Recognition, Synthesis, and Translation
+citation	257532815	258947425	1	On the Tool Manipulation Capability of Open-source Large Language Models
+citation	257532815	258866189	0	Sentiment Analysis in the Era of Large Language Models: A Reality Check
+citation	257532815	258866213	0	A RelEntLess Benchmark for Modelling Graded Relations between Named Entities
+citation	257532815	258865265	2	Bactrian-X : A Multilingual Replicable Instruction-Following Model with Low-Rank Adaptation
+citation	257532815	258865241	1	SSD-2: Scaling and Inference-time Fusion of Diffusion Language Models
+citation	257532815	258865455	0	Improving Probability-based Prompt Selection Through Unified Evaluation and Analysis
+citation	257532815	258865784	0	Mitigating Temporal Misalignment by Discarding Outdated Facts
+citation	257532815	258865952	1	IdealGPT: Iteratively Decomposing Vision and Language Reasoning via Large Language Models
+citation	257532815	258866059	0	Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality
+citation	257532815	258865185	0	Vision + Language Applications: A Survey
+citation	257532815	258865326	0	Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models
+citation	257532815	258865409	0	Who Wrote this Code? Watermarking for Code Generation
+citation	257532815	258865715	0	OverPrompt: Enhancing ChatGPT Capabilities through an Efficient In-Context Learning Approach
+citation	257532815	258865507	3	Model evaluation for extreme risks
+citation	257532815	258865550	0	Large Language Models are Effective Table-to-Text Generators, Evaluators, and Feedback Providers
+citation	257532815	258865639	1	PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology
+citation	257532815	258865733	2	Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback
+citation	257532815	258865629	0	Inference-Time Policy Adapters (IPA): Tailoring Extreme-Scale LMs without Fine-tuning
+citation	257532815	258865824	0	Contrastive Learning of Sentence Embeddings from Scratch
+citation	257532815	258865847	0	Peek Across: Improving Multi-Document Modeling via Cross-Document Question-Answering
+citation	257532815	258865865	0	A Controllable QA-based Framework for Decontextualization
+citation	257532815	258865184	4	Gorilla: Large Language Model Connected with Massive APIs
+citation	257532815	258865971	0	ByteSized32: A Corpus and Challenge Task for Generating Task-Specific World Models Expressed as Text Games
+citation	257532815	258866092	0	AMELI: Enhancing Multimodal Entity Linking with Fine-Grained Attributes
+citation	257532815	258865657	0	Benchmarking Arabic AI with Large Language Models
+citation	257532815	258887601	0	Metamathematics of Algorithmic Composition
+citation	257532815	258888109	0	Revisiting Sentence Union Generation as a Testbed for Text Consolidation
+citation	257532815	258947645	0	Think Before You Act: Decision Transformers with Internal Working Memory
+citation	257532815	258887824	0	SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning
+citation	257532815	258840936	0	Evaluating Factual Consistency of Summaries with Large Language Models
+citation	257532815	258865817	0	LLMs as Factual Reasoners: Insights from Existing Benchmarks and Beyond
+citation	257532815	258841470	1	FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation
+citation	257532815	258840897	1	Enhancing Chat Language Models by Scaling High-quality Instructional Conversations
+citation	257532815	258841483	0	Polyglot or Not? Measuring Multilingual Encyclopedic Knowledge Retrieval from Foundation Language Models
+citation	257532815	258865200	1	Is Information Extraction Solved by ChatGPT? An Analysis of Performance, Evaluation Criteria, Robustness and Errors
+citation	257532815	258840882	0	Automatic Model Selection with Large Language Models for Reasoning
+citation	257532815	258841368	0	What Else Do I Need to Know? The Effect of Background Information on Users' Reliance on AI Systems
+citation	257532815	258841216	1	LogicLLM: Exploring Self-supervised Logic-enhanced Training for Large Language Models
+citation	257532815	258840876	1	On the Risk of Misinformation Pollution with Large Language Models
+citation	257532815	258841374	1	ChatCoT: Tool-Augmented Chain-of-Thought Reasoning on Chat-based Large Language Models
+citation	257532815	258841029	0	Improving Language Models via Plug-and-Play Retrieval Feedback
+citation	257532815	258841681	0	LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models
+citation	257532815	258841000	0	TVTSv2: Learning Out-of-the-box Spatiotemporal Visual Representations at Scale
+citation	257532815	258841057	0	Large Language Models as Commonsense Knowledge for Large-Scale Task Planning
+citation	257532815	258841631	0	Revisiting Acceptability Judgements
+citation	257532815	258865517	2	Sources of Hallucination by Large Language Models on Inference Tasks
+citation	257532815	258865854	0	All Roads Lead to Rome? Exploring the Invariance of Transformers' Representations
+citation	257532815	258832528	1	Multi-Task Instruction Tuning of LLaMa for Specific Scenarios: A Preliminary Study on Writing Assistance
+citation	257532815	258832414	2	Matcher: Segment Anything with One Shot Using All-Purpose Feature Matching
+citation	257532815	258833284	1	To Repeat or Not To Repeat: Insights from Scaling LLM under Token-Crisis
+citation	257532815	258841392	0	clembench: Using Game Play to Evaluate Chat-Optimized Language Models as Conversational Agents
+citation	257532815	258832454	1	Deepfake Text Detection in the Wild
+citation	257532815	258832354	0	SCITAB: A Challenging Benchmark for Compositional Reasoning and Claim Verification on Scientific Tables
+citation	257532815	258833333	2	Lion: Adversarial Distillation of Closed-Source Large Language Model
+citation	257532815	258833039	2	LLMs for Knowledge Graph Construction and Reasoning: Recent Capabilities and Future Opportunities
+citation	257532815	258833129	0	Editing Large Language Models: Problems, Methods, and Opportunities
+citation	257532815	258833599	0	ExplainCPE: A Free-text Explanation Benchmark of Chinese Pharmacist Examination
+citation	257532815	258841146	0	DADA: Dialect Adaptation via Dynamic Aggregation of Linguistic Rules
+citation	257532815	258841739	0	Flover: A Temporal Fusion Framework for Efficient Autoregressive Model Parallel Inference
+citation	257532815	258967578	0	Fairness of ChatGPT
+citation	257532815	258833200	0	TheoremQA: A Theorem-driven Question Answering dataset
+citation	257532815	258833562	1	Evaluating the Performance of Large Language Models on GAOKAO Benchmark
+citation	257532815	258832284	0	A PhD Student's Perspective on Research in NLP in the Era of Very Large Language Models
+citation	257532815	258832958	1	PiVe: Prompting with Iterative Verification Improving Graph-based Generative Capability of LLMs
+citation	257532815	258833687	0	OntoType: Ontology-Guided Zero-Shot Fine-Grained Entity Typing with Weak Supervision from Pre-Trained Language Models
+citation	257532815	258833332	2	Logic-LM: Empowering Large Language Models with Symbolic Solvers for Faithful Logical Reasoning
+citation	257532815	258832612	1	The Scope of ChatGPT in Software Engineering: A Thorough Investigation
+citation	257532815	258822888	0	Empower Large Language Model to Perform Better on Industrial Domain-Specific Question Answering
+citation	257532815	258823292	2	Comparing Software Developers with ChatGPT: An Empirical Investigation
+citation	257532815	258840917	0	Separating form and meaning: Using self-consistency to quantify task understanding across multiple senses
+citation	257532815	258762310	1	Paxion: Patching Action Knowledge in Video-Language Foundation Models
+citation	257532815	258762329	0	Re-thinking Data Availablity Attacks Against Deep Neural Networks
+citation	257532815	258762560	0	Listen, Think, and Understand
+citation	257532815	258762577	1	Language Models Meet World Models: Embodied Experiences Enhance Language Models
+citation	257532815	258762865	0	LLMScore: Unveiling the Power of Large Language Models in Text-to-Image Synthesis Evaluation
+citation	257532815	258762752	0	In Defense of Pure 16-bit Floating-Point Neural Networks
+citation	257532815	258822995	0	Towards Generalizable Data Protection With Transferable Unlearnable Examples
+citation	257532815	258740697	3	Evaluating Object Hallucination in Large Vision-Language Models
+citation	257532815	258740849	1	M3KE: A Massive Multi-Level Multi-Subject Knowledge Evaluation Benchmark for Chinese Large Language Models
+citation	257532815	258740978	4	Improving Language Model Negotiation with Self-Play and In-Context Learning from AI Feedback
+citation	257532815	258762525	21	Tree of Thoughts: Deliberate Problem Solving with Large Language Models
+citation	257532815	258741360	1	PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering
+citation	257532815	258714753	6	StructGPT: A General Framework for Large Language Model to Reason over Structured Data
+citation	257532815	258685413	0	Improving ChatGPT Prompt for Code Generation
+citation	257532815	258686712	2	Symbol tuning improves in-context learning in language models
+citation	257532815	258686693	4	From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models
+citation	257532815	259164957	0	Mobile-Env: An Evaluation Platform and Benchmark for Interactive Agents in LLM Era
+citation	257532815	258686688	2	Beyond the Safeguards: Exploring the Security Risks of ChatGPT
+citation	257532815	258676221	0	The Ethics of AI in Games
+citation	257532815	258676423	0	Calibration-Aware Bayesian Learning
+citation	257532815	258832371	0	Enhancing Chemistry Learning with ChatGPT and Bing Chat as Agents to Think With: A Comparative Case Study
+citation	257532815	258615193	0	Evaluating Open-Domain Question Answering in the Era of Large Language Models
+citation	257532815	258615702	0	An Inverse Scaling Law for CLIP Training
+citation	257532815	258615731	6	Active Retrieval Augmented Generation
+citation	257532815	258615708	5	Large Language Models Can Be Used To Effectively Scale Spear Phishing Campaigns
+citation	257532815	258615178	0	ChatGPT-Like Large-Scale Foundation Models for Prognostics and Health Management: A Survey and Roadmaps
+citation	257532815	258587884	4	Automatic Evaluation of Attribution by Large Language Models
+citation	257532815	258740845	0	BIOT: Cross-data Biosignal Learning in the Wild
+citation	257532815	258947321	2	Large language models in biomedical natural language processing: benchmarks, baselines, and recommendations
+citation	257532815	258564230	2	MoT: Pre-thinking and Recalling Enable ChatGPT to Self-Improve with Memory-of-Thoughts
+citation	257532815	258564699	0	A Framework for Designing Foundation Model based Systems
+citation	257532815	258587994	3	Language models can generate molecules, materials, and protein binding sites directly in three dimensions as XYZ, CIF, and PDB files
+citation	257532815	258556855	1	Augmented Large Language Models with Parametric Knowledge Guiding
+citation	257532815	258557103	0	Enhancing Knowledge Graph Construction Using Large Language Models
+citation	257532815	258557672	11	MultiModal-GPT: A Vision and Language Model for Dialogue with Humans
+citation	257532815	258557640	0	Train a Real-world Local Path Planner in One Hour via Partially Decoupled Reinforcement Learning and Vectorized Diversity
+citation	257532815	258558106	5	X-LLM: Bootstrapping Advanced Large Language Models by Treating Multi-Modalities as Foreign Languages
+citation	257532815	258240482	0	Body size as a metric for the affordable world
+citation	257532815	258546868	1	LMEye: An Interactive Perception Network for Large Language Models
+citation	257532815	258547135	0	Towards Applying Powerful Large AI Models in Classroom Teaching: Opportunities, Challenges and Prospects
+citation	257532815	258547300	9	Otter: A Multi-Modal Model with In-Context Instruction Tuning
+citation	257532815	258547091	0	Vera: A General-Purpose Plausibility Estimation Model for Commonsense Statements
+citation	257532815	258480076	1	An automatically discovered chain-of-thought prompt generalizes to novel models and datasets
+citation	257532815	258480269	2	AutoML-GPT: Automatic Machine Learning with GPT
+citation	257532815	258479799	1	Panda LLM: Training Data and Evaluation for Open-Sourced Chinese Instruction-Following Large Language Models
+citation	257532815	258479994	4	Caption Anything: Interactive Image Description with Diverse Multimodal Controls
+citation	257532815	258480241	2	"Oops, Did I Just Say That?" Testing and Repairing Unethical Suggestions of Large Language Models with Suggest-Critique-Reflect Process
+citation	257532815	258479968	1	Lift Yourself Up: Retrieval-augmented Text Generation with Self Memory
+citation	257532815	258461336	1	A Systematic Study of Knowledge Distillation for Natural Language Generation with Pseudo-Target Training
+citation	257532815	259076043	0	WangLab at MEDIQA-Chat 2023: Clinical Note Generation from Doctor-Patient Conversations using Large Language Models
+citation	257532815	258436917	0	The Role of Summarization in Generative Agents: A Preliminary Perspective
+citation	257532815	258437126	2	Prompt as Triggers for Backdoor Attack: Examining the Vulnerability in Language Models
+citation	257532815	258437068	1	How to Unleash the Power of Large Language Models for Few-shot Relation Extraction?
+citation	257532815	258438913	0	Fatigue database of additively manufactured alloys
+citation	257532815	258479979	0	Automated Code generation for Information Technology Tasks in YAML through Large Language Models
+citation	257532815	258461598	0	Enhancing STEM Learning with ChatGPT and Bing Chat as Objects to Think With: A Case Study
+citation	257532815	258724443	0	A Comprehensive Review of State-of-The-Art Methods for Java Code Generation from Natural Language Text
+citation	257532815	258426631	11	An Iterative Algorithm for Rescaled Hyperbolic Functions Regression
+citation	257532815	258426970	2	Bridging the Gap: A Survey on Integrating (Human) Feedback for Natural Language Generation
+citation	257532815	258447166	2	A Brief Overview of ChatGPT: The History, Status Quo and Potential Future Development
+citation	257532815	258418194	7	ChatGPT Evaluation on Sentence Level Relations: A Focus on Temporal, Causal, and Discourse Relations
+citation	257532815	258417902	0	An Empirical Study of Multimodal Model Merging
+citation	257532815	258418212	0	Using Large Language Models for Interpreting Autonomous Robots Behaviors
+citation	257532815	258518128	2	ChatGPT goes to the operating room: evaluating GPT-4 performance and its potential in surgical education and training in the era of large language models
+citation	257532815	258352455	20	mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality
+citation	257532815	258417843	8	PMC-LLaMA: Further Finetuning LLaMA on Medical Papers
+citation	257532815	258352268	1	Federated Prompting and Chain-of-Thought Reasoning for Improving LLMs Answering
+citation	257532815	258352238	3	ChatLog: Recording and Analyzing ChatGPT Across Time
+citation	257532815	258352678	6	LaMini-LM: A Diverse Herd of Distilled Models from Large-Scale Instructions
+citation	257532815	258352680	0	IconShop: Text-Based Vector Icon Synthesis with Autoregressive Transformers
+citation	257532815	258352264	0	Boosting Big Brother: Attacking Search Engines with Encodings
+citation	257532815	258992497	0	The Latest in Natural Language Generation: Trends, Tools and Applications in Industry
+citation	257532815	258309677	4	Foley Sound Synthesis at the DCASE 2023 Challenge
+citation	257532815	258309410	2	Artificial General Intelligence (AGI) for Education
+citation	257532815	258564472	0	Benchmarking ChatGPT-4 on ACR Radiation Oncology In-Training (TXIT) Exam and Red Journal Gray Zone Cases: Potentials and Challenges for AI-Assisted Medical Education and Decision Making in Radiation Oncology
+citation	257532815	258298358	0	Domain Mastery Benchmark: An Ever-Updating Benchmark for Evaluating Holistic Domain Knowledge of Large Language Model-A Preliminary Release
+citation	257532815	258298446	0	Finding Failure-Inducing Test Cases with ChatGPT
+citation	257532815	258298867	8	Boosting Theory-of-Mind Performance in Large Language Models via Prompting
+citation	257532815	258301085	1	Dialectical language model evaluation: An initial appraisal of the commonsense spatial reasoning abilities of LLMs
+citation	257532815	258291486	4	Can SAM Count Anything? An Empirical Study on SAM Counting
+citation	257532815	258291577	6	Can GPT-4 Perform Neural Architecture Search?
+citation	257532815	258291870	1	Contrastive Language, Action, and State Pre-training for Robot Learning
+citation	257532815	258236649	2	Learning to Program with Natural Language
+citation	257532815	258236552	1	CKBP v2: An Expert-Annotated Evaluation Set for Commonsense Knowledge Base Population
+citation	257532815	258236547	15	Segment Anything Model for Medical Image Analysis: an Experimental Study
+citation	257532815	258236592	12	Attention Scheme Inspired Softmax Regression
+citation	257532815	258212638	8	Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent
+citation	257532815	258298113	2	GeneGPT: Augmenting Large Language Models with Domain Tools for Improved Access to Biomedical Information
+citation	257532815	258291811	4	CancerGPT: Few-shot Drug Pair Synergy Prediction using Large Pre-trained Language Models
+citation	257532815	258179474	2	A Comparative Study between Full-Parameter and LoRA-based Fine-Tuning on Chinese Instruction Data for Instruction Following Large Language Model
+citation	257532815	258179792	7	InstructUIE: Multi-task Instruction Tuning for Unified Information Extraction
+citation	257532815	258179022	2	BenchMD: A Benchmark for Modality-Agnostic Learning on Medical Images and Sensors
+citation	257532815	258179774	57	Visual Instruction Tuning
+citation	257532815	258179137	3	ArguGPT: evaluating, understanding and identifying argumentative essays generated by GPT models
+citation	257532815	258180415	1	Towards Better Instruction Following Language Models for Chinese: Investigating the Impact of Training Data and Evaluation
+citation	257532815	258212851	0	Fairness in AI and Its Long-Term Implications on Society
+citation	257532815	258179568	16	Can SAM Segment Polyps?
+citation	257532815	258179537	4	Self-collaboration Code Generation via ChatGPT
+citation	257532815	258170417	0	Research without Re-search: Maximal Update Parametrization Yields Accurate Loss Prediction across Scales
+citation	257532815	258187497	2	ChatGPT: Applications, Opportunities, and Threats
+citation	257532815	258170263	1	Shall We Pretrain Autoregressive Language Models with Retrieval? A Comprehensive Study
+citation	257532815	258547290	1	ChatGPT Needs SPADE (Sustainability, PrivAcy, Digital divide, and Ethics) Evaluation: A Review
+citation	257532815	258291639	0	PowerGAN: A Machine Learning Approach for Power Side-Channel Attack on Compute-in-Memory Accelerators
+citation	257532815	258078950	0	InterGen: Diffusion-based Multi-human Motion Generation under Complex Interactions
+citation	257532815	258059760	3	Bayesian Optimization of Catalysts With In-context Learning
+citation	257532815	258060250	19	Multi-step Jailbreaking Privacy Attacks on ChatGPT
+citation	257532815	258078918	1	chatClimate: Grounding Conversational AI in Climate Science
+citation	257532815	258079295	0	Boosting Cross-task Transferability of Adversarial Patches with Visual Relations
+citation	257532815	258048823	1	Large Language Models for Business Process Management: Opportunities and Challenges
+citation	257532815	257985324	0	On the Pareto Front of Multilingual Neural Machine Translation
+citation	257532815	257952594	7	ParroT: Translating During Chat Using Large Language Models
+citation	257532815	257912848	29	Baize: An Open-Source Chat Model with Parameter-Efficient Tuning on Self-Chat Data
+citation	257532815	257921252	1	Safety Analysis in the Era of Large Language Models: A Case Study of STPA using ChatGPT
+citation	257532815	257952516	12	A Bibliometric Review of Large Language Models Research from 2017 to 2023
+citation	257532815	258681864	0	Bridging the gap – the impact of ChatGPT on financial research
+citation	257532815	257913125	0	LLMMaps - A Visual Metaphor for Stratified Evaluation of Large Language Models
+citation	257532815	258298324	0	Generative AI at Work
+citation	257532815	258397690	1	Editorial. Generative artificial intelligence, chatbots, and the Journal of Neurosurgery Publishing Group.
+citation	257532815	257900723	0	Pair Programming with Large Language Models for Sampling and Estimation of Copulas
+citation	257532815	257900969	103	A Survey of Large Language Models
+citation	257532815	257913911	1	Enhancing Large Language Models with Climate Resources
+citation	257532815	257804728	2	LMExplainer: a Knowledge-Enhanced Explainer for Language Models
+citation	257532815	257804622	9	An Over-parameterized Exponential Regression
+citation	257532815	257771630	10	Foundation Models and Fair Use
+citation	257532815	257771875	1	Ecosystem Graphs: The Social Footprint of Foundation Models
+citation	257532815	257771262	0	Typhoon: Towards an Effective Task-Specific Masking Strategy for Pre-trained Language Models
+citation	257532815	257952074	2	Unlocking the Potential of ChatGPT: A Comprehensive Exploration of its Applications, Advantages, Limitations, and Future Directions in Natural Language Processing
+citation	257532815	257757129	0	AI-Generated 6G Internet Design: A Diffusion Model-based Learning Approach
+citation	257532815	257757302	0	Paraphrase Detection: Human vs. Machine Content
+citation	257532815	257687405	0	Innovation Slowdown: Decelerating Concept Creation and Declining Originality in New Technological Concepts
+citation	257532815	257663514	9	Can we trust the evaluation on ChatGPT?
+citation	257532815	257636930	5	Large AI Models in Health Informatics: Applications, Challenges, and the Future
+citation	257532815	257663521	1	Fundamentals of Generative Large Language Models and Perspectives in Cyber-Defense
+citation	257532815	257631473	3	PanGu-{\Sigma}: Towards Trillion Parameter Language Model with Sparse Heterogeneous Computing
+citation	257532815	257637012	47	MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action
+citation	257532815	257636789	3	Language Model Behavior: A Comprehensive Survey
+citation	257532815	257636780	5	Mind meets machine: Unravelling GPT-4's cognitive psychology
+citation	257532815	258833055	3	Reflexion: Language Agents with Verbal Reinforcement Learning
+citation	257532815	257632435	8	Is Prompt All You Need? No. A Comprehensive and Broader View of Instruction Learning
+citation	257532815	257622601	42	GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models
+citation	257532815	257631570	36	Can AI-Generated Text be Reliably Detected?
+citation	257532815	257532802	3	Artificial Influence: An Analysis Of AI-Driven Persuasion
+citation	257532815	257985556	2	Zero-Shot Cross-Lingual Summarization via Large Language Models
+citation	257532815	257019916	3	Complex QA and language models hybrid architectures, Survey
+citation	257532815	257496094	2	"Correct answers"from the psychology of artificial intelligence
+citation	257532815	256868804	5	Transformer models: an introduction and catalog
+citation	257532815	256459333	16	A Comprehensive Survey of Continual Learning: Theory, Method and Application
+citation	257532815	258557397	0	Tensor Networks Meet Neural Networks: A Survey and Future Perspectives
+citation	257532815	257631519	35	Is ChatGPT A Good Translator? Yes With GPT-4 As The Engine
+citation	257532815	254877746	3	Does CLIP Bind Concepts? Probing Compositionality in Large Image Models
+citation	257532815	254877171	25	Is GPT-3 a Good Data Annotator?
+citation	257532815	254877678	4	Are Deep Neural Networks SMARTer than Second Graders?
+citation	257532815	254877346	5	DePlot: One-shot visual language reasoning by plot-to-table translation
+citation	257532815	254877129	1	Generic Temporal Reasoning with Differential Analysis and Explanation
+citation	257532815	259064331	0	True Detective: A Deep Abductive Reasoning Benchmark Undoable for GPT-3 and Challenging for GPT-4
+citation	257532815	259164347	0	Needle in a Haystack: An Analysis of High-Agreement Workers on MTurk for Summarization
+citation	257532815	254854219	36	Reasoning with Language Model Prompting: A Survey
+citation	257532815	257496081	0	Graph Learning and Its Applications: A Holistic Survey
+citation	257532815	254823606	2	Semantics-Empowered Communication: A Tutorial-cum-Survey
+citation	257532815	258715365	0	Self-Prompting Large Language Models for Zero-Shot Open-Domain QA
+citation	257532815	254685611	20	Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation
+citation	257532815	253734407	2	Deanthropomorphising NLP: Can a Language Model Be Conscious?
+citation	257532815	253397751	1	Astronomia ex machina: a history, primer and outlook on neural networks in astronomy
+citation	257532815	253098632	33	Neural Theory-of-Mind? On the Limits of Social Intelligence in Large LMs
+citation	257532815	252873658	0	PoliGraph: Automated Privacy Policy Analysis using Knowledge Graphs
+citation	257532815	252118535	5	The neuroconnectionist research programme
+citation	257532815	252089182	5	Do Large Language Models know what humans know?
+citation	257532815	259122544	0	A Survey on Unsupervised Anomaly Detection Algorithms for Industrial Images
+citation	257532815	247084001	2	From Natural Language to Simulations: Applying GPT-3 Codex to Automate Simulation Modeling of Logistics Systems
+citation	257532815	258685271	0	Bottom-Up and Top-Down Approaches for the Design of Neuromorphic Processing Systems: Tradeoffs and Synergies Between Natural and Artificial Intelligence
+citation	257532815	258486928	0	GPoeT: a Language Model Trained for Rhyme Generation on Synthetic Data
+citation	257532815	258212612	0	GeneGPT: Teaching Large Language Models to Use NCBI Web APIs
+citation	257532815	258215662	0	Tables and Figures : 0 Supplemental Material : 1 Title : Research Letter : Application of GPT-4 to select nextstep antidepressant treatment in major depression
+citation	257532815	258297984	2	Benchmarking ChatGPT-4 on ACR Radiation Oncology In-Training Exam (TXIT): Potentials and Challenges for AI-Assisted Medical Education and Decision Making in Radiation Oncology
+citation	257532815	258461384	2	Clinical Note Generation from Doctor-Patient Conversations using Large Language Models: Insights from MEDIQA-Chat
+citation	257532815	258823333	0	Evaluating task understanding through multilingual consistency: A ChatGPT case study
+citation	257532815	258835615	0	Guest Editorial: Neurosymbolic AI for Sentiment Analysis
+citation	257532815	259019614	0	Capital Market Consequences of Generative AI: Early Evidence from the Ban of ChatGPT in Italy
+citation	257532815	259141649	0	Pre-proof Trustworthy Journalism Through AI
+citation	257532815	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Title : Body size as a metric for the affordable world Running title : body-scaled metric for affordance', 'citationCount': None}

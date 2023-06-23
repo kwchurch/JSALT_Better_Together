@@ -1,0 +1,86 @@
+query	0 references	85 citations	Crosslingual Generalization through Multitask Finetuning
+citation	253264914	259211821	5	LMFlow: An Extensible Toolkit for Finetuning and Inference of Large Foundation Models
+citation	253264914	259202815	0	Snowman: A Million-scale Chinese Commonsense Knowledge Graph Distilled from Foundation Model
+citation	253264914	259164635	0	CMMLU: Measuring massive multitask language understanding in Chinese
+citation	253264914	259165461	0	Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration
+citation	253264914	259137398	0	Language Versatilists vs. Specialists: An Empirical Revisiting on Multilingual Transfer Ability
+citation	253264914	259129613	0	Xiezhi: An Ever-Updating Benchmark for Holistic Domain Knowledge Evaluation
+citation	253264914	259095491	0	Benchmarking Foundation Models with Language-Model-as-an-Examiner
+citation	253264914	259089323	0	shs-nlp at RadSum23: Domain-Adaptive Pre-training of Instruction-tuned LLMs for Radiology Report Impression Generation
+citation	253264914	259075613	0	bgGLUE: A Bulgarian General Language Understanding Evaluation Benchmark
+citation	253264914	258999607	1	Make Your Pre-trained Model Reversible: From Parameter to Memory Efficient Fine-Tuning
+citation	253264914	258967462	1	A Systematic Study and Comprehensive Evaluation of ChatGPT on Benchmark Datasets
+citation	253264914	258888192	3	Scaling Data-Constrained Language Models
+citation	253264914	258947425	1	On the Tool Manipulation Capability of Open-source Large Language Models
+citation	253264914	258866165	0	EvEval: A Comprehensive Evaluation of Event Semantics for Large Language Models
+citation	253264914	258865558	0	BUFFET: Benchmarking Large Language Models for Few-shot Cross-lingual Transfer
+citation	253264914	258865265	2	Bactrian-X : A Multilingual Replicable Instruction-Following Model with Low-Rank Adaptation
+citation	253264914	258865566	0	HuatuoGPT, towards Taming Language Model to Be a Doctor
+citation	253264914	258865493	0	Not All Metrics Are Guilty: Improving NLG Evaluation with LLM Paraphrasing
+citation	253264914	258865314	1	Tricking LLMs into Disobedience: Understanding, Analyzing, and Preventing Jailbreaks
+citation	253264914	258866053	1	M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated Text Detection
+citation	253264914	258865928	0	GPTAraEval: A Comprehensive Evaluation of ChatGPT on Arabic NLP
+citation	253264914	258865762	0	Boosting Cross-lingual Transferability in Multilingual Models via In-Context Learning
+citation	253264914	258865923	0	Flan-MoE: Scaling Instruction-Finetuned Language Models with Sparse Mixture of Experts
+citation	253264914	258865992	0	Dolphin: A Challenging and Diverse Benchmark for Arabic NLG
+citation	253264914	258841149	0	The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning
+citation	253264914	258840847	0	Multilingual Large Language Models Are Not (Yet) Code-Switchers
+citation	253264914	258841465	0	Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models
+citation	253264914	258841457	0	Instruct-Align: Teaching Novel Languages with to LLMs through Alignment-based Cross-Lingual Instruction
+citation	253264914	258840943	0	LLM-powered Data Augmentation for Enhanced Crosslingual Performance
+citation	253264914	258832837	0	Accurate Knowledge Distillation with n-best Reranking
+citation	253264914	258833348	0	Evaluation of medium-large Language Models at zero-shot closed book generative question answering
+citation	253264914	258740849	1	M3KE: A Massive Multi-Level Multi-Subject Knowledge Evaluation Benchmark for Chinese Large Language Models
+citation	253264914	258715321	1	xPQA: Cross-Lingual Product Question Answering across 12 Languages
+citation	253264914	258685666	7	C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models
+citation	253264914	258676175	0	A Comprehensive Analysis of Adapter Efficiency
+citation	253264914	258615158	0	How Good are Commercial Large Language Models on African Languages?
+citation	253264914	258615343	0	WebCPM: Interactive Web Search for Chinese Long-form Question Answering
+citation	253264914	258557950	0	The Current State of Summarization
+citation	253264914	258546868	1	LMEye: An Interactive Perception Network for Large Language Models
+citation	253264914	258479994	4	Caption Anything: Interactive Image Description with Diverse Multimodal Controls
+citation	253264914	258352678	6	LaMini-LM: A Diverse Herd of Distilled Models from Large-Scale Instructions
+citation	253264914	258331624	0	Zero-Shot Slot and Intent Detection in Low-Resource Languages
+citation	253264914	258331553	2	Unleashing Infinite-Length Input Capacity for Large-scale Language Models with Self-Controlled Memory System
+citation	253264914	258298797	0	Who's the Best Detective? LLMs vs. MLs in Detecting Incoherent Fourth Grade Math Answers
+citation	253264914	258236351	1	MasakhaNEWS: News Topic Classification for African languages
+citation	253264914	258187503	3	Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling
+citation	253264914	258187362	6	Exploring the Trade-Offs: Unified Large Language Models vs Local Fine-Tuned Models for Highly-Specific Radiology NLI Task
+citation	253264914	258179044	3	Chinese Open Instruction Generalist: A Preliminary Release
+citation	253264914	258179346	0	ChatPLUG: Open-Domain Generative Dialogue System with Internet-Augmented Instruction Tuning for Digital Human
+citation	253264914	258179504	0	Sabi\'a: Portuguese Large Language Models
+citation	253264914	258079215	1	Improving Diffusion Models for Scene Text Editing with Dual Encoders
+citation	253264914	257921233	11	Evaluating Large Language Models on a Highly-specialized Topic, Radiation Oncology Physics
+citation	253264914	257900969	103	A Survey of Large Language Models
+citation	253264914	258587892	1	CQSumDP: A ChatGPT-Annotated Resource for Query-Focused Abstractive Summarization Based on Debatepedia
+citation	253264914	257833837	1	Going Beyond Nouns With Vision & Language Models Using Synthetic Data
+citation	253264914	257833808	3	Evaluating GPT-3.5 and GPT-4 Models on Brazilian University Admission Exams
+citation	253264914	257766844	14	Exploring the Impact of Instruction Data Scaling on Large Language Models: An Empirical Study on Real-World Use Cases
+citation	253264914	257663467	9	MEGA: Multilingual Evaluation of Generative AI
+citation	253264914	257663521	1	Fundamentals of Generative Large Language Models and Perspectives in Cyber-Defense
+citation	253264914	257952500	10	How well do Large Language Models perform in Arithmetic tasks?
+citation	253264914	257504880	8	Exploring ChatGPT's Ability to Rank Content: A Preliminary Study on Consistency with Human Preferences
+citation	253264914	257405380	0	Extending the Pre-Training of BLOOM for Improved Support of Traditional Chinese: Models, Methods and Results
+citation	253264914	257365592	1	xCodeEval: A Large Scale Multilingual Multitask Benchmark for Code Understanding, Generation, Translation and Retrieval
+citation	253264914	257353790	5	Investigating the Translation Performance of a Large Multilingual Language Model: the Case of BLOOM
+citation	253264914	257232922	0	Extending English IR methods to multi-lingual IR
+citation	253264914	257985556	2	Zero-Shot Cross-Lingual Summarization via Large Language Models
+citation	253264914	256697131	5	Offsite-Tuning: Transfer Learning without Full Model
+citation	253264914	256627673	10	Exploring the Benefits of Training Expert Language Models over Instruction Tuning
+citation	253264914	256415991	58	The Flan Collection: Designing Data and Methods for Effective Instruction Tuning
+citation	253264914	256416029	8	Adaptive Machine Translation with Large Language Models
+citation	253264914	256194179	60	A Watermark for Large Language Models
+citation	253264914	256105107	4	Efficient Language Model Training through Cross-Lingual and Progressive Transfer Learning
+citation	253264914	255749241	5	See, Think, Confirm: Interactive Prompting Between Vision and Language Models for Knowledge-based Visual Reasoning
+citation	253264914	254877310	158	Self-Instruct: Aligning Language Model with Self Generated Instructions
+citation	253264914	254854009	8	BLOOM+1: Adding Language Support to BLOOM for Zero-Shot Prompting
+citation	253264914	254853901	1	NusaCrowd: Open Source Initiative for Indonesian NLP Resources
+citation	253264914	254854317	7	The Decades Progress on Code-Switching Research in NLP: A Systematic Survey on Trends and Challenges
+citation	253264914	253734247	7	Multitask Vision-Language Prompt Tuning
+citation	253264914	253420279	362	BLOOM: A 176B-Parameter Open-Access Multilingual Language Model
+citation	253264914	252907685	11	MTEB: Massive Text Embedding Benchmark
+citation	253264914	252070588	10	Petals: Collaborative Inference and Fine-tuning of Large Models
+citation	253264914	258947845	0	CrossSum: Beyond English-Centric Cross-Lingual Summarization for 1,500+ Language Pairs
+citation	253264914	259002927	0	Bridging the Resource Gap: Exploring the Efficacy of English and Multilingual LLMs for Swedish
+citation	253264914	258486887	0	Findings from the Bambara - French Machine Translation Competition (BFMT 2023)
+citation	253264914	258765255	0	Translated Benchmarks Can Be Misleading: the Case of Estonian Question Answering

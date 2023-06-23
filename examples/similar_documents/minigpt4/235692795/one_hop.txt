@@ -1,0 +1,506 @@
+query	44 references	461 citations	VinVL: Revisiting Visual Representations in Vision-Language Models
+reference	235692795	221995614	49	VIVO: Surpassing Human Performance in Novel Object Captioning with Visual Vocabulary Pre-Training
+reference	235692795	220265934	238	ERNIE-ViL: Knowledge Enhanced Vision-Language Representations Through Scene Graph
+reference	235692795	219708318	166	FCOS: A Simple and Strong Anchor-Free Object Detector
+reference	235692795	219573512	295	Large-Scale Adversarial Training for Vision-and-Language Representation Learning
+reference	235692795	215754208	1103	Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks
+reference	235692795	214727638	297	X-Linear Attention Networks for Image Captioning
+reference	235692795	214713564	51	InterBERT: Vision-and-Language Interaction for Multi-modal Pretraining
+reference	235692795	210156985	199	In Defense of Grid Features for Visual Question Answering
+reference	235692795	208637516	370	12-in-1: Multi-Task Vision and Language Representation Learning
+reference	235692795	207967883	282	Objects365: A Large-Scale, High-Quality Dataset for Object Detection
+reference	235692795	203902269	43	Meta Module Network for Compositional Visual Reasoning
+reference	235692795	202889174	378	UNITER: Learning UNiversal Image-TExt Representations
+reference	235692795	202734445	582	Unified Vision-Language Pre-Training for Image Captioning and VQA
+reference	235692795	202565460	189	CAMP: Cross-Modal Adaptive Message Passing for Text-Image Retrieval
+reference	235692795	201317624	1142	VL-BERT: Pre-training of Generic Visual-Linguistic Representations
+reference	235692795	201103729	1539	LXMERT: Learning Cross-Modality Encoder Representations from Transformers
+reference	235692795	201070367	515	Attention on Attention for Image Captioning
+reference	235692795	201058752	603	Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training
+reference	235692795	199528533	1127	VisualBERT: A Simple and Performant Baseline for Vision and Language
+reference	235692795	199453025	2163	ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks
+reference	235692795	199466137	48	Knowledge Aware Semantic Concept Expansion for Image-Text Matching
+reference	235692795	198179796	119	Position Focused Attention Network for Image-Text Matching
+reference	235692795	195847902	192	Learning by Abstraction: The Neural State Machine
+reference	235692795	152282269	695	GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering
+reference	235692795	53178856	343	A Corpus for Reasoning about Natural Language Grounded in Photographs
+reference	235692795	51876975	1191	Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning
+reference	235692795	3994012	752	Stacked Cross Attention for Image-Text Matching
+reference	235692795	49867191	253	Dual-path Convolutional Image-Text Embeddings with Instance Loss
+reference	235692795	47252984	14211	Focal Loss for Dense Object Detection
+reference	235692795	206771220	4099	Focal Loss for Dense Object Detection
+reference	235692795	3753452	3082	Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering
+reference	235692795	195347576	168	VSE++: Improved Visual-Semantic Embeddings
+reference	235692795	10716717	14176	Feature Pyramid Networks for Object Detection
+reference	235692795	8081284	1660	Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering
+reference	235692795	206594923	1353	Self-Critical Sequence Training for Image Captioning
+reference	235692795	4492210	3755	Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations
+reference	235692795	8849206	1682	Stacked Attention Networks for Image Question Answering
+reference	235692795	8517067	4885	Deep Visual-Semantic Alignments for Generating Image Descriptions
+reference	235692795	9254582	1215	From captions to visual concepts and back
+reference	235692795	14113767	27556	Microsoft COCO: Common Objects in Context
+reference	235692795	3104920	1734	From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions
+reference	235692795	14579301	989	Im2Text: Describing Images Using 1 Million Captioned Photographs
+reference	235692795	56517630	172	nocaps: novel object captioning at scale
+reference	235692795	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'The open images dataset v4: Unified image classification, object detection, and visual relationship detection at scale', 'citationCount': None}
+citation	235692795	259203790	0	Dense Video Object Captioning from Disjoint Supervision
+citation	235692795	259202917	0	LLMVA-GEBC: Large Language Model with Video Adapter for Generic Event Boundary Captioning
+citation	235692795	259164927	0	Efficient Token-Guided Image-Text Retrieval with Consistent Multimodal Contrastive Training
+citation	235692795	259137821	0	Scalable 3D Captioning with Pretrained Models
+citation	235692795	259137818	0	Global and Local Semantic Completion Learning for Vision-Language Pre-training
+citation	235692795	259129746	1	Embodied Executable Policy Learning with Language-based Scene Summarization
+citation	235692795	259108365	0	Dealing with Semantic Underspecification in Multimodal NLP
+citation	235692795	259108774	0	Modular Visual Question Answering via Code Generation
+citation	235692795	259096008	1	Fine-Grained Visual Prompting
+citation	235692795	259088810	0	Diversifying Joint Vision-Language Tokenization Learning
+citation	235692795	259075604	0	VisualGPTScore: Visio-Linguistic Reasoning with Multimodal Generative Pre-Training Scores
+citation	235692795	258511255	10	VLT: Vision-Language Transformer and Query Generation for Referring Segmentation
+citation	235692795	258999962	0	GPT4Image: Can Large Pre-trained Models Help Vision Models on Perception Tasks?
+citation	235692795	258999948	0	CapText: Large Language Model-based Caption Generation From Image Context and Description
+citation	235692795	258999712	0	ManagerTower: Aggregating the Insights of Uni-Modal Experts for Vision-Language Representation Learning
+citation	235692795	258987617	0	Joint Adaptive Representations for Image-Language Learning
+citation	235692795	258968058	0	Scalable Performance Analysis for Vision-Language Models
+citation	235692795	258968151	0	Enhanced Chart Understanding in Vision and Language Task via Cross-modal Pre-training on Plot Table Pairs
+citation	235692795	258960254	0	FuseCap: Leveraging Large Language Models to Fuse Visual Data into Enriched Image Captions
+citation	235692795	258959382	0	PuMer: Pruning and Merging Tokens for Efficient Vision Language Models
+citation	235692795	258947273	0	AlignScore: Evaluating Factual Consistency with a Unified Alignment Function
+citation	235692795	258888004	0	HAAV: Hierarchical Aggregation of Augmented Views for Image Captioning
+citation	235692795	258865919	0	Measuring Faithful and Plausible Visual Grounding in VQA
+citation	235692795	258888223	0	Weakly Supervised Vision-and-Language Pre-training with Relative Representations
+citation	235692795	258378331	0	Pento-DIARef: A Diagnostic Dataset for Learning the Incremental Algorithm for Referring Expression Generation from Examples
+citation	235692795	258865775	0	SmartTrim: Adaptive Tokens and Parameters Pruning for Efficient Vision-Language Models
+citation	235692795	258865250	0	Exploring Diverse In-Context Configurations for Image Captioning
+citation	235692795	258866014	0	NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario
+citation	235692795	258865419	0	GRILL: Grounded Vision-language Pre-training via Aligning Text and Image Regions
+citation	235692795	258840965	2	Coarse-to-Fine Contrastive Learning in Image-Text-Graph Space for Improved Vision-Language Compositionality
+citation	235692795	258841131	0	Training Transitive and Commutative Multimodal Transformers with LoReTTa
+citation	235692795	258841566	0	UNIMO-3: Multi-granularity Interaction for Vision-Language Representation Learning
+citation	235692795	258822906	0	TreePrompt: Learning to Compose Tree Prompts for Explainable Visual Grounding
+citation	235692795	258762390	2	ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities
+citation	235692795	258762636	1	Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model
+citation	235692795	258762221	0	Rethinking Multimodal Content Moderation from an Asymmetric Angle with Mixed-modality
+citation	235692795	258740697	3	Evaluating Object Hallucination in Large Vision-Language Models
+citation	235692795	258740805	0	An Empirical Study on the Language Modal in Visual Question Answering
+citation	235692795	258676204	2	Measuring Progress in Fine-grained Vision-and-Language Understanding
+citation	235692795	258615698	0	Simple Token-Level Confidence Improves Caption Correctness
+citation	235692795	258588434	0	InfoMetIC: An Informative Metric for Reference-free Image Caption Evaluation
+citation	235692795	258557622	0	OpenViVQA: Task, Dataset, and Multimodal Fusion Models for Visual Question Answering in Vietnamese
+citation	235692795	258587972	1	Structure-CLIP: Enhance Multi-modal Language Representations with Structure Knowledge
+citation	235692795	258546995	0	COLA: How to adapt vision-language models to Compose Objects Localized with Attributes?
+citation	235692795	258479921	0	Multi-Modality Deep Network for JPEG Artifacts Reduction
+citation	235692795	258461558	0	Transforming Visual Scene Graphs to Image Captions
+citation	235692795	258427120	1	ArK: Augmented Reality with Knowledge Interactive Emergent Ability
+citation	235692795	258378175	0	Multimodal Graph Transformer for Multimodal Question Answering
+citation	235692795	258418220	0	Quality-agnostic Image Captioning to Safely Assist People with Vision Impairment
+citation	235692795	258418310	1	Interpreting Vision and Language Generative Models with Semantic Visual Priors
+citation	235692795	258331790	0	From Association to Generation: Text-only Captioning by Unsupervised Cross-modal Mapping
+citation	235692795	258352499	0	Towards Medical Artificial General Intelligence via Knowledge-Enhanced Multimodal Pretraining
+citation	235692795	258291554	0	Rethinking Benchmarks for Cross-modal Image-text Retrieval
+citation	235692795	258291685	0	RoCOCO: Robust Benchmark MS-COCO to Stress-test Robustness of Image-Text Matching Models
+citation	235692795	258236591	0	Movie Box Office Prediction With Self-Supervised and Visually Grounded Pretraining
+citation	235692795	258179576	8	VALOR: Vision-Audio-Language Omni-Perception Pretraining Model and Dataset
+citation	235692795	258108138	4	What does CLIP know about a red circle? Visual prompt engineering for VLMs
+citation	235692795	258108191	0	Converting ECG Signals to Images for Efficient Image-text Retrieval via Encoding
+citation	235692795	258060056	0	FashionSAP: Symbols and Attributes Prompt for Fine-grained Fashion Vision-Language Pre-training
+citation	235692795	258079058	0	MoMo: A shared encoder Model for text, image and multi-Modal representations
+citation	235692795	258048942	0	CAVL: Learning Contrastive and Adaptive Representations of Vision and Language
+citation	235692795	258066076	0	Generative image captioning in Urdu using deep learning
+citation	235692795	257985469	0	Learning Instance-Level Representation for Large-Scale Multi-Modal Pretraining in E-commerce
+citation	235692795	259028453	0	Attending to Transforms: A Survey on Transformer-based Image Captioning
+citation	235692795	257952390	1	Calibrating Cross-modal Feature for Text-Based Person Searching
+citation	235692795	257913455	0	Multi-Modal Representation Learning with Text-Driven Soft Masks
+citation	235692795	258234923	0	Dual-decoder transformer network for answer grounding in visual question answering
+citation	235692795	258341194	0	Question-aware Dynamic Scene Graph of Local Semantic Representation Learning for Visual Question Answering
+citation	235692795	257901059	0	DIME-FM: DIstilling Multimodal and Efficient Foundation Models
+citation	235692795	257833991	3	SoftCLIP: Softer Cross-modal Alignment Makes CLIP Stronger
+citation	235692795	257804657	3	MaMMUT: A Simple Architecture for Joint Learning for MultiModal Tasks
+citation	235692795	257807793	1	A Review of the Application of Multi-modal Deep Learning in Medicine: Bibliometrics and Future Directions
+citation	235692795	257771567	0	Variational Distribution Learning for Unsupervised Text-to-Image Generation
+citation	235692795	257771855	0	KERM: Knowledge Enhanced Reasoning for Vision-and-Language Navigation
+citation	235692795	257766245	2	Equivariant Similarity for Vision-Language Foundation Models
+citation	235692795	257757267	1	Accelerating Vision-Language Pretraining with Free Language Modeling
+citation	235692795	257687801	3	CoBIT: A Contrastive Bi-directional Image-Text Generation Model
+citation	235692795	257687675	0	FER-former: Multi-modal Transformer for Facial Expression Recognition
+citation	235692795	257687614	0	Open-Vocabulary Object Detection using Pseudo Caption Labels
+citation	235692795	257636561	25	A Complete Survey on Generative AI (AIGC): Is ChatGPT from GPT-4 to GPT-5 All You Need?
+citation	235692795	257636716	0	VideoXum: Cross-modal Visual and Textural Summarization of Videos
+citation	235692795	257663410	1	Positive-Augmented Constrastive Learning for Image and Video Captioning Evaluation
+citation	235692795	257631557	2	DeAR: Debiasing Vision-Language Models with Additive Residuals
+citation	235692795	257557621	1	GridCLIP: One-Stage Object Detection by Grid-Level CLIP Representation Learning
+citation	235692795	257505509	0	Efficient Image-Text Retrieval via Keyword-Guided Pre-Screening
+citation	235692795	257496100	3	Scaling Vision-Language Models with Sparse Mixture of Experts
+citation	235692795	257482355	5	Tag2Text: Guiding Vision-Language Model via Image Tagging
+citation	235692795	258557855	0	Refined Vision-Language Modeling for Fine-grained Multi-modal Pre-training
+citation	235692795	257364847	2	CleanCLIP: Mitigating Data Poisoning Attacks in Multimodal Contrastive Learning
+citation	235692795	257364802	0	Models See Hallucinations: Evaluating the Factuality in Video Captioning
+citation	235692795	257364872	1	FAME-ViL: Multi-Tasking Vision-Language Model for Heterogeneous Fashion Tasks
+citation	235692795	257365573	3	ConZIC: Controllable Zero-shot Image Captioning by Sampling-Based Polishing
+citation	235692795	257365896	4	Prismer: A Vision-Language Model with An Ensemble of Experts
+citation	235692795	257353536	8	Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering
+citation	235692795	257280308	1	MixPHM: Redundancy-Aware Parameter-Efficient Tuning for Low-Resource Visual Question Answering
+citation	235692795	256630986	0	Understanding Social Media Cross-Modality Discourse in Linguistic Space
+citation	235692795	257103228	0	TEVL: Trilinear Encoder for Video-Language Representation Learning
+citation	235692795	257102608	1	HL Dataset: Grounding High-Level Linguistic Concepts in Vision
+citation	235692795	257078872	1	Entity-Level Text-Guided Image Manipulation
+citation	235692795	257038341	14	Large-scale Multi-Modal Pre-trained Models: A Comprehensive Survey
+citation	235692795	257038499	0	STOA-VLP: Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training
+citation	235692795	257019883	0	Multimodal Propaganda Processing
+citation	235692795	257019905	1	Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
+citation	235692795	256869991	5	PolyFormer: Referring Image Segmentation as Sequential Polygon Generation
+citation	235692795	256826738	0	Differentiable Outlier Detection Enable Robust Deep Multimodal Analysis
+citation	235692795	256697441	1	Re-ViLM: Retrieval-Augmented Visual Language Model for Zero and Few-Shot Image Captioning
+citation	235692795	256627601	17	Hard Prompts Made Easy: Gradient-Based Discrete Optimization for Prompt Tuning and Discovery
+citation	235692795	256658643	1	Sentimental Visual Captioning using Multimodal Transformer
+citation	235692795	256597954	0	DEVICE: DEpth and VIsual ConcEpts Aware Transformer for TextCaps
+citation	235692795	256459691	0	Multimodality Representation Learning: A Survey on Evolution, Pretraining and Its Applications
+citation	235692795	252153973	1	Deep Supervised Dual Cycle Adversarial Network for Cross-Modal Retrieval
+citation	235692795	259122077	0	A Study of Visual Question Answering Techniques Based on Collaborative Multi-Head Attention
+citation	235692795	257038777	1	MAKE: Vision-Language Pre-training based Product Retrieval in Taobao Search
+citation	235692795	258960373	0	Red teaming ChatGPT via Jailbreaking: Bias, Robustness, Reliability and Toxicity
+citation	235692795	256389713	1	Debiased Fine-Tuning for Vision-language Models by Prompt Regularization
+citation	235692795	256274922	1	Towards a Unified Model for Generating Answers and Explanations in Visual Question Answering
+citation	235692795	256288570	1	Fashion-Oriented Image Captioning with External Knowledge Retrieval and Fully Attentive Gates
+citation	235692795	255998461	3	Joint Representation Learning for Text and 3D Point Cloud
+citation	235692795	255998421	0	Embodied Agents for Efficient Exploration and Smart Scene Description
+citation	235692795	255749525	0	Toward Building General Foundation Models for Language, Vision, and Vision-Language Understanding Tasks
+citation	235692795	255749414	0	Scene-centric vs. Object-centric Image-Text Cross-modal Retrieval: A Reproducibility Study
+citation	235692795	258009239	0	CITE: Compact Interactive TransformEr for Multilingual Image Captioning
+citation	235692795	255440399	0	GIVL: Improving Geographical Inclusivity of Vision-Language Models with Pre-Training Methods
+citation	235692795	255440620	2	SPRING: Situated Conversation Agent Pretrained with Multimodal Questions from Incremental Layout Graph
+citation	235692795	255440590	0	Adaptively Clustering Neighbor Elements for Image Captioning
+citation	235692795	253187871	0	How to Practice VQA on a Resource-limited Target Domain
+citation	235692795	256659010	1	GAFNet: A Global Fourier Self Attention Based Novel Network for multi-modal downstream tasks
+citation	235692795	256652844	3	Fashion Image Retrieval with Text Feedback by Additive Attention Compositional Learning
+citation	235692795	254926770	14	Generalized Decoding for Pixel, Image, and Language
+citation	235692795	254926627	7	From Images to Textual Prompts: Zero-shot VQA with Frozen Large Language Models
+citation	235692795	254853824	0	Efficient Image Captioning for Edge Devices
+citation	235692795	254823508	1	Enhancing Multi-modal and Multi-hop Question Answering via Structured Knowledge and Unified Retrieval-Generation
+citation	235692795	254686009	5	Are Multimodal Models Robust to Image and Text Perturbations?
+citation	235692795	254636197	3	NLIP: Noise-robust Language-Image Pre-training
+citation	235692795	254685851	9	CREPE: Can Vision-Language Foundation Models Reason Compositionally?
+citation	235692795	254564204	6	REVEAL: Retrieval-Augmented Visual-Language Pre-Training with Multi-Source Multimodal Knowledge Memory
+citation	235692795	254535929	9	VindLU: A Recipe for Effective Video-and-Language Pretraining
+citation	235692795	254408945	1	BEVBert: Topo-Metric Map Pre-training for Language-guided Navigation
+citation	235692795	257557855	0	Vision and Structured-Language Pretraining for Cross-Modal Food Retrieval
+citation	235692795	254275009	2	Switching to Discriminative Image Captioning by Relieving a Bottleneck of Reinforcement Learning
+citation	235692795	254247022	2	Controllable Image Captioning via Prompting
+citation	235692795	254247171	7	Named Entity and Relation Extraction with Multi-Modal Retrieval
+citation	235692795	254247167	1	Compound Tokens: Channel Fusion for Vision-Language Representation Learning
+citation	235692795	254212572	1	Fusion of tactile and visual information in deep learning models for object recognition
+citation	235692795	254069789	0	SLAN: Self-Locator Aided Network for Cross-Modal Understanding
+citation	235692795	254043830	3	DQ-DETR: Dual Query Detection Transformer for Phrase Extraction and Grounding
+citation	235692795	254044466	0	CLID: Controlled-Length Image Descriptions with Limited Data
+citation	235692795	254017749	3	Language-Assisted 3D Feature Learning for Semantic Scene Understanding
+citation	235692795	254017997	0	Seeing What You Miss: Vision-Language Pre-training with Semantic Completion Learning
+citation	235692795	253761483	8	X2-VLM: All-In-One Pre-trained Model For Vision-Language Tasks
+citation	235692795	253761575	2	Visually Grounded Commonsense Knowledge Acquisition
+citation	235692795	253734932	1	PERCEIVER-VL: Efficient Vision-and-Language Modeling with Iterative Latent Attention
+citation	235692795	253734247	7	Multitask Vision-Language Prompt Tuning
+citation	235692795	253734782	2	You Need Multiple Exiting: Dynamic Early Exiting for Accelerating Unified Vision Language Model
+citation	235692795	253734954	8	Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training
+citation	235692795	253735003	1	SMAUG: Sparse Masked Autoencoder for Efficient Video-Language Pre-training
+citation	235692795	253735413	6	Exploring Discrete Diffusion Models for Image Captioning
+citation	235692795	253761197	2	A survey on knowledge-enhanced multimodal learning
+citation	235692795	253734377	0	Detect Only What You Specify : Object Detection with Linguistic Target
+citation	235692795	253764007	2	Contextual and selective attention networks for image captioning
+citation	235692795	253581370	1	CapEnrich: Enriching Caption Semantics for Web Images via Cross-modal Pre-trained Knowledge
+citation	235692795	254043633	0	Text-Aware Dual Routing Network for Visual Question Answering
+citation	235692795	253581319	19	PromptCap: Prompt-Guided Task-Aware Image Captioning
+citation	235692795	253510733	0	ContextCLIP: Contextual Alignment of Image-Text pairs on CLIP visual representations
+citation	235692795	253510895	0	Large-Scale Bidirectional Training for Zero-Shot Image Captioning
+citation	235692795	253420317	1	Understanding Cross-modal Interactions in V&L Models that Generate Scene Descriptions
+citation	235692795	253254967	11	Chinese CLIP: Contrastive Vision-Language Pretraining in Chinese
+citation	235692795	253516603	0	Fine-grained classification of drug trafficking based on Instagram hashtags
+citation	235692795	253905588	1	Modeling graph-structured contexts for image captioning
+citation	235692795	253244258	10	Text-Only Training for Image Captioning using Noise-Injected CLIP
+citation	235692795	253244281	5	Behavioral Intention Prediction in Driving Scenes: A Survey
+citation	235692795	253244224	2	Training Vision-Language Models with Less Bimodal Supervision
+citation	235692795	248171717	1	Data-Driven Fuzzy Target-Side Representation for Intelligent Translation System
+citation	235692795	253157329	1	Generalization Differences between End-to-End and Neuro-Symbolic Vision-Language Reasoning Systems
+citation	235692795	253116580	0	Compressing And Debiasing Vision-Language Pre-Trained Models for Visual Question Answering
+citation	235692795	253107241	4	VLC-BERT: Visual Question Answering with Contextualized Commonsense Knowledge
+citation	235692795	253107301	2	Learning by Hallucinating: Vision-Language Pre-training with Weak Supervision
+citation	235692795	253098236	1	Dissecting Deep Metric Learning Losses for Image-Text Retrieval
+citation	235692795	253080885	2	Do Vision-and-Language Transformers Learn Grounded Predicate-Noun Dependencies?
+citation	235692795	253080390	0	Describing Sets of Images with Textual-PCA
+citation	235692795	253018728	1	Visual Spatial Description: Controlled Spatial-Oriented Image-to-Text Generation
+citation	235692795	253018484	0	Image-Text Retrieval with Binary and Continuous Label Supervision
+citation	235692795	252905020	3	Contrastive Label Correlation Enhanced Unified Hashing Encoder for Cross-modal Retrieval
+citation	235692795	253337200	1	Relation Enhanced Vision Language Pre-Training
+citation	235692795	252907639	3	Plausible May Not Be Faithful: Probing Object Hallucination in Vision-Language Pre-training
+citation	235692795	252907558	3	EfficientVLM: Fast and Accurate Vision-Language Models via Knowledge Distillation and Modal-adaptive Pruning
+citation	235692795	252873086	10	MAPL: Parameter-Efficient Adaptation of Unimodal Pre-Trained Models for Vision-Language Few-Shot Prompting
+citation	235692795	252846643	0	One does not fit all! On the Complementarity of Vision Encoders for Vision and Language Tasks
+citation	235692795	257766747	0	MAP: Multimodal Uncertainty-Aware Vision-Language Pre-training Model
+citation	235692795	252783028	1	CMAL: A Novel Cross-Modal Associative Learning Framework for Vision-Language Pre-Training
+citation	235692795	252782264	0	MoZuMa: A Model Zoo for Multimedia Applications
+citation	235692795	252783076	1	Image Understanding by Captioning with Differentiable Architecture Search
+citation	235692795	252782511	2	CAliC: Accurate and Efficient Image-Text Retrieval via Contrastive Alignment and Visual Contexts Modeling
+citation	235692795	252783135	2	Unsupervised and Pseudo-Supervised Vision-Language Alignment in Visual Dialog
+citation	235692795	252782997	0	AI-VQA: Visual Question Answering based on Agent Interaction with Interpretability
+citation	235692795	255441409	0	B-AIS: An Automated Process for Black-box Evaluation of Visual Perception in AI-enabled Software against Domain Semantics
+citation	235692795	252780722	1	VoLTA: Vision-Language Transformer with Weakly-Supervised Local-Feature Alignment
+citation	235692795	252780916	2	MAMO: Masked Multimodal Modeling for Fine-Grained Vision-Language Representation Learning
+citation	235692795	252780197	0	Learning Fine-Grained Visual Understanding for Video Question Answering via Decoupling Spatial-Temporal Modeling
+citation	235692795	252780775	12	Retrieval Augmented Visual Question Answering with Outside Knowledge
+citation	235692795	252735160	9	MuRAG: Multimodal Retrieval-Augmented Generator for Open Question Answering over Images and Text
+citation	235692795	252735318	4	A New Path: Scaling Vision-and-Language Navigation with Synthetic Instructions and Imitation Learning
+citation	235692795	252668454	9	Medical Image Understanding with Pretrained Vision Language Models: A Comprehensive Study
+citation	235692795	252568043	1	Human-in-the-loop Robotic Grasping Using BERT Scene Representation
+citation	235692795	252531901	0	Paraphrasing Is All You Need for Novel Object Captioning
+citation	235692795	252407476	2	Show, Interpret and Tell: Entity-aware Contextualised Image Captioning in Wikipedia
+citation	235692795	252352485	0	A BERT-based Language Modeling Framework
+citation	235692795	252344571	2	Multilevel attention and relation network based image captioning model
+citation	235692795	252280603	11	Align, Reason and Learn: Enhancing Medical Vision-and-Language Pre-training with Knowledge
+citation	235692795	252283985	41	OmniVL: One Foundation Model for Image-Language and Video-Language Tasks
+citation	235692795	252222320	120	PaLI: A Jointly-Scaled Multilingual Language-Image Model
+citation	235692795	257255497	1	Correlation Information Bottleneck: Towards Adapting Pretrained Multimodal Models for Robust Visual Question Answering
+citation	235692795	252113622	2	Multimodal detection of hateful memes by applying a vision-language pre-training model
+citation	235692795	252211618	2	VL-Taboo: An Analysis of Attribute-based Zero-shot Capabilities of Vision-Language Models
+citation	235692795	252185148	6	Pre-training image-language transformers for open-vocabulary tasks
+citation	235692795	253462256	0	Image Captioning using Pretrained Language Models and Image Segmentation
+citation	235692795	256615676	1	Universal Vision-Language Dense Retrieval: Learning A Unified Representation Space for Multi-Modal Retrieval
+citation	235692795	252574390	2	Graph neural network-based visual relationship and multilevel attention for image captioning
+citation	235692795	251903171	9	Efficient Vision-Language Pretraining with Visual Concepts and Hierarchical Alignment
+citation	235692795	251765309	0	FashionVQA: A Domain-Specific Visual Question Answering System
+citation	235692795	251741496	0	Learning More May Not Be Better: Knowledge Transferability in Vision and Language Tasks
+citation	235692795	251814882	2	U-BERT for Fast and Scalable Text-Image Retrieval
+citation	235692795	251719655	231	Image as a Foreign Language: BEiT Pretraining for All Vision and Vision-Language Tasks
+citation	235692795	251643466	8	See Finer, See More: Implicit Modality Alignment for Text-based Person Retrieval
+citation	235692795	251623174	7	Towards Open-vocabulary Scene Graph Generation with Prompt-based Finetuning
+citation	235692795	251493129	2	ARMANI: Part-level Garment-Text Alignment for Unified Cross-Modal Fashion Design
+citation	235692795	251442553	1	Attribute Controllable Beautiful Caucasian Face Generation by Aesthetics Driven Reinforcement Learning
+citation	235692795	251320380	14	Fine-Grained Semantically Aligned Vision-Language Pre-Training
+citation	235692795	251280143	10	Masked Vision and Language Modeling for Multi-modal Representation Learning
+citation	235692795	252165089	0	Action Semantic Alignment for Image Captioning
+citation	235692795	252165758	0	Towards Multimodal Semantic Consistency Analysis of Long Form Articles
+citation	235692795	251223804	0	Augmenting Vision Language Pretraining by Learning Codebook with Visual Semantics
+citation	235692795	251196992	1	Curriculum Learning for Data-Efficient Vision-Language Alignment
+citation	235692795	251196713	2	ALADIN: Distilling Fine-grained Alignment Scores for Efficient Image-Text Matching and Retrieval
+citation	235692795	251066774	6	LaKo: Knowledge-driven Visual Question Answering via Late Knowledge-to-Text Injection
+citation	235692795	251018313	9	Zero-Shot Video Captioning with Evolving Pseudo-Tokens
+citation	235692795	251018605	4	Efficient Modeling of Future Context for Image Captioning
+citation	235692795	250698884	24	GRIT: Faster and Better Image captioning Transformer Using Dual Visual Features
+citation	235692795	250626667	0	Towards the Human Global Context: Does the Vision-Language Model Really Judge Like a Human Being?
+citation	235692795	250644478	21	Exploiting Unlabeled Data with Vision and Language Models for Object Detection
+citation	235692795	250627337	11	FashionViL: Fashion-Focused Vision-and-Language Representation Learning
+citation	235692795	250451319	5	IDEA: Increasing Text Diversity via Online Multi-Label Recognition for Vision-Language Pre-training
+citation	235692795	250393402	1	Pre-Training and Fine-Tuning with Next Sentence Prediction for Multimodal Entity Linking
+citation	235692795	252017908	1	On Multimodal Semantic Consistency Detection of News Articles with Image Caption Pairs
+citation	235692795	250279886	0	Vision-and-Language Pretraining
+citation	235692795	250279986	2	Toward Explainable and Fine-Grained 3D Grounding through Referring Textual Phrases
+citation	235692795	250264976	5	DUET: Cross-modal Semantic Grounding for Contrastive Zero-shot Learning
+citation	235692795	250265008	1	Exploiting Context Information for Generic Event Boundary Captioning
+citation	235692795	250244105	14	VL-CheckList: Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations
+citation	235692795	250243960	5	e-CLIP: Large-Scale Vision-Language Representation Learning in E-commerce
+citation	235692795	250636850	1	Visual Emotion Representation Learning via Emotion-Aware Pre-training
+citation	235692795	250192188	2	Deep Vision Multimodal Learning: Methodology, Benchmark, and Trend
+citation	235692795	250303261	7	Are Vision-Language Transformers Learning Multimodal Representations? A Probing Perspective
+citation	235692795	249848207	12	VLMixer: Unpaired Vision-Language Pre-training via Cross-Modal CutMix
+citation	235692795	249848120	10	Bridge-Tower: Building Bridges Between Encoders in Vision-Language Representation Learning
+citation	235692795	249674874	33	Coarse-to-Fine Vision-Language Pre-training with Fusion in the Backbone
+citation	235692795	256901258	4	Write and Paint: Generative Vision-Language Models are Unified Modal Learners
+citation	235692795	249674329	14	Measuring Representational Harms in Image Captioning
+citation	235692795	249674556	21	LAVENDER: Unifying Video-Language Understanding as Masked Language Modeling
+citation	235692795	249642175	55	Multimodal Learning with Transformers: A Survey
+citation	235692795	249626342	58	GLIPv2: Unifying Localization and Vision-Language Understanding
+citation	235692795	249626158	3	A Unified Continuous Learning Framework for Multi-modal Knowledge Discovery and Pre-training
+citation	235692795	249605577	0	Symbolic image detection using scene and knowledge graphs
+citation	235692795	249431964	8	Detection Hub: Unifying Object Detection Datasets via Query Adaptation on Language Embedding
+citation	235692795	249375629	36	A-OKVQA: A Benchmark for Visual Question Answering using World Knowledge
+citation	235692795	249282486	18	REVIVE: Regional Visual Representation Matters in Knowledge-Based Visual Question Answering
+citation	235692795	249282645	20	VL-BEiT: Generative Vision-Language Pretraining
+citation	235692795	249438653	21	FashionVLP: Vision Language Transformer for Fashion Retrieval with Feedback
+citation	235692795	251020112	14	The Unreasonable Effectiveness of CLIP Features for Image Captioning: An Experimental Analysis
+citation	235692795	250150680	0	VisualHow: Multimodal Problem Solving
+citation	235692795	250602160	14	Towards General Purpose Vision Systems: An End-to-End Task-Agnostic Vision-Language Architecture
+citation	235692795	250980730	20	3DJCG: A Unified Framework for Joint Dense Captioning and Visual Grounding on 3D Point Clouds
+citation	235692795	251024765	3	Learning to Ask Informative Sub-Questions for Visual Question Answering
+citation	235692795	251063889	0	Object Prior Embedded Network for Query-Agnostic Image Retrieval
+citation	235692795	250520356	2	Maintaining Reasoning Consistency in Compositional Visual Question Answering
+citation	235692795	249192378	7	VLUE: A Multi-Task Benchmark for Evaluating Vision-Language Models
+citation	235692795	249192199	33	CyCLIP: Cyclic Contrastive Language-Image Pretraining
+citation	235692795	249063057	5	DisinfoMeme: A Multimodal Dataset for Detecting Meme Intentionally Spreading Out Disinformation
+citation	235692795	249084508	23	A Survey on Long-Tailed Visual Recognition
+citation	235692795	249018141	36	mPLUG: Effective and Efficient Vision-Language Learning by Cross-modal Skip-connections
+citation	235692795	249018103	3	HiVLP: Hierarchical Vision-Language Pre-Training for Fast Image-Text Retrieval
+citation	235692795	249062729	0	Face2Text revisited: Improved data set and baseline results
+citation	235692795	252647793	15	M-FFN: multi-scale feature fusion network for image captioning
+citation	235692795	248987282	9	PEVL: Position-enhanced Pre-training and Prompt Tuning for Vision-language Models
+citation	235692795	248987346	31	Language Models with Image Descriptors are Strong Few-Shot Video-Language Learners
+citation	235692795	248834284	9	Gender and Racial Bias in Visual Question Answering Datasets
+citation	235692795	248722127	5	Localized Vision-Language Matching for Open-vocabulary Object Detection
+citation	235692795	248721941	3	What’s in a Caption? Dataset-Specific Linguistic Diversity and Its Effect on Visual Description Models and Metrics
+citation	235692795	248762420	3	Enhance understanding and reasoning ability for image captioning
+citation	235692795	248572429	13	Beyond a Pre-Trained Object Detector: Cross-Modal Textual and Visual Context for Image Captioning
+citation	235692795	248572380	2	Beyond Bounding Box: Multimodal Knowledge Learning for Object Detection
+citation	235692795	248524714	6	Declaration-based Prompt Tuning for Visual Question Answering
+citation	235692795	248525064	40	Language Models Can See: Plugging Visual Controls in Text Generation
+citation	235692795	248512473	372	CoCa: Contrastive Captioners are Image-Text Foundation Models
+citation	235692795	248512968	27	All You May Need for VQA are Image Captions
+citation	235692795	248496280	10	Answer-Me: Multi-Task Open-Vocabulary Visual Question Answering
+citation	235692795	248476188	26	PyramidCLIP: Hierarchical Feature Alignment for Vision-language Model Pretraining
+citation	235692795	248476411	583	Flamingo: a Visual Language Model for Few-Shot Learning
+citation	235692795	248408608	9	Deep Learning-Based Identification of Maize Leaf Diseases Is Improved by an Attention Mechanism: Self-Attention
+citation	235692795	248426953	9	Reliable Visual Question Answering: Abstain Rather Than Answer Incorrectly
+citation	235692795	248366429	4	Multimodal Adaptive Distillation for Leveraging Unimodal Encoders for Vision-Language Tasks
+citation	235692795	248266901	27	K-LITE: Learning Transferable Visual Models with External Knowledge
+citation	235692795	248227577	5	Vision-Language Pre-Training for Multimodal Aspect-Based Sentiment Analysis
+citation	235692795	248227296	11	MUGEN: A Playground for Video-Audio-Text Multimodal Understanding and GENeration
+citation	235692795	248218570	23	COTS: Collaborative Two-Stream Vision-Language Pre-Training Model for Cross-Modal Retrieval
+citation	235692795	248218612	17	Vision-and-Language Pretrained Models: A Survey
+citation	235692795	248118561	34	ReCLIP: A Strong Zero-Shot Baseline for Referring Expression Comprehension
+citation	235692795	248118610	20	X-DETR: A Versatile Architecture for Instance-wise Vision-Language Tasks
+citation	235692795	248136771	4	Attention Map-Guided Visual Explanations for Deep Neural Networks
+citation	235692795	248085871	2	XMP-Font: Self-Supervised Cross-Modality Pre-training for Few-Shot Font Generation
+citation	235692795	248085559	8	ManiTrans: Entity-Level Text-Guided Image Manipulation via Token-wise Semantic Alignment and Generation
+citation	235692795	248006414	88	Winoground: Probing Vision and Language Models for Visio-Linguistic Compositionality
+citation	235692795	248006101	82	Unified Contrastive Learning in Image-Text-Label Space
+citation	235692795	247942360	3	Representing Context in FrameNet: A Multidimensional, Multimodal Approach
+citation	235692795	247839259	3	FindIt: Generalized Localization with Natural Language Queries
+citation	235692795	247839676	17	ViSTA: Vision and Scene Text Aggregation for Cross-Modal Retrieval
+citation	235692795	247778943	0	Fine-Grained Visual Entailment
+citation	235692795	247763152	18	Image-text Retrieval: A Survey on Recent Research and Development
+citation	235692795	247762352	7	Single-Stream Multi-Level Alignment for Vision-Language Pretraining
+citation	235692795	247518651	5	DU-VLG: Unifying Vision-and-Language Generation via Dual Sequence-to-Sequence Pre-training
+citation	235692795	247450642	16	Things not Written in Text: Exploring Spatial Commonsense from Visual Signals
+citation	235692795	247447209	38	CLIP Models are Few-Shot Learners: Empirical Studies on VQA and Visual Entailment
+citation	235692795	247446830	7	Towards Visual-Prompt Temporal Answering Grounding in Medical Instructional Video
+citation	235692795	247447159	28	Enabling Multimodal Generation on CLIP via Vision-Language Knowledge Distillation
+citation	235692795	247362532	5	StyleBabel: Artistic Style Tagging and Captioning
+citation	235692795	247362966	4	LoopITR: Combining Dual and Cross Encoder Architectures for Image-Text Retrieval
+citation	235692795	247315595	21	A Simple Multi-Modality Transfer Learning Baseline for Sign Language Translation
+citation	235692795	247315670	12	Where Does the Performance Improvement Come From?: - A Reproducibility Concern about Image-Text Retrieval
+citation	235692795	247222861	9	Vision-Language Intelligence: Tasks, Representation Learning, and Large Models
+citation	235692795	247187970	10	Unsupervised Vision-and-Language Pretraining via Retrieval-based Multi-Granular Alignment
+citation	235692795	247187508	30	CLIP-GEN: Language-Free Training of a Text-to-Image Generator with CLIP
+citation	235692795	247188066	21	Multi-modal Alignment using Representation Codebook
+citation	235692795	247083956	2	Measuring CLEVRness: Blackbox testing of Visual Reasoning Models
+citation	235692795	247025790	11	CaMEL: Mean Teacher Learning for Image Captioning
+citation	235692795	247011309	87	Vision-Language Pre-Training with Triple Contrastive Learning
+citation	235692795	246996617	33	VLP: A Survey on Vision-language Pre-training
+citation	235692795	246863399	17	CommerceMM: Large-Scale Commerce MultiModal Representation Learning with Omni Retrieval
+citation	235692795	246867017	1	Privacy Preserving Visual Question Answering
+citation	235692795	246731459	0	An experimental study of the vision-bottleneck in VQA
+citation	235692795	246634906	323	Unifying Architectures, Tasks, and Modalities Through a Simple Sequence-to-Sequence Learning Framework
+citation	235692795	246634787	0	Catch Me if You Can: A Novel Task for Detection of Covert Geo-Locations (CGL)
+citation	235692795	246607802	15	Grounding Answers for Visual Questions Asked by Visually Impaired People
+citation	235692795	246566716	1	Image-Captioning Model Compression
+citation	235692795	246430542	0	Deep Learning Approaches on Image Captioning: A Review
+citation	235692795	246430297	9	A dataset for medical instructional video classification and question answering
+citation	235692795	252222245	1	MVPTR: Multi-Level Semantic Alignment for Vision-Language Pre-Training via Multi-Stage Learning
+citation	235692795	246294681	2	Transformer Module Networks for Systematic Generalization in Visual Question Answering
+citation	235692795	246285660	0	MGA-VQA: Multi-Granularity Alignment for Visual Question Answering
+citation	235692795	246285542	1	SA-VQA: Structured Alignment of Visual and Semantic Representations for Visual Question Answering
+citation	235692795	247780513	0	Do Smart Glasses Dream of Sentimental Visions?
+citation	235692795	246015706	15	CLIP-TD: CLIP Targeted Distillation for Vision-Language Tasks
+citation	235692795	245906203	43	CLIP-Event: Connecting Text and Images with Event Structures
+citation	235692795	245837609	69	MERLOT RESERVE: Neural Script Knowledge through Vision and Language and Sound
+citation	235692795	245769906	5	Compact Bidirectional Transformer for Image Captioning
+citation	235692795	245668891	2	StyleM: Stylized Metrics for Image Captioning Built with Contrastive N-grams
+citation	235692795	245634812	31	ERNIE-ViLG: Unified Generative Pre-training for Bidirectional Vision-Language Generation
+citation	235692795	250627406	5	Contrastive Vision-Language Pre-training with Limited Resources
+citation	235692795	245219186	8	Distilled Dual-Encoder Model for Vision-Language Understanding
+citation	235692795	245218534	123	RegionCLIP: Region-based Language-Image Pretraining
+citation	235692795	245935480	2	MM-trafficEvent: An Interactive Incident Retrieval System for First-view Travel-log Data
+citation	235692795	245131534	7	Dual-Key Multimodal Backdoors for Visual Question Answering
+citation	235692795	245124165	7	ITA: Image-Text Alignments for Multi-Modal Named Entity Recognition
+citation	235692795	245117852	49	MAGMA - Multimodal Augmentation of Generative Models through Adapter-based Finetuning
+citation	235692795	244954250	203	FLAVA: A Foundational Language And Vision Alignment Model
+citation	235692795	244954552	35	Everything at Once – Multi-modal Fusion Transformer for Video Retrieval
+citation	235692795	244920947	198	Grounded Language-Image Pre-training
+citation	235692795	244908314	33	General Facial Representation Learning in a Visual-Linguistic Manner
+citation	235692795	244773394	33	Object-aware Video-language Pre-training for Retrieval
+citation	235692795	244714558	50	ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic
+citation	235692795	244714549	66	Towards Language-Free Training for Text-to-Image Generation
+citation	235692795	244709355	16	VL-LTR: Learning Class-wise Visual-Linguistic Representation for Long-Tailed Visual Recognition
+citation	235692795	244527510	97	Scaling Up Vision-Language Pretraining for Image Captioning
+citation	235692795	247778870	6	Universal Captioner: Inducing Content-Style Separation in Vision-and-Language Model Training
+citation	235692795	251105279	23	UniTAB: Unifying Text and Box Outputs for Grounded Vision-Language Modeling
+citation	235692795	244477674	338	Florence: A New Foundation Model for Computer Vision
+citation	235692795	244346239	202	ClipCap: CLIP Prefix for Image Captioning
+citation	235692795	244270283	3	Achieving Human Parity on Visual Question Answering
+citation	235692795	244129883	96	Multi-Grained Vision Language Pre-Training: Aligning Texts with Visual Concepts
+citation	235692795	243985875	59	A Survey of Visual Transformers
+citation	235692795	244117525	216	FILIP: Fine-grained Interactive Language-Image Pre-Training
+citation	235692795	241033425	142	An Empirical Study of Training End-to-End Vision-and-Language Transformers
+citation	235692795	241035439	151	VLMo: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts
+citation	235692795	240006659	40	Transformers in computational visual media: A survey
+citation	235692795	237286470	3	Lightweight Visual Question Answering using Scene Graphs
+citation	235692795	240230548	10	Multi-modal Dictionary BERT for Cross-modal Video Search in Baidu Advertising
+citation	235692795	240230553	9	Assorted Attention Network for Cross-Lingual Language-to-Vision Retrieval
+citation	235692795	244478752	5	VLDeformer: Vision-Language Decomposed Transformer for fast cross-modal retrieval
+citation	235692795	239049894	0	A Self-Explainable Stylish Image Captioning Framework via Multi-References
+citation	235692795	239011592	3	MM21 Pre-training for Video Understanding Challenge: Video Captioning with Pretraining Techniques
+citation	235692795	239016231	42	A Good Prompt Is Worth Millions of Parameters: Low-resource Prompt-based Learning for Vision-Language Models
+citation	235692795	238744333	21	Mengzi: Towards Lightweight yet Ingenious Pre-trained Models for Chinese
+citation	235692795	238743817	2	Understanding of Emotion Perception from Art
+citation	235692795	238744488	4	Winning the ICCV'2021 VALUE Challenge: Task-aware Ensemble and Transfer Learning with Visual Concepts
+citation	235692795	244603551	10	A survey of methods, datasets and evaluation metrics for visual question answering
+citation	235692795	237635382	92	CPT: Colorful Prompt Tuning for Pre-trained Vision-Language Models
+citation	235692795	237593048	15	KD-VLP: Improving End-to-End Vision-and-Language Pretraining with Object Knowledge Distillation
+citation	235692795	237490295	25	xGQA: Cross-Lingual Visual Question Answering
+citation	235692795	237494738	3	Constructing Phrase-level Semantic Labels to Form Multi-Grained Supervision for Image-Text Retrieval
+citation	235692795	237485500	110	An Empirical Study of GPT-3 for Few-Shot Knowledge-Based VQA
+citation	235692795	237385768	30	WebQA: Multihop and Multimodal QA
+citation	235692795	237291550	369	SimVLM: Simple Visual Language Model Pretraining with Weak Supervision
+citation	235692795	237091384	2	Cross-Modal Graph With Meta Concepts for Video Captioning
+citation	235692795	236987044	72	Vision-Language Transformer and Query Generation for Referring Segmentation
+citation	235692795	252782746	1	Ordered Attention for Coherent Visual Storytelling
+citation	235692795	244772950	53	From Show to Tell: A Survey on Deep Learning-Based Image Captioning
+citation	235692795	235829401	195	How Much Can CLIP Benefit Vision-and-Language Tasks?
+citation	235692795	235669751	5	Winner Team Mia at TextVQA Challenge 2021: Vision-and-Language Representation Learning with Pre-trained Sequence-to-Sequence Model
+citation	235692795	235352775	157	MERLOT: Multimodal Neural Script Knowledge Models
+citation	235692795	235266220	37	Adversarial VQA: A New Benchmark for Evaluating the Robustness of VQA Models
+citation	235692795	253224427	6	Concadia: Towards Image-Based Text Generation with a Purpose
+citation	235692795	233004528	11	VisQA: X-raying Vision and Language Reasoning in Transformers
+citation	235692795	233004347	35	Towards General Purpose Vision Systems
+citation	235692795	232404731	189	Multi-Scale Vision Longformer: A New Vision Transformer for High-Resolution Image Encoding
+citation	235692795	235351128	62	VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning
+citation	235692795	230435805	805	Transformers in Vision: A Survey
+citation	235692795	246659150	0	Decomposing generation networks with structure prediction for recipe generation
+citation	235692795	239998781	6	CRIC: A VQA Dataset for Compositional Reasoning on Vision and Commonsense
+citation	235692795	257633402	0	VinVL+L: Enriching Visual Representation with Location Context in VQA
+citation	235692795	256390003	1	MAKE: Product Retrieval with Vision-Language Pre-training in Taobao Search
+citation	235692795	256390238	53	Exploring AI Ethics of ChatGPT: A Diagnostic Analysis
+citation	235692795	257427236	1	Replacement as a Self-supervision for Fine-grained Vision-language Pre-training
+citation	235692795	257633264	0	Exploring the Relationship between Dataset Size and Image Captioning Model Performance
+citation	235692795	259076514	0	MAMO: Fine-Grained Vision-Language Representations Learning with Masked Multimodal Modeling
+citation	235692795	246275947	3	Do Smart Glasses Dream of Sentimental Visions? Deep Emotionship Analysis for Eyewear Devices
+citation	235692795	250390970	1	UAEM-ITAM at SemEval-2022 Task 5: Vision-Language Approach to Recognize Misogynous Content in Memes
+citation	235692795	256461456	2	End-to-End Unsupervised Vision-and-Language Pre-training with Referring Expression Matching
+citation	235692795	251979734	2	Universal Multi-Modality Retrieval with One Unified Embedding Space
+citation	235692795	252384943	0	KRIT: Knowledge-Reasoning Intelligence in vision-language Transformer
+citation	235692795	247625592	1	Arabic Image Captioning using Pre-training of Deep Bidirectional Transformers
+citation	235692795	246430286	14	MVP: Multi-Stage Vision-Language Pre-Training via Multi-Level Semantic Alignment
+citation	235692795	246431252	13	VC-GPT: Visual Conditioned GPT for End-to-End Generative Vision-and-Language Pre-training
+citation	235692795	246968187	0	Learning Cross-modal Representations with Multi-relations for Image Captioning
+citation	235692795	247570160	0	VISUAL REASONING MODELS
+citation	235692795	247839503	4	Do Vision-Language Pretrained Models Learn Primitive Concepts?
+citation	235692795	249674762	5	Prefix Language Models are Unified Modal Learners
+citation	235692795	249916870	0	GLIPv2: Unifying Localization and VL Understanding
+citation	235692795	249939761	0	Gender and Racial Bias in VisualQuestion Answering Datasets
+citation	235692795	250341442	1	MobiVQA: Efficient On-Device Visual Question Answering
+citation	235692795	250967310	0	Multimodal Detection of Hateful Messages Using Visual-Linguistic Pre-Trained Deep Learning Models
+citation	235692795	249148050	2	Learning to Embed Multi-Modal Contexts for Situated Conversational Agents
+citation	235692795	251437306	1	Modality Alignment between Deep Representations for Effective Video-and-Language Learning
+citation	235692795	252275875	1	Vision Encoders in Visual Question Answering
+citation	235692795	252280594	2	Finetuning Pretrained Vision-Language Models with Correlation Information Bottleneck for Robust Visual Question Answering
+citation	235692795	247401381	1	EAES: Effective Augmented Embedding Spaces for Text-based Image Captioning
+citation	235692795	252815634	3	MAP: Modality-Agnostic Uncertainty-Aware Vision-Language Pre-training Model
+citation	235692795	252818926	1	GRAVL-BERT: Graphical Visual-Linguistic Representations for Multimodal Coreference Resolution
+citation	235692795	252847574	0	Demonstrating EMMA: Embodied MultiModal Agent for Language-guided Action Execution in 3D Simulated Environments
+citation	235692795	254129024	1	Multimodal Context Carryover
+citation	235692795	254408745	1	Structured Vision-Language Pretraining for Computational Cooking
+citation	235692795	255149751	0	VieCap4H - VLSP 2021: A Transformer-Based Method for Healthcare Image Captioning in Vietnamese
+citation	235692795	256461430	1	FigMemes: A Dataset for Figurative Language Identification in Politically-Opinionated Memes
+citation	235692795	259141976	0	Does Structural Attention Improve Compositional Representations in Vision-Language Models?
+citation	235692795	235898873	36	From Show to Tell: A Survey on Image Captioning
+citation	235692795	239616421	2	VLDeformer: Learning Visual-Semantic Embeddings by Vision-Language Transformer Decomposing
+citation	235692795	246941871	0	Multimodal Multihop Source Retrieval for Web Question Answering
+citation	235692795	251440418	0	WebQA: A Multimodal Multihop NeurIPS Challenge
+citation	235692795	244709303	9	Universal Captioner: Long-Tail Vision-and-Language Model Training through Content-Style Separation
+citation	235692795	244488348	27	Crossing the Format Boundary of Text and Boxes: Towards Unified Vision-Language Modeling
+citation	235692795	245119589	6	Multimodal Neural Script Knowledge Models
+citation	235692795	245218734	5	Looking Outside the Box to Ground Language in 3D Scenes
+citation	235692795	245329409	3	ZeroVL: A Strong Baseline for Aligning Vision-Language Representations with Limited Resources

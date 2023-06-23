@@ -1,0 +1,1143 @@
+query	142 references	11546 citations	Language Models are Few-Shot Learners
+reference	218971783	219800227	60	All the News That’s Fit to Fabricate: AI-Generated Text as a Tool of Media Misinformation
+reference	218971783	218971825	628	Language (Technology) is Power: A Critical Survey of “Bias” in NLP
+reference	218971783	218869575	691	Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+reference	218971783	218487293	134	How Can We Accelerate Progress Towards Human-like Linguistic Generalization?
+reference	218971783	218487109	427	UnifiedQA: Crossing Format Boundaries With a Single QA System
+reference	218971783	216035815	219	Experience Grounds Language
+reference	218971783	215828184	361	StereoSet: Measuring stereotypical bias in pretrained language models
+reference	218971783	215828407	108	Adversarial Training for Large Neural Language Models
+reference	218971783	215745290	273	Pretrained Transformers Improve Out-of-Distribution Robustness
+reference	218971783	212747731	5	TTTTTackling WinoGrande Schemas
+reference	218971783	211532277	180	Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers
+reference	218971783	211204736	598	REALM: Retrieval-Augmented Language Model Pre-Training
+reference	218971783	211205183	467	How Much Knowledge Can You Pack into the Parameters of a Language Model?
+reference	218971783	210861095	1118	Scaling Laws for Neural Language Models
+reference	218971783	210861178	913	Multilingual Denoising Pre-training for Neural Machine Translation
+reference	218971783	210838924	767	Exploiting Cloze-Questions for Few-Shot Text Classification and Natural Language Inference
+reference	218971783	208290939	344	PIQA: Reasoning about Physical Commonsense in Natural Language
+reference	218971783	207847197	109	Reducing Sentiment Bias in Language Models via Counterfactual Evaluation
+reference	218971783	218560609	125	Automatic Detection of Generated Text is Easiest when Humans are Fooled
+reference	218971783	207756753	559	Adversarial NLI: A New Benchmark for Natural Language Understanding
+reference	218971783	204960716	4951	BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension
+reference	218971783	204838007	8111	Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+reference	218971783	202788490	93	NumNet: Machine Reading Comprehension with Numerical Reasoning
+reference	218971783	203627029	16	SummAE: Zero-Shot Abstractive Text Summarization using Length-Agnostic Auto-Encoders
+reference	218971783	203626972	3660	DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter
+reference	218971783	203592013	104	A Constructive Prediction of the Generalization Error Across Scales
+reference	218971783	202888986	4125	ALBERT: A Lite BERT for Self-supervised Learning of Language Representations
+reference	218971783	216080982	1211	UNITER: UNiversal Image-TExt Representation Learning
+reference	218971783	202889174	378	UNITER: Learning UNiversal Image-TExt Representations
+reference	218971783	202734545	39	Technical report on Conversational Question Answering
+reference	218971783	202719327	1048	TinyBERT: Distilling BERT for Natural Language Understanding
+reference	218971783	202660943	312	Fine-Tuning Language Models from Human Preferences
+reference	218971783	202660670	798	Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
+reference	218971783	202537041	323	The Woman Worked as a Babysitter: On Biases in Language Generation
+reference	218971783	201666234	201	Release Strategies and the Social Impacts of Language Models
+reference	218971783	86611921	1410	Natural Questions: A Benchmark for Question Answering Research
+reference	218971783	198953378	12738	RoBERTa: A Robustly Optimized BERT Pretraining Approach
+reference	218971783	203595067	200	The CommitmentBank: Investigating projection in naturally occurring discourse
+reference	218971783	198893658	448	WINOGRANDE: An Adversarial Winograd Schema Challenge at Scale
+reference	218971783	196181887	350	Probing Neural Network Comprehension of Natural Language Arguments
+reference	218971783	195069387	5884	XLNet: Generalized Autoregressive Pretraining for Language Understanding
+reference	218971783	182952848	166	GLTR: Statistical Detection and Visualization of Generated Text
+reference	218971783	170078973	53	Reducing Gender Bias in Word-Level Language Models with a Gender-Equalizing Loss Function
+reference	218971783	168169824	593	Defending Against Neural Fake News
+reference	218971783	165163511	67	Fair Is Better than Sensational: Man Is to Doctor as Woman Is to Doctor
+reference	218971783	159040000	48	Story Ending Prediction by Transferable BERT
+reference	218971783	146808476	783	MASS: Masked Sequence to Sequence Pre-training for Language Generation
+reference	218971783	143424870	1274	SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems
+reference	218971783	159041722	411	HellaSwag: Can a Machine Really Finish Your Sentence?
+reference	218971783	165163607	403	BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions
+reference	218971783	195873898	1428	Unsupervised Data Augmentation for Consistency Training
+reference	218971783	129945531	1011	Generating Long Sequences with Sparse Transformers
+reference	218971783	127986954	1549	The Curious Case of Neural Text Degeneration
+reference	218971783	128345418	124	Improving Multi-Task Deep Neural Networks via Knowledge Distillation for Natural Language Understanding
+reference	218971783	73729169	428	Lipstick on a Pig: Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do not Remove Them
+reference	218971783	67855846	517	DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs
+reference	218971783	67855815	374	Massively Multilingual Neural Machine Translation
+reference	218971783	59599752	842	Right for the Wrong Reasons: Diagnosing Syntactic Heuristics in Natural Language Inference
+reference	218971783	59523594	915	Multi-Task Deep Neural Networks for Natural Language Understanding
+reference	218971783	59523704	172	Learning and Evaluating General Linguistic Intelligence
+reference	218971783	58981712	2010	Cross-lingual Language Model Pretraining
+reference	218971783	57759363	2505	Transformer-XL: Attentive Language Models beyond a Fixed-Length Context
+reference	218971783	56262183	159	An Empirical Model of Large-Batch Training
+reference	218971783	53221289	357	Sentence Encoders on STILTs: Supplementary Training on Intermediate Labeled-data Tasks
+reference	218971783	53116244	217	ReCoRD: Bridging the Gap between Human and Machine Commonsense Reading Comprehension
+reference	218971783	102353817	271	WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations
+reference	218971783	52109970	36	WiC: 10, 000 Example Pairs for Evaluating Context-Sensitive Representations
+reference	218971783	52098907	305	Dissecting Contextual Word Embeddings: Architecture and Representation
+reference	218971783	52100101	183	Meta-Learning for Low-Resource Neural Machine Translation
+reference	218971783	52055325	803	CoQA: A Conversational Question Answering Challenge
+reference	218971783	52057510	568	QuAC: Question Answering in Context
+reference	218971783	52183757	423	Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering
+reference	218971783	52113461	859	Understanding Back-Translation at Scale
+reference	218971783	49667762	520	Universal Transformers
+reference	218971783	49393754	530	The Natural Language Decathlon: Multitask Learning as Question Answering
+reference	218971783	47018994	1866	Know What You Don’t Know: Unanswerable Questions for SQuAD
+reference	218971783	47015717	336	A Simple Method for Commonsense Reasoning
+reference	218971783	5112038	340	Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences
+reference	218971783	13756572	389	Gender Bias in Coreference Resolution
+reference	218971783	13751870	1726	A Call for Clarity in Reporting BLEU Scores
+reference	218971783	52123220	133	Collecting Diverse Natural Language Inference Problems for Sentence Representation Evaluation
+reference	218971783	3922816	414	Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge
+reference	218971783	4537113	894	Annotation Artifacts in Natural Language Inference Data
+reference	218971783	3608234	601	Generating Wikipedia by Summarizing Long Sequences
+reference	218971783	40100965	2877	Universal Language Model Fine-tuning for Text Classification
+reference	218971783	2222076	378	Deep Learning Scaling is Predictable, Empirically
+reference	218971783	53592270	8014	Decoupled Weight Decay Regularization
+reference	218971783	3462549	88	Few-shot Autoregressive Density Estimation: Towards Learning to Learn Distributions
+reference	218971783	9447219	825	Learned in Translation: Contextualized Word Vectors
+reference	218971783	13756489	59970	Attention is All you Need
+reference	218971783	26501419	1227	TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension
+reference	218971783	6826032	893	RACE: Large-scale ReAding Comprehension Dataset From Examinations
+reference	218971783	2413610	2088	Domain randomization for transferring deep neural networks from simulation to the real world
+reference	218971783	6719686	7744	Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks
+reference	218971783	3083502	116	Learning to Optimize Neural Nets
+reference	218971783	12462234	1203	Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer
+reference	218971783	67413369	2722	Optimization as a Model for Few-Shot Learning
+reference	218971783	14763001	779	RL$^2$: Fast Reinforcement Learning via Slow Reinforcement Learning
+reference	218971783	8451212	499	Sequence-Level Knowledge Distillation
+reference	218971783	2381275	241	The LAMBADA dataset: Word prediction requiring a broad discourse context
+reference	218971783	2928017	1638	Learning to learn by gradient descent by gradient descent
+reference	218971783	8909022	5209	Matching Networks for One Shot Learning
+reference	218971783	15337246	156	A Corpus and Evaluation Framework for Deeper Understanding of Commonsense Stories
+reference	218971783	8224916	411	Adaptive Computation Time for Recurrent Neural Networks
+reference	218971783	260422	1036	Exploring the Limits of Language Modeling
+reference	218971783	15600925	2156	Improving Neural Machine Translation Models with Monolingual Data
+reference	218971783	7138078	1009	Semi-supervised Sequence Learning
+reference	218971783	11754890	397	Representation Learning Using Multi-Task Deep Neural Networks for Semantic Classification and Information Retrieval
+reference	218971783	7200347	12312	Distilling the Knowledge in a Neural Network
+reference	218971783	216034672	347	A Neural Network for Factoid Question Answering over Paragraphs
+reference	218971783	1957433	26793	GloVe: Global Vectors for Word Representation
+reference	218971783	5028232	53	Edinburgh’s Phrase-based Machine Translation Systems for WMT-14
+reference	218971783	6401679	1557	Semantic Parsing on Freebase from Question-Answer Pairs
+reference	218971783	18406556	2045	Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation
+reference	218971783	5959482	26106	Efficient Estimation of Word Representations in Vector Space
+reference	218971783	168726441	274	Guide for Conducting Risk Assessments
+reference	218971783	434646	423	SemEval-2012 Task 7: Choice of Plausible Alternatives: An Evaluation of Commonsense Causal Reasoning
+reference	218971783	15710851	947	The Winograd Schema Challenge
+reference	218971783	13886408	3132	SentiWordNet 3.0: An Enhanced Lexical Resource for Sentiment Analysis and Opinion Mining
+reference	218971783	8587959	2100	The Third PASCAL Recognizing Textual Entailment Challenge
+reference	218971783	9322367	203	Corpus-based Learning of Analogies and Semantic Relations
+reference	218971783	29074	164	Combining Independent Modules to Solve Multiple-choice Synonym and Analogy Problems
+reference	218971783	1438450	4011	NLTK: The Natural Language Toolkit
+reference	218971783	52872549	593	Learning to Learn Using Gradient Descent
+reference	218971783	45998148	6319	Multitask Learning
+reference	218971783	5151364	933	The Penn Treebank: Annotating Predicate Argument Structure
+reference	218971783	15819455	1302	Information-Based Objective Functions for Active Data Selection
+reference	218971783	50145091	999	Acquiring a Single New Word
+reference	218971783	52967399	53782	BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+reference	218971783	108303466	34	Multi-Agent Dual Learning
+reference	218971783	160025533	10495	Language Models are Unsupervised Multitask Learners
+reference	218971783	49313245	5561	Improving Language Understanding by Generative Pre-Training
+reference	218971783	5791809	404	The Seventh PASCAL Recognizing Textual Entailment Challenge
+reference	218971783	858065	599	The Sixth PASCAL Recognizing Textual Entailment Challenge
+reference	218971783	8564414	230	Machine Learning Challenges. Evaluating Predictive Uncertainty, Visual Object Classification, and Recognising Tectual Entailment
+reference	218971783	13385138	509	The Second PASCAL Recognising Textual Entailment Challenge
+reference	218971783	18306353	26	A Natural Logic Inference System
+reference	218971783	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Ai and efficiency', 'citationCount': None}
+reference	218971783	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Model cards for model reporting, 2018', 'citationCount': None}
+reference	218971783	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'The trouble with bias', 'citationCount': None}
+reference	218971783	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Natural language corpus data', 'citationCount': None}
+reference	218971783	*** ERROR ***	{'paperId': None, 'externalIds': None, 'title': 'Tr-mt (ensemble)', 'citationCount': None}
+citation	218971783	258045456	0	A BERT-based deontic logic learner
+citation	218971783	258150972	0	On the class separability of contextual embeddings representations – or “The classifier does not matter when the (text) representation is so good!”
+citation	218971783	258318406	0	A social media event detection framework based on transformers and swarm optimization for public notification of crises and emergency management
+citation	218971783	258776628	0	Trustworthy journalism through AI
+citation	218971783	253360362	0	HardGBM: A Framework for Accurate and Hardware-Efficient Gradient Boosting Machines
+citation	218971783	259223966	0	SENECA: building a fully digital neuromorphic processor, design trade-offs and challenges
+citation	218971783	259224523	0	Apolitical Intelligence? Auditing Delphi's responses on controversial political issues in the US
+citation	218971783	259224700	0	Overview of Robust and Multilingual Automatic Evaluation Metrics for Open-Domain Dialogue Systems at DSTC 11 Track 4
+citation	218971783	259224932	0	FLAG: Finding Line Anomalies (in code) with Generative AI
+citation	218971783	259223599	0	HotGPT: How to Make Software Documentation More Useful with a Large Language Model?
+citation	218971783	259224516	0	Generative Multimodal Entity Linking
+citation	218971783	259224426	0	Deep Metric Learning with Soft Orthogonal Proxies
+citation	218971783	259224535	0	AI could create a perfect storm of climate misinformation
+citation	218971783	259224364	0	Explainable Recommendation with Personalized Review Retrieval and Aspect Learning
+citation	218971783	259224497	0	Impacts and Risk of Generative AI Technology on Cyber Defense
+citation	218971783	259224345	0	AudioPaLM: A Large Language Model That Can Speak and Listen
+citation	218971783	259224520	0	Ladder Fine-tuning approach for SAM integrating complementary network
+citation	218971783	259224389	0	Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs
+citation	218971783	259224609	0	Accelerated Training via Incrementally Growing Neural Networks using Variance Transfer and Learning Rate Adaptation
+citation	218971783	259224666	0	PromptIR: Prompting for All-in-One Blind Image Restoration
+citation	218971783	259224905	0	Mapping and Cleaning Open Commonsense Knowledge Bases with Generative Translation
+citation	218971783	259212487	0	CompMix: A Benchmark for Heterogeneous Question Answering
+citation	218971783	259211856	0	Which Spurious Correlations Impact Reasoning in NLI Models? A Visual Interactive Diagnosis through Data-Constrained Counterfactuals
+citation	218971783	259211999	0	Prompt Sapper: A LLM-Empowered Production Tool for Building AI Chains
+citation	218971783	259212005	0	Iterated Piecewise Affine (IPA) Approximation for Language Modeling
+citation	218971783	259212117	0	Task-Robust Pre-Training for Worst-Case Downstream Adaptation
+citation	218971783	259212164	0	Do you still need a manual smart contract audit?
+citation	218971783	259211941	0	A Chain of AI-based Solutions for Resolving FQNs and Fixing Syntax Errors in Partial Code
+citation	218971783	259212200	0	Solving and Generating NPR Sunday Puzzles with Large Language Models
+citation	218971783	259212325	0	EquiformerV2: Improved Equivariant Transformer for Scaling to Higher-Degree Representations
+citation	218971783	259211975	0	PriorBand: Practical Hyperparameter Optimization in the Age of Deep Learning
+citation	218971783	259212162	0	Limits for Learning with Language Models
+citation	218971783	259212276	0	Learning Homogenization for Elliptic Operators
+citation	218971783	259212219	0	Mitigating Communication Costs in Neural Networks: The Role of Dendritic Nonlinearity
+citation	218971783	259212242	0	Fantastic Weights and How to Find Them: Where to Prune in Dynamic Sparse Training
+citation	218971783	259212376	0	End-to-End Augmentation Hyperparameter Tuning for Self-Supervised Anomaly Detection
+citation	218971783	259212477	0	Edge Devices Inference Performance Comparison
+citation	218971783	259212102	0	Mass-Producing Failures of Multimodal Systems with Language Models
+citation	218971783	259224503	0	Evaluating Large Language Models with NeuBAROCO: Syllogistic Reasoning Ability and Human-like Biases
+citation	218971783	259224973	0	Auto-BI: Automatically Build BI-Models Leveraging Local Join Prediction and Global Schema Graph
+citation	218971783	259203671	0	ChatGPT is not Enough: Enhancing Large Language Models with Knowledge Graphs for Fact-aware Language Modeling
+citation	218971783	259212305	0	DynaQuant: Compressing Deep Learning Training Checkpoints via Dynamic Quantization
+citation	218971783	259203402	0	ChatGPT Chemistry Assistant for Text Mining and Prediction of MOF Synthesis
+citation	218971783	259178060	0	CUFF: A Configurable Uncertainty-driven Forecasting Framework for Green AI Clusters
+citation	218971783	259202628	0	Self-learning Monte Carlo with equivariant Transformer
+citation	218971783	259202577	0	Eight challenges in developing theory of intelligence
+citation	218971783	259203165	0	One model to rule them all: ranking Slovene summarizers
+citation	218971783	259203682	0	Explicit Syntactic Guidance for Neural Text Generation
+citation	218971783	259203325	0	GIO: Gradient Information Optimization for Training Dataset Selection
+citation	218971783	259203385	0	LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation
+citation	218971783	259203436	0	Improving Image Captioning Descriptiveness by Ranking and LLM-based Fusion
+citation	218971783	259203938	0	Lingua Manga: A Generic Large Language Model Centric System for Data Curation
+citation	218971783	259203790	0	Dense Video Object Captioning from Disjoint Supervision
+citation	218971783	259203877	0	Segment Anything Model (SAM) for Radiation Oncology
+citation	218971783	259203912	0	Towards Theory-based Moral AI: Moral AI with Aggregating Models Based on Normative Ethical Theory
+citation	218971783	259202800	0	GUMSum: Multi-Genre Data and Evaluation for English Abstractive Summarization
+citation	218971783	259203932	0	The Cultivated Practices of Text-to-Image Generation
+citation	218971783	259203115	0	A Simple and Effective Pruning Approach for Large Language Models
+citation	218971783	259202938	0	SALSA VERDE: a machine learning attack on Learning With Errors with sparse small secrets
+citation	218971783	259203998	0	Textbooks Are All You Need
+citation	218971783	259212024	0	SPRINT: Scalable Policy Pre-Training via Language Instruction Relabeling
+citation	218971783	259211996	0	Opportunities and Risks of LLMs for Scalable Deliberation with Polis
+citation	218971783	259211957	0	Towards Understanding What Code Language Models Learned
+citation	218971783	259211890	0	Open-Domain Text Evaluation via Meta Distribution Modeling
+citation	218971783	259212340	0	On Compositionality and Improved Training of NADO
+citation	218971783	259212020	0	Exploring New Frontiers in Agricultural NLP: Investigating the Potential of Large Language Models for Food Applications
+citation	218971783	259213212	0	Near-Duplicate Sequence Search at Scale for Large Language Model Memorization Evaluation
+citation	218971783	259223908	0	Designing meaningful continuous representations of T cell receptor sequences with deep generative models
+citation	218971783	259224480	0	Comparing deep learning models for volatility prediction using multivariate data
+citation	218971783	259196131	0	Evaluating a Large Language Model on Searching for GUI Layouts
+citation	218971783	259203367	0	Causal Effect Regularization: Automated Detection and Removal of Spurious Attributes
+citation	218971783	259203134	0	JiuZhang 2.0: A Unified Chinese Pre-trained Language Model for Multi-task Mathematical Problem Solving
+citation	218971783	259189679	0	Embodying an Interactive AI for Dance Through Movement Ideation
+citation	218971783	259203717	0	Large Language Models are Fixated by Red Herrings: Exploring Creative Problem Solving and Einstellung Effect using the Only Connect Wall Dataset
+citation	218971783	259076753	0	Towards Automated Interactive Tutoring - Focussing on Misconceptions and Adaptive Level-Specific Feedback
+citation	218971783	259189701	0	AnalogiLead: Improving Selection of Analogical Inspirations with Chunking and Recombination
+citation	218971783	259189676	0	Investigating the Perception of the Future in GPT-3, -3.5 and GPT-4
+citation	218971783	259202854	0	OpenP5: Benchmarking Foundation Models for Recommendation
+citation	218971783	259203027	0	Generative Sequential Recommendation with GPTRec
+citation	218971783	259203265	0	Evaluating Privacy Questions From Stack Overflow: Can ChatGPT Compete?
+citation	218971783	259203723	0	Temporal Data Meets LLM -- Explainable Financial Time Series Forecasting
+citation	218971783	259203498	0	Toward the Cure of Privacy Policy Reading Phobia: Automated Generation of Privacy Nutrition Labels From Privacy Policies
+citation	218971783	259203213	0	Preserving Commonsense Knowledge from Pre-trained Language Models via Causal Inference
+citation	218971783	259203832	0	Simplifying and Empowering Transformers for Large-Graph Representations
+citation	218971783	259203425	0	Road Barlow Twins: Redundancy Reduction for Road Environment Descriptors and Motion Prediction
+citation	218971783	259203552	0	Multilingual Few-Shot Learning via Language Model Retrieval
+citation	218971783	259203913	0	BayLing: Bridging Cross-lingual Alignment and Instruction Following through Interactive Translation for Large Language Models
+citation	218971783	259203911	0	MotionGPT: Finetuned LLMs are General-Purpose Motion Generators
+citation	218971783	259204134	0	Fine-tuning Large Enterprise Language Models via Ontological Reasoning
+citation	218971783	259205622	0	OmniscientDB: A Large Language Model-Augmented DBMS That Knows What Other DBMSs Do Not Know
+citation	218971783	259196099	0	Human Expectations and Perceptions of Learning in Machine Teaching
+citation	218971783	259203241	0	Language-Guided Generation of Physically Realistic Robot Motion and Control
+citation	218971783	259203643	0	Generation of Radiology Findings in Chest X-Ray by Leveraging Collaborative Knowledge
+citation	218971783	259203321	0	Gender Bias in Transformer Models: A comprehensive survey
+citation	218971783	259202672	0	CompanyKG: A Large-Scale Heterogeneous Graph for Company Similarity Quantification
+citation	218971783	258990535	0	In-network Allreduce with Multiple Spanning Trees on PolarFly
+citation	218971783	259202592	0	CLARA: Classifying and Disambiguating User Commands for Reliable Interactive Robotic Agents
+citation	218971783	259203109	0	AI Clinics on Mobile (AICOM): Universal AI Doctors for the Underserved and Hard-to-Reach
+citation	218971783	259203163	0	Bloated Disclosures: Can ChatGPT Help Investors Process Financial Information?
+citation	218971783	259202815	0	Snowman: A Million-scale Chinese Commonsense Knowledge Graph Distilled from Foundation Model
+citation	218971783	259187980	0	ReactGenie: An Object-Oriented State Abstraction for Complex Multimodal Interactions Using Large Language Models
+citation	218971783	259187509	0	GRM: Generative Relevance Modeling Using Relevance-Aware Sample Estimation for Document Retrieval
+citation	218971783	259187896	0	Investigating Prompting Techniques for Zero- and Few-Shot Visual Question Answering
+citation	218971783	259188051	0	Investigating the Utility of Surprisal from Large Language Models for Speech Synthesis Prosody
+citation	218971783	259187929	0	ClinicalGPT: Large Language Models Finetuned with Diverse Medical Data and Comprehensive Evaluation
+citation	218971783	259203273	0	Differentiable Instruction Optimization for Cross-Task Generalization
+citation	218971783	259178185	1	ChatGPT in the Classroom: A Preliminary Exploration on the Feasibility of Adapting ChatGPT to Support Children’s Information Discovery
+citation	218971783	259187507	0	FALL-E: A Foley Sound Synthesis Model and Strategies
+citation	218971783	259187722	0	$\pi2\text{vec}$: Policy Representations with Successor Features
+citation	218971783	259187719	0	No Strong Feelings One Way or Another: Re-operationalizing Neutrality in Natural Language Inference
+citation	218971783	259187796	0	MagicBrush: A Manually Annotated Dataset for Instruction-Guided Image Editing
+citation	218971783	259187975	0	Robot Learning with Sensorimotor Pre-training
+citation	218971783	259187859	0	MedFMC: A Real-world Dataset and Benchmark For Foundation Model Adaptation in Medical Image Classification
+citation	218971783	259187872	0	Clickbait Detection via Large Language Models
+citation	218971783	259187921	0	Parameter-efficient is not sufficient: Exploring Parameter, Memory, and Time Efficient Adapter Tuning for Dense Predictions
+citation	218971783	259187874	0	Energy-Based Cross Attention for Bayesian Context Update in Text-to-Image Diffusion Models
+citation	218971783	259188035	0	Pushing the Limits of ChatGPT on NLP Tasks
+citation	218971783	259203397	0	ActiveGLAE: A Benchmark for Deep Active Learning with Transformers
+citation	218971783	259203752	0	AD-AutoGPT: An Autonomous GPT for Alzheimer's Disease Infodemiology
+citation	218971783	259203337	0	Data Selection for Fine-tuning Large Language Models Using Transferred Shapley Values
+citation	218971783	259188012	0	Inverse Scaling: When Bigger Isn't Better
+citation	218971783	259203041	0	Thrilled by Your Progress! Large Language Models (GPT-4) No Longer Struggle to Pass Assessments in Higher Education Programming Courses
+citation	218971783	259165602	0	Encyclopedic VQA: Visual questions about detailed properties of fine-grained categories
+citation	218971783	259165244	0	KoLA: Carefully Benchmarking World Knowledge of Large Language Models
+citation	218971783	259165489	0	SCALE: Scaling up the Complexity for Advanced Language Model Evaluation
+citation	218971783	259203988	0	Opportunities and Challenges for ChatGPT and Large Language Models in Biomedicine and Health
+citation	218971783	259203031	0	Retrieving-to-Answer: Zero-Shot Video Question Answering with Frozen Large Language Models
+citation	218971783	259025739	0	Large Scale Foundation Model on Single-cell Transcriptomics
+citation	218971783	259164647	0	Deep Generative Models for Decision-Making and Control
+citation	218971783	259165390	0	Improving Reading Comprehension Question Generation with Data Augmentation and Overgenerate-and-rank
+citation	218971783	259164643	0	Diplomat: A Dialogue Dataset for Situated PragMATic Reasoning
+citation	218971783	259164637	0	Knowledge Guided Representation Learning and Causal Structure Learning in Soil Science
+citation	218971783	259164707	0	ViP: A Differentially Private Foundation Model for Computer Vision
+citation	218971783	259165195	0	Active Representation Learning for General Task Space with Applications in Robotics
+citation	218971783	259165061	0	Opportunities for Large Language Models and Discourse in Engineering Design
+citation	218971783	259165387	0	Safeguarding Crowdsourcing Surveys from ChatGPT with Prompt Injection
+citation	218971783	259165520	0	Exploring the MIT Mathematics and EECS Curriculum Using Large Language Models
+citation	218971783	259165667	0	Interleaving Pre-Trained Language Models and Large Language Models for Zero-Shot NL2SQL Generation
+citation	218971783	259165640	0	Neural models for Factual Inconsistency Classification with Explanations
+citation	218971783	259164968	0	MetricPrompt: Prompting Model as a Relevance Metric for Few-shot Text Classification
+citation	218971783	259165597	0	ArchGym: An Open-Source Gymnasium for Machine Learning Assisted Architecture Design
+citation	218971783	259165040	0	LVLM-eHub: A Comprehensive Evaluation Benchmark for Large Vision-Language Models
+citation	218971783	259164398	0	Matching Pairs: Attributing Fine-Tuned Models to their Pre-Trained Large Language Models
+citation	218971783	259165461	0	Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration
+citation	218971783	259167991	0	Automatic depression severity assessment with deep learning using parameter-efficient tuning
+citation	218971783	259171763	0	Language-Guided Music Recommendation for Video via Prompt Analogies
+citation	218971783	259171769	0	PaReprop: Fast Parallelized Reversible Backpropagation
+citation	218971783	259171767	0	SIGHT: A Large Annotated Dataset on Student Insights Gathered from Higher Education Transcripts
+citation	218971783	259171750	0	DreamHuman: Animatable 3D Avatars from Text
+citation	218971783	259171762	0	Lexical Speaker Error Correction: Leveraging Language Models for Speaker Diarization Error Correction
+citation	218971783	259171765	0	Semantic HELM: An Interpretable Memory for Reinforcement Learning
+citation	218971783	259187506	0	Block-State Transformer
+citation	218971783	259187545	0	Tighter Prediction Intervals for Causal Outcomes Under Hidden Confounding
+citation	218971783	259187620	0	Explore, Establish, Exploit: Red Teaming Language Models from Scratch
+citation	218971783	259187807	0	Building blocks for complex tasks: Robust generative event extraction for radiology reports under domain shifts
+citation	218971783	259188047	0	Understanding Parameter Sharing in Transformers
+citation	218971783	259187951	0	ChatGPT for Suicide Risk Assessment on Social Media: Quantitative Evaluation of Model Performance, Potentials and Limitations
+citation	218971783	259187949	0	Explaining Legal Concepts with Augmented Large Language Models (GPT-4)
+citation	218971783	259164631	0	DistSim: A performance model of large-scale hybrid distributed DNN training
+citation	218971783	259164765	0	Towards AGI in Computer Vision: Lessons Learned from GPT and Large Language Models
+citation	218971783	259164714	0	Language models are not naysayers: An analysis of language models on negation benchmarks
+citation	218971783	259164906	0	Language to Rewards for Robotic Skill Synthesis
+citation	218971783	259165563	0	Unifying Large Language Models and Knowledge Graphs: A Roadmap
+citation	218971783	259165262	0	Efficient Backdoor Attacks for Deep Neural Networks in Real-world Scenarios
+citation	218971783	259165417	0	Explore In-Context Learning for 3D Point Cloud Understanding
+citation	218971783	259164788	1	Radiology-GPT: A Large Language Model for Radiology
+citation	218971783	259164628	0	Solving Large-scale Spatial Problems with Convolutional Neural Networks
+citation	218971783	259164755	0	Anticipatory Music Transformer
+citation	218971783	259164559	0	AssistGPT: A General Multi-modal Assistant that can Plan, Execute, Inspect, and Learn
+citation	218971783	259164710	0	LiveChat: A Large-Scale Personalized Dialogue Dataset Automatically Constructed from Live Streaming
+citation	218971783	259164936	0	LoSh: Long-Short Text Joint Prediction Network for Referring Video Object Segmentation
+citation	218971783	259165298	0	Multiclass Confidence and Localization Calibration for Object Detection
+citation	218971783	259165111	0	A Proxy-Free Strategy for Practically Improving the Poisoning Efficiency in Backdoor Attacks
+citation	218971783	259164782	0	When to Use Efficient Self Attention? Profiling Text, Speech and Image Transformer Variants
+citation	218971783	259164899	0	Fed-ZERO: Efficient Zero-shot Personalization with Federated Mixture of Experts
+citation	218971783	259165134	0	Multi-target Backdoor Attacks for Code Pre-trained Models
+citation	218971783	259165039	0	Simple Embodied Language Learning as a Byproduct of Meta-Reinforcement Learning
+citation	218971783	259164678	0	Operationalising Representation in Natural Language Processing
+citation	218971783	259165503	0	PoetryDiffusion: Towards Joint Semantic and Metrical Manipulation in Poetry Generation
+citation	218971783	259165397	0	Beyond Implicit Bias: The Insignificance of SGD Noise in Online Learning
+citation	218971783	259165201	0	Assessing the Effectiveness of GPT-3 in Detecting False Political Statements: A Case Study on the LIAR Dataset
+citation	218971783	259165018	0	POP: Prompt Of Prompts for Continual Learning
+citation	218971783	259164722	0	Knowledge Distillation of Large Language Models
+citation	218971783	259165540	0	Are training trajectories of deep single-spike and deep ReLU network equivalent?
+citation	218971783	259164815	1	WizardCoder: Empowering Code Large Language Models with Evol-Instruct
+citation	218971783	259165224	0	On the Robustness of Latent Diffusion Models
+citation	218971783	259187769	0	Warpformer: A Multi-scale Modeling Approach for Irregular Clinical Time Series
+citation	218971783	259204037	0	Generate to Understand for Representation
+citation	218971783	253460374	0	Iterative self-transfer learning: A general methodology for response time-history prediction based on small dataset
+citation	218971783	259164600	0	AutoML in the Age of Large Language Models: Current Challenges, Future Opportunities and Risks
+citation	218971783	259213208	0	Few-shot Text-to-SQL Translation using Structure and Content Prompt Learning
+citation	218971783	259144786	1	Ethical Aspects of ChatGPT in Software Engineering Research
+citation	218971783	259144903	0	WebGLM: Towards An Efficient Web-Enhanced Question Answering System with Human Preferences
+citation	218971783	259145071	0	Knowledge-Prompted Estimator: A Novel Approach to Explainable Machine Translation Assessment
+citation	218971783	259165162	0	INT2.1: Towards Fine-Tunable Quantized Large Language Models with Error Correction through Low-Rank Adaptation
+citation	218971783	259140272	0	Editorial: Can virtual reality be a solution for assessing and treating psychological symptoms caused by eating and weight disorders?
+citation	218971783	259144954	0	SqueezeLLM: Dense-and-Sparse Quantization
+citation	218971783	259144999	0	Soft Language Clustering for Multilingual Model Pre-training
+citation	218971783	259145284	0	ReadProbe: A Demo of Retrieval-Enhanced Large Language Models to Support Lateral Reading
+citation	218971783	259145282	2	Robustness of SAM: Segment Anything Under Corruptions and Beyond
+citation	218971783	259144942	0	BoardgameQA: A Dataset for Natural Language Reasoning with Contradictory Information
+citation	218971783	259145127	0	Questioning the Survey Responses of Large Language Models
+citation	218971783	259145247	0	Practice with Graph-based ANN Algorithms on Sparse Data: Chi-square Two-tower model, HNSW, Sign Cauchy Projections
+citation	218971783	259145356	0	TART: A plug-and-play Transformer module for task-agnostic reasoning
+citation	218971783	259145381	0	Robustness and Generalization Performance of Deep Learning Models on Cyber-Physical Systems: A Comparative Study
+citation	218971783	259145314	0	Adding guardrails to advanced chatbots
+citation	218971783	259145391	0	Synapse: Leveraging Few-Shot Exemplars for Human-Level Computer Control
+citation	218971783	259145301	0	Galactic: Scaling End-to-End Reinforcement Learning for Rearrangement at 100k Steps-Per-Second
+citation	218971783	259145157	0	arXiVeri: Automatic table verification with GPT
+citation	218971783	259149389	0	Sequential Scheduling of Dataflow Graphs for Memory Peak Minimization
+citation	218971783	259164709	0	Adding 3D Geometry Control to Diffusion Models
+citation	218971783	259164447	0	Few-shot learning for sentence pair classification and its applications in software engineering
+citation	218971783	259164452	0	AVIS: Autonomous Visual Information Seeking with Large Language Models
+citation	218971783	259170804	0	Robustness of Sparsely Distributed Representations to Adversarial Attacks in Deep Neural Networks
+citation	218971783	259145195	0	Large Language Models Sometimes Generate Purely Negatively-Reinforced Text
+citation	218971783	259137877	0	On the Viability of using LLMs for SW/HW Co-Design: An Example in Designing CiM DNN Accelerators
+citation	218971783	259137375	0	TrojPrompt: A Black-box Trojan Attack on Pre-trained Language Models
+citation	218971783	259138312	0	Gradient Ascent Post-training Enhances Language Model Generalization
+citation	218971783	253047555	2	Generating Synthetic Datasets by Interpolating along Generalized Geodesics
+citation	218971783	259025422	1	Lifelog Discovery Assistant: Suggesting Prompts and Indexing Event Sequences for FIRST at LSC 2023
+citation	218971783	259112760	0	Dual-Stream Multimodal Learning for Topic-Adaptive Video Highlight Detection
+citation	218971783	259112684	0	Improving Image Encoders for General-Purpose Nearest Neighbor Search and Classification
+citation	218971783	259136071	0	From Answers to Insights: Unveiling the Strengths and Limitations of ChatGPT and Biomedical Knowledge Graphs
+citation	218971783	259137588	0	InstructP2P: Learning to Edit 3D Point Clouds with Text Instructions
+citation	218971783	259137686	0	MaskedFusion360: Reconstruct LiDAR Data by Querying Camera Features
+citation	218971783	259137389	0	Prompt-based Extraction of Social Determinants of Health Using Few-shot Learning
+citation	218971783	259137560	0	Waffling around for Performance: Visual Classification with Random Words and Broad Concepts
+citation	218971783	259137390	0	The Devil is in the Details: On the Pitfalls of Event Extraction Evaluation
+citation	218971783	259137864	0	Data-Copilot: Bridging Billions of Data and Humans with Autonomous Workflow
+citation	218971783	259137705	0	On the Amplification of Linguistic Bias through Unintentional Self-reinforcement Learning by Generative Language Models - A Perspective
+citation	218971783	259138613	0	Recurrent Attention Networks for Long-text Modeling
+citation	218971783	259138650	1	Controlling Text-to-Image Diffusion by Orthogonal Finetuning
+citation	218971783	259138783	0	Revisiting Token Pruning for Object Detection and Instance Segmentation
+citation	218971783	259138942	0	Efficient Quantization-aware Training with Adaptive Coreset Selection
+citation	218971783	259138572	0	Zero-shot Composed Text-Image Retrieval
+citation	218971783	259139681	0	Understanding In-Situ Programming for Smart Home Automation
+citation	218971783	259139812	0	Hierarchical Wi-Fi Trajectory Embedding for Indoor User Mobility Pattern Analysis
+citation	218971783	259139827	2	"I wouldn’t say offensive but...": Disability-Centered Perspectives on Large Language Models
+citation	218971783	259144976	0	Learning to Mask and Permute Visual Tokens for Vision Transformer Pre-Training
+citation	218971783	259145214	0	Probing Quantifier Comprehension in Large Language Models
+citation	218971783	259145355	0	Lost in Translation: Large Language Models in Non-English Content Analysis
+citation	218971783	259156301	0	Clinical Knowledge and Reasoning Abilities of AI Large Language Models in Pharmacy: A Comparative Study on the NAPLEX Exam
+citation	218971783	259137398	0	Language Versatilists vs. Specialists: An Empirical Revisiting on Multilingual Transfer Ability
+citation	218971783	259137655	0	QUERT: Continual Pre-training of Language Model for Query Understanding in Travel Domain Search
+citation	218971783	259137456	0	Empowering Molecule Discovery for Molecule-Caption Translation with Large Language Models: A ChatGPT Perspective
+citation	218971783	259137852	0	Reducing Barriers to Self-Supervised Learning: HuBERT Pre-training with Academic Compute
+citation	218971783	259138958	0	LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark
+citation	218971783	259138336	0	Augmenting Greybox Fuzzing with Generative AI
+citation	218971783	259138328	0	Improving Knowledge Extraction from LLMs for Robotic Task Learning through Agent Analysis
+citation	218971783	259138962	1	Multi-Source Test-Time Adaptation as Dueling Bandits for Extractive Question Answering
+citation	218971783	259138914	0	The Impact of ChatGPT and LLMs on Medical Imaging Stakeholders: Perspectives and Use Cases
+citation	218971783	259138886	0	RestGPT: Connecting Large Language Models with Real-World Applications via RESTful APIs
+citation	218971783	259138883	0	High-Fidelity Audio Compression with Improved RVQGAN
+citation	218971783	259145019	0	A Comprehensive Survey on Applications of Transformers for Deep Learning Tasks
+citation	218971783	258813949	0	How to harness the potential of ChatGPT in education?
+citation	218971783	259137420	0	Quantifying the Benefits of Carbon-Aware Temporal and Spatial Workload Shifting in the Cloud
+citation	218971783	259137830	0	Defining and Explorting the Intelligence Space
+citation	218971783	259137550	0	Calculating and Visualizing Counterfactual Feature Importance Values
+citation	218971783	259138629	0	ECGBERT: Understanding Hidden Language of ECGs with Self-Supervised Representation Learning
+citation	218971783	259138811	0	AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers
+citation	218971783	259137496	0	Automated Code Editing with Search-Generate-Modify
+citation	218971783	259138909	0	Boosting Language Models Reasoning with Chain-of-Knowledge Prompting
+citation	218971783	259144788	0	Medical Data Augmentation via ChatGPT: A Case Study on Medication Identification and Medication Event Classification
+citation	218971783	259144807	0	Human-in-the-Loop through Chain-of-Thought
+citation	218971783	259145101	0	Expressivity Enhancement with Efficient Quadratic Neurons for Convolutional Neural Networks
+citation	218971783	259129811	0	On the Challenges and Perspectives of Foundation Models for Medical Image Analysis
+citation	218971783	259138387	0	Measuring and Modifying Factual Knowledge in Large Language Models
+citation	218971783	259138285	0	Aladdin: Zero-Shot Hallucination of Stylized 3D Assets from Abstract Scene Descriptions
+citation	218971783	259129577	0	Exploring the Responses of Large Language Models to Beginner Programmers' Help Requests
+citation	218971783	259138293	0	Reliability Check: An Analysis of GPT-3's Response to Sensitive Topics and Prompt Wording
+citation	218971783	259138428	0	FLSL: Feature-level Self-supervised Learning
+citation	218971783	259129342	2	Can Large Language Models Infer Causation from Correlation?
+citation	218971783	259129504	0	Towards the Exploitation of LLM-based Chatbot for Providing Legal Support to Palestinian Cooperatives
+citation	218971783	259129329	0	S3: Increasing GPU Utilization during Generative Inference for Higher Throughput
+citation	218971783	259129382	0	NuCLR: Nuclear Co-Learned Representations
+citation	218971783	259129379	0	Customizing General-Purpose Foundation Models for Medical Report Generation
+citation	218971783	259129535	0	Leveraging Large Language Models for Scalable Vector Graphics-Driven Image Understanding
+citation	218971783	259129474	0	Towards a Robust Detection of Language Model Generated Text: Is ChatGPT that Easy to Detect?
+citation	218971783	259129613	0	Xiezhi: An Ever-Updating Benchmark for Holistic Domain Knowledge Evaluation
+citation	218971783	259129651	1	How Can Recommender Systems Benefit from Large Language Models: A Survey
+citation	218971783	259129847	0	WSPAlign: Word Alignment Pre-training via Large-Scale Weakly Supervised Span Prediction
+citation	218971783	259129611	0	Detecting Phishing Sites Using ChatGPT
+citation	218971783	259129746	1	Embodied Executable Policy Learning with Language-based Scene Summarization
+citation	218971783	259129734	0	FinGPT: Open-Source Financial Large Language Models
+citation	218971783	259129374	0	Evaluating the Social Impact of Generative AI Systems in Systems and Society
+citation	218971783	259137400	0	Understanding the Effect of the Long Tail on Neural Network Compression
+citation	218971783	259138569	0	14 Examples of How LLMs Can Transform Materials Science and Chemistry: A Reflection on a Large Language Model Hackathon
+citation	218971783	259138300	0	PoET: A generative model of protein families as sequences-of-sequences
+citation	218971783	259145016	0	Large Language Model Is Semi-Parametric Reinforcement Learning Agent
+citation	218971783	259145354	0	GPT-Calls: Enhancing Call Segmentation and Tagging by Generating Synthetic Conversations via Large Language Models
+citation	218971783	259202884	0	The Age of Synthetic Realities: Challenges and Opportunities
+citation	218971783	259144804	0	The economic trade-offs of large language models: A case study
+citation	218971783	259108227	0	Prefer to Classify: Improving Text Classifiers via Auxiliary Preference Learning
+citation	218971783	259129468	1	Artificial General Intelligence for Medical Imaging
+citation	218971783	259129602	0	PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
+citation	218971783	259108502	1	Mapping the Challenges of HCI: An Application and Evaluation of ChatGPT and GPT-4 for Cost-Efficient Question Answering
+citation	218971783	259108217	0	Comprehensive evaluation of deep and graph learning on drug-drug interactions prediction
+citation	218971783	259108315	0	On the Effectiveness of Out-of-Distribution Data in Self-Supervised Long-Tail Learning
+citation	218971783	259108391	0	Recovering Simultaneously Structured Data via Non-Convex Iteratively Reweighted Least Squares
+citation	218971783	259108396	0	Advancing Italian Biomedical Information Extraction with Large Language Models: Methodological Insights and Multicenter Practical Application
+citation	218971783	259108250	0	R-MAE: Regions Meet Masked Autoencoders
+citation	218971783	259108266	0	PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization
+citation	218971783	259108327	0	Improving Vietnamese Legal Question-Answering System based on Automatic Data Enrichment
+citation	218971783	259108333	1	Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models
+citation	218971783	259108559	0	DLAMA: A Framework for Curating Culturally Diverse Facts for Probing the Knowledge of Pretrained Language Models
+citation	218971783	259108339	0	RETA-LLM: A Retrieval-Augmented Large Language Model Toolkit
+citation	218971783	259108473	0	Adaptive Fake Audio Detection with Low-Rank Model Squeezing
+citation	218971783	259108959	0	M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models
+citation	218971783	259108565	0	In-Context Learning through the Bayesian Prism
+citation	218971783	259108630	0	CUED at ProbSum 2023: Hierarchical Ensemble of Summarization Models
+citation	218971783	259108831	0	Mixture-of-Domain-Adapters: Decoupling and Injecting Domain Knowledge to Pre-trained Language Models Memories
+citation	218971783	259108829	0	Augmenting Hessians with Inter-Layer Dependencies for Mixed-Precision Post-Training Quantization
+citation	218971783	259108729	0	COURIER: Contrastive User Intention Reconstruction for Large-Scale Pre-Train of Image Features
+citation	218971783	259108926	0	Correlated Noise in Epoch-Based Stochastic Gradient Descent: Implications for Weight Variances
+citation	218971783	259108867	0	Efficient Multi-Task Scene Analysis with RGB-D Transformers
+citation	218971783	259108906	1	When to Show a Suggestion? Integrating Human Feedback in AI-Assisted Programming
+citation	218971783	259108623	0	Can AI Moderate Online Communities?
+citation	218971783	259108558	0	SequenceMatch: Imitation Learning for Autoregressive Sequence Modelling with Backtracking
+citation	218971783	259108351	0	The ADAIO System at the BEA-2023 Shared Task on Generating AI Teacher Responses in Educational Dialogues
+citation	218971783	259114471	0	MC-NN: An End-to-End Multi-Channel Neural Network Approach for Predicting Influenza A Virus Hosts and Antigenic Types
+citation	218971783	259129820	0	AMEE: A Robust Framework for Explanation Evaluation in Time Series Classification
+citation	218971783	259129447	0	Privacy- and Utility-Preserving NLP with Anonymized Data: A case study of Pseudonymization
+citation	218971783	259129801	0	Bias Against 93 Stigmatized Groups in Masked Language Models and Downstream Sentiment Classification Tasks
+citation	218971783	259129508	0	Differentially Private Image Classification by Learning Priors from Random Processes
+citation	218971783	259129410	0	Multi-Modal Classifiers for Open-Vocabulary Object Detection
+citation	218971783	259129698	0	AircraftVerse: A Large-Scale Multimodal Dataset of Aerial Vehicle Designs
+citation	218971783	259096129	0	GPT Self-Supervision for a Better Data Annotator
+citation	218971783	259095528	0	Evaluation of ChatGPT and Microsoft Bing AI Chat Performances on Physics Exams of Vietnamese National High School Graduation Examination
+citation	218971783	259096088	0	PromptAttack: Probing Dialogue State Trackers with Adversarial Prompts
+citation	218971783	259096053	1	Evaluation of ChatGPT on Biomedical Tasks: A Zero-Shot Comparison with Fine-Tuned Generative Transformers
+citation	218971783	259095579	0	Youku-mPLUG: A 10 Million Large-scale Chinese Video-Language Dataset for Pre-training and Benchmarks
+citation	218971783	259108338	0	Good Data, Large Data, or No Data? Comparing Three Approaches in Developing Research Aspect Classifiers for Biomedical Papers
+citation	218971783	259108708	0	ScienceBenchmark: A Complex Real-World Benchmark for Evaluating Natural Language to SQL Systems
+citation	218971783	259129855	0	Check Me If You Can: Detecting ChatGPT-Generated Academic Writing using CheckGPT
+citation	218971783	259108199	0	INSTRUCTEVAL: Towards Holistic Evaluation of Instruction-Tuned Large Language Models
+citation	218971783	259095646	0	STEPS: A Benchmark for Order Reasoning in Sequential Tasks
+citation	218971783	259096157	0	Revisiting Out-of-distribution Robustness in NLP: Benchmark, Analysis, and LLMs Evaluations
+citation	218971783	259095456	0	XSemPLR: Cross-Lingual Semantic Parsing in Multiple Natural Languages and Meaning Representations
+citation	218971783	259095538	0	When to Read Documents or QA History: On Unified and Selective Open-domain QA
+citation	218971783	259095527	0	The Two Word Test: A Semantic Benchmark for Large Language Models
+citation	218971783	259095581	1	Matte Anything: Interactive Natural Image Matting with Segment Anything Models
+citation	218971783	259095877	0	Enhancing In-Context Learning with Answer Feedback for Multi-Span Question Answering
+citation	218971783	259095803	0	Long-form analogies generated by chatGPT lack human-like psycholinguistic properties
+citation	218971783	259096008	1	Fine-Grained Visual Prompting
+citation	218971783	259095575	0	Faithful Knowledge Distillation
+citation	218971783	259095915	0	ChatGPT is fun, but it is not funny! Humor is still challenging Large Language Models
+citation	218971783	259095896	0	M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning
+citation	218971783	259095927	0	Can current NLI systems handle German word order? Investigating language model performance on a new German challenge set of minimal pairs
+citation	218971783	259096143	0	Cross-Genre Argument Mining: Can Language Models Automatically Fill in Missing Discourse Markers?
+citation	218971783	259096176	0	Integrating Geometric Control into Text-to-Image Diffusion Models for High-Quality Detection Data Generation via Text Prompt
+citation	218971783	259096117	0	Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards
+citation	218971783	259096191	0	ModuleFormer: Learning Modular Large Language Models From Uncurated Data
+citation	218971783	259108498	0	Improving Open Language Models by Learning from Organic Interactions
+citation	218971783	259108375	0	A Survey on Knowledge Graphs for Healthcare: Resources, Applications, and Promises
+citation	218971783	259108341	0	Using Large Language Model Annotations for Valid Downstream Statistical Inference in Social Science: Design-Based Semi-Supervised Learning
+citation	218971783	259108221	0	ConceptBed: Evaluating Concept Learning Abilities of Text-to-Image Diffusion Models
+citation	218971783	259108693	0	On the Joint Interaction of Models, Data, and Features
+citation	218971783	259108572	0	Soft-prompt Tuning for Large Language Models to Evaluate Bias
+citation	218971783	259120171	0	Relative attributes classification via transformers and rank SVM loss
+citation	218971783	259088653	0	Natural Language Commanding via Program Synthesis
+citation	218971783	259088679	0	Stabilizing Contrastive RL: Techniques for Offline Goal Reaching
+citation	218971783	259088941	0	The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter
+citation	218971783	259089085	0	WHAT, WHEN, and HOW to Ground: Designing User Persona-Aware Conversational Agents for Engaging Dialogue
+citation	218971783	259088753	0	Impact of Large Language Models on Generating Software Specifications
+citation	218971783	259088877	0	Inference-Time Intervention: Eliciting Truthful Answers from a Language Model
+citation	218971783	259089368	0	Towards Alleviating the Object Bias in Prompt Tuning-based Factual Knowledge Extraction
+citation	218971783	259088736	0	GEO-Bench: Toward Foundation Models for Earth Monitoring
+citation	218971783	259088958	0	Prompt Space Optimizing Few-shot Reasoning Success with Large Language Models
+citation	218971783	259088929	0	Logic Diffusion for Knowledge Graph Reasoning
+citation	218971783	259088691	0	Query Complexity of Active Learning for Function Family With Nearly Orthogonal Basis
+citation	218971783	259089005	0	FaaSwap: SLO-Aware, GPU-Efficient Serverless Inference via Model Swapping
+citation	218971783	259088600	0	Mega-TTS: Zero-Shot Text-to-Speech at Scale with Intrinsic Inductive Bias
+citation	218971783	259089311	0	Prompting Large Language Models to Reformulate Queries for Moment Localization
+citation	218971783	259088875	0	ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory
+citation	218971783	259089333	0	Recognize Anything: A Strong Image Tagging Model
+citation	218971783	259088837	1	Click: Controllable Text Generation with Sequence Likelihood Contrastive Learning
+citation	218971783	259089064	0	The Creative Frontier of Generative AI: Managing the Novelty-Usefulness Tradeoff
+citation	218971783	259088848	0	Iterative Translation Refinement with Large Language Models
+citation	218971783	259088987	0	On the Role of Attention in Prompt-tuning
+citation	218971783	259088810	0	Diversifying Joint Vision-Language Tokenization Learning
+citation	218971783	259089245	0	Deductive Verification of Chain-of-Thought Reasoning
+citation	218971783	259095584	0	An Empirical Analysis of Parameter-Efficient Methods for Debiasing Pre-Trained Language Models
+citation	218971783	259095666	0	Triggering Multi-Hop Reasoning for Question Answering in Language Models using Soft Prompts and Random Walks
+citation	218971783	259095669	0	Augmenting Reddit Posts to Determine Wellness Dimensions impacting Mental Health
+citation	218971783	259095869	0	Certified Reasoning with Language Models
+citation	218971783	259095948	0	Turning large language models into cognitive models
+citation	218971783	259096178	0	TKDP: Threefold Knowledge-enriched Deep Prompt Tuning for Few-shot Named Entity Recognition
+citation	218971783	259095958	0	Revisiting Conversation Discourse for Dialogue Disentanglement
+citation	218971783	259095770	0	MISGENDERED: Limits of Large Language Models in Understanding Pronouns
+citation	218971783	259108425	0	Enabling Intelligent Interactions between an Agent and an LLM: A Reinforcement Learning Approach
+citation	218971783	259097078	0	Machine learning modeling of RNA structures: methods, challenges and future perspectives.
+citation	218971783	259075794	0	InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models
+citation	218971783	259089172	0	Stack Over-Flowing with Results: The Case for Domain-Specific Pre-Training Over One-Size-Fits-All Models
+citation	218971783	259129716	0	Visually-Grounded Descriptions Improve Zero-Shot Image Classification
+citation	218971783	259076029	0	Beyond Generating Code: Evaluating GPT on a Data Visualization Course
+citation	218971783	259089045	1	Zero-Shot 3D Shape Correspondence
+citation	218971783	259075336	1	CTRL: Connect Tabular and Language Model for CTR Prediction
+citation	218971783	259075538	0	On "Scientific Debt" in NLP: A Case for More Rigour in Language Model Pre-Training Research
+citation	218971783	256680817	2	When Decentralized Optimization Meets Federated Learning
+citation	218971783	259076041	0	CELDA: Leveraging Black-box Language Model as Enhanced Classifier without Labels
+citation	218971783	259065124	1	Argument and explanation
+citation	218971783	259065114	2	How could we make a social robot? A virtual bargaining approach
+citation	218971783	259065119	3	Symbols and grounding in large language models
+citation	218971783	259075112	0	Efficient GPT Model Pre-training using Tensor Train Matrix Representation
+citation	218971783	259075149	0	LmPa: Improving Decompilation by Synergy of Large Language Model and Program Analysis
+citation	218971783	259075246	0	RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems
+citation	218971783	259075175	0	Graph-Aware Language Model Pre-Training on a Large Graph Corpus Can Help Multiple Graph Applications
+citation	218971783	259075465	0	Towards Unified Text-based Person Retrieval: A Large-scale Multi-Attribute and Language Search Benchmark
+citation	218971783	259075636	0	Representational Strengths and Limitations of Transformers
+citation	218971783	259075601	0	Asymmetric Patch Sampling for Contrastive Learning
+citation	218971783	259075591	0	RecAgent: A Novel Simulation Paradigm for Recommender Systems
+citation	218971783	259075780	0	PULSAR: Pre-training with Extracted Healthcare Terms for Summarising Patients' Problems and Data Augmentation with Black-box Large Language Models
+citation	218971783	259075732	0	Benchmarking Large Language Models on CMExam - A Comprehensive Chinese Medical Exam Dataset
+citation	218971783	259075489	0	Enhancing Language Representation with Constructional Information for Natural Language Understanding
+citation	218971783	259075781	0	Continual Learning with Pretrained Backbones by Tuning in the Input Space
+citation	218971783	259076022	0	PolyVoice: Language Models for Speech to Speech Translation
+citation	218971783	259076409	0	User-friendly Image Editing with Minimal Text Input: Leveraging Captioning and Injection Techniques
+citation	218971783	259076167	0	A Simple and Flexible Modeling for Mental Disorder Detection by Learning from Clinical Questionnaires
+citation	218971783	259076271	0	MCTS: A Multi-Reference Chinese Text Simplification Dataset
+citation	218971783	259076261	0	Leveraging Large Language Models for Topic Classification in the Domain of Public Affairs
+citation	218971783	259076379	2	SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression
+citation	218971783	259076231	0	Second Language Acquisition of Neural Language Models
+citation	218971783	259076377	0	Learning Probabilistic Symmetrization for Architecture Agnostic Equivariance
+citation	218971783	259076266	0	SelfEvolve: A Code Evolution Framework via Large Language Models
+citation	218971783	259075640	0	Interactive Editing for Text Summarization
+citation	218971783	259075492	0	Using Sequences of Life-events to Predict Human Lives
+citation	218971783	259077070	1	GIMLET: A Unified Graph-Text Model for Instruction-Based Molecule Zero-Shot Learning
+citation	218971783	259089011	1	A Scalable and Adaptive System to Infer the Industry Sectors of Companies: Prompt + Model Tuning of Generative Language Models
+citation	218971783	259088821	0	Towards Adapting Computer Science Courses to AI Assistants' Capabilities
+citation	218971783	259089107	0	CONCORD: Clone-aware Contrastive Learning for Source Code
+citation	218971783	259089224	0	Few Shot Rationale Generation using Self-Training with Dual Teachers
+citation	218971783	259095925	0	Uncertainty in Natural Language Processing: Sources, Quantification, and Applications
+citation	218971783	259075893	1	SAM3D: Zero-Shot 3D Object Detection via Segment Anything Model
+citation	218971783	259075613	0	bgGLUE: A Bulgarian General Language Understanding Evaluation Benchmark
+citation	218971783	259076757	1	Demonstration of ThalamusDB: Answering Complex SQL Queries with Natural Language Predicates on Multi-Modal Data
+citation	218971783	253155210	2	A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys
+citation	218971783	258530701	0	Instance-Aware Hierarchical Structured Policy for Prompt Learning in Vision-Language Models
+citation	218971783	258533441	0	Efficient Data Loading with Quantum Autoencoder
+citation	218971783	258534440	0	Prompt Makes mask Language Models Better Adversarial Attackers
+citation	218971783	258536118	0	Zephyr: Zero-Shot Punctuation Restoration
+citation	218971783	258535542	0	Unified Prompt Learning Makes Pre-Trained Language Models Better Few-Shot Learners
+citation	218971783	258536835	0	Look and Think: Intrinsic Unification of Self-Attention and Convolution for Spatial-Channel Specificity
+citation	218971783	258537309	0	Compensatory Debiasing For Gender Imbalances In Language Models
+citation	218971783	258538129	0	CLMAE: A Liter and Faster Masked Autoencoders
+citation	218971783	258541048	0	Distill-Quantize-Tune - Leveraging Large Teachers for Low-Footprint Efficient Multilingual NLU on Edge
+citation	218971783	258541249	0	History, Present and Future: Enhancing Dialogue Generation with Few-Shot History-Future Prompt
+citation	218971783	258541117	0	Meta Learning for Domain Agnostic Soft Prompt
+citation	218971783	258546397	0	Large-scale Language Model Rescoring on Long-form Data
+citation	218971783	258546370	0	DTTR: Detecting Text with Transformers
+citation	218971783	259075223	0	Riemannian Low-Rank Model Compression for Federated Learning with Over-the-Air Aggregation
+citation	218971783	259075274	0	Temporal Dynamic Quantization for Diffusion Models
+citation	218971783	259075484	0	Evaluating and Improving Tool-Augmented Computation-Intensive Math Reasoning
+citation	218971783	259075361	0	Data Quality in Imitation Learning
+citation	218971783	259075569	0	Long Text Generation Challenge
+citation	218971783	259075917	0	Fine-Tuning Language Models with Advantage-Induced Policy Alignment
+citation	218971783	259075907	2	A Mathematical Abstraction for Balancing the Trade-off Between Creativity and Reality in Large Language Models
+citation	218971783	259076427	0	OWQ: Lessons learned from activation outliers for weight quantization in large language models
+citation	218971783	259075954	0	Proteus: Simulating the Performance of Distributed DNN Training
+citation	218971783	259075978	0	Exposing Bias in Online Communities through Large-Scale Language Models
+citation	218971783	259075994	0	Training Like a Medical Resident: Universal Medical Image Segmentation via Context Prior Learning
+citation	218971783	259076105	0	Finding the SWEET Spot: Analysis and Improvement of Adaptive Inference in Low Resource Settings
+citation	218971783	259076066	0	Large Language Model Augmented Narrative Driven Recommendations
+citation	218971783	259075698	1	USD: Unknown Sensitive Detector Empowered by Decoupled Objectness and Segment Anything Model
+citation	218971783	259076828	0	DataChat: An Intuitive and Collaborative Data Analytics Platform
+citation	218971783	259076809	1	Demystifying Artificial Intelligence for Data Preparation
+citation	218971783	259076808	0	Models and Practice of Neural Table Representations
+citation	218971783	259099552	0	Short-term Hebbian learning can implement transformer-like attention
+citation	218971783	259075335	0	Utilizing ChatGPT to Enhance Clinical Trial Enrollment
+citation	218971783	259075270	0	Prompting Is All Your Need: Automated Android Bug Replay with Large Language Models
+citation	218971783	259075362	0	A Comprehensive Survey on Deep Learning for Relation Extraction: Recent Advances and New Frontiers
+citation	218971783	259075813	1	MultiLegalPile: A 689GB Multilingual Legal Corpus
+citation	218971783	259075169	0	Memorization Capacity of Multi-Head Attention in Transformers
+citation	218971783	259075185	0	SpeechGen: Unlocking the Generative Power of Speech Language Models with Prompts
+citation	218971783	259075146	0	SGEM: Test-Time Adaptation for Automatic Speech Recognition via Sequential-Level Generalized Entropy Minimization
+citation	218971783	259075522	0	Towards Coding Social Science Datasets with Language Models
+citation	218971783	259076124	0	Question-Context Alignment and Answer-Context Dependencies for Effective Answer Sentence Selection
+citation	218971783	259076349	0	Benchmarking Robustness of Adaptation Methods on Pre-trained Vision-Language Models
+citation	218971783	259076158	0	TART: Improved Few-shot Text Classification Using Task-Adaptive Reference Transformation
+citation	218971783	259076400	0	Unsupervised Human Activity Recognition through Two-stage Prompting with ChatGPT
+citation	218971783	259064135	0	OMNI: Open-endedness via Models of human Notions of Interestingness
+citation	218971783	259088709	0	ChatGPT is a Remarkable Tool - For Experts
+citation	218971783	259063921	0	Learning from Partially Annotated Data: Example-aware Creation of Gap-filling Exercises for Language Learning
+citation	218971783	259063857	0	Responsible Task Automation: Empowering Large Language Models as Responsible Task Automators
+citation	218971783	259076443	0	RITA: Group Attention is All You Need for Timeseries Analytics
+citation	218971783	259046114	0	DORIS: Personalized course recommendation system based on deep learning
+citation	218971783	259059553	0	Reason-able embeddings: Learning concept embeddings with a transferable neural reasoner
+citation	218971783	259063864	0	Why Clean Generalization and Robust Overfitting Both Happen in Adversarial Training
+citation	218971783	259063802	0	Denoising Diffusion Semantic Segmentation with Mask Prior Modeling
+citation	218971783	259063934	0	Harnessing large-language models to generate private synthetic text
+citation	218971783	259063947	0	Prompt Tuning Large Language Models on Personalized Aspect Extraction for Recommendations
+citation	218971783	259064052	0	Collect-and-Distribute Transformer for 3D Point Cloud Analysis
+citation	218971783	259063795	0	Adjustable Visual Appearance for Generalizable Novel View Synthesis
+citation	218971783	259063984	0	Transfer learning for atomistic simulations using GNNs and kernel mean embeddings
+citation	218971783	259064155	0	Enhancing CLIP with CLIP: Exploring Pseudolabeling for Limited-Label Prompt Tuning
+citation	218971783	259063887	1	Multilingual Conceptual Coverage in Text-to-Image Models
+citation	218971783	259064205	0	PassGPT: Password Modeling and (Guided) Generation with Large Language Models
+citation	218971783	259064177	0	Domain Knowledge Matters: Improving Prompts with Fix Templates for Repairing Python Type Errors
+citation	218971783	259063822	0	ChatGPT for Zero-shot Dialogue State Tracking: A Solution or an Opportunity?
+citation	218971783	259064260	0	MetaVL: Transferring In-Context Learning Ability From Language Models to Vision-Language Models
+citation	218971783	259064198	0	Centered Self-Attention Layers
+citation	218971783	259063834	1	Segment Anything in High Quality
+citation	218971783	259064200	0	Towards Sustainable Learning: Coresets for Data-efficient Deep Learning
+citation	218971783	259064252	0	Can LLMs like GPT-4 outperform traditional AI tools in dementia diagnosis? Maybe, but not today
+citation	218971783	259064270	0	GAIA Search: Hugging Face and Pyserini Interoperability for NLP Training Data Exploration
+citation	218971783	259063841	0	Unsupervised Paraphrasing of Multiword Expressions
+citation	218971783	259063725	0	Towards In-context Scene Understanding
+citation	218971783	259063958	0	BabySLM: language-acquisition-friendly benchmark of self-supervised spoken language models
+citation	218971783	259063952	0	Is Model Attention Aligned with Human Attention? An Empirical Study on Large Language Models for Code Generation
+citation	218971783	259075607	0	Knowledge of cultural moral norms in large language models
+citation	218971783	259075604	0	VisualGPTScore: Visio-Linguistic Reasoning with Multimodal Generative Pre-Training Scores
+citation	218971783	259075884	0	Binary and Ternary Natural Language Generation
+citation	218971783	259076170	0	Concurrent Classifier Error Detection (CCED) in Large Scale Machine Learning Systems
+citation	218971783	259075412	0	Overcoming the Stability Gap in Continual Learning
+citation	218971783	259076356	0	Maximum Likelihood Training of Autoencoders
+citation	218971783	259075709	0	Probabilistic Adaptation of Text-to-Video Models
+citation	218971783	259075521	0	AI Transparency in the Age of LLMs: A Human-Centered Research Roadmap
+citation	218971783	258999480	1	Transformers learn to implement preconditioned gradient descent for in-context learning
+citation	218971783	258999949	0	Preference-grounded Token-level Guidance for Language Model Fine-tuning
+citation	218971783	258999153	0	Minding Language Models' (Lack of) Theory of Mind: A Plug-and-Play Multi-Character Belief Tracker
+citation	218971783	259064324	0	Learning Transformer Programs
+citation	218971783	259064000	0	LLMatic: Neural Architecture Search via Large Language Models and Quality-Diversity Optimization
+citation	218971783	257648177	1	Transformer-based deep reverse attention network for multi-sensory human activity recognition
+citation	218971783	258120544	0	Leveraging Large Language Models to Enhance Digital Health in Cardiology: A Preview of a Cutting-Edge Language Generation Model
+citation	218971783	254968300	3	The Future of Management: DAO to Smart Organizations and Intelligent Operations
+citation	218971783	248332757	0	Semantic Learning for Facial Action Unit Detection
+citation	218971783	258870210	0	Efficient Few-Shot Classification via Contrastive Pretraining on Web Data
+citation	218971783	258936390	0	A quantitative study of non-linearity in storytelling
+citation	218971783	258998007	0	Zero-shot Interpretable Phenotyping of Postpartum Hemorrhage Using Large Language Models
+citation	218971783	258999187	0	Birth of a Transformer: A Memory Viewpoint
+citation	218971783	258999319	0	Learning Sampling Dictionaries for Efficient and Generalizable Robot Motion Planning with Transformers
+citation	218971783	258999410	0	In-Context Learning User Simulators for Task-Oriented Dialog Systems
+citation	218971783	258999114	0	Adapting Pre-trained Language Models to Vision-Language Tasks via Dynamic Visual Prompting
+citation	218971783	258999277	0	End-to-end Knowledge Retrieval with Multi-modal Queries
+citation	218971783	258999195	1	LIV: Language-Image Representations and Rewards for Robotic Control
+citation	218971783	258999304	1	Challenges and Remedies to Privacy and Security in AIGC: Exploring the Potential of Privacy Computing, Blockchain, and Beyond
+citation	218971783	258999607	1	Make Your Pre-trained Model Reversible: From Parameter to Memory Efficient Fine-Tuning
+citation	218971783	258999611	0	Cross Modal Data Discovery over Structured and Unstructured Data Lakes
+citation	218971783	258999483	1	Thought Cloning: Learning to Think while Acting by Imitating Human Thinking
+citation	218971783	258999962	0	GPT4Image: Can Large Pre-trained Models Help Vision Models on Perception Tasks?
+citation	218971783	258999306	0	Prompt Algebra for Task Composition
+citation	218971783	258999192	0	Nonparametric Identifiability of Causal Representations from Unknown Interventions
+citation	218971783	258999580	0	Column Type Annotation using ChatGPT
+citation	218971783	258999584	0	The feasibility of artificial consciousness through the lens of neuroscience
+citation	218971783	258999563	0	STEVE-1: A Generative Model for Text-to-Behavior in Minecraft
+citation	218971783	258999481	0	Inspecting Spoken Language Understanding from Kids for Basic Math Learning at Home
+citation	218971783	259000022	0	MEWL: Few-shot multimodal word learning with referential uncertainty
+citation	218971783	259000160	0	Towards Foundation Models for Scientific Machine Learning: Characterizing Scaling and Transfer Behavior
+citation	218971783	258999826	1	Coneheads: Hierarchy Aware Attention
+citation	218971783	258999878	0	Effective Structured Prompting by Meta-Learning and Representative Verbalizer
+citation	218971783	258999776	0	AvatarStudio: Text-driven Editing of 3D Dynamic Human Head Avatars
+citation	218971783	258999835	0	Exposing Attention Glitches with Flip-Flop Language Modeling
+citation	218971783	258999985	0	How Generative Spoken Language Modeling Encodes Noisy Speech: Investigation from Phonetics to Syntactics
+citation	218971783	258999941	2	AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration
+citation	218971783	259029804	0	BinBench: a benchmark for x64 portable operating system interface binary function representations
+citation	218971783	259032638	0	Real-time simulations of ADF STEM probe position-integrated scattering cross-sections for single element fcc crystals in zone axis orientation using a densely connected neural network.
+citation	218971783	259047693	0	Natural Language Generation and Understanding of Big Code for AI-Assisted Programming: A Review
+citation	218971783	259061914	0	CHATGPT: FRIEND OR FOE IN MEDICAL WRITING? AN EXAMPLE OF HOW CHATGPT CAN BE UTILIZED IN WRITING CASE REPORTS
+citation	218971783	259063920	0	Towards Learning Discrete Representations via Self-Supervision for Wearables-Based Human Activity Recognition
+citation	218971783	259064083	0	Consistency-guided Prompt Learning for Vision-Language Models
+citation	218971783	259064259	0	White-Box Transformers via Sparse Rate Reduction
+citation	218971783	259063761	4	The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only
+citation	218971783	259064204	0	Examining the Causal Effect of First Names on Language Models: The Case of Social Commonsense Reasoning
+citation	218971783	259064264	0	Reimagining Retrieval Augmented Language Models for Answering Queries
+citation	218971783	259079899	0	The emergent role of artificial intelligence, natural learning processing, and large language models in higher education and research.
+citation	218971783	259100399	2	Faster sorting algorithms discovered using deep reinforcement learning
+citation	218971783	258033198	0	Specializing Neural Networks for Cryptographic Code Completion Applications
+citation	218971783	259179744	0	Micro/Nano Circuits and Systems Design and Design Automation: Challenges and Opportunities
+citation	218971783	247096805	1	Wor(l)d-GAN: Toward Natural-Language-Based PCG in Minecraft
+citation	218971783	258987272	0	Improving CLIP Training with Language Rewrites
+citation	218971783	258987371	0	PlaSma: Making Small Language Models Better Procedural Knowledge Models for (Counterfactual) Planning
+citation	218971783	258987322	0	Explanations as Features: LLM-Based Features for Text-Attributed Graphs
+citation	218971783	258988045	0	Large Language Models Are Not Abstract Reasoners
+citation	218971783	258987814	0	IDAS: Intent Discovery with Abstractive Summarization
+citation	218971783	258987259	0	The Impact of Positional Encoding on Length Generalization in Transformers
+citation	218971783	258987414	0	LMCap: Few-shot Multilingual Image Captioning by Retrieval Augmented Language Model Prompting
+citation	218971783	258987361	0	DOTA: A Dynamically-Operated Photonic Tensor Core for Energy-Efficient Transformer Accelerator
+citation	218971783	258990115	0	Primal-Attention: Self-attention through Asymmetric Kernel SVD in Primal Representation
+citation	218971783	258987325	0	What does the Failure to Reason with "Respectively" in Zero/Few-Shot Settings Tell Us about Language Models?
+citation	218971783	258990121	0	Evaluating Machine Learning Models with NERO: Non-Equivariance Revealed on Orbits
+citation	218971783	258987445	0	ChatGPT an ENFJ, Bard an ISTJ: Empirical Study on Personalities of Large Language Models
+citation	218971783	258987376	0	MetaDiffuser: Diffusion Model as Conditional Planner for Offline Meta-RL
+citation	218971783	258987341	0	Deliberate then Generate: Enhanced Prompting Framework for Text Generation
+citation	218971783	258987846	0	AI for Low-Code for AI
+citation	218971783	258987792	0	Fine-grained Text Style Transfer with Diffusion-Based Language Models
+citation	218971783	258987850	0	Adam Accumulation to Reduce Memory Footprints of both Activations and Gradients for Large-scale DNN Training
+citation	218971783	258987923	0	Knowledge Base Question Answering for Space Debris Queries
+citation	218971783	258987852	0	Representation-Driven Reinforcement Learning
+citation	218971783	258987679	0	Chatting Makes Perfect - Chat-based Image Retrieval
+citation	218971783	258987886	0	Exploring Lottery Prompts for Pre-trained Language Models
+citation	218971783	258987410	0	Zero-Shot Automatic Pronunciation Assessment
+citation	218971783	258999218	0	Measuring the Robustness of Natural Language Processing Models to Domain Shifts
+citation	218971783	258999384	0	Representation Reliability and Its Impact on Downstream Tasks
+citation	218971783	258999320	0	Multilingual Multi-Figurative Language Detection
+citation	218971783	258999603	2	MERT: Acoustic Music Understanding Model with Large-Scale Self-supervised Training
+citation	218971783	258999352	0	Using Visual Cropping to Enhance Fine-Detail Question Answering of BLIP-Family Models
+citation	218971783	258999849	0	MuseCoco: Generating Symbolic Music from Text
+citation	218971783	259000016	0	Automated Annotation with Generative AI Requires Validation
+citation	218971783	258999914	0	Majority Rule: better patching via Self-Consistency
+citation	218971783	259075881	0	Evaluating GPT's Programming Capability through CodeWars' Katas
+citation	218971783	259089165	2	CrystalGPT: Enhancing system-to-system transferability in crystallization prediction and control using time-series-transformers
+citation	218971783	259129503	0	Augmentation-aware Self-supervised Learning with Guided Projector
+citation	218971783	254223269	0	An Invariant Learning Characterization of Controlled Text Generation
+citation	218971783	258967776	0	Beyond One-Model-Fits-All: A Survey of Domain Specialization for Large Language Models
+citation	218971783	259015006	0	Research on the Intelligent Construction of UAV Knowledge Graph Based on Attentive Semantic Representation
+citation	218971783	258967618	0	Dissecting Chain-of-Thought: A Study on Compositional In-Context Learning of MLPs
+citation	218971783	258967448	0	Shuo Wen Jie Zi: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training
+citation	218971783	258987402	0	What and How does In-Context Learning Learn? Bayesian Model Averaging, Parameterization, and Generalization
+citation	218971783	258844825	0	Evaluating Human Eye Features for Objective Measure of Working Memory Capacity
+citation	218971783	258967215	0	Universality and Limitations of Prompt Tuning
+citation	218971783	258967184	3	GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction
+citation	218971783	258967177	0	Likelihood-Based Diffusion Language Models
+citation	218971783	258967395	0	Cross Encoding as Augmentation: Towards Effective Educational Text Classification
+citation	218971783	258967345	1	Grammar Prompting for Domain-Specific Language Generation with Large Language Models
+citation	218971783	258967442	0	Multi-modal Queried Object Detection in the Wild
+citation	218971783	258967931	0	Client: Cross-variable Linear Integrated Enhanced Transformer for Multivariate Long-Term Time Series Forecasting
+citation	218971783	258967872	0	Does Conceptual Representation Require Embodiment? Insights From Large Language Models
+citation	218971783	258967990	0	Empirical Sufficiency Lower Bounds for Language Modeling with Locally-Bootstrapped Semantic Structures
+citation	218971783	258968140	0	The Magic of IF: Investigating Causal Reasoning Abilities in Large Language Models of Code
+citation	218971783	258967987	0	Controlled Text Generation with Hidden Representation Transformations
+citation	218971783	258967791	0	LANCE: Stress-testing Visual Models by Generating Language-guided Counterfactual Images
+citation	218971783	258967855	0	Generate then Select: Open-ended Visual Question Answering Guided by World Knowledge
+citation	218971783	258967721	1	NetHack is Hard to Hack
+citation	218971783	258987797	0	Dynamic Sparsity Is Channel-Level Sparsity Learner
+citation	218971783	258987968	0	Blockwise Parallel Transformer for Long Context Large Models
+citation	218971783	258987995	0	LLM-BRAIn: AI-driven Fast Generation of Robot Behaviour Tree based on Large Language Model
+citation	218971783	258987774	0	Are Large Kernels Better Teachers than Transformers for ConvNets?
+citation	218971783	258987746	0	ScoNe: Benchmarking Negation Reasoning in Language Models With Fine-Tuning and In-Context Learning
+citation	218971783	258999642	0	Self-Verification Improves Few-Shot Clinical Information Extraction
+citation	218971783	258999680	1	GPT4GEO: How a Language Model Sees the World's Geography
+citation	218971783	259003434	0	Similarity index of ex-Gaussian reaction time signatures
+citation	218971783	259009558	0	Large Language Models and Logical Reasoning
+citation	218971783	259045048	0	Developing Conversational Agent Using Deep Learning Techniques
+citation	218971783	259076021	1	Conceptual Design Generation Using Large Language Models
+citation	218971783	259125899	0	cMolGPT: A Conditional Generative Pre-Trained Transformer for Target-Specific De Novo Molecular Generation
+citation	218971783	259077311	1	Unicorn: A Unified Multi-tasking Model for Supporting Matching Tasks in Data Integration
+citation	218971783	259077364	0	Discovering Top-k Rules using Subjective and Objective Criteria
+citation	218971783	258967462	1	A Systematic Study and Comprehensive Evaluation of ChatGPT on Benchmark Datasets
+citation	218971783	258968056	0	Explicit Visual Prompting for Universal Foreground Segmentations
+citation	218971783	258959117	0	LLM-QAT: Data-Free Quantization Aware Training for Large Language Models
+citation	218971783	258959485	0	The Utility of Large Language Models and Generative AI for Education Research
+citation	218971783	258967391	1	Faith and Fate: Limits of Transformers on Compositionality
+citation	218971783	258959011	0	Contextual Object Detection with Multimodal Large Language Models
+citation	218971783	258959425	1	InstructEdit: Improving Automatic Masks for Diffusion-based Image Editing With User Instructions
+citation	218971783	258959021	0	Deeply Coupled Cross-Modal Prompt Learning
+citation	218971783	258959069	0	Syntax and Semantics Meet in the "Middle": Probing the Syntax-Semantics Interface of LMs Through Agentivity
+citation	218971783	258959424	0	Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models
+citation	218971783	258959148	0	Ask an Expert: Leveraging Language Models to Improve Strategic Reasoning in Goal-Oriented Dialogue Models
+citation	218971783	258959002	2	RAPHAEL: Text-to-Image Generation via Large Mixture of Diffusion Paths
+citation	218971783	258959521	0	Assess and Summarize: Improve Outage Understanding with Large Language Models
+citation	218971783	258959126	0	Perceived Trustworthiness of Natural Language Generators
+citation	218971783	258959321	5	Direct Preference Optimization: Your Language Model is Secretly a Reward Model
+citation	218971783	258959258	0	Do Large Language Models Know What They Don't Know?
+citation	218971783	258959304	0	LM-CPPF: Paraphrasing-Guided Data Augmentation for Contrastive Prompt-Based Few-Shot Fine-Tuning
+citation	218971783	258959366	0	ContrastNER: Contrastive-based Prompt Tuning for Few-shot NER
+citation	218971783	258960280	0	LaFTer: Label-Free Tuning of Zero-shot Classifier using Language and Unlabeled Image Collections
+citation	218971783	258960366	0	Exploring Effectiveness of GPT-3 in Grammatical Error Correction: A Study on Performance and Controllability in Prompt-Based Methods
+citation	218971783	258960177	0	Beyond Confidence: Reliable Models Should Also Consider Atypicality
+citation	218971783	258960497	0	BigTrans: Augmenting Large Language Models with Multilingual Translation Capability over 100 Languages
+citation	218971783	258960560	2	ChatGPT-powered Conversational Drug Editing Using Retrieval and Domain Feedback
+citation	218971783	258960584	0	Multiscale Positive-Unlabeled Detection of AI-Generated Texts
+citation	218971783	258960339	5	Large Language Models are not Fair Evaluators
+citation	218971783	258960179	0	Check-COVID: Fact-Checking COVID-19 News Claims with Scientific Evidence
+citation	218971783	258967373	1	Alfred: A System for Prompted Weak Supervision
+citation	218971783	258967393	0	Approximation theory of transformer networks for sequence modeling
+citation	218971783	258967447	0	Test-Time Training on Nearest Neighbors for Large Language Models
+citation	218971783	258967438	0	Aligning Optimization Trajectories with Diffusion Models for Constrained Design Generation
+citation	218971783	258967319	0	Code Prompting: a Neural Symbolic Method for Complex Reasoning in Large Language Models
+citation	218971783	258967670	3	PaLI-X: On Scaling up a Multilingual Vision and Language Model
+citation	218971783	258967728	0	SANE: The phases of gradient descent through Sharpness Adjusted Number of Effective parameters
+citation	218971783	258967736	0	How Effective Are Neural Networks for Fixing Security Vulnerabilities
+citation	218971783	258968166	0	Self Information Update for Large Language Models through Mitigating Exposure Bias
+citation	218971783	258967920	0	SlimFit: Memory-Efficient Fine-Tuning of Transformer-based Models Using Training Dynamics
+citation	218971783	258967783	0	Short Answer Grading Using One-shot Prompting and Text Similarity Scoring Model
+citation	218971783	258967965	1	From Adversarial Arms Race to Model-centric Evaluation: Motivating a Unified Automatic Robustness Evaluation Framework
+citation	218971783	258968054	0	Diffusion Model is an Effective Planner and Data Synthesizer for Multi-Task Reinforcement Learning
+citation	218971783	258967371	0	VAST: A Vision-Audio-Subtitle-Text Omni-Modality Foundation Model and Dataset
+citation	218971783	258968005	0	Trompt: Towards a Better Deep Neural Network for Tabular Data
+citation	218971783	258960723	0	Realistic and broad-scope learning simulations: first results and challenges.
+citation	218971783	258999501	0	Brainformers: Trading Simplicity for Efficiency
+citation	218971783	259075755	0	Voluminous yet Vacuous? Semantic Capital in an Age of Large Language Models
+citation	218971783	259165200	0	Chatbots to ChatGPT in a Cybersecurity Space: Evolution, Vulnerabilities, Attacks, Challenges, and Future Recommendations
+citation	218971783	258959097	0	In-Context Analogical Reasoning with Pre-Trained Language Models
+citation	218971783	258959248	0	Large Language Models, scientific knowledge and factuality: A systematic analysis in antibiotic discovery
+citation	218971783	258959326	0	Generating EDU Extracts for Plan-Guided Summary Re-Ranking
+citation	218971783	258960254	0	FuseCap: Leveraging Large Language Models to Fuse Visual Data into Enriched Image Captions
+citation	218971783	258960340	0	Prompt-Guided Retrieval Augmentation for Non-Knowledge-Intensive Tasks
+citation	218971783	258960289	2	NOTABLE: Transferable Backdoor Attacks Against Prompt-based NLP Models
+citation	218971783	258967501	0	Repeated Random Sampling for Minimizing the Time-to-Accuracy of Learning
+citation	218971783	258967252	0	Knowledge-Augmented Reasoning Distillation for Small Language Models in Knowledge-Intensive Tasks
+citation	218971783	258959174	0	Rethinking Masked Language Modeling for Chinese Spelling Correction
+citation	218971783	258959489	0	Evaluating GPT-3 Generated Explanations for Hateful Content Moderation
+citation	218971783	258959055	0	Breaking Language Barriers with a LEAP: Learning Strategies for Polyglot LLMs
+citation	218971783	258959450	0	Language Models are Pragmatic Speakers
+citation	218971783	258959215	1	Robust Natural Language Understanding with Residual Attention Debiasing
+citation	218971783	258960308	0	Whitening-based Contrastive Learning of Sentence Embeddings
+citation	218971783	258960506	0	Targeted Data Generation: Finding and Fixing Model Weaknesses
+citation	218971783	258960363	0	Incentivizing honest performative predictions with proper scoring rules
+citation	218971783	258960671	0	ConaCLIP: Exploring Distillation of Fully-Connected Knowledge Interaction Graph for Lightweight Text-Image Retrieval
+citation	218971783	258960333	0	LowDINO - A Low Parameter Self Supervised Learning Model
+citation	218971783	258967656	0	Understanding Breast Cancer Survival: Using Causality and Language Models on Multi-omics Data
+citation	218971783	258967265	0	Mitigating Label Biases for In-context Learning
+citation	218971783	258967220	0	Distill Gold from Massive Ores: Efficient Dataset Distillation via Critical Samples Selection
+citation	218971783	258967500	0	LLMs Can Understand Encrypted Prompt: Towards Privacy-Computing Friendly Transformers
+citation	218971783	258968063	0	Feature-Learning Networks Are Consistent Across Widths At Realistic Scales
+citation	218971783	258967906	0	Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning
+citation	218971783	258967932	0	KAFA: Rethinking Image Ad Understanding with Knowledge-Augmented Feature Adaptation of Vision-Language Models
+citation	218971783	259075746	0	A Quantitative Review on Language Model Efficiency Research
+citation	218971783	258960101	0	DNA-GPT: Divergent N-Gram Analysis for Training-Free Detection of GPT-Generated Text
+citation	218971783	258959274	2	Fine-Tuning Language Models with Just Forward Passes
+citation	218971783	258960666	0	Augmentation-Adapted Retriever Improves Generalization of Language Models as Generic Plug-In
+citation	218971783	258987240	4	The Curse of Recursion: Training on Generated Data Makes Models Forget
+citation	218971783	258959004	0	Scalable Transformer for PDE Surrogate Modeling
+citation	218971783	258959415	0	Translatotron 3: Speech to Speech Translation with Monolingual Data
+citation	218971783	258959349	0	MeetingBank: A Benchmark Dataset for Meeting Summarization
+citation	218971783	258959201	0	FERMAT: An Alternative to Accuracy for Numerical Reasoning
+citation	218971783	258960577	0	Zero- and Few-Shot Event Detection via Prompt-Based Meta Learning
+citation	218971783	258960309	0	FISEdit: Accelerating Text-to-image Editing via Cache-enabled Sparse Diffusion Inference
+citation	218971783	258960143	0	SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks
+citation	218971783	258960431	0	Modularized Zero-shot VQA with Pre-trained Models
+citation	218971783	258960174	0	Integrating Action Knowledge and LLMs for Task Planning and Situation Handling in Open Worlds
+citation	218971783	258960382	0	Unsupervised Selective Rationalization with Noise Injection
+citation	218971783	258960487	0	Toward Understanding Generative Data Augmentation
+citation	218971783	258967365	0	What indeed can GPT models do in chemistry? A comprehensive benchmark on eight tasks
+citation	218971783	254045651	0	A Novel Method for Predicting 16S rRNA Gene Copy Number
+citation	218971783	258947337	1	AdaPlanner: Adaptive Planning from Feedback with Language Models
+citation	218971783	258941519	0	Zero is Not Hero Yet: Benchmarking Zero-Shot Performance of LLMs for Financial Tasks
+citation	218971783	258947096	0	NormMark: A Weakly Supervised Markov Model for Socio-cultural Norm Discovery
+citation	218971783	258947107	0	A Closer Look at In-Context Learning under Distribution Shifts
+citation	218971783	258947250	1	NavGPT: Explicit Reasoning in Vision-and-Language Navigation with Large Language Models
+citation	218971783	258947684	0	Beyond Chain-of-Thought, Effective Graph-of-Thought Reasoning in Large Language Models
+citation	218971783	258967200	0	CONA: A novel CONtext-Aware instruction paradigm for communication using large language model
+citation	218971783	258956575	0	ChatGPT and Open-AI Models: A Preliminary Review
+citation	218971783	258947115	1	Playing repeated games with Large Language Models
+citation	218971783	258947459	0	Neural Architecture Search for Parameter-Efficient Fine-tuning of Large Pre-trained Language Models
+citation	218971783	258947398	0	Manifold Regularization for Memory-Efficient Training of Deep Neural Networks
+citation	218971783	258947604	0	Improving accuracy of GPT-3/4 results on biomedical data using a retrieval-augmented language model
+citation	218971783	258959299	0	Im-Promptu: In-Context Composition from Image Prompts
+citation	218971783	258947047	0	Few-shot Fine-tuning vs. In-context Learning: A Fair Comparison and Evaluation
+citation	218971783	258947048	0	Submodular Minimax Optimization: Finding Effective Sets
+citation	218971783	258947061	0	MultiTool-CoT: GPT-3 Can Use Multiple External Tools with Chain of Thought Prompting
+citation	218971783	258947060	0	Learning to Imagine: Visually-Augmented Natural Language Generation
+citation	218971783	258947132	0	Expand, Rerank, and Retrieve: Query Reranking for Open-Domain Question Answering
+citation	218971783	258947102	1	Do GPTs Produce Less Literal Translations?
+citation	218971783	258947125	0	A Multi-Scale Attentive Transformer for Multi-Instrument Symbolic Music Generation
+citation	218971783	258947177	0	On Evaluating Adversarial Robustness of Large Vision-Language Models
+citation	218971783	258947254	0	DataFinder: Scientific Dataset Recommendation from Natural Language Descriptions
+citation	218971783	258947222	4	Large Language Models as Tool Makers
+citation	218971783	258947339	0	LANISTR: Multimodal Learning from Structured and Unstructured Data
+citation	218971783	258947312	0	A Mechanism for Sample-Efficient In-Context Learning for Sparse Retrieval Tasks
+citation	218971783	258947235	0	Hierarchical Verbalizer for Few-Shot Hierarchical Text Classification
+citation	218971783	258947225	0	Annotating and Detecting Fine-grained Factual Errors for Dialogue Summarization
+citation	218971783	258947331	0	BiomedGPT: A Unified and Generalist Biomedical Generative Pre-trained Transformer for Vision, Language, and Multimodal Tasks
+citation	218971783	258947371	0	Counterfactual reasoning: Testing language models' understanding of hypothetical scenarios
+citation	218971783	258947403	0	PIP: Parse-Instructed Prefix for Syntactically Controlled Paraphrase Generation
+citation	218971783	258947572	0	Parameter-Efficient Fine-Tuning without Introducing New Latency
+citation	218971783	258947535	0	Zero-shot Visual Question Answering with Language Model Feedback
+citation	218971783	258947533	0	Accelerated evolution of Burgers turbulence with coarse projective integration and deep learning
+citation	218971783	258947593	0	Discovering Novel Actions in an Open World with Object-Grounded Visual Commonsense Reasoning
+citation	218971783	258947729	1	Emergent Agentic Transformer from Chain of Hindsight Experience
+citation	218971783	258947640	0	Efficient Detection of LLM-generated Texts with a Bayesian Surrogate Model
+citation	218971783	258947413	0	Evaluation of Question Generation Needs More References
+citation	218971783	258947629	0	On the Computational Power of Decoder-Only Transformer Language Models
+citation	218971783	258947773	0	Data-Driven Optimization for Deposition with Degradable Tools
+citation	218971783	258947148	0	Multiview Identifiers Enhanced Generative Retrieval
+citation	218971783	258947756	0	Training Socially Aligned Language Models in Simulated Human Society
+citation	218971783	258947558	0	Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time
+citation	218971783	258959016	0	Rate-Distortion Theory in Coding for Machines and its Application
+citation	218971783	258959384	0	From Dogwhistles to Bullhorns: Unveiling Coded Rhetoric with Language Models
+citation	218971783	258959189	0	Heterogeneous Value Evaluation for Large Language Models
+citation	218971783	258959244	0	Large Language Models Can be Lazy Learners: Analyze Shortcuts in In-Context Learning
+citation	218971783	258959284	2	Generating Images with Multimodal Language Models
+citation	218971783	258959511	0	Honey, I Shrunk the Language: Language Model Behavior at Reduced Scale
+citation	218971783	258959387	0	A Knowledge Engineering Primer
+citation	218971783	258960342	0	Entailment as Robust Self-Learner
+citation	218971783	258960421	0	Pulse shape discrimination based on the Tempotron: a powerful classifier on GPU
+citation	218971783	258960587	0	XGrad: Boosting Gradient-Based Optimizers With Weight Prediction
+citation	218971783	258967422	0	Attention Paper: How Generative AI Reshapes Digital Shadow Industry?
+citation	218971783	258987840	0	Enhancing Human Capabilities through Symbiotic Artificial Intelligence with Shared Sensory Experiences
+citation	218971783	258987785	0	Large language models improve Alzheimer's disease diagnosis using multi-modality data
+citation	218971783	258999853	1	SQL-PaLM: Improved Large Language Model Adaptation for Text-to-SQL
+citation	218971783	258887676	0	Automated Tensor Model Parallelism with Overlapped Communication for Efficient Foundation Model Training
+citation	218971783	258887944	1	ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst
+citation	218971783	258887822	0	Understanding the Capabilities of Large Language Models for Automated Planning
+citation	218971783	258888192	3	Scaling Data-Constrained Language Models
+citation	218971783	258887773	0	UFO: Unified Fact Obtaining for Commonsense Question Answering
+citation	218971783	258887626	0	Asking Before Action: Gather Information in Embodied Decision Making with Language Models
+citation	218971783	258887849	6	Voyager: An Open-Ended Embodied Agent with Large Language Models
+citation	218971783	258947127	0	Scan and Snap: Understanding Training Dynamics and Token Composition in 1-layer Transformer
+citation	218971783	258887838	2	On the Robustness of Segment Anything
+citation	218971783	258887355	0	Image is First-order Norm+Linear Autoregressive
+citation	218971783	258887831	0	Efficient Document Embeddings via Self-Contrastive Bregman Divergence Learning
+citation	218971783	258887814	1	POPE: 6-DoF Promptable Pose Estimation of Any Object, in Any Scene, with One Reference
+citation	218971783	258887528	0	Zero-shot Approach to Overcome Perturbation Sensitivity of Prompts
+citation	218971783	258887816	0	Linguistic Properties of Truthful Response
+citation	218971783	258887701	0	On the Impact of Knowledge Distillation for Model Interpretability
+citation	218971783	258887633	0	Imitating Task and Motion Planning with Visuomotor Transformers
+citation	218971783	258887908	0	DiffCLIP: Leveraging Stable Diffusion for Language Grounded 3D Classification
+citation	218971783	258887694	0	Self-contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation
+citation	218971783	258887482	0	Landmark Attention: Random-Access Infinite Context Length for Transformers
+citation	218971783	258887805	0	RewriteLM: An Instruction-Tuned Large Language Model for Text Rewriting
+citation	218971783	258888104	0	Empowering Practical Root Cause Analysis by Large Language Models for Cloud Incidents
+citation	218971783	258887939	0	Prompt-Free Diffusion: Taking "Text" out of Text-to-Image Diffusion Models
+citation	218971783	258887418	0	Emergence of a phonological bias in ChatGPT
+citation	218971783	258887872	1	BookGPT: A General Framework for Book Recommendation Empowered by Large Language Model
+citation	218971783	258887946	1	ConvGQR: Generative Query Reformulation for Conversational Search
+citation	218971783	258888114	0	Training Data Extraction From Pre-trained Language Models: A Survey
+citation	218971783	258887821	0	ChatCAD+: Towards a Universal and Reliable Interactive CAD using LLMs
+citation	218971783	258888112	1	Uni-ControlNet: All-in-One Control to Text-to-Image Diffusion Models
+citation	218971783	258887453	0	Koopman Kernel Regression
+citation	218971783	258888240	0	Securing Deep Generative Models with Universal Adversarial Signature
+citation	218971783	258888211	1	VioLA: Unified Codec Language Models for Speech Recognition, Synthesis, and Translation
+citation	218971783	258922531	0	A Siamese Transformer Network for Zero-Shot Ancient Coin Classification
+citation	218971783	258937784	1	A Mathematical Interpretation of Autoregressive Generative Pre-Trained Transformer and Self-Supervised Learning
+citation	218971783	258947280	0	DeepGate2: Functionality-Aware Circuit Representation Learning
+citation	218971783	258947425	1	On the Tool Manipulation Capability of Open-source Large Language Models
+citation	218971783	258947738	0	IMBERT: Making BERT Immune to Insertion-based Backdoor Attacks
+citation	218971783	258947657	1	Role-Play with Large Language Models
+citation	218971783	258947803	0	The Dangers of trusting Stochastic Parrots: Faithfulness and Trust in Open-domain Conversational Question Answering
+citation	218971783	258947721	6	PandaGPT: One Model To Instruction-Follow Them All
+citation	218971783	258947600	0	Revisiting Structured Variational Autoencoders
+citation	218971783	258947794	0	Label Agnostic Pre-training for Zero-shot Text Classification
+citation	218971783	258967564	0	Tuning Models of Code with Compiler-Generated Reinforcement Learning Feedback
+citation	218971783	258887561	0	Surface-Based Retrieval Reduces Perplexity of Retrieval-Augmented Language Models
+citation	218971783	258865502	2	Clever Hans or Neural Theory of Mind? Stress Testing Social Reasoning in Large Language Models
+citation	218971783	258865713	0	Frugal Prompting for Dialog Models
+citation	218971783	258865762	0	Boosting Cross-lingual Transferability in Multilingual Models via In-Context Learning
+citation	218971783	258865907	1	Leveraging Pre-trained Large Language Models to Construct and Utilize World Models for Model-based Task Planning
+citation	218971783	258865989	0	Towards Revealing the Mystery behind Chain of Thought: a Theoretical Perspective
+citation	218971783	258887717	0	Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models
+citation	218971783	258865467	0	ChatAgri: Exploring Potentials of ChatGPT on Cross-linguistic Agricultural Text Classification
+citation	218971783	258865330	0	Abductive Commonsense Reasoning Exploiting Mutually Exclusive Explanations
+citation	218971783	258865842	0	An Unsupervised Method for Estimating Class Separability of Datasets with Application to LLMs Fine-Tuning
+citation	218971783	258865347	0	Is Summary Useful or Not? An Extrinsic Human Evaluation of Text Summaries on Downstream Tasks
+citation	218971783	258865306	1	SummIt: Iterative Text Summarization via ChatGPT
+citation	218971783	258866077	0	Universal Self-adaptive Prompting
+citation	218971783	258866054	0	Chain-of-Questions Training with Latent Answers for Robust Multistep Question Answering
+citation	218971783	258865984	0	MQuAKE: Assessing Knowledge Editing in Language Models via Multi-Hop Questions
+citation	218971783	258866213	0	A RelEntLess Benchmark for Modelling Graded Relations between Named Entities
+citation	218971783	258865558	0	BUFFET: Benchmarking Large Language Models for Few-shot Cross-lingual Transfer
+citation	218971783	258887456	0	PromptNER: Prompting For Named Entity Recognition
+citation	218971783	258865592	0	Pre-RMSNorm and Pre-CRMSNorm Transformers: Equivalent and Efficient Pre-LN Transformers
+citation	218971783	258865933	0	Breaking the Curse of Quality Saturation with User-Centric Ranking
+citation	218971783	258866206	0	This Land is {Your, My} Land: Evaluating Geopolitical Biases in Language Models
+citation	218971783	258866165	0	EvEval: A Comprehensive Evaluation of Event Semantics for Large Language Models
+citation	218971783	258888109	0	Revisiting Sentence Union Generation as a Testbed for Text Consolidation
+citation	218971783	258887654	1	Large Language Models for User Interest Journeys
+citation	218971783	258947645	0	Think Before You Act: Decision Transformers with Internal Working Memory
+citation	218971783	259202960	0	Deep Learning and Ethics
+citation	218971783	253180413	1	Towards Foundation Models for Relational Databases [Vision Paper]
+citation	218971783	258378331	0	Pento-DIARef: A Diagnostic Dataset for Learning the Incremental Algorithm for Referring Expression Generation from Examples
+citation	218971783	258862695	0	Large-language-model-based 10-year risk prediction of cardiovascular disease: insight from the UK biobank data
+citation	218971783	258865297	0	The Art of SOCRATIC QUESTIONING: Zero-shot Multimodal Reasoning with Recursive Thinking and Self-Questioning
+citation	218971783	258865230	1	Visual Programming for Text-to-Image Generation and Evaluation
+citation	218971783	258865247	0	T1: Scaling Diffusion Probabilistic Fields to High-Resolution on Unified Visual Modalities
+citation	218971783	258865182	0	Error Feedback Shines when Features are Rare
+citation	218971783	258865295	0	ToMChallenges: A Principle-Guided Dataset and Diverse Evaluation Tasks for Exploring Theory of Mind
+citation	218971783	258865283	0	SAIL: Search-Augmented Instruction Learning
+citation	218971783	258865501	2	MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation
+citation	218971783	258865399	1	Adversarial Demonstration Attacks on Large Language Models
+citation	218971783	258865466	0	Block-local learning with probabilistic latent representations
+citation	218971783	258865185	0	Vision + Language Applications: A Survey
+citation	218971783	258865288	0	Mastering the ABCDs of Complex Questions: Answer-Based Claim Decomposition for Fine-grained Self-Evaluation
+citation	218971783	258865225	0	PESCO: Prompt-enhanced Self Contrastive Learning for Zero-shot Text Classification
+citation	218971783	258865339	0	PURR: Efficiently Editing Language Model Hallucinations by Denoising Language Model Corruptions
+citation	218971783	258865433	0	Measuring the Knowledge Acquisition-Utilization Gap in Pretrained Language Models
+citation	218971783	258865530	0	How to Distill your BERT: An Empirical Study on the Impact of Weight Initialisation and Distillation Objectives
+citation	218971783	258865448	0	COMET-M: Reasoning about Multiple Events in Complex Sentences
+citation	218971783	258865355	0	Winner-Take-All Column Row Sampling for Memory Efficient Adaptation of Language Model
+citation	218971783	258865458	1	ExpertPrompting: Instructing Large Language Models to be Distinguished Experts
+citation	218971783	258865715	0	OverPrompt: Enhancing ChatGPT Capabilities through an Efficient In-Context Learning Approach
+citation	218971783	258865710	1	Enabling Large Language Models to Generate Text with Citations
+citation	218971783	258865836	1	LMs with a Voice: Spoken Language Modeling beyond Speech Tokens
+citation	218971783	258865587	0	Policy Learning based on Deep Koopman Representation
+citation	218971783	258865591	1	Revisiting Token Dropping Strategy in Efficient BERT Pretraining
+citation	218971783	258865550	0	Large Language Models are Effective Table-to-Text Generators, Evaluators, and Feedback Providers
+citation	218971783	258865639	1	PathAsst: Redefining Pathology through Generative Foundation AI Assistant for Pathology
+citation	218971783	258865733	2	Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback
+citation	218971783	258865693	0	Revisiting Parallel Context Windows: A Frustratingly Simple Alternative and Chain-of-Thought Deterioration
+citation	218971783	258865463	0	Rethinking the Evaluation Protocol of Domain Generalization
+citation	218971783	258865778	0	Measuring and Mitigating Constraint Violations of In-Context Learning for Utterance-to-API Semantic Parsing
+citation	218971783	258865935	0	Faithful Low-Resource Data-to-Text Generation through Cycle Training
+citation	218971783	258865422	0	Attentiveness to Answer Choices Doesn't Always Entail High QA Accuracy
+citation	218971783	258865418	0	A New Era in Software Security: Towards Self-Healing Software via Large Language Models and Formal Verification
+citation	218971783	258865789	0	Dior-CVAE: Diffusion Priors in Variational Dialog Generation
+citation	218971783	258866053	1	M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated Text Detection
+citation	218971783	258865250	0	Exploring Diverse In-Context Configurations for Image Captioning
+citation	218971783	258865568	0	The student becomes the master: Matching GPT3 on Scientific Factual Error Correction
+citation	218971783	258865597	0	Sharpness-Aware Data Poisoning Attack
+citation	218971783	258865758	0	EXnet: Efficient In-context Learning for Data-less Text classification
+citation	218971783	258866057	0	Meta-Learning Online Adaptation of Language Models
+citation	218971783	258865519	0	A Causal View of Entity Bias in (Large) Language Models
+citation	218971783	258865977	0	Meta-review Generation with Checklist-guided Iterative Introspection
+citation	218971783	258866192	2	In-Context Impersonation Reveals Large Language Models' Strengths and Biases
+citation	218971783	258866049	1	ImageNetVC: Zero-Shot Visual Commonsense Evaluation on 1000 ImageNet Categories
+citation	218971783	258865890	0	Bi-Drop: Generalizable Fine-tuning for Pre-trained Language Models via Adaptive Subnetwork Optimization
+citation	218971783	258865905	0	Neural Summarization of Electronic Health Records
+citation	218971783	258866099	0	A Simple and Effective Framework for Strict Zero-Shot Hierarchical Classification
+citation	218971783	258865679	0	Self-ICL: Zero-Shot In-Context Learning with Self-Generated Demonstrations
+citation	218971783	258865718	3	EmbodiedGPT: Vision-Language Pre-Training via Embodied Chain of Thought
+citation	218971783	258866148	0	READ: Recurrent Adaptation of Large Transformers
+citation	218971783	258865791	0	SELFOOD: Self-Supervised Out-Of-Distribution Detection via Learning to Rank
+citation	218971783	258865763	0	Testing Causal Models of Word Meaning in GPT-3 and -4
+citation	218971783	258865952	1	IdealGPT: Iteratively Decomposing Vision and Language Reasoning via Large Language Models
+citation	218971783	258866093	0	Anthropomorphization of AI: Opportunities and Risks
+citation	218971783	258866204	1	ViTMatte: Boosting Image Matting with Pretrained Plain Vision Transformers
+citation	218971783	258866183	0	PIVOINE: Instruction Tuning for Open-world Information Extraction
+citation	218971783	258865184	4	Gorilla: Large Language Model Connected with Massive APIs
+citation	218971783	258866212	1	Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models
+citation	218971783	258866158	0	Interpretable by Design Visual Question Answering
+citation	218971783	258866037	0	Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy
+citation	218971783	258865979	0	KNN-LM Does Not Improve Open-ended Text Generation
+citation	218971783	258866155	0	Estimating Large Language Model Capabilities without Labeled Test Data
+citation	218971783	258865947	0	ChatFace: Chat-Guided Real Face Editing via Diffusion Latent Space Manipulation
+citation	218971783	258866002	0	Training on Thin Air: Improve Image Classification with Generated Data
+citation	218971783	258866152	0	Drafting Event Schemas using Language Models
+citation	218971783	258866097	0	ECHo: Event Causality Inference via Human-centric Reasoning
+citation	218971783	258865812	2	Reasoning with Language Model is Planning with World Model
+citation	218971783	258866061	0	Have Large Language Models Developed a Personality?: Applicability of Self-Assessment Tests in Measuring Personality in LLMs
+citation	218971783	258865419	0	GRILL: Grounded Vision-language Pre-training via Aligning Text and Image Regions
+citation	218971783	258865321	1	Human-Centered Metrics for Dialog System Evaluation
+citation	218971783	258865801	0	Self-Checker: Plug-and-Play Modules for Fact-Checking with Large Language Models
+citation	218971783	258866176	0	The Role of Output Vocabulary in T2T LMs for SPARQL Semantic Parsing
+citation	218971783	258865899	0	Large Language Models are In-Context Semantic Reasoners rather than Symbolic Reasoners
+citation	218971783	258865581	0	Improving Language Models with Advantage-based Offline Policy Gradients
+citation	218971783	258865788	1	Exploring Adapter-based Transfer Learning for Recommender Systems: Empirical Studies and Practical Insights
+citation	218971783	258865382	0	Large Language Model Distillation Doesn't Need a Teacher
+citation	218971783	258865968	0	OpenPI2.0: An Improved Dataset for Entity Tracking in Texts
+citation	218971783	258887750	0	Exploring Automatically Perturbed Natural Language Explanations in Relation Extraction
+citation	218971783	258887421	0	Text-Augmented Open Knowledge Graph Completion via Pre-Trained Language Models
+citation	218971783	258887824	0	SPRING: GPT-4 Out-performs RL Algorithms by Studying Papers and Reasoning
+citation	218971783	258887923	0	Manifold Diffusion Fields
+citation	218971783	258887955	0	Let There Be Order: Rethinking Ordering in Autoregressive Graph Generation
+citation	218971783	258888127	1	Differentially Private Synthetic Data via Foundation Model APIs 1: Images
+citation	218971783	258888248	1	Large Language Models are Few-Shot Health Learners
+citation	218971783	258947462	0	Lexinvariant Language Models
+citation	218971783	258947761	0	Segmented Recurrent Transformer: An Efficient Sequence-to-Sequence Model
+citation	218971783	258947744	0	Leveraging LLMs for KPIs Retrieval from Hybrid Long-Document: A Comprehensive Framework and Dataset
+citation	218971783	258841440	0	i-Code Studio: A Configurable and Composable Framework for Integrative AI
+citation	218971783	258841189	0	EASE: An Easily-Customized Annotation System Powered by Efficiency Enhancement Mechanisms
+citation	218971783	258841819	0	Enhancing Black-Box Few-Shot Text Classification with Prompt-Based Data Augmentation
+citation	218971783	258841512	0	Make a Choice! Knowledge Base Question Answering with In-Context Learning
+citation	218971783	258841576	0	When the Music Stops: Tip-of-the-Tongue Retrieval for Music
+citation	218971783	258841030	1	Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training
+citation	218971783	258865289	0	Sociocultural Norm Similarities and Differences via Situational Alignment and Explainable Textual Entailment
+citation	218971783	258865354	0	NAIL: Lexical Retrieval Indices with Efficient Non-Autoregressive Decoders
+citation	218971783	259129463	0	DetectLLM: Leveraging Log Rank Information for Zero-Shot Detection of Machine-Generated Text
+citation	218971783	258841019	0	Towards Legally Enforceable Hate Speech Detection for Public Forums
+citation	218971783	258841149	0	The CoT Collection: Improving Zero-shot and Few-shot Learning of Language Models via Chain-of-Thought Fine-Tuning
+citation	218971783	258841252	0	Large Language Models are Frame-level Directors for Zero-shot Text-to-Video Generation
+citation	218971783	258841737	0	Better Low-Resource Entity Recognition Through Translation and Annotation Fusion
+citation	218971783	258841635	1	VIP5: Towards Multimodal Foundation Models for Recommendation
+citation	218971783	258841764	2	DetGPT: Detect What You Need via Reasoning
+citation	218971783	258841767	0	Skill-Based Few-Shot Selection for In-Context Learning
+citation	218971783	258841653	2	CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation
+citation	218971783	258865751	0	Deduction under Perturbed Evidence: Probing Student Simulation Capabilities of Large Language Models
+citation	218971783	258832731	0	CombLM: Adapting Black-Box Language Models through Small Fine-Tuned Models
+citation	218971783	258840889	0	When Does Monolingual Data Help Multilingual Translation: The Role of Domain and Model Scale
+citation	218971783	258841075	0	GrACE: Generation using Associated Code Edits
+citation	218971783	258840955	1	Better Zero-Shot Reasoning with Self-Adaptive Prompting
+citation	218971783	258841104	0	Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization
+citation	218971783	258840869	0	One-stop Training of Multiple Capacity Models
+citation	218971783	258841179	1	Selective Pre-training for Private Fine-tuning
+citation	218971783	258840942	0	Goat: Fine-tuned LLaMA Outperforms GPT-4 on Arithmetic Tasks
+citation	218971783	258841126	0	On Learning to Summarize with Large Language Models as References
+citation	218971783	258840866	0	PaD: Program-aided Distillation Specializes Large Models in Reasoning
+citation	218971783	258840900	0	Towards Zero-shot Relation Extraction in Web Mining: A Multimodal Approach with Relative XML Path
+citation	218971783	258841095	1	Physics of Language Models: Part 1, Context-Free Grammar
+citation	218971783	258841368	0	What Else Do I Need to Know? The Effect of Background Information on Users' Reliance on AI Systems
+citation	218971783	258841424	0	Can Large Language Models Infer and Disagree Like Humans?
+citation	218971783	258841131	0	Training Transitive and Commutative Multimodal Transformers with LoReTTa
+citation	218971783	258841427	0	Evaluating and Modeling Attribution for Cross-Lingual Question Answering
+citation	218971783	258841470	1	FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation
+citation	218971783	258841162	0	3D Open-vocabulary Segmentation with Foundation Models
+citation	218971783	258841417	1	Can Language Models Understand Physical Concepts?
+citation	218971783	258841271	0	Continual Dialogue State Tracking via Example-Guided Question Answering
+citation	218971783	258841276	0	Dr.ICL: Demonstration-Retrieved In-context Learning
+citation	218971783	258840897	1	Enhancing Chat Language Models by Scaling High-quality Instructional Conversations
+citation	218971783	258841195	0	ReSee: Responding through Seeing Fine-grained Visual Knowledge in Open-domain Dialogue
+citation	218971783	258841292	0	ChatGPT-EDSS: Empathetic Dialogue Speech Synthesis Trained from ChatGPT-derived Context Word Embeddings
+citation	218971783	258840847	0	Multilingual Large Language Models Are Not (Yet) Code-Switchers
+citation	218971783	258841117	1	Label Words are Anchors: An Information Flow Perspective for Understanding In-Context Learning
+citation	218971783	258840999	0	Discrete Prompt Optimization via Constrained Generation for Zero-shot Re-ranker
+citation	218971783	258841263	0	Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+citation	218971783	258841313	0	Active Learning Principles for In-Context Learning with Large Language Models
+citation	218971783	258841398	0	Schema-Driven Information Extraction from Heterogeneous Tables
+citation	218971783	258841405	0	HOP, UNION, GENERATE: Explainable Multi-hop Reasoning without Rationale Supervision
+citation	218971783	258841172	0	IfQA: A Dataset for Open-domain Question Answering under Counterfactual Presuppositions
+citation	218971783	258840876	1	On the Risk of Misinformation Pollution with Large Language Models
+citation	218971783	258841314	0	Know Your Self-supervised Learning: A Survey on Image-based Generative and Discriminative Training
+citation	218971783	258841255	0	Knowledge of Knowledge: Exploring Known-Unknowns Uncertainty with Large Language Models
+citation	218971783	258841488	1	Question Answering as Programming for Solving Time-Sensitive Questions
+citation	218971783	258841374	1	ChatCoT: Tool-Augmented Chain-of-Thought Reasoning on Chat-based Large Language Models
+citation	218971783	258841166	0	Probing in Context: Toward Building Robust Classifiers via Probing Large Language Models
+citation	218971783	258841029	0	Improving Language Models via Plug-and-Play Retrieval Feedback
+citation	218971783	258840912	0	Robust Instruction Optimization for Large Language Models with Distribution Shifts
+citation	218971783	258841681	0	LLM-Eval: Unified Multi-Dimensional Automatic Evaluation for Open-Domain Conversations with Large Language Models
+citation	218971783	258841000	0	TVTSv2: Learning Out-of-the-box Spatiotemporal Visual Representations at Scale
+citation	218971783	258841747	0	Masked Path Modeling for Vision-and-Language Navigation
+citation	218971783	258841240	0	Out-of-Distribution Generalization in Text Classification: Past, Present, and Future
+citation	218971783	258841668	0	Learn from Mistakes through Cooperative Interaction with Study Assistant

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cat ids.txt |
+while read id
+do
+mkdir -p $id
+echo $id | $JSALTdir/fetch_references_and_citations.py > $id/one_hop.txt
+done
