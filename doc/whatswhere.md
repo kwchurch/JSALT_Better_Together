@@ -51,3 +51,45 @@ See releases/README.txt and <a href="https://github.com/kwchurch/JSALT_Better_To
 <li>releases/2023-06-20</li>
 </ol>
 
+<h2>Citing Sentences</h2>
+
+The big files are here: <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2022-12-02%2Fdatabase%2Fcitations%2Fciting_sentences%2F">$JSALTdir/semantic_scholar/releases/2022-12-02/database/citations/citing_sentences</a>.
+<p>
+<ol>
+<li>embedding: *.f (4 TB file), with indexes (idx*i)</li>
+<li>embedding.K280: same as above, but used random projections to make the file smaller (by reducing K from 768 to 280) </li>
+<li>pieces: text files behind the above</li>
+</ol>
+
+The citing sentences can be extracted from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2023-06-20%2Fdatabase%2Fcitations%2F">bulk downloads</a>, as well as ad hoc queries.
+<p>
+For documentation on ad hoc query, see discussion of citing sentences in these <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/doc/exercises">exercises</a>.
+
+<h2>Citation Graphs</h2>
+
+There is an npz file <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2022-12-02%2Fdatabase%2Fcitations%2Fgraphs%2F>here</a>
+<p>
+The following loads a npz file into python:
+
+```python
+import numpy as np
+import scipy
+f='citations.G.npz'
+M=scipy.sparse.load_npz(f)
+```
+
+M is a boolean matrix, a graph in adjacency format.  There is a 1 in M[i,j] iff paper i cites paper j.
+<p>
+There are many more graphs <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Fj.ortega%2Fcumgraphs%2F">here</a>
+<p>
+Files with 3-digit names ([0-9][0-9][0-9]) are lists of corpusids.
+There are nearly 100 such files.  Each file contains approximating the
+same number of ids, partitioned by publication date.
+<p>
+These files ([0-9][0-9][0-9].sym.npz) are boolean matrices.  The keyword sym means
+that the matrix is undirected (M = M + M.T).  001.sym.npz contains edges that start with corpusids in 001.
+<p>
+The point of splitting corpusids in this way is described <a
+href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/suggestions/eval/cite.md">here</a>.
+If we train on papers from one point in time and test on another,
+we expect to be more successful with predictions into the near future than into the distant future.
