@@ -5,16 +5,31 @@ import numpy as np
 
 t0 = time.time()
 
+print(sys.argv, file=sys.stderr)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-G", "--graph", help=".npz file", required=True)
 parser.add_argument("-o", "--output", help="output", required=True)
 parser.add_argument("-T", '--transpose', action='store_true')
 parser.add_argument("-S", '--make_symmetric', action='store_true')
+parser.add_argument("-d", "--dtype", default=None)
 # parser.add_argument("-s", '--sep', help="arg to numpy.ndarray.tofile", default='')
 args = parser.parse_args()
 
 # print(str(time.time() - t0) + ' args.sep = ' + str(args.sep), file=sys.stderr)
 # sys.stderr.flush()
+
+dtypes = { 'int8' : np.int8,
+           'int16' : np.int16,
+           'int32' : np.int32,
+           'int64' : int,
+           'int' : int,
+           'float16' : np.float16,
+           'float32' : np.float32,
+           'float64' : float,
+           'float' : float}
+
+assert args.dtype is None or args.dtype in dtypes, 'bad arg: ' + str(args.dtype)
 
 M = scipy.sparse.load_npz(args.graph)
 
@@ -45,6 +60,9 @@ sys.stderr.flush()
 
 # I wanted to write these out as binary ints,
 # but I think we have a bunch of incompatible hardwares across the cluster
+
+if not args.dtype is None:
+    M.data.astype(dtypes[args.dtype]).tofile(args.output + '.f')
 
 X.tofile(args.output + '.X.i')
 Y.tofile(args.output + '.Y.i')

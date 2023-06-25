@@ -3,7 +3,7 @@ files=freq_row_piece freq_row check_order XY_to_bigrams print_bigrams unprint_bi
 	cocitations floats_to_random_bytes index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
 	near near_with_floats calibrate_random_bytes cbind_bytes find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
-	x_to_y vector_near_with_floats
+	x_to_y vector_near_with_floats XY_data_to_bigrams
 
 # random_bigrams 
 
@@ -167,3 +167,8 @@ BFS: BFS.c util.o
 
 x_to_y: x_to_y.c
 	cc -o x_to_y x_to_y.c
+
+XY_data_to_bigrams: XY_data_to_bigrams.c util.o
+	cc -o XY_data_to_bigrams XY_data_to_bigrams.c util.o
+
+
