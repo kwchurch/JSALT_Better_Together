@@ -40,7 +40,76 @@ There are more papers with embeddings than abstracts (because some abstracts can
 specter.K280 is a smaller version of specter (K=768).  I used random projections to reduce K from 768 to 280.
 <p>
 We are still computing production runs on LinkBERT.  That should be ready soon, but LinkBERT is probably not as good as the others.
+<p>
+There will soon be some large files in $scincl/bigrams, $proposed/bigrams, $specter/bigrams.
+These are materialized files with the large values from: M @ M.T.  There are N^2 values in M@M.T,
+but only N values in each index.  The materialized files are based on those.
+<p>
+We can query bigrams with this:
 
+```sh
+query=3051291
+echo $query |
+$JSALTsrc/C/x_to_y ai | 
+$JSALTsrc/C/extract_row $scincl/bigrams |
+$JSALTsrc/C/print_bigrams | 
+sort -nr |
+ head | 
+cut -f3 | 
+$JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/papers/corpusId_to_href
+```
+We can score bigrams by a number of embeddings with this:
+
+```sh
+echo 3051291 | 
+$JSALTsrc/C/x_to_y ai | 
+$JSALTsrc/C/extract_row $scincl/bigrams | 
+$JSALTsrc/C/print_bigrams | 
+sort -nr |
+sed 3q |
+cut -f2- |
+$JSALTsrc/pairs_to_cos.sh |
+$JSALTsrc/tsv_to_html.sh
+ ```
+
+Here is the output from the above:
+
+<html><table><tr>
+<th>proposed</th>
+<th>scincl</th>
+<th>specter2</th>
+<th>specter</th>
+<th>specter.K280</th>
+</tr>
+<tr>
+<td>0.947</td>
+<td>0.951</td>
+<td>0.970</td>
+<td>0.797</td>
+<td>0.792</td>
+<td><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83">7513: DeepWalk: online learning of social representations</a></td>
+<td><a href="https://www.semanticscholar.org/paper/e294339b402ce055d5a5198becc35b2dbbd20a9a">5: SimWalk: Learning network latent representations with social relation similarity</a></td>
+</tr>
+<tr>
+<td>0.827</td>
+<td>0.997</td>
+<td>0.999</td>
+<td>0.984</td>
+<td>0.983</td>
+<td><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83">7513: DeepWalk: online learning of social representations</a></td>
+<td><a href="https://www.semanticscholar.org/paper/93b050f5bf0567a675979cd564cbe66ff9c3a78f">0: Learning of Social Representations</a></td>
+</tr>
+<tr>
+<td>0.704</td>
+<td>0.932</td>
+<td>0.960</td>
+<td>-1.000</td>
+<td>-1.000</td>
+<td><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83">7513: DeepWalk: online learning of social representations</a></td>
+<td><a href="https://www.semanticscholar.org/paper/0abbe9e3eee8649e2588f8db6ad500c6d60f8990">1: Learning representations on graphs</a></td>
+</tr>
+</table></html>
+ 
 <h3>Releases</h3>
 
 See releases/README.txt and <a href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/doc/bulk_download/semantic_scholar_bulk_download.md">documentation on bulk downloading from Semantic Scholar</a>.
