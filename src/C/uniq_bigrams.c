@@ -4,7 +4,7 @@
 
 void usage()
 {
-  fatal("uniq_bigrams < bigrams > bigrams.uniq");
+  fatal("uniq_bigrams --max < bigrams > bigrams.uniq");
 }
 
 void my_output(struct bigram *out)
@@ -17,15 +17,19 @@ void my_output(struct bigram *out)
 
 int main(int ac, char **av)
 {
-
-  if(ac != 1) usage();
+  int max_option = 0;
+  if(ac == 2 && strcmp(av[1], "--max") == 0) max_option=1;
+  else if(ac != 1) usage();
   struct bigram b;
   struct bigram out;
   out.val=0;
 
   while(fread(&b, sizeof(struct bigram), 1, stdin) == 1) {
-    if(bigram_compare(&out, &b) == 0)
-      out.val += b.val;
+    if(bigram_compare(&out, &b) == 0) {
+      if(max_option) {
+	if(b.val > out.val) out.val = b.val;
+      }
+    }
     else {
       my_output(&out);
       memcpy(&out, &b, sizeof(struct bigram));
@@ -33,5 +37,4 @@ int main(int ac, char **av)
   }
 
   my_output(&out);
- }
-
+}

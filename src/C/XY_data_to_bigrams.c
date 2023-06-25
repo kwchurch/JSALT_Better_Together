@@ -30,4 +30,5 @@ int main(int ac, char **av)
     if(fwrite(&b, sizeof(b), 1, stdout) != 1)
       fatal("write failed");
   }
+  return 0;
 }
