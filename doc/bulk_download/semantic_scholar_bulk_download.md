@@ -28,7 +28,7 @@ on <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba
 <li>citations: a json object for each paper with two ids (citingcorpusid and citedcorpusid), contexts (citing sentences), isinfluential (and more)</li>
 <li>embeddings: a json object for each paper with a specter@v0.1.1 vector of 768 floats</li>
 <li>s2orc: a json object for each paper with annotations from s2 (semantic scholar)</li>
-<ol>
+</ol>
 
 jq is a useful program for looking at these objects
 <p>
