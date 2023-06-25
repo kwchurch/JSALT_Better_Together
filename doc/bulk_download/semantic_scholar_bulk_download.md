@@ -6,26 +6,51 @@ There is a link there for the latest release.
 On the Northeastern Discovery Cluster, there are directories here:
 
 ```sh
-ls -d /work/k.church/semantic_scholar/releases/*/database | sort
+ls -d /work/k.church/semantic_scholar/releases/*/database $JSALTdir/semantic_scholar/releases/*/database 
 # /work/k.church/semantic_scholar/releases/2022-05-31/database
 # /work/k.church/semantic_scholar/releases/2022-08-23/database
 # /work/k.church/semantic_scholar/releases/2022-11-22/database
 # /work/k.church/semantic_scholar/releases/2022-12-02/database
 # /work/k.church/semantic_scholar/releases/2023-05-09/database
+# /work/k.church/JSALT-2023/semantic_scholar/releases/2022-12-02/database
+# /work/k.church/JSALT-2023/semantic_scholar/releases/2023-05-09/database
+# /work/k.church/JSALT-2023/semantic_scholar/releases/2023-06-20/database
 ```
 
-There are directories under each of them for each of the ``databases'':
-<ol>
-<li>abstracts</li>
-<li>authors</li>
-<li>citations</li>
-<li>embeddings</li>
-<li>papers</li>
-<li>s2orc</li>
-<li>tldrs</li>
-</ol>
+/work/k.church/JSALT-2023 is available via <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2F">Globus</a>, so you can find some of the files above
+on <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2023-06-20%2Fdatabase%2F">here</a>.
 
-Under each of these, there are 30 gzip files.  Each of these gzip
+<ol>
+<li>authors: a json object for each author with authorid, name, papercount, citationcount, hindex (and more)</li>
+<li>papers: a json object for each paper, with: externalIds, title, authors, fields of study, venues (and more)</li>
+<li>abstracts: a json object for each paper with an abstract (and more)</li>
+<li>tldrs (too long; didn't read): a json object for each paper with a summary (typically a substring from the abstract)</li>
+<li>citations: a json object for each paper with two ids (citingcorpusid and citedcorpusid), contexts (citing sentences), isinfluential (and more)</li>
+<li>embeddings: a json object for each paper with a specter@v0.1.1 vector of 768 floats</li>
+<li>s2orc: a json object for each paper with annotations from s2 (semantic scholar)</li>
+<ol>
+
+jq is a useful program for looking at these objects
+<p>
+-c arg (compact) prints one line for each json object
+<p>
+This pulls the two fields, corpusid and title:
+
+```sh
+zcat papers/*gz | jq -c '. | {corpusid,title}' | head | cut -c1-100
+{"corpusid":254118849,"title":"A genetic-phenotypic classification for syndromic micrognathia"}
+{"corpusid":254130601,"title":"Invasion and translocation of uropathogenic Escherichia coli isolated
+{"corpusid":254298902,"title":"Hydrothermal aging mechanism of K/CeO2 catalyst in soot catalytic com
+{"corpusid":41588354,"title":"Antihypertensive effect of a renin inhibitor in marmosets with a segme
+{"corpusid":71289147,"title":"Hirschsprung disease: A component of the familial cancer syndrome mult
+{"corpusid":97707419,"title":"An apparatus for aeration of tissue cells in suspended culture with co
+{"corpusid":145208848,"title":"Review: Swing from a Small Island: the story of Leslie Thompson"}
+{"corpusid":141875306,"title":"Observations on the development of ethical culture"}
+{"corpusid":24939538,"title":"Enzymatic re-esterification of lower glycerides from soybean oil with
+{"corpusid":97426290,"title":"A Model for Interdiffusion at Interfaces of Polymers with Dissimilar P
+```
+
+Under each of these directories, there are 30 gzip files.  Each of these gzip
 files contains a json line for each corpusid.  Here is an example of
 the line for corpusid 148308872:
 
