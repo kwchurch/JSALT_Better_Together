@@ -136,7 +136,7 @@ For documentation on ad hoc query, see discussion of citing sentences in these <
 
 <h2>Citation Graphs</h2>
 
-There is an npz file <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2022-12-02%2Fdatabase%2Fcitations%2Fgraphs%2F>here</a>
+There is an npz file <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2022-12-02%2Fdatabase%2Fcitations%2Fgraphs%2F">here</a>
 <p>
 The following loads a npz file into python:
 
