@@ -1,0 +1,4 @@
+todo : -expand the columns for some tasks (see feeds_1)
+-replace corpus/doc ids with title/abstract/author info for analysis in tsv
+
+filename: task_total-size_seed_num-samples.tsv 
