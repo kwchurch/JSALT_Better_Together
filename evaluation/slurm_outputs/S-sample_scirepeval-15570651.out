@@ -1,0 +1,208 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"python"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "python"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Agent pid 18302
+9
+1
+Sampling SRE using split 1 of 9.
+Downloading and preparing dataset scirepeval/cite_count (download: 360.92 MiB, generated: 335.82 MiB, post-processed: Unknown size, total: 696.74 MiB) to /rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/cite_count/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83...
+{'train': 'https://ai2-s2-research-public.s3.us-west-2.amazonaws.com/scirepeval/train/cite_count/train.jsonl', 'val': 'https://ai2-s2-research-public.s3.us-west-2.amazonaws.com/scirepeval/train/cite_count/val.jsonl', 'test': 'https://ai2-s2-research-public.s3.us-west-2.amazonaws.com/scirepeval/test/cite_count/meta.jsonl'}
+Downloading data files:   0%|          | 0/3 [00:00<?, ?it/s]
+Downloading data:   0%|          | 0.00/285M [00:00<?, ?B/s][A
+Downloading data:   0%|          | 315k/285M [00:00<01:38, 2.91MB/s][A
+Downloading data:   1%|          | 3.55M/285M [00:00<00:14, 19.6MB/s][A
+Downloading data:   4%|▍         | 11.5M/285M [00:00<00:05, 46.5MB/s][A
+Downloading data:   7%|▋         | 20.9M/285M [00:00<00:04, 63.5MB/s][A
+Downloading data:  11%|█         | 31.2M/285M [00:00<00:03, 77.5MB/s][A
+Downloading data:  14%|█▍        | 40.1M/285M [00:00<00:03, 81.4MB/s][A
+Downloading data:  17%|█▋        | 48.3M/285M [00:00<00:02, 79.9MB/s][A
+Downloading data:  20%|██        | 57.5M/285M [00:00<00:02, 84.0MB/s][A
+Downloading data:  24%|██▍       | 68.1M/285M [00:00<00:02, 88.1MB/s][A
+Downloading data:  27%|██▋       | 76.9M/285M [00:01<00:02, 70.1MB/s][A
+Downloading data:  30%|██▉       | 84.4M/285M [00:01<00:03, 52.0MB/s][A
+Downloading data:  32%|███▏      | 92.3M/285M [00:01<00:03, 55.6MB/s][A
+Downloading data:  35%|███▍      | 99.6M/285M [00:01<00:03, 59.6MB/s][A
+Downloading data:  37%|███▋      | 106M/285M [00:01<00:03, 52.4MB/s] [A
+Downloading data:  39%|███▉      | 112M/285M [00:01<00:03, 44.7MB/s][A
+Downloading data:  41%|████      | 117M/285M [00:02<00:04, 38.7MB/s][A
+Downloading data:  43%|████▎     | 124M/285M [00:02<00:03, 43.8MB/s][A
+Downloading data:  45%|████▌     | 129M/285M [00:02<00:04, 38.6MB/s][A
+Downloading data:  47%|████▋     | 134M/285M [00:02<00:03, 40.1MB/s][A
+Downloading data:  48%|████▊     | 138M/285M [00:02<00:03, 39.2MB/s][A
+Downloading data:  50%|████▉     | 142M/285M [00:02<00:03, 38.2MB/s][A
+Downloading data:  51%|█████     | 146M/285M [00:02<00:04, 28.8MB/s][A
+Downloading data:  53%|█████▎    | 151M/285M [00:03<00:04, 27.9MB/s][A
+Downloading data:  56%|█████▌    | 159M/285M [00:03<00:04, 30.6MB/s][A
+Downloading data:  59%|█████▉    | 168M/285M [00:03<00:03, 36.4MB/s][A
+Downloading data:  61%|██████    | 174M/285M [00:03<00:02, 40.9MB/s][A
+Downloading data:  63%|██████▎   | 179M/285M [00:03<00:02, 36.6MB/s][A
+Downloading data:  64%|██████▍   | 183M/285M [00:03<00:02, 37.4MB/s][A
+Downloading data:  65%|██████▌   | 187M/285M [00:04<00:02, 32.9MB/s][A
+Downloading data:  67%|██████▋   | 191M/285M [00:04<00:02, 35.6MB/s][A
+Downloading data:  68%|██████▊   | 195M/285M [00:04<00:02, 31.5MB/s][A
+Downloading data:  71%|███████   | 201M/285M [00:04<00:02, 30.6MB/s][A
+Downloading data:  73%|███████▎  | 208M/285M [00:04<00:02, 35.3MB/s][A
+Downloading data:  74%|███████▍  | 212M/285M [00:04<00:02, 29.5MB/s][A
+Downloading data:  76%|███████▋  | 218M/285M [00:05<00:02, 31.8MB/s][A
+Downloading data:  78%|███████▊  | 224M/285M [00:05<00:02, 30.7MB/s][A
+Downloading data:  79%|███████▉  | 227M/285M [00:05<00:02, 27.8MB/s][A
+Downloading data:  82%|████████▏ | 235M/285M [00:05<00:01, 30.1MB/s][A
+Downloading data:  85%|████████▍ | 242M/285M [00:05<00:01, 38.1MB/s][A
+Downloading data:  86%|████████▋ | 247M/285M [00:05<00:01, 36.1MB/s][A
+Downloading data:  88%|████████▊ | 250M/285M [00:06<00:00, 36.2MB/s][A
+Downloading data:  89%|████████▉ | 254M/285M [00:06<00:00, 33.7MB/s][A
+Downloading data:  91%|█████████ | 260M/285M [00:06<00:00, 38.6MB/s][A
+Downloading data:  93%|█████████▎| 264M/285M [00:06<00:00, 37.8MB/s][A
+Downloading data:  94%|█████████▍| 268M/285M [00:06<00:00, 37.4MB/s][A
+Downloading data:  95%|█████████▌| 272M/285M [00:06<00:00, 33.9MB/s][A
+Downloading data:  97%|█████████▋| 275M/285M [00:06<00:00, 33.3MB/s][A
+Downloading data:  98%|█████████▊| 279M/285M [00:06<00:00, 28.7MB/s][A
+Downloading data:  99%|█████████▉| 283M/285M [00:07<00:00, 32.6MB/s][ADownloading data: 100%|██████████| 285M/285M [00:07<00:00, 40.5MB/s]
+Downloading data files:  33%|███▎      | 1/3 [00:07<00:15,  7.84s/it]
+Downloading data:   0%|          | 0.00/44.0M [00:00<?, ?B/s][A
+Downloading data:   1%|          | 315k/44.0M [00:00<00:15, 2.89MB/s][A
+Downloading data:   8%|▊         | 3.48M/44.0M [00:00<00:02, 18.0MB/s][A
+Downloading data:  19%|█▉        | 8.38M/44.0M [00:00<00:01, 23.1MB/s][A
+Downloading data:  34%|███▍      | 15.0M/44.0M [00:00<00:00, 29.9MB/s][A
+Downloading data:  41%|████      | 17.8M/44.0M [00:00<00:00, 28.9MB/s][A
+Downloading data:  53%|█████▎    | 23.4M/44.0M [00:00<00:00, 29.0MB/s][A
+Downloading data:  60%|█████▉    | 26.2M/44.0M [00:01<00:00, 24.2MB/s][A
+Downloading data:  72%|███████▏  | 31.8M/44.0M [00:01<00:00, 30.1MB/s][A
+Downloading data:  79%|███████▉  | 34.9M/44.0M [00:01<00:00, 23.6MB/s][A
+Downloading data:  95%|█████████▌| 41.9M/44.0M [00:01<00:00, 29.4MB/s][ADownloading data: 100%|██████████| 44.0M/44.0M [00:01<00:00, 27.9MB/s]
+Downloading data files:  67%|██████▋   | 2/3 [00:10<00:04,  4.56s/it]
+Downloading data:   0%|          | 0.00/49.1M [00:00<?, ?B/s][A
+Downloading data:   1%|          | 315k/49.1M [00:00<00:16, 2.88MB/s][A
+Downloading data:   5%|▌         | 2.55M/49.1M [00:00<00:03, 13.9MB/s][A
+Downloading data:  17%|█▋        | 8.58M/49.1M [00:00<00:01, 34.6MB/s][A
+Downloading data:  36%|███▌      | 17.8M/49.1M [00:00<00:00, 56.9MB/s][A
+Downloading data:  48%|████▊     | 23.5M/49.1M [00:00<00:00, 50.0MB/s][A
+Downloading data:  58%|█████▊    | 28.7M/49.1M [00:00<00:00, 35.6MB/s][A
+Downloading data:  68%|██████▊   | 33.5M/49.1M [00:01<00:00, 27.4MB/s][A
+Downloading data:  82%|████████▏ | 40.2M/49.1M [00:01<00:00, 27.2MB/s][A
+Downloading data:  88%|████████▊ | 43.3M/49.1M [00:01<00:00, 23.2MB/s][A
+Downloading data:  99%|█████████▉| 48.5M/49.1M [00:01<00:00, 27.9MB/s][ADownloading data: 100%|██████████| 49.1M/49.1M [00:01<00:00, 30.0MB/s]
+Downloading data files: 100%|██████████| 3/3 [00:12<00:00,  3.61s/it]Downloading data files: 100%|██████████| 3/3 [00:12<00:00,  4.20s/it]
+Extracting data files:   0%|          | 0/3 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 3/3 [00:00<00:00, 274.01it/s]
+Generating evaluation split:   0%|          | 0/30058 [00:00<?, ? examples/s]Generating evaluation split:   7%|▋         | 2118/30058 [00:00<00:01, 21173.00 examples/s]Generating evaluation split:  14%|█▍        | 4333/30058 [00:00<00:01, 21747.18 examples/s]Generating evaluation split:  22%|██▏       | 6547/30058 [00:00<00:01, 21924.11 examples/s]Generating evaluation split:  29%|██▉       | 8740/30058 [00:00<00:01, 18486.51 examples/s]Generating evaluation split:  35%|███▌      | 10656/30058 [00:00<00:01, 14220.03 examples/s]Generating evaluation split:  43%|████▎     | 12914/30058 [00:00<00:01, 16386.40 examples/s]Generating evaluation split:  50%|█████     | 15169/30058 [00:00<00:00, 18050.73 examples/s]Generating evaluation split:  58%|█████▊    | 17426/30058 [00:00<00:00, 19308.67 examples/s]Generating evaluation split:  65%|██████▌   | 19680/30058 [00:01<00:00, 20227.17 examples/s]Generating evaluation split:  73%|███████▎  | 21794/30058 [00:01<00:00, 17239.76 examples/s]Generating evaluation split:  80%|████████  | 24060/30058 [00:01<00:00, 18636.84 examples/s]Generating evaluation split:  88%|████████▊ | 26326/30058 [00:01<00:00, 19719.03 examples/s]Generating evaluation split:  95%|█████████▌| 28592/30058 [00:01<00:00, 20534.81 examples/s]                                                                                            Generating train split:   0%|          | 0/175944 [00:00<?, ? examples/s]Generating train split:   1%|▏         | 2216/175944 [00:00<00:07, 22153.58 examples/s]Generating train split:   3%|▎         | 4495/175944 [00:00<00:07, 22525.51 examples/s]Generating train split:   4%|▍         | 6762/175944 [00:00<00:07, 22589.28 examples/s]Generating train split:   5%|▌         | 9031/175944 [00:00<00:07, 22625.70 examples/s]Generating train split:   6%|▋         | 11294/175944 [00:00<00:10, 16177.48 examples/s]Generating train split:   8%|▊         | 13560/175944 [00:00<00:09, 17921.11 examples/s]Generating train split:   9%|▉         | 15816/175944 [00:00<00:08, 19208.29 examples/s]Generating train split:  10%|█         | 17952/175944 [00:00<00:07, 19814.57 examples/s]Generating train split:  11%|█▏        | 20043/175944 [00:01<00:09, 16387.94 examples/s]Generating train split:  13%|█▎        | 22298/175944 [00:01<00:08, 17934.85 examples/s]Generating train split:  14%|█▍        | 24554/175944 [00:01<00:07, 19155.32 examples/s]Generating train split:  15%|█▌        | 26809/175944 [00:01<00:07, 20084.67 examples/s]Generating train split:  17%|█▋        | 29073/175944 [00:01<00:07, 20801.09 examples/s]Generating train split:  18%|█▊        | 31226/175944 [00:01<00:08, 17628.46 examples/s]Generating train split:  19%|█▉        | 33475/175944 [00:01<00:07, 18870.01 examples/s]Generating train split:  20%|██        | 35727/175944 [00:01<00:07, 19844.21 examples/s]Generating train split:  22%|██▏       | 37916/175944 [00:01<00:06, 20408.10 examples/s]Generating train split:  23%|██▎       | 40026/175944 [00:02<00:08, 16616.70 examples/s]Generating train split:  24%|██▍       | 42282/175944 [00:02<00:07, 18078.36 examples/s]Generating train split:  25%|██▌       | 44232/175944 [00:02<00:07, 16832.71 examples/s]Generating train split:  27%|██▋       | 46903/175944 [00:02<00:06, 19331.46 examples/s]Generating train split:  28%|██▊       | 49571/175944 [00:02<00:05, 21282.16 examples/s]Generating train split:  29%|██▉       | 51811/175944 [00:02<00:06, 19823.93 examples/s]Generating train split:  31%|███       | 54443/175944 [00:02<00:05, 21544.16 examples/s]Generating train split:  32%|███▏      | 57112/175944 [00:02<00:05, 22955.97 examples/s]Generating train split:  34%|███▍      | 59636/175944 [00:03<00:04, 23596.08 examples/s]Generating train split:  35%|███▌      | 62052/175944 [00:03<00:05, 19447.59 examples/s]Generating train split:  37%|███▋      | 64723/175944 [00:03<00:05, 21271.32 examples/s]Generating train split:  38%|███▊      | 67380/175944 [00:03<00:04, 22670.03 examples/s]Generating train split:  40%|███▉      | 70000/175944 [00:03<00:05, 19438.37 examples/s]Generating train split:  41%|████▏     | 72633/175944 [00:03<00:04, 21115.04 examples/s]Generating train split:  43%|████▎     | 75305/175944 [00:03<00:04, 22560.35 examples/s]Generating train split:  44%|████▍     | 77694/175944 [00:03<00:04, 20606.10 examples/s]Generating train split:  45%|████▌     | 80000/175944 [00:04<00:05, 17935.58 examples/s]Generating train split:  47%|████▋     | 82606/175944 [00:04<00:04, 19857.87 examples/s]Generating train split:  48%|████▊     | 85251/175944 [00:04<00:04, 21522.06 examples/s]Generating train split:  50%|████▉     | 87926/175944 [00:04<00:03, 22907.43 examples/s]Generating train split:  51%|█████▏    | 90328/175944 [00:04<00:04, 20906.69 examples/s]Generating train split:  53%|█████▎    | 92990/175944 [00:04<00:03, 22396.66 examples/s]Generating train split:  54%|█████▍    | 95670/175944 [00:04<00:03, 23592.86 examples/s]Generating train split:  56%|█████▌    | 98375/175944 [00:04<00:03, 24556.88 examples/s]Generating train split:  57%|█████▋    | 100894/175944 [00:04<00:03, 20665.22 examples/s]Generating train split:  59%|█████▉    | 103378/175944 [00:05<00:03, 21725.30 examples/s]Generating train split:  60%|██████    | 105929/175944 [00:05<00:03, 22731.64 examples/s]Generating train split:  62%|██████▏   | 108514/175944 [00:05<00:02, 23589.29 examples/s]Generating train split:  63%|██████▎   | 110948/175944 [00:05<00:03, 17661.31 examples/s]Generating train split:  65%|██████▍   | 113562/175944 [00:05<00:03, 19614.62 examples/s]Generating train split:  66%|██████▌   | 116222/175944 [00:05<00:02, 21343.30 examples/s]Generating train split:  68%|██████▊   | 118903/175944 [00:05<00:02, 22771.28 examples/s]Generating train split:  69%|██████▉   | 121347/175944 [00:05<00:02, 20787.80 examples/s]Generating train split:  70%|███████   | 123945/175944 [00:06<00:02, 22125.55 examples/s]Generating train split:  72%|███████▏  | 126407/175944 [00:06<00:02, 22795.39 examples/s]Generating train split:  73%|███████▎  | 128976/175944 [00:06<00:01, 23598.81 examples/s]Generating train split:  75%|███████▍  | 131408/175944 [00:06<00:02, 19932.36 examples/s]Generating train split:  76%|███████▌  | 134018/175944 [00:06<00:01, 21494.91 examples/s]Generating train split:  78%|███████▊  | 136655/175944 [00:06<00:01, 22790.98 examples/s]Generating train split:  79%|███████▉  | 139298/175944 [00:06<00:01, 23792.70 examples/s]Generating train split:  81%|████████  | 141761/175944 [00:06<00:01, 18030.34 examples/s]Generating train split:  82%|████████▏ | 144418/175944 [00:07<00:01, 20013.70 examples/s]Generating train split:  84%|████████▎ | 146968/175944 [00:07<00:01, 21379.71 examples/s]Generating train split:  85%|████████▍ | 149520/175944 [00:07<00:01, 22465.75 examples/s]Generating train split:  86%|████████▋ | 151920/175944 [00:07<00:01, 18806.32 examples/s]Generating train split:  88%|████████▊ | 154552/175944 [00:07<00:01, 20627.16 examples/s]Generating train split:  89%|████████▉ | 157179/175944 [00:07<00:00, 22077.38 examples/s]Generating train split:  91%|█████████ | 159681/175944 [00:07<00:00, 22867.02 examples/s]Generating train split:  92%|█████████▏| 162084/175944 [00:07<00:00, 19949.21 examples/s]Generating train split:  94%|█████████▎| 164713/175944 [00:07<00:00, 21559.45 examples/s]Generating train split:  95%|█████████▌| 167358/175944 [00:08<00:00, 22861.13 examples/s]Generating train split:  96%|█████████▋| 169751/175944 [00:08<00:00, 20071.97 examples/s]Generating train split:  98%|█████████▊| 171887/175944 [00:08<00:00, 18345.69 examples/s]Generating train split:  99%|█████████▉| 174531/175944 [00:08<00:00, 20339.64 examples/s]                                                                                         Generating validation split:   0%|          | 0/26830 [00:00<?, ? examples/s]Generating validation split:  10%|▉         | 2605/26830 [00:00<00:00, 26045.93 examples/s]Generating validation split:  20%|█▉        | 5245/26830 [00:00<00:00, 26250.75 examples/s]Generating validation split:  29%|██▉       | 7893/26830 [00:00<00:00, 26351.21 examples/s]Generating validation split:  39%|███▉      | 10529/26830 [00:00<00:00, 22038.72 examples/s]Generating validation split:  48%|████▊     | 12992/26830 [00:00<00:00, 22866.08 examples/s]Generating validation split:  58%|█████▊    | 15505/26830 [00:00<00:00, 23575.36 examples/s]Generating validation split:  67%|██████▋   | 18044/26830 [00:00<00:00, 24134.77 examples/s]Generating validation split:  76%|███████▋  | 20494/26830 [00:00<00:00, 19770.44 examples/s]Generating validation split:  86%|████████▋ | 23190/26830 [00:01<00:00, 21660.62 examples/s]Generating validation split:  95%|█████████▌| 25489/26830 [00:01<00:00, 19965.32 examples/s]                                                                                            Dataset scirepeval downloaded and prepared to /rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/cite_count/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83. Subsequent calls will reuse this data.
+Size of evaluation dataset: 30058
+Downloading and preparing dataset scirepeval/pub_year (download: 392.04 MiB, generated: 360.49 MiB, post-processed: Unknown size, total: 752.53 MiB) to /rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/pub_year/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83...
+{'train': 'https://ai2-s2-research-public.s3.us-west-2.amazonaws.com/scirepeval/train/pub_year/train.jsonl', 'val': 'https://ai2-s2-research-public.s3.us-west-2.amazonaws.com/scirepeval/train/pub_year/val.jsonl', 'test': 'https://ai2-s2-research-public.s3.us-west-2.amazonaws.com/scirepeval/test/pub_year/meta.jsonl'}
+Downloading data files:   0%|          | 0/3 [00:00<?, ?it/s]
+Downloading data:   0%|          | 0.00/328M [00:00<?, ?B/s][A
+Downloading data:   0%|          | 313k/328M [00:00<01:52, 2.92MB/s][A
+Downloading data:   1%|          | 3.30M/328M [00:00<00:17, 18.3MB/s][A
+Downloading data:   4%|▎         | 11.7M/328M [00:00<00:06, 47.9MB/s][A
+Downloading data:   7%|▋         | 21.4M/328M [00:00<00:04, 65.9MB/s][A
+Downloading data:   9%|▊         | 28.0M/328M [00:00<00:08, 35.7MB/s][A
+Downloading data:  10%|█         | 32.9M/328M [00:00<00:08, 36.8MB/s][A
+Downloading data:  11%|█▏        | 37.5M/328M [00:01<00:08, 32.8MB/s][A
+Downloading data:  13%|█▎        | 41.4M/328M [00:01<00:11, 23.9MB/s][A
+Downloading data:  14%|█▎        | 44.5M/328M [00:01<00:13, 21.3MB/s][A
+Downloading data:  15%|█▍        | 48.5M/328M [00:01<00:11, 23.6MB/s][A
+Downloading data:  16%|█▌        | 51.3M/328M [00:01<00:13, 21.1MB/s][A
+Downloading data:  17%|█▋        | 56.9M/328M [00:02<00:11, 24.5MB/s][A
+Downloading data:  18%|█▊        | 59.6M/328M [00:02<00:12, 21.1MB/s][A
+Downloading data:  20%|██        | 67.1M/328M [00:02<00:08, 29.6MB/s][A
+Downloading data:  23%|██▎       | 73.9M/328M [00:02<00:06, 37.5MB/s][A
+Downloading data:  24%|██▍       | 78.3M/328M [00:02<00:07, 34.1MB/s][A
+Downloading data:  26%|██▌       | 83.9M/328M [00:02<00:07, 33.1MB/s][A
+Downloading data:  28%|██▊       | 92.3M/328M [00:03<00:06, 34.9MB/s][A
+Downloading data:  30%|███       | 99.0M/328M [00:03<00:05, 41.3MB/s][A
+Downloading data:  32%|███▏      | 104M/328M [00:03<00:06, 37.0MB/s] [A
+Downloading data:  33%|███▎      | 109M/328M [00:03<00:05, 36.7MB/s][A
+Downloading data:  35%|███▌      | 116M/328M [00:03<00:05, 40.0MB/s][A
+Downloading data:  37%|███▋      | 120M/328M [00:03<00:05, 36.6MB/s][A
+Downloading data:  38%|███▊      | 126M/328M [00:03<00:04, 40.5MB/s][A
+Downloading data:  40%|████      | 132M/328M [00:03<00:04, 40.8MB/s][A
+Downloading data:  42%|████▏     | 137M/328M [00:04<00:05, 34.9MB/s][A
+Downloading data:  43%|████▎     | 141M/328M [00:04<00:06, 28.7MB/s][A
+Downloading data:  44%|████▍     | 144M/328M [00:04<00:07, 24.4MB/s][A
+Downloading data:  46%|████▌     | 151M/328M [00:04<00:06, 28.5MB/s][A
+Downloading data:  48%|████▊     | 158M/328M [00:04<00:05, 33.8MB/s][A
+Downloading data:  49%|████▉     | 161M/328M [00:05<00:05, 28.0MB/s][A
+Downloading data:  51%|█████     | 166M/328M [00:05<00:05, 27.2MB/s][A
+Downloading data:  52%|█████▏    | 169M/328M [00:05<00:06, 24.4MB/s][A
+Downloading data:  52%|█████▏    | 171M/328M [00:05<00:06, 23.2MB/s][A
+Downloading data:  54%|█████▎    | 176M/328M [00:05<00:05, 26.6MB/s][A
+Downloading data:  56%|█████▋    | 185M/328M [00:05<00:04, 31.3MB/s][A
+Downloading data:  59%|█████▉    | 193M/328M [00:06<00:03, 34.0MB/s][A
+Downloading data:  61%|██████    | 200M/328M [00:06<00:03, 37.4MB/s][A
+Downloading data:  62%|██████▏   | 203M/328M [00:06<00:03, 32.6MB/s][A
+Downloading data:  64%|██████▍   | 210M/328M [00:06<00:03, 32.7MB/s][A
+Downloading data:  66%|██████▌   | 216M/328M [00:06<00:03, 30.5MB/s][A
+Downloading data:  67%|██████▋   | 219M/328M [00:07<00:03, 28.6MB/s][A
+Downloading data:  68%|██████▊   | 222M/328M [00:07<00:04, 25.5MB/s][A
+Downloading data:  69%|██████▉   | 226M/328M [00:07<00:04, 21.9MB/s][A
+Downloading data:  71%|███████   | 233M/328M [00:07<00:03, 26.2MB/s][A
+Downloading data:  72%|███████▏  | 236M/328M [00:07<00:03, 24.8MB/s][A
+Downloading data:  74%|███████▎  | 241M/328M [00:07<00:02, 29.1MB/s][A
+Downloading data:  75%|███████▍  | 244M/328M [00:08<00:03, 26.2MB/s][A
+Downloading data:  76%|███████▌  | 250M/328M [00:08<00:02, 30.8MB/s][A
+Downloading data:  77%|███████▋  | 253M/328M [00:08<00:03, 24.1MB/s][A
+Downloading data:  79%|███████▉  | 260M/328M [00:08<00:02, 31.2MB/s][A
+Downloading data:  81%|████████▏ | 267M/328M [00:08<00:01, 31.6MB/s][A
+Downloading data:  82%|████████▏ | 270M/328M [00:08<00:02, 28.8MB/s][A
+Downloading data:  84%|████████▍ | 277M/328M [00:09<00:01, 33.5MB/s][A
+Downloading data:  87%|████████▋ | 285M/328M [00:09<00:01, 42.1MB/s][A
+Downloading data:  89%|████████▉ | 292M/328M [00:09<00:00, 42.9MB/s][A
+Downloading data:  90%|█████████ | 296M/328M [00:09<00:00, 37.3MB/s][A
+Downloading data:  92%|█████████▏| 300M/328M [00:09<00:00, 36.0MB/s][A
+Downloading data:  93%|█████████▎| 304M/328M [00:09<00:00, 33.8MB/s][A
+Downloading data:  95%|█████████▍| 310M/328M [00:09<00:00, 32.7MB/s][A
+Downloading data:  97%|█████████▋| 317M/328M [00:10<00:00, 37.7MB/s][A
+Downloading data:  98%|█████████▊| 321M/328M [00:10<00:00, 29.1MB/s][A
+Downloading data:  99%|█████████▉| 325M/328M [00:10<00:00, 29.4MB/s][ADownloading data: 100%|██████████| 328M/328M [00:10<00:00, 30.9MB/s]
+Downloading data files:  33%|███▎      | 1/3 [00:11<00:23, 11.57s/it]
+Downloading data:   0%|          | 0.00/33.1M [00:00<?, ?B/s][A
+Downloading data:   1%|          | 280k/33.1M [00:00<00:13, 2.53MB/s][A
+Downloading data:   5%|▌         | 1.76M/33.1M [00:00<00:03, 9.42MB/s][A
+Downloading data:  19%|█▉        | 6.24M/33.1M [00:00<00:01, 25.2MB/s][A
+Downloading data:  36%|███▋      | 12.0M/33.1M [00:00<00:00, 36.7MB/s][A
+Downloading data:  51%|█████     | 16.8M/33.1M [00:00<00:00, 33.7MB/s][A
+Downloading data:  68%|██████▊   | 22.7M/33.1M [00:00<00:00, 39.8MB/s][A
+Downloading data:  81%|████████  | 26.8M/33.1M [00:00<00:00, 36.6MB/s][A
+Downloading data:  96%|█████████▌| 31.7M/33.1M [00:00<00:00, 40.1MB/s][ADownloading data: 100%|██████████| 33.1M/33.1M [00:00<00:00, 34.9MB/s]
+Downloading data files:  67%|██████▋   | 2/3 [00:13<00:05,  5.83s/it]
+Downloading data:   0%|          | 0.00/50.2M [00:00<?, ?B/s][A
+Downloading data:   1%|          | 315k/50.2M [00:00<00:17, 2.89MB/s][A
+Downloading data:   8%|▊         | 4.04M/50.2M [00:00<00:02, 22.4MB/s][A
+Downloading data:  23%|██▎       | 11.8M/50.2M [00:00<00:00, 47.0MB/s][A
+Downloading data:  36%|███▌      | 17.9M/50.2M [00:00<00:00, 52.4MB/s][A
+Downloading data:  47%|████▋     | 23.6M/50.2M [00:00<00:00, 54.2MB/s][A
+Downloading data:  58%|█████▊    | 29.1M/50.2M [00:00<00:00, 28.2MB/s][A
+Downloading data:  66%|██████▌   | 33.2M/50.2M [00:01<00:00, 27.9MB/s][A
+Downloading data:  73%|███████▎  | 36.8M/50.2M [00:01<00:00, 28.7MB/s][A
+Downloading data:  80%|████████  | 40.3M/50.2M [00:01<00:00, 25.0MB/s][A
+Downloading data:  86%|████████▌ | 43.3M/50.2M [00:01<00:00, 20.8MB/s][ADownloading data: 100%|██████████| 50.2M/50.2M [00:01<00:00, 30.7MB/s]
+Downloading data files: 100%|██████████| 3/3 [00:15<00:00,  4.21s/it]Downloading data files: 100%|██████████| 3/3 [00:15<00:00,  5.22s/it]
+Extracting data files:   0%|          | 0/3 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 3/3 [00:00<00:00, 282.60it/s]
+Generating evaluation split:   0%|          | 0/30000 [00:00<?, ? examples/s]Generating evaluation split:   6%|▌         | 1772/30000 [00:00<00:01, 17715.03 examples/s]Generating evaluation split:  12%|█▏        | 3582/30000 [00:00<00:01, 17935.36 examples/s]Generating evaluation split:  18%|█▊        | 5392/30000 [00:00<00:01, 18010.13 examples/s]Generating evaluation split:  24%|██▍       | 7214/30000 [00:00<00:01, 18092.26 examples/s]Generating evaluation split:  30%|███       | 9024/30000 [00:00<00:01, 18083.09 examples/s]Generating evaluation split:  36%|███▌      | 10833/30000 [00:00<00:01, 13836.94 examples/s]Generating evaluation split:  42%|████▏     | 12660/30000 [00:00<00:01, 15037.16 examples/s]Generating evaluation split:  48%|████▊     | 14484/30000 [00:00<00:00, 15928.25 examples/s]Generating evaluation split:  54%|█████▍    | 16312/30000 [00:00<00:00, 16597.34 examples/s]Generating evaluation split:  60%|██████    | 18142/30000 [00:01<00:00, 17088.17 examples/s]Generating evaluation split:  67%|██████▋   | 19951/30000 [00:01<00:00, 17380.64 examples/s]Generating evaluation split:  72%|███████▏  | 21726/30000 [00:01<00:00, 14744.31 examples/s]Generating evaluation split:  78%|███████▊  | 23546/30000 [00:01<00:00, 15647.51 examples/s]Generating evaluation split:  85%|████████▌ | 25557/30000 [00:01<00:00, 16861.28 examples/s]Generating evaluation split:  91%|█████████ | 27311/30000 [00:01<00:00, 15971.76 examples/s]Generating evaluation split:  98%|█████████▊| 29443/30000 [00:01<00:00, 17427.35 examples/s]                                                                                            Generating train split:   0%|          | 0/198995 [00:00<?, ? examples/s]Generating train split:   1%|          | 2088/198995 [00:00<00:09, 20877.43 examples/s]Generating train split:   2%|▏         | 4245/198995 [00:00<00:09, 21282.22 examples/s]Generating train split:   3%|▎         | 6377/198995 [00:00<00:09, 21296.23 examples/s]Generating train split:   4%|▍         | 8512/198995 [00:00<00:08, 21314.07 examples/s]Generating train split:   5%|▌         | 10644/198995 [00:00<00:11, 17068.62 examples/s]Generating train split:   6%|▋         | 12742/198995 [00:00<00:10, 18210.22 examples/s]Generating train split:   7%|▋         | 14849/198995 [00:00<00:09, 19051.01 examples/s]Generating train split:   9%|▊         | 16962/198995 [00:00<00:09, 19666.22 examples/s]Generating train split:  10%|▉         | 19073/198995 [00:00<00:08, 20092.76 examples/s]Generating train split:  11%|█         | 21122/198995 [00:01<00:10, 16888.05 examples/s]Generating train split:  12%|█▏        | 23283/198995 [00:01<00:09, 18125.45 examples/s]Generating train split:  13%|█▎        | 25417/198995 [00:01<00:09, 19001.03 examples/s]Generating train split:  14%|█▍        | 27554/198995 [00:01<00:08, 19663.40 examples/s]Generating train split:  15%|█▍        | 29701/198995 [00:01<00:08, 20178.19 examples/s]Generating train split:  16%|█▌        | 31763/198995 [00:01<00:10, 15715.34 examples/s]Generating train split:  17%|█▋        | 33895/198995 [00:01<00:09, 17074.80 examples/s]Generating train split:  18%|█▊        | 36034/198995 [00:01<00:08, 18183.97 examples/s]Generating train split:  19%|█▉        | 38182/198995 [00:02<00:08, 19069.79 examples/s]Generating train split:  20%|██        | 40190/198995 [00:02<00:09, 16351.70 examples/s]Generating train split:  21%|██▏       | 42356/198995 [00:02<00:08, 17682.95 examples/s]Generating train split:  22%|██▏       | 44517/198995 [00:02<00:08, 18718.10 examples/s]Generating train split:  23%|██▎       | 46662/198995 [00:02<00:07, 19463.52 examples/s]Generating train split:  25%|██▍       | 48805/198995 [00:02<00:07, 20015.27 examples/s]Generating train split:  26%|██▌       | 50863/198995 [00:02<00:09, 16079.44 examples/s]Generating train split:  27%|██▋       | 52989/198995 [00:02<00:08, 17353.47 examples/s]Generating train split:  28%|██▊       | 55129/198995 [00:02<00:07, 18404.58 examples/s]Generating train split:  29%|██▉       | 57278/198995 [00:03<00:07, 19237.83 examples/s]Generating train split:  30%|██▉       | 59418/198995 [00:03<00:07, 19839.16 examples/s]Generating train split:  31%|███       | 61469/198995 [00:03<00:07, 17734.78 examples/s]Generating train split:  32%|███▏      | 63328/198995 [00:03<00:08, 16621.90 examples/s]Generating train split:  33%|███▎      | 65505/198995 [00:03<00:07, 17955.28 examples/s]Generating train split:  34%|███▍      | 67685/198995 [00:03<00:06, 18992.54 examples/s]Generating train split:  35%|███▌      | 69830/198995 [00:03<00:06, 19676.65 examples/s]Generating train split:  36%|███▌      | 71844/198995 [00:03<00:07, 16405.35 examples/s]Generating train split:  37%|███▋      | 73961/198995 [00:04<00:07, 17604.47 examples/s]Generating train split:  38%|███▊      | 76100/198995 [00:04<00:06, 18604.61 examples/s]Generating train split:  39%|███▉      | 78243/198995 [00:04<00:06, 19376.89 examples/s]Generating train split:  40%|████      | 80250/198995 [00:04<00:07, 16765.26 examples/s]Generating train split:  41%|████▏     | 82377/198995 [00:04<00:06, 17917.57 examples/s]Generating train split:  42%|████▏     | 84513/198995 [00:04<00:06, 18838.76 examples/s]Generating train split:  44%|████▎     | 86648/198995 [00:04<00:05, 19531.81 examples/s]Generating train split:  45%|████▍     | 88810/198995 [00:04<00:05, 20122.17 examples/s]Generating train split:  46%|████▌     | 90868/198995 [00:04<00:06, 17983.93 examples/s]Generating train split:  47%|████▋     | 92964/198995 [00:05<00:05, 18778.35 examples/s]Generating train split:  48%|████▊     | 95068/198995 [00:05<00:05, 19402.70 examples/s]Generating train split:  49%|████▉     | 97055/198995 [00:05<00:05, 17550.30 examples/s]Generating train split:  50%|████▉     | 99205/198995 [00:05<00:05, 18602.55 examples/s]Generating train split:  51%|█████     | 101122/198995 [00:05<00:06, 15897.32 examples/s]Generating train split:  52%|█████▏    | 102945/198995 [00:05<00:05, 16479.33 examples/s]Generating train split:  53%|█████▎    | 104762/198995 [00:05<00:05, 16924.03 examples/s]Generating train split:  54%|█████▎    | 106594/198995 [00:05<00:05, 17303.64 examples/s]Generating train split:  54%|█████▍    | 108422/198995 [00:05<00:05, 17575.92 examples/s]Generating train split:  55%|█████▌    | 110216/198995 [00:06<00:05, 15004.06 examples/s]Generating train split:  56%|█████▋    | 112354/198995 [00:06<00:05, 16646.44 examples/s]Generating train split:  58%|█████▊    | 114538/198995 [00:06<00:04, 18043.44 examples/s]Generating train split:  59%|█████▊    | 116722/198995 [00:06<00:04, 19096.30 examples/s]Generating train split:  60%|█████▉    | 118909/198995 [00:06<00:04, 19881.69 examples/s]Generating train split:  61%|██████    | 120946/198995 [00:06<00:04, 17353.27 examples/s]Generating train split:  62%|██████▏   | 123119/198995 [00:06<00:04, 18504.61 examples/s]Generating train split:  63%|██████▎   | 125296/198995 [00:06<00:03, 19396.54 examples/s]Generating train split:  64%|██████▍   | 127482/198995 [00:06<00:03, 20086.37 examples/s]Generating train split:  65%|██████▌   | 129540/198995 [00:07<00:03, 18771.91 examples/s]Generating train split:  66%|██████▌   | 131467/198995 [00:07<00:04, 16654.18 examples/s]Generating train split:  67%|██████▋   | 133644/198995 [00:07<00:03, 17968.67 examples/s]Generating train split:  68%|██████▊   | 135827/198995 [00:07<00:03, 19004.95 examples/s]Generating train split:  69%|██████▉   | 138006/198995 [00:07<00:03, 19774.75 examples/s]Generating train split:  70%|███████   | 140034/198995 [00:07<00:03, 17547.06 examples/s]Generating train split:  71%|███████▏  | 142195/198995 [00:07<00:03, 18614.22 examples/s]Generating train split:  73%|███████▎  | 144361/198995 [00:07<00:02, 19444.98 examples/s]Generating train split:  74%|███████▎  | 146531/198995 [00:07<00:02, 20076.25 examples/s]Generating train split:  75%|███████▍  | 148722/198995 [00:08<00:02, 20598.61 examples/s]Generating train split:  76%|███████▌  | 150815/198995 [00:08<00:02, 18492.36 examples/s]Generating train split:  77%|███████▋  | 153003/198995 [00:08<00:02, 19406.02 examples/s]Generating train split:  78%|███████▊  | 155173/198995 [00:08<00:02, 20044.28 examples/s]Generating train split:  79%|███████▉  | 157286/198995 [00:08<00:02, 20281.38 examples/s]Generating train split:  80%|████████  | 159376/198995 [00:08<00:02, 18348.80 examples/s]Generating train split:  81%|████████  | 161266/198995 [00:08<00:02, 16214.51 examples/s]Generating train split:  82%|████████▏ | 163437/198995 [00:08<00:02, 17600.60 examples/s]Generating train split:  83%|████████▎ | 165617/198995 [00:09<00:01, 18711.79 examples/s]Generating train split:  84%|████████▍ | 167803/198995 [00:09<00:01, 19574.83 examples/s]Generating train split:  85%|████████▌ | 169984/198995 [00:09<00:01, 20202.88 examples/s]Generating train split:  86%|████████▋ | 172048/198995 [00:09<00:01, 17744.04 examples/s]Generating train split:  88%|████████▊ | 174227/198995 [00:09<00:01, 18808.67 examples/s]Generating train split:  89%|████████▊ | 176416/198995 [00:09<00:01, 19651.24 examples/s]Generating train split:  90%|████████▉ | 178616/198995 [00:09<00:01, 20309.58 examples/s]Generating train split:  91%|█████████ | 180693/198995 [00:09<00:01, 17495.95 examples/s]Generating train split:  92%|█████████▏| 182894/198995 [00:09<00:00, 18665.23 examples/s]Generating train split:  93%|█████████▎| 185084/198995 [00:10<00:00, 19538.58 examples/s]Generating train split:  94%|█████████▍| 187288/198995 [00:10<00:00, 20233.69 examples/s]Generating train split:  95%|█████████▌| 189491/198995 [00:10<00:00, 20744.25 examples/s]Generating train split:  96%|█████████▋| 191606/198995 [00:10<00:00, 16870.44 examples/s]Generating train split:  97%|█████████▋| 193650/198995 [00:10<00:00, 17762.56 examples/s]Generating train split:  98%|█████████▊| 195768/198995 [00:10<00:00, 18662.12 examples/s]Generating train split:  99%|█████████▉| 197855/198995 [00:10<00:00, 19263.33 examples/s]                                                                                         Generating validation split:   0%|          | 0/19869 [00:00<?, ? examples/s]Generating validation split:  11%|█         | 2163/19869 [00:00<00:00, 21629.35 examples/s]Generating validation split:  22%|██▏       | 4355/19869 [00:00<00:00, 21795.07 examples/s]Generating validation split:  33%|███▎      | 6552/19869 [00:00<00:00, 21871.59 examples/s]Generating validation split:  44%|████▍     | 8746/19869 [00:00<00:00, 21896.58 examples/s]Generating validation split:  55%|█████▌    | 10936/19869 [00:00<00:00, 18368.12 examples/s]Generating validation split:  66%|██████▌   | 13138/19869 [00:00<00:00, 19467.25 examples/s]Generating validation split:  77%|███████▋  | 15338/19869 [00:00<00:00, 20228.29 examples/s]Generating validation split:  88%|████████▊ | 17533/19869 [00:00<00:00, 20743.46 examples/s]Generating validation split:  99%|█████████▉| 19711/19869 [00:00<00:00, 21053.09 examples/s]                                                                                            Dataset scirepeval downloaded and prepared to /rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/pub_year/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83. Subsequent calls will reuse this data.
+Size of evaluation dataset: 30000
+Fatal error condition occurred in /opt/vcpkg/buildtrees/aws-c-io/src/9e6648842a-364b708815.clean/source/event_loop.c:72: aws_thread_launch(&cleanup_thread, s_event_loop_destroy_async_thread_fn, el_group, &thread_options) == AWS_OP_SUCCESS
+Exiting Application
+################################################################################
+Stack trace:
+################################################################################
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x200af06) [0x2afeb6f56f06]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x20028e5) [0x2afeb6f4e8e5]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x1f27e09) [0x2afeb6e73e09]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x2afeb6f57a3d]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x1f25948) [0x2afeb6e71948]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x2afeb6f57a3d]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x1ee0b46) [0x2afeb6e2cb46]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x194546a) [0x2afeb689146a]
+/lib64/libc.so.6(+0x39ce9) [0x2afeae143ce9]
+/lib64/libc.so.6(+0x39d37) [0x2afeae143d37]
+/lib64/libc.so.6(__libc_start_main+0xfc) [0x2afeae12c55c]
+python(+0x2125d4) [0x5575d90845d4]
+/var/spool/slurmd/job15570651/slurm_script: line 22: 18303 Aborted                 (core dumped) python sample_scirepeval.py ${total_splits} ${current_split}

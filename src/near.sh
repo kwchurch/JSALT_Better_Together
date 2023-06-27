@@ -5,9 +5,10 @@ nbest=$2
 
 # JSALTdir=/work/k.church/JSALT-2023/
 # JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
-
-# specter=$JSALTdir/semantic_scholar/embeddings/specter
-# proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+echo $JSALTsrc
+echo $JSALTdir
+specter=$JSALTdir/semantic_scholar/embeddings/specter
+proposed=$JSALTdir/semantic_scholar/embeddings/proposed
 
 spectertmp=/tmp/$$.near.specter
 proposedtmp=/tmp/$$.near.proposed

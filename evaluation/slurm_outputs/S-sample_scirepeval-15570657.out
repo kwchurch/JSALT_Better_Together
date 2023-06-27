@@ -1,0 +1,40 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"python"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "python"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Agent pid 112678
+9
+7
+Found cached dataset scirepeval (/rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/peer_review_score_hIndex/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83)
+Loading cached shuffled indices for dataset at /rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/peer_review_score_hIndex/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83/cache-c9ceb91c928fd636.arrow
+Found cached dataset scirepeval (/rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/trec_covid/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83)
+Loading cached shuffled indices for dataset at /rc_scratch/abeb4417/abeb4417/hf_datasets/allenai___scirepeval/trec_covid/1.1.0/05b6b341c1750891a5539df5b3eb892babd18e8f299bfaba4735b87e20f6cf83/cache-e8f0ee245288e490.arrow
+Sampling SRE using split 7 of 9.
+Size of evaluation dataset: 12668
+Size of evaluation dataset: 50
+Fatal error condition occurred in /opt/vcpkg/buildtrees/aws-c-io/src/9e6648842a-364b708815.clean/source/event_loop.c:72: aws_thread_launch(&cleanup_thread, s_event_loop_destroy_async_thread_fn, el_group, &thread_options) == AWS_OP_SUCCESS
+Exiting Application
+################################################################################
+Stack trace:
+################################################################################
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x200af06) [0x2b8e8c110f06]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x20028e5) [0x2b8e8c1088e5]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x1f27e09) [0x2b8e8c02de09]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x2b8e8c111a3d]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x1f25948) [0x2b8e8c02b948]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x200ba3d) [0x2b8e8c111a3d]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x1ee0b46) [0x2b8e8bfe6b46]
+/projects/abeb4417/software/anaconda/envs/jsalt/lib/python3.10/site-packages/pyarrow/libarrow.so.900(+0x194546a) [0x2b8e8ba4b46a]
+/lib64/libc.so.6(+0x39ce9) [0x2b8e832fdce9]
+/lib64/libc.so.6(+0x39d37) [0x2b8e832fdd37]
+/lib64/libc.so.6(__libc_start_main+0xfc) [0x2b8e832e655c]
+python(+0x2125d4) [0x5637029a05d4]
+/var/spool/slurmd/job15570657/slurm_script: line 22: 112679 Aborted                 (core dumped) python sample_scirepeval.py ${total_splits} ${current_split}
