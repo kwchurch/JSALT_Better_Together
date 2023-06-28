@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int verbose = 1;
+int verbose = 0;
 int show_details = 0;
 int find_best = 1;
 int threshold = 0;
@@ -18,7 +18,7 @@ long nfloats = -1;
 
 void usage()
 {
-  fatal("usage: cat vector | near_with_floats --dir <dir> --offset <n> index1 index2 index3 > report");
+  fatal("usage: cat vector | vector_near_with_floats --verbose --dir <dir> --offset <n> index1 index2 index3 > report");
 }
 
 // input two vectors (a and b) of length n
@@ -30,17 +30,6 @@ double dot(float *a, float *b, int n)
     res += *a++ * *b++;
   return res;
 }
-
-/* // output the sign of the dot product of the two input vectors */
-/* int dot(float *a, float *b, int n) */
-/* { */
-/*   double res = 0; */
-/*   float *end = a+n; */
-/*   while(a<end) */
-/*     res += *a++ * *b++; */
-
-/*   return (res > 0); */
-/* } */
 
 // F are some floats from an embedding with K hidden dimensions
 // R are random floats of length 8*K
@@ -200,6 +189,7 @@ void init_idx(struct idx *idx, char *filename)
   }
 
   int seed = filename_to_seed(filename);
+  if(verbose) fprintf(stderr, "filename_to_seed: fn = %s, seed = %d\n", fn, seed);
   srand(seed);
   idx->random_floats = (float *)malloc(sizeof(float) * record_size * random_bytes * 8);				       
   init_random_floats(idx->random_floats, record_size * random_bytes * 8);
@@ -230,7 +220,6 @@ void check_sort(struct idx *idx)
     memcpy(buf, buf2, random_bytes);
   }
 }
-
 
 long paper_near(char *bytes, int random_bytes, struct idx *idx)
 {
@@ -337,6 +326,7 @@ int main(int ac, char **av)
     }
     else if(strcmp(av[i], "--help") == 0) usage();
     else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
+    else if(strcmp(av[i], "--verbose") == 0) verbose=1;
     else {
       nindexes=ac-i;
       indexes = init_indexes(av+i, nindexes);
@@ -378,19 +368,22 @@ int main(int ac, char **av)
 	  long old_j = map_node(new_j, NEW_TO_OLD, no_map);
 
 	  vec2bytes(bytes3, random_bytes, floats + new_j * record_size, record_size, indexes+i);
-	  int comp1 = memcmp(bytes2, bytes3, random_bytes);
-	  int comp2 = memcmp(bytes, bytes3, random_bytes);
-
-	  printf("%f\t%f\t%d\t%d\t%ld\t%ld\t%ld\t%ld\t%d\t%s\n",
-		 my_cos(floats + found[0] * record_size, floats + new_j * record_size, record_size),
-		 my_cos(vec, floats + new_j * record_size, record_size),
-		 comp1, comp2,
-		 old_paper_id, old_j,
-		 new_paper_id, new_j,
-		 i,
-		 av[ac - nindexes + i]);
-	  memcpy(bytes2, bytes3, random_bytes);
-
+	  if(verbose) {
+	    int comp1 = memcmp(bytes2, bytes3, random_bytes);
+	    int comp2 = memcmp(bytes, bytes3, random_bytes);
+	    printf("%f\t%f\t%d\t%d\t%ld\t%ld\t%ld\t%ld\t%d\t%s\n",
+		   my_cos(floats + found[0] * record_size, floats + new_j * record_size, record_size),
+		   my_cos(vec, floats + new_j * record_size, record_size),
+		   comp1, comp2,
+		   old_paper_id, old_j,
+		   new_paper_id, new_j,
+		   i,
+		   av[ac - nindexes + i]);
+	    memcpy(bytes2, bytes3, random_bytes);
+	  }
+	  else printf("%f\t%d\t%d\n",
+		      my_cos(vec, floats + new_j * record_size, record_size),
+		      old_paper_id, old_j);
 	}
       }
     }
