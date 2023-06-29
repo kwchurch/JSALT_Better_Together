@@ -4,6 +4,8 @@ tmp=/tmp/pairs_to_cos.$$
 
 cat - > $tmp.input
 
+$JSALTsrc/fetch_snippet.py < $tmp.input > $tmp.snippets
+
 # echo $* | tr ' ' '\t'
 echo `awk -F/ '{print $NF}' $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt` | tr ' ' '\t'
 
@@ -14,8 +16,7 @@ done |
 awk '{printf "%0.3f\n", $1}' |
 $JSALTsrc/reshape.py -1 `wc -l $tmp.input` |
 tr ' ' '\t'  |
-paste - $tmp.input |
+paste - $tmp.snippets |
 sort -nr
 
-rm $tmp.input
-
+rm $tmp.input $tmp.snippets

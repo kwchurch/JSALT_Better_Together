@@ -30,7 +30,7 @@ sys.stderr.flush()
 
 if args.citations is None:
     citationCounts = np.array(np.sum(M, axis=0))
-    np.save(args.graph + 'citations.axis0.npy', citationCounts)
+    # np.save(args.graph + 'citations.axis0.npy', citationCounts)
 else:
     citationCounts = np.load(args.citations)
 
