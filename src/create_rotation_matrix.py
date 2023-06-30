@@ -73,7 +73,7 @@ choices = np.random.choice(min(len(map0), len(map1)), args.N)
 choices0 = map0[choices]
 choices1 = map1[choices]
 
-choices2 = sorted(np.array([i for i,choice0,choice1 in zip(choices,choices0,choices1) if choice0 > 0 and choice1 > 0 ]))
+choices2 = sorted(np.array([i for i,choice0,choice1 in zip(choices,choices0,choices1) if choice0 >= 0 and choice1 >= 0 ]))
 
 # print('choices2: ' + str(choices2))
 
@@ -101,6 +101,8 @@ R,scale = orthogonal_procrustes(emb0a, emb1a)
 
 np.save(args.output, R)
 
-print(np.linalg.norm(emb0a @ R - emb1a, axis=1), file=sys.stderr)
+print('scale: ' + str(scale), file=sys.stderr)
+
+print('residuals: ' + str(np.linalg.norm(emb0a @ R - emb1a)), file=sys.stderr)
 
 print('%0.f sec: done; scale = %f' % (time.time() - t0, scale))
