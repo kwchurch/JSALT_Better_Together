@@ -3,6 +3,8 @@
 import sys,scipy.sparse,argparse,time
 import numpy as np
 
+print('array_fromfile: ' + str(sys.argv), file=sys.stderr)
+
 t0 = time.time()
 
 parser = argparse.ArgumentParser()

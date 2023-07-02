@@ -4,6 +4,8 @@ import sys,scipy.sparse,time
 
 t0 = time.time()
 
+print('sum_matrices: ' + str(sys.argv), file=sys.stderr)
+
 def my_load(f):
     t0a = time.time()
     sys.stderr.flush()
@@ -36,3 +38,6 @@ GB = (MM.data.nbytes + MM.indices.nbytes + MM.indptr.nbytes)/1e9
 print(str(time.time() - t0) + ' about to save, MM has %0.3f GB' % GB, file=sys.stderr)
 sys.stderr.flush()
 scipy.sparse.save_npz(sys.argv[1], MM)
+
+print(str(time.time() - t0) + ' done', file=sys.stderr)
+sys.stderr.flush()

@@ -149,7 +149,7 @@ M=scipy.sparse.load_npz(f)
 
 M is a boolean matrix, a graph in adjacency format.  There is a 1 in M[i,j] iff paper i cites paper j.
 <p>
-There are many more graphs <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Fj.ortega%2Fcumgraphs%2F">here</a>
+There are many more graphs <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Fj.ortega%2Fcumgraphs.V2%2F">here</a>
 <p>
 Files with 3-digit names ([0-9][0-9][0-9]) are lists of corpusids.
 There are nearly 100 such files.  Each file contains approximating the
@@ -162,3 +162,28 @@ The point of splitting corpusids in this way is described <a
 href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/suggestions/eval/cite.md">here</a>.
 If we train on papers from one point in time and test on another,
 we expect to be more successful with predictions into the near future than into the distant future.
+
+<h2>Mapping Papers to Authors</h2>
+
+See <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2023-06-20%2Fdatabase%2Fpapers%2Fauthors%2F">here</a>.
+<p>
+
+You can load that matrix with this:
+
+```python
+f='papers_to_authors.npz'
+import numpy as np
+import scipy
+M=scipy.sparse.load_npz(f)
+M.shape
+# (259187462, 2220213919)
+M[3051291,:].nonzero()
+# (array([0, 0, 0]), array([   1721948,    2271808, 1388360943]))
+```
+
+This says that paper <a href="https://www.semanticscholar.org/paper/DeepWalk%3A-online-learning-of-social-representations-Perozzi-Al-Rfou/fff114cbba4f3ba900f33da574283e3de7f26c83">3051291</a> has three authors:
+<a href="https://www.semanticscholar.org/author/Bryan-Perozzi/1721948">1721948</a>,
+<a href="https://www.semanticscholar.org/author/Bryan-Perozzi/2271808">2271808</a>
+and
+<a href="https://www.semanticscholar.org/author/Bryan-Perozzi/1388360943">1388360943</a>.
+

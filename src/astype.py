@@ -3,6 +3,8 @@
 import os,sys,scipy.sparse,argparse,time
 import numpy as np
 
+print('astype: ' + str(sys.argv), file=sys.stderr)
+
 t0 = time.time()
 
 parser = argparse.ArgumentParser()
