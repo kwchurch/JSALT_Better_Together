@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
-import sys,scipy.sparse,argparse,time
+import os,sys,scipy.sparse,argparse,time
 import numpy as np
 
 t0 = time.time()
+
+print('graph_fromfile: ' + str(sys.argv), file=sys.stderr)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input", required=True)
@@ -19,9 +21,16 @@ dtypes = { 'int32' : np.int32,
 
 assert args.dtype in dtypes, 'bad dtype arg: ' + args.dtype
 
+def map_int32(fn):
+    fn_len = os.path.getsize(fn)
+    return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
+
 if args.text_mode:
     X = np.loadtxt(args.input + '.X.txt', dtypes[args.dtype])
     Y = np.loadtxt(args.input + '.Y.txt', dtypes[args.dtype])
+if dtypes[args.dtype] == np.int32:
+    X = map_int32(args.input + '.X')
+    Y = map_int32(args.input + '.Y')
 else:
     X = np.fromfile(args.input + '.X', dtypes[args.dtype])
     Y = np.fromfile(args.input + '.Y', dtypes[args.dtype])

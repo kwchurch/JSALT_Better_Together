@@ -187,3 +187,17 @@ This says that paper <a href="https://www.semanticscholar.org/paper/DeepWalk%3A-
 and
 <a href="https://www.semanticscholar.org/author/Bryan-Perozzi/1388360943">1388360943</a>.
 
+If you want to combine that matrix with an N by N matrix, G, you can say something like this:
+
+```python
+M.resize(270000000, 2220213919)
+G @ M.T
+```
+
+
+```python
+f='/work/k.church/JSALT-2023/semantic_scholar/embeddings/proposed/bigrams.npz'
+import numpy as np
+import scipy
+bigrams=scipy.sparse.load_npz(f)
+```
