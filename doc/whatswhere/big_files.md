@@ -35,10 +35,12 @@ are deleted after about 30 days, and we are not sharing those files on Globus.
 
 <ol>
 <li><a href="#Embeddings">Embeddings</a></li>
+<li><a href="#bigrams">Bigrams (pairs of corpusIds with large cosines)</a></li>
 <li><a href="#Releases">Releases (Bulk Downloads from Semantic Scholar)</a></li>
 <li><a href="#CitingSentences">Citing Sentences</a></li>
 <li><a href="#CitationGraphs">Citation Graphs</a></li>
-<li><a href="#Mapping">Papers to Authors</a></li>
+<li><a href="#authors">Papers to Authors</a></li>
+<li><a href="#venues">Papers to Venues</a></li>
 </ol>
 
 
@@ -74,8 +76,17 @@ href="https://hastie.su.domains/Papers/Ping/KDD06_rp.pdf">random
 projections</a> to reduce K from 768 to 280.
 <p>
 <a href="https://huggingface.co/michiyasunaga/LinkBERT-large">LinkBERT</a> is probably not as good as the others.
-<p>
-There will soon be some large files in $scincl/bigrams, $proposed/bigrams, $specter/bigrams.
+
+<h3 id="bigrams">Bigrams</h3>
+
+There are some large files in 
+<ol>
+<li>$JSALTdir/semantic_scholar/embeddings/proposed/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/scincl/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/specter/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/specter2/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/LinkBERT/bigrams</li>
+</ol>
 These are materialized files with the large values from: M @ M.T.  There are N^2 values in M@M.T,
 but only N values in each index.  The materialized files are based on those.
 <p>
@@ -235,3 +246,71 @@ import numpy as np
 import scipy
 bigrams=scipy.sparse.load_npz(f)
 ```
+
+<h3 id="venues">Mapping Papers to Venues</h3>
+
+See <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2023-06-20%2Fdatabase%2Fpapers%2Fvenues%2F">here</a>.
+
+<p>
+There are about 300k venues in this file
+
+```sh
+head $JSALTdir/semantic_scholar/releases/2023-06-20/database/papers/venues/venue.key
+# 1	00001b09686f837ed973f5a617757eae	Hacking Diversity
+# 2	00007856c258f947325ed50fa8052710	Indian journal of medical education
+# 3	0000e5f17837d8ffc403e9c0542feee9	TheStrategy Factor in Successful Language Learning
+# 4	0000f96e5a7f80b27c68273404a1c413	Derecho Público Iberoamericano
+# 5	000109714dc88a5c27ad3346f3959c05	Pedagogical Review
+# 6	00012785e8018ed2cf0646fa301134e5	Barbey d'Aurevilly : «L'ensorcelée»
+# 7	00019dd47d09d5867b466e56bb9c09fb	Doing Space while Doing Gender - Vernetzungen von Raum und Geschlecht in Forschung und Politik
+# 8	0001aed83bdb255857a2a4acadc9412b	Ceddi Journal of Education
+# 9	0001cbe48f6594391bb9a190db2f19fc	Stuck and Exploited  Refugees and Asylum Seekers in Italy Between Exclusion, Discrimination and Struggles
+# 10	0001f58abbed5b3ffd5e30b39e41e076	JURNAL TEOLOGI GRACIA DEO
+```
+
+find_lines looks up ids in the input file
+<p>
+corpusId_to_href is a text file that maps between Semantic Scholar corpusId and href (html string)
+<p>
+The href contains a URL to Semantic Scholar for the appropriate paper
+<p>
+
+```sh
+echo 3051291 | $JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/releases/2023-06-20/database/papers/href/corpusId_to_href
+# 3051291	<a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83">5853: DeepWalk: online learning of social representations</a>
+```
+
+Similar to above, but maps corpusIds to venues:
+
+```sh
+echo 3051291 | $JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/releases/2023-06-20/database/papers/venues/corpusId_to_venue
+# 3051291	2014	Knowledge Discovery and Data Mining
+```
+
+
+col1 is venue id
+
+```sh
+egrep 'Computational Ling' venue.key | head | cut -f1 | find_lines --input venue.key
+# 6288	0451aa778b60ee723311e6ea72695259	Proceedings of the Workshop on Human Judgements in Computational Linguistics - HumanJudge '08
+# 10373	071abff3a8f40e6bda81d0c870f25c68	International Conference on Computational Linguistics
+# 13102	09066ac80cc0675de0a2fb6471f73fc3	Proceedings of the conference. Association for Computational Linguistics. North American Chapter. Meeting
+# 27101	1294418a3a196689abe17609b96b673c	Italian Conference on Computational Linguistics
+# 34421	17919bf36f434566dd4c3864edf28b2c	ACL Microfiche Series 1-83, Including Computational Linguistics
+# 49168	21ae9b7793088db42057adc0447bef9a	Recent Topics in Mathematical and Computational Linguistics
+# 61416	2a1b9d121a6e409bf90c38866d975548	Sanskrit Computational Linguistics
+# 77577	350d302be588f5f80d36e9fcfe0cfd1d	Proceedings of the Seventh Italian Conference on Computational Linguistics CLiC-it 2020
+# 87493	3bede9261108e7b91b03de5df243e7cb	Workshop on Cognitive Modeling and Computational Linguistics
+# 89677	3d76be9880fbc2806af4f5870788ff2d	Conference Of The European Association For Computational Linguistics
+```
+
+Suggestion: join this file with bigrams:
+
+<ol>
+<li>$JSALTdir/semantic_scholar/embeddings/proposed/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/scincl/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/specter/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/specter2/bigrams</li>
+<li>$JSALTdir/semantic_scholar/embeddings/LinkBERT/bigrams</li>
+</ol>
+
