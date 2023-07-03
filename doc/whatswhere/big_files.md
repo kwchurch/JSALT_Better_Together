@@ -2,7 +2,11 @@
 
 <h2>Globus: Big Files</h2>
 
-For those of you with access to Northeastern Cluster:
+We are distributing many large files via <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2F">Globus</a>.
+
+For those of you with access to Northeastern Cluster, these files can be found
+under $JSALTdir.  We will use the following environment variables.
+
 
 ```sh
 export JSALTdir=/work/k.church/JSALT-2023/
@@ -21,7 +25,7 @@ scratchScincl=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/scincl
 scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBERT
 ```
 
-The files under $JSALTdir are reachable from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2F">Globus</a>.
+
 <p>
 There is a quota of 35T (terabytes) on /work/k.church.  There is no quota on /scratch, but files
 are deleted after about 30 days, and we are not sharing those files on Globus.
