@@ -38,7 +38,7 @@ are deleted after about 30 days, and we are not sharing those files on Globus.
 <li><a href="#Releases">Releases (Bulk Downloads from Semantic Scholar)</a></li>
 <li><a href="#CitingSentences">Citing Sentences</a></li>
 <li><a href="#CitationGraphs">Citation Graphs</a></li>
-<li><a href="#Mapping Papers to Authors</a></li>
+<li><a href="#Mapping">Papers to Authors</a></li>
 </ol>
 
 
