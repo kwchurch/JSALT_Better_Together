@@ -208,6 +208,58 @@ href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/suggestions/ev
 If we train on papers from one point in time and test on another,
 we expect to be more successful with predictions into the near future than into the distant future.
 
+<h4>Years</h4>
+
+There are 100 files of the form [0-9][0-9][0-9].years.txt.  These
+files have a pair of years and a count of citations.  The first column has
+the publication year of the paper, and the second column has the publication year of the reference.
+Normally, the first column is after the second, but not always.
+
+```sh
+egrep '^2010' $JSALTdir/semantic_scholar/j.ortega/cumgraphs.V2/050.years.txt | sort -nr -k3 | head
+# 2010 2007 2244265
+# 2010 2008 2214234
+# 2010 2006 2118897
+# 2010 2005 1972017
+# 2010 2004 1850326
+# 2010 2009 1663334
+# 2010 2003 1636488
+# 2010 2002 1475746
+# 2010 2001 1337063
+# 2010 2000 1243128
+```
+
+One would hope that citations are causal.  We see more citations in the expected direction than vice versa, but both directions are possible.
+
+```sh
+cd $JSALTdir/semantic_scholar/j.ortega/cumgraphs.V2
+awk '{delta = $1 - $2; 
+      if(delta < -10) delta=-1; 
+      if(delta > 10) delta=10; x[delta]+= $3}; 
+  END {for(i in x) print x[i], i }' 000.years.txt | sort -nr
+# 416734 10
+# 101396 1
+# 83798 2
+# 81178 -1
+# 64643 3
+# 51628 4
+# 51543 0
+# 40782 5
+# 33575 6
+# 28794 7
+# 24846 8
+# 21401 9
+# 1204 -2
+# 234 -3
+# 204 -4
+# 184 -8
+# 175 -7
+# 171 -6
+# 169 -5
+# 137 -10
+# 131 -9
+```
+
 <h3 id="authors">Mapping Papers to Authors</h3>
 
 See <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Freleases%2F2023-06-20%2Fdatabase%2Fpapers%2Fauthors%2F">here</a>.
