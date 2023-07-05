@@ -1,1 +1,6 @@
 .DS_Store
+
+evaluation/old/
+evaluation/slurm_outputs/
+evaluation/jsalt_startup.sh
+*__pycache__/
