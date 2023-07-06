@@ -1,0 +1,11 @@
+
+# all_embeddings.txt  job.sh  LinkBERT  proposed	README.txt  README.txt~  scincl  specter  specter2  specter2.bak  specter.K280
+
+cd /work/k.church/githubs/JSALT_Better_Together/slides/June26/projects/June26
+$JSALTsrc/C/id_to_floats --dir $specter < Annika.corpusIds > Annika.specter.vec
+$JSALTsrc/C/id_to_floats --dir $specter.K280 < Annika.corpusIds > Annika.specter.K280.vec
+$JSALTsrc/C/id_to_floats --dir $proposed < Annika.corpusIds > Annika.proposed.vec
+$JSALTsrc/C/id_to_floats --dir $specter2 < Annika.corpusIds > Annika.specter2.vec
+$JSALTsrc/C/id_to_floats --dir $scincl < Annika.corpusIds > Annika.scincl.vec
+$JSALTsrc/C/id_to_floats --dir $LinkBERT < Annika.corpusIds > Annika.LinkBERT.vec
+

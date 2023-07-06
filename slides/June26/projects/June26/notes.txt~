@@ -1,0 +1,5 @@
+
+cd /work/k.church/githubs/JSALT_Better_Together/slides/June26/projects/June26
+$JSALTsrc/id_to_floats -dir $specter < Annika.corpusIds > Annika.specter.vec
+
+$specter2 $proposed $specter.K280

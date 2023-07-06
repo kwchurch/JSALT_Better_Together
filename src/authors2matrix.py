@@ -3,6 +3,8 @@
 import numpy as np
 import os,sys,argparse,scipy.sparse,time
 
+print('authors2matrix: ' + str(sys.argv), file=sys.stderr)
+
 t0 = time.time()
 errors = 0
 
