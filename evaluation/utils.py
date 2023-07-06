@@ -68,7 +68,7 @@ def get_bin_ids(bin_num, subgraph_dir, return_int=True):
 
 	return ids
 
-def get_all_previous_bin_ids(curr_bin, subgraph_dir):
+def get_all_previous_bin_ids(curr_bin, subgraph_dir='/rc_scratch/abeb4417/jsalt/semantic_scholar/j.ortega/graphs.V2/'):
 
 	id_to_bin = {}
 
