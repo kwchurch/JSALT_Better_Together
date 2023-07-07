@@ -17,12 +17,18 @@ sys.stderr.flush()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--output", help="output directory", required=True)
-parser.add_argument("-i", "--input", help="input prone file from ProNE_finish", required=True)
+parser.add_argument("-i", "--input", help="input npy prone file from ProNE_finish, or input npz file from ProNE baseline", required=True)
 parser.add_argument("-m", "--map", help="mapping files (from new_shrink_matrix)", required=True)
 args = parser.parse_args()
 
-os.mkdir(args.output)
-M = np.load(args.input).astype(np.float32)
+if not os.path.exists(args.output):
+    os.mkdir(args.output)
+
+if args.input.endswith('.npz'):
+    M = np.load(args.input)['edges'].astype(np.float32)
+else:
+    M = np.load(args.input).astype(np.float32)
+
 M.tofile(args.output + '/embedding.f')
 
 with open(args.output + '/record_size', 'w') as fd:

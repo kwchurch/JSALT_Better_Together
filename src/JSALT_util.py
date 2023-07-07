@@ -14,6 +14,7 @@ def my_load_csr_matrix(prefix):
 
 def my_save_csr_matrix(prefix, M):
     for i in M:
-        np.save(prefix + '.' + i', M[i])
+        np.save(prefix + '.' + i, M[i])
+
 
 
