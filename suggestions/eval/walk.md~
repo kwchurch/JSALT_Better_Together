@@ -1,0 +1,29 @@
+# Suggestions for random walks
+
+See walk file under <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2Feval%2F">here</a>.
+
+<p>
+There are 3.5M rows like this:
+
+```sh
+head walk
+# 1	248518397	1041744
+# 2	248518397	23848439
+# 3	248518397	4235810
+# 4	248518397	82079949
+# 1	3374228	140728989
+# 1	68334187	36144275
+# 2	68334187	7008060
+# 1	205881482	94036919
+# 2	205881482	95069173
+# 3	205881482	53480264
+```
+
+We started with a random query (column 2) and then walked to one of
+its references (column 3) randomly.  From there, we continued until we
+couldn't go any more.
+<p>
+Column 1 is distance from column 2 to column 3.
+
+
+
