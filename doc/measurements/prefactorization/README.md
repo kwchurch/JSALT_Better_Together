@@ -9,7 +9,7 @@ This format uses remarkably little space on disk, but it takes a long
 time (and quite a bit of temp space) to load it into python.  (See <a href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/src/JSALT_util.py">here</a> for an alternative that uses more space on disk, but loads faster with less temp space).
 
 
-<img src="embedding_size.jpg" alt="Output ProNE Embeddings are 200x larger than the input citation graphs" width="500" />
+<img src="embedding_size.jpg" alt="Output ProNE Embeddings are 200x larger than the input citation graphs" width="600" />
 
 
 Our ProNE implementation consists of three steps:
