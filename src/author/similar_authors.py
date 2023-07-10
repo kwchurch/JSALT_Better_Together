@@ -20,7 +20,7 @@ JSALT=os.environ.get('JSALTdir')
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-A", "--author", help="npz file (paper by author matrix)",
-                    default=JSALT + '/semantic_scholar/releases/2023-06-20/database/papers/papers_to_authors.npz')
+                    default=JSALT + '/semantic_scholar/releases/2023-06-20/database/papers/authors/papers_to_authors.npz')
 parser.add_argument("--normalize", action='store_true')
 parser.add_argument("-O", "--output", help="output file", required=True)
 parser.add_argument("-B", "--bigrams", help="npz file", default=JSALT + '/semantic_scholar/embeddings/proposed/bigrams.npz')
@@ -28,12 +28,12 @@ args = parser.parse_args()
 
 author = load_npz(args.author)
 
-print('# loaded author: %0.2f' % (time.time() - t0), file=sys.stderr)
+print('# loaded author, shape = %s: %0.2f' % (str(author.shape), time.time() - t0), file=sys.stderr)
 sys.stderr.flush()
 
 evidence = load_npz(args.bigrams)
 
-print('# loaded evidence: %0.2f' % (time.time() - t0), file=sys.stderr)
+print('# loaded evidence, shape = %s : %0.2f' % (str(evidence.shape), time.time() - t0), file=sys.stderr)
 sys.stderr.flush()
 
 author2 = author.T
@@ -44,7 +44,21 @@ if args.normalize:
     evidence = preprocessing.normalize(evidence, "l1")
     print('# normalized evidence: %0.2f' % (time.time() - t0), file=sys.stderr)
 
-res = author2 @ evidence @author2.T
+# res = author2 @ evidence @author2.T
+
+N0 = author2.shape[1]
+N1 = evidence.shape[0]
+
+print('# N0 = %d, N1 = %d : %0.2f' % (N0, N1, time.time() - t0), file=sys.stderr)
+
+if N0 > N1:
+    evidence.resize(N0, evidence.shape[1])
+elif N1 > N0:
+    author2.resize(author2.shape[0], N1)
+
+print('author2.shape = %s, evidence.shape = %s : %0.2f' % (str(author2.shape), str(evidence.shape), time.time() - t0), file=sys.stderr)
+
+res = author2 @ evidence
 
 print('# about to save: %0.2f' % (time.time() - t0), file=sys.stderr)
 sys.stderr.flush()
