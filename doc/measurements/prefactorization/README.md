@@ -1,5 +1,5 @@
 # Measurements of Prefactorization Time and Space
 
-<img="embedding_size.pdf">
+<img src="embedding_size.pdf">
 
-<img="prefactor.pdf">
+<img src="prefactor.pdf">
