@@ -34,6 +34,14 @@ So, to produce accurate embeddings for the entire graph, it should be assumed th
 
 <img src="total_cheby.png" alt="The Chebyshev iterations for the entire graph will take 7.5 TB." width="800" />
 
+For the Finish runs: 
+<p>
+The last step will only be computed for the final iteration. 
+</p>
+
+<img src="finish.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="800" />
+
+
 
 
 
