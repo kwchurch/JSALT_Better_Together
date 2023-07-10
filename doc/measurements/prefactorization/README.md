@@ -36,7 +36,7 @@ So, to produce accurate embeddings for the entire graph, it should be assumed th
 
 For the Finish runs: 
 <p>
-The last step will only be computed for the final iteration. 
+The last step will only be computed for the final iteration. The projections for memory utilization is that the entire graph will require 1.02 TB of memory to compute.
 </p>
 
 <img src="finish.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="800" />
