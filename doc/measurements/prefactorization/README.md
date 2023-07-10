@@ -29,7 +29,7 @@ and the bulk of the space is in the Chebyshev iterations.
 For the Chebyshev runs: 
 <p>
 The loss converges by at 14 iterations for the pieces that have been calculated so far. 
-So, to produce accurate embeddings for the entire graph, it should be assumed that the final embeddings will take 14 or more Chebyshev iterations to produce. Here is a plot which makes predictions for the memory utilizations the pieces of the graph will require.
+So, to produce accurate embeddings for the entire graph, it should be assumed that the final embeddings will take 14 or more Chebyshev iterations to produce. Here is a plot which makes predictions for the memory utilizations the pieces of the graph will require. It is projected that the entire graph, if the embeddings converge by 14 iterations, will take 7.5 TB of memory.
 </p>
 
 <img src="total_cheby.png" alt="The Chebyshev iterations for the entire graph will take 7.5 TB." width="800" />
