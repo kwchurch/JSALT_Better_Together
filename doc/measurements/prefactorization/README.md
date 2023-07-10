@@ -48,6 +48,12 @@ The last step will only be computed for the final iteration. The projections for
 
 <img src="finish.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="800" />
 
+Time to compute finish run:
+<p>
+For the entire graph, the finish run is expected to take 6.14 hours.
+</p>
+<img src="finish_time.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="800" />
+
 
 
 
