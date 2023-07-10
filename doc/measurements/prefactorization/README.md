@@ -23,6 +23,7 @@ Our ProNE implementation consists of three steps:
 We believe the bulk of the time is in the first step (prefactorization),
 and the bulk of the space is in the Chebyshev itations.
 <p>
+
 ![Prefactorization will require 1.3 TBs and 2.6 days](prefactor.pdf)
 
 
