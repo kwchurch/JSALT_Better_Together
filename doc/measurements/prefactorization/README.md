@@ -26,4 +26,11 @@ and the bulk of the space is in the Chebyshev iterations.
 <img src="prefactor.jpg" alt="Prefactorization will require 1.3 TBs and 2.6 days" width="800" />
 
 
+For the Chebyshev runs: 
+The loss converges by at 14 iterations for the pieces that have been calculated so far. 
+So, to produce accurate embeddings for the entire graph, it should be assumed that the final embeddings will take 14 or more Chebyshev iterations to produce. 
+
+
+
+
 
