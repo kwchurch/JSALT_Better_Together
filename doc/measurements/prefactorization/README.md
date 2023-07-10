@@ -34,6 +34,13 @@ So, to produce accurate embeddings for the entire graph, it should be assumed th
 
 <img src="total_cheby.png" alt="The Chebyshev iterations for the entire graph will take 7.5 TB." width="800" />
 
+Time to compute:
+<p>
+The time complexity appears to be somewhat less quadratic than the space complexity. However, it does not seem to be linear either. 
+For the entire graph, the run is expected to take 23.7 hours.
+</p>
+<img src="cheby_time.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="800" />
+
 For the Finish runs: 
 <p>
 The last step will only be computed for the final iteration. The projections for memory utilization is that the entire graph will require 1.02 TB of memory to compute.
