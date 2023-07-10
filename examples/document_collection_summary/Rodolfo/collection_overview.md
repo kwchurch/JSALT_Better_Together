@@ -56,7 +56,6 @@ The following visualizations show the clusters of documents for each of the incl
 <td><a href="https://www.semanticscholar.org/paper/e54ffc76d805c48660bb0fd20019ca82ac94ba0d">Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning</a></td>
 <td>This paper proposes a debiasing method for pre-trained text encoders that both reduces social stereotypes, and inflicts next to no semantic damage, and confirms that reducing bias from attention effectively mitigates it from the model’s text representations.</td>
 </tr>
-</table></html>
 
 <tr>
 <td><a href="clusters/cluster7.md">C7</a></td>
@@ -81,7 +80,7 @@ The following visualizations show the clusters of documents for each of the incl
 <td><a href="https://www.semanticscholar.org/paper/2843f3a14a142637fe65ce2bb7d7193e7806fbcd">UZH TILT: A Kaldi recipe for Swiss German Speech to Standard German Text</a></td>
 <td>This paper describes a proposed system that makes use of the Kaldi Speech Recognition Toolkit to implement a time delay neural network (TDNN) Acoustic Model (AM) with an extended pronunciation lexicon and language model to translate spoken Swiss German into standard German text implicitly through STT.</td>
 </tr>
-
+</table></html>
 <h3 style="text-align: center;">Hierarchical Clustering Visualizations</h3>
 The following visualizations show the cosine similarity of the papers for each embedding after performing hierarchical clustering. The rows and columns are permuted based on optimal leaf ordering.
 
