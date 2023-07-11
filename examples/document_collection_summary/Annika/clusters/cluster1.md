@@ -1,177 +1,142 @@
 ## Cluster 1 Papers
 
+Number papers: 45
 <html><table><tr>
 <th>Paper Link</th>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/d6ddc4f4c81c9565019be1983d37f9fbdf5bd057>The Birth of Bias: A case study on the evolution of gender bias in an English language model</a></td>
+<td><a href=https://www.semanticscholar.org/paper/0abcbdf40f872e6baf1c082811d4ae93df787698>Are We Modeling the Task or the Annotator? An Investigation of Annotator Bias in Natural Language Understanding Datasets</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/c9cf6cbfda627680361a42339521eebd460ee6b2>A Comparative Study on Word Embeddings and Social NLP Tasks</a></td>
+<td><a href=https://www.semanticscholar.org/paper/1670a07b70f90cc4ddba71343e6a7ee4b5198595>Evaluating Gender Bias in Machine Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/21b2441907aa23b0251c0bb7af68b08c4b94f4df>Using Item Response Theory to Measure Gender and Racial Bias of a BERT-based Automated English Speech Assessment System</a></td>
+<td><a href=https://www.semanticscholar.org/paper/f080e7f62cc50b8f1e922102414ca21a01647076>A Comparative Study of English-Chinese Translations of Court Texts by Machine and Human Translators and the Word2Vec Based Similarity Measure’s Ability To Gauge Human Evaluation Biases</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/ab722f0efc91446d5e2ee519ea621ba1c15babc1>An Empirical Study on the Fairness of Pre-trained Word Embeddings</a></td>
+<td><a href=https://www.semanticscholar.org/paper/004fbcb0f3248afcbc158d97d3b02f0ea42e137a>On Measuring Gender Bias in Translation of Gender-neutral Pronouns</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/ecee71b8599818dedb46ce3e1245f1c94b6cbb82>Unsupervised Mitigating Gender Bias by Character Components: A Case Study of Chinese Word Embedding</a></td>
+<td><a href=https://www.semanticscholar.org/paper/22d3dfd27bfd4ec00ab6d9744cec851982e9b89a>Queens Are Powerful Too: Mitigating Gender Bias in Dialogue Generation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/853a43c4fc36038d70763b592704cdb813169a00>Gender Biases and Where to Find Them: Exploring Gender Bias in Pre-Trained Transformer-based Language Models Using Movement Pruning</a></td>
+<td><a href=https://www.semanticscholar.org/paper/5019dbe8d1da5f128f4f373d6849095cf18fd519>The Woman Worked as a Babysitter: On Biases in Language Generation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/18dd0387aef81ec00b327fdc81ea9b4d07b2eddb>Why Knowledge Distillation Amplifies Gender Bias and How to Mitigate from the Perspective of DistilBERT</a></td>
+<td><a href=https://www.semanticscholar.org/paper/a5ccd107c08c5a73ee89aee00a15bc4a0c8f7397>“You Sound Just Like Your Father” Commercial Machine Translation Systems Include Stylistic Biases</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/7e7cc29b042793b27688beb765dc604dee65d536>Flexible text generation for counterfactual fairness probing</a></td>
+<td><a href=https://www.semanticscholar.org/paper/babeda48b10a4d638252118f2238d05a06f4ec55>StereoSet: Measuring stereotypical bias in pretrained language models</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/bbf0af4a727fc186ef173aba3518fc0db11bb9d4>Don’t Forget About Pronouns: Removing Gender Bias in Language Models Without Losing Factual Gender Information</a></td>
+<td><a href=https://www.semanticscholar.org/paper/216ef2817be8b4ba63c1ce9df315bea6f238d6c8>“This is a Problem, Don’t You Agree?” Framing and Bias in Human Evaluation for Natural Language Generation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/3a37fef290d76029c295201cc168c0f8ecb0a0cf>Fewer Errors, but More Stereotypes? The Effect of Model Size on Gender Bias</a></td>
+<td><a href=https://www.semanticscholar.org/paper/3cf1da52ee85335972533e56f9a5c1383ebbf2a3>Type B Reflexivization as an Unambiguous Testbed for Multilingual Multi-Task Gender Bias</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/e404b81b13d6cd07259d8560a5e77359f930ec2e>Indigenous Language Revitalization and the Dilemma of Gender Bias</a></td>
+<td><a href=https://www.semanticscholar.org/paper/645bd6eadc247989abc5e0b0aa0be79ec8b11ea6>CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/5a0b974dc9eaa6633808a0f6699592ee5254ac20>Analysis of Gender Bias in Social Perception and Judgement Using Chinese Word Embeddings</a></td>
+<td><a href=https://www.semanticscholar.org/paper/59bb7f41e72bae283f8aa2222b346956ee197a7a>Measuring Social Biases in Grounded Vision and Language Embeddings</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/4afb1dd5ec9093c2d61b86e8faf74fd5a6807cd0>On Gender Biases in Offensive Language Classification Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/7096304d19457833972daec4d3f5107befe30b1c>Do Neural Language Models Overcome Reporting Bias?</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/704dafb9ae3f9b452c96a86d30207f1193459c31>Gender Bias in BERT - Measuring and Analysing Biases through Sentiment Rating in a Realistic Downstream Classification Task</a></td>
+<td><a href=https://www.semanticscholar.org/paper/8b9fcd46ffe309a2eaa8eb675940191f5d41744c>Mitigating Gender Bias in Machine Translation with Target Gender Annotations</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/42827df167cc7d87774626a7c913d1cdaaa47d10>Occupational Biases in Norwegian and Multilingual Language Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/f72983cef733670d6915e37383257f548b5a3365>UNQOVERing Stereotypical Biases via Underspecified Questions</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/e8a8529dd1e0b0662505db1743c48d8ebd748340>Evaluating Gender Bias Transfer from Film Data</a></td>
+<td><a href=https://www.semanticscholar.org/paper/e02c114d6269f4781b0fa92f4e2c9376e7462906>PowerTransformer: Unsupervised Controllable Revision for Biased Language Correction</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/930b7fb33fe18832574952a77ef61634f40e44e8>A Taxonomy of Bias-Causing Ambiguities in Machine Translation</a></td>
+<td><a href=https://www.semanticscholar.org/paper/00059087c954c1af6ece33115315e3e0ecc2f2c2>Reducing Gender Bias in Neural Machine Translation as a Domain Adaptation Problem</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/ea0e62db166caa46de8821acce1afe1b8793025b>Using Natural Sentence Prompts for Understanding Biases in Language Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/ddfcda2b255633b5d5ad8ad37a4f4cb45e60af5a>Towards Controllable Biases in Language Generation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/48be558f86101bbd60a41621daceb8a27141852e>Features or Spurious Artifacts? Data-centric Baselines for Fair and Robust Hate Speech Detection</a></td>
+<td><a href=https://www.semanticscholar.org/paper/352c0a78f008fcac02a46cf27cbe8261631f084e>Detect and Perturb: Neutral Rewriting of Biased and Sensitive Text via Gradient-based Decoding</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/e2de6848ea05ecec6749b574ea798cbbc9c0f871>Assessing Group-level Gender Bias in Professional Evaluations: The Case of Medical Student End-of-Shift Feedback</a></td>
+<td><a href=https://www.semanticscholar.org/paper/996f0d401acd11e95ce5586010e7e4e18f5c3bb9>How to Split: the Effect of Word Segmentation on Gender Bias in Speech Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/b4cd18f01b37c98e5e7652c23dece7e977215ef8>Uncertainty and Inclusivity in Gender Bias Annotation: An Annotation Taxonomy and Annotated Datasets of British English Text</a></td>
+<td><a href=https://www.semanticscholar.org/paper/7d5c661fa9a4255ee087e861f820564ea2e2bd6b>BBQ: A hand-built bias benchmark for question answering</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/f19298ea19dcd7bd69ab76cf6a18f801052e26e4>On the Machine Learning of Ethical Judgments from Natural Language</a></td>
+<td><a href=https://www.semanticscholar.org/paper/0f192e9c7a1e3fdc6e051fc502f74b04c53bb3a3>On the Language Coverage Bias for Neural Machine Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/d6f002d88638de71114dab083f0ea8ceea6b6a5a>Benchmarking Intersectional Biases in NLP</a></td>
+<td><a href=https://www.semanticscholar.org/paper/3e65f572322e192fe36ae52a8a7f025b0685dfc6>Stereotyping Norwegian Salmon: An Inventory of Pitfalls in Fairness Benchmark Datasets</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/a452c3fe8d7d5199afe66e1db519f528df3f487f>Challenges in Applying Explainability Methods to Improve the Fairness of NLP Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/6f9fc51102cf49bff4f4e2b336739a45f8389c80>Ethical-Advice Taker: Do Language Models Understand Natural Language Interventions?</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/b0096a2431773e34e5c72f559b87e01f5c15d5e0>Choose Your Lenses: Flaws in Gender Bias Evaluation</a></td>
+<td><a href=https://www.semanticscholar.org/paper/76a786b1acd6d1aca56e12a8a1db34569fdf9f3a>Societal Biases in Language Generation: Progress and Challenges</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/7c64650af4e4db5291f733f41ee470f2ce22f9db>An Empirical Study on Pseudo-log-likelihood Bias Measures for Masked Language Models Using Paraphrased Sentences</a></td>
+<td><a href=https://www.semanticscholar.org/paper/d48d1e80b6ea9708fa3a09d1556a7ced3b147da2>Collecting a Large-Scale Gender Bias Dataset for Coreference Resolution and Machine Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/ddc7e9cadb1da5b0102b843e430005b7c2173689>DeBiasByUs: Raising Awareness and Creating a Database of MT Bias</a></td>
+<td><a href=https://www.semanticscholar.org/paper/63052e581f1b272eefdbf109a230c7ec87e1f79a>Gender bias amplification during Speed-Quality optimization in Neural Machine Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/058dee85d522f6565fe1502cafcf9a5e3f6a6f0e>Measuring Fairness with Biased Rulers: A Comparative Study on Bias Metrics for Pre-trained Language Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/130ab5c480860e330b65280a3410f17bb2d50fe1>Sustainable Modular Debiasing of Language Models</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/0ace520bf2d50d6233fceb0845037cb2a88074c9>The ethical role of computational linguistics in digital psychological formulation and suicide prevention.</a></td>
+<td><a href=https://www.semanticscholar.org/paper/8fa0de4920c8edcb1fea698ff3463a347771d889>Stereotype and Skew: Quantifying Gender Bias in Pre-trained and Fine-tuned Language Models</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/84b6660b717fd4832fedbe066f622ef183662a69>Theory-Grounded Measurement of U.S. Social Stereotypes in English Language Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/6a89148ec6f14d7e89d791febabc88537876ce5b>How do people interact with biased text prediction models while writing?</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/23c818b5df6a2c8f8837f0e69741164f01946fef>How well can Text-to-Image Generative Models understand Ethical Natural Language Interventions?</a></td>
+<td><a href=https://www.semanticscholar.org/paper/ce9ca56036307217ea565644d3d3bd74b879e045>Self-Diagnosis and Self-Debiasing: A Proposal for Reducing Corpus-Based Bias in NLP</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/969f45a3adf5e0bcf741447b1c67a0f3a386801a>BERTScore is Unfair: On Social Bias in Language Model-Based Metrics for Text Generation</a></td>
+<td><a href=https://www.semanticscholar.org/paper/20328647c38282088dc9dddedcb2e5bdaeeeea78>Text Style Transfer for Bias Mitigation using Masked Language Modeling</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/8f16c64af8021a881cc092a215bf57391d2668d0>Ethics consideration sections in natural language processing papers</a></td>
+<td><a href=https://www.semanticscholar.org/paper/4919cd4ad287a3f0679846bd95c6805cb8dda4bd>Generating Biographies on Wikipedia: The Impact of Gender Bias on the Retrieval-Based Generation of Women Biographies</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/a8c09c41f39d798dc4201eeec1452fe617e428df>Bridging Fairness and Environmental Sustainability in Natural Language Processing</a></td>
+<td><a href=https://www.semanticscholar.org/paper/e0fc811aa01ae11169aae97b58c8334f8ca173d8>Measuring and Mitigating Name Biases in Neural Machine Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/7ef43bacd43393ff116e6fcda6a52a6902e016d7>“I’m sorry to hear that”: Finding New Biases in Language Models with a Holistic Descriptor Dataset</a></td>
+<td><a href=https://www.semanticscholar.org/paper/8d9f0e34cfc659510d6c4ed085c6ef61734732b0>Under the Morphosyntactic Lens: A Multifaceted Evaluation of Gender Bias in Speech Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/20e1ef6a126bd9bc0b4e899debbf65c6baa21652>MABEL: Attenuating Gender Bias using Textual Entailment Data</a></td>
+<td><a href=https://www.semanticscholar.org/paper/3c759e2f16bfde8d31189631e4893d3ac8ff05f2>Mitigating Gender Bias in Distilled Language Models via Counterfactual Role Reversal</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/641f1e845c5baa1b6282a803a928c83290ddf669>Measuring Gender Bias in West Slavic Language Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/5a5b5bd6c644eb43943144410efba704ebb4c083>Entropy-based Attention Regularization Frees Unintended Bias Mitigation from Lists</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/1669a5929c6706efaec0fe2ddb4a62130bd93cb3>Toward Cultural Bias Evaluation Datasets: The Case of Bengali Gender, Religious, and National Identity</a></td>
+<td><a href=https://www.semanticscholar.org/paper/1e83a4a3cc65229403a5f90229007af957c12602>Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/c52cc36737f382a3652da5602bba0678aea0078e>Bias assessment for experts in discrimination, not in computer science</a></td>
+<td><a href=https://www.semanticscholar.org/paper/fd69d6e5b7dbb9ae912f0ab98011d2891996252d>Ethical Considerations for Low-resourced Machine Translation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/75ddc4fb91332f95222d74449d96b9f7c8f976c7>Nationality Bias in Text Generation</a></td>
+<td><a href=https://www.semanticscholar.org/paper/d9424371662717c8981eef3d501d7ce59c66ce77>On the Intrinsic and Extrinsic Fairness Evaluation Metrics for Contextualized Language Representations</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/7711d788b73f04635a5cc0ab4bd7bcbe9665bce7>Fair Enough: Standardizing Evaluation and Model Selection for Fairness Research in NLP</a></td>
+<td><a href=https://www.semanticscholar.org/paper/e6296cf7c2c7b4578f1ae644edae4ceee5a5faea>On Measuring Social Biases in Prompt-Based Multi-Task Learning</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/b3dcd48b68bdbb304fa53299496539c054638e0c>Logic Against Bias: Textual Entailment Mitigates Stereotypical Sentence Reasoning</a></td>
+<td><a href=https://www.semanticscholar.org/paper/294292881447169461a6fcefbe8951b5b05528a8>Challenges in Measuring Bias via Open-Ended Language Generation</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/4dcef4d040cdbc17eb8e7e39d1456c2a1ab691a0>SODAPOP: Open-Ended Discovery of Social Biases in Social Commonsense Reasoning Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/de6807676d8171472ed6cf421c4e4ed3cbb47699>An Empirical Survey of the Effectiveness of Debiasing Techniques for Pre-trained Language Models</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/a5bc3c0bce8d105a6b95f999fed4ea59c342cb1d>Multi-Modal Bias: Introducing a Framework for Stereotypical Bias Assessment beyond Gender and Race in Vision–Language Models</a></td>
+<td><a href=https://www.semanticscholar.org/paper/1fbb406a7387451bb1b6b67a44975c65120ad03a>Debiasing Pretrained Text Encoders by Paying Attention to Paying Attention</a></td>
 </tr>
 <tr>
-<td><a href=https://www.semanticscholar.org/paper/a722010cc6bb9fffe3b9a06bf9586b5d40bc50f7>Measuring Normative and Descriptive Biases in Language Models Using Census Data</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/fe7a0612b24b48fe09304af39cdb27d8e33697c6>Parameter-efficient Modularised Bias Mitigation via AdapterFusion</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/c21cd6401032f30c4165754d29bd0a7e90582bfd>Comparing Intrinsic Gender Bias Evaluation Measures without using Human Annotated Examples</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/f48287e9ed131ff8ffa79b66717887c5af74f203>When Do Pre-Training Biases Propagate to Downstream Tasks? A Case Study in Text Summarization</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/82040a4a1b1bceb5216a9dd09e5d9c8fa3fdd83f>How Far Can It Go? On Intrinsic Gender Bias Mitigation for Text Classification</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/78665358e27c6c09fbb99b7642b70834666993b9>In-Depth Look at Word Filling Societal Bias Measures</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/128904f804d206d2b2a512358df4d4385b7d2712>Social Commonsense for Explanation and Cultural Bias Discovery</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/fd26c019d889b816c28fa2e15e2571faa78592bb>Counter-GAP: Counterfactual Bias Evaluation through Gendered Ambiguous Pronouns</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/12902f724619344dfeae330043c4b7b1c9d99bd0>Understanding Ethics in NLP Authoring and Reviewing</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/181ad8a919e6fa7adc2226ff1b852e22e19440dd>A Multilingual Dataset of Racial Stereotypes in Social Media Conversational Threads</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/e9a0354615a649b0fc87b046ec8ccd29d4380606>Investigating anatomical bias in clinical machine learning algorithms</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/cd37a330aca9fbdb54716e4e43710ba4b125fc2c>Model-Agnostic Bias Measurement in Link Prediction</a></td>
-</tr>
-<tr>
-<td><a href=https://www.semanticscholar.org/paper/116e06573858b9d767355f51f302e2c75b410ca2>Fairness in Language Models Beyond English: Gaps and Challenges</a></td>
+<td><a href=https://www.semanticscholar.org/paper/3a6a97a50695d43d95a015bbb554b2bc0d40394e>Don’t Blame the Annotator: Bias Already Starts in the Annotation Instructions</a></td>
 </tr>
 </table></html>
