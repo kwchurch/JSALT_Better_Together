@@ -7,8 +7,11 @@ takes a citation graph, G, as input and outputs an Embedding, E.  E is
 about 200x larger than G.  The crux of ProNE is an SVD step (line 119
 of <a
 href="https://github.com/VHRanger/nodevectors/blob/master/nodevectors/prone.py">prone.py</a>)
-that inputs G (a sparse graph) and outputs the U (a dense matrix).  U
-is about 200x larger than G.
+that inputs G (a sparse graph) and outputs the U (a dense matrix).
+The final output embedding, E, is the same size at the U matrix from the SVD.
+<p>
+Even though E is much larger than G, E is more convenient than G for certain
+purposes such as making recommendations with Approximate Nearest Neighbors (ANN).
 
 <img src="prefactorization/embedding_size.jpg" alt="Output ProNE Embeddings are 200x larger than the input citation graphs" width="600" />
 
