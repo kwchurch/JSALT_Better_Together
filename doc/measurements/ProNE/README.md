@@ -89,9 +89,10 @@ access partitions</a>
 <p>
 <h3>Prefactorization will require 2.6 days and 1.3 TBs for piece 99</h3>
 <img src="prefactorization/prefactor.jpg" alt="Prefactorization will require 1.3 TBs and 2.6 days" width="800" />
+Quadratic time may be unavoidable, given that edges are growing faster than nodes.
 
 <h3>Each Chebyshev iteration will require 1.69 hours and 532 GBs for piece 99</h3>
-<img src="cheby/cheby_time_1_iter.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="800" />
+<img src="cheby/cheby_time_1_iter.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="400" />
 <img src="cheby/cheby_memory_1.png" alt="The Chebyshev iterations for the entire graph will take 7.5 TB." width="400" />
 
 <h3>The Finish step will take about 6 hours and 1 TB of memory for piece 99</h3>
