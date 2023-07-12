@@ -96,8 +96,8 @@ access partitions</a>
 
 <h3>The Finish step will take about 6 hours and 1 TB of memory for piece 99</h3>
 
-<img src="finish_time.png" alt="The finish step for will take 6 hours for piece 99." width="800" />
-<img src="finish/finish.png" alt="The finish step will take a day for piece 99." width="800" />
+<img src="finish/finish_time.png" alt="The finish step for will take 6 hours for piece 99." width="400" />
+<img src="finish/finish.png" alt="The finish step will take a day for piece 99." width="400" />
 
 
 
