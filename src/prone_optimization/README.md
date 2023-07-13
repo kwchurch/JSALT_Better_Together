@@ -1,23 +1,33 @@
 # Prone Optimzation
 # JSALT (Jelinek Summer Workshop on Speech and Language Technology): 
 
-<h2>Useful links</h2>
-<ol>
-<li><a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Team Page</a></li>
-<li><a href="https://northeastern.zoom.us/j/8963791015"> Zoom Link</a></li>
-<li><a href="https://github.com/kwchurch/JSALT_Better_Together">Github with source code</a></li>
-<li><a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">large datasets from Globus</a></li>
-<li><a href="slides">Slides</li>
-<li><a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Meeting Notes</a></li>
-<li><a href="doc/Notation.md">Notation</a></li>
-<li><a href="doc/deliverables.md">Deliverables</a></li>
-<li><a href="examples/similar_documents/reading_list">Reading List</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1JMq-jR4M8KU119cvglUDmMwwzd60Z3vyvn3VqhPn9EY/view#gid=1450677429">SciRepEval Baselines</a></li>
-<li><a href="doc/Similar_Venues.md">Similar Venues</a></li>
-<li><a href="doc/whatswhere.md">What's Where</a> (doc on big files on Globus)</li>
-</ol>
+<h1>Two Optimization Techniques</h1>
 
-<h2>Installation</h2>
+
+<h1>Cython Code Creation</h1>
+<ol>
+<li><a href="https://cython.readthedocs.io/en/latest/src/quickstart/build.html">Baseline Link</a></li>
+</ol>
+Cython is a manner of compiling any Python code into its C equivalent.
+It optimizes variables and other memory calls to run faster in C.
+When used for Prone (ran 10 times taking the average), we were able to get several runs on average 10 seconds speedup (on a small fraction of the graph -- 10%).
+The original TSVD code from Sci-Py that uses Python takes about 90 seconds on the Northeastern "short" queue CPU boxes, when using Cython-compiled Prone.py it runs in about 80 seconds (10% speed up).
+<h2>Logic</h2>
+In order to run Cython, you will need to:
+pip install cython.
+It will
+
+
+
+
+<h2>Execution</h2>
+
+
+
+
+
+
+<h2>DAX use for tiling and GPU/CPU runs</h2>
 
 ```sh
 git clone https://github.com/kwchurch/JSALT_Better_Together
