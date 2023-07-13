@@ -1,12 +1,5 @@
 #!/usr/bin/env python
 
-# ~/final/morphology/dict_to_embedding.py
-
-# from nodevectors (prone.py)
-# ~/venv/gft/lib/python3.8/site-packages/nodevectors/prone.py
-
-#!/usr/bin/env python
-
 import numpy as np
 import csrgraph as cg
 from scipy import sparse, special
@@ -72,7 +65,6 @@ def load_m(temp_file_prefix, K, N):
 
 @profile
 def subsequent_iteration(i, temp_file_prefix, theta):
-    # we want to reduce maximum memory utilization
     Lx0 = load_file("Lx0", i - 1)
     N = Lx0.shape[0]
     K = Lx0.shape[1]
@@ -85,7 +77,6 @@ def subsequent_iteration(i, temp_file_prefix, theta):
     ngc = gc.collect()
     print('%0.2f sec: garbage collect returned %d' % (time.time() - t0, ngc), file=sys.stderr)
     print(gc.get_stats(), file=sys.stderr)
-    # do I need all three?
     conv = load_file("conv", i - 1)
     if i % 2 == 0:
         conv += 2 * special.iv(i, theta) * Lx2
@@ -105,15 +96,6 @@ def save_files(Lx0, Lx1, conv):
     save_file(conv, "conv", i)
     print('%0.2f sec: finished iteration %d' % (time.time() - t0, i), file=sys.stderr)
 
-
-# clean up stuff at end
-# added by kwc
-# print('chebyshev_gaussian finishing %0.0f sec' % (time.time() - t0ch), file=sys.stderr)
-# mm = A @ (U - conv)
-# emb = svd_dense(mm, K)
-# return emb
-
-
 if __name__=="__main__":
     print('ProNE_chebyshev: sys.argv = ' + str(sys.argv), file=sys.stderr)
     t0 = time.time()
@@ -121,7 +103,6 @@ if __name__=="__main__":
     socket.gethostname(), os.environ.get('SLURM_JOB_ID'), os.environ.get('SLURM_ARRAY_TASK_ID')), file=sys.stderr)
     sys.stderr.flush()
     parser = argparse.ArgumentParser()
-    # parser.add_argument("-O", "--output", help="output file", required=True)
     parser.add_argument("-G", "--input_graph", help="input graph (readable by scipy.sparse.load_npz)", required=True)
     parser.add_argument("-U", "--U", help="input prefactorization", default=None)
     parser.add_argument("--temp_file_prefix", help="input prefactorization", default=None)
