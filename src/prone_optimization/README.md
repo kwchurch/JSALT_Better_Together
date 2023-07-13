@@ -12,16 +12,15 @@ When used for Prone (ran 10 times taking the average), we were able to get sever
 The original TSVD code from Sci-Py that uses Python takes about 90 seconds on the Northeastern "short" queue CPU boxes, when using Cython-compiled Prone.py it runs in about 80 seconds (10% speed up).
 <h2>Logic</h2>
 In order to run Cython, you will need to:
+
 ```sh
 pip install cython
 python setup.py build_ext --inplace
 ```
+
 This assumes that you have updated the setup.py file with your filename, please see the setup.py file for help.
 That will create a binary C object (a .so file) that can then be used similar to the Python code by importing the name of your library.
 For example, in this directory there is a "prone" library that can be imported.
-
-
-
 
 <h2>Execution</h2>
 
