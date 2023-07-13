@@ -19,7 +19,8 @@ python setup.py build_ext --inplace
 ```
 
 This assumes that you have updated the setup.py file with your filename, please see the setup.py file for help.
-That will create a binary C object (a .so file) that can then be used similar to the Python code by importing the name of your library.
+In this directory there is a file called "prone.pyx" which is used to create the binary below.
+That will create a binary C object (a .so file like prone.cpython-39-x86_64-linux-gnu.so) that can then be used similar to the Python code by importing the name of your library.
 For example, in this directory there is a "prone" library that can be imported.
 
 <h2>Execution</h2>
