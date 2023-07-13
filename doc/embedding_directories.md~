@@ -1,0 +1,82 @@
+# Embedding directories
+
+This file explains what you can do with directories with precomputed embeddings.
+Some examples of precomputed embedding directories are:
+<ol>
+<li>proposed</li>
+<li>specter</li>
+<li>specter2</li>
+<li>scincl</li>
+<li>LinkBERT</li>
+<li>proposed/bins/[0-9][0-9][0-9]</li>
+<li>proposed/bins/prone.baseline/[0-9][0-9][0-9]</li>
+</li>
+
+It is assumed that each of these directories contain the following files:
+<ol>
+<li>embedding.f</li>
+<li>record_size</li>
+<li>record_size.sh</li>
+<li>map.old_to_new.i</li>
+<li>map.new_to_old.i</li>
+</ol>
+
+```sh
+export JSALTdir=/work/k.church/JSALT-2023/
+export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+
+export specter=$JSALTdir/semantic_scholar/embeddings/specter
+export specter2=$JSALTdir/semantic_scholar/embeddings/specter2
+export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
+export LinkBERT=$JSALTdir/semantic_scholar/embeddings/LinkBERT
+
+scratchProposed=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/proposed
+scratchSpecter=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter
+scratchSpecter2=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter2
+scratchScincl=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/scincl
+scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBERT
+```
+
+
+
+$JSALTsrc/C/print_bigrams $scincl/bigrams | sed 1000000q | awk 'rand() < 1/100000' | cut -f2- | head > /tmp/x
+(gft3) [k.church@c0230 proposed]$ wc /tmp/x
+ 10  20 142 /tmp/x
+(gft3) [k.church@c0230 proposed]$ cat /tmp/x
+486	210163984
+551	8392719
+2775	164865317
+3982	7278363
+4873	147428608
+5028	167748753
+7243	95907927
+7429	144146979
+7825	119957307
+8294	38958396
+(gft3) [k.church@c0230 proposed]$ $JSALTsrc/pairs_to_cos.sh < /tmp/x
+proposed	scincl	specter2	specter	specter.K280
+0.906	0.828	0.882	0.681	0.697	551	8392719
+0.754	0.873	0.915	0.584	0.592	3982	7278363
+0.349	0.919	0.891	0.791	0.796	8294	38958396
+0.169	0.741	-1.000	0.412	0.418	7429	144146979
+0.123	0.841	0.888	0.485	0.448	4873	147428608
+0.070	0.758	0.790	0.512	0.549	7243	95907927
+0.027	0.749	0.870	0.247	0.313	2775	164865317
+0.016	0.830	0.855	0.533	0.548	7825	119957307
+0.014	0.780	0.832	0.516	0.494	486	210163984
+-0.006	0.807	0.883	0.680	0.726	5028	167748753
+(gft3) [k.church@c0230 proposed]$ $JSALTsrc/pairs_to_cos.sh . bins/01* < /tmp/x
+.	bins/010	bins/011	bins/012	bins/013	bins/014	bins/015	bins/016	bins/017	bins/018	bins/019
+0.906	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	551	8392719
+0.754	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	3982	7278363
+0.349	-0.022	0.016	0.033	0.026	-0.015	0.009	-0.046	0.034	-0.046	-0.012	8294	38958396
+0.169	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	7429	144146979
+0.123	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	4873	147428608
+0.070	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	7243	95907927
+0.027	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	2775	164865317
+0.016	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	7825	119957307
+0.014	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	486	210163984
+-0.006	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	5028	167748753
+(gft3) [k.church@c0230 proposed]$ pwd
+/work/k.church/JSALT-2023/semantic_scholar/embeddings/proposed

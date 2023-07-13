@@ -381,7 +381,7 @@ int main(int ac, char **av)
 		   av[ac - nindexes + i]);
 	    memcpy(bytes2, bytes3, random_bytes);
 	  }
-	  else printf("%f\t%d\n",
+	  else printf("%f\t%ld\n",
 		      my_cos(vec, floats + new_j * record_size, record_size),
 		      old_j);
 	}
