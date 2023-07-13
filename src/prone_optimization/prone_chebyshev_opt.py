@@ -110,12 +110,15 @@ if __name__=="__main__":
     parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.5)", default=0.5)
     parser.add_argument("--theta", type=float, help="bessel function parameter (defaults to 0.5)", default=0.5)
     args = parser.parse_args()
-    print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
     sys.stderr.flush()
     i = args.iteration
     if(i == 0):
         Lx0, Lx1, conv = first_iter(i, args.temp_file_prefix, args.theta)
+        print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
         save_files(Lx0, Lx1, conv)
+        print('%0.2f sec: finished iteration %d' % (time.time() - t0, i), file=sys.stderr)
     else:
         Lx0, Lx1, conv = subsequent_iteration(i, args.temp_file_prefix, args.theta)
+        print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
         save_files(Lx0, Lx1, conv)
+        print('%0.2f sec: finished iteration %d' % (time.time() - t0, i), file=sys.stderr)
