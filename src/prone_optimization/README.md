@@ -1,6 +1,4 @@
 # Prone Optimzation
-# JSALT (Jelinek Summer Workshop on Speech and Language Technology): 
-
 <h1>Cython Code Creation</h1>
 <ol>
 <li><a href="https://cython.readthedocs.io/en/latest/src/quickstart/build.html">Baseline Link</a></li>
