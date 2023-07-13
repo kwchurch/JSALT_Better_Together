@@ -13,7 +13,7 @@ Some examples of precomputed embedding directories are:
 <li>LinkBERT</li>
 <li>proposed/bins/[0-9][0-9][0-9]: We have split the 200M corpus ids by time into 100 bins with 2M ids each.  We are computing an embedding for each bin (though this is still a work in progress).</li>
 <li>proposed/bins/prone.baseline/[0-9][0-9][0-9]: Similar to above, but using a different code base.   We are still trying to figure out why these cosines are slightly different from above.</li>
-</li>
+</ol>
 
 It is assumed that each of these directories contain the following files:
 <ol>
@@ -33,6 +33,7 @@ Many of these directories also have some other useful files:
 </ol>
 
 Here are some example of the above:
+
 ```sh
 sed 100000q $proposed/bins/000/idx.19.i.new_pairs | awk '$1 < 1' | sort -nr | head 
 # 0.999999	9176071	27917253
@@ -114,7 +115,7 @@ cat /tmp/x
 
 <h3 id="pairs2cos">pairs -> cos</h3>
 
-```By default, pairs_to_cosine takes no arguments.  It looks up each pair (from stdin) in 5 embeddings:
+By default, pairs_to_cosine takes no arguments.  It looks up each pair (from stdin) in 5 embeddings:
 
 ```sh
 $JSALTsrc/pairs_to_cos.sh < /tmp/x
