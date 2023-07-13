@@ -224,7 +224,7 @@ cut -f1 < /tmp/x | $JSALTsrc/C/id_to_floats --dir $proposed | cut -f1-10 -d ' '
 # 8294 7049 -0.016500 -0.076627 0.133918 -0.081429 -0.109656 0.006693 0.167753 -0.024167
 ```
 
-Warning: If a vector is not found in the precomputed embedding, then the second column will be 0,
+<i><b>Warning</b></i>: If a vector is not found in the precomputed embedding, then the second column will be 0,
 and the remaining values are not well defined.  We should fix this.
 
 ```sh
@@ -240,3 +240,73 @@ cut -f1 < /tmp/x | $JSALTsrc/C/id_to_floats --dir $proposed/bins/000 | cut -f1-1
 # 7825 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
 # 8294 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
 ```
+
+<h3 id="vector2pairs">vector -> pairs</h3>
+
+The first step is to construct some vectors.  Most of these steps are straightforward,
+but x_to_y is a generic tool for converting between types.  With the arg, af, this converts
+between ascii (a) and 4-byte floats (f).
+
+```sh
+cut -f1 < /tmp/x | $JSALTsrc/C/id_to_floats --dir $proposed | cut -f3- -d ' ' | 
+tr ' ' '\n' | $JSALTsrc/C/x_to_y af > /tmp/x.vec
+```
+
+The code above input 10 vectors from /tmp/x (in ascii) and output 10 vectors to /tmp/x.vec (in binary).
+
+```sh
+wc /tmp/x /tmp/x.vec
+   # 10    20   142 /tmp/x
+   # 30   193 11200 /tmp/x.vec
+   # 40   213 11342 total
+```
+
+We can convert them back to ascii and verify that there are 10 vectors with K=280 floats
+
+```sh
+$JSALTsrc/C/x_to_y fa < /tmp/x.vec | wc
+#   2800    2800   26588
+```
+
+The following looks up the 10 inputs vectors and finds the documents that we started with:
+
+```sh
+cd $proposed
+$JSALTsrc/C/vector_near_with_floats --offset 5 --dir $proposed idx.2?.i  < /tmp/x.vec | sort -u | sort -nr | sed 50q | head
+# 1.000000	8294
+# 1.000000	7825
+# 1.000000	7429
+# 1.000000	7243
+# 1.000000	551
+# 1.000000	5028
+# 1.000000	4873
+# 1.000000	486
+# 1.000000	3982
+# 1.000000	2775
+```
+
+It also finds many more documents with large cosines:
+
+```sh
+cd $proposed
+$JSALTsrc/C/vector_near_with_floats --offset 5 --dir $proposed idx.2?.i  < /tmp/x.vec | sort -u | sort -nr | sed 50q | tail
+# 0.991628	12182858
+# 0.991523	61951604
+# 0.991384	5704541
+# 0.991326	8564476
+# 0.991258	36936139
+# 0.991059	5982389
+# 0.991007	9433097
+# 0.990995	36856498
+# 0.990655	44327944
+# 0.990294	10254891
+```
+
+Note that the examples above used indexes matching idx.2?.i.  There are many more indexes in that directory:
+
+```sh
+ls $proposed/idx*.i | wc
+     90      90    6570
+```
+
+Using more indexes will propose more candidates (and better results), but will take more time.
