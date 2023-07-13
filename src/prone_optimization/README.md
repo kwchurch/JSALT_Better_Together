@@ -48,7 +48,7 @@ pip install line_profiler
 Here is an example memory profile run for the memory profiler on the chebyshev step, and the 0th partition of the semantic scholar graph: 
 
 ```sh
-python -m memory_profiler prone_cheby_opt.py -G /work/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.npz -U /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.U.K280.npy --iteration 0 --temp_file_prefix /scratch/irving.b/JSALT/cheby/000
+python -m memory_profiler prone_chebyshev_opt.py -G /work/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.npz -U /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.U.K280.npy --iteration 0 --temp_file_prefix /scratch/irving.b/JSALT/cheby/000
 ```
 
 Run on the Northeastern cluster, this should produce the following output:
@@ -82,7 +82,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 For time profiling, we use the Kernprof library. An example run would look like this: 
 
 ```sh
-kernprof -l -v prone_cheby_opt.py -G /work/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.npz -U /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.U.K280.npy --iteration 0 --temp_file_prefix /scratch/irving.b/JSALT/cheby/000
+kernprof -l -v prone_chebyshev_opt.py -G /work/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.npz -U /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/000.sym.shrunk.G2.U.K280.npy --iteration 0 --temp_file_prefix /scratch/irving.b/JSALT/cheby/000
 ```
 
 This should produce the following output:
