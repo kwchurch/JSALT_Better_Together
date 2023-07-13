@@ -4,7 +4,7 @@
 <h1>Cython Code Creation</h1>
 <ol>
 <li><a href="https://cython.readthedocs.io/en/latest/src/quickstart/build.html">Baseline Link</a></li>
-<li><a href="https://www.peterbaumgartner.com/blog/intro-to-just-enough-cython-to-be-useful</a></li>
+<li><a href="https://www.peterbaumgartner.com/blog/intro-to-just-enough-cython-to-be-useful">Quick Example</a></li>
 </ol>
 Cython is a manner of compiling any Python code into its C equivalent.
 It optimizes variables and other memory calls to run faster in C.
