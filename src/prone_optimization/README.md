@@ -24,65 +24,18 @@ That will create a binary C object (a .so file like prone.cpython-39-x86_64-linu
 For example, in this directory there is a "prone" library that can be imported.
 
 <h2>Execution</h2>
+With the c code and binary object you are then able to use an import prone as is done in the dict_to_embedding.cython.py
+The cython file is identical to the original dict_to_embedding.py file with the exception of the call to the "new" prone call.
+You only have to ensure that the .so library file and the .c file are in the path.
 
-
-
-
-
-
-<h2>DAX use for tiling and GPU/CPU runs</h2>
-
-```sh
-git clone https://github.com/kwchurch/JSALT_Better_Together
-pip install -r requirements.txt
-```
-
-Some useful environment variables; you may need to set these up differently, depending on where you put stuff.
-JSALTsrc should be assigned to the src directory in this repo.
-JSALTdir should be assigned to the data from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">Globus</a>.
-
-Some examples below depend on JSALTdir and some do not.  If you cannot download JSALTdir, try the examples that do not require that.
-
-```sh
-export JSALTdir=/work/k.church/JSALT-2023/
-export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
-
-export specter=$JSALTdir/semantic_scholar/embeddings/specter
-export specter2=$JSALTdir/semantic_scholar/embeddings/specter2
-export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
-export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
-```
-
-If you have access to the Northeastern Discovery Cluster,
-you can request access to the cluster by filling out a ticket <a href="https://bit.ly/NURC-Software">here</a>,
-and then you can use my settings for these environment variables.
-You should also request to be added to the group: <i>nlp</i>.
-
-<h2>Installation</h2>
-
-```sh
-git clone https://github.com/kwchurch/JSALT_Better_Together
-pip install -r requirements.txt
-# set environment variable JSALTsrc to the src directory in the repo.
-# set environment variable JSALTdir to your local copy of the large data files.
-```
-
-<h2>Reading List (and Pre-computed Output)</h2>
-
-See <a href="examples/similar_documents">here</a>, and especially <a href="examples/similar_documents/reading_list">this</a>.
-The last example starts with papers we should all be reading, and finds some documents similar to those.
-
-
-<h2>Examples</h2>
-
-
+<h1>DASK use for tiling and GPU/CPU runs</h1>
 <ol>
-<li>Depend on $JSALTsrc, but not $JSALTdir
-   <ol>
-   <li><a href="doc/semantic_scholar_API.md">Scripts for using Semantic Scholar API</a></li>
-   <li><a href="doc/HuggingFace_embeddings.md">Scripts for using Models from HuggingFace</a></li>
-   </ol></li>
-<li>Depends on both $JSALTsrc and $JSALTdir
-   <ol><li><a href="doc/find_similar_docs.md">Find similar documents</a></li>
-   </ol></li>
+<li><a href="https://blog.dask.org/2020/05/13/large-svds"></a>Link from Hui</li>
 </ol>
+The Dask library is done with pip.
+The code is found in prone_dax_added.py from lines 170 - 190.
+The most important paramter is the tile setting and can be configured according to the architecture.
+Currently, on 10 runs using 100,100 tiles (this was found over several runs but may need to be optimized) the time to run went from 20k secs on a single cpu to 250 secs on average for a single GPU.
+Ideally, we could create a ticket on the NE clusters to get multiple GPUs and there may be a speed up to surpass the current TSVD from scipy which on average is about 90 seconds on the short queue boxes cpus.
+
+
