@@ -1,7 +1,7 @@
 # Related Work Hypothesis
 
 <p>
-Related work hypothesis: cos(a,b) is larger than paper a cites paper b in a related work section than otherwise.
+Related work hypothesis: <i>cos(a,b)</i> is larger when paper <i>a</i> cites paper <i>b</i> in a related work section than otherwise.
 <p>
 
 The plots below are based on a 1% sample of <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2FRodolfo.Zevallos%2F>rw.tsv</a>.  This sample is posted in this directory.
