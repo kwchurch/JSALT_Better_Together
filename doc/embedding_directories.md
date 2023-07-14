@@ -61,37 +61,6 @@ scratchScincl=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/scincl
 scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBERT
 ```
 
-
-Here are some example of the above:
-
-```sh
-sed 100000q $proposed/bins/000/idx.19.i.new_pairs | awk '$1 < 1' | sort -nr | head 
-# 0.999999	9176071	27917253
-# 0.999999	9176071	19184716
-# 0.999999	4821225	19184716
-# 0.999999	4290997	9176071
-# 0.999999	4290997	4821225
-# 0.999999	4290997	18324989
-# 0.999999	4290997	18229117
-# 0.999999	4290997	10163138
-# 0.999999	3949462	9176071
-# 0.999999	3949462	4821225
-```
-
-```sh
-$JSALTsrc/C/print_bigrams < $proposed/bigrams | head
-# 0.93	2	1882
-# 0.92	2	73308
-# 0.92	2	96619
-# 0.87	2	106894
-# 0.93	2	115452
-# 0.91	2	159197
-# 0.92	2	199806
-# 0.90	2	220406
-# 0.94	2	256488
-# 0.94	2	282449
-```
-
 <h2>What can we do with precomputed embeddings?</h2>
 
 <ol>
@@ -99,6 +68,7 @@ $JSALTsrc/C/print_bigrams < $proposed/bigrams | head
 <li><a href="#query2pairs">query -> pairs</a>: input query (a single corpus id), output cosines(</li>
 <li><a href="#ids2vectors">ids -> vectors</a>: input corpus ids (one per line), output vectors (one per line); each vector starts with two ids and is then followed by K floats</li>
 <li><a href="#vector2pairs">vector -> pairs</a>: input query (a vector, not necessarily in the embedding), output corpus ids and cosines of each id with query(</li>
+<li><a href="@materialized">Materialized Similarities</a>: Many of the large values in M M^T have been precomputed, for many embeddings M</li>
 </ol>
 
 We will give examples of the above.  Let's start by generating some pairs:
@@ -315,3 +285,42 @@ ls $proposed/idx*.i | wc
 ```
 
 Using more indexes will propose more candidates (and better results), but will take more time.
+
+<h3 id="materialized">Materialized Similarities</h3>
+
+As mentioned above, a number of directories also have some other useful files:
+<ol>
+<li>proposed/bins/*/*new_pairs: text files with pairs of corpus ids and cosine scores</li>
+<li>bigrams: similar to above, but binary files, sorted (without dups) </li>
+</ol>
+
+
+```sh
+sed 100000q $proposed/bins/000/idx.19.i.new_pairs | awk '$1 < 1' | sort -nr | head 
+# 0.999999	9176071	27917253
+# 0.999999	9176071	19184716
+# 0.999999	4821225	19184716
+# 0.999999	4290997	9176071
+# 0.999999	4290997	4821225
+# 0.999999	4290997	18324989
+# 0.999999	4290997	18229117
+# 0.999999	4290997	10163138
+# 0.999999	3949462	9176071
+# 0.999999	3949462	4821225
+```
+
+```sh
+$JSALTsrc/C/print_bigrams < $proposed/bigrams | head
+# 0.93	2	1882
+# 0.92	2	73308
+# 0.92	2	96619
+# 0.87	2	106894
+# 0.93	2	115452
+# 0.91	2	159197
+# 0.92	2	199806
+# 0.90	2	220406
+# 0.94	2	256488
+# 0.94	2	282449
+```
+
+See <a href="materialized_similarities.md">here</a> for more discussion of materialized similarities.
