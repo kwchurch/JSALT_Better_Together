@@ -215,7 +215,8 @@ int main(int ac, char **av)
     while(scanf("%ld%ld", &old_i, &old_j) == 2) {
       long new_i = map_node(old_i, OLD_TO_NEW, no_map);
       long new_j = map_node(old_j, OLD_TO_NEW, no_map);
-      if(new_i < 0 || new_j < 0 || new_i >=  max_new || new_j >= max_new) {
+      // really should not confuse doc 0 with NA, but that may be hard to fix for now
+      if(new_i <= 0 || new_j <= 0 || new_i >=  max_new || new_j >= max_new) {
 	printf("-1\t%ld\t%ld\n", old_i, old_j);
 	continue;
       }
