@@ -36,3 +36,13 @@ This pattern holds across four different embeddings: propoosed, scincl, specter 
 <p>
 
 <img src="related_work.jpg" alt="Related work hypothesis" width="800" />
+
+The coefficients for the following regressions are all significant:
+
+```R
+x=read.table("rw.txt", header=T)
+g.proposed = glm(rw ~ proposed, family=binomial, data=x)
+g.scincl = glm(rw ~ scincl, family=binomial, data=x)
+g.specter = glm(rw ~ specter, family=binomial, data=x)
+g.specter2 = glm(rw ~ specter2, family=binomial, data=x)
+```
