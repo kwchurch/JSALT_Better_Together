@@ -19,9 +19,20 @@ gunzip < rw.txt.gz | head
 # 1	15074976	5651665	0.905032	0.809045	0.674819	0.899052
 # 1	27196658	25995999	0.385770	0.767261	0.536163	0.879729
 ```
-
 <p>
-The plots below show some evidence to support the related work hypothesis.
+There are about 10k rows in rw.txt.gz.  The first column (rw) is 1 for about 1/3 of the 10k rows,
+and 0 for the remaining 2/3 rows.
+<p>
+There are some missing values (NA): 998 for proposed, 2720 for specter,
+39,878 for scincl and 38,937 for specter2.  There are more NAs for scincl
+and specter2 since these values are not available for papers without abstracts.
+The specter embeddings were downloaded from Semantic Scholar using the bulk
+download API.  They can compute specter embeddings for papers with abstracts
+that they are not allowed to share.
+<p>
+The plots below show some evidence to support the related work hypothesis.  That is,
+cosines are slightly higher when rw (the first column) is 1 than when rw is 0.
+This pattern holds across four different embeddings: propoosed, scincl, specter and specter2.
 <p>
 
 <img src="related_work.jpg" alt="Related work hypothesis" width="800" />
