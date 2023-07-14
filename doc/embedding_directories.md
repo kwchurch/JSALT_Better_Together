@@ -68,7 +68,7 @@ scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBER
 <li><a href="#query2pairs">query -> pairs</a>: input query (a single corpus id), output cosines(</li>
 <li><a href="#ids2vectors">ids -> vectors</a>: input corpus ids (one per line), output vectors (one per line); each vector starts with two ids and is then followed by K floats</li>
 <li><a href="#vector2pairs">vector -> pairs</a>: input query (a vector, not necessarily in the embedding), output corpus ids and cosines of each id with query(</li>
-<li><a href="@materialized">Materialized Similarities</a>: Many of the large values in M M^T have been precomputed, for many embeddings M</li>
+<li><a href="#materialized">Materialized Similarities</a>: Many of the large values in M M^T have been precomputed, for many embeddings M</li>
 </ol>
 
 We will give examples of the above.  Let's start by generating some pairs:
