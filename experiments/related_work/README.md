@@ -24,4 +24,4 @@ gunzip < rw.txt.gz | head
 The plots below show some evidence to support the related work hypothesis.
 <p>
 
-<img src="cos.dist/combo.cos.dist.coverage.jpg" alt="Coverage" width="800" />
+<img src="related_work.jpg" alt="Related work hypothesis" width="800" />
