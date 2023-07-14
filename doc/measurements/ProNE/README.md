@@ -51,11 +51,11 @@ But before going there, the following plot shows that coverage of test set incre
 pairs in the test set that are not covered.
 
 <p>
-<img src="cos.dist/combo.cos.dist.coverage.jpg" alt="Coverage" width="1000" />
+<img src="cos.dist/combo.cos.dist.coverage.jpg" alt="Coverage" width="500" />
 
 <p>
 
-<img src="cos.dist/combo.cos.dist.jpg" alt="It is easier to see relationships in larger graphs between distances in citation graphs and cosines in embeddings" width="1000" />
+<img src="cos.dist/combo.cos.dist.jpg" alt="It is easier to see relationships in larger graphs between distances in citation graphs and cosines in embeddings" width="600" />
 
 <p>
 The plot below is similar to the plot above, but with more resolution over graph sizes.
