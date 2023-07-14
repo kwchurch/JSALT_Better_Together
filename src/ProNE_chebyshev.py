@@ -26,7 +26,8 @@ parser.add_argument("-G", "--input_graph", help="input graph (readable by scipy.
 parser.add_argument("-U", "--U", help="input prefactorization", default=None)
 parser.add_argument("--temp_file_prefix", help="input prefactorization", default=None)
 parser.add_argument("--iteration", type=int, help="typically a number from 0 to 10", required=True)
-parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.5)", default=0.5)
+# parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.5)", default=0.5)
+parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.2)", default=0.2)
 parser.add_argument("--theta", type=float, help="bessel function parameter (defaults to 0.5)", default=0.5)
 args = parser.parse_args()
 
@@ -106,7 +107,7 @@ else:
             
     Lx0 = Lx1
     Lx1 = Lx2
-    # del Lx2    # no point deleting this since we are essentially done
+    del Lx2    # no point deleting this since we are essentially done
 
 print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
 sys.stderr.flush()

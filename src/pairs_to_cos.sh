@@ -7,7 +7,7 @@ cat - > $tmp.input
 if [ $# == 0 ]
 then
 
-    echo `awk -F/ '{print $NF}' $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt` | tr ' ' '\t'
+    echo `awk -F/ '{print $NF}' $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt` id1 id2 | tr ' ' '\t'
 
     for emb in `cat $JSALTdir/semantic_scholar/embeddings/all_embeddings.txt`
     do
@@ -21,7 +21,7 @@ then
 
 else
 
-    echo `echo $*` | tr ' ' '\t'
+    echo `echo $*` id1 id2 | tr ' ' '\t'
 
     for emb in $*
     do
