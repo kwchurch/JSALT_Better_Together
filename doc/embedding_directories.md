@@ -32,6 +32,36 @@ Many of these directories also have some other useful files:
 <li>bigrams: similar to above, but binary files, sorted (without dups) </li>
 </ol>
 
+<h2>Environment Variables</h2>
+
+For those of you with access to the Northeastern Cluster, you can find these files here.
+For everyone else, the (small) files under $JSALTsrc are available on the <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/src">GitHub</a>,
+and the (large) files under $JSALTdir are avilable on <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2F">Globus</a>.
+<p>
+Unfortunately, the files under /scratch/k.church are not available to people outside of Northeastern.  We have a lot of space on /scratch, but
+those files will be deleted soon, so those files should not be used for archival purposes.
+<p>
+If you have access to Northeastern Cluster, use these settings of the environment variables.
+If not, download the files of interest from <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2F">Globus</a> and set these variables appropriately to your local copy.
+
+```sh
+export JSALTdir=/work/k.church/JSALT-2023/
+export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
+
+export specter=$JSALTdir/semantic_scholar/embeddings/specter
+export specter2=$JSALTdir/semantic_scholar/embeddings/specter2
+export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
+export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
+export LinkBERT=$JSALTdir/semantic_scholar/embeddings/LinkBERT
+
+scratchProposed=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/proposed
+scratchSpecter=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter
+scratchSpecter2=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter2
+scratchScincl=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/scincl
+scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBERT
+```
+
+
 Here are some example of the above:
 
 ```sh
@@ -60,31 +90,6 @@ $JSALTsrc/C/print_bigrams < $proposed/bigrams | head
 # 0.90	2	220406
 # 0.94	2	256488
 # 0.94	2	282449
-```
-
-For those of you with access to the Northeastern Cluster, you can find these files here.
-For everyone else, the (small) files under $JSALTsrc are available on the <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/src">GitHub</a>,
-and the (large) files under $JSALTdir are avilable on <a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F~%2Fsemantic_scholar%2F">Globus</a>.
-<p>
-Unfortunately, the files under /scratch/k.church are not available to people outside of Northeastern.  We have a lot of space on /scratch, but
-those files will be deleted soon, so those files should not be used for archival purposes.
-
-
-```sh
-export JSALTdir=/work/k.church/JSALT-2023/
-export JSALTsrc=/work/k.church/githubs/JSALT_Better_Together/src
-
-export specter=$JSALTdir/semantic_scholar/embeddings/specter
-export specter2=$JSALTdir/semantic_scholar/embeddings/specter2
-export proposed=$JSALTdir/semantic_scholar/embeddings/proposed
-export scincl=$JSALTdir/semantic_scholar/embeddings/scincl
-export LinkBERT=$JSALTdir/semantic_scholar/embeddings/LinkBERT
-
-scratchProposed=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/proposed
-scratchSpecter=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter
-scratchSpecter2=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter2
-scratchScincl=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/scincl
-scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBERT
 ```
 
 <h2>What can we do with precomputed embeddings?</h2>

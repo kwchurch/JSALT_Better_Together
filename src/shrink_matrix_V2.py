@@ -3,7 +3,7 @@
 import sys,scipy.sparse,time,argparse,socket,os
 import numpy as np
 
-print('new_shrink_matrix: sys.argv = ' + str(sys.argv), file=sys.stderr)
+print('shrink_matrix_V2.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
 
 t0 = time.time()
 
@@ -20,12 +20,12 @@ parser.add_argument("-T", "--threshold", type=int, help="threshold on size on nu
 args = parser.parse_args()
 
 def my_load(f):
-    print(str(time.time() - t0) + ' shrink_matrix: my_load: ' + f, file=sys.stderr)
+    print(str(time.time() - t0) + ' shrink_matrix_V2: my_load: ' + f, file=sys.stderr)
     sys.stderr.flush()
     return scipy.sparse.load_npz(f)
 
 M = my_load(args.graph)
-print(str(time.time() - t0) + ' new_shrink_matrix: finished loading', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished loading', file=sys.stderr)
 sys.stderr.flush()
 
 if args.citations is None:
@@ -41,64 +41,70 @@ goodp = (citationCounts > args.threshold)
 new_N = np.sum(goodp)
 old_N = len(citationCounts)
 
-print(str(time.time() - t0) + ' new_shrink_matrix: new_N: %d, old_N: %d' % (new_N, old_N), file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: new_N: %d, old_N: %d' % (new_N, old_N), file=sys.stderr)
 sys.stderr.flush()
 
 
 old_idx = np.arange(old_N, dtype=np.int32)
 new_to_old = old_idx[goodp]
-old_to_new = np.zeros(old_N, dtype=np.int32)
-for i,v in enumerate(new_to_old):
-    old_to_new[v]=i
+old_to_new = np.zeros(old_N, dtype=np.int32) - 1
+
+old_to_new[new_to_old] = np.arange(len(new_to_old))
+
+# for i,v in enumerate(new_to_old):
+#     old_to_new[v]=i
 
 # Free up this space
 old_idx = new_idx = None
 
-np.savez(args.output, old_to_new=old_to_new, new_to_old=new_to_old)
-print(str(time.time() - t0) + ' new_shrink_matrix: finished relabling', file=sys.stderr)
+old_to_new.astype(np.int32).tofile(args.output + '.old_to_new.i')
+new_to_old.astype(np.int32).tofile(args.output + '.new_to_old.i')
+
+# np.savez(args.output, old_to_new=old_to_new, new_to_old=new_to_old)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished relabling', file=sys.stderr)
 sys.stderr.flush()
 
 old_X,old_Y = M.nonzero()
 
-print(str(time.time() - t0) + ' new_shrink_matrix: M.shape: ' + str(M.shape), file=sys.stderr)
-print(str(time.time() - t0) + ' new_shrink_matrix: M.count_nonzero: ' + str(M.count_nonzero()), file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: M.shape: ' + str(M.shape), file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: M.count_nonzero: ' + str(M.count_nonzero()), file=sys.stderr)
 sys.stderr.flush()
 
 X = old_X[goodp[old_X]]
 
-print(str(time.time() - t0) + ' new_shrink_matrix: finished X', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished X', file=sys.stderr)
 sys.stderr.flush()
 
 Y = old_Y[goodp[old_Y]]
 
-print(str(time.time() - t0) + ' new_shrink_matrix: finished Y', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished Y', file=sys.stderr)
 sys.stderr.flush()
 
 new_X = old_to_new[X]
 
-print(str(time.time() - t0) + ' new_shrink_matrix: finished new_X', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished new_X', file=sys.stderr)
 sys.stderr.flush()
 
 new_Y = old_to_new[Y]
 
-print(str(time.time() - t0) + ' new_shrink_matrix: finished new_Y', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished new_Y', file=sys.stderr)
 sys.stderr.flush()
 
-print(str(time.time() - t0) + ' new_shrink_matrix: about to start the crux', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: about to start the crux', file=sys.stderr)
 sys.stderr.flush()
 
 data = np.ones(len(new_X), dtype=bool)
 newM = scipy.sparse.coo_matrix((data, (new_X, new_Y)), dtype=bool, shape=(new_N, new_N))
 
-print(str(time.time() - t0) + ' new_shrink_matrix: finished the crux', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: finished the crux', file=sys.stderr)
 sys.stderr.flush()
 
 newM2 = scipy.sparse.csr_matrix(newM)
 
-print(str(time.time() - t0) + ' new_shrink_matrix: about to save', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: about to save', file=sys.stderr)
 sys.stderr.flush()
 
 scipy.sparse.save_npz(args.output + '.G2', newM2)
 
-print(str(time.time() - t0) + ' new_shrink_matrix: done', file=sys.stderr)
+print(str(time.time() - t0) + ' shrink_matrix_V2: done', file=sys.stderr)
 sys.stderr.flush()
