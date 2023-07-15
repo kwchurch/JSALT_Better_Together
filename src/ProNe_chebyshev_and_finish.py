@@ -7,10 +7,17 @@
 
 import numpy as np
 import csrgraph as cg
-from scipy import sparse,special
+from scipy import sparse,special,linalg
 from scipy.sparse import load_npz, csr_matrix, save_npz
 from sklearn import preprocessing
 import os,sys,argparse,time,gc,socket
+
+# import scipy
+# from scipy import sparse, linalg, special
+# from sklearn import preprocessing
+# import numpy as np
+# from scipy.sparse import load_npz, csr_matrix, save_npz
+# import os,sys,argparse,time,gc,socket
 
 print('ProNE_chebyshev_and_finish: sys.argv = ' + str(sys.argv), file=sys.stderr)
 
@@ -38,6 +45,22 @@ def save_file(mat, suffix, iteration):
 
 def load_file(suffix, iteration):
     return np.load('%s.%s.%d.npy' % (args.temp_file_prefix, suffix, iteration))    
+
+def svd_dense(matrix, dimension):
+    """
+    dense embedding via linalg SVD
+    """
+    U, s, Vh = linalg.svd(matrix, full_matrices=False, 
+                          check_finite=False, 
+                          overwrite_a=True)
+    U = np.array(U)
+    U = U[:, :dimension]
+    s = s[:dimension]
+    s = np.sqrt(s)
+    U = U * s
+    U = preprocessing.normalize(U, "l2")
+    return U
+
 
 print(str(time.time() - t0) + ' about to load U: %s' % (str(args.U)), file=sys.stderr)
 sys.stderr.flush()
