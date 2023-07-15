@@ -55,12 +55,20 @@ def svd_dense(matrix, dimension):
 print(str(time.time() - t0) + ' about to load U: %s' % (str(args.U)), file=sys.stderr)
 sys.stderr.flush()
 
-U = np.load(args.U).astype(np.float32)
+U = np.load(args.U) # .astype(np.float32)
 N = U.shape[0]
 K = U.shape[1]
 
+print(str(time.time() - t0) + ' about to load G: %s' % (str(args.input_graph)), file=sys.stderr)
+sys.stderr.flush()
+
 G = load_npz(args.input_graph)
 A = sparse.eye(N) + G
+
+print(str(time.time() - t0) + ' about to load conv, iteration: %s' % (str(args.iteration)), file=sys.stderr)
+sys.stderr.flush()
+
+
 conv = load_file("conv", args.iteration)
 mm = A @ (U - conv)
 
@@ -68,7 +76,12 @@ ngc = gc.collect()
 print('%0.2f sec: garbage collect returned %d' % (time.time() - t0, ngc), file=sys.stderr)
 print(gc.get_stats(), file=sys.stderr)
 
+
 emb = svd_dense(mm, K)
+
+# changed by kwc to float32
+# emb = svd_dense(mm, K).astype(np.float32)
+
 np.save(args.output, emb)
 
 print('%0.2f sec: done' % (time.time() - t0), file=sys.stderr)
