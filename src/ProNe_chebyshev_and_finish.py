@@ -172,6 +172,9 @@ mm = A @ (U - conv)
 del U
 del conv
 
+print('%0.0f sec: about to call svd_dense' % (time.time() - t0), file=sys.stderr)
+sys.stderr.flush()
+
 emb = svd_dense(mm, K)
 
 print('chebyshev_gaussian saving final results %0.0f sec' % (time.time() - t0), file=sys.stderr)
