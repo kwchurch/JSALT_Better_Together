@@ -24,6 +24,7 @@ parser.add_argument("--output_centroids", help="query", action='store_true')
 parser.add_argument("--plot", help="query", action='store_true')
 parser.add_argument("--output_labels", help="query", action='store_true')
 parser.add_argument("--verbose", help="query", action='store_true')
+parser.add_argument("--reorder", help="query", action='store_true')
 
 # parser.add_argument("-o", "--output", help="output directory", required=True)
 # parser.add_argument("-i", "--input", help="input npy prone file from ProNE_finish, or input npz file from ProNE baseline", required=True)
@@ -35,12 +36,21 @@ if args.verbose:
     np.set_printoptions(precision=3, linewidth=200)
 
 X = np.loadtxt(sys.stdin)
-kmeans = KMeans(n_clusters=args.K, random_state=args.seed).fit(X[:,2:])
-Z = hierarchy.complete(kmeans.cluster_centers_)
-s = hierarchy.leaves_list(hierarchy.optimal_leaf_ordering(Z, kmeans.cluster_centers_))
+kmeans = KMeans(n_clusters=args.K, random_state=args.seed, n_init='auto').fit(X[:,2:])
 
-new_labels = s[kmeans.labels_]
-new_centroids = kmeans.cluster_centers_[s,:]
+if args.reorder:
+    Z = hierarchy.complete(kmeans.cluster_centers_)
+    s = hierarchy.leaves_list(hierarchy.optimal_leaf_ordering(Z, kmeans.cluster_centers_))
+
+    if args.verbose:
+        print('s: ' + str(s), file=sys.stderr)
+
+    new_labels = np.array([l[s] for l in kmeans.labels_], dtype=int)
+    new_centroids = kmeans.cluster_centers_[s,:]
+
+else:
+    new_labels = kmeans.labels_
+    new_centroids = kmeans.cluster_centers_
 
 sim = cosine_similarity(new_centroids)
 
@@ -51,8 +61,7 @@ if args.output_centroids:
     np.savetxt(sys.stdout, new_centroids)
 
 if args.verbose:
-    print('s: ' + str(s), file=sys.stderr)
-    labfreqs=np.bincount(s[kmeans.labels_])
+    labfreqs=np.bincount(new_labels)
     print('labfreqs: ' + str(labfreqs), file=sys.stderr)
     print(sim, file=sys.stderr)
 

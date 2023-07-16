@@ -1,0 +1,6 @@
+vec_to_kmeans.py: sys.argv = ['/work/k.church/githubs/JSALT_Better_Together/src/Annika/vec_to_kmeans.py', '--output_centroids', '--verbose', '--seed', '11', '-K', '4']
+labfreqs: [ 38  60 181  69]
+[[ 1.    -0.01   0.89   0.773]
+ [-0.01   1.     0.035  0.11 ]
+ [ 0.89   0.035  1.     0.872]
+ [ 0.773  0.11   0.872  1.   ]]

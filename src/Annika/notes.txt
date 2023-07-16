@@ -39,3 +39,55 @@ tr ' ' '\n' |
 $JSALTsrc/C/x_to_y af |
 $JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i
 
+import numpy as np
+labs = np.loadtxt('/tmp/Annika/labels.K4.seed10').astype(int)
+np.bincount(labs)
+X = np.loadtxt('/tmp/Annika/Annika.proposed.vec')
+centroids = np.loadtxt('/tmp/Annika/centroids.K4.seed10')
+centroids.shape
+
+c0 = np.mean(X[labs == 0,:], axis=0)[2:]
+c1 = np.mean(X[labs == 1,:], axis=0)[2:]
+c2 = np.mean(X[labs == 2,:], axis=0)[2:]
+c3 = np.mean(X[labs == 3,:], axis=0)[2:]
+
+echo cluster 1
+awk 'NR == 1' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+echo cluster 2
+awk 'NR == 2' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+echo cluster 3
+awk 'NR == 3' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+echo cluster 4
+awk 'NR == 4' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+
+seed=11
+for K in `seq 3 20`
+do
+out=$JSALTsrc/Annika/out/K.$K
+mkdir -p `dirname $out`
+sbatch -i $HOME/to_go/Annika.tmp/Annika.proposed.vec -p debug -t 19 -o $out -e $out.err $JSALTsrc/Annika/job.sh $K $seed
+done
