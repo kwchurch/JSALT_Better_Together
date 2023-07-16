@@ -1,0 +1,41 @@
+export JSALTsrc=/Users/kennethchurch/githubs/JSALT_Better_Together/src
+export JSALTdir=/Volumes/JSALT-10T/JSALTdir
+export proposed=/Volumes/JSALT-10T/JSALTdir/semantic_scholar/embeddings/proposed
+export specter=/Volumes/JSALT-10T/JSALTdir/semantic_scholar/embeddings/specter
+export specter2=/Volumes/JSALT-10T/JSALTdir/semantic_scholar/embeddings/specter2
+
+
+cp ./slides/June26/projects/June26/vec.zip /tmp/
+
+python Annika/vec_to_kmeans.py < /tmp/Annika/Annika.proposed.vec > /tmp/Annika/Annika.proposed.vec.K5
+
+for rep in 0 1
+do
+for seed in 1 2 3
+do
+python Annika/vec_to_kmeans.py --verbose --seed $seed --output_labels -K 5 < /tmp/Annika/Annika.proposed.vec > /tmp/Annika/labs.seed$seed.rep$rep
+done
+done
+
+for rep in 0 1
+do
+for seed in 1 2 3
+do
+python Annika/vec_to_kmeans.py --verbose --seed $seed --output_centroids -K 5 < /tmp/Annika/Annika.proposed.vec > /tmp/Annika/centroids.seed$seed.rep$rep
+done
+done
+
+python Annika/vec_to_kmeans.py --output_labels --verbose --seed 10 -K 4 < /tmp/Annika/Annika.proposed.vec > /tmp/Annika/labels.K4.seed10
+python Annika/vec_to_kmeans.py --output_centroids --verbose --seed 10 -K 4 < /tmp/Annika/Annika.proposed.vec > /tmp/Annika/centroids.K4.seed10
+
+awk '{print $1}' /tmp/Annika/Annika.proposed.vec  | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title > /tmp/Annika/titles
+
+python Annika/json2txt.py title < /tmp/Annika/titles > /tmp/Annika/titles.txt
+paste /tmp/Annika/labels.K4.seed10 /tmp/Annika/titles.txt | sort -n > /tmp/Annika/clusters
+
+awk 'NR == 1' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i
+
