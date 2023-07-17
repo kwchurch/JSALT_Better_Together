@@ -133,7 +133,7 @@ for i in range(2,args.iterations):
     print(gc.get_stats(), file=sys.stderr)
 
     # conv = load_file("conv", i-1)
-    if i % 2 == 0:
+    if i % 2 != 0:
         conv += 2 * special.iv(i, args.theta) * Lx2
     else:
         conv -= 2 * special.iv(i, args.theta) * Lx2
