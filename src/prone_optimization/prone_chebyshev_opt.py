@@ -78,7 +78,7 @@ def subsequent_iteration(i, temp_file_prefix, theta):
     print('%0.2f sec: garbage collect returned %d' % (time.time() - t0, ngc), file=sys.stderr)
     print(gc.get_stats(), file=sys.stderr)
     conv = load_file("conv", i - 1)
-    if i % 2 == 0:
+    if i % 2 != 0:
         conv += 2 * special.iv(i, theta) * Lx2
     else:
         conv -= 2 * special.iv(i, theta) * Lx2
@@ -107,7 +107,7 @@ if __name__=="__main__":
     parser.add_argument("-U", "--U", help="input prefactorization", default=None)
     parser.add_argument("--temp_file_prefix", help="input prefactorization", default=None)
     parser.add_argument("--iteration", type=int, help="typically a number from 0 to 10", required=True)
-    parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.5)", default=0.5)
+    parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.2)", default=0.2)
     parser.add_argument("--theta", type=float, help="bessel function parameter (defaults to 0.5)", default=0.5)
     args = parser.parse_args()
     sys.stderr.flush()
@@ -116,9 +116,7 @@ if __name__=="__main__":
         Lx0, Lx1, conv = first_iter(i, args.temp_file_prefix, args.theta)
         print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
         save_files(Lx0, Lx1, conv)
-        print('%0.2f sec: finished iteration %d' % (time.time() - t0, i), file=sys.stderr)
     else:
         Lx0, Lx1, conv = subsequent_iteration(i, args.temp_file_prefix, args.theta)
         print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
         save_files(Lx0, Lx1, conv)
-        print('%0.2f sec: finished iteration %d' % (time.time() - t0, i), file=sys.stderr)
