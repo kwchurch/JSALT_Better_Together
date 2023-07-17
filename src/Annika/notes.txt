@@ -91,3 +91,13 @@ out=$JSALTsrc/Annika/out/K.$K
 mkdir -p `dirname $out`
 sbatch -i $HOME/to_go/Annika.tmp/Annika.proposed.vec -p debug -t 19 -o $out -e $out.err $JSALTsrc/Annika/job.sh $K $seed
 done
+
+
+seed=11
+K=3
+python $JSALTsrc/Annika/vec_to_kmeans.py --output_centroids --verbose --seed $seed -K $K < $HOME/to_go/Annika.tmp/Annika.proposed.vec > /tmp/x.centroids
+python $JSALTsrc/Annika/vec_to_kmeans.py --output_labels --verbose --seed $seed -K $K < $HOME/to_go/Annika.tmp/Annika.proposed.vec > /tmp/x.labels
+
+paste  /tmp/x.labels.3  $HOME/to_go/Annika.tmp/Annika.proposed.vec | 
+awk '$1 == 1 {print $2}' | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | python $JSALTsrc/Annika/json2txt.py paperId title
