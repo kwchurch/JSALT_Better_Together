@@ -111,4 +111,5 @@ centroids = np.loadtxt('K3.centroids')
 K3vec = np.loadtxt('K3.vec')
 sim = centroids @ K3vec[:,2:].T
 labs = np.round(x[:,0].T,0).astype(int)
+sim2 = x[:,3:] @ centroids.T
 
