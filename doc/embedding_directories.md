@@ -59,6 +59,8 @@ scratchSpecter=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter
 scratchSpecter2=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/specter2
 scratchScincl=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/scincl
 scratchLinkBERT=/scratch/k.church/JSALT-2023/semantic_scholar/embeddings/LinkBERT
+
+G=$JSALTdir/semantic_scholar/releases/2023-05-09/database/citations/graphs/citations.G
 ```
 
 <h2>What can we do with precomputed embeddings?</h2>
@@ -199,22 +201,42 @@ cut -f1 < /tmp/x | $JSALTsrc/C/id_to_floats --dir $proposed | cut -f1-10 -d ' '
 # 8294 7049 -0.016500 -0.076627 0.133918 -0.081429 -0.109656 0.006693 0.167753 -0.024167
 ```
 
-<i><b>Warning</b></i>: If a vector is not found in the precomputed embedding, then the second column will be 0,
-and the remaining values are not well defined.  We should fix this.
+<i><b>Note</b></i>: If a vector is not found in the precomputed embedding, then the second column will be 0.
+In the past, the remaining values were not well defined.  Now the values have been replaced with zeros.
 
 ```sh
-cut -f1 < /tmp/x | $JSALTsrc/C/id_to_floats --dir $proposed/bins/000 | cut -f1-10 -d ' '
-# 486 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 551 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 2775 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 3982 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 4873 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 5028 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 7243 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 7429 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 7825 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
-# 8294 0 0.000045 0.000044 0.000202 0.001603 0.000332 0.009979 0.014818 0.002811
+# cut -f1 < /tmp/x | $JSALTsrc/C/id_to_floats --dir $proposed/bins/000 | cut -f1-10 -d ' '
+# 486 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 551 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 2775 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 3982 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 4873 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 5028 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 7243 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 7429 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 7825 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+# 8294 0 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 ```
+
+There is a version of id_to_floats in python.  It takes options to
+estimate vectors from the references (always, never or when
+necessary).  With the -G (graph) argument, it uses files on Globus to
+estimate vectors from references.  The -G is not specified, then it uses the Semantic Scholar API
+to compute references.  The two should produce the same results (for the most part), but
+the API is more convenient (and slower).
+
+```sh
+G=$JSALTdir/semantic_scholar/releases/2023-05-09/database/citations/graphs/citations.G
+
+cut -f2 /tmp/x | $JSALTsrc/id_to_floats.py --dir $proposed --use_references never > /tmp/x.vec1
+cut -f2 /tmp/x | $JSALTsrc/id_to_floats.py --dir $proposed --use_references always > /tmp/x.vec2
+cut -f2 /tmp/x | $JSALTsrc/id_to_floats.py --dir $proposed --use_references when_necessary > /tmp/x.vec3
+
+cut -f2 /tmp/x | $JSALTsrc/id_to_floats.py --dir $proposed --use_references never -G $G > /tmp/x.vec1G
+cut -f2 /tmp/x | $JSALTsrc/id_to_floats.py --dir $proposed --use_references always -G $G > /tmp/x.vec2G
+cut -f2 /tmp/x | $JSALTsrc/id_to_floats.py --dir $proposed --use_references when_necessary -G $G > /tmp/x.vec3G
+```
+
 
 <h3 id="vector2pairs">vector -> pairs</h3>
 

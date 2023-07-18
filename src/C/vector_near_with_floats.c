@@ -155,7 +155,10 @@ char *my_filename(char *result, char *filename, char *suffix)
 int filename_to_seed(char *fn)
 {
   char *end = fn + strlen(fn) - 2;
-  if(strcmp(end, ".i") != 0) fatal("confusion in filename to seed");
+  if(strcmp(end, ".i") != 0) {
+    fprintf(stderr, "fn = %s\n", fn);
+    fatal("confusion in filename to seed");
+  }
   while(end > fn && isdigit(end[-1])) end--;
   return atoi(end);
 }
