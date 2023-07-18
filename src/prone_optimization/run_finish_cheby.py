@@ -11,7 +11,8 @@ from sklearn import preprocessing
 import numpy as np
 from scipy.sparse import load_npz, csr_matrix, save_npz
 import os,sys,argparse,time,gc,socket
-import finish, cheby
+import finish_npfloat16 as finish
+import cheby_npfloat16 as finish
 
 if __name__=="__main__":
     print('ProNE_chebyshev: sys.argv = ' + str(sys.argv))
