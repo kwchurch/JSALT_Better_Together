@@ -41,7 +41,7 @@ long new_map_node(long node, int new_to_old)
     return new_map[node];
   }
   else { 
-    long *found = bsearch(&node, new_map, nnew_map, sizeof(long), long_compare);
+    long *found = (long *)bsearch(&node, new_map, nnew_map, sizeof(long), long_compare);
     // long *found = bsearch(&node, new_map, nnew_map, sizeof(long), (__compar_fn_t)long_compare);
     if(!found) return -1;
     if(found < new_map || found >= new_map + nnew_map) fatal("confusion in new_map_node");
@@ -131,14 +131,22 @@ void init_node_map(char *filename)
   the_node_map->nold_to_new /= sizeof(int);
   the_node_map->nnew_to_old /= sizeof(int);
 }
+
 void return_floats(float *fltlist, int how_many)
 {
-    int i;
-    for(i = 0; i < how_many; i++)
-    {
-        printf(" %f", fltlist[i]);
-    }
+  int i;
+  for(i=0; i < how_many; i++)
+    printf(" %f", fltlist[i]);
 }
+
+void return_zeros(int how_many)
+{
+  int i;
+  // fprintf(stderr, "calling return_zeros %d\n", how_many);
+  for(i=0; i < how_many; i++)
+    printf(" %f", 0);
+}
+
 
 void get_args_from_dir(char *dir)
 {
@@ -191,7 +199,7 @@ int main(int ac, char **av)
     long new_i = map_node(i, OLD_TO_NEW);
 
     if(binary_output) {
-      if(new_i < 0) {
+      if(new_i <= 0) {		/* This will delete doc 0, which isn't great.  But there was a bug in the mapping that confuses 0 with NA */
 	if(!zeros) {
 	  zeros = (float *)malloc(sizeof(float) * record_size);
 	  if(!zeros) fatal("malloc failed");
@@ -205,7 +213,10 @@ int main(int ac, char **av)
     }
     else {
       printf("%ld %ld", i, new_i);
-      return_floats(floats + new_i * record_size, record_size);
+      if(new_i <= 0) 		/* This will delete doc 0, which isn't great.  But there was a bug in the mapping that confuses 0 with NA */
+	return_zeros(record_size);
+      else
+	return_floats(floats + new_i * record_size, record_size);
       printf("\n");
     }
   }

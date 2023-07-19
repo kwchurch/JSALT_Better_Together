@@ -1,0 +1,6 @@
+
+import sys,json
+
+for line in sys.stdin:
+    j = json.loads(line.rstrip())
+    print('\t'.join(map(str, [j[i] for i in sys.argv[1:]])))

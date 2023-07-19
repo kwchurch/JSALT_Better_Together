@@ -26,11 +26,14 @@ parser.add_argument("-G", "--input_graph", help="input graph (readable by scipy.
 parser.add_argument("-U", "--U", help="input prefactorization", default=None)
 parser.add_argument("--temp_file_prefix", help="input prefactorization", default=None)
 parser.add_argument("--iteration", type=int, help="typically a number from 0 to 10", required=True)
-parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.5)", default=0.5)
+# parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.5)", default=0.5)
+parser.add_argument("--mu", type=float, help="damping factor (defaults to 0.2)", default=0.2)
 parser.add_argument("--theta", type=float, help="bessel function parameter (defaults to 0.5)", default=0.5)
 args = parser.parse_args()
 
 def save_file(mat, suffix, iteration):
+    if mat.dtype != np.dtype('float32'):
+        mat = mat.astype(np.float32)
     np.save('%s.%s.%d.npy' % (args.temp_file_prefix, suffix, iteration), mat)
 
 def load_file(suffix, iteration):
@@ -39,18 +42,21 @@ def load_file(suffix, iteration):
 print(str(time.time() - t0) + ' about to load U: %s' % (str(args.U)), file=sys.stderr)
 sys.stderr.flush()
 
-U = np.load(args.U).astype(np.float32)
+# U = np.load(args.U).astype(np.float32)
+U = np.load(args.U)
 N = U.shape[0]
 K = U.shape[1]
 i = args.iteration
 
-print('%0.2f sec: loaded U with shape: %s' % (time.time() - t0, str(U.shape)), file=sys.stderr)
+print('%0.2f sec: loaded U with shape: %s and dtype: %s' % (time.time() - t0, str(U.shape), str(U.dtype)), file=sys.stderr)
 sys.stderr.flush()
 
 M = None
 M_filename = '%s.K%d.M.npz' % (args.temp_file_prefix, K)
 
-if os.path.exists(M_filename):
+# changed by kwc; want to make sure we recompute M on iteration 0
+if i > 0:
+    assert os.path.exists(M_filename), 'confusion: expected to find: ' + M_filename
     print('%0.2f sec: about to load M' % (time.time() - t0), file=sys.stderr)
     sys.stderr.flush()
     try: 
@@ -67,7 +73,7 @@ if M is None:
 
     # L is graph laplacian
     L = sparse.eye(N) - DA
-    M = (L - args.mu * sparse.eye(N)).astype(np.float32)
+    M = (L - args.mu * sparse.eye(N)) # .astype(np.float32)
 
     A = DA = L = None
     ngc = gc.collect()
@@ -99,21 +105,22 @@ else:
     print(gc.get_stats(), file=sys.stderr)
 
     conv = load_file("conv", i-1)
-    if i % 2 == 0:
+    # if i % 2 == 0:
+    if i % 2 != 0:
         conv += 2 * special.iv(i, args.theta) * Lx2
     else:
         conv -= 2 * special.iv(i, args.theta) * Lx2
             
     Lx0 = Lx1
     Lx1 = Lx2
-    # del Lx2    # no point deleting this since we are essentially done
+    del Lx2    # no point deleting this since we are essentially done
 
 print('%0.2f sec: about to save files' % (time.time() - t0), file=sys.stderr)
 sys.stderr.flush()
 
-Lx0 = Lx0.astype(np.float32)
-Lx1 = Lx1.astype(np.float32)
-conv = conv.astype(np.float32)
+Lx0 = Lx0 # .astype(np.float32)
+Lx1 = Lx1 # .astype(np.float32)
+conv = conv # .astype(np.float32)
 
 save_file(Lx0, "Lx0", i)
 save_file(Lx1, "Lx1", i)

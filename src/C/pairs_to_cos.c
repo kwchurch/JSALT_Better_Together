@@ -87,6 +87,7 @@ long map_node(long node, int new_to_old, int no_map)
 float *floats = NULL;
 long nfloats = -1;
 int record_size = -1;
+long max_new = -1;
 
 double dot(float *a, float *b, int n)
 {
@@ -155,7 +156,9 @@ void get_args_from_dir(char *dir)
   sprintf(buf, "%s/embedding.f", dir);
   floats = (float *)mmapfile(buf, &nfloats);
   nfloats /= sizeof(float);
-
+  max_new = nfloats/record_size;
+  // fprintf(stderr, "record_size = %d, max_new = %ld, sizeof(float) = %d\n", record_size, max_new, sizeof(float));
+  
   sprintf(buf, "%s/map", dir);
   init_node_map(buf);
   // fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
@@ -212,6 +215,11 @@ int main(int ac, char **av)
     while(scanf("%ld%ld", &old_i, &old_j) == 2) {
       long new_i = map_node(old_i, OLD_TO_NEW, no_map);
       long new_j = map_node(old_j, OLD_TO_NEW, no_map);
+      // really should not confuse doc 0 with NA, but that may be hard to fix for now
+      if(new_i <= 0 || new_j <= 0 || new_i >=  max_new || new_j >= max_new) {
+	printf("-1\t%ld\t%ld\n", old_i, old_j);
+	continue;
+      }
       if(prev_i != new_i) {
 	alen = norm(floats + new_i * record_size, record_size);
 	prev_i = new_i;

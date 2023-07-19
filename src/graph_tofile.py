@@ -45,11 +45,13 @@ sys.stderr.flush()
 
 X,Y = M.nonzero()
 
+print('X.dtype: ' + str(X.dtype), file=sys.stderr)
 print('X.min: ' + str(np.min(X)), file=sys.stderr)
 print('X.max: ' + str(np.max(X)), file=sys.stderr)
 print('len(X): ' + str(len(X)), file=sys.stderr)
 print('X[0:10]: ' + '|'.join(map(str, X[0:10])), file=sys.stderr)
 
+print('Y.dtype: ' + str(Y.dtype), file=sys.stderr)
 print('Y.min: ' + str(np.min(Y)), file=sys.stderr)
 print('Y.max: ' + str(np.max(Y)), file=sys.stderr)
 print('len(Y): ' + str(len(Y)), file=sys.stderr)

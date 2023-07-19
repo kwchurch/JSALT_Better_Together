@@ -1,0 +1,228 @@
+
+cluster 1
+30b923111a5c8ec27bf9a409d10daf614d46435b	Towards Ethics by Design in Online Abusive Content Detection
+ad8f0170bde61a8c1ca56507bf624f9392bb59b7	Ruddit: Norms of Offensiveness for English Reddit Comments
+03f9f0d78b960ef37075fd064b788e36b7b7c3b2	Implicitly Abusive Language – What does it actually look like and why are we not getting there?
+32f16fa23ee77456400ddacfceeb1b06b99220ec	Argument from Old Man’s View: Assessing Social Bias in Argumentation
+559541354eaf3e951433a3c5f71f64541897b604	An Overview of Fairness in Data – Illuminating the Bias in Data Pipeline
+c4885788cc6f1b4b3e1d30acd5ad296cdd095978	Utilizing subjectivity level to mitigate identity term bias in toxic comments classification
+6a0388c46f2aff013343fdafaaffacf56a315915	The Social Impact of Natural Language Processing
+066b3f8df3e3762c50216a1282dc55e50958c688	Directions in Abusive Language Training Data: Garbage In, Garbage Out
+f2e018f0087c6ec11f09c953f188c324834f2cb0	RP-Mod&RP-Crowd:  Moderator- and Crowd-Annotated German News Comment Datasets
+5bda340d2d348362310a921395e7b21dd2f93387	Multilingual Twitter Corpus and Baselines for Evaluating Demographic Bias in Hate Speech Recognition
+
+cluster 2
+77146408bd1f24342618d8288b98c0646aefdc6d	Two-stage consumer credit risk modelling using heterogeneous ensemble learning
+1e9a3e247a5c89c6ce912f4d4a253c12dfaa5dd8	Classifiers consensus system approach for credit scoring
+e035effeadf65cc545343d2f453828826fc6264d	Development and application of consumer credit scoring models using profit-based classification measures
+6c3d806e7f8f0eda04f848dcf4c4a6f976c6a044	A novel tree-based dynamic heterogeneous ensemble method for credit scoring
+41891ef2f76c671cfee57af65ccbcac01e9f1bbe	A novel heterogeneous ensemble credit scoring model based on bstacking approach
+bb4a1032d421ff54bf6e6fb227025c32c55b4fdb	Enhancing accuracy and interpretability of ensemble strategies in credit risk assessment. A correlated-adjusted decision forest proposal
+76cc39ed4b40ac4220e998c0ae164925673f6185	An experimental comparison of classification algorithms for imbalanced credit scoring data sets
+07e25370b7609a4ee8953847b753fc8fcae4e9e5	A novel ensemble method for credit scoring: Adaption of different imbalance ratios
+8fbbcb390f16441bfd6594153dfc4c3022ea3872	A Comparative Performance Assessment of Ensemble Learning for Credit Scoring
+51c5cb5588e1b04bfbaa0b009ee97a44b6b424ef	A comparative study on base classifiers in ensemble methods for credit scoring
+
+cluster 3
+44fc8d79fb8e0f8c6c6f680179b5803a789c6227	Measuring and Mitigating Unintended Bias in Text Classification
+192a943ad1895f0d77af7931135e5292f18a6649	Reducing Gender Bias in Abusive Language Detection
+10aa2be24951e6de76b630482a645d79354c4cde	Quantifying Social Biases in NLP: A Generalization and Empirical Comparison of Extrinsic Fairness Metrics
+65b08b8d490899d1e92a82040a0e374d5677f4f7	On Transferability of Bias Mitigation Effects in Language Model Fine-Tuning
+7b8318894cbeca32f1ae55780a0903445a3f4ac6	Man is to Person as Woman is to Location: Measuring Gender Bias in Named Entity Recognition
+3cc2f69951cd24fe61be4cf32d62afbac297bc2b	Social Biases in NLP Models as Barriers for Persons with Disabilities
+5d4af8c9321168f9ba7a501f33fb019fa2deaa22	Examining Gender and Race Bias in Two Hundred Sentiment Analysis Systems
+8963317176fa81e185fd7a8f8cd001d7e11a4868	The Risk of Racial Bias in Hate Speech Detection
+5af1e8b2f546ab8dbac7a35e89e5a2b2af7968d7	Racial Bias in Hate Speech and Abusive Language Detection Datasets
+493fac37cea49afb98c52c2f5dd75c303a325b25	Mitigating Gender Bias in Natural Language Processing: Literature Review
+
+cluster 4
+81a9cdd3d3a0e5292a51a1ad1f1e13f98339cbcd	Psychosocial Features for Hate Speech Detection in Code-switched Texts
+3d35c0aec777f6c180d4bf61a2443ec35230bfd2	Examining the Feasibility of Off-the-Shelf Algorithms for Masking Directly Identifiable Information in Social Media Data
+b8b9270c0ba9a7d183e17aefc1902f61093acdc8	A Context-Aware Approach for Detecting Check-Worthy Claims in Political Debates
+8e864c0b295af739d29a52eac636dc2bfb02184d	Automatic Fact-Checking Using Context and Discourse Information
+be107390680ca297a36bea52a4a3701554f810d2	Psychosocial Features for Identifying Hate Speech in Social Media Text
+8f33fdb67d71a749d5abdc948d360d19c2c172c7	To Check or Not to Check: Syntax, Semantics, and Context in the Language of Check-Worthy Claims
+2ed86532195c068d02c4e3bdcbcd6e249d4d72dd	Extracting health-related causality from twitter messages using natural language processing
+ee1f909de019f47470dabc0b87606b16c941e033	Returning the N to NLP: Towards Contextually Personalized Classification Models
+89e4637afc8ad952a0f6b1eae83240210e719d59	A Comparative Analysis of Classic and Deep Learning Models for Inferring Gender and Age of Twitter Users
+f576d0aa45ba48fb634ef1bf052b682870c26578	Detecting and Monitoring Hate Speech in Twitter
+
+cluster 5
+901335712430a194b6e15d817685e5ecc72a15c1	Gender and Dialect Bias in YouTube’s Automatic Captions
+21e465f2aa410565aeaab4895fe338d0e7b1c600	The Effect of Round-Trip Translation on Fairness in Sentiment Analysis
+1f3017e2bfba3ddf5df1ea5798bea479ee755fc6	Learning credible DNNs via incorporating prior knowledge and model local explanation
+787af71b5f6cd26b002f2f83b4a4073c041ea554	Text Data Augmentation: Towards better detection of spear-phishing emails
+eb283d2d300164e0df77c7a03564e1e7998e4941	Explaining Text Matching on Neural Natural Language Inference
+b568c562fcfad8d7a943a9ea63aca36c487b6d7d	ENCE WITH COUNTERFACTUALLY-AUGMENTED DATA
+a24d72bd0d08d515cb3e26f94131d33ad6c861db	Ethical Challenges in Data-Driven Dialogue Systems
+1567762b06062c5ddb13a0baca8922b28660abaa	Corpus-level and Concept-based Explanations for Interpretable Document Classification
+be4ee9c83d40e382b6c5fd019c7a41eab88d7096	Disembodied Machine Learning: On the Illusion of Objectivity in NLP
+c256a1737fb49dd70ba743a150dce6e1523db13e	Adversarial Training Methods for Cross-Domain Question Answering
+
+cluster 6
+097012648ff7b91597d4865f31c5fbf1dcc239dd	Flamingos and Hedgehogs in the Croquet-Ground: Teaching Evaluation of NLP Systems for Undergraduate Students
+41438af89243bfc9e2947ec18a8ae25b4c733973	Robust Systems for Preposition Error Correction Using Wikipedia Revisions
+350021f2410e2269449151d241aa6d4370167ad6	Utterance Retrieval Based on Recurrent Surface Text Patterns
+0ee4aad344e03ba68267199652946d1260b0fd93	Ethical Considerations in NLP Shared Tasks
+f488493c6a87ac55d4639f7641dbf360582b91d0	Transforming Complex Sentences into a Semantic Hierarchy
+14b89c611014b6f91b8e9f94b5dd0e0cfe9b36ee	Discourse Planning with an N-gram Model of Relations
+e61ba0721d780fedc853bbf5f9c6ce6985324e4f	Infusing NLU into Automatic Question Generation
+ebd9458f8c7e14a04f3fb711891a4f1bcd065297	Automatic factual question generation from text
+0c2009af49c3556a19efca9059d68f7af4c9f7d5	The DipInfo-UniTo system for SRST 2018
+5889760a9bdfb187d2b1b09a3942c2734855630a	Adapting Automatic Summarization to New Sources of Information
+
+cluster 7
+1670a07b70f90cc4ddba71343e6a7ee4b5198595	Evaluating Gender Bias in Machine Translation
+22d3dfd27bfd4ec00ab6d9744cec851982e9b89a	Queens Are Powerful Too: Mitigating Gender Bias in Dialogue Generation
+8782992d82b03598825efda4061e14ff850b5d33	Semantic Search over Wikipedia Documents Meaning of Queries Based Pre-Trained Language Model
+80e015b4edbe72cb10af0bd2cb065bba163d6e0d	“Nice Try, Kiddo”: Investigating Ad Hominems in Dialogue Responses
+c299a4083443bea26188567979f20b8305554c0b	GenAug: Data Augmentation for Finetuning Text Generators
+4fa24cc5b17e8ff1eb5a01fd37a9d267a57ac563	Recipes for Safety in Open-domain Chatbots
+1540759490a5d9ef77fbdd0b48aa632e56b06a94	How sensitive are translation systems to extra contexts? Mitigating gender bias in Neural Machine Translation models through relevant contexts
+34be38f7f18f3fb4a58256ddf96365f2934551dd	Revealing Persona Biases in Dialogue Systems
+76a786b1acd6d1aca56e12a8a1db34569fdf9f3a	Societal Biases in Language Generation: Progress and Challenges
+ab06a5c808bfd10680057b8b9899e669bcbc3e51	"I'm sorry to hear that": finding bias in language models with a holistic descriptor dataset
+
+cluster 8
+b7d1db4dad6533dfdf395134fe9a542cf358d934	Gender and sentiment, critics and authors: a dataset of Norwegian book reviews
+4e520a1cc111870c5b0bf0a3580bee2051b16062	Examining Gender Bias in Languages with Grammatical Gender
+3259d52ae00e65b98391e7e6a2f672dfee721bf8	Quantifying Social Biases in Contextual Word Representations
+20e1ddc105f0f145ea7647a9ea4b9c94a8aeab62	Socially Aware Bias Measurements for Hindi Language Representations
+6aaa46fa70d9d3808c600236a5dd9599997c8982	Gender Bias in Pretrained Swedish Embeddings
+09fba948316e04f0e1641926948b67b0799c8e0d	OSCaR: Orthogonal Subspace Correction and Rectification of Biases in Word Embeddings
+7e2cda28e72f19192366d81c399a25d7b9da7bc1	Ju n 20 19 Measuring Bias in Contextualized Word Representations Keita
+6d954bd1cba2d59f79d18bb15d5f5e464df2a665	Hate speech detection and racial bias mitigation in social media based on BERT model
+5bfff0955b511ce4ecb906c67cbe323b60b5c6d3	Towards an Enhanced Understanding of Bias in Pre-trained Neural Language Models: A Survey with Special Emphasis on Affective Bias
+dd20fc43fa2a3d32eb85d4520d3c34c7ce4e41b9	The Role of Protected Class Word Lists in Bias Identification of Contextualized Word Representations
+
+cluster 9
+6c8eac6207d54667d577cf392b8d3c38ac41f8aa	Measuring Alignment to Authoritarian State Media as Framing Bias
+50d578c0d22c64be10d4c745a35063ccdb636935	Testing and Comparing Computational Approaches for Identifying the Language of Framing in Political News
+562dc3493879c6605d1981b173ec2020e4d6e903	A Multidimensional Dataset Based on Crowdsourcing for Analyzing and Detecting News Bias
+c1d21cd3a58a8ee74fde2d4da35133c9e5f9035d	Media Bias, the Social Sciences, and NLP: Automating Frame Analyses to Identify Bias by Word Choice and Labeling
+92408cc19033cc4af29accef3793014ab79355c2	The Media Frames Corpus: Annotations of Frames Across Issues
+8466214a07a1b153ba5c31ac8c79d9dff8bcdd91	An Empirical Exploration of Moral Foundations Theory in Partisan News Sources
+3475876c3f5e624587181744bc5acf4223aecd00	Analyzing Polarization in Social Media: Method and Application to Tweets on 21 Mass Shootings
+ae7d31774c81d955c8185402dd400a9594973f65	FrameAxis: characterizing microframe bias and intensity with word embedding
+139e2884bd28651f92113166cf94e509f250d7e5	China in the eyes of news media: a case study under COVID-19 epidemic
+a0872d551163d86e788b8fa609e9847a18cc693c	To Protect and To Serve? Analyzing Entity-Centric Framing of Police Violence
+
+cluster 10
+680c5d8da316dad5f55e58df78371c213ed73b29	“Alexa, Do You Want to Build a Snowman?” Characterizing Playful Requests to Conversational Agents
+f762afd65f3b680330e390f88d4cc39485345a01	Ethical implications of analyzing opinions, emotions and interactions in social media
+5d12a458cd3ed924edd0de806dfcd48eec3a0aab	Classification of humorous interactions with intelligent personal assistants
+433b7340c0f9ad23833cd6d7757b1606f93c7a09	CHARET: Character-centered Approach to Emotion Tracking in Stories
+a3a10d01e4dcdcccbdb38721b75b0d6571ffc3e6	"Blissfully Happy" or "Ready toFight": Varying Interpretations of Emoji
+8553f823b8f43309038bdf25efda9888c1f21fb4	Assessing user reactions to intelligent personal assistants’ humorous responses
+175c16d4ec448b79cb5d0be9546e9bd750b0a88d	Computer Assisted Annotation of Tension Development in TED Talks through Crowdsourcing
+55e704356e05d99a5b529c9f37634dd4407168c8	Oh that's what you meant!: reducing emoji misunderstanding
+6b14738fba423fd2b8e6c39476efff699e1e8e4b	Interpolating Happiness: Understanding the Intensity Gradations of Face Emojis Across Cultures
+a7e1cddc17e33d634d3a674530b949eedc707cc0	Data filtering in humor generation: comparative analysis of hit rate and co-occurrence rankings as a method to choose usable pun candidates
+
+cluster 11
+4b9e5bdf53d8b5cfaade6bdb784dc48620eb8c22	Badder Seeds: Reproducing the Evaluation of Lexical Methods for Bias Measurement
+c2ecc9073672a8d8bf21fe442dbf3f76356858ee	Nurse is Closer to Woman than Surgeon? Mitigating Gender-Biased Proximities in Word Embeddings
+f007180553dd8e62b348a403ea8aafa36ec7d4ce	A Transparent Framework for Evaluating Unintended Demographic Bias in Word Embeddings
+3f7b3051e9553c16d8ee35bd8112127632f11993	Measuring Gender Bias in Word Embeddings across Domains and Discovering New Gender Bias Word Categories
+5e2f2f027f8140afd38603690859550c22be6d35	An Unbiased Approach to Quantification of Gender Inclination using Interpretable Word Representations
+8dee3913fab7d2a7d130d5a811bf8cbe1e060a00	Learning Bias-reduced Word Embeddings Using Dictionary Definitions
+6de58bc3abfd5cc0835a3628dd7fb846f62ae639	Fair Is Better than Sensational: Man Is to Doctor as Woman Is to Doctor
+713ac8f8adbc5a049de2f996ca03b149faec0abd	DebIE: A Platform for Implicit and Explicit Debiasing of Word Embedding Spaces
+6df96339baab731d79974eedcf85e4401ea9e5fe	Marked Attribute Bias in Natural Language Inference
+43aa999deec9714836a6254ba4341171b6d8ed5c	Measuring Societal Biases from Text Corpora with Smoothed First-Order Co-occurrence
+
+cluster 12
+e022a3e643491335455faa1399c6ca8b94313938	Analyzing Gender Bias in Student Evaluations
+a31bf395c8d64bd8901778b3623bc99c04870ff5	Analyzing Gender Bias in Student Evaluations Acknowledgments
+f27b41b1b0b0f8e2847707c09a5db27006dd7beb	Analysing RateMyProfessors Evaluations Across Institutions, Disciplines, and Cultures: The Tell-Tale Signs of a Good Professor
+b1d808f4d182d6523564371e26234265efd24a2e	Biased Blogging : Linguistic Evidence of Gender Bias in Political Blogs
+5f18df99788ee5431de4b6fe63e059c57c2559f9	Detecting Objectifying Language in Online Professor Reviews
+ba705b38df231c2e208841b8344b5e0c25b05a80	Sentiment Analysis of Twitter Data: Towards Filtering, Analyzing and Interpreting Social Network Data
+695a89501d037c76e75f0e12bdb1fcecb08dc7fa	Ridiculously Expensive Watches and Surprisingly Many Reviewers: A Study of Irony
+d11d4414e046cd163b57c424a820f5b27384f2d9	A correlation analysis of the sentiment analysis scores and numerical ratings of the students in the faculty evaluation
+0b5e65e2c1e65a94ffdca5016ae410d12747e8f1	Predicting emotional reactions to news articles in social networks
+d557ccc7b9e45a036ebe8414115f48ea36cf7845	Dependency Parsing-Based Social Media Text Mining Method — — a Case Study in Analysis of Weibo Users ’ Eating Habits
+
+cluster 13
+2e282bca209a3bad3ee0e35ea03b24056af7975c	What’s in a Name? Reducing Bias in Bios without Access to Protected Attributes
+07f4920a4a120a4a8644804904d0f5cc215b8ff8	The Authors Matter: Understanding and Mitigating Implicit Bias in Deep Text Classification
+70e28eb8ee40cf5caa704ac7f87940c0818ba28e	Counterfactual Fairness in Text Classification through Robustness
+1fe7e89cab6f75c11f299033e99a1be233e0708a	Measuring Fairness of Text Classifiers via Prediction Sensitivity
+312845cc6271ad3887a6dec4c70de3950549e8ac	Fairness and Robustness in Invariant Learning: A Case Study in Toxicity Classification
+198d774a89dacf8231c073a5e02a6dd87c4b3020	Balancing Fairness and Accuracy in Sentiment Detection using Multiple Black Box Models
+d9f561c3cf90c8c175be4178cc32c543a09fcb82	Enhancing Model Robustness and Fairness with Causality: A Regularization Approach
+2775900e7633f218618f9f7ca5cfda984fae323d	Debiasing Neural Retrieval via In-batch Balancing Regularization
+94542fb0f8749c62003ebe3e95dcfb55b5f02e9e	Differential Tweetment: Mitigating Racial Dialect Bias in Harmful Tweet Detection
+99ea756f8bcb9e0981ef38960fb837e232050c43	Counterfactual Multi-Token Fairness in Text Classification
+
+cluster 14
+463af9ff24d3fe33c50b7ffadccfd70d45cd520d	Quantitative Corpus Linguistics with R: A Practical Introduction
+a44843e5b21ce2815307a9b8cd1fa4e0c225b614	The Phonetics of Stance-taking
+f7ae99484bc455f83c5cce19639e56424fde7127	A socio-phonetic analysis of Taiwan Mandarin interview speech
+434ad7fb8ec95b23bb3dc199ccf533fb4071e539	Le français québécois
+e76f50648aab317ebc4af3add51a3d7144a032ca	The Dative Alternation in African American English : Researching Syntactic Variation and Change in a Conglomerated Corpus
+7ce99320ee697a36094aeef1458fd93a316908bb	Modelling loanword success – a sociolinguistic quantitative study of Māori loanwords in New Zealand English
+4cd7586964dae8d304467a305149d9eec722e78d	Second-language speaker interpretations of intonation- al semantics in English
+b92a80c848d51bb009758c117ab4f05a99913106	THE KOREAN LANGUAGE: Structure, use and context
+ed48176688e837ce6a90ada6958fa826216a4d83	Mass counts in World Englishes: A corpus linguistic study of noun countability in non-native varieties of English
+f7fe09195193ca2e55e1c961f257cdfaa1639444	An acoustic investigation of vowel variation in Gitksan
+
+cluster 15
+3caa9a9f1d868068419cd47f85064a4cc37ef971	Recognizing Stances in Ideological On-Line Debates
+268857f94994b908446d3aa74de32161c4bcf80d	Support or Oppose? Classifying Positions in Online Debates from Reply Activities and Opinion Expressions
+378f5ab38df3121e995c4d4db5b8b57e06b9ee23	Understanding Blogs through the Lens of Readers' Comments
+b634a489624ead65075b3b9caae77eab9344174d	Extra-Linguistic Constraints on Stance Recognition in Ideological Debates
+b343cd47dc9326b5f00c76249adf7c308a554aa7	Exploring Demographic Language Variations to Improve Multilingual Sentiment Analysis in Social Media
+ef2a39e47c1b9608593da83dd690dca16c811744	Improving Agreement and Disagreement Identification in Online Discussions with A Socially-Tuned Sentiment Lexicon
+3a355c89138852205d31aac221edb3db36a55437	Frame Semantics for Stance Classification
+55c94788522378d661328118b4084eb8b918cacb	Cats Rule and Dogs Drool!: Classifying Stance in Online Debate
+48f3eb15fac3eebb4b49ea590975b2c5af1dd578	Detecting Opinionated Claims in Online Discussions
+adedfaec78f18d92d16ef69c35268712c4b91c62	Collective Stance Classification of Posts in Online Debate Forums
+
+cluster 16
+8b9fcd46ffe309a2eaa8eb675940191f5d41744c	Mitigating Gender Bias in Machine Translation with Target Gender Annotations
+1fe457167f898eb6edb9ada7ccd4249e19237ba0	Contrastive Conditioning for Assessing Disambiguation in MT: A Case Study of Distilled Bias
+8d9f0e34cfc659510d6c4ed085c6ef61734732b0	Under the Morphosyntactic Lens: A Multifaceted Evaluation of Gender Bias in Speech Translation
+530fe261559138fbbae6a25ed88af80f368b4109	Getting Gender Right in Neural Machine Translation
+00059087c954c1af6ece33115315e3e0ecc2f2c2	Reducing Gender Bias in Neural Machine Translation as a Domain Adaptation Problem
+5b489e91cc8ab5735d914895b3df5d54284e91b9	Neural Machine Translation Doesn’t Translate Gender Coreference Right Unless You Make It
+4b0b2d6fe123303760806dae4d75e48c2388f31b	CALCS 2021 Shared Task: Machine Translation for Code-Switched Data
+008e9001ea78e9654b5c43aeb818ea6cb06ea934	Automatically Identifying Gender Issues in Machine Translation using Perturbations
+02c8d27b92a7159facb2e9446d26a5356d446ffe	Participatory Research for Low-resourced Machine Translation: A Case Study in African Languages
+3fdd66a0eed6ee259c1c91321f866ed1f737f340	Exploring Text-to-Text Transformers for English to Hinglish Machine Translation with Synthetic Code-Mixing
+
+cluster 17
+561059f3bf34400f41252c11f4cba1d9a1070fa8	Toward Natural Language Mitigation Strategies for Cognitive Biases in Recommender Systems
+46fc4054558a33b987afe9a72622c81f51e13389	Personalization Finder: A Search Interface for Identifying and Self-controlling Web Search Personalization
+9d9e13dd55e03031c487a587d6745dd7b32c4fe8	CobWeb: A Research Prototype for Exploring User Bias in Political Fact-Checking
+ba36bcd1128ebf8cf0452408471ace489cace7d6	Prevalence of web trackers on hospital websites in Illinois
+ad843bca7de3bf56e9e06128319ceb84a770cda6	Auditing the Personalization and Composition of Politically-Related Search Engine Results Pages
+bc438661a7dc4e016dcdd8bc39469ee1fdafddfb	The search engine manipulation effect (SEME) and its possible impact on the outcomes of elections
+154e504956cbbc8ddfd2e0aa420333f81f1183c9	Measuring personalization of web search
+e0741fa83e547ea21206fa050c8ab6a03017218d	Quantifying Search Bias: Investigating Sources of Bias for Political Searches in Social Media
+1c8cac7cebd7a0bc93ec2b2277dedcfdedaa9f45	PrCP: Pre-recommendation Counter-Polarization
+2ed166a3301209ccd9838e26ec4648a4d2f07bd9	Bias on the web
+
+cluster 18
+8fa0de4920c8edcb1fea698ff3463a347771d889	Stereotype and Skew: Quantifying Gender Bias in Pre-trained and Fine-tuned Language Models
+9967cb4fd949039c6f04dd9f2f4c3331dbebe6f7	Gender Bias in Coreference Resolution
+f72983cef733670d6915e37383257f548b5a3365	UNQOVERing Stereotypical Biases via Underspecified Questions
+339ab215d8f1f2cb2644346f11df83c5173e7873	How Gender Debiasing Affects Internal Model Representations, and Why It Matters
+080df61ee1c15ff3c8e5d0d82d60bfd80e372e38	Probing Toxic Content in Large Pre-Trained Language Models
+4f76d26369ee573cb03db4b9f6e4ab5d61806095	HONEST: Measuring Hurtful Sentence Completion in Language Models
+bead3588b51321727cfa71cec6543ec1cd65a42f	Gendered Ambiguous Pronoun (GAP) Shared Task at the Gender Bias in NLP Workshop 2019
+36d7998ec3e462e3907c6d3c1d13984234f7e8cc	Investigating Gender Bias in BERT
+bdd8530d72f51661f24247c9b5cd936ddb8e5c59	What do Bias Measures Measure?
+de6807676d8171472ed6cf421c4e4ed3cbb47699	An Empirical Survey of the Effectiveness of Debiasing Techniques for Pre-trained Language Models
+
+cluster 19
+87eb23f934a0e6293ee8ee9b147fe0d456e65c96	Data Statements for NLP: Toward Mitigating System Bias and Enabling Better Science
+4975c64466149c72f31489fadbbbff4e85d7b3f3	Cartography of Natural Language Processing for Social Good (NLP4SG): Searching for Definitions, Statistics and White Spots
+4832c9de76a6ba1c4260ad67c82a79defaac3b30	Gender as a Variable in Natural-Language Processing: Ethical Considerations
+1ec1a4275efbe3cb27d792d1a548e5fcc44813a6	Integrating Ethics into the NLP Curriculum
+f29d5cb8f405903fc8af7a5d7ab4bf7d65796e95	Use of Formal Ethical Reviews in NLP Literature: Historical Trends and Current Practices
+48709b65320bf979d19c1874aebf6bf8bd85de88	Just What do You Think You're Doing, Dave?' A Checklist for Responsible Data Use in NLP
+519055bbdd972e6439d6cc4f62d10546b810e01f	Integrating the Management of Personal Data Protection and Open Science with Research Ethics
+c0acac5e0ec408daf505e2b67773ab5af0b23e2f	Model Positionality and Computational Reflexivity: Promoting Reflexivity in Data Science
+c6a89f92eecc7ebb8b23e8951891e654a5a52076	Beyond Fair Pay: Ethical Implications of NLP Crowdsourcing
+59e94c9f21937643678ff494901f3d8b22af4e2f	Racial Disparity in Natural Language Processing: A Case Study of Social Media African-American English

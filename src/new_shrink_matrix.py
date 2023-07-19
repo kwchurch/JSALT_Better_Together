@@ -3,7 +3,7 @@
 import sys,scipy.sparse,time,argparse,socket,os
 import numpy as np
 
-print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
+print('new_shrink_matrix: sys.argv = ' + str(sys.argv), file=sys.stderr)
 
 t0 = time.time()
 

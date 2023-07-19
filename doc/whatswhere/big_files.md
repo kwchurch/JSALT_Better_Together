@@ -234,7 +234,7 @@ One would hope that citations are causal.  We see more citations in the expected
 ```sh
 cd $JSALTdir/semantic_scholar/j.ortega/cumgraphs.V2
 awk '{delta = $1 - $2; 
-      if(delta < -10) delta=-1; 
+      if(delta < -10) delta=-10; 
       if(delta > 10) delta=10; x[delta]+= $3}; 
   END {for(i in x) print x[i], i }' 000.years.txt | sort -nr
 # 416734 10

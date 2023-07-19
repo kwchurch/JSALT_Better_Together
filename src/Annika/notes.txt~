@@ -1,0 +1,2 @@
+
+python Annika/vec_to_kmeans.py < /tmp/Annika/Annika.proposed.vec > /tmp/Annika/Annika.proposed.vec.K5

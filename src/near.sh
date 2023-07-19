@@ -24,7 +24,7 @@ cat $spectertmp $proposedtmp | cut -f2- | $JSALTsrc/C/pairs_to_cos --dir $specte
 cat $spectertmp $proposedtmp | cut -f2- | $JSALTsrc/C/pairs_to_cos --dir $proposed > $bothtmp.2
 
 paste $bothtmp.[12] | cut -f1,4,6 | awk -F'\t' '{printf "%0.3f\t%0.3f\t%s\n", $1,$2,$3}' | 
-$JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/papers/corpusId_to_href --fields '--L' |
+$JSALTsrc/C/find_lines --input $JSALTdir/semantic_scholar/releases/2023-06-20/database/papers/href/corpusId_to_href --fields '--L' |
 awk 'BEGIN {OFS="\t"; method="Specter"; print "Method", "cosS", "cosP", "paper"}; 
            {print method, $0}
       NR >= nbest {method="Proposed"}' nbest="$nbest"

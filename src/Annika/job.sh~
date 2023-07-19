@@ -1,0 +1,31 @@
+echo cluster 1
+awk 'NR == 1' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+echo cluster 2
+awk 'NR == 2' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+echo cluster 3
+awk 'NR == 3' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
+
+echo cluster 4
+awk 'NR == 4' /tmp/Annika/centroids.K4.seed10 |
+tr ' ' '\n' |
+$JSALTsrc/C/x_to_y af |
+$JSALTsrc/C/vector_near_with_floats --dir $proposed --offset 5 $proposed/idx.1?.i | sort -u | sort -nr | head | cut -f2 | 
+$JSALTsrc/fetch_from_semantic_scholar_api.py --fields title | 
+python $JSALTsrc/Annika/json2txt.py title
