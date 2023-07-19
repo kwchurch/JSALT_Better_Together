@@ -11,11 +11,13 @@ This tool helps address the above questions by clustering documents using their 
 The following visualizations show the clusters of documents for each of the included embeddings after performing k-means clustering.
 
 Excluding papers not found on Semantic Scholar:
-<img src="visualizations/k-means/specter_r.png" alt="Specter" width="225"/> <img src="visualizations/k-means/specter2_r.png" alt="Specter2" width="225"/>
+
+<img src="visualizations/k-means/specter_r.png" alt="Specter" width="225"/><img src="visualizations/k-means/specter2_r.png" alt="Specter2" width="225"/>
 <img src="visualizations/k-means/scincl_r.png" alt="SciNCL" width="225"/>
 <img src="visualizations/k-means/proposed_r.png" alt="Proposed" width="225"/>
 
 Including papers not found on Semantic Scholar:
+
 <img src="visualizations/k-means/specter.png" alt="Specter" width="225"/> <img src="visualizations/k-means/specter2.png" alt="Specter2" width="225"/>
 <img src="visualizations/k-means/scincl.png" alt="SciNCL" width="225"/>
 <img src="visualizations/k-means/proposed.png" alt="Proposed" width="225"/>
@@ -164,11 +166,13 @@ Including papers not found on Semantic Scholar:
 <h3 style="text-align: center;">Hierarchical Clustering Visualizations</h3>
 The following visualizations show the cosine similarity of the papers for each embedding after performing hierarchical clustering. The rows and columns are permuted based on optimal leaf ordering.
 Excluding papers not found on Semantic Scholar:
+
 <img src="visualizations/hierarchical/specter_r.png" alt="Specter" width="500"/> <img src="visualizations/hierarchical/specter2_r.png" alt="Specter2" width="500"/>
 <img src="visualizations/hierarchical/scincl_r.png" alt="SciNCL" width="500"/>
 <img src="visualizations/hierarchical/proposed_r.png" alt="Proposed" width="500"/>
 
 Including papers not found on Semantic Scholar:
+
 <img src="visualizations/hierarchical/specter.png" alt="Specter" width="500"/> <img src="visualizations/hierarchical/specter2.png" alt="Specter2" width="500"/>
 <img src="visualizations/hierarchical/scincl.png" alt="SciNCL" width="500"/>
 <img src="visualizations/hierarchical/proposed.png" alt="Proposed" width="500"/>
