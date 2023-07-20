@@ -58,18 +58,12 @@ def record_size_from_dir(dir):
 def map_from_dir(dir):
     fn = dir + '/map.old_to_new.i'
     fn_len = os.path.getsize(fn)
-    print('fn len', fn_len)
     return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
 
-# return the ID of the index in the embedding
 def imap_to_dir(dir):
-    print(dir)
     fn = dir + '/map.new_to_old.i'
     fn_len = os.path.getsize(fn)
-    print('fn len', fn_len)
     return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
-    #fn_len = os.path.getsize(fn)
-    #return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
 
 
 def embedding_from_dir(dir, K):
