@@ -138,16 +138,12 @@ if args.verbose:
 
 
 # instead of saving this output, we want to find the highest K cosine similarities
-#np.savetxt(sys.stdout, result)
 def cosine_similarity_vector_matrix(vector, matrix):
     dot_product = np.dot(matrix, vector)
     norm_vector = np.linalg.norm(vector)
     norm_matrix = np.linalg.norm(matrix, axis=1)
-
-    # Ensure denominator is non-zero to avoid division by zero
     denominator = norm_vector * norm_matrix
-    denominator[denominator == 0] = 1  # Set 1 for zero values to avoid division by zero
-
+    denominator[denominator == 0] = 1  
     similarity = dot_product / denominator
 
     return similarity
@@ -171,7 +167,6 @@ def find_k_largest_with_indices(array, K):
         num, i = heapq.heappop(max_heap)
         result_indices.append(i)
         result_values.append(num)
-
     result_indices.reverse()  
     result_values.reverse()
     return result_values, result_indices
