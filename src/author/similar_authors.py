@@ -3,7 +3,7 @@
 import numpy as np
 import csrgraph as cg
 from scipy import sparse
-from scipy.sparse import load_npz, csr_matrix
+from scipy.sparse import load_npz, csr_matrix, save_npz
 from sklearn import preprocessing
 from sklearn.utils.extmath import randomized_svd
 import sys,argparse,time,socket,os
