@@ -1,21 +1,26 @@
-import sys, os, numpy as np
+import sys, os, numpy as np, argparse
 
 
 if __name__ == '__main__':
 
-	np_array_dir = 'log_calculations_final/np_probs/large/'
+	parser = argparse.ArgumentParser()
 
-	model_name = sys.argv[1]
-	sample_size = int(sys.argv[2])
+	parser.add_argument('--model_name')
+	parser.add_argument('--experiment_name')
+	parser.add_argument('--experiment_name_addon', default='')
+	parser.add_argument('--np_dir', default='log_calculations/np_probs/')
+	parser.add_argument('--write_dir', default='log_calculations/outputs/')
+	parser.add_argument('--filter_nan', action='store_const', const=True, default=False)
+	parser.add_argument('--nan_tolerance', type=int, default=2, help='Keep rows with only at most [nan_tolerance] number of nans/padded tokens up to max_seq_len')
+	parser.add_argument('--sample_size', type=int)
 
-	read_dir = os.path.join(np_array_dir, model_name)
+	args = parser.parse_args()
+
+	read_dir = os.path.join(args.np_dir, args.experiment_name, args.model_name)
 
 	bins = range(100)
 
-	filter_rows_with_nan = False
-	row_nan_tolerance = 2 #Keep rows with at most tolerance number of nans
-
-	all_sums = np.empty((100, sample_size), dtype='float')
+	all_sums = np.empty((100, args.sample_size), dtype='float')
 	all_sums[:] = np.nan
 
 	token_counts = np.zeros((100), dtype='int32')
@@ -30,13 +35,13 @@ if __name__ == '__main__':
 
 		log_probs = np.load(bin_file)
 
-		if filter_rows_with_nan:
+		if args.filter_nan:
 			print(f'Filtering rows with nan out. Starting shape: {log_probs.shape}')
-			log_probs = log_probs[~(np.sum(np.isnan(log_probs), axis=1) > row_nan_tolerance), :]
+			log_probs = log_probs[~(np.sum(np.isnan(log_probs), axis=1) > args.nan_tolerance), :]
 			print(f'End shape: {log_probs.shape}')
 
 		sum_log_probs = np.nansum(log_probs, axis=1)
-		sum_log_probs = np.pad(sum_log_probs, (0, sample_size - sum_log_probs.shape[0]), constant_values=np.nan)
+		sum_log_probs = np.pad(sum_log_probs, (0, args.sample_size - sum_log_probs.shape[0]), constant_values=np.nan)
 
 		all_sums[bin_num] = sum_log_probs
 
@@ -44,9 +49,9 @@ if __name__ == '__main__':
 		
 		print(f'Bin:{bin_num:3d}\tSize:{len(sum_log_probs):5d}')
 
-
-	plot_dir = 'log_calculations_final/plots/large/'
-	plot_model_dir = os.path.join(plot_dir, model_name)
+	connector = '_' if len(args.experiment_name_addon) > 0 else ''
+	experiment_name = args.experiment_name + connector + args.experiment_name_addon
+	plot_model_dir = os.path.join(args.write_dir, experiment_name, args.model_name)
 
 	if not os.path.exists(plot_model_dir):
 		os.makedirs(plot_model_dir)
@@ -57,9 +62,6 @@ if __name__ == '__main__':
 
 
 	#Do PPPL calculation
-
-	# all_sums = all_sums[:83,:]
-	# token_counts = token_counts[:83]
 
 	num_zero_sums = np.sum(all_sums == 0.0, axis=1)
 	token_counts = token_counts - num_zero_sums

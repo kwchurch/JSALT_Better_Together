@@ -1,13 +1,13 @@
-import os, sys, argparse, orjson, torch, numpy as np
+import os, sys, argparse, orjson, torch, numpy as np, regex as re
 
 from tqdm import tqdm, trange
 
 from transformers import AutoModelForMaskedLM, AutoTokenizer
 
-def get_inputs(input_ids, vocab_size, max_len=128):
+def get_inputs(input_ids, vocab_size, max_len):
 
-	x = torch.tensor(input_ids + [tokenizer.pad_token_id] * (128 - len(input_ids)))
-	attention_mask = torch.tensor([1] * len(input_ids) + [0] * (128 - len(input_ids)))
+	x = torch.tensor(input_ids + [tokenizer.pad_token_id] * (args.max_seq_len - len(input_ids)))
+	attention_mask = torch.tensor([1] * len(input_ids) + [0] * (args.max_seq_len - len(input_ids)))
 	attention_mask = attention_mask.repeat(attention_mask.shape[-1], 1)
 
 	repeats = x.repeat(x.shape[-1], 1)
@@ -20,26 +20,42 @@ def get_inputs(input_ids, vocab_size, max_len=128):
 
 if __name__ == '__main__':
 
-	bin_num = int(sys.argv[1])
+	parser = argparse.ArgumentParser()
 
-	cap = 500
-	batch_size = 32
+	parser.add_argument('--bin_num', type=int)
+	parser.add_argument('--model_name', type=str)
+	parser.add_argument('--experiment_name', type=str)
+	parser.add_argument('--sample_size', type=int, default=10000)
+	parser.add_argument('--batch_size', type=int, default=32)
+	parser.add_argument('--max_seq_len', type=int, default=128)
+	parser.add_argument('--bin_samples_dir', type=str, default='sampling/bin_samples/')
+	parser.add_argument('--write_dir', type=str, default='log_calculations/torch_outputs/')
+	parser.add_argument('--strip_newlines', action='store_const', const=True, default=False)
+	parser.add_argument('--index_only', action='store_const', const=True, default=False, help='Do not calculate scores, only update the index.')
 
-	bin_samples_dir = 'sampling/bin_samples/'
+	args = parser.parse_args()
 
 	abstracts = []
 	cids = []
 
-	with open(os.path.join(bin_samples_dir, f'{bin_num:03d}')) as input_sample:
-		for line in input_sample.readlines()[:cap]:
+	whitespace_pat = re.compile(r'[\n|\t|\s]+')
+
+	with open(os.path.join(args.bin_samples_dir, f'{args.bin_num:03d}')) as input_sample:
+		for line in input_sample:
 			dat = orjson.loads(line)
-			abstracts.append(dat['abstract'])
+			abstract = dat['abstract']
+
+			if args.strip_newlines:
+				abstract = re.sub(whitespace_pat, ' ', abstract)
+
 			cids.append(dat['corpusid'])
+			abstracts.append(abstract)
 
-	model_name = 'bert-base-cased'
+			if len(abstracts) >= args.sample_size:
+				break
 
-	tokenizer = AutoTokenizer.from_pretrained(model_name)
-	tokenized_abstracts = tokenizer(abstracts, truncation=True, max_length=128)['input_ids']
+	tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+	tokenized_abstracts = tokenizer(abstracts, truncation=True, max_length=args.max_seq_len)['input_ids']
 
 	masked_inputs = []
 	padded_inputs = []
@@ -48,23 +64,43 @@ if __name__ == '__main__':
 	lengths = []
 
 	for inpid in tqdm(tokenized_abstracts):
-		padded_input, m, l, a = get_inputs(inpid, tokenizer.vocab_size)
+		padded_input, masked_input, label, attention_mask = get_inputs(inpid, tokenizer.vocab_size, args.max_seq_len)
 		padded_inputs.append(padded_input)
-		masked_inputs.append(m)
-		labels.append(l)
-		attention_masks.append(a)
+		masked_inputs.append(masked_input)
+		labels.append(label)
+		attention_masks.append(attention_mask)
 		lengths.append(len(inpid))
 
+	model_write_dir = os.path.join(args.write_dir, args.experiment_name, f'{args.model_name}')
 
-	model = AutoModelForMaskedLM.from_pretrained(model_name)
+	if not os.path.exists(model_write_dir):
+		os.makedirs(model_write_dir)
+
+	# Index checks
+
+	if len(cids) != len(abstracts):
+		print('cid != abstracts')
+	if len(tokenized_abstracts) != len(abstracts):
+		print('tokens != abstracts')
+
+	with open(os.path.join(model_write_dir, f'{args.bin_num}_index.tsv'), 'w') as f:
+		for cid, abstract, tokens in zip(cids, abstracts, tokenized_abstracts):
+			f.write(f'{cid}\t{abstract}\t{tokens}\n')
+
+	if args.index_only:
+		print('Index only set. Not scoring inputs. ')
+		quit(0)
+
+
+	model = AutoModelForMaskedLM.from_pretrained(args.model_name)
 	model = model.to('cuda:0')
 
 	sm = torch.nn.Softmax(dim=2)
 
-	num_batches = 128 // batch_size
+	num_batches = args.max_seq_len // args.batch_size
 
-	pidx_seq_range = torch.arange(0,128).unsqueeze(1)
-	pidx_batch_range = torch.arange(0,batch_size).repeat(num_batches).unsqueeze(1)
+	pidx_seq_range = torch.arange(0,args.max_seq_len).unsqueeze(1)
+	pidx_batch_range = torch.arange(0,args.batch_size).repeat(num_batches).unsqueeze(1)
 
 
 	pidx_base = torch.hstack((pidx_batch_range, pidx_seq_range))
@@ -80,9 +116,9 @@ if __name__ == '__main__':
 		pidx_s = padded_input.unsqueeze(1).to('cuda:0')
 		pidx = torch.hstack((pidx_base[:len(pidx_s)], pidx_s))
 
-		inp_batches = inp.split(batch_size, dim=0)
-		pidx_batches = pidx.split(batch_size, dim=0)
-		am_batches = attn_mask.split(batch_size, dim=0)
+		inp_batches = inp.split(args.batch_size, dim=0)
+		pidx_batches = pidx.split(args.batch_size, dim=0)
+		am_batches = attn_mask.split(args.batch_size, dim=0)
 
 		batch_probs = []
 
@@ -96,21 +132,10 @@ if __name__ == '__main__':
 
 		probs.append(torch.cat(batch_probs)[1:length-1])
 
-	if not os.path.exists(f'log_calculations_final/large/{model_name}'):
-		os.makedirs(f'log_calculations_final/large/{model_name}')
 
-	with open(f'log_calculations_final/large/{model_name}/{bin_num}_index.tsv', 'w') as f:
-		for cid, abstract, tokens in zip(cids, abstracts, tokenized_abstracts):
-			f.write(f'{cid}\t{abstract}\t{tokens}\n')
-
-	torch.save(probs, f'log_calculations_final/large/{model_name}/{bin_num}_log_probs.pt')
+	torch.save(probs, os.path.join(model_write_dir, f'{args.bin_num}_log_probs.pt'))
 
 	#Checks
-
-	if len(cids) != len(abstracts):
-		print('cid != abstracts')
-	if len(tokenized_abstracts) != len(abstracts):
-		print('tokens != abstracts')
 
 	for inp_ids, prob in zip(tokenized_abstracts, probs):
 		if len(inp_ids) != prob.shape[0] + 2:
