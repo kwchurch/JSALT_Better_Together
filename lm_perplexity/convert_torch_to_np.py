@@ -7,7 +7,7 @@ if __name__ == '__main__':
 	write_dir = sys.argv[3]
 
 	
-	log_dir = os.path.join('log_calculations_final/', model_name)
+	log_dir = os.path.join('log_calculations_final/large', model_name)
 
 	index = os.path.join(log_dir, f'{bin_num}_index.tsv')
 	probs = os.path.join(log_dir, f'{bin_num}_log_probs.pt')

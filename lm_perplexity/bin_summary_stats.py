@@ -3,7 +3,7 @@ import sys, os, numpy as np
 
 if __name__ == '__main__':
 
-	np_array_dir = 'log_calculations_final/np_probs/'
+	np_array_dir = 'log_calculations_final/np_probs/large/'
 
 	model_name = sys.argv[1]
 	sample_size = int(sys.argv[2])
@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
 	bins = range(100)
 
-	filter_rows_with_nan = True
+	filter_rows_with_nan = False
 	row_nan_tolerance = 2 #Keep rows with at most tolerance number of nans
 
 	all_sums = np.empty((100, sample_size), dtype='float')
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 		print(f'Bin:{bin_num:3d}\tSize:{len(sum_log_probs):5d}')
 
 
-	plot_dir = 'log_calculations_final/plots/filter_by_nan/'
+	plot_dir = 'log_calculations_final/plots/large/'
 	plot_model_dir = os.path.join(plot_dir, model_name)
 
 	if not os.path.exists(plot_model_dir):

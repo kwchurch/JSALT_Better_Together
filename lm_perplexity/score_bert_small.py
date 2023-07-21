@@ -33,7 +33,7 @@ if __name__ == '__main__':
 			abstracts.append(dat['abstract'])
 			cids.append(dat['corpusid'])
 
-	model_name = 'roberta-base'
+	model_name = 'bert-base-cased'
 
 	tokenizer = AutoTokenizer.from_pretrained(model_name)
 	tokenized_abstracts = tokenizer(abstracts, truncation=True, max_length=128)['input_ids']
@@ -55,6 +55,10 @@ if __name__ == '__main__':
 	probs = []
 
 	for inp, label, raw_tokens in tqdm(zip(masked_inputs, labels, tokenized_abstracts), total=len(labels)):
+
+		print(raw_tokens)
+		print(inp)
+
 		inp = inp.to('cuda:0')
 		label = label.to('cuda:0')
 
@@ -70,6 +74,11 @@ if __name__ == '__main__':
 			taken_probs = prob[prob_idx]
 			
 			probs.append(torch.log(taken_probs).cpu())
+
+		print(probs[-1]) 
+	
+	print(probs)
+	quit(1)
 
 	if not os.path.exists(f'log_calculations_final/{model_name}'):
 		os.makedirs(f'log_calculations_final/{model_name}')
