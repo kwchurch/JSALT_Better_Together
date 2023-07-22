@@ -7,6 +7,8 @@ import pdb
 
 t0 = time.time()
 
+print(' bigrams_to_bins: ' + str(sys.argv), file=sys.stderr)
+
 apikey=os.environ.get('SPECTER_API_KEY')
 
 # assumes the dir argument contains
@@ -47,8 +49,15 @@ ids_to_bins = load_ids_to_bins()
 
 print('ids_to_bins.shape: ' + str(ids_to_bins.shape))
 
-b = np.bincount(ids_to_bins[bigrams[:,1]].reshape(-1) * 101 + 
-                ids_to_bins[bigrams[:,2]].reshape(-1))
+b1 = ids_to_bins[bigrams[:,1]]
+print('b1.shape: ' + str(b1.shape))
+b2 = ids_to_bins[bigrams[:,2]]
+print('b2.shape: ' + str(b2.shape))
+
+b12 = b1  * 101 + b2
+print('b12.shape: ' + str(b12.shape))
+
+b = np.bincount(b12)
 
 result = np.zeros(101*101, dtype=int)
 result[0:len(b)] = b
