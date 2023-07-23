@@ -3,9 +3,11 @@
 import json,requests,argparse
 import os,sys,argparse,time
 import numpy as np
-import pdb
+# import pdb
 
 t0 = time.time()
+
+print('pairs_to_cos: ' + str(sys.argv), file=sys.stderr)
 
 apikey=os.environ.get('SPECTER_API_KEY')
 
@@ -17,6 +19,7 @@ apikey=os.environ.get('SPECTER_API_KEY')
 parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
 parser.add_argument("-V", '--verbose', action='store_true')
+parser.add_argument('--binary_output', action='store_true')
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
@@ -55,9 +58,14 @@ def extract_row(x):
     else:
         return Y[idx[x-1]:idx[x]]
 
+def my_int(s):
+    for i,c in enumerate(s):
+        if not c.isdigit():
+            return int(s[0:i])
+
 def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
-        return int(fd.read().split('\t')[0])
+        return my_int(fd.read())
 
 def map_from_dir(dir):
     fn = dir + '/map.old_to_new.i'
@@ -141,4 +149,8 @@ else:
 if args.verbose:
     print('result.shape: ' + str(result.shape), file=sys.stderr)
 
-np.savetxt(sys.stdout, result)
+if args.binary_output:
+    np.save(sys.stdout, result)
+else:
+    np.savetxt(sys.stdout, result)
+

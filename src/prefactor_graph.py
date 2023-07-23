@@ -90,3 +90,5 @@ print('# about to save: %0.2f' % (time.time() - t0), file=sys.stderr)
 np.save(args.output, U)
 
 print('# done: %0.2f' % (time.time() - t0), file=sys.stderr)
+
+sys.exit(0)
