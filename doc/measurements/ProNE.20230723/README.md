@@ -1,10 +1,16 @@
 # Measurements of ProNE by bin
 
+We will consider three methods to compute vectors: f, fhat and ensemble.
+
 <ol>
 <li><b>f</b>: use ProNE vectors for the two input corpus ids</li>
 <li><b>fhat</b>: use the centroid approximation to estiamte vectors for the two input corpus ids</li>
 <li><b>ensemble</b>: use f when it is available, and otherwise use fhat</li>
 </ol>
+
+The centroid approximation is: fhat(d) = sum f(r), where r is a reference of d.
+<p>
+In other words, we estimate the vector for document d from its references, r.
 
 <h2>Materials</h2>
 
