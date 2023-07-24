@@ -33,6 +33,7 @@ we have a cosine and a pair of corpus ids.  The corpus ids should match walk_wit
 <b>NOTE</b>: A cosine of -1 should be interpreted as NA (not available).
 <p>
 The pathname encodes the model (scincl), as well as the value of use_references.  As explained <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/doc/measurements/ProNE.20230723">here</a>, use_references can be (a) always, (b) never, or (c) when_necessary.  
+
 ```sh
 head $scincl/walk_pieces/*/walk12.aa
 ==> /work/k.church/JSALT-2023//semantic_scholar/embeddings/scincl/walk_pieces/always/walk12.aa <==
