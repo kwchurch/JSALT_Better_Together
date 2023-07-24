@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for model in xlm-roberta-base; do
+for model in bert-base-multilingual-cased; do
 	
 	for bin in {0..99..10} 99; do
 

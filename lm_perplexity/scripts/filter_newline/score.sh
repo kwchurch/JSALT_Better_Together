@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for model in bert-base-cased roberta-base allenai/scibert_scivocab_cased; do
+for model in bert-large-cased; do
 	
 	for bin in {0..99..10} 99; do
 
