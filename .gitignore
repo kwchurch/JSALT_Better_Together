@@ -4,3 +4,4 @@ evaluation/old/
 evaluation/slurm_outputs/
 evaluation/jsalt_startup.sh
 *__pycache__/
+*.ipynb_checkpoints*

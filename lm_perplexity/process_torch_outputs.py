@@ -12,7 +12,7 @@ if __name__ == '__main__':
 	parser.add_argument('--experiment_name')
 	parser.add_argument('--experiment_name_addon', default='')
 	parser.add_argument('--model_name')
-	parser.add_argument('--sample_size', default=1000)
+	parser.add_argument('--sample_size', default=None)
 	parser.add_argument('--max_seq_len', default=128)
 	parser.add_argument('--minimum_characters', default=75, help='Remove abstracts with less than [minimum_characters] characters')
 	parser.add_argument('--max_padding_tokens', default=2, help='Remove abstracts with more than [max_padding_tokens] [PAD] tokens')
@@ -54,7 +54,19 @@ if __name__ == '__main__':
 
 	records = []
 
-	all_log_probs = np.empty((100, args.sample_size, args.max_seq_len), dtype='float')
+	if not args.sample_size:
+		for bin_num in range(100):
+			index_file = os.path.join(torch_outputs_dir, f'{bin_num}_index.tsv')
+			if not os.path.isfile(index_file):
+				continue
+			torch_outputs = torch.load(os.path.join(torch_outputs_dir, f'{bin_num}_log_probs.pt'))
+			sample_size = len(torch_outputs)
+			break
+	else:
+		sample_size = args.sample_size
+	logging.info(f'Detected sample size: {sample_size}')
+
+	all_log_probs = np.empty((100, sample_size, args.max_seq_len), dtype='float')
 	all_log_probs[:] = np.nan
 
 	for bin_num in range(100):
@@ -76,6 +88,8 @@ if __name__ == '__main__':
 				)
 		
 		torch_outputs = torch.load(os.path.join(torch_outputs_dir, f'{bin_num}_log_probs.pt'))
+		assert len(torch_outputs) == i+1
+
 		padded_np_array = np.array([np.lib.pad(np.asarray(prob), (0, args.max_seq_len - len(prob)), 'constant', constant_values=np.nan) for prob in torch_outputs])
 		all_log_probs[bin_num] = padded_np_array
 
