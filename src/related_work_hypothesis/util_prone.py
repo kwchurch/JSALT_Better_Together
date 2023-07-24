@@ -26,3 +26,13 @@ def directory_to_config(dir):
              'dir' : dir,
              'map' : map_from_dir(dir),
              'embedding' : embedding_from_dir(dir, K)}
+
+
+def get_vector_prone(idx,configs):
+    use_map = configs['map']
+    use_emb = configs['embedding']
+    try:
+        paper_emb = use_emb[use_map[int(idx)]]
+    except:
+        print(f'failed with {int(idx)}')
+    return np.array(paper_emb)

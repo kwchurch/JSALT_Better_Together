@@ -133,9 +133,16 @@ access partitions</a>
 <p>
 <h3>Prefactorization will require 2.6 days and 1.3 TBs for piece 99</h3>
 <p>
-<img src="prefactorization/prefactor.jpg" alt="Prefactorization will require 1.3 TBs and 2.6 days" width="800" />
+<img src="prefactorization/prefactor2.jpg" alt="Prefactorization will require 1.3 TBs and 2.6 days" width="800" />
 <p>
-Quadratic time may be unavoidable, given that edges are growing faster than nodes.  The quadratic time also casts
+The two red lines were fit to the obsservations (circles) using linear regression.  In both cases, we
+used a quadratic model:
+<ol>
+<li>Time: hours ~ poly(bin, 2)</li>
+<li>Memory: GBs ~ poly(bin, 2)</li>
+</ol>
+
+Quadratic time and space may be unavoidable, given that edges are growing faster than nodes.  The quadratic time also casts
 doubt on attempts to approximate embeddings with a linear time updating method (such as the standard recipe for training deep nets).
 <p>
 We plan to work on methods to incrementally update embeddings as new papers are added to the graph.

@@ -11,8 +11,13 @@ from sklearn import preprocessing
 import numpy as np
 from scipy.sparse import load_npz, csr_matrix, save_npz
 import os,sys,argparse,time,gc,socket
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
+
 import finish_npfloat16 as finish
-import cheby_npfloat16 as finish
+import cheby_npfloat16 as cheby
+
 
 if __name__=="__main__":
     print('ProNE_chebyshev: sys.argv = ' + str(sys.argv))
@@ -35,10 +40,15 @@ if __name__=="__main__":
         Lx0, Lx1, conv, U, G = cheby.first_iter(i, args.temp_file_prefix, args.theta, t0, args.U, args.input_graph, args.mu)
         print('%0.2f sec: about to save files' % (time.time() - t0))
         cheby.save_files(args.iteration, Lx0, Lx1, conv, t0, args.temp_file_prefix)
+        # this doesn't delete them from where they are stored?
+        del Lx0
+        del Lx1
     else:
         Lx0, Lx1, conv, G = cheby.subsequent_iteration(i, args.temp_file_prefix, args.theta, t0, args.input_graph, args.mu)
         print('%0.2f sec: about to save files' % (time.time() - t0))
         cheby.save_files(args.iteration, Lx0, Lx1, conv, t0, args.temp_file_prefix)
+        del Lx0
+        del Lx1
         U = np.load(args.U).astype(np.float32)
-    
+    print('Finished the chebyshev iteration in %0.2f sec' % (time.time() - t0))     
     finish.finish(G, U, t0, conv, args.output, args.iteration)

@@ -57,7 +57,8 @@ def main():
             idx = int(args.idx) 
             print(f"Getting embedding for index {idx}...") 
             paper_emb = use_emb[use_map[idx]] 
-            idx2vec[idx] = np.array(paper_emb) 
+            idx2vec[idx] = np.array(paper_emb)
+            print(np.array(paper_emb))
             print("Saving embedding...") 
             joblib.dump(idx2vec, os.path.join(args.output, str(idx) + "_prone.jbl")) 
             print("Embedding saved.") 
