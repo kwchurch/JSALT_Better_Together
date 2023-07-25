@@ -144,7 +144,7 @@ void return_zeros(int how_many)
   int i;
   // fprintf(stderr, "calling return_zeros %d\n", how_many);
   for(i=0; i < how_many; i++)
-    printf(" %f", 0);
+    printf(" %f", 0.0);
 }
 
 

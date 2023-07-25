@@ -1,0 +1,77 @@
+#!/usr/bin/env python 
+
+# Import modules for CGI handling 
+import cgi, cgitb 
+
+# Create instance of FieldStorage 
+form = cgi.FieldStorage() 
+
+# Get data from fields
+paper = form.getvalue('paper')
+
+#!/usr/bin/env python
+
+import sys,os,struct,json,requests
+import numpy as np
+
+print(sys.argv, file=sys.stderr)
+apikey=os.environ.get('SPECTER_API_KEY')
+
+def map_int64(fn):
+    fn_len = os.path.getsize(fn)
+    return np.memmap(fn, dtype=np.int64, shape=(int(fn_len/8)), mode='r')
+
+bigrams_file = os.environ.get('JSALTdir') + '/semantic_scholar/embeddings/proposed/bigrams'
+# bigrams_file = os.environ.get('JSALTdir') + '/semantic_scholar/embeddings/specter2/bigrams'
+idx = map_int64(bigrams_file + '.idx')
+
+def id_ify(s):
+    if args.search or len(s) == 40 or args.API == 'author':
+        return s
+    for prefix in ['CorpusId:', 'PMID:', 'ACL:', 'arXiv:', 'DBLP:', 'MAG:', 'PMID:']:
+        if s.startswith(prefix):
+            return s
+    if '/' in s: return s
+    return 'CorpusId:' + s
+
+def fetch_from_semantic_scholar(corpusId):
+    try:
+        my_api = 'https://api.semanticscholar.org/graph/v1/paper/CorpusId:'
+        cmd = my_api + str(corpusId) + '/?fields=title,url'
+        j = requests.get(cmd, headers={"x-api-key": apikey}).json()
+        print(j, file=sys.stderr)
+        return '<a href="%s">%s</a>' % (j['url'], j['title'])
+    except:
+        return str(corpusId)
+
+def lookup_paper(paper):
+    try:
+        query = int(paper)
+        start = idx[query]
+        end = idx[query+1]
+        nbytes = 12*(end - start)
+        with open(bigrams_file, 'rb') as fd:
+            fd.seek(start * 12)
+            bytes = fd.read(nbytes)
+            res = sorted([record for record in struct.iter_unpack('fii', bytes)], key=lambda rec: rec[0], reverse=True)
+            if len(res) > 10: res = res[0:10]
+            return res
+    except:
+        return []
+
+
+print("Content-type:text/html\r\n\r\n")
+print("<html>")
+print("<head>")
+print("<title>Similar</title>")
+print("</head>")
+print("<body>")
+print("<h2>Input paper: %s</h2>" % (paper))
+print("<ol>")
+for score, id1, id2 in lookup_paper(paper):
+    print("<li>%0.3f %s</li>" % (score, fetch_from_semantic_scholar(id2)))
+print("</ol>")
+print("</body>")
+print("</html>")
+
+
