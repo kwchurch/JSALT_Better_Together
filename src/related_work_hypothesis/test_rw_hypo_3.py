@@ -59,7 +59,7 @@ def main():
     prone_model = directory_to_config("/mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model")
 
     if args.input:
-        batch_size = 1000
+        batch_size = 500
 
         with open(args.input, 'r') as f:
             json_lines = list(f)
@@ -76,7 +76,7 @@ def main():
             hypos.extend(batch_hypos)
 
             # Save results every 100 batches
-            if (batch_num) % 1 == 0:
+            if (batch_num) % 10 == 0:
                 print("Guardando")
                 save(hypos, f"regression_batch{batch_num+1}")
                 hypos = []
