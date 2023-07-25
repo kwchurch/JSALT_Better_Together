@@ -150,13 +150,9 @@ Unfortunately, the quadratic time suggests that incremental update methods will 
 
 <h3>Each Chebyshev iteration will require 1.69 hours and 532 GBs for piece 99</h3>
 <p>
-<img src="cheby/cheby_time_1_iter.png" alt="The finish step for the entire graph will take 1.0239625443527165 TB of memory to compute." width="400" />
-<img src="cheby/cheby_memory_1.png" alt="The Chebyshev iterations for the entire graph will take 7.5 TB." width="400" />
 
 <h3>The Finish step will take about 6 hours and 1 TB of memory for piece 99</h3>
-<p>
-<img src="finish/finish_time.png" alt="The finish step for will take 6 hours for piece 99." width="400" />
-<img src="finish/finish.png" alt="The finish step will take a day for piece 99." width="400" />
+
 
 
 
