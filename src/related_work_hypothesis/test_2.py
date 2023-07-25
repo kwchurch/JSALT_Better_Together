@@ -46,39 +46,39 @@ def main():
     args = parse_args()
     FILEPATH = os.path.dirname(args.input)
     raw_dirs = set([d for d in os.listdir(FILEPATH)])
-    
     # Lista para almacenar los DataFrames de cada archivo
     dataframes = []
     for archivo in raw_dirs:
-        df = pd.read_csv(FILEPATH + "/" + archivo, sep='\t')
+        df = pd.read_csv(FILEPATH+"/"+archivo, sep='\t')
         dataframes.append(df)
 
     df = pd.concat(dataframes)
     df.reset_index(drop=True, inplace=True)
 
-    df_filtered2 = df[(df['cos_rw'] > 0) & (df['cos_all'] > 0)]
+    df_filtered2 = df[df['cos_rw'] > 0]
+    df_filtered2 = df_filtered2[df_filtered2['cos_all'] > 0]
+
 
     model = load_model('all_modelo.h5')
-
+    results = []
+    
     FILEPATH_2 = os.path.dirname("/mnt/c/Rodolfo/Desarrollo/JSALT_2023/JSALT_Better_Together/src/related_work_hypothesis/predicting_vectors/")
     raw_dirs = set([d for d in os.listdir(FILEPATH_2)])
 
     z = []
+    
+
     for archivo in raw_dirs:
-        with open(FILEPATH_2 + "/" + archivo, "r") as file:
+        with open(FILEPATH_2+"/"+archivo, "r") as file:
             for line in file:
-                if "V" in line:
+                if line.find("V") == -1:
                     line = line.replace("\n","")
                     line = line.replace("'","")
-                    data = {
-                        "corpus_id": line.split("\t")[0], 
-                        "V": ast.literal_eval(line.split("\t")[1]),
-                        "V_rw": ast.literal_eval(line.split("\t")[2]), 
-                        "V_nrw": ast.literal_eval(line.split("\t")[3])
-                        }
+                    data = {"corpus_id":line.split("\t")[0], "V": ast.literal_eval(line.split("\t")[1]), "V_rw":ast.literal_eval(line.split("\t")[2]),"V_nrw":ast.literal_eval(line.split("\t")[3])}
                     z.append(data)
 
     df_2 = pd.DataFrame(z)
+
 
     print("Total of paper: ", len(df_filtered2))
 

@@ -35,7 +35,7 @@ def train_model(X, Y, input_dim, output_dim):
     model.compile(loss='mean_squared_error', optimizer='adam')
 
     # Create a History object to record the training metrics
-    history = model.fit(X_train, Y_train, epochs=50, batch_size=16, validation_data=(X_test, Y_test))
+    history = model.fit(X_train, Y_train, epochs=30, batch_size=32, validation_data=(X_test, Y_test))
 
     y_pred = model.predict(X_test)
     mse = mean_squared_error(Y_test, y_pred)
@@ -72,7 +72,7 @@ def plot_training_metrics(history):
     plt.title('Training and Validation Loss')
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig('1.png')
 
 
 def main():
@@ -97,6 +97,8 @@ def main():
     df_x = pd.DataFrame(x)
     df_y = pd.DataFrame(y)
     df_z = pd.DataFrame(z)
+
+    print("Total of paper: ", len(df_x))
 
     #Case 1: all references
     merged_df = pd.concat([df_x, df_y], axis=1)
