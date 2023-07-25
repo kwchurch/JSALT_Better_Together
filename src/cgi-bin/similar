@@ -8,6 +8,11 @@ form = cgi.FieldStorage()
 
 # Get data from fields
 paper = form.getvalue('paper')
+query = form.getvalue('query')
+npapers = form.getvalue('limit')
+if npapers is None:
+    npapers = 5
+npapers = int(npapers)
 
 #!/usr/bin/env python
 
@@ -44,6 +49,15 @@ def fetch_from_semantic_scholar(corpusId):
     except:
         return str(corpusId)
 
+def fetch_corpusId(id):
+    try:
+        cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + str(id) + '/?fields=externalIds'
+        j = requests.get(cmd, headers={"x-api-key": apikey}).json()
+        print(j, file=sys.stderr)
+        return j['externalIds']['CorpusId']
+    except:
+        return None
+
 def lookup_paper(paper):
     try:
         query = int(paper)
@@ -54,11 +68,17 @@ def lookup_paper(paper):
             fd.seek(start * 12)
             bytes = fd.read(nbytes)
             res = sorted([record for record in struct.iter_unpack('fii', bytes)], key=lambda rec: rec[0], reverse=True)
-            if len(res) > 10: res = res[0:10]
+            if len(res) > npapers: res = res[0:npapers]
             return res
     except:
         return []
 
+def do_paper(paper):
+    print("<h2>Input paper: %s; query=%s</h2>" % (paper, query))
+    print("<ol>")
+    for score, id1, id2 in lookup_paper(paper):
+        print("<li>%0.3f %s</li>" % (score, fetch_from_semantic_scholar(id2)))
+    print("</ol>")
 
 print("Content-type:text/html\r\n\r\n")
 print("<html>")
@@ -66,10 +86,14 @@ print("<head>")
 print("<title>Similar</title>")
 print("</head>")
 print("<body>")
-print("<h2>Input paper: %s</h2>" % (paper))
-print("<ol>")
-for score, id1, id2 in lookup_paper(paper):
-    print("<li>%0.3f %s</li>" % (score, fetch_from_semantic_scholar(id2)))
+
+if not query is None:
+    j = requests.get('https://api.semanticscholar.org/graph/v1/paper/autocomplete?query=' + query, headers={"x-api-key": apikey}).json()
+    for m in j['matches']:
+        print('query: <a href="https://www.semanticscholar.org/paper/%s">%s</a>' % (m['id'], m['title']))
+        do_paper(fetch_corpusId(m['id']))
+else:
+    do_paper(paper)
 print("</ol>")
 print("</body>")
 print("</html>")
