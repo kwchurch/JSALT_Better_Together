@@ -1,0 +1,46 @@
+Sampling 20,000 abstracts from the bulk download.
+
+Assuming the abstracts are broken into 30 .gz files 
+
+1. Run sample.sh for each .gz files
+	Use: >> sbatch --array 1-30 -N1 sample.slurm
+	This will stream an abstract/line at a time and randomly keep .075 of them
+	Kept abstracts will be stored in sampled_abstracts/0[0-3][0-9]
+
+2. Sort the kept abstracts according to their bin
+	Use: >> sbtach --array 1-30 -N1 sample_to_bin.slurm
+
+	This will output a folder, shards_to_bin with 30 subfolders, one for each shard, each containing 100 files, one for each bin
+
+
+3. Consolidate the bins across all the shards
+
+	consolidate_shards.sh
+
+
+Model Scoring
+
+1. Score the abstracts with a model using score_bert_par.py
+2. In log_calculations_final, this will produce two files per bin, the index which contains the corpus id, abstract and tokens -- as well as a log_probs.pt file which has the log probability
+of each subword which was calculated
+3. Convert the tensors to numpy arrays using convert_torch_to_numpy.py. This outputs a sample_size x max_len which are padded with np.nan values.
+4. Join the different per-bin files together using bin_summary_stats.py. This will iterate over all available numpy arrays generated above.
+	For each bin,
+		For each sample abstract,
+			Sum the subword log-probabilities (ignoring nan values)
+			Count the number of tokens
+
+	Saves two numpy arrays in plots/{model_name}:
+		lpsz.npy : 100 x sample_size, which contains the sum of the log-probabilites for each sample per bin. Corresponds to PLL(W) in the paper. Some samples may have a sum of 0.0
+		token_counts.npy : total number of tokens which are not padding (nan)
+
+5. To get the psuedo-perplexity (PPPL), (pppl.npy)
+		replace the 0s in lpsz with nans to help with the sum, correct the token counts by subtracting the number of 0s (these do not contribute to the sum)
+		sum along the bin axis (1) and multiply by -1
+		take the elementwise exponent
+		divide by token_counts
+
+
+
+
+	

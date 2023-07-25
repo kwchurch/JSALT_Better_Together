@@ -355,8 +355,10 @@ int main(int ac, char **av)
   char *bytes3 = bytes2 + random_bytes;
 
   // check_sort(indexes);
-  
+
+  int recno = -1;
   while(fread(vec, sizeof(float), record_size, stdin) == record_size) {
+    recno++;
     for(i=0;i<nindexes;i++) {
       if(good_index(indexes+i)) {
 	vec2bytes(bytes, random_bytes, vec, record_size, indexes+i);
@@ -384,9 +386,10 @@ int main(int ac, char **av)
 		   av[ac - nindexes + i]);
 	    memcpy(bytes2, bytes3, random_bytes);
 	  }
-	  else printf("%f\t%ld\n",
+	  else printf("%f\t%ld\t%d\n",
 		      my_cos(vec, floats + new_j * record_size, record_size),
-		      old_j);
+		      old_j,
+		      recno);
 	}
       }
     }

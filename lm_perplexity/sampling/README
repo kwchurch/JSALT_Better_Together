@@ -1,0 +1,22 @@
+Sampling 20,000 abstracts from the bulk download.
+
+Assuming the abstracts are broken into 30 .gz files 
+
+1. Run sample.sh for each .gz files
+	Use: >> sbatch --array 1-30 -N1 sample.slurm
+	This will stream an abstract/line at a time and randomly keep .0125 or 1/40 of them
+	Kept abstracts will be stored in sampled_abstracts/${shard_id}
+
+2. Sort the kept abstracts according to their bin
+	Use: >> sbtach --array 1-30 -N1 sample_to_bin.slurm
+
+	This will output a folder, shards_to_bin with 30 subfolders, one for each shard, each containing 100 files, one for each bin
+
+
+3. Consolidate the bins across all the shards
+
+	consolidate_shards.sh
+
+
+
+	
