@@ -139,12 +139,12 @@ if __name__ == '__main__':
 	bin_pll_sum = np.nansum(pll, axis=1) * -1
 	pppl = np.exp(bin_pll_sum / bin_token_counts)
 
-
+	print(all_log_probs.shape)
 	#Save Outputs
-	np.save(os.path.join(write_dir, f'pppl.npy'), pppl)
-	np.save(os.path.join(write_dir, f'token_counts.npy'), bin_token_counts)
-	np.save(os.path.join(write_dir, f'filtered_log_probs.npy'), all_log_probs)
-	df.to_csv(os.path.join(write_dir, f'filtered_df.csv'))
+	# np.save(os.path.join(write_dir, f'pppl.npy'), pppl)
+	# np.save(os.path.join(write_dir, f'token_counts.npy'), bin_token_counts)
+	# np.save(os.path.join(write_dir, f'filtered_log_probs.npy'), all_log_probs)
+	# df.to_csv(os.path.join(write_dir, f'filtered_df.csv'))
 	
 
 
