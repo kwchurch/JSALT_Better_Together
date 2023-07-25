@@ -5,7 +5,6 @@ from util_prone import directory_to_config, get_vector_prone
 from tqdm import tqdm
 import json
 from util import get_centroid
-import numpy as np
 
 
 
