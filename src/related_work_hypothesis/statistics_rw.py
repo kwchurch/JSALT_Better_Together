@@ -13,7 +13,7 @@ def graph(df_filtered,title,col1,col2):
 
     # Create a list with values and labels for the charts
     values = [rw_greater_than_all_count, all_greater_than_rw_count]
-    labels = [col1 + ' < ' + col2,  col2 +' < '+ col1]
+    labels = ['All References',  'Related Work References']
 
     # Create the pie chart
     plt.pie(values, labels=labels, autopct='%1.1f%%')
@@ -48,8 +48,8 @@ def main():
     df_filtered2 = df[df['cos_rw'] > 0]
     df_filtered2 = df_filtered2[df_filtered2['cos_all'] > 0]
 
-    graph(df_filtered,'Percentage of comparisons |F(d) - F\'(d)| (excluding rw=0 and all=0)','det_rw','det_all')
-    graph(df_filtered2,'Percentage of comparisons Cosine(F(d),(F\'(d))) (excluding rw=0 and all=0) ','cos_rw','cos_all')
+    #graph(df_filtered,'Percentage of comparisons |F(d) - F\'(d)| (excluding rw=0 and all=0)','det_rw','det_all')
+    graph(df_filtered2,'Is it better to use related work references than all references?','cos_rw','cos_all')
 
 
 if __name__ == "__main__":
