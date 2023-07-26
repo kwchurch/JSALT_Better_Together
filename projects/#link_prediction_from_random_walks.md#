@@ -1,7 +1,8 @@
 # Suggestion for project: link prediction from random walks
 
-See <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/doc/embedding_directories.md">here</a> for some background material
-<p>
+See <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/doc/https://github.com/kwchurch/JSALT_Better_Together/blob/main/slides/July26/Wed_July_26_2023_Resources_Team.pptx
+measurements/ProNE.20230723">here</a> for some background material
+
 I started with $JSALTdir/semantic_scholar/eval/walk_with_bins
 
 ```sh
