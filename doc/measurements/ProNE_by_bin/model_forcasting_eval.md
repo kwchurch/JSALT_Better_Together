@@ -9,8 +9,6 @@ This allows us to report the in-train representation ability of models by lookin
 As that 69.4% of all walks are 2-4 hops and cases where paper representations cannot be formed are given cosine similarities of -1 the accuracy paradox is a problem for establishing performance. We therefore start with a policy of omitting all random walks where embeddings for both papers cannot be found.
 
 Here we show the forecasting performance with the ProNE model, using the use_references='when necessary' setting for forming paper embeddings 
-```
-![Heatmap Plot of ProNE Forecasting](prone_when_necessary_heatmap.jpg?raw=true)
-`
-![Training Bins vs Overall Accuracy](prone_when_necessary_lineplot.jpg?raw=true)
-```
+
+<img src="prone_when_necessary_heatmap.jpg" alt="Heatmap Plot of ProNE Forecasting" width="600" />
+<img src="prone_when_necessary_lineplot.jpg" alt="Training Bins vs Overall Accuracy" width="600" />
