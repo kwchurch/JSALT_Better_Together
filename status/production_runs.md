@@ -16,3 +16,11 @@ Each of the 100 bins are shown in italics (if completed), and bold (if not compl
 <li><a href="cheby.md">Cheby/Finish</a></li>
 <li><a href="bins.md">Embedding Directories</a></li>
 </ol>
+
+<h2>Documentation</h2>
+
+See <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/doc/embedding_directories.md">here</a> for some background material
+on embedding directories.
+<p>
+See <a href="https://github.com/kwchurch/JSALT_Better_Together/tree/main/doc/measurements/ProNE">here</a>
+for some measurements on prefactorization time and space.

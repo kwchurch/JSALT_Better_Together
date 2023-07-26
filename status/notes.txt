@@ -1,0 +1,10 @@
+
+cd /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2
+ls *npy | cut -c1-3 | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}' | $JSALTsrc/../status/status_to_html.sh >  $JSALTsrc/../status/prefactorization.md
+
+cd /scratch/irving.b/JSALT/last_finish
+ls *npy | cut -c1-3 | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}' | $JSALTsrc/../status/status_to_html.sh >  $JSALTsrc/../status/cheby.md
+
+cd $proposed/bins
+ls ??? | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}' | $JSALTsrc/../status/status_to_html.sh >  $JSALTsrc/../status/bins.md
+
