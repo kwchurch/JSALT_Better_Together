@@ -1,7 +1,7 @@
 #!/bin/sh
 
-awk '$2 == 0 {printf "<td bgcolor=\"red\"><b><u>%s</u></b></td>\n", $1}
-     $2 == 1 {printf "<td bgcolor=\"green\"><i>%s</i></td>\n", $1}' $* |
+awk '$2 == 0 {printf "<td bgcolor=\"red\"><big><b><u>%s</u></b></big></td>\n", $1}
+     $2 == 1 {printf "<td bgcolor=\"green\"><small><i>%s</i></small></td>\n", $1}' $* |
 awk 'BEGIN {print "<table><tr>"}
    {print}
   NR % 10 == 0 {print "</tr><tr>"}
