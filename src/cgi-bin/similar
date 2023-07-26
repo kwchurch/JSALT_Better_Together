@@ -7,11 +7,11 @@ import cgi, cgitb
 form = cgi.FieldStorage() 
 
 # Get data from fields
-paper = form.getvalue('paper')
+paper = form.getvalue('CorpusId')
 query = form.getvalue('query')
 npapers = form.getvalue('limit')
 if npapers is None:
-    npapers = 5
+    npapers = 20
 npapers = int(npapers)
 
 #!/usr/bin/env python
@@ -38,6 +38,14 @@ def id_ify(s):
             return s
     if '/' in s: return s
     return 'CorpusId:' + s
+
+# r = requests.post(
+#     'https://api.semanticscholar.org/graph/v1/paper/batch',
+#     params={'fields': 'referenceCount,citationCount,title'},
+#     json={"ids": ["649def34f8be52c8b66281af98ae884c09aef38b", "ARXIV:2106.15928"]}
+# )
+# print(json.dumps(r.json(), indent=2))
+
 
 def fetch_from_semantic_scholar(corpusId):
     try:
@@ -73,6 +81,44 @@ def lookup_paper(paper):
     except:
         return []
 
+def href_ify(id, hrefs):
+    if id in hrefs:
+        return hrefs[id]
+    else:
+        return '<tr><td>NA</td><td>%s</td></tr>' % id
+
+def do_papers(papers):
+    print('do_papers: ' + str(papers), file=sys.stderr)
+    res = [lookup_paper(paper) for paper in papers]
+    ids = [int(p) for p in papers]
+    for res1 in res:
+        for score, id1, id2 in res1:
+            ids.append(id2)
+    r = requests.post(
+        'https://api.semanticscholar.org/graph/v1/paper/batch',
+        params={'fields': 'title,citationCount,url,externalIds'},
+        json={"ids": ['CorpusId:' + str(id) for id in ids]},
+        headers={"x-api-key": apikey}).json()
+    print(r, file=sys.stderr)
+    hrefs = {}
+    for rec in r:
+        print('rec: ' + str(rec), file=sys.stderr)
+        if not rec is None and 'externalIds' in rec:
+            key = int(rec['externalIds']['CorpusId'])
+            val = '<tr><td>%s</td><td><a href="%s">%s</a></td></tr>' % (str(rec['citationCount']), rec['url'], rec['title'])
+            hrefs[key] = val
+    print('res: ' + str(res), file=sys.stderr)
+    print('papers: ' + str(papers), file=sys.stderr)
+    for i in range(len(papers)):
+        # print('<h2>Input paper: %s; query=%s</h2>' % (papers[i], query))
+        # print('<ol>')
+        print('<h2>Input paper: %s</h2>' % (href_ify(res[i][0][1], hrefs)))
+        print('<table><tr><th>citations</th><th>title</th></tr>')
+        for score, id1, id2 in res[i]:
+            print(href_ify(id2, hrefs))
+        print('</table>')
+        # print('</ol>')
+
 def do_paper(paper):
     print("<h2>Input paper: %s; query=%s</h2>" % (paper, query))
     print("<ol>")
@@ -89,11 +135,23 @@ print("<body>")
 
 if not query is None:
     j = requests.get('https://api.semanticscholar.org/graph/v1/paper/autocomplete?query=' + query, headers={"x-api-key": apikey}).json()
-    for m in j['matches']:
-        print('query: <a href="https://www.semanticscholar.org/paper/%s">%s</a>' % (m['id'], m['title']))
-        do_paper(fetch_corpusId(m['id']))
+    print('j: ' + str(j), file=sys.stderr)
+    ids = [ m['id'] for m in j['matches']]
+    print('ids: ' + str(ids), file=sys.stderr)
+    r = requests.post(
+        'https://api.semanticscholar.org/graph/v1/paper/batch',
+        params={'fields': 'externalIds'},
+        json={"ids": ids},
+        headers={"x-api-key": apikey}).json()
+    print(r, file=sys.stderr)
+    papers = [ rec['externalIds']['CorpusId'] for rec in r ]
+    print('papers: ' + str(papers), file=sys.stderr)
+    do_papers(papers)
+    # for m in j['matches']:
+    #     print('query: <a href="https://www.semanticscholar.org/paper/%s">%s</a>' % (m['id'], m['title']))
+    #     do_paper(fetch_corpusId(m['id']))
 else:
-    do_paper(paper)
+    do_papers([paper])
 print("</ol>")
 print("</body>")
 print("</html>")
