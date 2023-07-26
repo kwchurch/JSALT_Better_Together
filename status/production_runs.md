@@ -4,435 +4,354 @@ We are currently running ProNE on 100 bins.
 
 <h2>Prefactorization</h2>
 
-The following bins are done.  For those of you with access to the Northeastern cluster, output is here: /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/*U.K280.npy
+For those of you with access to the Northeastern cluster, output is here: /scratch/k.church/JSALT-2023/semantic_scholar/j.ortega/cumgraphs.V2/*U.K280.npy
+<p>
+The following table indicates whether or not prefactorization has been completed for each of the 100 bins.  The green bins are completed, and the
+red ones are not.
 
 <table><tr>
-<td>000</td>
-<td>011</td>
-<td>022</td>
-<td>035</td>
-<td>053</td>
-<td>070</td>
-</tr>
-<tr>
-<td>001</td>
-<td>012</td>
-<td>023</td>
-<td>036</td>
-<td>054</td>
-<td>073</td>
-</tr>
-<tr>
-<td>002</td>
-<td>013</td>
-<td>024</td>
-<td>040</td>
-<td>055</td>
-<td>074</td>
-</tr>
-<tr>
-<td>003</td>
-<td>014</td>
-<td>025</td>
-<td>041</td>
-<td>061</td>
-<td>075</td>
-</tr>
-<tr>
-<td>004</td>
-<td>015</td>
-<td>026</td>
-<td>042</td>
-<td>062</td>
-<td>076</td>
-</tr>
-<tr>
-<td>005</td>
-<td>016</td>
-<td>027</td>
-<td>043</td>
-<td>063</td>
-<td>077</td>
-</tr>
-<tr>
-<td>006</td>
-<td>017</td>
-<td>030</td>
-<td>044</td>
-<td>065</td>
-<td>078</td>
-</tr>
-<tr>
-<td>007</td>
-<td>018</td>
-<td>031</td>
-<td>045</td>
-<td>066</td>
-<td>079</td>
-</tr>
-<tr>
-<td>008</td>
-<td>019</td>
-<td>032</td>
-<td>050</td>
-<td>067</td>
-<td>092</td>
-</tr>
-<tr>
-<td>009</td>
-<td>020</td>
-<td>033</td>
-<td>051</td>
-<td>068</td>
-<td>096</td>
-</tr>
-<tr>
-<td>010</td>
-<td>021</td>
-<td>034</td>
-<td>052</td>
-<td>069</td>
-<td>098</td>
-</tr>
-</table>
-
-The following bins are <i><b>not</b></i> done.
-
-<table><tr>
-<td>028</td>
-<td>047</td>
-<td>059</td>
-<td>081</td>
-<td>087</td>
-<td>093</td>
-</tr>
-<tr>
-<td>029</td>
-<td>048</td>
-<td>060</td>
-<td>082</td>
-<td>088</td>
-<td>094</td>
-</tr>
-<tr>
-<td>037</td>
-<td>049</td>
-<td>064</td>
-<td>083</td>
-<td>089</td>
-<td>095</td>
-</tr>
-<tr>
-<td>038</td>
-<td>056</td>
-<td>071</td>
-<td>084</td>
-<td>090</td>
-<td>097</td>
-</tr>
-<tr>
-<td>039</td>
-<td>057</td>
-<td>072</td>
-<td>085</td>
-<td>091</td>
-<td>099</td>
-</tr>
-<tr>
-<td>046</td>
-<td>058</td>
-<td>080</td>
-<td>086</td>
-</tr>
-</table>
+<td bgcolor="green">000</td>
+<td bgcolor="green">001</td>
+<td bgcolor="green">002</td>
+<td bgcolor="green">003</td>
+<td bgcolor="green">004</td>
+<td bgcolor="green">005</td>
+<td bgcolor="green">006</td>
+<td bgcolor="green">007</td>
+<td bgcolor="green">008</td>
+<td bgcolor="green">009</td>
+</tr><tr>
+<td bgcolor="green">010</td>
+<td bgcolor="green">011</td>
+<td bgcolor="green">012</td>
+<td bgcolor="green">013</td>
+<td bgcolor="green">014</td>
+<td bgcolor="green">015</td>
+<td bgcolor="green">016</td>
+<td bgcolor="green">017</td>
+<td bgcolor="green">018</td>
+<td bgcolor="green">019</td>
+</tr><tr>
+<td bgcolor="green">020</td>
+<td bgcolor="green">021</td>
+<td bgcolor="green">022</td>
+<td bgcolor="green">023</td>
+<td bgcolor="green">024</td>
+<td bgcolor="green">025</td>
+<td bgcolor="green">026</td>
+<td bgcolor="green">027</td>
+<td bgcolor="green">028</td>
+<td bgcolor="green">029</td>
+</tr><tr>
+<td bgcolor="green">030</td>
+<td bgcolor="green">031</td>
+<td bgcolor="green">032</td>
+<td bgcolor="green">033</td>
+<td bgcolor="green">034</td>
+<td bgcolor="green">035</td>
+<td bgcolor="green">036</td>
+<td bgcolor="green">037</td>
+<td bgcolor="green">038</td>
+<td bgcolor="green">039</td>
+</tr><tr>
+<td bgcolor="green">040</td>
+<td bgcolor="green">041</td>
+<td bgcolor="green">042</td>
+<td bgcolor="green">043</td>
+<td bgcolor="green">044</td>
+<td bgcolor="green">045</td>
+<td bgcolor="green">046</td>
+<td bgcolor="red">047</td>
+<td bgcolor="red">048</td>
+<td bgcolor="red">049</td>
+</tr><tr>
+<td bgcolor="green">050</td>
+<td bgcolor="green">051</td>
+<td bgcolor="green">052</td>
+<td bgcolor="green">053</td>
+<td bgcolor="green">054</td>
+<td bgcolor="green">055</td>
+<td bgcolor="green">056</td>
+<td bgcolor="red">057</td>
+<td bgcolor="green">058</td>
+<td bgcolor="red">059</td>
+</tr><tr>
+<td bgcolor="red">060</td>
+<td bgcolor="green">061</td>
+<td bgcolor="green">062</td>
+<td bgcolor="green">063</td>
+<td bgcolor="red">064</td>
+<td bgcolor="green">065</td>
+<td bgcolor="green">066</td>
+<td bgcolor="green">067</td>
+<td bgcolor="green">068</td>
+<td bgcolor="green">069</td>
+</tr><tr>
+<td bgcolor="green">070</td>
+<td bgcolor="red">071</td>
+<td bgcolor="red">072</td>
+<td bgcolor="green">073</td>
+<td bgcolor="green">074</td>
+<td bgcolor="green">075</td>
+<td bgcolor="green">076</td>
+<td bgcolor="green">077</td>
+<td bgcolor="green">078</td>
+<td bgcolor="green">079</td>
+</tr><tr>
+<td bgcolor="red">080</td>
+<td bgcolor="red">081</td>
+<td bgcolor="red">082</td>
+<td bgcolor="red">083</td>
+<td bgcolor="red">084</td>
+<td bgcolor="red">085</td>
+<td bgcolor="red">086</td>
+<td bgcolor="red">087</td>
+<td bgcolor="red">088</td>
+<td bgcolor="red">089</td>
+</tr><tr>
+<td bgcolor="red">090</td>
+<td bgcolor="red">091</td>
+<td bgcolor="green">092</td>
+<td bgcolor="red">093</td>
+<td bgcolor="red">094</td>
+<td bgcolor="red">095</td>
+<td bgcolor="green">096</td>
+<td bgcolor="red">097</td>
+<td bgcolor="green">098</td>
+<td bgcolor="red">099</td>
+</tr></table>
 
 <h2>Cheby and Finish</h2>
 
 These results can be found on /scratch/irving.b/JSALT/last_finish.
 <p>
-The following are done:
 
 <table><tr>
-<td>000</td>
-<td>009</td>
-<td>018</td>
-<td>027</td>
-<td>041</td>
-<td>066</td>
-</tr>
-<tr>
-<td>001</td>
-<td>010</td>
-<td>019</td>
-<td>030</td>
-<td>050</td>
-<td>067</td>
-</tr>
-<tr>
-<td>002</td>
-<td>011</td>
-<td>020</td>
-<td>031</td>
-<td>052</td>
-<td>069</td>
-</tr>
-<tr>
-<td>003</td>
-<td>012</td>
-<td>021</td>
-<td>032</td>
-<td>053</td>
-<td>070</td>
-</tr>
-<tr>
-<td>004</td>
-<td>013</td>
-<td>022</td>
-<td>033</td>
-<td>055</td>
-<td>073</td>
-</tr>
-<tr>
-<td>005</td>
-<td>014</td>
-<td>023</td>
-<td>034</td>
-<td>061</td>
-<td>075</td>
-</tr>
-<tr>
-<td>006</td>
-<td>015</td>
-<td>024</td>
-<td>035</td>
-<td>062</td>
-<td>076</td>
-</tr>
-<tr>
-<td>007</td>
-<td>016</td>
-<td>025</td>
-<td>036</td>
-<td>063</td>
-<td>079</td>
-</tr>
-<tr>
-<td>008</td>
-<td>017</td>
-<td>026</td>
-<td>040</td>
-<td>065</td>
-</tr>
-</table>
-
-The following bins are <i><b>not</b></i> done.
-
-<table><tr>
-<td>028</td>
-<td>045</td>
-<td>057</td>
-<td>074</td>
-<td>085</td>
-<td>093</td>
-</tr>
-<tr>
-<td>029</td>
-<td>046</td>
-<td>058</td>
-<td>077</td>
-<td>086</td>
-<td>094</td>
-</tr>
-<tr>
-<td>037</td>
-<td>047</td>
-<td>059</td>
-<td>078</td>
-<td>087</td>
-<td>095</td>
-</tr>
-<tr>
-<td>038</td>
-<td>048</td>
-<td>060</td>
-<td>080</td>
-<td>088</td>
-<td>096</td>
-</tr>
-<tr>
-<td>039</td>
-<td>049</td>
-<td>064</td>
-<td>081</td>
-<td>089</td>
-<td>097</td>
-</tr>
-<tr>
-<td>042</td>
-<td>051</td>
-<td>068</td>
-<td>082</td>
-<td>090</td>
-<td>098</td>
-</tr>
-<tr>
-<td>043</td>
-<td>054</td>
-<td>071</td>
-<td>083</td>
-<td>091</td>
-<td>099</td>
-</tr>
-<tr>
-<td>044</td>
-<td>056</td>
-<td>072</td>
-<td>084</td>
-<td>092</td>
-</tr>
-</table>
+<td bgcolor="green">000</td>
+<td bgcolor="green">001</td>
+<td bgcolor="green">002</td>
+<td bgcolor="green">003</td>
+<td bgcolor="green">004</td>
+<td bgcolor="green">005</td>
+<td bgcolor="green">006</td>
+<td bgcolor="green">007</td>
+<td bgcolor="green">008</td>
+<td bgcolor="green">009</td>
+</tr><tr>
+<td bgcolor="green">010</td>
+<td bgcolor="green">011</td>
+<td bgcolor="green">012</td>
+<td bgcolor="green">013</td>
+<td bgcolor="green">014</td>
+<td bgcolor="green">015</td>
+<td bgcolor="green">016</td>
+<td bgcolor="green">017</td>
+<td bgcolor="green">018</td>
+<td bgcolor="green">019</td>
+</tr><tr>
+<td bgcolor="green">020</td>
+<td bgcolor="green">021</td>
+<td bgcolor="green">022</td>
+<td bgcolor="green">023</td>
+<td bgcolor="green">024</td>
+<td bgcolor="green">025</td>
+<td bgcolor="green">026</td>
+<td bgcolor="green">027</td>
+<td bgcolor="red">028</td>
+<td bgcolor="red">029</td>
+</tr><tr>
+<td bgcolor="green">030</td>
+<td bgcolor="green">031</td>
+<td bgcolor="green">032</td>
+<td bgcolor="green">033</td>
+<td bgcolor="green">034</td>
+<td bgcolor="green">035</td>
+<td bgcolor="green">036</td>
+<td bgcolor="red">037</td>
+<td bgcolor="red">038</td>
+<td bgcolor="red">039</td>
+</tr><tr>
+<td bgcolor="green">040</td>
+<td bgcolor="green">041</td>
+<td bgcolor="green">042</td>
+<td bgcolor="green">043</td>
+<td bgcolor="green">044</td>
+<td bgcolor="green">045</td>
+<td bgcolor="green">046</td>
+<td bgcolor="red">047</td>
+<td bgcolor="red">048</td>
+<td bgcolor="red">049</td>
+</tr><tr>
+<td bgcolor="green">050</td>
+<td bgcolor="green">051</td>
+<td bgcolor="green">052</td>
+<td bgcolor="green">053</td>
+<td bgcolor="green">054</td>
+<td bgcolor="green">055</td>
+<td bgcolor="red">056</td>
+<td bgcolor="red">057</td>
+<td bgcolor="red">058</td>
+<td bgcolor="red">059</td>
+</tr><tr>
+<td bgcolor="red">060</td>
+<td bgcolor="green">061</td>
+<td bgcolor="green">062</td>
+<td bgcolor="green">063</td>
+<td bgcolor="red">064</td>
+<td bgcolor="green">065</td>
+<td bgcolor="green">066</td>
+<td bgcolor="green">067</td>
+<td bgcolor="green">068</td>
+<td bgcolor="green">069</td>
+</tr><tr>
+<td bgcolor="green">070</td>
+<td bgcolor="red">071</td>
+<td bgcolor="red">072</td>
+<td bgcolor="green">073</td>
+<td bgcolor="green">074</td>
+<td bgcolor="green">075</td>
+<td bgcolor="green">076</td>
+<td bgcolor="green">077</td>
+<td bgcolor="green">078</td>
+<td bgcolor="green">079</td>
+</tr><tr>
+<td bgcolor="red">080</td>
+<td bgcolor="red">081</td>
+<td bgcolor="red">082</td>
+<td bgcolor="red">083</td>
+<td bgcolor="red">084</td>
+<td bgcolor="red">085</td>
+<td bgcolor="red">086</td>
+<td bgcolor="red">087</td>
+<td bgcolor="red">088</td>
+<td bgcolor="red">089</td>
+</tr><tr>
+<td bgcolor="red">090</td>
+<td bgcolor="red">091</td>
+<td bgcolor="green">092</td>
+<td bgcolor="red">093</td>
+<td bgcolor="red">094</td>
+<td bgcolor="red">095</td>
+<td bgcolor="green">096</td>
+<td bgcolor="red">097</td>
+<td bgcolor="red">098</td>
+<td bgcolor="red">099</td>
+</tr></table>
 
 <h2>Embedding Directories</h2>
 
 For documentation on embedding directories, see <a href="https://github.com/kwchurch/JSALT_Better_Together/blob/main/doc/embedding_directories.md">here</a>.
+Embedding directories are here: $proposed/bins
+
 <p>
-The following bins are done:
-
 <table><tr>
-<td>000</td>
-<td>007</td>
-<td>014</td>
-<td>021</td>
-<td>030</td>
-<td>040</td>
-</tr>
-<tr>
-<td>001</td>
-<td>008</td>
-<td>015</td>
-<td>022</td>
-<td>031</td>
-<td>041</td>
-</tr>
-<tr>
-<td>002</td>
-<td>009</td>
-<td>016</td>
-<td>023</td>
-<td>032</td>
-<td>050</td>
-</tr>
-<tr>
-<td>003</td>
-<td>010</td>
-<td>017</td>
-<td>024</td>
-<td>033</td>
-<td>052</td>
-</tr>
-<tr>
-<td>004</td>
-<td>011</td>
-<td>018</td>
-<td>025</td>
-<td>034</td>
-<td>053</td>
-</tr>
-<tr>
-<td>005</td>
-<td>012</td>
-<td>019</td>
-<td>026</td>
-<td>035</td>
-<td>098</td>
-</tr>
-<tr>
-<td>006</td>
-<td>013</td>
-<td>020</td>
-<td>027</td>
-<td>036</td>
-</tr>
-</table>
-
-The following bins are <i><b>not</b></i> done:
-
-<table><tr>
-<td>028</td>
-<td>047</td>
-<td>060</td>
-<td>070</td>
-<td>080</td>
-<td>090</td>
-</tr>
-<tr>
-<td>029</td>
-<td>048</td>
-<td>061</td>
-<td>071</td>
-<td>081</td>
-<td>091</td>
-</tr>
-<tr>
-<td>037</td>
-<td>049</td>
-<td>062</td>
-<td>072</td>
-<td>082</td>
-<td>092</td>
-</tr>
-<tr>
-<td>038</td>
-<td>051</td>
-<td>063</td>
-<td>073</td>
-<td>083</td>
-<td>093</td>
-</tr>
-<tr>
-<td>039</td>
-<td>054</td>
-<td>064</td>
-<td>074</td>
-<td>084</td>
-<td>094</td>
-</tr>
-<tr>
-<td>042</td>
-<td>055</td>
-<td>065</td>
-<td>075</td>
-<td>085</td>
-<td>095</td>
-</tr>
-<tr>
-<td>043</td>
-<td>056</td>
-<td>066</td>
-<td>076</td>
-<td>086</td>
-<td>096</td>
-</tr>
-<tr>
-<td>044</td>
-<td>057</td>
-<td>067</td>
-<td>077</td>
-<td>087</td>
-<td>097</td>
-</tr>
-<tr>
-<td>045</td>
-<td>058</td>
-<td>068</td>
-<td>078</td>
-<td>088</td>
-<td>099</td>
-</tr>
-<tr>
-<td>046</td>
-<td>059</td>
-<td>069</td>
-<td>079</td>
-<td>089</td>
-</tr>
+<td bgcolor="green">000</td>
+<td bgcolor="green">001</td>
+<td bgcolor="green">002</td>
+<td bgcolor="green">003</td>
+<td bgcolor="green">004</td>
+<td bgcolor="green">005</td>
+<td bgcolor="green">006</td>
+<td bgcolor="green">007</td>
+<td bgcolor="green">008</td>
+<td bgcolor="green">009</td>
+</tr><tr>
+<td bgcolor="green">010</td>
+<td bgcolor="green">011</td>
+<td bgcolor="green">012</td>
+<td bgcolor="green">013</td>
+<td bgcolor="green">014</td>
+<td bgcolor="green">015</td>
+<td bgcolor="green">016</td>
+<td bgcolor="green">017</td>
+<td bgcolor="green">018</td>
+<td bgcolor="green">019</td>
+</tr><tr>
+<td bgcolor="green">020</td>
+<td bgcolor="green">021</td>
+<td bgcolor="green">022</td>
+<td bgcolor="green">023</td>
+<td bgcolor="green">024</td>
+<td bgcolor="green">025</td>
+<td bgcolor="green">026</td>
+<td bgcolor="green">027</td>
+<td bgcolor="red">028</td>
+<td bgcolor="red">029</td>
+</tr><tr>
+<td bgcolor="green">030</td>
+<td bgcolor="green">031</td>
+<td bgcolor="green">032</td>
+<td bgcolor="green">033</td>
+<td bgcolor="green">034</td>
+<td bgcolor="green">035</td>
+<td bgcolor="green">036</td>
+<td bgcolor="red">037</td>
+<td bgcolor="red">038</td>
+<td bgcolor="red">039</td>
+</tr><tr>
+<td bgcolor="green">040</td>
+<td bgcolor="green">041</td>
+<td bgcolor="red">042</td>
+<td bgcolor="red">043</td>
+<td bgcolor="red">044</td>
+<td bgcolor="red">045</td>
+<td bgcolor="red">046</td>
+<td bgcolor="red">047</td>
+<td bgcolor="red">048</td>
+<td bgcolor="red">049</td>
+</tr><tr>
+<td bgcolor="green">050</td>
+<td bgcolor="red">051</td>
+<td bgcolor="green">052</td>
+<td bgcolor="green">053</td>
+<td bgcolor="red">054</td>
+<td bgcolor="green">055</td>
+<td bgcolor="red">056</td>
+<td bgcolor="red">057</td>
+<td bgcolor="red">058</td>
+<td bgcolor="red">059</td>
+</tr><tr>
+<td bgcolor="red">060</td>
+<td bgcolor="green">061</td>
+<td bgcolor="green">062</td>
+<td bgcolor="green">063</td>
+<td bgcolor="red">064</td>
+<td bgcolor="green">065</td>
+<td bgcolor="green">066</td>
+<td bgcolor="green">067</td>
+<td bgcolor="red">068</td>
+<td bgcolor="green">069</td>
+</tr><tr>
+<td bgcolor="green">070</td>
+<td bgcolor="red">071</td>
+<td bgcolor="red">072</td>
+<td bgcolor="green">073</td>
+<td bgcolor="red">074</td>
+<td bgcolor="green">075</td>
+<td bgcolor="green">076</td>
+<td bgcolor="red">077</td>
+<td bgcolor="red">078</td>
+<td bgcolor="green">079</td>
+</tr><tr>
+<td bgcolor="red">080</td>
+<td bgcolor="red">081</td>
+<td bgcolor="red">082</td>
+<td bgcolor="red">083</td>
+<td bgcolor="red">084</td>
+<td bgcolor="red">085</td>
+<td bgcolor="red">086</td>
+<td bgcolor="red">087</td>
+<td bgcolor="red">088</td>
+<td bgcolor="red">089</td>
+</tr><tr>
+<td bgcolor="red">090</td>
+<td bgcolor="red">091</td>
+<td bgcolor="red">092</td>
+<td bgcolor="red">093</td>
+<td bgcolor="red">094</td>
+<td bgcolor="red">095</td>
+<td bgcolor="red">096</td>
+<td bgcolor="red">097</td>
+<td bgcolor="green">098</td>
+<td bgcolor="red">099</td>
+</tr></table>

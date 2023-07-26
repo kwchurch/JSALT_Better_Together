@@ -1,0 +1,10 @@
+#!/bin/sh
+
+awk '$2 == 1 {col="green"};
+     $2 == 0 {col="red"};
+    {printf "<td bgcolor=\"%s\">%s</td>\n", col, $1}' $* |
+pr -n 10 |
+egrep '[0-9]' | 
+egrep -v Page | 
+tr -s ' ' '\t' | 
+$JSALTsrc/tsv_to_html.sh
