@@ -1,4 +1,5 @@
-## Link Prediciton Evaluation
+## Link Prediction Evaluation
+
 We consider a simple setting to evaluate the train and test prediction capabilities of our Paper representation models.
 As detailed in https://github.com/kwchurch/JSALT_Better_Together/blob/main/projects/link_prediction_from_random_walks.md, we take random walks across the citation graph to form pairs of papers with minimum number of hops in [1,4]. We then record the (time) bin of each paper and the cosine similarity between the two papers with all text and graph embedding models. 
 
