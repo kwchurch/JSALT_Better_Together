@@ -1,21 +1,31 @@
-import sys, os, argparse, pandas, numpy as np, torch, logging
+import sys, os, argparse, numpy as np, torch, logging
 from transformers import AutoTokenizer
 from langdetect import detect
 from tqdm import tqdm
+import pandas
+from multiprocesspandas import applyparallel
+
+def detect_with_error(abstract):
+
+	try:
+		return detect(abstract)
+	except:
+		return np.nan
 
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument('--torch_dir', default='log_calculations/torch_outputs/')
-	parser.add_argument('--output_dir', default='log_calculations/unifed_outputs/')
+	parser.add_argument('--output_dir', default='log_calculations/unified_outputs/')
 	parser.add_argument('--experiment_name')
 	parser.add_argument('--experiment_name_addon', default='')
 	parser.add_argument('--model_name')
+	parser.add_argument('--previous_model_name', default='', type=str, help='Refer to filtered_df for this model to get lang_detect data instead of calculating from scratch')
 	parser.add_argument('--sample_size', default=None)
-	parser.add_argument('--max_seq_len', default=128)
-	parser.add_argument('--minimum_characters', default=75, help='Remove abstracts with less than [minimum_characters] characters')
-	parser.add_argument('--max_padding_tokens', default=2, help='Remove abstracts with more than [max_padding_tokens] [PAD] tokens')
+	parser.add_argument('--max_seq_len', type=int, default=128)
+	parser.add_argument('--minimum_characters', type=int, default=75, help='Remove abstracts with less than [minimum_characters] characters')
+	parser.add_argument('--max_padding_tokens', type=int, default=2, help='Remove abstracts with more than [max_padding_tokens] [PAD] tokens')
 	parser.add_argument('--minimum_unique_characters', default=20, help='Remove abstracts with less than [minimum_unique_characters] unique characters')
 	parser.add_argument('--skip_lang_detect', action='store_const', const=True, default=False)
 	parser.add_argument('--do_not_overwrite', action='store_const', const=True, default=False)
@@ -126,7 +136,21 @@ if __name__ == '__main__':
 
 	if not args.skip_lang_detect:
 		logging.info('Detecting language')
-		df['langdetect'] = df['abstract'].progress_apply(lambda x : detect(x))
+
+		
+		prev_model_file = os.path.join(args.output_dir, args.experiment_name, args.previous_model_name, 'filtered_df.csv') if args.previous_model_name else ''
+
+		if prev_model_file and os.path.exists(prev_model_file):
+			print(f'Loading langdetect data from {prev_model_file}')
+			previous_df = pandas.read_csv(prev_model_file)
+			df['corpusid'] = df['corpusid'].astype('int64')
+
+			df = pandas.merge(df, previous_df[['corpusid', 'langdetect']], how='left', on='corpusid')
+			df.loc[df['langdetect'].isna(), 'langdetect'] = df.loc[df['langdetect'].isna(), 'abstract'].progress_apply(detect_with_error)
+			df = df[~df['langdetect'].isna()]
+
+		else:
+			df['langdetect'] = df['abstract'].progress_apply(detect_with_error)
 
 
 	#### Start PPPL Calculation ####
