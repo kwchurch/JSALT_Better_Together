@@ -1,10 +1,20 @@
 #!/usr/bin/env python
 
+
+# Examples (with and without -G arg)
+# # uses API until -G is provided
+
+# echo 2 | $JSALTsrc/refs.py
+# 2	71	1479538, 46470924, 4430392, 15036950, 207741897, 34299859, 925588, 1441710, 18355475, 39380342, 41476623, 31242316, 37639608, 1345193, 118901444, 3188049, 6306536, 43353376, 420970, 15455464, 11409876, 30837181, 16190154, 89141, 189866725, 62657762, 21864171, 120933989, 153546381, 54174771, 14899020, 2625643, 16596643, 58942889, 140109802, 3772657, 207579947, 1609914, 683036, 5885617, 13463620, 930676, 153847808, 18547380, 6863121, 38936833, 207547900, 120760685, 207738357, 1836349, 27026167, 667586, 18718011, 5262555, 6530745, 153931876, 21877334, 9166388, 154137886, 58180322, 58068920, 28637672, 125133067, 167485681, 177751, 57229593, 117986589, 15829331, 14301809, None, None
+
+
+# G=$JSALTdir/semantic_scholar/releases/2023-05-09/database/citations/graphs/citations.G
+# echo 2 | $JSALTsrc/refs.py -G $G
+# 2	62	177751, 420970, 667586, 683036, 925588, 930676, 1345193, 1441710, 1479538, 1836349, 2625643, 3188049, 3772657, 4430392, 5262555, 5885617, 6306536, 6530745, 6863121, 11409876, 13463620, 14301809, 14899020, 15036950, 15455464, 15829331, 16190154, 16596643, 18355475, 18547380, 18718011, 21877334, 27026167, 28637672, 30837181, 31242316, 34299859, 37639608, 38936833, 39380342, 41476623, 43353376, 46470924, 54174771, 57229593, 58180322, 62657762, 117986589, 118901444, 120760685, 120933989, 125133067, 140109802, 153546381, 153847808, 153931876, 154137886, 167485681, 189866725, 207547900, 207579947, 207738357
+
 import json,requests,argparse
 import os,sys,argparse,time
 import numpy as np
-# from sklearn.metrics.pairwise import cosine_similarity
-# import pdb
 
 t0 = time.time()
 
@@ -12,17 +22,7 @@ print('refs: ' + str(sys.argv), file=sys.stderr)
 
 apikey=os.environ.get('SPECTER_API_KEY')
 
-# assumes the dir argument contains
-#   embedding.f  sequence of N by K floats32
-#   map.old_to_new.i  sequence of N int32
-#   record_size  specifies K
-
 parser = argparse.ArgumentParser()
-# parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
-# parser.add_argument("-V", '--verbose', action='store_true')
-# parser.add_argument('--binary_output', action='store_true')
-# parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
-# parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
 args = parser.parse_args()
 
@@ -64,29 +64,6 @@ def my_int(s):
         if not c.isdigit():
             return int(s[0:i])
 
-# def record_size_from_dir(dir):
-#     with open(dir + '/record_size', 'r') as fd:
-#         return my_int(fd.read())
-
-# def map_from_dir(dir):
-#     fn = dir + '/map.old_to_new.i'
-#     fn_len = os.path.getsize(fn)
-#     return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
-
-# def embedding_from_dir(dir, K):
-#     fn = dir + '/embedding.f'
-#     fn_len = os.path.getsize(fn)
-#     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
-
-# def directory_to_config(dir):
-#     K = record_size_from_dir(dir)
-#     return { 'record_size' : K,
-#              'dir' : dir,
-#              'map' : map_from_dir(dir),
-#              'embedding' : embedding_from_dir(dir, K)}
-
-# config = directory_to_config(args.dir)
-
 def get_corpusId(ref):
     try:
         return ref['externalIds']['CorpusId']
@@ -104,62 +81,6 @@ def id_to_references(my_id):
         return [ get_corpusId(ref) for ref in j['references']]
     else:
         return []
-
-# maxid = config['map'].shape[0]
-# my_map = config['map'].reshape(-1)
-# emb = config['embedding']
-
-# # print('maxid: ' + str(maxid), file=sys.stderr)
-
-
-# def centroid(refs):
-#     mapped_refs = np.array([ my_map[ref] for ref in refs if not ref is None and ref < maxid ], dtype=int)
-#     # print('mapped_refs (raw): ' + str(mapped_refs), file=sys.stderr)
-#     mapped_refs = mapped_refs[mapped_refs > 0]
-#     # print('mapped_refs (filtered): ' + str(mapped_refs), file=sys.stderr)
-#     vectors = emb[mapped_refs,:]
-#     # print('centroid: vectors.shape = ' + str(vectors.shape), file=sys.stderr)
-
-#     if len(vectors) > 0:
-#        m = np.mean(vectors, axis=0)
-#        # print('m.shape: ' + str(m.shape),  file=sys.stderr)
-#        return m
-#     else:
-#         return None # np.zeros(emb.shape[1], dtype=int)
-
-# def id_to_centroid(id):
-#     refs = id_to_references(id)
-#     if len(refs) > 0:
-#         # print('id_to_centroid: id = %s, refs = %s' % (str(id), str(refs)), file=sys.stderr)
-#         sys.stderr.flush()
-#     return centroid(refs)
-
-# if args.use_references == 'never' or args.use_references == 'when_necessary':
-#     mapped_ids = np.zeros(len(ids), dtype=int)
-#     for e,i in enumerate(ids):
-#         if i < maxid:
-#             mapped_ids[e] = my_map[i]
-
-# def get_vec(id, use_references):
-#     new_id = None
-#     if use_references == 'never':
-#         if id >= maxid: return None
-#         new_id = my_map[id]
-#         if new_id <= 0: return None
-#         return emb[new_id,:]
-#     elif use_references == 'always':
-#         return id_to_centroid(id)
-#     elif use_references == 'when_necessary':
-#         vec = get_vec(id, 'never')
-#         if not vec is None:
-#             return vec
-#         else: return get_vec(id, 'always')
-#     else:
-#         assert False, 'use_references should not be: ' + use_references
-
-# query=3051291
-# ref = id_to_references(str(query))
-# pdb.set_trace()
 
 # ids = np.loadtxt(sys.stdin).astype(int)
 for line in sys.stdin:
