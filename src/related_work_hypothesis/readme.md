@@ -8,8 +8,8 @@ This repository contains Python scripts to explore the Related Work Hypothesis u
 # Índice
 
 1. [Test Related Work References Hypothesis only 1 paper - Low-resource paper by Rodolfo](#test-related-work-references-hypothesis-only-1-paper---low-resource-paper-by-rodolfo)
-2. [Test Related Work References Hypothesis using Martin's File - over 400k papers](#test-related-work-references-hypothesis-using-martins-file---over-400k-papers)
-3. [Evaluating Related Work References Hypothesis using Martin's File](#evaluating-related-work-references-hypothesis-using-martins-file)
+2. [Test Related Work References Hypothesis using Martins File - over 400k papers](#test-related-work-references-hypothesis-using-martins-file---over-400k-papers)
+3. [Evaluating Related Work References Hypothesis using Martins File](#evaluating-related-work-references-hypothesis-using-martins-file)
 4. [Paper Prediction Model](#paper-prediction-model)
 5. [Get Vectors from Prone Model using Title or ID](#get-vectors-from-prone-model-using-title-or-id)
 
@@ -74,7 +74,7 @@ An interactive 3D plot showing the reduced-dimensional vectors for each model an
 The plot is saved as grafico_3d.png.
 
 
-## Test Related Work References Hypothesis using Martin's File - over 400k papers
+## Test Related Work References Hypothesis using Martins File - over 400k papers
 
 
 ### Example usage:
@@ -116,7 +116,7 @@ The script will generate a TSV file named rw_hypo.tsv, which contains the calcul
 - The prone_model directory should be obtained separately, as it contains the pre-trained models necessary for calculating vector representations.
 
 
-## Evaluating Related Work References Hypothesis using Martin's File
+## Evaluating Related Work References Hypothesis using Martins File
 
 This repository contains Python code that analyzes the results of the Related Work Hypothesis experiment. The code reads data from TSV files, filters and processes it, and generates pie charts to visualize the findings.
 
