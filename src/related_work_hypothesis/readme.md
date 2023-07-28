@@ -106,3 +106,38 @@ The plot is saved as grafico_3d.png.
 ```sh
 python rw_recommendation_case_2.py -i <path_to_references_file> -m <path_to_model_directory>
 ```
+
+### Description
+
+- -i or --input (Positional Argument):
+
+Description: This argument represents the path to the input JSONL file containing references to be processed.
+Default Value: ../related_work_hypothesis/references_files/rw_citations.jsonl
+Purpose: The code reads the data from this file, which should contain information about research papers, their related work citations, and other citations.
+-m or --model (Positional Argument):
+
+Description: This argument represents the path to the directory containing the pre-trained models.
+Default Value: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model
+Purpose: The code uses this directory to locate the pre-trained models required for calculating vector representations of research papers.
+The script will process the citations for each paper, calculate similarity metrics, and generate the output.
+
+
+### Output
+
+The script will generate a TSV file named rw_hypo.tsv, which contains the calculated similarity metrics for each paper in the input file. The columns in the TSV file are as follows:
+
+- corpus_id: The ID of the research paper.
+- cos_rw: Cosine similarity between the research paper and its related works.
+- cos_all: Average cosine similarity between the research paper and all citations.
+- det_rw: Euclidean distance between the research paper and its related works.
+- det_all: Euclidean distance between the research paper and all citations.
+
+### Note
+
+- The script processes the citations in batches to handle large input files efficiently.
+- You can specify the input file path and the model directory path using command-line arguments.
+- The prone_model directory should be obtained separately, as it contains the pre-trained models necessary for calculating vector representations.
+
+
+
+
