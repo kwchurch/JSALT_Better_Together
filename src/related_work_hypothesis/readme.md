@@ -168,3 +168,42 @@ The script generates a pie chart titled "Is it better to use related work refere
 The provided code assumes that the input TSV files follow a specific format with columns like 'det_rw', 'det_all', 'cos_rw', and 'cos_all'. Please ensure that your TSV files have the required columns for the code to work correctly.
 
 Modify the graph() function and uncomment the line #graph(df_filtered,'Percentage of comparisons |F(d) - F\'(d)| (excluding rw=0 and all=0)','det_rw','det_all') to visualize the percentage of comparisons for the 'det_rw' and 'det_all' columns.
+
+
+## Paper Prediction Model
+
+This code is a Python script used for predicting vectors and testing cosine similarity between two sets of vectors. It employs machine learning techniques, specifically deep neural networks, implemented using TensorFlow and Keras libraries. The script reads data from text files containing vectors, preprocesses the data, trains two different models, and evaluates their performance.
+
+### Example usage:
+
+```sh
+python paper_prediction_model.py -i <path_to_vectors_model>
+```
+
+The script reads the vector data from text files located in the specified folder (or the default path) and preprocesses the data.
+
+Two different models are trained with the processed data:
+
+1. Model 1: Concatenates two sets of vectors and trains a deep neural network on them.
+2. Model 2: Trains a deep neural network using only one set of vectors.
+3. After training, the script evaluates the cosine similarity between the predicted and actual vectors for a single example.
+4. The training process is visualized by plotting the mean squared error (MSE) for both training and validation data during each epoch.
+
+
+### Description
+
+- -i, --input: The path to the folder containing the vector data files. If not provided, the default path will be used.
+
+### Output
+
+The script will output the following information:
+
+1. The total number of papers: The total number of papers represented by the vector data.
+2. Model 1's training process and validation loss graph: The graph showing the MSE improvement during training for Model 1.
+3. Model 2's training process and validation loss graph: The graph showing the MSE improvement during training for Model 2.
+4. Cosine similarity between predicted and actual vectors: The similarity measure between the predicted and actual vectors for a single example.
+5. The trained models will be saved in the files all_modelo.h5 (Model 1) and rw_modelo.h5 (Model 2).
+
+### Note
+
+This README provides a general overview of the code and its usage. For detailed technical explanations and further customization, please refer to the comments within the code and consult the relevant libraries' documentation.
