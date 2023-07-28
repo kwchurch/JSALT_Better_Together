@@ -19,12 +19,12 @@ Command Line Arguments
 
 The script can be executed from the command line using the following arguments:
 
--i, --idx: Semantic Scholar paper_id for obtaining the embedding of a specific paper index.
--t, --title: Paper title for obtaining the embedding of a specific paper.
--I, --idxs: Path to a file containing a list of Semantic Scholar paper_ids for obtaining embeddings in batch.
--T, --titles: Path to a file containing a list of paper titles for obtaining embeddings in batch.
--o, --output: Output path for saving the embeddings (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone).
--m, --model: Path to the Prone model (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model).
+1. -i, --idx: Semantic Scholar paper_id for obtaining the embedding of a specific paper index.
+2. -t, --title: Paper title for obtaining the embedding of a specific paper.
+3. -I, --idxs: Path to a file containing a list of Semantic Scholar paper_ids for obtaining embeddings in batch.
+4. -T, --titles: Path to a file containing a list of paper titles for obtaining embeddings in batch.
+5. -o, --output: Output path for saving the embeddings (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone).
+6. -m, --model: Path to the Prone model (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model).
 
 
 
