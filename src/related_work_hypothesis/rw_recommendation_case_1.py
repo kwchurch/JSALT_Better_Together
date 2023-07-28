@@ -9,7 +9,6 @@ from tqdm import tqdm
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 import plotly.graph_objects as go
-import tensorflow
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 

@@ -65,7 +65,7 @@ Additionally, the script uses t-SNE to reduce the dimensionality of the vectors 
 ### Example usage:
 
 ```sh
-python test_papers_recommendation.py -r "path/to/all_references"  -w "path/to/related_work_references" -c "path/to/paper_to_compare"
+python rw_recommendation_case_1.py -r "path/to/all_references"  -w "path/to/related_work_references" -c "path/to/paper_to_compare"
 ```
  
 ### Description 
@@ -96,3 +96,114 @@ The plot is saved as <model>_comparacion_cosine.png, where <model> is the name o
 
 An interactive 3D plot showing the reduced-dimensional vectors for each model and reference type.
 The plot is saved as grafico_3d.png.
+
+
+## Test Related Work References Hypothesis using Martin's File (over 400k papers)
+
+
+### Example usage:
+
+```sh
+python rw_recommendation_case_2.py -i <path_to_references_file> -m <path_to_model_directory>
+```
+
+### Description
+
+- -i or --input (Positional Argument):
+
+Description: This argument represents the path to the input JSONL file containing references to be processed.
+Default Value: ../related_work_hypothesis/references_files/rw_citations.jsonl
+Purpose: The code reads the data from this file, which should contain information about research papers, their related work citations, and other citations.
+
+- -m or --model (Positional Argument):
+
+Description: This argument represents the path to the directory containing the pre-trained models.
+Default Value: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model
+Purpose: The code uses this directory to locate the pre-trained models required for calculating vector representations of research papers.
+The script will process the citations for each paper, calculate similarity metrics, and generate the output.
+
+
+### Output
+
+The script will generate a TSV file named rw_hypo.tsv, which contains the calculated similarity metrics for each paper in the input file. The columns in the TSV file are as follows:
+
+- corpus_id: The ID of the research paper.
+- cos_rw: Cosine similarity between the research paper and its related works.
+- cos_all: Average cosine similarity between the research paper and all citations.
+- det_rw: Euclidean distance between the research paper and its related works.
+- det_all: Euclidean distance between the research paper and all citations.
+
+### Note
+
+- The script processes the citations in batches to handle large input files efficiently.
+- You can specify the input file path and the model directory path using command-line arguments.
+- The prone_model directory should be obtained separately, as it contains the pre-trained models necessary for calculating vector representations.
+
+
+## Evaluating Related Work References Hypothesis using Martin's File
+
+This repository contains Python code that analyzes the results of the Related Work Hypothesis experiment. The code reads data from TSV files, filters and processes it, and generates pie charts to visualize the findings.
+
+
+
+### Example usage:
+
+```sh
+python evaluating_rw_case_2.py -f <path_to_rw_hypo.tsv>
+```
+
+### Description
+
+The script supports the following command-line arguments:
+
+- -f, --files: The path to the directory containing the TSV files. If not provided, the default path is used: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/JSALT_Better_Together/src/related_work_hypothesis/results/.
+
+
+### Output
+
+The script generates a pie chart titled "Is it better to use related work references than all references?" The chart displays the percentage of cases where 'cos_rw' is greater than 'cos_all', excluding rows where 'cos_rw' and 'cos_all' are 0.
+
+### Note
+
+The provided code assumes that the input TSV files follow a specific format with columns like 'det_rw', 'det_all', 'cos_rw', and 'cos_all'. Please ensure that your TSV files have the required columns for the code to work correctly.
+
+Modify the graph() function and uncomment the line #graph(df_filtered,'Percentage of comparisons |F(d) - F\'(d)| (excluding rw=0 and all=0)','det_rw','det_all') to visualize the percentage of comparisons for the 'det_rw' and 'det_all' columns.
+
+
+## Paper Prediction Model
+
+This code is a Python script used for predicting vectors and testing cosine similarity between two sets of vectors. It employs machine learning techniques, specifically deep neural networks, implemented using TensorFlow and Keras libraries. The script reads data from text files containing vectors, preprocesses the data, trains two different models, and evaluates their performance.
+
+### Example usage:
+
+```sh
+python paper_prediction_model.py -i <path_to_vectors_model>
+```
+
+The script reads the vector data from text files located in the specified folder (or the default path) and preprocesses the data.
+
+Two different models are trained with the processed data:
+
+1. Model 1: Concatenates two sets of vectors and trains a deep neural network on them.
+2. Model 2: Trains a deep neural network using only one set of vectors.
+3. After training, the script evaluates the cosine similarity between the predicted and actual vectors for a single example.
+4. The training process is visualized by plotting the mean squared error (MSE) for both training and validation data during each epoch.
+
+
+### Description
+
+- -i, --input: The path to the folder containing the vector data files. If not provided, the default path will be used.
+
+### Output
+
+The script will output the following information:
+
+1. The total number of papers: The total number of papers represented by the vector data.
+2. Model 1's training process and validation loss graph: The graph showing the MSE improvement during training for Model 1.
+3. Model 2's training process and validation loss graph: The graph showing the MSE improvement during training for Model 2.
+4. Cosine similarity between predicted and actual vectors: The similarity measure between the predicted and actual vectors for a single example.
+5. The trained models will be saved in the files all_modelo.h5 (Model 1) and rw_modelo.h5 (Model 2).
+
+### Note
+
+This README provides a general overview of the code and its usage. For detailed technical explanations and further customization, please refer to the comments within the code and consult the relevant libraries' documentation.
