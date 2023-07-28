@@ -40,14 +40,12 @@ def clf_threshold_finder(train_df):
     train_df_valid_cos_sim = train_df[train_df['cos_sim'] != -1]
     x, y = np.array(train_df_valid_cos_sim['cos_sim']).reshape(-1, 1), \
            np.array([1 if y_i == 1 else 0 for y_i in train_df_valid_cos_sim['hops']])
-
+    prior_class_1 = sum(y)/len(y)
     clf = LogisticRegression()
     clf.fit(x, y)
     implied_threshold = -clf.intercept_/clf.coef_
     
-    return implied_threshold.item()
-
-
+    return implied_threshold.item(), prior_class_1
 
 def youdens_j_score(y_true, y_pred):
     tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
@@ -56,15 +54,19 @@ def youdens_j_score(y_true, y_pred):
     return sensitivity + specificity - 1
 
 
-def test_acc_from_threshold(full_test_df, threshold):
+def test_acc_from_threshold(full_test_df, threshold, prior_class_1_prob):
     # apply threshold as class prediciton (1 vs 2-4 hops)
     full_test_df['pred'] = (full_test_df['cos_sim'] >= threshold)
     full_test_df['pred'] = full_test_df['pred'].astype(int)
     
-    full_test_df['no_pred'] = full_test_df['cos_sim'] == -1
-
+    full_test_df['prior_guess'] = np.random.binomial(1, prior_class_1_prob, size=len(full_test_df))
     
-    count_cos_sim_minus_1 = full_test_df[full_test_df['cos_sim'] == -1].groupby(full_test_df[['bin0', 'bin1']].max(axis=1)).size().to_dict()
+    full_test_df['no_data'] = full_test_df['cos_sim'] == -1
+    
+    # Replace values in 'pred' column with 'prior_guess' where 'no_data' is True, otherwise keep the existing 'pred' values
+    full_test_df['pred'] = np.where(full_test_df['no_data'], full_test_df['prior_guess'], full_test_df['pred'])
+
+    #count_cos_sim_minus_1 = full_test_df[full_test_df['cos_sim'] == -1].groupby(full_test_df[['bin0', 'bin1']].max(axis=1)).size().to_dict()
 
     # Group the DataFrame by the maximum value between 'bin0' and 'bin1'
     # Then count occurrences of cos_sim == -1 and calculate the proportion
@@ -85,7 +87,7 @@ def test_acc_from_threshold(full_test_df, threshold):
     youdens_j_by_bin = full_test_df.groupby(full_test_df[['bin0', 'bin1']].max(axis=1))\
                           .apply(lambda group: youdens_j_score(group['is_one_hop'], group['pred'])).to_dict()
     
-    full_test_df['correct'] = full_test_df.apply(lambda row: 0 if row['no_pred'] else row['correct'], axis=1)
+    #full_test_df['correct'] = full_test_df.apply(lambda row: 0 if row['no_pred'] else row['correct'], axis=1)
     
     
     # check if class prediciton is right
@@ -112,8 +114,8 @@ def process_data(walk_path, output_folder, walk_with_bins_df):
     train_df = pd.read_csv(os.path.join(walk_path, 'walk12.aa'), sep='\t', header=None) 
     train_df = df_merge(train_df, walk_with_bins_df)
     test_df = df_merge(test_df, walk_with_bins_df)
-    threshold = clf_threshold_finder(train_df)
-    acc, acc_by_bin, youdens_j, youdens_j_by_bin, rate_cos_sim_minus_1 = test_acc_from_threshold(test_df, threshold)
+    threshold, prior_class_1_prob = clf_threshold_finder(train_df)
+    acc, acc_by_bin, youdens_j, youdens_j_by_bin, rate_cos_sim_minus_1 = test_acc_from_threshold(test_df, threshold, prior_class_1_prob)
     results = {'acc':acc, 'acc_by_bin':acc_by_bin, 'youdens_j':youdens_j, 
                'youdens_j_by_bin':youdens_j_by_bin,  'rate_cos_sim_minus_1':rate_cos_sim_minus_1}
     joblib.dump(results, f'{output_folder}/{cumbin}_when_necessary_prone.pkl')
@@ -126,7 +128,7 @@ def main():
     # Add arguments
     parser.add_argument("--output", "-o", type=str, default="walk_forecasting/", 
                         help="Output folder to store the walk forecasting results")
-    parser.add_argument("--threads", "-t", type=int, default=4, 
+    parser.add_argument("--threads", "-t", type=int, default=1, 
                         help="simultaneous threads to use")
     
     # Parse the arguments
@@ -144,6 +146,7 @@ def main():
     walk_path = os.environ.get('walkdir')
     cumbins_walks = sorted([os.path.join(walk_path, f, 'walk_pieces/when_necessary') for \
                             f in os.listdir(walk_path) if f[-3:]!='zip'])
+    process_data(cumbins_walks[0], output_folder, walk_with_bins_df)
     num_threads = args.threads
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         futures = [executor.submit(process_data, data, output_folder, walk_with_bins_df) for data in cumbins_walks]

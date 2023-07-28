@@ -7,6 +7,7 @@ import numpy as np
 import os
 from tqdm import tqdm
 import argparse
+import pandas as pd
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -37,11 +38,13 @@ def results_to_plot(results_folder, output_folder):
 
             bin_to_overall_accs[cumbin] = r['acc']
             bin_to_overall_youdens_j[cumbin] = r['youdens_j']
-
-
+        
 
         except:
             print(f'failed with {file}')
+            
+    df = pd.DataFrame(R_acc)
+    df.to_csv(os.path.join(output_folder, f'acc_preds_prone_when_necessary.tsv'), sep='\t')
             
     plot_forecast_heatmap(R=R_acc, metric='Accuracy', y_axis_labels=y_axis_labels,
                           output_filename=os.path.join(output_folder, f'ProNE_when_necessary_acc_heatmap.jpg'))
@@ -75,8 +78,8 @@ def plot_forecast_linegraph(bin_to_overall_metric, metric, output_filename):
 
     plt.plot(x_values, y_values, marker='o', linestyle='-')
 
-    plt.xlabel(f'{metric}')
-    plt.ylabel('Max Train Bin')
+    plt.ylabel(f'{metric}')
+    plt.xlabel('Max Train Bin')
     plt.title(f'{metric} of ProNE Cumulative Bin Models for 1 vs 2-4 Hop Walk Prediction', fontsize=14, pad=20)
 
     plt.savefig(output_filename)
