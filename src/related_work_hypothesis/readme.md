@@ -15,7 +15,7 @@ This repository contains Python scripts to explore the Related Work Hypothesis u
 
 
 
-## Test Related Work References Hypothesis only 1 paper (Low-resource paper by Rodolfo)
+## Test Related Work References Hypothesis only 1 paper - Low-resource paper by Rodolfo
 
 This script allows you to perform vector clustering and comparison using different models for text embeddings. It supports two models: Specter2 and Prone. The script reads text data from two files, namely References File and Compare File, and performs the following tasks:
 
@@ -74,7 +74,7 @@ An interactive 3D plot showing the reduced-dimensional vectors for each model an
 The plot is saved as grafico_3d.png.
 
 
-## Test Related Work References Hypothesis using Martin's File (over 400k papers)
+## Test Related Work References Hypothesis using Martin's File - over 400k papers
 
 
 ### Example usage:
