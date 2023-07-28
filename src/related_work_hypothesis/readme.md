@@ -114,7 +114,8 @@ python rw_recommendation_case_2.py -i <path_to_references_file> -m <path_to_mode
 Description: This argument represents the path to the input JSONL file containing references to be processed.
 Default Value: ../related_work_hypothesis/references_files/rw_citations.jsonl
 Purpose: The code reads the data from this file, which should contain information about research papers, their related work citations, and other citations.
--m or --model (Positional Argument):
+
+- -m or --model (Positional Argument):
 
 Description: This argument represents the path to the directory containing the pre-trained models.
 Default Value: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model
@@ -139,5 +140,31 @@ The script will generate a TSV file named rw_hypo.tsv, which contains the calcul
 - The prone_model directory should be obtained separately, as it contains the pre-trained models necessary for calculating vector representations.
 
 
+## Evaluating Related Work References Hypothesis using Martin's File
+
+This repository contains Python code that analyzes the results of the Related Work Hypothesis experiment. The code reads data from TSV files, filters and processes it, and generates pie charts to visualize the findings.
 
 
+
+### Example usage:
+
+```sh
+python evaluating_rw_case_2.py -f <path_to_rw_hypo.tsv>
+```
+
+### Description
+
+The script supports the following command-line arguments:
+
+- -f, --files: The path to the directory containing the TSV files. If not provided, the default path is used: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/JSALT_Better_Together/src/related_work_hypothesis/results/.
+
+
+### Output
+
+The script generates a pie chart titled "Is it better to use related work references than all references?" The chart displays the percentage of cases where 'cos_rw' is greater than 'cos_all', excluding rows where 'cos_rw' and 'cos_all' are 0.
+
+### Note
+
+The provided code assumes that the input TSV files follow a specific format with columns like 'det_rw', 'det_all', 'cos_rw', and 'cos_all'. Please ensure that your TSV files have the required columns for the code to work correctly.
+
+Modify the graph() function and uncomment the line #graph(df_filtered,'Percentage of comparisons |F(d) - F\'(d)| (excluding rw=0 and all=0)','det_rw','det_all') to visualize the percentage of comparisons for the 'det_rw' and 'det_all' columns.

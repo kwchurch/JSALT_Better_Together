@@ -3,6 +3,13 @@
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-f", "--files", help="reference File", default='/mnt/c/Rodolfo/Desarrollo/JSALT_2023/JSALT_Better_Together/src/related_work_hypothesis/results/')
+    args = parser.parse_args()
+    return args
 
 
 
@@ -22,8 +29,8 @@ def graph(df_filtered,title,col1,col2):
 
 
 def main():
-
-    FILEPATH = os.path.dirname("/mnt/c/Rodolfo/Desarrollo/JSALT_2023/JSALT_Better_Together/src/related_work_hypothesis/results/")
+    args = parse_args()
+    FILEPATH = os.path.dirname(args.files)
     raw_dirs = set([d for d in os.listdir(FILEPATH)])
 
 
