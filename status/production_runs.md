@@ -10,7 +10,7 @@ Prefactorization output is here: /scratch/k.church/JSALT-2023/semantic_scholar/j
 <li>Embedding Directories are here: $proposed/bins<li>
 </ol>
 <h2>Status</h2>
-Each of the 100 bins are shown in italics (if completed), and bold (if not completed):
+Each of the 100 bins are shown in bold if not completed:
 <ol>
 <li><a href="prefactorization.md">prefactorization</a></li>
 <li><a href="cheby.md">Cheby/Finish</a></li>
