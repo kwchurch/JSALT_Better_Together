@@ -6,22 +6,37 @@
 ### Example usage:
 
 ```sh
-python script.py -i corpus_id -o "path/to/vectors" -m "path/to/prone"
-python script.py -t "Paper Title" -o "path/to/vectors" -m "path/to/prone"
-python script.py -I paper_ids.txt -o "path/to/vectors" -m "path/to/prone"
-python script.py -T paper_titles.txt -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -i corpus_id -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -t "Paper Title" -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -I paper_ids.txt -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -T paper_titles.txt -o "path/to/vectors" -m "path/to/prone"
 ```
 
 ### Description 
  
-Run the script from the command line with the following arguments: 
- 
--  -i  or  --idx : Semantic Scholar paper_id 
--  -t  or  --title : Paper Title 
--  -I  or  --idxs : List of Semantic Scholar paper_ids 
--  -T  or  --titles : List of Paper Titles 
--  -o  or  --output : Output path (default: '/mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone') 
--  -m  or  --model : Model path (default: '/mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model') 
+
+Command Line Arguments
+
+The script can be executed from the command line using the following arguments:
+
+-i, --idx: Semantic Scholar paper_id for obtaining the embedding of a specific paper index.
+-t, --title: Paper title for obtaining the embedding of a specific paper.
+-I, --idxs: Path to a file containing a list of Semantic Scholar paper_ids for obtaining embeddings in batch.
+-T, --titles: Path to a file containing a list of paper titles for obtaining embeddings in batch.
+-o, --output: Output path for saving the embeddings (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone).
+-m, --model: Path to the Prone model (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model).
+
+
+
+### Output
+
+The embeddings will be saved as joblib files in the specified output path. For single paper embeddings, the file will be named [paper_id]_prone.jbl, and for batch embeddings, the file will be named idxs_prone.jbl for indices and titles_prone.jbl for titles.
+
+### Note
+
+Ensure that you have the required Python packages installed before running the script.
+The script utilizes the Prone model, which should be located at the specified model path.
+For using the script with Semantic Scholar API, make sure to set the environment variable containing your API key.
 
 
 
