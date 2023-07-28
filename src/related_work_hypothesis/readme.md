@@ -11,7 +11,8 @@ This repository contains Python scripts to explore the Related Work Hypothesis u
 2. [Test Related Work References Hypothesis using Martins File - over 400k papers](#test-related-work-references-hypothesis-using-martins-file---over-400k-papers)
 3. [Evaluating Related Work References Hypothesis using Martins File](#evaluating-related-work-references-hypothesis-using-martins-file)
 4. [Paper Prediction Model](#paper-prediction-model)
-5. [Get Vectors from Prone Model using Title or ID](#get-vectors-from-prone-model-using-title-or-id)
+5. [Utils](#utils)
+    1. [Get Vectors from Prone Model using Title or ID](#get-vectors-from-prone-model-using-title-or-id)
 
 
 
@@ -177,9 +178,11 @@ The script will output the following information:
 This README provides a general overview of the code and its usage. For detailed technical explanations and further customization, please refer to the comments within the code and consult the relevant libraries' documentation.
 
 
-## Get Vectors from Prone Model using Title or ID
+## Utils
 
-### Example usage:
+### Get Vectors from Prone Model using Title or ID
+
+#### Example usage:
 
 ```sh
 python idx_to_vector_prone.py -i corpus_id -o <path_to_output> -m  <path_to_prone_model>
@@ -188,7 +191,7 @@ python idx_to_vector_prone.py -I paper_ids.txt -o <path_to_output> -m <path_to_p
 python idx_to_vector_prone.py -T paper_titles.txt -o <path_to_output> -m <path_to_prone_model>
 ```
 
-### Description 
+#### Description 
  
 
 Command Line Arguments
@@ -203,11 +206,11 @@ The script can be executed from the command line using the following arguments:
 - -m, --model: The path to the directory containing the Prone models.
 
 
-### Output
+#### Output
 
 The embeddings will be saved as joblib files in the specified output path. For single paper embeddings, the file will be named [paper_id]_prone.jbl, and for batch embeddings, the file will be named idxs_prone.jbl for indices and titles_prone.jbl for titles.
 
-### Note
+#### Note
 
 Ensure that you have the required Python packages installed before running the script.
 The script utilizes the Prone model, which should be located at the specified model path.
