@@ -1,41 +1,21 @@
+
 # Related Work Hypothesis 
- 
- 
-## Get Vectors from Prone Model using Title or ID
 
-### Example usage:
+## Introduction
 
-```sh
-python idx_to_vector_prone.py -i corpus_id -o "path/to/vectors" -m "path/to/prone"
-python idx_to_vector_prone.py -t "Paper Title" -o "path/to/vectors" -m "path/to/prone"
-python idx_to_vector_prone.py -I paper_ids.txt -o "path/to/vectors" -m "path/to/prone"
-python idx_to_vector_prone.py -T paper_titles.txt -o "path/to/vectors" -m "path/to/prone"
-```
+This repository contains Python scripts to explore the Related Work Hypothesis using text embeddings. The hypothesis is evaluated using two different models: Specter2 and Prone. The scripts read text data from two files, namely References File and Compare File, and perform vector clustering and comparison tasks. Additionally, the scripts provide visualizations to aid in understanding the comparison results.
 
-### Description 
- 
+## Index
 
-Command Line Arguments
-
-The script can be executed from the command line using the following arguments:
-
-- -i, --idx: Semantic Scholar paper_id for obtaining the embedding of a specific paper index.
-- -t, --title: Paper title for obtaining the embedding of a specific paper.
-- -I, --idxs: Path to a file containing a list of Semantic Scholar paper_ids for obtaining embeddings in batch.
-- -T, --titles: Path to a file containing a list of paper titles for obtaining embeddings in batch.
-- -o, --output: Output path for saving the embeddings (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone).
-- -m, --model: Path to the Prone model (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model).
+1. [Test Related Work References Hypothesis only 1 paper (Low-resource paper by Rodolfo)](#related-work-hypothesis)
+2. [Test Related Work References Hypothesis using Martin's File (over 400k papers)](#1-vector-clustering)
+3. [Vector Comparison](#2-vector-comparison)
+4. [Visualization](#3-visualization)
+5. [Example Usage](#example-usage)
+6. [Output](#output)
+7. [Prerequisites](#prerequisites)
 
 
-### Output
-
-The embeddings will be saved as joblib files in the specified output path. For single paper embeddings, the file will be named [paper_id]_prone.jbl, and for batch embeddings, the file will be named idxs_prone.jbl for indices and titles_prone.jbl for titles.
-
-### Note
-
-Ensure that you have the required Python packages installed before running the script.
-The script utilizes the Prone model, which should be located at the specified model path.
-For using the script with Semantic Scholar API, make sure to set the environment variable containing your API key.
 
 
 
@@ -207,3 +187,40 @@ The script will output the following information:
 ### Note
 
 This README provides a general overview of the code and its usage. For detailed technical explanations and further customization, please refer to the comments within the code and consult the relevant libraries' documentation.
+
+
+## Get Vectors from Prone Model using Title or ID
+
+### Example usage:
+
+```sh
+python idx_to_vector_prone.py -i corpus_id -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -t "Paper Title" -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -I paper_ids.txt -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -T paper_titles.txt -o "path/to/vectors" -m "path/to/prone"
+```
+
+### Description 
+ 
+
+Command Line Arguments
+
+The script can be executed from the command line using the following arguments:
+
+- -i, --idx: Semantic Scholar paper_id for obtaining the embedding of a specific paper index.
+- -t, --title: Paper title for obtaining the embedding of a specific paper.
+- -I, --idxs: Path to a file containing a list of Semantic Scholar paper_ids for obtaining embeddings in batch.
+- -T, --titles: Path to a file containing a list of paper titles for obtaining embeddings in batch.
+- -o, --output: Output path for saving the embeddings (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone).
+- -m, --model: Path to the Prone model (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model).
+
+
+### Output
+
+The embeddings will be saved as joblib files in the specified output path. For single paper embeddings, the file will be named [paper_id]_prone.jbl, and for batch embeddings, the file will be named idxs_prone.jbl for indices and titles_prone.jbl for titles.
+
+### Note
+
+Ensure that you have the required Python packages installed before running the script.
+The script utilizes the Prone model, which should be located at the specified model path.
+For using the script with Semantic Scholar API, make sure to set the environment variable containing your API key.
