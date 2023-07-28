@@ -2,3 +2,10 @@ numpy
 joblib
 argparse
 requests
+transformers
+pandas 
+matplotlib 
+tqdm 
+scikit-learn 
+plotly 
+tensorflow
