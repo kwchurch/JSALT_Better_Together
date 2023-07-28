@@ -5,7 +5,7 @@
 
 This repository contains Python scripts to explore the Related Work Hypothesis using text embeddings. The hypothesis is evaluated using two different models: Specter2 and Prone. The scripts read text data from two files, namely References File and Compare File, and perform vector clustering and comparison tasks. Additionally, the scripts provide visualizations to aid in understanding the comparison results.
 
-# Índice
+# Index
 
 1. [Test Related Work References Hypothesis only 1 paper - Low-resource paper by Rodolfo](#test-related-work-references-hypothesis-only-1-paper---low-resource-paper-by-rodolfo)
 2. [Test Related Work References Hypothesis using Martins File - over 400k papers](#test-related-work-references-hypothesis-using-martins-file---over-400k-papers)
