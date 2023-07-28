@@ -5,13 +5,14 @@
 
 This repository contains Python scripts to explore the Related Work Hypothesis using text embeddings. The hypothesis is evaluated using two different models: Specter2 and Prone. The scripts read text data from two files, namely References File and Compare File, and perform vector clustering and comparison tasks. Additionally, the scripts provide visualizations to aid in understanding the comparison results.
 
-## Index
+# Índice
 
-1. [Test Related Work References Hypothesis only 1 paper (Low-resource paper by Rodolfo)](#Test-Related-Work-References-Hypothesis-only-1-paper---Low-resource-paper-by-Rodolfo)
-2. [Test Related Work References Hypothesis using Martin's File (over 400k papers)](#Test-Related-Work-References-Hypothesis-using-Martins-File---over-400k-papers)
-3. [Evaluating Related Work References Hypothesis using Martin's File](#Evaluating-Related-Work-References-Hypothesis-using-Martin's-File)
-4. [Paper Prediction Model](#Paper-Prediction-Model)
-5. [Get Vectors from Prone Model using Title or ID](#Get-Vectors-from-Prone-Model-using-Title-or-ID)
+1. [Test Related Work References Hypothesis only 1 paper - Low-resource paper by Rodolfo](#test-related-work-references-hypothesis-only-1-paper---low-resource-paper-by-rodolfo)
+2. [Test Related Work References Hypothesis using Martin's File - over 400k papers](#test-related-work-references-hypothesis-using-martins-file---over-400k-papers)
+3. [Evaluating Related Work References Hypothesis using Martin's File](#evaluating-related-work-references-hypothesis-using-martins-file)
+4. [Paper Prediction Model](#paper-prediction-model)
+5. [Get Vectors from Prone Model using Title or ID](#get-vectors-from-prone-model-using-title-or-id)
+
 
 
 ## Test Related Work References Hypothesis only 1 paper (Low-resource paper by Rodolfo)
