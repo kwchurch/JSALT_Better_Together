@@ -1,0 +1,139 @@
+sorry, these notes are so messy
+
+cd $proposed/bins
+echo `ls ???/walk_pieces/when_necessary/walk12.aa | cut -f1 -d/ `  proposed specter1 specter2 scincl > $proposed/bins/combo
+paste ???/walk_pieces/when_necessary/walk12.aa | awk '{printf "%s", $1; for(i=4;i<=NF;i+=3) printf "\t%s", $i; print ""}' > /tmp/walk12.aa
+
+paste \
+$proposed/walk_pieces/when_necessary/walk12.aa \
+$specter/walk_pieces/when_necessary/walk12.aa  \
+$specter2/walk_pieces/when_necessary/walk12.aa  \
+$scincl/walk_pieces/when_necessary/walk12.aa | 
+awk '{printf "%s", $1; for(i=4;i<=NF;i+=3) printf "\t%s", $i; print ""}' > /tmp/walk12.aa.part2
+
+paste /tmp/walk12.aa  /tmp/walk12.aa.part2 >>  $proposed/bins/combo
+
+paste /work/k.church/JSALT-2023/semantic_scholar/eval/walk_with_bins $proposed/bins/combo | sed 500001q | tr ' ' '\t'  > $proposed/bins/combo2
+
+awk '{for(i=1;i<=NF;i++) {
+       x=$i;
+       if(x == -1) { if(rand() < mean)  {x=1} else {x=0}}
+       if(i == 1) printf("%s", x)
+       else printf("\t%s", x)}
+     print ""}' mean=0.30588 $proposed/bins/combo2 > $proposed/bins/combo3
+
+R
+x = read.table("combo3", header=T, sep="\t")
+sum(x == -1)
+# x[x == -1] = NA
+x$maxbin = pmax(x$bin1, x$bin2)
+
+g.specter1 = glm(dist==1 ~ specter1, data=x, family=binomial)
+g.specter2 = glm(dist==1 ~ specter2, data=x, family=binomial)
+g.proposed = glm(dist==1 ~ proposed, data=x, family=binomial)
+g.scincl = glm(dist==1 ~ scincl, data=x, family=binomial)
+
+mean((g.specter1$fitted.values > 0.3) == (x$dist[!is.na(x$specter1)] == 1))
+mean((g.specter2$fitted.values > 0.3) == (x$dist[!is.na(x$specter2)] == 1))
+mean((g.proposed$fitted.values > 0.3) == (x$dist[!is.na(x$proposed)] == 1))
+mean((g.scincl$fitted.values > 0.3) == (x$dist[!is.na(x$scincl)] == 1)) 
+
+rbind(g.specter1$coef,
+g.specter2$coef,
+g.proposed$coef,
+g.scincl$coef)
+
+x$dist1 = (x$dist == 1)
+options(digits=2, width=120)
+s = x$maxbin < 50
+cor(x[s,c("dist1", "X000", "X010", "X020", "X030", "X053", "X062", "X079", "X098", "specter1", "specter2", "proposed", "scincl")], use="na.or.complete")[1,]/
+cor(x[!s,c("dist1", "X000", "X010", "X020", "X030", "X053", "X062", "X079", "X098", "specter1", "specter2", "proposed", "scincl")], use="na.or.complete")[1,]
+
+
+y=data.frame(bin=6:45)
+y$bin.names = names(x)[y$bin]
+y$acc.maxbin.with.specter1 = rep(0, length(y$bin))
+y$acc.maxbin.without.specter1 = rep(0, length(y$bin))
+# y$acc.with.specter1 = rep(0, length(y$bin))
+# y$acc.without.specter1 = rep(0, length(y$bin))
+
+for(i in 1:(length(y$bin))) {
+bin = y$bin[i]
+g = glm(x$dist == 1 ~ x[,names(x)[bin]] + x$maxbin, family=binomial)
+print(names(x)[bin])
+m = mean((g$fitted.values > 0.3) == (x$dist == 1))
+y$acc.maxbin.without.specter1[i] = m
+print(m)
+print(g$coef)
+}
+
+
+for(i in 1:(length(y$bin))) {
+bin = y$bin[i]
+g = glm(x$dist == 1 ~ x[,names(x)[bin]] + x$specter1 + x$maxbin, family=binomial)
+print(names(x)[bin])
+m = mean((g$fitted.values > 0.3) == (x$dist == 1))
+y$acc.maxbin.with.specter1[i] = m
+print(m)
+print(g$coef)
+}
+
+
+
+
+for(i in 1:(length(y$bin))) {
+bin = y$bin[i]
+g = glm(x$dist == 1 ~ x[,names(x)[bin]], family=binomial)
+print(names(x)[bin])
+m = mean((g$fitted.values > 0.3) == (x$dist == 1))
+y$acc.without.specter1[i] = m
+print(m)
+print(g$coef)
+}
+
+
+for(i in 1:(length(y$bin))) {
+bin = y$bin[i]
+g = glm(x$dist == 1 ~ x[,names(x)[bin]] + x$specter1, family=binomial)
+print(names(x)[bin])
+m = mean((g$fitted.values > 0.3) == (x$dist == 1))
+y$acc.with.specter1[i] = m
+print(m)
+print(g$coef)
+}
+
+
+g.specter1 = glm(dist==1 ~ specter1, data=x, family=binomial)
+g.specter2 = glm(dist==1 ~ specter2, data=x, family=binomial)
+g.proposed = glm(dist==1 ~ proposed, data=x, family=binomial)
+g.scincl = glm(dist==1 ~ scincl, data=x, family=binomial)
+
+mean((g.specter1$fitted.values > 0.3) == (x$dist == 1))
+mean((g.specter2$fitted.values > 0.3) == (x$dist == 1))
+mean((g.proposed$fitted.values > 0.3) == (x$dist == 1))
+mean((g.scincl$fitted.values > 0.3) == (x$dist == 1)) 
+
+source("~/to_go/y.R")
+jpeg("~/to_go/y.jpg", pointsize=16)
+plot(range(y$ibin), range(c(0.31, 0.68, y[,3:6])), type = 'n', xlab="bin", ylab="accuracy")
+for(i in 3:6) { lines(y$ibin, y[,i], lty=i, col=i, lwd=3)}
+abline(h=c(0.31, 0.59,0.68), lwd=3, col=c("red", "blue", "black"))
+legend(20,.58, c(names(y)[3:6]), col=3:6, lty=3:6, lwd=3)
+legend(20,0.43, c("chance", "specter1 (on 100% G)", "proposed (on 100% G)"), lwd=3, col=c("red", "blue", "black"))
+dev.off()
+
+jpeg("~/to_go/y2.jpg", pointsize=16)
+plot(range(y$ibin), range(y[,c(3,5)]), type = 'n', xlab="bin", ylab="accuracy")
+for(i in c(3,5)) { lines(y$ibin, y[,i], lty=i, col=i, lwd=3)}
+# abline(h=c(0.31, 0.59,0.68), lwd=3, col=c("red", "blue", "black"))
+legend(20,.61, c(names(y)[c(3,5)]), col=c(3,5), lty=c(3,5), lwd=3)
+# legend(20,0.43, c("chance", "specter1 (on 100% G)", "proposed (on 100% G)"), lwd=3, col=c("red", "blue", "black"))
+dev.off()
+
+cd $proposed/bins
+for bin in ???
+do
+echo $bin
+zip zips/$bin.zip $bin/walk_pieces/when_necessary/walk12.?? 
+done
+
