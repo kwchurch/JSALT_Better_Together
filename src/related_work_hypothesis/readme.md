@@ -37,19 +37,18 @@ The script creates a 2D scatter plot for each model and reference type to visual
 Additionally, the script uses t-SNE to reduce the dimensionality of the vectors to 3D and creates an interactive 3D plot for visualization.
 
 
-
 ### Example usage:
 
 ```sh
-python rw_recommendation_case_1.py -r "path/to/all_references"  -w "path/to/related_work_references" -c "path/to/paper_to_compare"
+python rw_recommendation_case_1.py -r  <path_to_all_references>  -w <path_to_rw_references> -c <path_to_paper_compare>
 ```
  
 ### Description 
  
 To run the script from the command line, use the following arguments: 
 
-- -r or --ref: Path to the References File. The default path is ../related_work_hypothesis/references_files/all_ref.txt.
-- -c or --compare: Path to the Compare File. The default path is ../related_work_hypothesis/references_files/db_test.txt.
+- -r, --ref: Path to the References File.
+- -c, --compare: Path to the Compare File.
 
 Note: The script supports two additional arguments, -w and -c, to specify the path to the Related Work References File. The default path for the Related Work References File is ../related_work_hypothesis/references_files/related_work_ref.txt.
 
@@ -85,17 +84,10 @@ python rw_recommendation_case_2.py -i <path_to_references_file> -m <path_to_mode
 
 ### Description
 
-- -i or --input (Positional Argument):
+- -i, --input: The path to the input JSONL file containing references to be processed.
+- -m, --model: The path to the directory containing the Prone models.
 
-Description: This argument represents the path to the input JSONL file containing references to be processed.
-Default Value: ../related_work_hypothesis/references_files/rw_citations.jsonl
-Purpose: The code reads the data from this file, which should contain information about research papers, their related work citations, and other citations.
 
-- -m or --model (Positional Argument):
-
-Description: This argument represents the path to the directory containing the pre-trained models.
-Default Value: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model
-Purpose: The code uses this directory to locate the pre-trained models required for calculating vector representations of research papers.
 The script will process the citations for each paper, calculate similarity metrics, and generate the output.
 
 
@@ -132,7 +124,7 @@ python evaluating_rw_case_2.py -f <path_to_rw_hypo.tsv>
 
 The script supports the following command-line arguments:
 
-- -f, --files: The path to the directory containing the TSV files. If not provided, the default path is used: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/JSALT_Better_Together/src/related_work_hypothesis/results/.
+- -f, --files: The path to the directory containing the TSV files.
 
 
 ### Output
@@ -190,10 +182,10 @@ This README provides a general overview of the code and its usage. For detailed 
 ### Example usage:
 
 ```sh
-python idx_to_vector_prone.py -i corpus_id -o "path/to/vectors" -m "path/to/prone"
-python idx_to_vector_prone.py -t "Paper Title" -o "path/to/vectors" -m "path/to/prone"
-python idx_to_vector_prone.py -I paper_ids.txt -o "path/to/vectors" -m "path/to/prone"
-python idx_to_vector_prone.py -T paper_titles.txt -o "path/to/vectors" -m "path/to/prone"
+python idx_to_vector_prone.py -i corpus_id -o <path_to_output> -m  <path_to_prone_model>
+python idx_to_vector_prone.py -t "Paper Title" -o <path_to_output> -m <path_to_prone_model>
+python idx_to_vector_prone.py -I paper_ids.txt -o <path_to_output> -m <path_to_prone_model>
+python idx_to_vector_prone.py -T paper_titles.txt -o <path_to_output> -m <path_to_prone_model>
 ```
 
 ### Description 
@@ -207,8 +199,8 @@ The script can be executed from the command line using the following arguments:
 - -t, --title: Paper title for obtaining the embedding of a specific paper.
 - -I, --idxs: Path to a file containing a list of Semantic Scholar paper_ids for obtaining embeddings in batch.
 - -T, --titles: Path to a file containing a list of paper titles for obtaining embeddings in batch.
-- -o, --output: Output path for saving the embeddings (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/vectors_prone).
-- -m, --model: Path to the Prone model (default: /mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model).
+- -o, --output: Output path for saving the embeddings.
+- -m, --model: The path to the directory containing the Prone models.
 
 
 ### Output
