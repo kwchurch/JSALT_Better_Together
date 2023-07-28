@@ -65,7 +65,7 @@ Additionally, the script uses t-SNE to reduce the dimensionality of the vectors 
 ### Example usage:
 
 ```sh
-python test_papers_recommendation.py -r "path/to/all_references"  -w "path/to/related_work_references" -c "path/to/paper_to_compare"
+python rw_recommendation_case_1.py -r "path/to/all_references"  -w "path/to/related_work_references" -c "path/to/paper_to_compare"
 ```
  
 ### Description 
@@ -96,3 +96,13 @@ The plot is saved as <model>_comparacion_cosine.png, where <model> is the name o
 
 An interactive 3D plot showing the reduced-dimensional vectors for each model and reference type.
 The plot is saved as grafico_3d.png.
+
+
+## Test Related Work References Hypothesis using Martin's File (over 400k papers)
+
+
+### Example usage:
+
+```sh
+python rw_recommendation_case_2.py -i <path_to_references_file> -m <path_to_model_directory>
+```

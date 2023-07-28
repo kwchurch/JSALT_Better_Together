@@ -6,14 +6,12 @@ from util_prone import directory_to_config, get_vector_prone
 from tqdm import tqdm
 import json
 from util import get_cosine, get_centroid
-from concurrent.futures import ProcessPoolExecutor
-import os
-
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", help="reference File", default='../related_work_hypothesis/references_files/rw_citations.jsonl')
+    parser.add_argument("-m", "--model", help="Model path", default='/mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model')
     args = parser.parse_args()
     return args
 
@@ -72,7 +70,7 @@ def process_json_batch(json_batch, prone_model):
 
 def main():
     args = parse_args()
-    prone_model = directory_to_config("/mnt/c/Rodolfo/Desarrollo/JSALT_2023/prone_model")
+    prone_model = directory_to_config(args.model)
 
     if args.input:
         batch_size = 500
@@ -93,12 +91,13 @@ def main():
 
             # Save results every 100 batches
             if (batch_num) % 10 == 0:
-                print("Guardando")
+                print("Saving...")
                 save(hypos, f"rw_hypo_batch{batch_num+1}")
                 hypos = []
 
         # Save final results after processing all batches
         save(hypos, "rw_hypo")
+        print("Finish process")
 
 
 if __name__ == "__main__":
