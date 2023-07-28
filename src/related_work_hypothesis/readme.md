@@ -8,9 +8,9 @@ This repository contains Python scripts to explore the Related Work Hypothesis u
 ## Index
 
 1. [Test Related Work References Hypothesis only 1 paper (Low-resource paper by Rodolfo)](#Test-Related-Work-References-Hypothesis-only-1-paper-(Low-resource-paper-by-Rodolfo))
-2. [Test Related Work References Hypothesis using Martin's File (over 400k papers)](#1-vector-clustering)
-3. [Evaluating Related Work References Hypothesis using Martin's File](#2-vector-comparison)
-4. [Paper Prediction Model](#3-visualization)
+2. [Test Related Work References Hypothesis using Martin's File (over 400k papers)](#Test-Related-Work-References-Hypothesis-using-Martin's-File-(over-400k-papers))
+3. [Evaluating Related Work References Hypothesis using Martin's File](#Evaluating-Related-Work-References-Hypothesis-using-Martin's-File)
+4. [Paper Prediction Model](#Paper-Prediction-Model)
 5. [Get Vectors from Prone Model using Title or ID](#Get-Vectors-from-Prone-Model-using-Title-or-ID)
 
 
