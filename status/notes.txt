@@ -20,10 +20,10 @@ ls ??? | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}
 
 cd $JSALTsrc/../status
 paste prefactorization.txt cheby.txt bins.txt | 
-awk '$2 > 0 {status[$1]="prefact"};
-     $4 > 0 {status[$1]="cheby"};
-     $6 > 0 {status[$1]="bins"};
-END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}' |
+awk '$2 > 0 {status[0+$1]="prefact"};
+     $4 > 0 {status[0+$1]="cheby"};
+     $6 > 0 {status[0+$1]="bins"};
+END {for(i=0;i<100;i++) printf "<td>%s</td>\n",  status[i]}' |
 awk 'BEGIN {print "<table><tr>"
     for(i=0;i<10;i++) printf "<th>%03d</th>", i;
     print "</tr><tr>"}
