@@ -1,20 +1,14 @@
 #!/usr/bin/env python
 
-import csv
 import pandas as pd
 import os
-import csv
-import ast
 import torch
-from torch import nn, tensor
-import os, sys, argparse, time, gc, socket
-from torchvision.io import read_image
+from torch import nn
+import os, argparse, time
 import numpy as np
 import torch
-from torch import nn, tensor
 import os
 import matplotlib.pyplot as plt
-from PIL import Image
 import requests
 from tqdm import tqdm
 import math
@@ -169,10 +163,9 @@ class CustomTrainer():
             cosines = self.test(model, self.X_test, self.y_test)
         return cosines
 
-if __name__=='__main__':
-    torch._dynamo.config.verbose = True
-    torch._dynamo.config.suppress_errors = True
-    
+
+
+def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--learning_rate', type=float, help='Learning rate for the trainer', default=5e-5)
     parser.add_argument('-p', '--pretrained', type = str, help='Location of a previously trained model')
@@ -191,6 +184,15 @@ if __name__=='__main__':
     parser.add_argument('-ca', '--case', type=str, help = 'Merged df or not', default='one')
     parser.add_argument('-m', '--metric', type = str, help = 'Evalutation metric')
     args = parser.parse_args()
+    return args
+
+
+
+if __name__=='__main__':
+    torch._dynamo.config.verbose = True
+    torch._dynamo.config.suppress_errors = True
+    
+    args = parse_args()
 
     lr = args.learning_rate
     pretrained_model = args.pretrained
@@ -231,7 +233,6 @@ if __name__=='__main__':
     df_x.to_csv('rw.csv')
     df_y.to_csv('all_citations.csv')
     df_z.to_csv('prone_y.csv')
-    
     """
     df_x = pd.read_csv('rw.csv')
     df_y = pd.read_csv('all_citations.csv')
