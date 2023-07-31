@@ -26,6 +26,7 @@ class PretrainingDataset(Dataset):
 
 					if i < skip_first_k:
 						continue
+					
 
 					if len(bin_data) >= self.sample_size:
 						self.data.extend(bin_data)
@@ -36,7 +37,8 @@ class PretrainingDataset(Dataset):
 
 
 					abstract = re.sub(whitespace_pat, ' ', abstract)
-
+					if i == skip_first_k:
+						print(abstract)
 					if len(abstract) < min_characters or len(set(abstract)) < min_unique_characters:
 						continue
 

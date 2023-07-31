@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for model in roberta-base xlm-roberta-base bert-base-multilingual-cased bert-large-cased; do #roberta-base xlm-roberta-base bert-base-multilingual-cased bert-large-cased; do
-	
+for model in roberta-base xlm-roberta-base bert-base-multilingual-cased bert-large-cased; do 
+
 	for bin in {0..99..5} 99; do
 
 		echo ${bin} ${model}

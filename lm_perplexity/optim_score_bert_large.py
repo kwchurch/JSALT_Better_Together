@@ -30,6 +30,11 @@ if __name__ == '__main__':
 	parser.add_argument('--max_seq_len', type=int, default=128)
 	parser.add_argument('--bin_samples_dir', type=str, default='sampling/bin_samples/')
 	parser.add_argument('--write_dir', type=str, default='log_calculations/torch_outputs/')
+	parser.add_argument('--local_model_dir', type=str, default='log_calculations/pretraining/')
+	parser.add_argument('--local_experiment_name', type=str)
+	parser.add_argument('--local_model_name', type=str)
+	parser.add_argument('--local_model_checkpoint', type=str, default='final_model/')
+	parser.add_argument('--use_local_model', action='store_const', const=True, default=False)
 	parser.add_argument('--strip_newlines', action='store_const', const=True, default=False)
 	parser.add_argument('--index_only', action='store_const', const=True, default=False, help='Do not calculate scores, only update the index.')
 
@@ -71,8 +76,12 @@ if __name__ == '__main__':
 		attention_masks.append(attention_mask)
 		lengths.append(len(inpid))
 
-	model_write_dir = os.path.join(args.write_dir, args.experiment_name, f'{args.model_name}')
-
+	if args.use_local_model:
+		model_write_dir = os.path.join(args.write_dir, args.experiment_name, args.local_model_name, args.model_name)
+		
+	else:
+		model_write_dir = os.path.join(args.write_dir, args.experiment_name, f'{args.model_name}')
+	print(f'Generated model_write_dir: {model_write_dir}')
 	if not os.path.exists(model_write_dir):
 		os.makedirs(model_write_dir)
 
@@ -91,8 +100,14 @@ if __name__ == '__main__':
 		print('Index only set. Not scoring inputs. ')
 		quit(0)
 
+	if args.use_local_model:
+		model_name = os.path.join(args.local_model_dir, args.local_experiment_name, args.model_name, args.local_model_name, args.local_model_checkpoint)
+		print(f'Attempting to load: {model_name}')
+		model = AutoModelForMaskedLM.from_pretrained(model_name)
+	else:
+		print(f'Attempting to load: {args.model_name}')
+		model = AutoModelForMaskedLM.from_pretrained(args.model_name)
 
-	model = AutoModelForMaskedLM.from_pretrained(args.model_name)
 	model = model.to('cuda:0')
 
 	sm = torch.nn.Softmax(dim=2)

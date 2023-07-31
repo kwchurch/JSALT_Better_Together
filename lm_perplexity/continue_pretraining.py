@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
 	output_directory = os.path.join(args.write_dir, args.experiment_name, args.starting_model_name, args.adapted_model_name)
 	training_arguments = TrainingArguments(output_dir=output_directory,
-										   per_device_train_batch_size= 32,
+										   per_device_train_batch_size= 64,
 											gradient_accumulation_steps= 1,
 											learning_rate= 2.0e-5,
 											num_train_epochs= 20,
