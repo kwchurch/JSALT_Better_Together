@@ -1,3 +1,7 @@
+# Status of Prefactorization, Cheby/Finish and Bins (Embedding Directories)
+There are 100 cells for the 100 bins.  The best case is when the cell contains, <b>bins</b>; that means that bin is past all three steps.
+The worst case is when the cell contains nothing; that means prefactorization is not done.
+If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations and/or Cheby finish.
 <table><tr><th></th>
 <th>000</th><th>001</th><th>002</th><th>003</th><th>004</th><th>005</th><th>006</th><th>007</th><th>008</th><th>009</th></tr><tr><th>000</th><td>bins</td>
 <td>bins</td>
