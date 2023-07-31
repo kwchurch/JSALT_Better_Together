@@ -1,4 +1,4 @@
-<table><tr>
+<table><tr><th></th>
 <th>000</th><th>001</th><th>002</th><th>003</th><th>004</th><th>005</th><th>006</th><th>007</th><th>008</th><th>009</th></tr><tr>
 <td>bins</td>
 <td>bins</td>
@@ -10,7 +10,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-</tr><tr>
+</tr><tr><th>000</th><td>bins</td>
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -20,9 +20,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-<td>bins</td>
-</tr><tr>
-<td>bins</td>
+</tr><tr><th>010</th><td>bins</td>
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -32,7 +30,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-</tr><tr>
+</tr><tr><th>020</th><td>bins</td>
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -42,9 +40,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-<td>bins</td>
-</tr><tr>
-<td>bins</td>
+</tr><tr><th>030</th><td>bins</td>
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -54,8 +50,7 @@
 <td></td>
 <td></td>
 <td></td>
-</tr><tr>
-<td>bins</td>
+</tr><tr><th>040</th><td>bins</td>
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -65,8 +60,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>prefact</td>
-</tr><tr>
-<td></td>
+</tr><tr><th>050</th><td></td>
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -76,8 +70,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-</tr><tr>
-<td>bins</td>
+</tr><tr><th>060</th><td>bins</td>
 <td></td>
 <td></td>
 <td>bins</td>
@@ -87,8 +80,7 @@
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-</tr><tr>
-<td>bins</td>
+</tr><tr><th>070</th><td>bins</td>
 <td>prefact</td>
 <td></td>
 <td></td>
@@ -98,8 +90,7 @@
 <td></td>
 <td></td>
 <td></td>
-</tr><tr>
-<td></td>
+</tr><tr><th>080</th><td></td>
 <td>bins</td>
 <td>bins</td>
 <td></td>
@@ -109,5 +100,4 @@
 <td></td>
 <td>bins</td>
 <td></td>
-</tr><tr>
-</tr></table>
+</tr><tr><th>090</th></tr></table>
