@@ -31,11 +31,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # to combat memory problems
 torch.cuda.empty_cache()
 
-# can easily change this into any structure
-# can produce prone embeddings in live time?
+
 class net(nn.Module):
-    # simple vector to vector regression
-    # transformer?
     def __init__(self, dim, input_dim, output_dim, dropout=0.0):
         super(net, self).__init__()
 
@@ -192,12 +189,9 @@ if __name__=='__main__':
     parser.add_argument('-cl', '--cache_location', type = str, help = 'Location for HuggingFace files')
     parser.add_argument('-di', '--dimension', type=int, help = 'internal dimension', default = 128)
     parser.add_argument('-ca', '--case', type=str, help = 'Merged df or not', default='one')
-
-    # what are the best metrics?
     parser.add_argument('-m', '--metric', type = str, help = 'Evalutation metric')
     args = parser.parse_args()
 
-    # Why explicitly state these
     lr = args.learning_rate
     pretrained_model = args.pretrained
     epochs = args.epochs
