@@ -66,7 +66,7 @@ if __name__ == '__main__':
 		data_collator=collator
 	)
 
-	trainer.train()
+	trainer.train('/projects/abeb4417/jsalt/lm_perplexity/log_calculations/pretraining/pretraining_test/allenai/scibert_scivocab_cased/bins_70_to_90/checkpoint-40000/')
 
 	model.save_pretrained(os.path.join(output_directory, 'final_model'))
 	print('Model saved in: {}'.format(output_directory))
