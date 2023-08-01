@@ -149,7 +149,7 @@ if not query is None:
     print('papers: ' + str(papers), file=sys.stderr)
     do_papers(papers)
 elif not search is None:
-    j = requests.get('https://api.semanticscholar.org/graph/v1/paper/autocomplete?search=' + search, headers={"x-api-key": apikey}).json()
+    j = requests.get('https://api.semanticscholar.org/graph/v1/paper/search?query=' + search, headers={"x-api-key": apikey}).json()
     print('j: ' + str(j), file=sys.stderr)
     ids = [ m['paperId'] for m in j['data']]
     print('ids: ' + str(ids), file=sys.stderr)
