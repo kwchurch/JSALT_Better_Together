@@ -50,9 +50,9 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>bins</td>
 <td>bins</td>
 <td>bins</td>
-<td></td>
-<td></td>
-<td></td>
+<td>prefact</td>
+<td>prefact</td>
+<td>prefact</td>
 </tr><tr><th>050</th><td>bins</td>
 <td>bins</td>
 <td>bins</td>
@@ -84,10 +84,10 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>bins</td>
 <td>bins</td>
 </tr><tr><th>080</th><td>bins</td>
-<td>cheby</td>
+<td>bins</td>
 <td></td>
 <td></td>
-<td>cheby</td>
+<td>bins</td>
 <td></td>
 <td></td>
 <td></td>

@@ -8,6 +8,7 @@
 #include <ctype.h>
 
 int verbose = 0;
+int check_sort_option = 0;
 int show_details = 0;
 int find_best = 1;
 int threshold = 0;
@@ -18,7 +19,7 @@ long nfloats = -1;
 
 void usage()
 {
-  fatal("usage: cat vector | vector_near_with_floats --verbose --dir <dir> --offset <n> index1 index2 index3 > report");
+  fatal("usage: cat vector | vector_near_with_floats --check_sort --verbose --dir <dir> --offset <n> index1 index2 index3 > report");
 }
 
 // input two vectors (a and b) of length n
@@ -212,6 +213,7 @@ struct idx *init_indexes(char **filenames, int n)
 
 void check_sort(struct idx *idx)
 {
+  fprintf(stderr, "checking sort ...");
   char *buf = malloc(random_bytes*2);
   char *buf2 = buf+random_bytes;
   vec2bytes(buf, random_bytes, floats + idx->idx[0] * record_size, record_size, idx);
@@ -222,6 +224,7 @@ void check_sort(struct idx *idx)
     if(comp > 0) fprintf(stderr, "check_sort (disorder): i: %ld\tcomp: %d\n", i, comp);
     memcpy(buf, buf2, random_bytes);
   }
+  fprintf(stderr, " done\n");
 }
 
 long paper_near(char *bytes, int random_bytes, struct idx *idx)
@@ -330,6 +333,7 @@ int main(int ac, char **av)
     else if(strcmp(av[i], "--help") == 0) usage();
     else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
     else if(strcmp(av[i], "--verbose") == 0) verbose=1;
+    else if(strcmp(av[i], "--check_sort") == 0) check_sort_option=1;
     else {
       nindexes=ac-i;
       indexes = init_indexes(av+i, nindexes);
@@ -354,7 +358,8 @@ int main(int ac, char **av)
   char *bytes2 = bytes + random_bytes;
   char *bytes3 = bytes2 + random_bytes;
 
-  // check_sort(indexes);
+  if(check_sort_option)
+    check_sort(indexes);
 
   int recno = -1;
   while(fread(vec, sizeof(float), record_size, stdin) == record_size) {
