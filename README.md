@@ -15,6 +15,7 @@
 <li><a href="https://docs.google.com/spreadsheets/d/1JMq-jR4M8KU119cvglUDmMwwzd60Z3vyvn3VqhPn9EY/view#gid=1450677429">SciRepEval Baselines</a></li>
 <li><a href="doc/Similar_Venues.md">Similar Venues</a></li>
 <li><a href="doc/whatswhere.md">What's Where</a> (doc on big files on Globus)</li>
+<li><a href="http://34.204.188.58//cgi-bin/similar?CorpusId=3051291">web service (on Amazon AWS)</a></li>
 </ol>
 
 <h2>Installation</h2>

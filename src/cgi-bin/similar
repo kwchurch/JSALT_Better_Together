@@ -106,7 +106,7 @@ def do_papers(papers):
         print('rec: ' + str(rec), file=sys.stderr)
         if not rec is None and 'externalIds' in rec:
             key = int(rec['externalIds']['CorpusId'])
-            val = '<tr><td>%s</td><td><a href="%s">%s</a></td></tr>' % (str(rec['citationCount']), rec['url'], rec['title'])
+            val = '<tr><td>%s</td><td><a href="%s">%s</a></td><a href="similar?CorpusId=%s">like this</a></td></tr>' % (str(rec['citationCount']), rec['url'], rec['title'])
             hrefs[key] = val
     print('res: ' + str(res), file=sys.stderr)
     print('papers: ' + str(papers), file=sys.stderr)
@@ -114,7 +114,7 @@ def do_papers(papers):
         # print('<h2>Input paper: %s; query=%s</h2>' % (papers[i], query))
         # print('<ol>')
         print('<h2>Input paper: %s</h2>' % (href_ify(res[i][0][1], hrefs)))
-        print('<table><tr><th>citations</th><th>title</th></tr>')
+        print('<table><tr><th>citations</th><th>title</th><th>more like this</th></tr>')
         for score, id1, id2 in res[i]:
             print(href_ify(id2, hrefs))
         print('</table>')
