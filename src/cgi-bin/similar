@@ -9,6 +9,7 @@ form = cgi.FieldStorage()
 # Get data from fields
 paper = form.getvalue('CorpusId')
 query = form.getvalue('query')
+search = form.getvalue('search')
 npapers = form.getvalue('limit')
 if npapers is None:
     npapers = 20
@@ -147,9 +148,20 @@ if not query is None:
     papers = [ rec['externalIds']['CorpusId'] for rec in r ]
     print('papers: ' + str(papers), file=sys.stderr)
     do_papers(papers)
-    # for m in j['matches']:
-    #     print('query: <a href="https://www.semanticscholar.org/paper/%s">%s</a>' % (m['id'], m['title']))
-    #     do_paper(fetch_corpusId(m['id']))
+elif not search is None:
+    j = requests.get('https://api.semanticscholar.org/graph/v1/paper/autocomplete?search=' + search, headers={"x-api-key": apikey}).json()
+    print('j: ' + str(j), file=sys.stderr)
+    ids = [ m['paperId'] for m in j['data']]
+    print('ids: ' + str(ids), file=sys.stderr)
+    r = requests.post(
+        'https://api.semanticscholar.org/graph/v1/paper/batch',
+        params={'fields': 'externalIds'},
+        json={"ids": ids},
+        headers={"x-api-key": apikey}).json()
+    print(r, file=sys.stderr)
+    papers = [ rec['externalIds']['CorpusId'] for rec in r ]
+    print('papers: ' + str(papers), file=sys.stderr)
+    do_papers(papers)
 else:
     do_papers([paper])
 print("</ol>")
