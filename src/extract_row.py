@@ -79,7 +79,7 @@ if args.has_values:
         x = line.rstrip()
         ix = int(x)
         if len(x) > 0:
-            for y,v in zip(extract_row(ix), extract_row_vals(ix))
+            for y,v in zip(extract_row(ix), extract_row_vals(ix)):
                 print('\t'.join(map(str, [x, y, v])))
 else:
     for line in sys.stdin:
