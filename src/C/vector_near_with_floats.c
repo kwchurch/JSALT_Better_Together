@@ -192,7 +192,7 @@ void init_idx(struct idx *idx, char *filename)
   }
 
   int seed = filename_to_seed(filename);
-  if(verbose) fprintf(stderr, "filename_to_seed: fn = %s, seed = %d\n", fn, seed);
+  fprintf(stderr, "filename_to_seed: fn = %s, seed = %d\n", fn, seed);
   srand(seed);
   idx->random_floats = (float *)malloc(sizeof(float) * record_size * random_bytes * 8);				       
   init_random_floats(idx->random_floats, record_size * random_bytes * 8);
@@ -204,7 +204,7 @@ struct idx *init_indexes(char **filenames, int n)
   int i;
   struct idx *indexes = (struct idx *)malloc(n * sizeof(struct idx));
   for(i=0; i<n; i++) {
-    if(verbose) fprintf(stderr, "filenames[%d] = %s\n", i, filenames[i]);
+    fprintf(stderr, "filenames[%d] = %s\n", i, filenames[i]);
     init_idx(indexes+i, filenames[i]);
   }
   return indexes;

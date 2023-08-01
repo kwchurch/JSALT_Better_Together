@@ -60,10 +60,10 @@
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
-<td bgcolor="red"><big><b><u>056</u></b></big></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
-<td bgcolor="red"><big><b><u>059</u></b></big></td>
+<td bgcolor="green"><small><i></i></small></td>
+<td bgcolor="green"><small><i></i></small></td>
 </tr><tr>
 <td bgcolor="red"><big><b><u>060</u></b></big></td>
 <td bgcolor="green"><small><i></i></small></td>

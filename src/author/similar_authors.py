@@ -8,7 +8,7 @@ from sklearn import preprocessing
 from sklearn.utils.extmath import randomized_svd
 import sys,argparse,time,socket,os
 
-print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
+print('sim_authors.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
 sys.stderr.flush()
 
 t0 = time.time()
