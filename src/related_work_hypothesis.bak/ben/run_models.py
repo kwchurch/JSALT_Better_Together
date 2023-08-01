@@ -1,22 +1,15 @@
 #!/usr/bin/env python
 
 import pandas as pd
-import os
-import torch
 from torch import nn
-import os, argparse, time
+import argparse, time
 import numpy as np
 import torch
-import os
 import matplotlib.pyplot as plt
-import requests
-from tqdm import tqdm
-import math
 import torch._dynamo as dynamo
 import time
 from sklearn.model_selection import train_test_split
 import argparse
-from sklearn.metrics.pairwise import cosine_similarity
 import torch.nn.functional as F
 
 
@@ -116,9 +109,6 @@ class CustomTrainer():
         training_loss_over_epochs = []
         for epoch in range(self.epochs):
             training_loss = []
-            train_accuracies = []
-            train_auroc = []
-            total_acc = 0
             #num_train_steps = len(train_x) - 1
 
             # optimize for speed?
@@ -164,7 +154,6 @@ class CustomTrainer():
         return cosines
 
 
-
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--learning_rate', type=float, help='Learning rate for the trainer', default=5e-5)
@@ -174,11 +163,9 @@ def parse_args():
     parser.add_argument('-d', '--decay', type = float, help = 'Weight decay for the optimizer', default = 0.0)
     parser.add_argument('-b1','--beta_1', type = float, help='Beta1 for the optimizer', default = 0.9)
     parser.add_argument('-b2', '--beta_2', type = float, help = 'Beta2 for the optimizer', default= 0.999)
-    parser.add_argument('-c', '--classes', type= int, help='Number of classes', default = 2)
     parser.add_argument('-tb', '--train_batch_size', type = int, help = 'Batch size for training step', default = 8)
     parser.add_argument('-ev', '--eval_batch_size', type = int, help = 'Batch size for eval step', default = 1)
     parser.add_argument('-db', '--debug', type = bool, help = 'Debug underflow and overflow', default = False)
-    parser.add_argument('-t', '--task', type = str, help = 'Task type for training loop', default = 'classification')
     parser.add_argument('-cl', '--cache_location', type = str, help = 'Location for HuggingFace files')
     parser.add_argument('-di', '--dimension', type=int, help = 'internal dimension', default = 128)
     parser.add_argument('-ca', '--case', type=str, help = 'Merged df or not', default='one')
@@ -201,39 +188,13 @@ if __name__=='__main__':
     decay = args.decay
     beta_1 = args.beta_1
     beta_2 = args.beta_2
-    num_classes = args.classes
     train_batch_size = args.train_batch_size
     eval_batch_size = args.eval_batch_size
-    task = args.task
     debug = args.debug
     cache_location = args.cache_location
 
     # add training args
     t0 = time.time()
-    """
-    FILEPATH = '/work/nlp/b.irving/related_work/predicting_vectors'
-    raw_dirs = set([d for d in os.listdir(FILEPATH)])
-    x,z,y = [],[],[]
-    for archivo in raw_dirs:
-        if (archivo == 'predicting_vectors'):
-            pass
-        else:
-            with open(FILEPATH+"/"+archivo, "r") as file:
-                for line in file:
-                    if line.find("V") == -1:
-                        line = line.replace("\n","")
-                        line = line.replace("'","")
-                        z.append(ast.literal_eval(line.split("\t")[1]))
-                        x.append(ast.literal_eval(line.split("\t")[2]))
-                        y.append(ast.literal_eval(line.split("\t")[3]))
-
-    df_x = pd.DataFrame(x)
-    df_y = pd.DataFrame(y)
-    df_z = pd.DataFrame(z)
-    df_x.to_csv('rw.csv')
-    df_y.to_csv('all_citations.csv')
-    df_z.to_csv('prone_y.csv')
-    """
     df_x = pd.read_csv('rw.csv')
     df_y = pd.read_csv('all_citations.csv')
     df_z = pd.read_csv('prone_y.csv')
