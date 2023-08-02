@@ -1,7 +1,7 @@
 #!/usr/bin/env python 
 
 # Import modules for CGI handling 
-import cgi, cgitb 
+import cgi, cgitb, os
 
 # Create instance of FieldStorage 
 form = cgi.FieldStorage() 
@@ -11,7 +11,7 @@ paper = form.getvalue('CorpusId')
 query = form.getvalue('query')
 search = form.getvalue('search')
 npapers = form.getvalue('limit')
-# embedding = form.getvalue('embedding')
+embedding = form.getvalue('embedding')
 
 if npapers is None:
     npapers = 20
@@ -69,9 +69,12 @@ idx_memos = {}
 
 def lookup_paper(paper):
     try:
-        embedding='proposed'
+        if embedding is None:
+            embedding='proposed'
         bigrams_file = os.environ.get('JSALTdir') + '/semantic_scholar/embeddings/' + str(embedding) + '/bigrams'
         print('bigrams_file: ' + bigrams_file, file=sys.stderr)
+        if not os.path.exists(bigrams_file):
+            print('bigrams_file not found: ' + bigrams_file)
         if bigrams_file in idx_memos:
             idx = idx_memos[bigrams_file]
         else:
