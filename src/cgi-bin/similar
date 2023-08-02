@@ -11,6 +11,8 @@ paper = form.getvalue('CorpusId')
 query = form.getvalue('query')
 search = form.getvalue('search')
 npapers = form.getvalue('limit')
+# embedding = form.getvalue('embedding')
+
 if npapers is None:
     npapers = 20
 npapers = int(npapers)
@@ -26,10 +28,6 @@ apikey=os.environ.get('SPECTER_API_KEY')
 def map_int64(fn):
     fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.int64, shape=(int(fn_len/8)), mode='r')
-
-bigrams_file = os.environ.get('JSALTdir') + '/semantic_scholar/embeddings/proposed/bigrams'
-# bigrams_file = os.environ.get('JSALTdir') + '/semantic_scholar/embeddings/specter2/bigrams'
-idx = map_int64(bigrams_file + '.idx')
 
 def id_ify(s):
     if args.search or len(s) == 40 or args.API == 'author':
@@ -67,8 +65,17 @@ def fetch_corpusId(id):
     except:
         return None
 
+idx_memos = {}
+
 def lookup_paper(paper):
     try:
+        embedding='proposed'
+        bigrams_file = os.environ.get('JSALTdir') + '/semantic_scholar/embeddings/' + str(embedding) + '/bigrams'
+        print('bigrams_file: ' + bigrams_file, file=sys.stderr)
+        if bigrams_file in idx_memos:
+            idx = idx_memos[bigrams_file]
+        else:
+            idx_memos[bigrams_file] = idx = map_int64(bigrams_file + '.idx')
         query = int(paper)
         start = idx[query]
         end = idx[query+1]
@@ -89,36 +96,36 @@ def href_ify(id, hrefs):
         return '<tr><td>NA</td><td>%s</td></tr>' % id
 
 def do_papers(papers):
-    print('do_papers: ' + str(papers), file=sys.stderr)
-    res = [lookup_paper(paper) for paper in papers]
-    ids = [int(p) for p in papers]
-    for res1 in res:
-        for score, id1, id2 in res1:
-            ids.append(id2)
-    r = requests.post(
-        'https://api.semanticscholar.org/graph/v1/paper/batch',
-        params={'fields': 'title,citationCount,url,externalIds'},
-        json={"ids": ['CorpusId:' + str(id) for id in ids]},
-        headers={"x-api-key": apikey}).json()
-    print(r, file=sys.stderr)
-    hrefs = {}
-    for rec in r:
-        print('rec: ' + str(rec), file=sys.stderr)
-        if not rec is None and 'externalIds' in rec:
-            key = int(rec['externalIds']['CorpusId'])
-            val = '<tr><td>%s</td><td><a href="%s">%s</a></td><a href="similar?CorpusId=%s">like this</a></td></tr>' % (str(rec['citationCount']), rec['url'], rec['title'])
-            hrefs[key] = val
-    print('res: ' + str(res), file=sys.stderr)
-    print('papers: ' + str(papers), file=sys.stderr)
-    for i in range(len(papers)):
-        # print('<h2>Input paper: %s; query=%s</h2>' % (papers[i], query))
-        # print('<ol>')
-        print('<h2>Input paper: %s</h2>' % (href_ify(res[i][0][1], hrefs)))
-        print('<table><tr><th>citations</th><th>title</th><th>more like this</th></tr>')
-        for score, id1, id2 in res[i]:
-            print(href_ify(id2, hrefs))
-        print('</table>')
-        # print('</ol>')
+    try:
+        print('do_papers: ' + str(papers), file=sys.stderr)
+        res = [lookup_paper(paper) for paper in papers]
+        ids = [int(p) for p in papers]
+        for res1 in res:
+            for score, id1, id2 in res1:
+                ids.append(id2)
+        r = requests.post(
+            'https://api.semanticscholar.org/graph/v1/paper/batch',
+            params={'fields': 'title,citationCount,url,externalIds'},
+            json={"ids": ['CorpusId:' + str(id) for id in ids]},
+            headers={"x-api-key": apikey}).json()
+        print(r, file=sys.stderr)
+        hrefs = {}
+        for rec in r:
+            print('rec: ' + str(rec), file=sys.stderr)
+            if not rec is None and 'externalIds' in rec:
+                key = int(rec['externalIds']['CorpusId'])
+                val = '<tr><td>%s</td><td><a href="%s">%s</a></td><td><a href="similar?CorpusId=%s">similar to this</a></td></tr>' % (str(rec['citationCount']), rec['url'], rec['title'], key)
+                hrefs[key] = val
+        print('res: ' + str(res), file=sys.stderr)
+        print('papers: ' + str(papers), file=sys.stderr)
+        for i in range(len(papers)):
+            print('<table><tr><td><b>Input paper:</b></td> %s</tr></table>' % (href_ify(res[i][0][1], hrefs)))
+            print('<table><tr><th>citations</th><th>title</th><th>more like this</th></tr>')
+            for score, id1, id2 in res[i]:
+                print(href_ify(id2, hrefs))
+            print('</table>')
+    except:
+        print('<b>something went wrong</b>')
 
 def do_paper(paper):
     print("<h2>Input paper: %s; query=%s</h2>" % (paper, query))
