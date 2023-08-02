@@ -182,7 +182,7 @@ if __name__=='__main__':
     parser.add_argument('-nl', '--num_layers', type=int, help= 'The number of layers to use in the model', default=3)
     parser.add_argument('-do', '--dropout', type=float, help='Dropout in our model', default=0.0)
     parser.add_argument('-ptm', '--pretrained_model', type=str, help='Path to model', default=None)
-    parser.add_argument('-ev', '--eval', type=bool, help='Flag for evaluating a model', default=False)
+    parser.add_argument('-eva', '--eval', type=bool, help='Flag for evaluating a model', default=False)
     parser.add_argument('-m', '--metric', type = str, help = 'Evalutation metric')
     args = parser.parse_args()
 
