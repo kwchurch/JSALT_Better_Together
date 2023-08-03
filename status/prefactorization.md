@@ -65,11 +65,11 @@
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
 </tr><tr>
-<td bgcolor="red"><big><b><u>060</u></b></big></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
-<td bgcolor="red"><big><b><u>064</u></b></big></td>
+<td bgcolor="green"><small><i></i></small></td>
+<td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
@@ -77,7 +77,7 @@
 <td bgcolor="green"><small><i></i></small></td>
 </tr><tr>
 <td bgcolor="green"><small><i></i></small></td>
-<td bgcolor="red"><big><b><u>071</u></b></big></td>
+<td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="red"><big><b><u>072</u></b></big></td>
 <td bgcolor="green"><small><i></i></small></td>
 <td bgcolor="green"><small><i></i></small></td>
