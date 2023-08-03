@@ -19,7 +19,7 @@ apikey=os.environ.get('SPECTER_API_KEY')
 parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
 parser.add_argument("-V", '--verbose', action='store_true')
-parser.add_argument('--binary_output', action='store_true')
+parser.add_argument('--binary_output', default=None)
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
@@ -146,11 +146,16 @@ elif args.use_references == 'always':
 else:
     assert False, 'bad arg: use_references = ' + str(args.use_references)
 
+if args.use_references == 'when_necessary':
+    for e,i in enumerate(ids):
+        if mapped_ids[e] == 0:
+            result[e,:] = id_to_centroid(i)
+
 if args.verbose:
     print('result.shape: ' + str(result.shape), file=sys.stderr)
 
-if args.binary_output:
-    np.save(sys.stdout, result)
+if not args.binary_output is None:
+    np.save(args.binary_output, result)
 else:
     np.savetxt(sys.stdout, result)
 
