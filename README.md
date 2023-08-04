@@ -17,6 +17,7 @@ and <a href="doc/whatswhere.md">What's Where</a> (on Globus)</li>
 <li><a href="https://docs.google.com/spreadsheets/d/1JMq-jR4M8KU119cvglUDmMwwzd60Z3vyvn3VqhPn9EY/view#gid=1450677429">SciRepEval Baselines</a></li>
 <li><a href="https://northeastern.zoom.us/j/8963791015"> Zoom Link</a>
 and <a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Meeting Notes</a></li>
+<li><a href="status/combined.md">Status of Production Runs</a></li>
 <li><a href="doc/Similar_Venues.md">Similar Venues</a></li>
 </ol>
 
