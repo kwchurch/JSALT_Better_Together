@@ -3,19 +3,21 @@
 
 <h2>Useful links</h2>
 <ol>
-<li><a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">Team Page</a></li>
-<li><a href="https://northeastern.zoom.us/j/8963791015"> Zoom Link</a></li>
-<li><a href="https://github.com/kwchurch/JSALT_Better_Together">Github with source code</a></li>
-<li><a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">large datasets from Globus</a></li>
+<li><a href="https://www.youtube.com/watch?v=jE49IreXs2U">Final Report (YouTube)</a> and
+<a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">JSALT-2023 Team Page</a></li>
+</li>
+<li><a href="http://34.204.188.58//similar.html">Documentation of web service (on Amazon AWS), with examples</a></li>
 <li><a href="slides">Slides</li>
-<li><a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Meeting Notes</a></li>
-<li><a href="doc/Notation.md">Notation</a></li>
+<li><a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">large datasets from Globus</a>
+and <a href="doc/whatswhere.md">What's Where</a> (on Globus)</li>
+</li>
 <li><a href="doc/deliverables.md">Deliverables</a></li>
 <li><a href="examples/similar_documents/reading_list">Reading List</a></li>
+<li><a href="doc/Notation.md">Notation</a></li>
 <li><a href="https://docs.google.com/spreadsheets/d/1JMq-jR4M8KU119cvglUDmMwwzd60Z3vyvn3VqhPn9EY/view#gid=1450677429">SciRepEval Baselines</a></li>
+<li><a href="https://northeastern.zoom.us/j/8963791015"> Zoom Link</a>
+and <a href="https://docs.google.com/document/d/1rRRflCASHo7PFTBU6GqHK_g8twj1JgcXD8ijwpWY9m8/edit">Meeting Notes</a></li>
 <li><a href="doc/Similar_Venues.md">Similar Venues</a></li>
-<li><a href="doc/whatswhere.md">What's Where</a> (doc on big files on Globus)</li>
-<li><a href="http://34.204.188.58//similar.html">web service (on Amazon AWS)</a></li>
 </ol>
 
 <h2>Installation</h2>
@@ -46,15 +48,6 @@ you can request access to the cluster by filling out a ticket <a href="https://b
 and then you can use my settings for these environment variables.
 You should also request to be added to the group: <i>nlp</i>.
 
-<h2>Installation</h2>
-
-```sh
-git clone https://github.com/kwchurch/JSALT_Better_Together
-pip install -r requirements.txt
-# set environment variable JSALTsrc to the src directory in the repo.
-# set environment variable JSALTdir to your local copy of the large data files.
-```
-
 <h2>Reading List (and Pre-computed Output)</h2>
 
 See <a href="examples/similar_documents">here</a>, and especially <a href="examples/similar_documents/reading_list">this</a>.
@@ -74,3 +67,5 @@ The last example starts with papers we should all be reading, and finds some doc
    <ol><li><a href="doc/find_similar_docs.md">Find similar documents</a></li>
    </ol></li>
 </ol>
+
+Exercises for <a href="https://jsalt2023.univ-lemans.fr/en/summer-school/presentation-summer-school.html">JSALT-2023 summer school</a>: <a href="doc/exercises">here</a>.
