@@ -21,11 +21,12 @@ if args.autocomplete:
         fields = line.rstrip().split('\t')
         suffix = '\t' + '\t'.join(fields)
         
-        cmd=url + urllib.parse.quote(fields[0])
+        cmd=url + urllib.parse.quote(fields[0]) + '&fields=externalIds,title'
         j=requests.get(cmd, headers={"x-api-key": apikey}).json()
-        print('# %d matches:\t' % len(j['matches']) + fields[0])
-        for m in j['matches']:
-            print('\t'.join([m['id'], m['title'], m['authorsYear']]) + suffix)
+        if not 'data' in j: j['data'] = []
+        print('# %d matches:\t' % len(j['data']) + fields[0])
+        for m in j['data']:
+            print('\t'.join([str(m['externalIds']['CorpusId']), m['title']]) + suffix)
         sys.stdout.flush()
 
 else:
@@ -33,11 +34,12 @@ else:
         fields = line.rstrip().split('\t')
         suffix = '\t' + '\t'.join(fields)
         
-        cmd=url + urllib.parse.quote(fields[0])
+        cmd=url + urllib.parse.quote(fields[0]) + '&fields=externalIds,title'
         j=requests.get(cmd, headers={"x-api-key": apikey}).json()
         # print(j, file=sys.stderr)
-        print('# %d matches:\t' % len(j['matches']) + fields[0])
-        for m in j['matches']:
-            print('\t'.join([m['id'], m['title']]) + suffix)
+        if not 'data' in j: j['data'] = []
+        print('# %d matches:\t' % len(j['data']) + fields[0])
+        for m in j['data']:
+            print('\t'.join([str(m['externalIds']['CorpusId']), m['title']]) + suffix)
         sys.stdout.flush()
     

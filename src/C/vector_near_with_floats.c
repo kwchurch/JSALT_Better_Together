@@ -364,6 +364,10 @@ int main(int ac, char **av)
   int recno = -1;
   while(fread(vec, sizeof(float), record_size, stdin) == record_size) {
     recno++;
+
+    if(dot(vec,vec,record_size) < SMALL)
+      continue;
+    
     for(i=0;i<nindexes;i++) {
       if(good_index(indexes+i)) {
 	vec2bytes(bytes, random_bytes, vec, record_size, indexes+i);
