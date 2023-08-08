@@ -89,7 +89,7 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>prefact</td>
 <td>bins</td>
 <td></td>
-<td></td>
+<td>prefact</td>
 <td>prefact</td>
 <td></td>
 <td></td>
