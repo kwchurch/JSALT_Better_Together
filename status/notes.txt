@@ -15,18 +15,23 @@ ls *U.K280.npy | cut -c1-3 | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%
 cd /scratch/irving.b/JSALT/last_finish
 ls *npy | cut -c1-3 | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}'  >  $JSALTsrc/../status/cheby.txt
 
+cd /scratch/irving.b/JSALT/last_cheby
+ls ???.Lx1.?.npy | awk -F. '{x[$1] = $3}; END {for(i in x) print i "\t" x[i]}' | sort  >  $JSALTsrc/../status/cheby.iter.txt
+
 cd $proposed/bins
 ls ??? | awk '{x[0+$0]=1}; END {for(i=0;i<100;i++) printf "%03d\t%d\n", i, x[i]}' >  $JSALTsrc/../status/bins.txt
 
 cd $JSALTsrc/../status
-paste prefactorization.txt cheby.txt bins.txt | 
-awk '$2 > 0 {status[0+$1]="prefact"};
-     $4 > 0 {status[0+$1]="cheby"};
-     $6 > 0 {status[0+$1]="bins"};
+paste prefactorization.txt cheby.txt bins.txt cheby.iter.txt | 
+awk 'BEGIN {for(i =0;i<100;i++) status[i]="not started"}
+     $2 > 0 {status[0+$1]="prefact"};
+     $8 > 0 {status[0+$1]="cheby.iter=" $2};
+     $4 > 0 {status[0+$1]="cheby finished"};
+     $6 > 0 {status[0+$1]="done"};
 END {for(i=0;i<100;i++) printf "<td>%s</td>\n",  status[i]}' |
-awk 'BEGIN {print "# Status of Prefactorization, Cheby/Finish and Bins (Embedding Directories)"
-print "There are 100 cells for the 100 bins.  The best case is when the cell contains, <b>bins</b>; that means that bin is past all three steps."
-print "The worst case is when the cell contains nothing; that means prefactorization is not done."
+awk 'BEGIN {print "# Status of Prefactorization, Cheby.iter=[0-5], Cheby Finished and done (Embedding Directories)"
+print "There are 100 cells for the 100 bins.  The best case is when the cell contains, <b>done</b>; that means that bin is past all of the steps."
+print "The worst case is when the cell contains: not started; that means prefactorization is not done."
 print "If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations and/or Cheby finish."
 print "<table><tr><th></th>"; row=0;
     for(i=0;i<10;i++) printf "<th>%03d</th>", i;
@@ -34,6 +39,3 @@ print "<table><tr><th></th>"; row=0;
    {print}
   row < 10 && NR % 10 == 0 {printf "</tr><tr><th>%03d</th>", 10*row++}
   END {print "</tr></table>"}'  > combined.md
-
-
-
