@@ -25,7 +25,7 @@ cd $JSALTsrc/../status
 paste prefactorization.txt cheby.txt bins.txt cheby.iter.txt | 
 awk 'BEGIN {for(i =0;i<100;i++) status[i]="not started"}
      $2 > 0 {status[0+$1]="prefact"};
-     $8 > 0 {status[0+$1]="cheby.iter=" $2};
+     $8 > 0 {status[0+$1]="cheby iter=" $2};
      $4 > 0 {status[0+$1]="cheby finished"};
      $6 > 0 {status[0+$1]="done"};
 END {for(i=0;i<100;i++) printf "<td>%s</td>\n",  status[i]}' |

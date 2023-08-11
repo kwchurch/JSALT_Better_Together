@@ -68,10 +68,17 @@ def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
         return my_int(fd.read())
 
-def map_from_dir(dir):
+def map32_from_dir(dir):
     fn = dir + '/map.old_to_new.i'
+    if not os.path.exists(fn): return None
     fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
+
+def map64_from_dir(dir):
+    fn = dir + '/map.old_to_new.sorted.L'
+    if not os.path.exists(fn): return None
+    fn_len = os.path.getsize(fn)
+    return np.memmap(fn, dtype=int, shape=(int(fn_len/8)), mode='r')
 
 def embedding_from_dir(dir, K):
     fn = dir + '/embedding.f'
@@ -82,7 +89,8 @@ def directory_to_config(dir):
     K = record_size_from_dir(dir)
     return { 'record_size' : K,
              'dir' : dir,
-             'map' : map_from_dir(dir),
+             'map32' : map32_from_dir(dir),
+             'map64' : map64_from_dir(dir),
              'embedding' : embedding_from_dir(dir, K)}
 
 config = directory_to_config(args.dir)
@@ -105,17 +113,25 @@ def id_to_references(my_id):
     else:
         return []
 
-maxid = config['map'].shape[0]
-my_map = config['map'].reshape(-1)
 emb = config['embedding']
 
 # print('maxid: ' + str(maxid), file=sys.stderr)
 
+def get_mapped_refs(refs):
+    if not config['map32'] is None:
+        maxid = config['map32'].shape[0]
+        my_map = config['map32'].reshape(-1)
+        mapped_refs = np.array([ my_map[ref] for ref in refs if not ref is None and ref < maxid ], dtype=int)
+        return mapped_refs[mapped_refs > 0]
+    elif not config['map64'] is None:
+        # print('get_mapped_refs: refs = ' + str(refs), file=sys.stderr)
+        m = config['map64']
+        s = np.searchsorted(m, refs)
+        # print('get_mapped_refs: s = ' + str(s), file=sys.stderr)
+        return np.array([ss for ss,rr in zip(s,refs) if m[ss] == rr])        
 
 def centroid(refs):
-    mapped_refs = np.array([ my_map[ref] for ref in refs if not ref is None and ref < maxid ], dtype=int)
-    # print('mapped_refs (raw): ' + str(mapped_refs), file=sys.stderr)
-    mapped_refs = mapped_refs[mapped_refs > 0]
+    mapped_refs = get_mapped_refs(refs)
     # print('mapped_refs (filtered): ' + str(mapped_refs), file=sys.stderr)
     vectors = emb[mapped_refs,:]
     # print('centroid: vectors.shape = ' + str(vectors.shape), file=sys.stderr)
@@ -134,19 +150,12 @@ def id_to_centroid(id):
         sys.stderr.flush()
     return centroid(refs)
 
-# if args.use_references == 'never' or args.use_references == 'when_necessary':
-#     mapped_ids = np.zeros(len(ids), dtype=int)
-#     for e,i in enumerate(ids):
-#         if i < maxid:
-#             mapped_ids[e] = my_map[i]
-
 def get_vec(id, use_references):
     new_id = None
     if use_references == 'never':
-        if id >= maxid: return None
-        new_id = my_map[id]
-        if new_id <= 0: return None
-        return emb[new_id,:]
+        m = get_mapped_refs([id])
+        if len(m) < 1: return None
+        return emb[m[0],:]
     elif use_references == 'always':
         return id_to_centroid(id)
     elif use_references == 'when_necessary':

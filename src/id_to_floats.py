@@ -7,7 +7,7 @@ import numpy as np
 
 t0 = time.time()
 
-print('pairs_to_cos: ' + str(sys.argv), file=sys.stderr)
+print('id_to_floats: ' + str(sys.argv), file=sys.stderr)
 
 apikey=os.environ.get('SPECTER_API_KEY')
 

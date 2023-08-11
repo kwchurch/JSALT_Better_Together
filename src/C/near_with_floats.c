@@ -18,7 +18,6 @@ void usage()
   fatal("usage: echo papers | near_with_floats --dir <dir> [--offset <n>] [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] index1 index2 index3 > report");
 }
 
-
 struct urls {
   char *lines;
   unsigned int *idx;
@@ -63,6 +62,12 @@ struct node_map{
   long nold_to_new, nnew_to_old;
 };
 
+struct long_node_map{
+  long *old_to_new;
+  long *new_to_old;
+  long nold_to_new, nnew_to_old;
+};
+
 int long_compare(long *a, long *b)
 {
   if(*a < *b) return -1;
@@ -73,9 +78,8 @@ int long_compare(long *a, long *b)
 long *new_map = NULL;
 long nnew_map = 0;
 
-
-
 struct node_map *the_node_map = NULL;
+struct long_node_map *the_long_node_map = NULL;
 
 int NEW_TO_OLD = 1;
 int OLD_TO_NEW = 0;
@@ -105,28 +109,77 @@ long map_node(long node, int new_to_old, int no_map)
 
   if(new_map) return new_map_node(node, new_to_old);
 
-  struct node_map *M = the_node_map;
+  if(the_node_map) {
+    struct node_map *M = the_node_map;
 
-  if(!M) return node;
-  long N;
-  int *MM;
+    if(!M) return node;
+    long N;
+    int *MM;
 
-  if(new_to_old) {
-    MM = M->new_to_old;
-    N = M->nnew_to_old;
+    if(new_to_old) {
+      MM = M->new_to_old;
+      N = M->nnew_to_old;
+    }
+    else {
+      MM = M->old_to_new;
+      N = M->nold_to_new;
+    }
+
+    if(node < 0 || node >= N) {
+      fprintf(stderr, "warning, node = %ld; N = %ld\n", node, N);
+      return -1;
+      // fatal("confusion in map_node");
+    }
+
+    return MM[node];
   }
-  else {
-    MM = M->old_to_new;
-    N = M->nold_to_new;
-  }
 
-  if(node < 0 || node >= N) {
-    fprintf(stderr, "warning, node = %ld; N = %ld\n", node, N);
-    return -1;
-    // fatal("confusion in map_node");
-  }
+  if(the_long_node_map) {
+    struct long_node_map *M = the_long_node_map;
 
-  return MM[node];
+    // fprintf(stderr, "map_node: node = %ld, new_to_old  = %d\n", node, new_to_old);
+
+    if(!M) return node;
+    long N;
+    long *MM;
+
+    if(new_to_old) {
+      MM = M->new_to_old;
+      N = M->nnew_to_old;
+      return MM[node];
+    }
+    else {
+      MM = M->old_to_new;
+      N = M->nold_to_new;
+
+      // fprintf(stderr, "map_node: node = %ld, binary search\n", node, new_to_old);
+
+      long *found = bsearch(&node, MM, N, sizeof(long), long_compare);
+      // long *found = bsearch(&node, new_map, nnew_map, sizeof(long), (__compar_fn_t)long_compare);
+
+      if(!found) {
+	// fprintf(stderr, "not found\n");
+	return -1;
+      }
+      if(found < MM || found >= MM + N) {
+	// fprintf(stderr, "found is out of range\n");
+	return -1; /* fatal("confusion in new_map_node"); */
+      }
+
+      // fprintf(stderr, "map_node: node = %ld, found = %ld\n", node, found-MM);
+      return found - MM;
+    }
+
+    if(node < 0 || node >= N) {
+      fprintf(stderr, "warning, node = %ld; N = %ld\n", node, N);
+      return -1;
+      // fatal("confusion in map_node");
+    }
+
+    // return MM[node];
+  }
+  
+  else fatal("confusion in map_node");
 }
     
 float *floats = NULL;
@@ -182,13 +235,29 @@ char *my_filename(char *result, char *filename, char *suffix)
 void init_node_map(char *filename)
 {
   char buf[1024];
-  the_node_map = (struct node_map *)malloc(sizeof(struct node_map));
-  if(!the_node_map) fatal("malloc failed");
+  if(file_exists(my_filename(buf, filename, "old_to_new.i"))) {
 
-  the_node_map->old_to_new = (int *)mmapfile(my_filename(buf, filename, "old_to_new.i"), &the_node_map->nold_to_new);
-  the_node_map->new_to_old = (int *)mmapfile(my_filename(buf, filename, "new_to_old.i"), &the_node_map->nnew_to_old);
-  the_node_map->nold_to_new /= sizeof(int);
-  the_node_map->nnew_to_old /= sizeof(int);
+    fprintf(stderr, "init_node_map: old case\n"); 
+    the_node_map = (struct node_map *)malloc(sizeof(struct node_map));
+    if(!the_node_map) fatal("malloc failed");
+
+
+    the_node_map->old_to_new = (int *)mmapfile(my_filename(buf, filename, "old_to_new.i"), &the_node_map->nold_to_new);
+    the_node_map->new_to_old = (int *)mmapfile(my_filename(buf, filename, "new_to_old.i"), &the_node_map->nnew_to_old);
+    the_node_map->nold_to_new /= sizeof(int);
+    the_node_map->nnew_to_old /= sizeof(int);
+  }
+  else {
+
+    // fprintf(stderr, "init_node_map: new case\n"); 
+    the_long_node_map = (struct long_node_map *)malloc(sizeof(struct long_node_map));
+    if(!the_long_node_map) fatal("malloc failed");
+
+    the_long_node_map->old_to_new = (long *)mmapfile(my_filename(buf, filename, "old_to_new.sorted.L"), &the_long_node_map->nold_to_new);
+    the_long_node_map->new_to_old = (long *)mmapfile(my_filename(buf, filename, "new_to_old.L"), &the_long_node_map->nnew_to_old);
+    the_long_node_map->nold_to_new /= sizeof(long);
+    the_long_node_map->nnew_to_old /= sizeof(long);
+  }
 }
 
 void init_idx(struct idx *idx, char *filename)
