@@ -8,13 +8,16 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 t0 = time.time()
 
+print('brute_force_cosines_kwc.py: ' + str(sys.argv), file=sys.stderr)
+sys.stderr.flush()
+
 apikey=os.environ.get('SPECTER_API_KEY')
 parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
 parser.add_argument("-V", '--verbose', action='store_true')
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
-parser.add_argument("--topn", help="number of results to output", default=100)
+parser.add_argument("--topn", type=int, help="number of results to output", default=100)
 parser.add_argument("--input_ids", help="input file", default=None)
 parser.add_argument("--input_vectors", help="input file", default=None)
 args = parser.parse_args()
@@ -145,7 +148,11 @@ if not args.input_ids is None:
             assert False, 'bad arg: use_references = ' + str(args.use_references)
 
 if not args.input_vectors is None:
-    result = np.fromfile(args.input_vectors, dtype=np.float32).reshape(-1, config['record_size'])
+    if args.input_vectors.endswith('.npy'):
+        result = np.load(args.input_vectors)
+    else:
+        result = np.fromfile(args.input_vectors, dtype=np.float32).reshape(-1, config['record_size'])
+    assert result.shape[1] == config['record_size'], 'bad shape: result.shape = %s, config[record_size] = %s' % (str(result.shape), str(config[record_size]))
 
 if args.verbose:
     print('result.shape: ' + str(result.shape), file=sys.stderr)
@@ -160,30 +167,66 @@ if args.verbose:
 #     similarity = dot_product / denominator
 #     return similarity
 
-cosines = cosine_similarity(result, emb)
+
+SMALL=1e-6
+result_norms = np.linalg.norm(result, axis=1)
+good = result_norms > SMALL
+good_indexes = np.arange(len(good))[good]
+# good_indexes = config['imap'][good]
+
+print("bincount(good) = " + str(np.bincount(good)), file= sys.stderr)
+print("good_indexes = " + str(good_indexes), file= sys.stderr)
+sys.stderr.flush()
+
+
+print("about to compute cosines in %0.2f seconds" % (time.time() - t0), file= sys.stderr)
+sys.stderr.flush()
+
+cosines = cosine_similarity(result[good,:], emb)
 
 print("Found cosines %s in %0.2f seconds." % (str(cosines.shape), time.time() - t0), file= sys.stderr)
+sys.stderr.flush()
 # then we find the K largest cosine values
 
-def find_largest(array, topn):
-    max_heap = []
-    for i, num in enumerate(array):
-        if len(max_heap) < topn:
-            heapq.heappush(max_heap, (num, i))
-        else:
-            if num > max_heap[0][0]:
-                heapq.heappop(max_heap)
-                heapq.heappush(max_heap, (num, i))
-    result_indices = []
-    while max_heap:
-        num, i = heapq.heappop(max_heap)
-        result_indices.append(i)
-    result_indices.reverse()  
-    return result_indices
+quantiles = np.quantile(cosines, 1-args.topn/emb.shape[0], axis=1)
 
-result_indices = find_largest(cosines, args.topn)
+print("Found quantiles %s in %0.2f seconds." % (str(quantiles.shape), time.time() - t0), file= sys.stderr)
+print(quantiles, file= sys.stderr)
 
-print("Found %0.2f closest values in %0.2f seconds." % (args.K, time.time() - t0))
-print("Sorted result_values:", result_values) 
-print("Sorted result_indices:", result_indices)
-print("IDs: ", [config['imap'][index] for index in result_indices])
+sys.stderr.flush()
+idx = np.arange(emb.shape[0])
+# idx = config['imap']
+imap = config['imap']
+
+# j is a corpus id
+# v is a score
+# ii is a row from result
+for i,q in enumerate(quantiles):
+    ii = good_indexes[i]
+    s = cosines[i,:] >= q
+    for j,v in zip(idx[s], cosines[i,:][s]):
+        if j < len(imap):
+            print('\t'.join(map(str,[v, imap[j], ii])))
+
+# def find_largest(array, topn):
+#     max_heap = []
+#     for i, num in enumerate(array):
+#         if len(max_heap) < topn:
+#             heapq.heappush(max_heap, (num, i))
+#         else:
+#             if num > max_heap[0][0]:
+#                 heapq.heappop(max_heap)
+#                 heapq.heappush(max_heap, (num, i))
+#     result_indices = []
+#     while max_heap:
+#         num, i = heapq.heappop(max_heap)
+#         result_indices.append(i)
+#     result_indices.reverse()  
+#     return result_indices
+
+# result_indices = find_largest(cosines, args.topn)
+
+# print("Found %0.2f closest values in %0.2f seconds." % (args.K, time.time() - t0))
+# print("Sorted result_values:", result_values) 
+# print("Sorted result_indices:", result_indices)
+# print("IDs: ", [config['imap'][index] for index in result_indices])

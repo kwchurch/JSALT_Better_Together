@@ -23,7 +23,7 @@ try:
     x['old_to_new'].tofile(args.input + '.old_to_new.i')
     x['new_to_old'].tofile(args.input + '.new_to_old.i')
 except:
-    new_to_old = np.loadtxt(args.input, converters=np.int32)
+    new_to_old = np.loadtxt(args.input, converters=np.int32, dtype=int)
     new_to_old.tofile(args.input + '.new_to_old.i')
     N = np.max(new_to_old)+1
     old_to_new = np.zeros(N, dtype=np.int32) -1
