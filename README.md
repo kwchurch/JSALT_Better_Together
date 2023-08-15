@@ -6,7 +6,7 @@
 <li><a href="https://www.youtube.com/watch?v=jE49IreXs2U">Final Report (YouTube)</a> and
 <a href="https://jsalt2023.univ-lemans.fr/en/better-together-text-context.html">JSALT-2023 Team Page</a></li>
 </li>
-<li><a href="http://34.204.188.58//similar.html">Documentation of web service (on Amazon AWS), with examples</a></li>
+<li><a href="http://34.204.188.58//similar.html">Web Page</a></li>
 <li><a href="slides">Slides</li>
 <li><a href="https://app.globus.org/file-manager?origin_id=1ef9019c-eac0-11ed-9ba9-c9bb788c490e&origin_path=%2F%7E%2F">large datasets from Globus</a>
 and <a href="doc/whatswhere.md">What's Where</a> (on Globus)</li>
