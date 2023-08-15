@@ -51,7 +51,7 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>done</td>
 <td>done</td>
 <td>done</td>
-<td>cheby finished</td>
+<td>done</td>
 <td>done</td>
 </tr><tr><th>050</th><td>done</td>
 <td>done</td>
@@ -63,19 +63,19 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>done</td>
 <td>done</td>
 <td>done</td>
-</tr><tr><th>060</th><td>cheby finished</td>
+</tr><tr><th>060</th><td>done</td>
 <td>done</td>
 <td>done</td>
 <td>done</td>
-<td>cheby finished</td>
+<td>done</td>
 <td>done</td>
 <td>done</td>
 <td>done</td>
 <td>done</td>
 <td>done</td>
 </tr><tr><th>070</th><td>done</td>
-<td>cheby finished</td>
-<td>cheby finished</td>
+<td>done</td>
+<td>done</td>
 <td>done</td>
 <td>done</td>
 <td>done</td>
@@ -85,13 +85,13 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>done</td>
 </tr><tr><th>080</th><td>done</td>
 <td>done</td>
-<td>cheby finished</td>
-<td>cheby finished</td>
+<td>done</td>
+<td>done</td>
 <td>done</td>
 <td>cheby iter=0</td>
-<td>cheby finished</td>
-<td>cheby finished</td>
-<td>cheby iter=0</td>
+<td>done</td>
+<td>done</td>
+<td>cheby iter=1</td>
 <td>cheby iter=0</td>
 </tr><tr><th>090</th><td>cheby iter=0</td>
 <td>done</td>

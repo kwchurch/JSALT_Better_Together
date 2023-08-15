@@ -20,6 +20,7 @@ parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", defaul
 parser.add_argument("--topn", type=int, help="number of results to output", default=100)
 parser.add_argument("--input_ids", help="input file", default=None)
 parser.add_argument("--input_vectors", help="input file", default=None)
+parser.add_argument("--output_similarities", help="optional output file", default=None)
 args = parser.parse_args()
 
 def map_int64(fn):
@@ -136,7 +137,7 @@ if not args.input_ids is None:
         input_ids = np.array([int(i) for i in fd.read().split('\n') if len(i) > 0], dtype=int)
 
         if args.use_references == 'never' or args.use_references == 'when_necessary':
-            mapped_ids = np.zeros(len(ids), dtype=int)
+            mapped_ids = np.zeros(len(input_ids), dtype=int)
             for e,i in enumerate(input_ids):
                 if i < maxid:
                     mapped_ids[e] = my_map[i]
@@ -187,6 +188,9 @@ cosines = cosine_similarity(result[good,:], emb)
 print("Found cosines %s in %0.2f seconds." % (str(cosines.shape), time.time() - t0), file= sys.stderr)
 sys.stderr.flush()
 # then we find the K largest cosine values
+
+if not args.output_similarities is None:
+    np.save(args.output_similarities, cosines)
 
 quantiles = np.quantile(cosines, 1-args.topn/emb.shape[0], axis=1)
 
