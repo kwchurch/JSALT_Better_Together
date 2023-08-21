@@ -1,9 +1,9 @@
 files=freq_row_piece freq_row check_order XY_to_bigrams print_bigrams unprint_bigrams sort_bigrams uniq_bigrams gram_matrix \
 	uniq_bigrams_by_hashing substream hist_bigrams bincount_bigrams split_binary_records check_bigrams extract_row lookup_bigram \
 	cocitations floats_to_random_bytes index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
-	near near_with_floats calibrate_random_bytes cbind_bytes find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
+	near near_with_floats faster_near_with_floats near_without_floats calibrate_random_bytes cbind_bytes find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
-	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data
+	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data killroy generate_pairs_from_idx filter_records sum_bigrams nbest_bigrams
 
 # random_bigrams 
 
@@ -73,7 +73,7 @@ cocitations: cocitations.c util.o
 	cc -o cocitations cocitations.c util.o
 
 floats_to_random_bytes: floats_to_random_bytes.c util.o
-	cc -o floats_to_random_bytes floats_to_random_bytes.c util.o # -lssl -lcrypto
+	cc -o floats_to_random_bytes floats_to_random_bytes.c util.o -lm # -lssl -lcrypto
 
 index_random_bytes: index_random_bytes.c util.o
 	cc -o index_random_bytes index_random_bytes.c util.o
@@ -98,6 +98,12 @@ near: near.c util.o
 
 near_with_floats: near_with_floats.c util.o
 	cc -o near_with_floats near_with_floats.c util.o -lm
+
+faster_near_with_floats: faster_near_with_floats.c util.o
+	cc -o faster_near_with_floats faster_near_with_floats.c util.o -lm
+
+near_without_floats: near_without_floats.c util.o
+	cc -o near_without_floats near_without_floats.c util.o -lm
 
 vector_near_with_floats: vector_near_with_floats.c util.o
 	cc -o vector_near_with_floats vector_near_with_floats.c util.o -lm
@@ -173,3 +179,18 @@ XY_data_to_bigrams: XY_data_to_bigrams.c util.o
 
 bigrams_to_XY_data: bigrams_to_XY_data.c util.o
 	cc -o bigrams_to_XY_data bigrams_to_XY_data.c util.o
+
+killroy: killroy.c util.o
+	cc -o killroy killroy.c util.o -lm
+
+generate_pairs_from_idx: generate_pairs_from_idx.c util.o
+	cc -o generate_pairs_from_idx generate_pairs_from_idx.c util.o
+
+filter_records: filter_records.c util.o
+	cc -o filter_records filter_records.c util.o
+
+sum_bigrams: sum_bigrams.c util.o
+	cc -o sum_bigrams sum_bigrams.c util.o
+
+nbest_bigrams: nbest_bigrams.c util.o
+	cc -o nbest_bigrams nbest_bigrams.c util.o

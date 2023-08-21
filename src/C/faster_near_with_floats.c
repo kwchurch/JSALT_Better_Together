@@ -8,14 +8,20 @@
 #include <search.h>
 
 int verbose = 0;
-int show_details = 0;
-int find_best = 1;
-int threshold = 0;
+// int show_details = 0;
+// int find_best = 1;
+// int threshold = 0;
 int record_size = -1;
+int no_map = 1;
+struct idx *indexes;
+int nindexes = -1;
+int offset = -1;
+int n_candidates = 100;
+int skip_cos = 0;
 
 void usage()
 {
-  fatal("usage: echo papers | near_with_floats --dir <dir> [--offset <n>] [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] index1 index2 index3 > report");
+  fatal("usage: echo papers | faster_near_with_floats --dir <dir> [--offset <n>] [--n_candidates <n>] [--skip_cos] index1 index2 index3 > report");
 }
 
 struct urls {
@@ -319,23 +325,88 @@ void get_args_from_dir(char *dir)
   // fprintf(stderr, "record_size: %d\n", record_size);
   fclose(fd);
   
-  sprintf(buf, "%s/embedding.f", dir);
-  floats = (float *)mmapfile(buf, &nfloats);
-  nfloats /= sizeof(float);
+  if(!skip_cos) {
+    sprintf(buf, "%s/embedding.f", dir);
+    floats = (float *)mmapfile(buf, &nfloats);
+    nfloats /= sizeof(float);
+  }
 
   sprintf(buf, "%s/map", dir);
   init_node_map(buf);
   // fprintf(stderr, "leaving, get_args_from_dir: %s\n", dir);
 }    
 
+void output_score(long old_i, long new_i, long old_j, long new_j, int freq)
+{
+  if(skip_cos) printf("%d\t%ld\t%ld\n",  freq, old_i, old_j);
+  else {
+    float score = my_cos(floats + new_j * record_size, floats + new_i * record_size, record_size);
+    printf("%f\t%ld\t%ld\n", score, old_i, old_j);
+  }
+}
+
+#define MAXCOUNTS 100
+
+void do_it(long old_paper_id, long *buf)
+{
+  int i, j;
+  long *buf_ptr = buf;
+  long new_paper_id = map_node(old_paper_id, OLD_TO_NEW, no_map);
+  if(!skip_cos) {
+    double paper_norm = norm(floats + new_paper_id * record_size, record_size);
+    fprintf(stderr, "corpus_id: %ld; norm = %f\n", old_paper_id, paper_norm);
+    if(paper_norm < SMALL) {
+      fprintf(stderr, "warning, norm for corpusid %ld is too small\n", old_paper_id);
+      return;
+    }
+  }
+  if(verbose) fprintf(stderr, "old_paper_id = %ld, new_paper_id = %ld\n", old_paper_id, new_paper_id);
+  for(i=0;i<nindexes;i++) {
+    if(verbose) fprintf(stderr, "i=%d, good = %d\n", i, good_index(indexes+i));
+    if(good_index(indexes+i) && new_paper_id >= 0) {
+      int nfound;
+      long *found = find_near(new_paper_id, indexes + i, offset, &nfound);
+      memcpy(buf_ptr, found, sizeof(long) * nfound);
+      buf_ptr += nfound;
+    }
+  }
+  long nbuf = buf_ptr - buf;
+  qsort(buf, nbuf, sizeof(long), long_compare);
+
+  int counts[MAXCOUNTS];
+  memset(counts, 0, sizeof(counts));
+
+  for(i=0; i<nbuf; i=j) {
+    for(j=i+1;j<nbuf && buf[i] == buf[j]; j++) ;
+    int freq = j - i;
+    if(freq > MAXCOUNTS-1) freq=MAXCOUNTS;
+    counts[freq]++;
+  }
+
+  int candidates=0;
+  int freq_threshold = MAXCOUNTS-1;
+  while(freq_threshold >= 0 && candidates < n_candidates) {
+    candidates += counts[freq_threshold];
+    freq_threshold--;
+  }
+
+  fprintf(stderr, "corpusid: %ld, freq_threshold = %d, outputing %d candidates\n", old_paper_id, freq_threshold, candidates);
+
+  for(i=0; i<nbuf; i=j) {
+    for(j=i+1;j<nbuf && buf[i] == buf[j]; j++) ;
+    int freq = j - i;
+    if(freq > freq_threshold) {
+      long new_j = buf[i];
+      long old_j = map_node(new_j, NEW_TO_OLD, no_map);
+      output_score(old_paper_id, new_paper_id, old_j, new_j, freq);
+    }
+  }
+}
+
 int main(int ac, char **av)
 {
   int i;
   long old_paper_id;
-  struct idx *indexes;
-  int nindexes = -1;
-  int offset = -1;
-  int no_map = 1;
 
   for(i=1;i<ac;i++) {
     if(strcmp(av[i], "--dir") == 0) {
@@ -344,22 +415,25 @@ int main(int ac, char **av)
     }
     else if(strcmp(av[i], "--help") == 0) usage();
     else if(strcmp(av[i], "--verbose") == 0) verbose++;
-    else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
+    // else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
-    else if(strcmp(av[i], "--floats") == 0) {
-      floats = (float *)mmapfile(av[++i], &nfloats);
-      nfloats /= sizeof(float);
-    }
-    else if(strcmp(av[i], "--map") == 0) {
-      no_map = 0;
-      init_node_map(av[++i]);
-    }
-    else if(strcmp(av[i], "--new_map") == 0) {
-      no_map = 0;
-      new_map = (long *)mmapfile(av[++i], &nnew_map);
-      nnew_map /= sizeof(long);
-    }
-    else if(strcmp(av[i], "--urls") == 0) init_urls(av[++i]);
+    else if(strcmp(av[i], "--n_candidates") == 0) n_candidates = atoi(av[++i]);
+    else if(strcmp(av[i], "--skip_cos") == 0) skip_cos=1;
+
+    /* else if(strcmp(av[i], "--floats") == 0) { */
+    /*   floats = (float *)mmapfile(av[++i], &nfloats); */
+    /*   nfloats /= sizeof(float); */
+    /* } */
+    /* else if(strcmp(av[i], "--map") == 0) { */
+    /*   no_map = 0; */
+    /*   init_node_map(av[++i]); */
+    /* } */
+    /* else if(strcmp(av[i], "--new_map") == 0) { */
+    /*   no_map = 0; */
+    /*   new_map = (long *)mmapfile(av[++i], &nnew_map); */
+    /*   nnew_map /= sizeof(long); */
+    /* } */
+    /* else if(strcmp(av[i], "--urls") == 0) init_urls(av[++i]); */
     else {
       nindexes=ac-i;
       indexes = init_indexes(av+i, nindexes);
@@ -367,46 +441,15 @@ int main(int ac, char **av)
     }
   }
 
-  if(! floats) fatal("no floats???");
+  if(!skip_cos && ! floats) fatal("no floats???");
   if(nindexes <= 0) fatal("no indexes???");
   if(offset <= 0) fatal("--offset arg is required");
   if(record_size <= 0) fatal("--record_size arg is required");
 
-  while(scanf("%ld", &old_paper_id) == 1) {
-    long new_paper_id = map_node(old_paper_id, OLD_TO_NEW, no_map);
-    if(verbose) fprintf(stderr, "old_paper_id = %ld, new_paper_id = %ld\n", old_paper_id, new_paper_id);
-    for(i=0;i<nindexes;i++) {
-      if(verbose) fprintf(stderr, "i=%d, good = %d\n", i, good_index(indexes+i));
-      if(good_index(indexes+i) && new_paper_id >= 0) {
-	int nfound;
-	long *found = find_near(new_paper_id, indexes + i, offset, &nfound);
-	long *end = found + nfound;
-	while(found < end) {
-	  char buf[2][1024];
-	  long new_j = *found++;
-	  long old_j = map_node(new_j, NEW_TO_OLD, no_map);
-	  float score = my_cos(floats + new_j * record_size, floats + new_paper_id * record_size, record_size);
-	  if(score < -0.5) continue;
-	  if(verbose)
-	    printf("%f\t%s\t%s\t%ld\t%ld\t%ld\t%ld\n",
-		   score,
-		   id2url(buf[0], old_paper_id, new_paper_id),
-		   id2url(buf[1],  old_j, new_j)
-		   , old_paper_id, new_paper_id
-		   , old_j, new_j
-		   );
-	  else 
-	    printf("%f\t%s\t%s\t%ld\t%ld\t%ld\t%ld\t%d\t%s\n",
-		   score,
-		   id2url(buf[0], old_paper_id, new_paper_id),
-		   id2url(buf[1],  old_j, new_j),
-		   old_paper_id, old_j,
-		   new_paper_id, new_j,
-		   i,
-		   av[ac - nindexes + i]);
+  long *buf = (long *)malloc(sizeof(long) * offset * 2 * nindexes);
 
-	}
-      }
-    }
-  }
+  while(scanf("%ld", &old_paper_id) == 1)
+    do_it(old_paper_id, buf);
+
+  return 0;
 }

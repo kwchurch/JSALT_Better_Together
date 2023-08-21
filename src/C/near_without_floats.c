@@ -15,40 +15,7 @@ int record_size = -1;
 
 void usage()
 {
-  fatal("usage: echo papers | near_with_floats --dir <dir> [--offset <n>] [--record_size <n>] [--floats <file>] [--map xxx] [--new_map xxx.L] [--urls xxx] index1 index2 index3 > report");
-}
-
-struct urls {
-  char *lines;
-  unsigned int *idx;
-  long nidx;
-  long nlines;
-} *urls = NULL;
-
-void init_urls(char *fn) {
-  char buf[1024];
-  urls = (struct urls *)malloc(sizeof(struct urls));
-  urls->lines = (char *)mmapfile(fn, &urls->nlines);
-  sprintf(buf, "%s.line_index.i", fn);
-  urls->idx = (unsigned int *)mmapfile(buf, &urls->nidx);
-  urls->nidx /= sizeof(int);
-}
-
-char *id2url(char *buf, long old_id, long new_id)
-{
-  if(!urls) sprintf(buf, "%ld", old_id);
-  else if(new_id >= urls->nidx) sprintf(buf, "<a href=\"https://www.semanticscholar.org/author/%ld\">%ld</a>", old_id, old_id);
-  else {
-    // fprintf(stderr, "id2url[%ld]=%d\n", id, urls->idx[id]);
-    char *res = urls->lines + urls->idx[new_id];
-    int i;
-    for(i=0;i<1023;i++) {
-      buf[i]=res[i];
-      if(res[i] == '\n') break;
-    }
-    buf[i]=0;
-  }
-  return buf;    
+  fatal("usage: echo papers | near_without_floats --dir <dir> [--offset <n>] index1 index2 index3 > report");
 }
 
 struct idx {
@@ -181,45 +148,6 @@ long map_node(long node, int new_to_old, int no_map)
   
   else fatal("confusion in map_node");
 }
-    
-float *floats = NULL;
-long nfloats = -1;
-// long N;
-
-double dot(float *a, float *b, int n)
-{
-  double res = 0;
-  float *end = a+n;
-  while(a<end)
-    res += *a++ * *b++;
-  return res;
-}
-
-double SMALL = 1e-10;
-
-double norm(float *a, int n)
-{
-  double res = 0;
-  float *end = a+n;
-  while(a<end) {
-    float aa = *a++;
-    res += aa * aa;
-  }
-  return sqrt(res);
-}
-
-double my_cos(float *a, float *b, int n)
-{
-  if(a == floats || b == floats) return -1.0;
-
-  double alen = norm(a, n);
-  if(alen < SMALL) return -1.0;
-  double blen = norm(b, n);
-  if(blen < SMALL) return -1.0;
-  double res = dot(a, b, n)/(alen * blen);
-  // fprintf(stderr, "res = %f, alen = %f, blen = %f, n = %d\n", res, alen, blen, n);
-  return res;
-}
 
 int good_index(struct idx *idx)
 {
@@ -318,10 +246,6 @@ void get_args_from_dir(char *dir)
   fscanf(fd, "%d", &record_size);
   // fprintf(stderr, "record_size: %d\n", record_size);
   fclose(fd);
-  
-  sprintf(buf, "%s/embedding.f", dir);
-  floats = (float *)mmapfile(buf, &nfloats);
-  nfloats /= sizeof(float);
 
   sprintf(buf, "%s/map", dir);
   init_node_map(buf);
@@ -344,22 +268,7 @@ int main(int ac, char **av)
     }
     else if(strcmp(av[i], "--help") == 0) usage();
     else if(strcmp(av[i], "--verbose") == 0) verbose++;
-    else if(strcmp(av[i], "--record_size") == 0) record_size = atoi(av[++i]);
     else if(strcmp(av[i], "--offset") == 0) offset = atoi(av[++i]);
-    else if(strcmp(av[i], "--floats") == 0) {
-      floats = (float *)mmapfile(av[++i], &nfloats);
-      nfloats /= sizeof(float);
-    }
-    else if(strcmp(av[i], "--map") == 0) {
-      no_map = 0;
-      init_node_map(av[++i]);
-    }
-    else if(strcmp(av[i], "--new_map") == 0) {
-      no_map = 0;
-      new_map = (long *)mmapfile(av[++i], &nnew_map);
-      nnew_map /= sizeof(long);
-    }
-    else if(strcmp(av[i], "--urls") == 0) init_urls(av[++i]);
     else {
       nindexes=ac-i;
       indexes = init_indexes(av+i, nindexes);
@@ -367,7 +276,6 @@ int main(int ac, char **av)
     }
   }
 
-  if(! floats) fatal("no floats???");
   if(nindexes <= 0) fatal("no indexes???");
   if(offset <= 0) fatal("--offset arg is required");
   if(record_size <= 0) fatal("--record_size arg is required");
@@ -385,26 +293,10 @@ int main(int ac, char **av)
 	  char buf[2][1024];
 	  long new_j = *found++;
 	  long old_j = map_node(new_j, NEW_TO_OLD, no_map);
-	  float score = my_cos(floats + new_j * record_size, floats + new_paper_id * record_size, record_size);
-	  if(score < -0.5) continue;
-	  if(verbose)
-	    printf("%f\t%s\t%s\t%ld\t%ld\t%ld\t%ld\n",
-		   score,
-		   id2url(buf[0], old_paper_id, new_paper_id),
-		   id2url(buf[1],  old_j, new_j)
-		   , old_paper_id, new_paper_id
-		   , old_j, new_j
-		   );
-	  else 
-	    printf("%f\t%s\t%s\t%ld\t%ld\t%ld\t%ld\t%d\t%s\n",
-		   score,
-		   id2url(buf[0], old_paper_id, new_paper_id),
-		   id2url(buf[1],  old_j, new_j),
-		   old_paper_id, old_j,
-		   new_paper_id, new_j,
-		   i,
-		   av[ac - nindexes + i]);
-
+	  printf("%ld\t%ld\t%d\t%s\n",
+		 old_paper_id, old_j,
+		 i,
+		 av[ac - nindexes + i]);
 	}
       }
     }

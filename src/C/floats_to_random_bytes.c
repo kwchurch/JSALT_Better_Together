@@ -4,6 +4,7 @@
 #include <time.h>
 // #include <values.h>
 #include <limits.h>
+#include <math.h>
 // #include <openssl/rand.h>
 
 void usage()
@@ -84,6 +85,29 @@ void init_random_floats(float *res, int n)
 /*     *res = ((int)(*res))/d; */
 /* } */
 
+
+double SMALL = 1e-10;
+
+double norm(float *a, int n)
+{
+  double res = 0;
+  float *end = a+n;
+  while(a<end) {
+    float aa = *a++;
+    res += aa * aa;
+  }
+  return sqrt(res);
+}
+
+void normalize(float *a, int n)
+{
+  float *aend = a + n;
+  double an = norm(a, n);
+  if(an < SMALL) return;
+  while(a < aend)
+    *a++ /= an;
+}
+
 int main(int ac, char **av)
 {
   char *seed = NULL;
@@ -114,8 +138,10 @@ int main(int ac, char **av)
   
   init_random_floats(random_floats, K * N * 8);
 
-  while(fread(float_buffer, K4, 1, stdin) == 1)
+  while(fread(float_buffer, K4, 1, stdin) == 1) {
+    normalize(float_buffer, K);
     do_it(float_buffer, random_floats, K, N);
+  }
 
 
   fprintf(stderr, "dot: %0.3f, vals = %ld, calls = %ld\n", dot_values/(double)dot_calls, dot_values, dot_calls);

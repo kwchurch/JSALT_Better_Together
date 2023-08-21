@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <memory.h>
+#include <stdlib.h>
+#include <math.h>
+#include "util.h"
+
+int verbose = 0;
+
+void usage()
+{
+  fatal("usage: generate pairs of longs | killroy -tick <print debugging msgs every N records> -N <long> -M <memory size in GB> | outputs pairs of longs that are likely to be duplicated");
+}
+
+long primep(long x)
+{
+  long i, end = (long)sqrt((double)x);
+  for(i=2;i<=end;i++)
+    if((x/i)*i == x) return 0;
+  return 1;
+}
+  
+long find_prime(long x)
+{
+  long start = x;
+  while(!primep(x)) x++;
+  fprintf(stderr, "find_prime(%ld) -> %ld\n", start, x);
+  return x;
+}
+
+int main(int ac, char **av)
+{
+  long buf[2];
+  int i;
+  long N = -1;
+  double M = -1.0;
+  long filled=0;
+  long input_records = 0;
+  long output_records = 0;
+  long tick = -1;
+
+  for(i=1;i<ac;i++) {
+    if(strcmp(av[i], "--help") == 0) usage();
+    else if(strcmp(av[i], "--verbose") == 0) verbose++;
+    else if(strcmp(av[i], "-N") == 0) N = atol(av[++i]);
+    else if(strcmp(av[i], "-M") == 0) M = atof(av[++i]);
+    else if(strcmp(av[i], "-tick") == 0) tick = atol(av[++i]);
+    else usage();
+  }
+
+  fprintf(stderr, "killroy: M = %f, N = %ld\n", M, N);
+
+  if(M < 0 || N < 0) usage();
+
+  long P = find_prime((long)(M * 1e9));
+  long too_full = P/2;
+  long table_size = P;
+  char *table = (char *)malloc(table_size);
+  if(!table) fatal("malloc failed");
+  memset(table, 0, table_size);
+
+  while(fread(buf, sizeof(long), 2, stdin) == 2) {
+    if(tick > 0 && input_records++ % tick == 0) {
+      double used = (double)filled/(double)P;
+      double out_in_ratio = 0;
+      
+      if(output_records > 0) out_in_ratio = input_records/(double)output_records;
+      fprintf(stderr, "killroy: %d M input records, %0.1f out/in ratio, filled = %f of %ld\n", input_records/1000000, out_in_ratio, used, P);
+    }
+
+    long a = buf[0];
+    long b = buf[1];
+    if(a > b) {
+      a = buf[1];
+      b = buf[0];
+    }
+    long offset = (a * N + b) % P;
+    if(offset <= 0) offset += P;
+
+    if(table[offset] == 0) {
+      if(filled++ >= too_full) {
+	fprintf(stderr, "killroy: cleanning house\n");
+	filled=0;
+	memset(table, 0, table_size);
+      }
+    }
+
+    if(table[offset] > 0) {
+      buf[0] = a;
+      buf[1] = b;
+      output_records++;
+      if(fwrite(buf, sizeof(long), 2, stdout) != 2)
+	fatal("write failed");
+    }
+    table[offset]=1;
+  }
+}
