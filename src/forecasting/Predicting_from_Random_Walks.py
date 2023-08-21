@@ -59,15 +59,20 @@ def test_acc_from_threshold(full_test_df, threshold, prior_class_1_prob, test_tr
     specterv1_test_df['pred'] = (specterv1_test_df['cos_sim'] >= specterv1_threshold)
     specterv1_test_df['pred'] = specterv1_test_df['pred'].astype(int)
     
-    
     # Fallback for missing values
     full_test_df['no_data'] = full_test_df['cos_sim'] == -1
     
-    if fallback_method == 'specter1':
+    if fallback_method == 'prone_specter1':
         # Replace values in 'pred' column with 'specterv1' where 'no_data' is True, otherwise keep the existing 'pred' values
         full_test_df['pred'] = np.where(full_test_df['no_data'], specterv1_test_df['pred'], full_test_df['pred'])
+        
+    elif fallback_method == 'specter1_prior':
+        specterv1_test_df['no_data'] = specterv1_test_df['cos_sim'] == -1
 
-    elif fallback_method == 'guess':
+        specterv1_test_df['prior_guess'] = np.random.binomial(1, prior_class_1_prob, size=len(full_test_df))
+        full_test_df['pred'] = np.where(specterv1_test_df['no_data'], specterv1_test_df['prior_guess'], specterv1_test_df['pred'])
+      
+    elif fallback_method == 'prone_prior':
         # Replace values in 'pred' column with 'prior_guess' where 'no_data' is stil True, otherwise keep the existing 'pred' values  
         full_test_df['prior_guess'] = np.random.binomial(1, prior_class_1_prob, size=len(full_test_df))
         full_test_df['pred'] = np.where(full_test_df['no_data'], full_test_df['prior_guess'], full_test_df['pred'])
@@ -209,7 +214,7 @@ def main():
     parser.add_argument("--output", "-o", type=str, default="walk_forecasting/", 
                         help="Output folder to store the walk forecasting results")
     parser.add_argument("--method", "-m", type=str, default="guess", 
-                        help="Fallback method when Prone has no values for one or more papers. Options: guess, specter1")
+                        help="Fallback method when Prone has no values for one or more papers. Options: guess, specter1, specter1_only")
     parser.add_argument("--threads", "-t", type=int, default=1, 
                         help="Simultaneous threads to use")
     
@@ -251,6 +256,10 @@ def main():
     specterv1_test_df = specterv1_test_df.merge(keep_ids_df, on=['id0', 'id1'], how='inner')
 
     num_threads = args.threads
+
+    if args.method in set(['specter1_prior']):
+        cumbins_walks = [cumbins_walks[0]]
+        print(f'non cumulative method {args.method} specified, running once only')
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         futures = [executor.submit(process_data, walk_path, 
