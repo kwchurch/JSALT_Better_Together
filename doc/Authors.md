@@ -70,7 +70,7 @@ There is a simple mapping between authorId and URLs on Semantic Scholar:
 Ditto for CorpusId:
 
 <ol>
-<li><a href="https://api.semanticscholar.org/CorpusId:2">https://api.semanticscholar.org/CorpusId:2</a><li>
+<li><a href="https://api.semanticscholar.org/CorpusId:2">https://api.semanticscholar.org/CorpusId:2</a></li>
 </ol>
 
 The following finds 209 papers by author 1712216:
@@ -84,12 +84,12 @@ papers[0:10]
 #       2363214, 2461856, 2499619], dtype=int32)
 ```
 
-You can click on the following iinks and verify that they share a common author:
+You can click on the following iinks to verify that they share a common author:
 
 <ol>
-<li><a href="https://api.semanticscholar.org/CorpusId:2">https://api.semanticscholar.org/CorpusId:2</a><li>
-<li><a href="https://api.semanticscholar.org/CorpusId:237611">https://api.semanticscholar.org/CorpusId:237611</a><li>
-<li><a href="https://api.semanticscholar.org/CorpusId:377241">https://api.semanticscholar.org/CorpusId:237611</a><li>
+<li><a href="https://api.semanticscholar.org/CorpusId:2">https://api.semanticscholar.org/CorpusId:2</a></li>
+<li><a href="https://api.semanticscholar.org/CorpusId:237611">https://api.semanticscholar.org/CorpusId:237611</a></li>
+<li><a href="https://api.semanticscholar.org/CorpusId:377241">https://api.semanticscholar.org/CorpusId:237611</a></li>
 </ol>
 
 Sparse matrices are convenient to work with, though maybe not so fast:
@@ -169,3 +169,51 @@ The first file maps author ids to paper ids, and the second maps
 paper ids to author ids.
 
 
+<h2>Simple Unix Script to Count Papers by Author</h2>
+
+```sh
+export JSALTdir=/work/k.church/JSALT-2023/
+cd $JSALTdir/semantic_scholar/releases/2023-06-20/database/papers/authors
+$JSALTsrc/C/x_to_y La < authors_to_papers.X.i | uniq -c | awk '$1 > 1000'  | head
+   # 1081 1679177
+   # 1574 1679424
+   # 8143 1679704
+   # 1069 1679790
+   # 1111 1680165
+   # 1522 1681236
+   # 2184 1682058
+   # 1266 1682342
+   # 3941 1682816
+   # 1055 1682912
+```
+
+Here are some links to those authors:
+
+<ol>
+<li><a href="https://www.semanticscholar.org/author/1679177">https://www.semanticscholar.org/author/1679177</a></li>
+<li><a href="https://www.semanticscholar.org/author/1679424">https://www.semanticscholar.org/author/1679424</a></li>
+<li><a href="https://www.semanticscholar.org/author/1679704">https://www.semanticscholar.org/author/1679704</a></li>
+<li><a href="https://www.semanticscholar.org/author/1679790">https://www.semanticscholar.org/author/1679790</a></li>
+<li><a href="https://www.semanticscholar.org/author/1680165">https://www.semanticscholar.org/author/1680165</a></li>
+<li><a href="https://www.semanticscholar.org/author/1681236">https://www.semanticscholar.org/author/1681236</a></li>
+<li><a href="https://www.semanticscholar.org/author/1682058">https://www.semanticscholar.org/author/1682058</a></li>
+<li><a href="https://www.semanticscholar.org/author/1682342">https://www.semanticscholar.org/author/1682342</a></li>
+<li><a href="https://www.semanticscholar.org/author/1682816">https://www.semanticscholar.org/author/1682816</a></li>
+<li><a href="https://www.semanticscholar.org/author/1682912">https://www.semanticscholar.org/author/1682912</a></li>
+</ol>
+
+The following will find papers with more than 100 authors:
+
+```sh
+$JSALTsrc/C/x_to_y La < papers_to_authors.X.i | uniq -c | awk '$1 > 100' | head
+    498 3995
+    151 6666
+    101 14058
+    134 15056
+    104 22619
+    439 24334
+    104 25175
+    500 29047
+    146 32454
+    868 49627
+```
