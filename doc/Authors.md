@@ -206,14 +206,25 @@ The following will find papers with more than 100 authors:
 
 ```sh
 $JSALTsrc/C/x_to_y La < papers_to_authors.X.i | uniq -c | awk '$1 > 100' | head
-    498 3995
-    151 6666
-    101 14058
-    134 15056
-    104 22619
-    439 24334
-    104 25175
-    500 29047
-    146 32454
-    868 49627
+    # 498 3995
+    # 151 6666
+    # 101 14058
+    # 134 15056
+    # 104 22619
+    # 439 24334
+    # 104 25175
+    # 500 29047
+    # 146 32454
+    # 868 49627
 ```
+
+There are lots of mechanisms that can produce large fan-outs and large
+fan-ins in the citation graph.  In addition to concerns about ethics,
+there are also concerns about dirty data.  Dirty data is a reality.
+The methods for constructing the graph involve lots of opportunities
+for SNAFUs.  Data base normalization is hard.  It is hard to decide if
+two authors are the same person or not.  Ditto for papers.  Data flows
+are complicated.  Semantic Scholar is based on seven sources of data.
+Those sources collect data from many other sources.  There are many
+opportunities for errors.
+
