@@ -77,7 +77,7 @@ int main(int ac, char **av)
 
   if((ac > 2) && (strcmp(av[1], "-m") == 0)) {
     merge_sort(ac, av);
-    exit(0);
+    return 0;
   }
 
   // simple in-memory sort
@@ -95,7 +95,7 @@ int main(int ac, char **av)
   if(fwrite(b, sizeof(struct bigram), N, stdout) != N)
     fatal("write failed");
 
-  exit(0);
+  return 0;
  }
 
 
