@@ -138,6 +138,11 @@ int main(int ac, char **av)
   
   init_random_floats(random_floats, K * N * 8);
 
+  // JUST ADDED...
+  int i;
+  for(i=0;i<K*N*8; i+=K)
+    normalize(random_floats + i, K);
+
   while(fread(float_buffer, K4, 1, stdin) == 1) {
     normalize(float_buffer, K);
     do_it(float_buffer, random_floats, K, N);

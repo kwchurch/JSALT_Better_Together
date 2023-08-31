@@ -97,10 +97,10 @@ If the cell contains <b>prefactor</b>, then we are blocked on Cheby iterations a
 <td>done</td>
 <td>done</td>
 <td>done</td>
-<td>cheby finished</td>
-<td>cheby iter=1</td>
 <td>done</td>
-<td>cheby iter=1</td>
 <td>done</td>
-<td>cheby iter=1</td>
+<td>done</td>
+<td>done</td>
+<td>done</td>
+<td>done</td>
 </tr></table>

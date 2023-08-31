@@ -1,9 +1,11 @@
-files=freq_row_piece freq_row check_order XY_to_bigrams print_bigrams unprint_bigrams sort_bigrams uniq_bigrams gram_matrix \
-	uniq_bigrams_by_hashing substream hist_bigrams bincount_bigrams split_binary_records check_bigrams extract_row lookup_bigram \
+files=freq_row_piece freq_row check_order XY_to_bigrams gram_matrix \
+	uniq_bigrams_by_hashing substream substream_records hist_bigrams bincount_bigrams split_binary_records check_bigrams extract_row lookup_bigram lookup_lbigram \
 	cocitations floats_to_random_bytes index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
 	near near_with_floats faster_near_with_floats near_without_floats calibrate_random_bytes cbind_bytes find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
-	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data killroy generate_pairs_from_idx filter_records sum_bigrams nbest_bigrams
+	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data killroy generate_pairs_from_idx filter_records sum_bigrams sum_lbigrams nbest_bigrams authors_to_authors \
+	print_bigrams unprint_bigrams sort_bigrams uniq_bigrams uniq_bigrams_by_hashing \
+	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing
 
 # random_bigrams 
 
@@ -27,26 +29,14 @@ check_order: check_order.c util.o
 XY_to_bigrams: XY_to_bigrams.c util.o
 	cc -o XY_to_bigrams XY_to_bigrams.c util.o
 
-print_bigrams: print_bigrams.c util.o
-	cc -o print_bigrams print_bigrams.c util.o
-
-unprint_bigrams: unprint_bigrams.c util.o
-	cc -o unprint_bigrams unprint_bigrams.c util.o
-
-sort_bigrams: sort_bigrams.c util.o
-	cc -o sort_bigrams sort_bigrams.c util.o
-
-uniq_bigrams: uniq_bigrams.c util.o
-	cc -o uniq_bigrams uniq_bigrams.c util.o
-
-uniq_bigrams_by_hashing: uniq_bigrams_by_hashing.c util.o
-	cc -o uniq_bigrams_by_hashing uniq_bigrams_by_hashing.c util.o
-
 gram_matrix: gram_matrix.c util.o
 	cc -o gram_matrix gram_matrix.c util.o
 
 substream: substream.c
 	cc -o substream substream.c
+
+substream_records: substream_records.c util.o
+	cc -o substream_records substream_records.c util.o
 
 hist_bigrams: hist_bigrams.c util.o
 	cc -o hist_bigrams hist_bigrams.c util.o
@@ -65,6 +55,9 @@ extract_row: extract_row.c util.o
 
 lookup_bigram: lookup_bigram.c util.o
 	cc -o lookup_bigram lookup_bigram.c util.o
+
+lookup_lbigram: lookup_lbigram.c util.o
+	cc -o lookup_lbigram lookup_lbigram.c util.o
 
 random_bigrams: random_bigrams.c util.o
 	cc -o random_bigrams random_bigrams.c util.o # -lssl -lcrypto
@@ -192,5 +185,41 @@ filter_records: filter_records.c util.o
 sum_bigrams: sum_bigrams.c util.o
 	cc -o sum_bigrams sum_bigrams.c util.o
 
+sum_lbigrams: sum_lbigrams.c util.o
+	cc -o sum_lbigrams sum_lbigrams.c util.o
+
 nbest_bigrams: nbest_bigrams.c util.o
 	cc -o nbest_bigrams nbest_bigrams.c util.o
+
+authors_to_authors: authors_to_authors.c util.o
+	cc -o authors_to_authors authors_to_authors.c util.o
+
+print_bigrams: print_bigrams.c util.o
+	cc -o print_bigrams print_bigrams.c util.o
+
+unprint_bigrams: unprint_bigrams.c util.o
+	cc -o unprint_bigrams unprint_bigrams.c util.o
+
+sort_bigrams: sort_bigrams.c util.o
+	cc -o sort_bigrams sort_bigrams.c util.o
+
+uniq_bigrams: uniq_bigrams.c util.o
+	cc -o uniq_bigrams uniq_bigrams.c util.o
+
+uniq_bigrams_by_hashing: uniq_bigrams_by_hashing.c util.o
+	cc -o uniq_bigrams_by_hashing uniq_bigrams_by_hashing.c util.o
+
+print_lbigrams: print_lbigrams.c util.o
+	cc -o print_lbigrams print_lbigrams.c util.o
+
+unprint_lbigrams: unprint_lbigrams.c util.o
+	cc -o unprint_lbigrams unprint_lbigrams.c util.o
+
+sort_lbigrams: sort_lbigrams.c util.o
+	cc -o sort_lbigrams sort_lbigrams.c util.o
+
+uniq_lbigrams: uniq_lbigrams.c util.o
+	cc -o uniq_lbigrams uniq_lbigrams.c util.o
+
+uniq_lbigrams_by_hashing: uniq_lbigrams_by_hashing.c util.o
+	cc -o uniq_lbigrams_by_hashing uniq_lbigrams_by_hashing.c util.o

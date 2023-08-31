@@ -95,5 +95,14 @@ int bigram_compare(struct bigram *a, struct bigram *b)
   if(a->elts[1] < b->elts[1]) return -1;
   if(a->elts[1] > b->elts[1]) return 1;
   return 0;
- }
+}
+
+int lbigram_compare(struct lbigram *a, struct lbigram *b)
+{
+  if(a->elts[0] < b->elts[0]) return -1;
+  if(a->elts[0] > b->elts[0]) return 1;
+  if(a->elts[1] < b->elts[1]) return -1;
+  if(a->elts[1] > b->elts[1]) return 1;
+  return 0;
+}
 

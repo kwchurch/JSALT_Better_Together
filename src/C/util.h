@@ -24,7 +24,14 @@ struct bigram {
   int elts[2];
 };
 
+struct lbigram {
+  float val;
+  long elts[2];
+};
+
+
 int bigram_compare(struct bigram *a, struct bigram *b);
+int lbigram_compare(struct lbigram *a, struct lbigram *b);
 
 #define TABLE_SIZE 999983
 
