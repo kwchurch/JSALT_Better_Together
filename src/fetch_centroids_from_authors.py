@@ -1,32 +1,40 @@
 #!/usr/bin/env python
 
-import json,requests,argparse
-import os,sys,argparse,time
+# input: authors
+# output: papers 
+
 import numpy as np
+import sys,json,requests,os,argparse
 from sklearn.metrics.pairwise import cosine_similarity
-# import pdb
-
-t0 = time.time()
-
-print('pairs_to_cos: ' + str(sys.argv), file=sys.stderr)
 
 apikey=os.environ.get('SPECTER_API_KEY')
 
-# assumes the dir argument contains
-#   embedding.f  sequence of N by K floats32
-#   map.old_to_new.i  sequence of N int32
-#   record_size  specifies K
-
 parser = argparse.ArgumentParser()
+parser.add_argument("--verbose", help="query", action='store_true')
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
-parser.add_argument("-V", '--verbose', action='store_true')
-parser.add_argument('--binary_output', action='store_true')
-parser.add_argument('--binary_input', help="input file (optional, use text input from stdin by default)", default=None)
-parser.add_argument('--input_new_pairs', action='store_true')
-parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
-# parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
+parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
+parser.add_argument('--input_new_pairs', action='store_true')
+parser.add_argument('--output', help="output file", required=True)
 args = parser.parse_args()
+
+def id_ify(s):
+    if len(s) == 40: return s
+    for prefix in ['CorpusId:', 'PMID:', 'ACL:', 'arXiv:']:
+        if s.startswith(prefix):
+            return s
+    if '/' in s: return s
+    return 'CorpusId:' + s
+
+def print_paper(paper, link_type, query):
+    # print(paper)
+    if 'externalIds' in paper and not paper['externalIds'] is None:
+        print('\t'.join(map(str, [link_type, query, paper['externalIds']['CorpusId'], paper['citationCount'], paper['title']])))
+    else:
+        print('\t'.join(map(str, [link_type, query, '*** ERROR ***', paper])))
+
+def safe(s):
+    return s.replace('\n', ' ').replace('\t', ' ').replace('\r', ' ')
 
 def map_int64(fn):
     fn_len = os.path.getsize(fn)
@@ -175,7 +183,6 @@ def get_vec(id, use_references):
     if use_references == 'never':
         m = get_mapped_refs([id])
         if len(m) < 1: return None
-        if m[0] < 0 or m[0] > len(emb): return None
         return emb[m[0],:]
     elif use_references == 'always':
         return id_to_centroid(id)
@@ -193,44 +200,61 @@ def get_vec(id, use_references):
 
 # ids = np.loadtxt(sys.stdin).astype(int)
 
+author_details = {}
 
-def do_it(id1, id2):
-    vec1 = get_vec(id1, args.use_references)
-    if vec1 is None:
-        print('-1\t' + rline)
-        return
-    vec2 = get_vec(id2, args.use_references)
-    if vec2 is None:
-        print('-1\t' + rline)
-        return
+def authorid2vec(authorid):
+    # print('do_authorid: ' + str(authorid), file=sys.stderr)
+    cmd = 'https://api.semanticscholar.org/graph/v1/author/' + str(authorid) + '/?fields=name,hIndex,papers,papers.externalIds'
 
-    if args.verbose:
-        print('id1: ' + str(id1), file=sys.stderr)
-        print('id2: ' + str(id2), file=sys.stderr)
-        print('vec1.shape: ' + str(vec1.shape), file=sys.stderr)
-        print('vec2.shape: ' + str(vec2.shape), file=sys.stderr)
-        print('np.sum(vec1): ' + str(np.sum(vec1)), file=sys.stderr)
-        print('np.sum(vec2): ' + str(np.sum(vec2)), file=sys.stderr)
+    j = requests.get(cmd, headers={"x-api-key": apikey}).json()
+    author_details[authorid] = j
 
-    cos = cosine_similarity(vec1.reshape(1,-1),vec2.reshape(1,-1))[0,0]
+    if not 'papers' in j: return None
+    if len(j['papers']) <= 0: return None
 
-    if args.input_new_pairs:
-        id1 = new_to_old(id1)
-        id2 = new_to_old(id2)
+    vecs = [get_vec(p['externalIds']['CorpusId'], args.use_references) for p in j['papers']]
+    vecs = [v for v in vecs if not v is None ]
 
-    print(str(cos) + '\t' + str(id1) + '\t' + str(id2))
-    # sys.stdout.flush()
+    if len(vecs) <= 0: return None
 
-if args.binary_input:
-    input_ids = map_int64(args.binary_input).reshape(-1, 2)
-    for id1,id2 in input_ids:
-        do_it(id1, id2)
-else:
-    for line in sys.stdin:
-        rline = line.rstrip()
-        fields = rline.split()
-        if len(fields) < 2: continue
-        id1,id2 = fields[0:2]
-        do_it(int(id1), int(id2))
+    vecs = np.array(vecs)
 
-print('%0.0f sec: done' % (time.time() - t0), file=sys.stderr)
+    # print('vecs.shape: ' + str(vecs.shape), file=sys.stderr)
+    centroid = np.sum(vecs, axis=0)
+    # print('centroid.shape: ' + str(centroid.shape), file=sys.stderr)
+    return centroid
+
+authors = np.loadtxt(sys.stdin, converters=int, dtype=int)
+
+# print(authors)
+centroids = [authorid2vec(a) for a in authors]
+
+authors2 = []
+centroids2 = []
+
+for a,c in zip(authors, centroids):
+    if not c is None:
+        authors2.append(a)
+        centroids2.append(c)
+
+authors2 = np.array(authors, dtype=int)
+centroids2 = np.array(centroids2)
+
+from scipy.spatial.distance import pdist
+from scipy.cluster.hierarchy import complete,leaves_list
+o = leaves_list(complete(pdist(centroids2, metric='cosine')))
+
+# np.set_printoptions(linewidth=200, precision=2)
+
+# print(authors2[o])
+sim = cosine_similarity(centroids2[o,:])
+
+np.savetxt(args.output + '.sim.tsv', sim)
+
+with open(args.output + '.author.tsv', 'w') as fd:
+    print('\t'.join(['id', 'name', 'papers', 'hIndex']), file=fd)
+    for a in authors2[o]:
+        d = author_details[a]
+        print('\t'.join(map(str, [a, d['name'], len(d['papers']), d['hIndex']])), file=fd)
+
+

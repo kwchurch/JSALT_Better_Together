@@ -19,11 +19,15 @@ apikey=os.environ.get('SPECTER_API_KEY')
 parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
 parser.add_argument("-V", '--verbose', action='store_true')
+parser.add_argument('--no_map', action='store_true')
 parser.add_argument('--binary_output', default=None)
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
 args = parser.parse_args()
+
+if args.no_map:
+    assert args.use_references == 'never', 'with --no_map option, please use --use_references == "never"'
 
 def map_int64(fn):
     fn_len = os.path.getsize(fn)
@@ -133,7 +137,9 @@ ids = np.array([int(i) for i in sys.stdin.read().split('\n') if len(i) > 0], dty
 if args.verbose:
     print('ids.shape = ' + str(ids.shape), file=sys.stderr)
 
-if args.use_references == 'never' or args.use_references == 'when_necessary':
+if args.no_map:
+    result = emb[ids,:]
+elif args.use_references == 'never' or args.use_references == 'when_necessary':
     mapped_ids = np.zeros(len(ids), dtype=int)
     for e,i in enumerate(ids):
         if i < maxid:

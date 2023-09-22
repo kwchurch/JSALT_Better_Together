@@ -57,7 +57,7 @@ int main(int ac, char **av)
 	  A[i] = Y + Xidx[paper-1];
 	  nA[i] = Xidx[paper] - Xidx[paper-1];
 	}
-	fprintf(stderr, "freq(CorpusId:%ld) = %ld\n", paper, nA[i]);
+	// fprintf(stderr, "freq(CorpusId:%ld) = %ld\n", paper, nA[i]);
 	if(nA[i] > max_authors) nA[i] = max_authors;
       }
     }

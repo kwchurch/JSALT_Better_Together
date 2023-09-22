@@ -1,11 +1,13 @@
 files=freq_row_piece freq_row check_order XY_to_bigrams gram_matrix \
 	uniq_bigrams_by_hashing substream substream_records hist_bigrams bincount_bigrams split_binary_records check_bigrams extract_row lookup_bigram lookup_lbigram \
-	cocitations floats_to_random_bytes index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
-	near near_with_floats faster_near_with_floats near_without_floats calibrate_random_bytes cbind_bytes find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
+	cocitations floats_to_random_bytes floats_to_random_bytes_stats \
+	index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
+	near near_with_floats faster_near_with_floats near_without_floats calibrate_random_bytes cbind_bytes \
+	find_lines find_lines_nonnumeric aref summarize_index authors2matrix index_lines common_prefix char_hist score_with_floats \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
 	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data killroy generate_pairs_from_idx filter_records sum_bigrams sum_lbigrams nbest_bigrams authors_to_authors \
 	print_bigrams unprint_bigrams sort_bigrams uniq_bigrams uniq_bigrams_by_hashing \
-	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing
+	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing center_floats
 
 # random_bigrams 
 
@@ -67,6 +69,9 @@ cocitations: cocitations.c util.o
 
 floats_to_random_bytes: floats_to_random_bytes.c util.o
 	cc -o floats_to_random_bytes floats_to_random_bytes.c util.o -lm # -lssl -lcrypto
+
+floats_to_random_bytes_stats: floats_to_random_bytes_stats.c util.o
+	cc -o floats_to_random_bytes_stats floats_to_random_bytes_stats.c util.o -lm # -lssl -lcrypto
 
 index_random_bytes: index_random_bytes.c util.o
 	cc -o index_random_bytes index_random_bytes.c util.o
@@ -223,3 +228,7 @@ uniq_lbigrams: uniq_lbigrams.c util.o
 
 uniq_lbigrams_by_hashing: uniq_lbigrams_by_hashing.c util.o
 	cc -o uniq_lbigrams_by_hashing uniq_lbigrams_by_hashing.c util.o
+
+center_floats: center_floats.c util.o
+	cc -o center_floats center_floats.c util.o -lm
+

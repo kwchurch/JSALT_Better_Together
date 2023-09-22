@@ -39,15 +39,15 @@ def svd_dense(matrix, dimension):
     U = np.array(U)
     U = U[:, :dimension]
     s = s[:dimension]
-    s = np.sqrt(s)
-    U = U * s
+    # s = np.sqrt(s)
+    U = U @ np.diag(s)
     U = preprocessing.normalize(U, "l2")
 
     # added by kwc
     print('%0.0f sec: ProNE svd_dense; U.shape = %s' % (time.time() - t0_svd, str(U.shape)), file=sys.stderr)
     sys.stderr.flush()
     
-    return U
+    return U.astype(np.float32)
 
 # def tsvd_rand(matrix, n_components):
 #     """
@@ -78,7 +78,8 @@ U = svd_dense(M, K_after)
 print(str(time.time() - t0) + ' SVD done', file=sys.stderr)
 sys.stderr.flush()
 
-U.save(args.output)
+# np.save(args.output, U)
+U.tofile(args.output)
 
 print(str(time.time() - t0) + ' done', file=sys.stderr)
 sys.stderr.flush()
