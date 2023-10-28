@@ -31,7 +31,10 @@ def one_line_ify(s):
 def print_paper(paper, link_type, query):
     # print(paper)
     if 'externalIds' in paper and not paper['externalIds'] is None:
-        print('\t'.join(map(str, [link_type, query, paper['externalIds']['CorpusId'], paper['citationCount'], one_line_ify(paper['title'])])))
+        year = 'NA'
+        if 'year' in paper:
+            year = str(paper['year'])
+        print('\t'.join(map(str, [link_type, query, paper['externalIds']['CorpusId'], paper['citationCount'], year, one_line_ify(paper['title'])])))
     else:
         print('\t'.join(map(str, [link_type, query, '*** ERROR ***', paper])))
 
@@ -39,7 +42,7 @@ for line in sys.stdin:
     query=line.rstrip()
     my_id = id_ify(query)
 
-    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/?fields=title,authors,referenceCount,citationCount,references,references.externalIds,references.citationCount,references.title,citations,citations.externalIds,citations.citationCount,citations.title'
+    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/?fields=title,authors,referenceCount,citationCount,references,references.externalIds,references.citationCount,references.title,citations,citations.externalIds,citations.citationCount,citations.title,citations.year'
 
 
     j = requests.get(cmd, headers={"x-api-key": apikey}).json()
