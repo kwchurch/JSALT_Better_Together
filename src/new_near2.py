@@ -193,8 +193,7 @@ config = directory_to_config(args.dir)
 # else:
 #     np.savetxt(sys.stdout, result)
 
-def get_ids_for_class(new_id):
-    c = config['classes']['classes'][new_id]
+def get_ids_for_class(c):
     idx = config['classes']['idx']
     # print('new_id: %d, class: %d' % (new_id, c), file=sys.stderr)
     if c == 0:
@@ -228,33 +227,33 @@ def my_cos(v1, v2):
 #             ss = my_cos(vec,nvec)
 #             print('\t'.join(map(str, [old_id, o, s, ss, vec.shape, nvec.shape])))
 
+print('corpus_id1\tclass_rank\tcandidate_rank\tcorpus_id2\tcos')
+
 for line in sys.stdin:
-    if len(line) > 0:
-        old_id = int(line)
-        new_id = config['map']['old_to_new'][old_id]
-        vec = config['embedding'][new_id,:].reshape(1,-1)
-        # pdb.set_trace()
-        near = get_ids_for_class(new_id)
-        # print('near.shape: ' + str(near.shape), file=sys.stderr)
-        # print(near)
+    fields = line.split('\t')
+    if len(fields) != 3: continue
+    row = fields[0]
+    if row == 'row': continue
+    classes = fields[1].split('|')
+    new_id = int(row)
+    old_id = config['map']['new_to_old'][new_id]
+    vec = config['embedding'][new_id,:].reshape(1,-1)
+    nears = [get_ids_for_class(int(c)) for c in classes]
 
-        # for n in near:
-        #     o = config['map']['new_to_old'][n]
-        #     nvec = config['embedding'][n,:].reshape(1,-1)
-        #     s = cosine_similarity(vec,nvec)[0,0]
-        #     print('\t'.join(map(str, [old_id, o, s])))
-
+    for i,near in enumerate(nears):
         o = config['map']['new_to_old'][near]
-        nvec = config['embedding'][near,:]
-        s = cosine_similarity(vec,nvec)
+        try:
+            nvec = config['embedding'][near,:]
+            s = cosine_similarity(vec,nvec)
+            best = np.argsort(-s[0,:])
+            if len(best) > args.topN:
+                best = best[0:args.topN]
+            for jj, oo,ss in zip(np.arange(len(best)), o[best], s[0,:][best]):
+                print('\t'.join(map(str, [old_id, i, jj, oo, ss])))
+            sys.stdout.flush()
+        except:
+            print('\t'.join(map(str, [old_id, i, '***Error***'])))
 
-
-        best = np.argsort(-s[0,:])
-        if len(best) > args.topN:
-            best = best[0:args.topN]
-
-        for oo,ss in zip(o[best], s[0,:][best]):
-            print('\t'.join(map(str, [old_id, oo, ss])))
 
             
 

@@ -14,7 +14,7 @@ parser.add_argument("--verbose", help="query", action='store_true')
 # parser.add_argument("--API", help="paper|author", default='paper')
 # parser.add_argument("--search", help="query", action='store_true')
 # parser.add_argument("--fields", help="comma separated fields", default='')
-# parser.add_argument("--limit", type=int, help="max records to return", default=50)
+parser.add_argument("--limit", type=int, help="max records to return", default=1000)
 args = parser.parse_args()
 
 def id_ify(s):
@@ -42,7 +42,7 @@ for line in sys.stdin:
     query=line.rstrip()
     my_id = id_ify(query)
 
-    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/?fields=title,authors,referenceCount,citationCount,references,references.externalIds,references.citationCount,references.title,citations,citations.externalIds,citations.citationCount,citations.title,citations.year'
+    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/?fields=title,authors,referenceCount,citationCount,references,references.externalIds,references.citationCount,references.title,citations,citations.externalIds,citations.citationCount,citations.title,citations.year&limit=' + str(args.limit)
 
 
     j = requests.get(cmd, headers={"x-api-key": apikey}).json()

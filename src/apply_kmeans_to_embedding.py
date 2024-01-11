@@ -32,6 +32,7 @@ parser.add_argument("--end", type=int, help='row to end on', default=-1)
 parser.add_argument("-i", "--input_directory", help="a directory", required=True)
 parser.add_argument("--kmeans", help="output from embeddings_to_kmeans.py", required=True)
 parser.add_argument("--brute_force", action='store_true')
+parser.add_argument("--topN", type=int, default=1)
 
 args = parser.parse_args()
 
@@ -76,8 +77,9 @@ else:
     sys.stdout.flush()
     for row in range(args.start, end):
         q = normalize(embedding[row,:].reshape(1,-1))
-        D,I = index.search(q,1)
-        print(str(row) + '\t' + str(I[0][0]) + '\t' + str(D[0][0]))
+        D,I = index.search(q,args.topN)
+        # print(str(row) + '\t' + str(I[0][0]) + '\t' + str(D[0][0]))
+        print(str(row) + '\t' + '|'.join(map(str, I.reshape(-1))) + '\t' + '|'.join(map(str, D.reshape(-1))))
         sys.stdout.flush()
         # print(str(I.reshape(-1)) + '\t' + str(D.reshape(-1)))
 

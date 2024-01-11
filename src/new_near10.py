@@ -23,7 +23,8 @@ parser.add_argument("-V", '--verbose', action='store_true')
 parser.add_argument('--no_map', action='store_true')
 parser.add_argument('--binary_output', default=None)
 parser.add_argument('--topN', type=int, default=10)
-parser.add_argument('--limit', type=int, default=1000)
+parser.add_argument('--nclasses', type=int, default=10)
+parser.add_argument('--limit', type=int, default=100000)
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
@@ -91,15 +92,15 @@ def embedding_from_dir(dir, K):
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
 
 def classes_from_dir(dir):
-    fn = dir + '/class_pieces/classes.i'
+    fn = dir + '/class_pieces/classes' + str(args.nclasses) + '.i'
     fn_len = os.path.getsize(fn)
-    classes = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
+    classes = np.memmap(fn, shape=(int(fn_len/(4*args.nclasses)), args.nclasses),  dtype=np.int32, mode='r')
 
-    fn = dir + '/class_pieces/classes.idx.i'
+    fn = dir + '/class_pieces/classes2.idx.i'
     fn_len = os.path.getsize(fn)
     idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
 
-    fn = dir + '/class_pieces/classes.inv.i'
+    fn = dir + '/class_pieces/classes2.inv.i'
     fn_len = os.path.getsize(fn)
     inv = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
 
@@ -193,8 +194,21 @@ config = directory_to_config(args.dir)
 # else:
 #     np.savetxt(sys.stdout, result)
 
-def get_ids_for_class(new_id):
-    c = config['classes']['classes'][new_id]
+def get_classes_for_id(i):
+    return config['classes']['classes'][i,:]
+
+def class_freq(c):
+    idx = config['classes']['idx']
+    if c == 0:
+        start = 0
+    else:
+        start = idx[c-1]
+
+    end = idx[c]
+
+    return end - start
+
+def get_ids_for_class(c):
     idx = config['classes']['idx']
     # print('new_id: %d, class: %d' % (new_id, c), file=sys.stderr)
     if c == 0:
@@ -205,7 +219,7 @@ def get_ids_for_class(new_id):
     end = idx[c]
     if end - start > args.limit:
         end = start + args.limit
-    
+
     return config['classes']['inv'][start:end]
 
 def my_cos(v1, v2):
@@ -213,49 +227,43 @@ def my_cos(v1, v2):
     n2 = np.linalg.norm(v2)
     return (v1 @ v2.T)[0,0]/(n1 * n2)
 
-# for line in ['9024416']:
-# for line in sys.stdin:
-#     if len(line) > 0:
-#         old_id = int(line)
-#         new_id = config['map']['old_to_new'][old_id]
-#         vec = config['embedding'][new_id,:].reshape(1,-1)
-#         # pdb.set_trace()
-#         near = get_ids_for_class(new_id)
-#         for n in near:
-#             o = config['map']['new_to_old'][n]
-#             nvec = config['embedding'][n,:].reshape(1,-1)
-#             s = cosine_similarity(vec,nvec)
-#             ss = my_cos(vec,nvec)
-#             print('\t'.join(map(str, [old_id, o, s, ss, vec.shape, nvec.shape])))
+def summarize_sorted_lists(lists):
+    res = {}
+    for l in lists:
+        for e in l:
+            if e in res:
+                res[e] += 1
+            else:
+                res[e]=1
+    return res
+
+print('corpus_id1\tclass_rank\tcandidate_rank\tcorpus_id2\tcos')
 
 for line in sys.stdin:
-    if len(line) > 0:
-        old_id = int(line)
-        new_id = config['map']['old_to_new'][old_id]
-        vec = config['embedding'][new_id,:].reshape(1,-1)
-        # pdb.set_trace()
-        near = get_ids_for_class(new_id)
-        # print('near.shape: ' + str(near.shape), file=sys.stderr)
-        # print(near)
+    fields = line.split('\t')
+    if len(fields) != 3: continue
+    row = fields[0]
+    if row == 'row': continue
+    classes = fields[1].split('|')
+    sclasses = set([int(c) for c in classes])
+    new_id = int(row)
+    old_id = config['map']['new_to_old'][new_id]
+    vec = config['embedding'][new_id,:].reshape(1,-1)
+    nears = [get_ids_for_class(int(c)) for c in classes]
+    s = summarize_sorted_lists(nears)
+    # stats = np.bincount(np.array([v for v in s.values()]))
+    # print('\t'.join(map(str, [new_id, old_id, '|'.join(map(str,stats[1:]))])))
 
-        # for n in near:
-        #     o = config['map']['new_to_old'][n]
-        #     nvec = config['embedding'][n,:].reshape(1,-1)
-        #     s = cosine_similarity(vec,nvec)[0,0]
-        #     print('\t'.join(map(str, [old_id, o, s])))
-
+    for near in s.keys():
         o = config['map']['new_to_old'][near]
-        nvec = config['embedding'][near,:]
-        s = cosine_similarity(vec,nvec)
-
-
-        best = np.argsort(-s[0,:])
-        if len(best) > args.topN:
-            best = best[0:args.topN]
-
-        for oo,ss in zip(o[best], s[0,:][best]):
-            print('\t'.join(map(str, [old_id, oo, ss])))
-
-            
-
-
+        nvec = config['embedding'][near,:].reshape(1,-1)
+        sim = cosine_similarity(vec,nvec)[0,0]
+        nclasses=get_classes_for_id(near)
+        nclasses_str = '|'.join(map(str, nclasses))
+        joint = set.intersection(sclasses, set(nclasses))
+        freqs = [class_freq(c) for c in joint]
+        print('\t'.join(map(str, [old_id, o, s[near],
+                                  '|'.join(map(str, joint)),
+                                  '|'.join(map(str, freqs)),
+                                  sim, fields[1], nclasses_str])))
+        # sys.stdout.flush()
