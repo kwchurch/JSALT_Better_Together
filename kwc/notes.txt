@@ -7922,6 +7922,18 @@ v.get_label_by_id('01').set_text('46M\n(22%)')
 v.get_label_by_id('11').set_text('65M\n(31%)')
 plt.savefig('abstracts.citation_graph.png', bbox_inches='tight', dpi=1200)
 
+import matplotlib.pyplot as plt
+from matplotlib_venn import venn2,venn3
+
+plt.clf()
+plt.rcParams.update({'font.size': 24})
+v = venn2(subsets= (34, 46, 65), set_labels=('Abstracts', 'Citation Graph'), alpha=0.5)
+v.get_label_by_id('10').set_text('34M\n(16%)')
+v.get_label_by_id('01').set_text('46M\n(22%)')
+v.get_label_by_id('11').set_text('65M\n(31%)')
+plt.savefig('abstracts.citation_graph.400.png', bbox_inches='tight', dpi=400)
+
+
 
 
 
