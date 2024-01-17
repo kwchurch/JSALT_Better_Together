@@ -23,7 +23,7 @@ parser.add_argument("-V", '--verbose', action='store_true')
 parser.add_argument('--no_map', action='store_true')
 parser.add_argument('--binary_output', default=None)
 parser.add_argument('--topN', type=int, default=10)
-parser.add_argument('--nclasses', type=int, default=10)
+parser.add_argument('--nclasses', type=int, default=20)
 parser.add_argument('--limit', type=int, default=100000)
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
@@ -92,15 +92,15 @@ def embedding_from_dir(dir, K):
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
 
 def classes_from_dir(dir):
-    fn = dir + '/class_pieces/classes' + str(args.nclasses) + '.i'
+    fn = dir + '/class_pieces/top20/classes' + str(args.nclasses) + '.i'
     fn_len = os.path.getsize(fn)
     classes = np.memmap(fn, shape=(int(fn_len/(4*args.nclasses)), args.nclasses),  dtype=np.int32, mode='r')
 
-    fn = dir + '/class_pieces/classes2.idx.i'
+    fn = dir + '/class_pieces/top20/classes2.idx.i'
     fn_len = os.path.getsize(fn)
     idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
 
-    fn = dir + '/class_pieces/classes2.inv.i'
+    fn = dir + '/class_pieces/top20/classes2.inv.i'
     fn_len = os.path.getsize(fn)
     inv = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
 
