@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import json,requests,argparse 
+import json,requests,argparse
 import os,sys,argparse,time
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
@@ -21,10 +21,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
 parser.add_argument("-V", '--verbose', action='store_true')
 parser.add_argument('--no_map', action='store_true')
+parser.add_argument('--skip_cos', action='store_true')
 parser.add_argument('--binary_output', default=None)
-# parser.add_argument('--topN', type=int, default=10)
-parser.add_argument('--nclasses', type=int, default=50)
-parser.add_argument('--limit', type=int, default=10000000)
+parser.add_argument('--topN', type=int, default=10)
+parser.add_argument('--pad_factor', type=int, default=5)
+parser.add_argument('--limit', type=int, default=100000)
+parser.add_argument('--number_of_landmarks', type=int, default=50)
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
@@ -91,22 +93,44 @@ def embedding_from_dir(dir, K):
     fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
 
-def classes_from_dir(dir):
-    fn = dir + '/class_pieces/top50/classes' + str(args.nclasses) + '.i'
+def postings_from_dir(dir):
+    fn = dir + '/class_pieces/top50/landmarks.i'
     fn_len = os.path.getsize(fn)
-    classes = np.memmap(fn, shape=(int(fn_len/(4*args.nclasses)), args.nclasses),  dtype=np.int32, mode='r')
-
-    fn = dir + '/class_pieces/top50/classes2.idx.i'
+    # print('fn_len: ' + str(fn_len))
+    landmarks = np.memmap(fn,
+                          shape=(int(fn_len/(args.number_of_landmarks*4)),
+                                 args.number_of_landmarks),  
+                          dtype=np.int32, mode='r')
+    fn = dir + '/class_pieces/top50/postings.i'
     fn_len = os.path.getsize(fn)
-    idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
+    postings = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
 
-    fn = dir + '/class_pieces/top50/classes2.inv.i'
+    fn = dir + '/class_pieces/top50/postings.idx.i'
     fn_len = os.path.getsize(fn)
-    inv = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
+    postings_idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
 
-    return { 'classes' : classes,
-             'idx' : idx,
-             'inv' : inv }
+    return { 'landmarks' : landmarks,
+             'postings' : postings,
+             'postings_idx' : postings_idx }
+
+
+# def classes_from_dir(dir):
+#     fn = dir + '/class_pieces/classes.i'
+#     fn_len = os.path.getsize(fn)
+#     classes = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
+
+#     fn = dir + '/class_pieces/classes.idx.i'
+#     fn_len = os.path.getsize(fn)
+#     idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
+
+#     fn = dir + '/class_pieces/classes.inv.i'
+#     fn_len = os.path.getsize(fn)
+#     inv = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
+
+#     return { 'classes' : classes,
+#              'idx' : idx,
+#              'inv' : inv }
+
 
 def directory_to_config(dir):
     K = record_size_from_dir(dir)
@@ -114,7 +138,7 @@ def directory_to_config(dir):
              'dir' : dir,
              'map' : {'old_to_new' : map_from_dir(dir),
                       'new_to_old' : imap_from_dir(dir)},
-             'classes' : classes_from_dir(dir) ,
+             'postings' : postings_from_dir(dir) ,
              'embedding' : embedding_from_dir(dir, K)}
 
 config = directory_to_config(args.dir)
@@ -194,22 +218,25 @@ config = directory_to_config(args.dir)
 # else:
 #     np.savetxt(sys.stdout, result)
 
-def get_classes_for_id(i):
-    return config['classes']['classes'][i,:]
+# def get_ids_for_class(c):
+#     idx = config['classes']['idx']
+#     # print('new_id: %d, class: %d' % (new_id, c), file=sys.stderr)
+#     if c == 0:
+#         start = 0
+#     else:
+#         start = idx[c-1]
 
-def class_freq(c):
-    idx = config['classes']['idx']
-    if c == 0:
-        start = 0
-    else:
-        start = idx[c-1]
+#     end = idx[c]
+#     if end - start > args.limit:
+#         end = start + args.limit
+    
+#     return config['classes']['inv'][start:end]
 
-    end = idx[c]
+def get_postings(c):
+    
+    # print('get_postings: ' + str(c))
 
-    return end - start
-
-def get_ids_for_class(c):
-    idx = config['classes']['idx']
+    idx = config['postings']['postings_idx']
     # print('new_id: %d, class: %d' % (new_id, c), file=sys.stderr)
     if c == 0:
         start = 0
@@ -217,53 +244,135 @@ def get_ids_for_class(c):
         start = idx[c-1]
 
     end = idx[c]
-    if end - start > args.limit:
-        end = start + args.limit
-
-    return config['classes']['inv'][start:end]
+    # if end - start > args.limit:
+    #     end = start + args.limit
+    
+    # print('start: ' + str(start))
+    # print('end: ' + str(end))
+    res = config['postings']['postings'][start:end]
+    # print('len(res): ' + str(len(res)))
+    return res
 
 def my_cos(v1, v2):
     n1 = np.linalg.norm(v1)
     n2 = np.linalg.norm(v2)
     return (v1 @ v2.T)[0,0]/(n1 * n2)
 
-def summarize_sorted_lists(lists):
-    res = {}
-    for l in lists:
-        for e in l:
-            if e in res:
-                res[e] += 1
-            else:
-                res[e]=1
-    return res
+# numpy.unique(ar, return_index=False, return_inverse=False, return_counts=False, axis=None, *, equal_nan=True)
 
-print('corpus_id1\tclass_rank\tcandidate_rank\tcorpus_id2\tcos')
+def summarize_nears(nears):
+    l = sum([len(n) for n in nears])
+    res = np.zeros(l, dtype=np.int32)
+    i=0    
+    for n in nears:
+        i2 = i + len(n)
+        res[i:i2] = n
+        i=i2
+    return np.unique(res, return_counts=True)
+
+def old_summarize_nears(nears):
+    res = {}
+    for n in nears:
+        # print('len(n): ' + str(len(n)))
+        for nn in n:
+            if not nn in res:
+                res[nn] = 0;
+            res[nn] += 1
+    return res                
+
+if args.skip_cos:
+    print('corpus_id1\tcorpus_id2\tintersections')
+else:
+    print('corpus_id1\tcorpus_id2\tcos\trank\tintersections')
 
 for line in sys.stdin:
-    fields = line.split('\t')
-    if len(fields) != 3: continue
-    row = fields[0]
-    if row == 'row': continue
-    classes = fields[1].split('|')
-    sclasses = set([int(c) for c in classes])
-    new_id = int(row)
-    old_id = config['map']['new_to_old'][new_id]
+    fields = line.rstrip().split('\t')
+    if len(fields) == 1:
+        old_id = int(fields[0])
+        new_id = -1
+        if old_id >= 0 and old_id < len(config['map']['old_to_new']):
+            new_id = config['map']['old_to_new'][old_id]
+        # print('new_id: ' + str(new_id))
+        # print('old_id: ' + str(old_id))
+        # print('shape: ' + str(config['postings']['landmarks'].shape))
+        classes = None
+        if new_id >= 0 and new_id < len(config['postings']['landmarks']):
+            classes = config['postings']['landmarks'][new_id,:].reshape(-1)
+            if classes[0] == classes[1]:
+                classes = None
+            if args.verbose:
+                print('classes: ' + str(classes))
+        if classes is None:
+            print(fields[0] + '\tNA')
+            continue
+    elif len(fields) != 3: continue
+    else:
+        row = fields[0]
+        if row == 'row': continue
+        classes = fields[1].split('|')
+        new_id = int(row)
+        old_id = config['map']['new_to_old'][new_id]
     vec = config['embedding'][new_id,:].reshape(1,-1)
-    nears = [get_ids_for_class(int(c)) for c in classes]
-    s = summarize_sorted_lists(nears)
-    # stats = np.bincount(np.array([v for v in s.values()]))
-    # print('\t'.join(map(str, [new_id, old_id, '|'.join(map(str,stats[1:]))])))
+    # nears = [get_ids_for_class(int(c)) for c in classes]
 
-    for near in s.keys():
-        o = config['map']['new_to_old'][near]
-        nvec = config['embedding'][near,:].reshape(1,-1)
-        sim = cosine_similarity(vec,nvec)[0,0]
-        nclasses=get_classes_for_id(near)
-        nclasses_str = '|'.join(map(str, nclasses))
-        joint = set.intersection(sclasses, set(nclasses))
-        freqs = [class_freq(c) for c in joint]
-        print('\t'.join(map(str, [old_id, o, s[near],
-                                  '|'.join(map(str, joint)),
-                                  '|'.join(map(str, freqs)),
-                                  sim, fields[1], nclasses_str])))
-        # sys.stdout.flush()
+    # print('classes: ' + str(classes))
+    nears = [get_postings(int(c)) for c in classes]
+
+    summary_ids,summary_counts = summarize_nears(nears)
+
+    c = np.bincount(summary_counts)
+    cc = np.cumsum(c)
+    
+    N = np.sum(c)
+    T = 0
+    for i,x in enumerate(N - cc):
+        if x > args.pad_factor*args.topN:
+            T=i
+
+    T = T+1
+    s0 = summary_counts > T
+
+    near0 = summary_ids[s0]
+    inter0 = summary_counts[s0]
+
+    shortfall = args.pad_factor*args.topN - len(near0)
+    # print('shortfall: ' + str(shortfall) + ' len(near0): ' + str(len(near0)) + ' args.topN: ' + str(args.topN))
+
+    if shortfall > 0:
+        s1 = summary_counts == T
+        sum_s1 = sum(s1)
+
+        print('sum_s1: ' + str(sum_s1))
+        print('shortfall: ' + str(shortfall))
+        print('T: ' + str(T))
+        
+        if sum_s1 < shortfall:
+            shortfall=s1
+
+        near1 = summary_ids[s1][0:shortfall]
+        near = np.append(near0, near1)
+
+        inter1 = summary_counts[s1][0:shortfall]
+        intersections = np.append(inter0, inter1)
+    else:
+        near = near0
+        intersections = inter0
+
+    # intersections = summary_counts[s]
+    if not args.skip_cos:
+        print('len(near): ' + str(len(near)))
+    o = config['map']['new_to_old'][near]
+
+    if args.skip_cos:
+        for oo,inter in zip(o, intersections):
+            print('\t'.join(map(str, [old_id, oo, inter])))
+    else:
+        nvec = config['embedding'][near,:]
+        s = cosine_similarity(vec,nvec)
+        best = np.argsort(-s[0,:])
+        if len(best) > args.topN:
+            best = best[0:args.topN]
+        for jj, oo,ss,inter in zip(np.arange(len(best)), o[best], s[0,:][best], intersections[best]):
+            print('\t'.join(map(str, [old_id, oo, ss, jj, inter])))
+    sys.stdout.flush()
+
