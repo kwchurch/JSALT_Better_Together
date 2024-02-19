@@ -7,7 +7,7 @@ files=freq_row_piece freq_row check_order XY_to_bigrams gram_matrix \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
 	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data killroy generate_pairs_from_idx filter_records sum_bigrams sum_lbigrams nbest_bigrams authors_to_authors \
 	print_bigrams unprint_bigrams sort_bigrams uniq_bigrams uniq_bigrams_by_hashing \
-	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing center_floats
+	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing center_floats invert_landmarks new_invert_landmarks
 
 # random_bigrams 
 
@@ -232,3 +232,8 @@ uniq_lbigrams_by_hashing: uniq_lbigrams_by_hashing.c util.o
 center_floats: center_floats.c util.o
 	cc -o center_floats center_floats.c util.o -lm
 
+invert_landmarks: invert_landmarks.c util.o
+	cc -o invert_landmarks invert_landmarks.c util.o
+
+new_invert_landmarks: new_invert_landmarks.c util.o
+	cc -o new_invert_landmarks new_invert_landmarks.c util.o

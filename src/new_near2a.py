@@ -24,9 +24,10 @@ parser.add_argument('--no_map', action='store_true')
 parser.add_argument('--skip_cos', action='store_true')
 parser.add_argument('--binary_output', default=None)
 parser.add_argument('--topN', type=int, default=10)
-parser.add_argument('--pad_factor', type=int, default=5)
+parser.add_argument('--pad_factor', type=int, default=3)
 parser.add_argument('--limit', type=int, default=100000)
 parser.add_argument('--number_of_landmarks', type=int, default=50)
+parser.add_argument('--landmarks_dir', default='/class_pieces/top50')
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
@@ -94,18 +95,18 @@ def embedding_from_dir(dir, K):
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
 
 def postings_from_dir(dir):
-    fn = dir + '/class_pieces/top50/landmarks.i'
+    fn = dir + args.landmarks_dir + '/landmarks.i'
     fn_len = os.path.getsize(fn)
     # print('fn_len: ' + str(fn_len))
     landmarks = np.memmap(fn,
                           shape=(int(fn_len/(args.number_of_landmarks*4)),
                                  args.number_of_landmarks),  
                           dtype=np.int32, mode='r')
-    fn = dir + '/class_pieces/top50/postings.i'
+    fn = dir + args.landmarks_dir + '/postings.i'
     fn_len = os.path.getsize(fn)
     postings = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
 
-    fn = dir + '/class_pieces/top50/postings.idx.i'
+    fn = dir + args.landmarks_dir + '/postings.idx.i'
     fn_len = os.path.getsize(fn)
     postings_idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
 
@@ -138,7 +139,7 @@ def directory_to_config(dir):
              'dir' : dir,
              'map' : {'old_to_new' : map_from_dir(dir),
                       'new_to_old' : imap_from_dir(dir)},
-             'postings' : postings_from_dir(dir) ,
+             'postings' : postings_from_dir(dir),
              'embedding' : embedding_from_dir(dir, K)}
 
 config = directory_to_config(args.dir)
@@ -298,6 +299,7 @@ for line in sys.stdin:
         classes = None
         if new_id >= 0 and new_id < len(config['postings']['landmarks']):
             classes = config['postings']['landmarks'][new_id,:].reshape(-1)
+            if args.verbose: print('classes: ' + str(classes), file=sys.stderr)
             if classes[0] == classes[1]:
                 classes = None
             if args.verbose:
