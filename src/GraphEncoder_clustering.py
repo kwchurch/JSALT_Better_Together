@@ -99,7 +99,12 @@ def Run(case, learn_opt, **kwargs):
   total_begin = time.time()
   eval = Evaluation()
   kwargs_for_DataPreprocess =  {k: kwargs[k] for k in ['DiagA', 'Laplacian', 'Correlation', 'Attributes', 'emb_opt']}
+
+  print('kwargs_for_DataPreprocess: ' + str(kwargs_for_DataPreprocess), file=sys.stderr) # added by kwc
+
   Dataset = DataPreprocess(case, **kwargs_for_DataPreprocess)
+
+  print('DataPreposess done', file=sys.stderr) # added by kwc
 
   Y = case.Y
   n = case.n
@@ -1022,6 +1027,7 @@ class Clustering:
     kwargs = self.kwargs
     Encoder_kwargs = {k: kwargs[k] for k in ['Correlation']}
 
+    print('calling graph_encoded_cluster', file=sys.stderr)
 
     minSS=-1
     Z = None
@@ -1035,6 +1041,7 @@ class Clustering:
         if DataSets.attributes:
           # add U to Z side by side
           Zt = np.concatenate((Zt, DataSets.U), axis=1)
+
         kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
         labels = kmeans.labels_ # shape(n,)
         # sum_in_cluster = kmeans.inertia_ # sum of distance within cluster (k,1)
@@ -1053,6 +1060,8 @@ class Clustering:
         W = Wt
         minSS = tmp
         Y = labels
+
+    print('leaving graph_encoded_cluster', file=sys.stderr)
     return  Z, Y, W, minSS
 
 
