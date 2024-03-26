@@ -1055,8 +1055,12 @@ class Clustering:
           # add U to Z side by side
           Zt = np.concatenate((Zt, DataSets.U), axis=1)
 
-        print('calling KMeans with K = %d, %0.3f sec' % (K, time.time() - t0), file=sys.stderr)  # added by kwc
+        kmeans_t0 = time.time()
         kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
+
+        print('KMeans with K = %d, replica: %d, iteration: %d, took %0.3f sec; time so far: %0.3f sec' % (K, i, r, time.time() - kmeans_t0, time.time() - t0), file=sys.stderr)  # added by kwc
+        sys.stderr.flush()
+
         labels = kmeans.labels_ # shape(n,)
         # sum_in_cluster = kmeans.inertia_ # sum of distance within cluster (k,1)
         dis_to_centors = kmeans.transform(Zt)
