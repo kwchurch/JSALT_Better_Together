@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys
+import sys,os,argparse
 import numpy as np
 import copy
 from numpy import linalg as LA
@@ -22,7 +22,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 
 
 # import numpy as np
-# import sys,json,requests,os,argparse
+# import argparse
 # from sklearn.metrics.pairwise import cosine_similarity
 
 # apikey=os.environ.get('SPECTER_API_KEY')
@@ -283,12 +283,12 @@ def multi_graph_encoder_embed(DataSets, Y, **kwargs):
   W = []
 
   for i in range(Graph_count):
-    if i == 0:
-      [Z, Wi] = graph_encoder_embed(X[i],Y,n,**kwargs_single)
-  else:
-      [Z_new, Wi] = graph_encoder_embed(X[i],Y,n,**kwargs)
-      Z = np.concatenate((Z, Z_new), axis=1)
-    W.append(Wi)
+      if i == 0:
+          [Z, Wi] = graph_encoder_embed(X[i],Y,n,**kwargs_single)
+      else:
+          [Z_new, Wi] = graph_encoder_embed(X[i],Y,n,**kwargs)
+          Z = np.concatenate((Z, Z_new), axis=1)
+      W.append(Wi)
 
   # if there is attributes matrix U provided, add U
   if attributes:
