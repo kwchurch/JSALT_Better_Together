@@ -32,6 +32,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-O", "--output", help="output file", required=True)
 parser.add_argument("-G", "--input_graph", help="input graph (readable by scipy.sparse.load_npz)", default=None)
 parser.add_argument("-K", "--n_components", type=int, help="hidden dimensions [defaults = 32]", default=32)
+parser.add_argument("--Laplacian", type=int, help="Laplacian [defaults = 1 (True)]", default=1)
+parser.add_argument("--MaxIter", type=int, help="MaxIter [defaults = 50]", default=50)
+
 # parser.add_argument("--search", help="query", action='store_true')
 # parser.add_argument("--fields", help="comma separated fields", default='')
 # parser.add_argument("--limit", type=int, help="max records to return", default=50)
@@ -91,7 +94,8 @@ def Run(case, learn_opt, **kwargs):
 
 
   """
-  defaultKwargs = {'Y':[2,3,4,5], 'DiagA': True,'Correlation': True,'Laplacian': False,
+
+  defaultKwargs = {'Y':[2,3,4,5], 'DiagA': True,'Correlation': True,'Laplacian': args.Laplacian == 1,
                   'Learner': 1, 'LearnerIter': 0, 'MaxIter': 10, 'MaxIterK': 3,
                   'Replicates': 1, 'Attributes': False, 'neuron': 20, 'activation': 'relu',
                    'emb_opt': 'AEE', 'sparse_opt': 'None', 'Batch_input': False}
@@ -103,12 +107,16 @@ def Run(case, learn_opt, **kwargs):
 
   print('kwargs_for_DataPreprocess: ' + str(kwargs_for_DataPreprocess), file=sys.stderr) # added by kwc
 
+
   Dataset = DataPreprocess(case, **kwargs_for_DataPreprocess)
 
   print('DataPreposess done', file=sys.stderr) # added by kwc
 
   Y = case.Y
   n = case.n
+
+  print('Y: ' + str(Y), file=sys.stderr) # added by kwc
+  print('n: ' + str(Y), file=sys.stderr) # added by kwc
 
   # auto check block
   # if the option is not clustering, but the Y does not contain labels (known/unknwon) for n nodes.
@@ -1001,7 +1009,7 @@ class Clustering:
 
 
   def kwargs_construct(self, **kwargs):
-    defaultKwargs = {'Correlation': True,'MaxIter': 50, 'MaxIterK': 5,'Replicates': 3}
+    defaultKwargs = {'Correlation': True,'MaxIter': args.MaxIter, 'MaxIterK': 5,'Replicates': 3}
     kwargs = { **defaultKwargs, **kwargs}
     return kwargs
 
