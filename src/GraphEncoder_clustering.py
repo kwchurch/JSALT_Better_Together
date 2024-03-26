@@ -1027,7 +1027,7 @@ class Clustering:
     kwargs = self.kwargs
     Encoder_kwargs = {k: kwargs[k] for k in ['Correlation']}
 
-    print('calling graph_encoded_cluster', file=sys.stderr)
+    print('calling graph_encoded_cluster: ' + str(kwargs), file=sys.stderr)
 
     minSS=-1
     Z = None
@@ -1042,6 +1042,7 @@ class Clustering:
           # add U to Z side by side
           Zt = np.concatenate((Zt, DataSets.U), axis=1)
 
+        print('calling KMeans with K = ' + str(K), file=sys.stderr)
         kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
         labels = kmeans.labels_ # shape(n,)
         # sum_in_cluster = kmeans.inertia_ # sum of distance within cluster (k,1)
