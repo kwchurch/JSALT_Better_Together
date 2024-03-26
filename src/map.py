@@ -6,6 +6,8 @@ import numpy as np
 parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
 parser.add_argument("--direction", help="old_to_new|new_to_old", required=True)
+parser.add_argument("--input", help="input file (seq of int32)", default=None)
+parser.add_argument("--output", help="output file (seq of int32)", default=None)
 args = parser.parse_args()
 
 def map_int64(fn):
@@ -45,10 +47,18 @@ def directory_to_config(dir):
 
 config = directory_to_config(args.dir)
 
-for line in sys.stdin:
-    if len(line) > 0:
-        id_in = int(line)
-        id_out = -1
-        if id_in >= 0 and id_in < len(config['map']):
-            id_out = config['map'][id_in]
-        print(str(id_out))
+if args.input is None:
+    for line in sys.stdin:
+        if len(line) > 0:
+            id_in = int(line)
+            id_out = -1
+            if id_in >= 0 and id_in < len(config['map']):
+                id_out = config['map'][id_in]
+            print(str(id_out))
+else:
+    assert not args.output is None, '--output must be specified if --input is specified'
+    X = map_int32(args.input)
+    Y = config['map'][X]
+    Y.tofile(args.output)
+
+                
