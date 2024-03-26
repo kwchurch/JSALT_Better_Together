@@ -20,6 +20,7 @@ from scipy import sparse
 from keras.callbacks import EarlyStopping
 from tensorflow.keras.callbacks import ModelCheckpoint
 
+t0 = time.time()                # added by kwc
 
 # import numpy as np
 # import argparse
@@ -1027,7 +1028,7 @@ class Clustering:
     kwargs = self.kwargs
     Encoder_kwargs = {k: kwargs[k] for k in ['Correlation']}
 
-    print('calling graph_encoded_cluster: ' + str(kwargs), file=sys.stderr)
+    print('calling graph_encoded_cluster: ' + str(kwargs), file=sys.stderr) # added by kwc
 
     minSS=-1
     Z = None
@@ -1035,14 +1036,16 @@ class Clustering:
 
     for i in range(kwargs['Replicates']):
       Y_temp = np.random.randint(K,size=(n,1))
+      print('i: %d, %0.3f sec' %(i, time.time() - t0), file=sys.stderr) # added by kwc
       for r in range(kwargs['MaxIter']):
+        print('r: %d (of %d), %0.3f sec' % (r, kwargs['MaxIter'], time.time() - t0), file=sys.stderr) # added by kwc
         [Zt,Wt] = multi_graph_encoder_embed(DataSets, Y_temp, **Encoder_kwargs)
 
         if DataSets.attributes:
           # add U to Z side by side
           Zt = np.concatenate((Zt, DataSets.U), axis=1)
 
-        print('calling KMeans with K = ' + str(K), file=sys.stderr)
+        print('calling KMeans with K = ' + str(K), file=sys.stderr)  # added by kwc
         kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
         labels = kmeans.labels_ # shape(n,)
         # sum_in_cluster = kmeans.inertia_ # sum of distance within cluster (k,1)
@@ -1062,7 +1065,7 @@ class Clustering:
         minSS = tmp
         Y = labels
 
-    print('leaving graph_encoded_cluster', file=sys.stderr)
+    print('leaving graph_encoded_cluster', file=sys.stderr)  # added by kwc
     return  Z, Y, W, minSS
 
 
