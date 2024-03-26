@@ -1047,6 +1047,8 @@ class Clustering:
       print('i: %d, %0.3f sec' %(i, time.time() - t0), file=sys.stderr) # added by kwc
       for r in range(kwargs['MaxIter']):
         print('r: %d (of %d), %0.3f sec' % (r, kwargs['MaxIter'], time.time() - t0), file=sys.stderr) # added by kwc
+        sys.stderr.flush()
+
         [Zt,Wt] = multi_graph_encoder_embed(DataSets, Y_temp, **Encoder_kwargs)
 
         if DataSets.attributes:
