@@ -415,7 +415,8 @@ class DataPreprocess:
       # for either s*2 or s*3 case, calculate n -- vertex number
       if t == 2:
         # enlarge the edgelist to s*3 by adding 1 to the thrid position as adj(i,j)
-        X = np.insert(X, 1, np.ones(s,1))
+        # X = np.insert(X, 1, np.ones(s,1))
+        X = np.insert(X, 1, np.ones((s,1))) # modified by kwc
 
     return X
 
@@ -1223,7 +1224,11 @@ nz = G.nonzero()
 n = 1+ max(np.max(nz[0]),np.max(nz[1]))
 
 D=[[args.n_components]] ## default embedding dimension.
-testCase = TestCase(n, G, D, None)
+# testCase = TestCase(n, G, D, None)
+nz2 = np.array([nz[0], nz[1], np.ones(len(nz[0]))]).T
+print('nz2.shape: ' + str(nz2.shape), file=sys.stderr)
+
+testCase = TestCase(n, nz2, D, None)
 
 import warnings
 warnings.filterwarnings("ignore")
