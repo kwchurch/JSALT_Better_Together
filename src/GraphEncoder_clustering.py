@@ -417,7 +417,7 @@ class DataPreprocess:
 
   def to_s3_list(self,X):
     """
-      the input X is a signle graph, can be adjacency matrix or edgelist
+      the input X is a single graph, can be adjacency matrix or edgelist
       this function will return a s3 edge list
     """
     (s,t) = X.shape
