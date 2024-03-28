@@ -327,11 +327,11 @@ def graph_encoder_embed_original(X,Y,n,**kwargs):
 
 def kwc_save(Y, Z, W):
   global kwc_save_offset
-  if args.save_prefix != None:
+  if args.safe_mode > 0 and args.save_prefix != None:
     np.save(args.save_prefix + '.Y.' + str(kwc_save_offset) + '.npy', Y)
     np.save(args.save_prefix + '.Z.' + str(kwc_save_offset) + '.npy', Z)
     np.save(args.save_prefix + '.W.' + str(kwc_save_offset) + '.npy', W)
-    kwc_save_offset += 1
+  kwc_save_offset += 1
 
 def maybe_save_X(X):
   global kwc_save_offset
