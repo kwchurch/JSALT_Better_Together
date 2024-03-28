@@ -11,25 +11,27 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input", required=True)
 parser.add_argument("-o", "--output", required=True)
 # parser.add_argument("-N", "--N", type=int, default=None)
-# parser.add_argument("-d", "--dtype", default='int32')
+parser.add_argument("-d", "--dtype", default=None)
 # parser.add_argument("-K", "--hidden_dimensions", type=int, default=None)
 
 args = parser.parse_args()
 
-# dtypes = { 'int8' : np.int8,
-#            'int16' : np.int16,
-#            'int32' : np.int32,
-#            'int64' : int,
-#            'int' : int,
-#            'float16' : np.float16,
-#            'float32' : np.float32,
-#            'float64' : float,
-#            'float' : float}
-
-# assert args.dtype in dtypes, 'bad dtype arg: ' + args.dtype
+dtypes = { 'int8' : np.int8,
+           'int16' : np.int16,
+           'int32' : np.int32,
+           'int64' : int,
+           'int' : int,
+           'float16' : np.float16,
+           'float32' : np.float32,
+           'float64' : float,
+           'float' : float}
 
 # X = np.fromfile(args.input, dtypes[args.dtype])
 X = np.load(args.input).reshape(-1)
+
+if not args.dtype is None:
+    assert args.dtype in dtypes, 'bad dtype arg: ' + args.dtype
+    X = X.astype(dtypes[args.dtype])
 
 # if not args.hidden_dimensions is None:
 #     X = X.reshape(-1, args.hidden_dimensions)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys,os,argparse
+import sys,os,argparse,scipy
 import numpy as np
 import copy
 from numpy import linalg as LA
@@ -20,6 +20,10 @@ from scipy import sparse
 from keras.callbacks import EarlyStopping
 from tensorflow.keras.callbacks import ModelCheckpoint
 
+JSALTsrc=os.environ.get('JSALTsrc')
+
+kwc_save_offset=0
+
 t0 = time.time()                # added by kwc
 
 # import numpy as np
@@ -30,10 +34,12 @@ t0 = time.time()                # added by kwc
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-O", "--output", help="output file", required=True)
+parser.add_argument("--save_prefix", help="output file", default=None)
 parser.add_argument("-G", "--input_graph", help="input graph (readable by scipy.sparse.load_npz)", default=None)
 parser.add_argument("-K", "--n_components", type=int, help="hidden dimensions [defaults = 32]", default=32)
 parser.add_argument("--Laplacian", type=int, help="Laplacian [defaults = 1 (True)]", default=1)
 parser.add_argument("--MaxIter", type=int, help="MaxIter [defaults = 50]", default=50)
+parser.add_argument("--safe_mode", type=int, help="set to nonzero to be super careful", default=0)
 
 # parser.add_argument("--search", help="query", action='store_true')
 # parser.add_argument("--fields", help="comma separated fields", default='')
@@ -114,6 +120,7 @@ def Run(case, learn_opt, **kwargs):
 
   Y = case.Y
   n = case.n
+  ari = None                    # added by kwc
 
   print('Y: ' + str(Y), file=sys.stderr) # added by kwc
   print('n: ' + str(Y), file=sys.stderr) # added by kwc
@@ -134,7 +141,7 @@ def Run(case, learn_opt, **kwargs):
     if case.Y_ori is not None:
       ari = eval.clustering_test(Y, case.Y_ori)
       print("ARI: ", ari)
-  else:
+    else:
       ari = None
 
   # supervised learning
@@ -206,11 +213,31 @@ def node2vec_embed(X):
 
 ############------------node2vec_embed_end----------------------################
 ############------------graph_encoder_embed_start----------------###############
+
 def graph_encoder_embed(X,Y,n,**kwargs):
+  if args.safe_mode > 0:
+    Z_orig,W_orig = graph_encoder_embed_original(X,Y,n,**kwargs)
+    Z_kwc,W_kwc = graph_encoder_embed_kwc(X,Y,n,**kwargs)
+    Z_kwc2,W_kwc2 = graph_encoder_embed_kwc2(X,Y,n,**kwargs)
+
+    # the two Zs and the two Ws should be very close to one another
+    print('|Z_orig - Z_kwc| = ' + str(LA.norm(Z_orig - Z_kwc)), file=sys.stderr)
+    print('|W_orig - W_kwc| = ' + str(LA.norm(W_orig - W_kwc)), file=sys.stderr)
+
+    print('|Z_orig - Z_kwc2| = ' + str(LA.norm(Z_orig - Z_kwc2)), file=sys.stderr)
+    print('|W_orig - W_kwc2| = ' + str(LA.norm(W_orig - W_kwc2)), file=sys.stderr)
+
+    sys.stderr.flush()
+    return Z_orig,W_orig
+  else:
+    return graph_encoder_embed_kwc2(X,Y,n,**kwargs)
+
+def graph_encoder_embed_original(X,Y,n,**kwargs):
   """
     input X is s*3 edg list: nodei, nodej, connection weight(i,j)
     graph embedding function
   """
+  global kwc_save_offset
   defaultKwargs = {'Correlation': True}
   kwargs = { **defaultKwargs, **kwargs}
 
@@ -243,9 +270,23 @@ def graph_encoder_embed(X,Y,n,**kwargs):
       if k_i >=0:
         W[i,k_i] = 1/nk[0,k_i]
 
+  gee_t0 = time.time()          # added by kwc
 
   # Edge List Version in O(s)
   Z = np.zeros((n,k))
+
+  print('possibility_detected: ' + str(possibility_detected), file=sys.stderr)
+  print('Z.shape: ' + str(Z.shape), file=sys.stderr)
+  print('X.shape: ' + str(X.shape), file=sys.stderr)
+  print('Y.shape: ' + str(Y.shape), file=sys.stderr)
+
+  print('X.dtype: ' + str(X.dtype), file=sys.stderr)
+
+  # np.save('/tmp/X.npy', X)
+  # np.save('/tmp/Y.npy', Y)
+  # print('files saved', file=sys.stderr)
+  # sys.stderr.flush()
+
   i = 0
   for row in X:
     [v_i, v_j, edg_i_j] = row
@@ -265,6 +306,12 @@ def graph_encoder_embed(X,Y,n,**kwargs):
       if (label_i >= 0) and (v_i != v_j):
         Z[v_j, label_i] = Z[v_j, label_i] + W[v_i, label_i]*edg_i_j
 
+  print('gee original: %0.3f; time so far: %0.3f' % (time.time() - gee_t0, time.time() - t0), file=sys.stderr) # added by kwc
+  sys.stderr.flush()            # added by kwc
+
+  Zpath = args.save_prefix + '.Z_orig.%d.f' % kwc_save_offset
+  Z.astype(np.float32).tofile(Zpath)
+
   # Calculate each row's 2-norm (Euclidean distance).
   # e.g.row_x: [ele_i,ele_j,ele_k]. norm2 = sqr(sum(ele_i^2+ele_i^2+ele_i^2))
   # then divide each element by their row norm
@@ -274,6 +321,185 @@ def graph_encoder_embed(X,Y,n,**kwargs):
     reshape_row_norm = np.reshape(row_norm, (n,1))
     Z = np.nan_to_num(Z/reshape_row_norm)
 
+  return Z, W
+
+
+
+def kwc_save(Y, Z, W):
+  global kwc_save_offset
+  if args.save_prefix != None:
+    np.save(args.save_prefix + '.Y.' + str(kwc_save_offset) + '.npy', Y)
+    np.save(args.save_prefix + '.Z.' + str(kwc_save_offset) + '.npy', Z)
+    np.save(args.save_prefix + '.W.' + str(kwc_save_offset) + '.npy', W)
+    kwc_save_offset += 1
+
+def maybe_save_X(X):
+  global kwc_save_offset
+  assert not args.save_prefix is None, '--save_prefix must be specified'
+  X0path = args.save_prefix + '.X0.%d.i' % kwc_save_offset
+  if args.safe_mode == 0 and os.path.exists(X0path): return
+  X1path = args.save_prefix + '.X1.%d.i' % kwc_save_offset
+  X2path = args.save_prefix + '.X2.%d.f' % kwc_save_offset
+
+  X0 = X[:,0].astype(np.int32)
+  X1 = X[:,1].astype(np.int32)
+  X2 = X[:,2].astype(np.float32)
+
+  X0.tofile(X0path)
+  X1.tofile(X1path)
+  X2.tofile(X2path)
+  return X0path,X1path,X2path
+
+def graph_encoder_embed_kwc2(X, Y,n,**kwargs):
+  """
+    input X is s*3 edg list: nodei, nodej, connection weight(i,j)
+    graph embedding function
+  """
+  global kwc_save_offset
+  defaultKwargs = {'Correlation': True}
+  kwargs = { **defaultKwargs, **kwargs}
+  
+  X0path,X1path,X2path = maybe_save_X(X)
+
+  #If Y has more than one dimention , Y is the range of cluster size for a vertex. e.g. [2,10], [2,5,6]
+  # check if Y is the possibility version. e.g.Y: n*k each row list the possibility for each class[0.9, 0.1, 0, ......]
+
+  # to simplify things, lets avoid more complicated cases
+  if Y.shape[1] != 1: return None
+
+  YY = Y.reshape(-1).astype(np.int32)
+  Ypath = args.save_prefix + '.Y.%d.i' % kwc_save_offset
+  Zpath = args.save_prefix + '.Z_kwc.%d.f' % kwc_save_offset
+  YY.tofile(Ypath)
+
+  # assign k to the max along the first column
+  # Note for python, label Y starts from 0. Python index starts from 0. thus size k should be max + 1
+  k = np.max(YY)+1
+
+  #nk: 1*n array, contains the number of observations in each class
+  #W: encoder matrix. W[i,k] = {1/nk if Yi==k, otherwise 0}
+  nk = np.bincount(YY)
+  nk2 = 1/nk.astype(np.float32)
+  # nk2.to_file(args.save_prefix + '.nk2.f')
+
+  W = scipy.sparse.csr_matrix((nk2[YY], (np.arange(len(YY)), YY)),
+                              shape = (n,k), dtype=np.float32)
+
+  # W = np.zeros((n,k))
+  # for i, k_i in enumerate(YY):
+  #     if k_i >=0:
+  #       W[i,k_i] = nk2[k_i]
+
+  kwc_gee_t0 = time.time()          # added by kwc
+
+  # cmd = '%s/C/GEE %s.X0.i %s.X1.i %s.X2.f %s.Y.i > %s.Z.f' % (JSALTsrc, args.save_prefix, args.save_prefix, args.save_prefix, args.save_prefix, args.save_prefix)
+  cmd = '%s/C/GEE %s %s %s %s > %s' % (JSALTsrc, X0path, X1path, X2path, Ypath, Zpath)
+  print(cmd, file=sys.stderr)
+  os.system(cmd)
+
+  Z = np.memmap(Zpath, dtype=np.float32, shape=(n, k), mode='r')
+
+  print('gee kwc: %0.3f; time so far: %0.3f' % (time.time() - kwc_gee_t0, time.time() - t0), file=sys.stderr) # added by kwc
+  sys.stderr.flush()            # added by kwc
+
+  # Calculate each row's 2-norm (Euclidean distance).
+  # e.g.row_x: [ele_i,ele_j,ele_k]. norm2 = sqr(sum(ele_i^2+ele_i^2+ele_i^2))
+  # then divide each element by their row norm
+  # e.g. [ele_i/norm2,ele_j/norm2,ele_k/norm2]
+  if kwargs['Correlation']:
+    row_norm = LA.norm(Z, axis = 1)
+    reshape_row_norm = np.reshape(row_norm, (n,1))
+    Z = np.nan_to_num(Z/reshape_row_norm)
+
+  kwc_save(YY, Z, W)
+  return Z, W
+
+
+def graph_encoder_embed_kwc(X, Y,n,**kwargs):
+  """
+    input X is s*3 edg list: nodei, nodej, connection weight(i,j)
+    graph embedding function
+  """
+  defaultKwargs = {'Correlation': True}
+  kwargs = { **defaultKwargs, **kwargs}
+  
+  # maybe_save_X(X)
+
+  #If Y has more than one dimention , Y is the range of cluster size for a vertex. e.g. [2,10], [2,5,6]
+  # check if Y is the possibility version. e.g.Y: n*k each row list the possibility for each class[0.9, 0.1, 0, ......]
+
+  # to simplify things, lets avoid more complicated cases
+  if Y.shape[1] != 1: return None
+
+  YY = Y.reshape(-1)
+  # YY.tofile(args.save_prefix + '.Y.i')
+
+  # assign k to the max along the first column
+  # Note for python, label Y starts from 0. Python index starts from 0. thus size k should be max + 1
+  k = np.max(YY)+1
+
+  #nk: 1*n array, contains the number of observations in each class
+  #W: encoder matrix. W[i,k] = {1/nk if Yi==k, otherwise 0}
+  nk = np.bincount(YY)
+  nk2 = 1/nk.astype(np.float32)
+  # nk2.to_file(args.save_prefix + '.nk2.f')
+
+  W = scipy.sparse.csr_matrix((nk2[YY], (np.arange(len(YY)), YY)),
+                              shape = (n,k), dtype=np.float32)
+
+  # W = np.zeros((n,k))
+  # for i, k_i in enumerate(YY):
+  #     if k_i >=0:
+  #       W[i,k_i] = nk2[k_i]
+
+  kwc_gee_t0 = time.time()          # added by kwc
+
+  # os.system('%s/C/GEE %s.X0.i %s.X1.i %s.X2.f %s.Y.i > %s.Z.f' % (JSALTsrc, args.save_prefix, args.save_prefix, args.save_prefix, args.save_prefix, args.save_prefix))
+  # Zfn = args.save_prefix + '.Z.f'
+  # # Zlen = os.path.getsize(Zfn)
+  # Z = np.memmap(Zfn, dtype=np.float32, shape=(n, k), mode='r')
+
+  # Edge List Version in O(s)
+  Z = np.zeros((n,k))
+
+  # print('possibility_detected: ' + str(possibility_detected), file=sys.stderr)
+  print('Z.shape: ' + str(Z.shape), file=sys.stderr)
+  print('X.shape: ' + str(X.shape), file=sys.stderr)
+  print('Y.shape: ' + str(Y.shape), file=sys.stderr)
+
+  print('X.dtype: ' + str(X.dtype), file=sys.stderr)
+
+  # np.save('/tmp/X.npy', X)
+  # np.save('/tmp/Y.npy', Y)
+  # print('files saved', file=sys.stderr)
+  # sys.stderr.flush()
+
+  X0 = X[:,0].astype(np.int32)
+  X1 = X[:,1].astype(np.int32)
+  X2 = X[:,2].astype(np.float32)
+
+  for v_i, v_j, edg_i_j in zip(X0,X1,X2):
+      label_i = YY[v_i]
+      label_j = YY[v_j]
+
+      if label_j >= 0:
+        Z[v_i, label_j] += W[v_j, label_j]*edg_i_j
+      if (label_i >= 0) and (v_i != v_j):
+        Z[v_j, label_i] += W[v_i, label_i]*edg_i_j
+
+  print('gee kwc: %0.3f; time so far: %0.3f' % (time.time() - kwc_gee_t0, time.time() - t0), file=sys.stderr) # added by kwc
+  sys.stderr.flush()            # added by kwc
+
+  # Calculate each row's 2-norm (Euclidean distance).
+  # e.g.row_x: [ele_i,ele_j,ele_k]. norm2 = sqr(sum(ele_i^2+ele_i^2+ele_i^2))
+  # then divide each element by their row norm
+  # e.g. [ele_i/norm2,ele_j/norm2,ele_k/norm2]
+  if kwargs['Correlation']:
+    row_norm = LA.norm(Z, axis = 1)
+    reshape_row_norm = np.reshape(row_norm, (n,1))
+    Z = np.nan_to_num(Z/reshape_row_norm)
+
+  # kwc_save(YY, Z, W)
   return Z, W
 
 
@@ -1049,7 +1275,10 @@ class Clustering:
         print('r: %d (of %d), %0.3f sec' % (r, kwargs['MaxIter'], time.time() - t0), file=sys.stderr) # added by kwc
         sys.stderr.flush()
 
+        multi_graph_encoder_t0 = time.time()
         [Zt,Wt] = multi_graph_encoder_embed(DataSets, Y_temp, **Encoder_kwargs)
+        print('multi_graph_encoder with K = %d, replica: %d, iteration: %d, took %0.3f sec; time so far: %0.3f sec' % (K, i, r, time.time() - multi_graph_encoder_t0, time.time() - t0), file=sys.stderr)  # added by kwc
+        sys.stderr.flush()
 
         if DataSets.attributes:
           # add U to Z side by side
@@ -1057,13 +1286,17 @@ class Clustering:
 
         kmeans_t0 = time.time()
         kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
-
         print('KMeans with K = %d, replica: %d, iteration: %d, took %0.3f sec; time so far: %0.3f sec' % (K, i, r, time.time() - kmeans_t0, time.time() - t0), file=sys.stderr)  # added by kwc
         sys.stderr.flush()
 
         labels = kmeans.labels_ # shape(n,)
         # sum_in_cluster = kmeans.inertia_ # sum of distance within cluster (k,1)
+
+        transform_t0 = time.time() # added by kwc
         dis_to_centors = kmeans.transform(Zt)
+        print('kmeans.transform with K = %d, replica: %d, iteration: %d, took %0.3f sec; time so far: %0.3f sec' % (K, i, r, time.time() - transform_t0, time.time() - t0), file=sys.stderr)  # added by kwc
+        sys.stderr.flush()
+
         # adjusted_rand_score() needs the shape (n,)
         if adjusted_rand_score(Y_temp.reshape(-1,), labels) == 1:
           break
@@ -1248,6 +1481,7 @@ G=load_npz(args.input_graph)
 
 # n=4294967295 ## number of vertices / maximum id in G
 nz = G.nonzero()
+
 n = 1+ max(np.max(nz[0]),np.max(nz[1]))
 
 D=[[args.n_components]] ## default embedding dimension.
