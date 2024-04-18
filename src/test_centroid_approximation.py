@@ -4,11 +4,11 @@ import json,requests,argparse
 import os,sys,argparse,time
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-
+# import pdb
 
 t0 = time.time()
 
-print('pairs_to_cos: ' + str(sys.argv), file=sys.stderr)
+print('test_centroid_approximation: ' + str(sys.argv), file=sys.stderr)
 
 apikey=os.environ.get('SPECTER_API_KEY')
 
@@ -19,17 +19,10 @@ apikey=os.environ.get('SPECTER_API_KEY')
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dir", help="a directory such as $proposed or $specter", required=True)
-parser.add_argument('--flush', action='store_true')
 parser.add_argument("-V", '--verbose', action='store_true')
-parser.add_argument('--binary_output', action='store_true')
-parser.add_argument('--binary_input', help="input file (optional, use text input from stdin by default)", default=None)
-parser.add_argument('--input_new_pairs', action='store_true')
-parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
-# parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
-parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
+parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", required=True)
 parser.add_argument('--number_of_landmarks', type=int, default=100)
 parser.add_argument('--landmarks', help="output info about landmarks", action='store_true')
-parser.add_argument('--skip_cos', help="output None instead of cosine to save time", action='store_true')
 args = parser.parse_args()
 
 def map_int64(fn):
@@ -42,19 +35,18 @@ def map_int32(fn):
 
 Y = idx = None
 
-if not args.graph is None:
-    Y = map_int32(args.graph + '.Y.i')
+Y = map_int32(args.graph + '.Y.i')
 
-    if not os.path.exists(args.graph + '.X.i.idx'):
-        print('%0.0f sec: computing idx' % (time.time() - t0), file=sys.stderr)
-        sys.stderr.flush()
-        X = map_int32(args.graph + '.X.i')
-        res = np.cumsum(np.bincount(X))
-        res.tofile(args.graph + '.X.i.idx')
-        print('%0.0f sec: idx computed' % (time.time() - t0), file=sys.stderr)
-        sys.stderr.flush()
+if not os.path.exists(args.graph + '.X.i.idx'):
+    print('%0.0f sec: computing idx' % (time.time() - t0), file=sys.stderr)
+    sys.stderr.flush()
+    X = map_int32(args.graph + '.X.i')
+    res = np.cumsum(np.bincount(X))
+    res.tofile(args.graph + '.X.i.idx')
+    print('%0.0f sec: idx computed' % (time.time() - t0), file=sys.stderr)
+    sys.stderr.flush()
 
-    idx = map_int64(args.graph + '.X.i.idx')
+idx = map_int64(args.graph + '.X.i.idx')
 
 def extract_row(x):
     # print('extract_row: ' + str(x))
@@ -142,24 +134,13 @@ def get_corpusId(ref):
         return None
 
 def id_to_references(my_id):
-
-    if not args.graph is None:
-        return extract_row(int(my_id))
-
-    cmd = 'https://api.semanticscholar.org/graph/v1/paper/CorpusId:' + str(my_id) + '/?fields=references,references.externalIds'
-    j = requests.get(cmd, headers={"x-api-key": apikey}).json()
-    if 'references' in j and not j['references'] is None:
-        return [ get_corpusId(ref) for ref in j['references']]
-    else:
-        return []
+    return extract_row(int(my_id))
 
 emb = config['embedding']
 
 # print('maxid: ' + str(maxid), file=sys.stderr)
 
 def get_mapped_refs(refs):
-    if args.input_new_pairs:
-        return refs
     if not config['map32'] is None:
         maxid = config['map32'].shape[0]
         my_map = config['map32'].reshape(-1)
@@ -203,9 +184,10 @@ def centroid(refs):
 
 def id_to_centroid(id):
     refs = id_to_references(id)
-    if len(refs) > 0:
-        # print('id_to_centroid: id = %s, refs = %s' % (str(id), str(refs)), file=sys.stderr)
-        sys.stderr.flush()
+    # print('refs: ' + str(refs))
+    # if len(refs) > 0:
+    #     # print('id_to_centroid: id = %s, refs = %s' % (str(id), str(refs)), file=sys.stderr)
+    #     sys.stderr.flush()
     return centroid(refs)
 
 def get_vec(id, use_references):
@@ -232,11 +214,21 @@ def get_vec(id, use_references):
 # ids = np.loadtxt(sys.stdin).astype(int)
 
 def get_landmarks(old_id):
-    # return config['postings']['landmarks'][old_to_new(old_id),:].reshape(-1)
     try: 
         return config['postings']['landmarks'][old_to_new(old_id),:].reshape(-1)
     except:
-        return None    
+        return None
+
+def get_landmarks_via_references(old_id):
+    p = np.array([], dtype=np.int32)
+    refs = id_to_references(old_id)
+    # print('refs (%d): ' % len(refs) + str(refs))
+    for ref in refs:
+        l = get_landmarks(ref)
+        if not l is None:
+            p = np.append(p, l)
+    return np.unique(p, return_counts=True)
+
 
 def posting_length(p):
     idx = config['postings']['postings_idx']
@@ -245,66 +237,43 @@ def posting_length(p):
     else:
         return idx[p] - idx[p-1]
 
-def do_it(id1, id2, extras):
-    if args.skip_cos:
+def do_it(id1):
+
+    vec1 = get_vec(id1, 'never')
+    vec2 = get_vec(id1, 'always')
+
+    refs = id_to_references(id1)
+
+    # print('vec1: ' + str(vec1))
+    # print('vec2: ' + str(vec2))
+
+    if vec1 is None or vec2 is None:
         cos = None
     else:
-        vec1 = get_vec(id1, args.use_references)
-        if vec1 is None:
-            print('-1\t' + rline)
-            return
-        vec2 = get_vec(id2, args.use_references)
-        if vec2 is None:
-            print('-1\t' + rline)
-            return
-
-        if args.verbose:
-            print('id1: ' + str(id1), file=sys.stderr)
-            print('id2: ' + str(id2), file=sys.stderr)
-            print('vec1.shape: ' + str(vec1.shape), file=sys.stderr)
-            print('vec2.shape: ' + str(vec2.shape), file=sys.stderr)
-            print('np.sum(vec1): ' + str(np.sum(vec1)), file=sys.stderr)
-            print('np.sum(vec2): ' + str(np.sum(vec2)), file=sys.stderr)
-
         cos = cosine_similarity(vec1.reshape(1,-1),vec2.reshape(1,-1))[0,0]
-
-    if args.input_new_pairs:
-        id1 = new_to_old(id1)
-        id2 = new_to_old(id2)
 
     if args.landmarks:
         l1 = get_landmarks(id1)
-        l2 = get_landmarks(id2)
+        l2,counts = get_landmarks_via_references(id1)
+
         if l1 is None or l2 is None:
             joint = None
         else:
             joint = set(l1).intersection(set(l2))
-        posting_lengths = np.array([posting_length(j) for j in joint])
-        if len(posting_lengths) == 0:
-            stats = [0]
-        else:
-            stats = [len(posting_lengths),
-                     np.exp(np.mean(np.log(posting_lengths))),
-                     np.median(posting_lengths),
-                     np.min(posting_lengths),
-                     np.max(posting_lengths),
-                     np.sum(posting_lengths)]        
-        print('\t'.join(map(str, [cos, id1, id2, '\t'.join(extras), '\t'.join(map(str, stats))])))
-    else:
-        print(str(cos) + '\t' + str(id1) + '\t' + str(id2) + '\t' + '\t'.join(extras))
 
-if args.binary_input:
-    input_ids = map_int64(args.binary_input).reshape(-1, 2)
-    for id1,id2 in input_ids:
-        do_it(id1, id2)
-else:
-    for line in sys.stdin:
-        rline = line.rstrip()
-        fields = rline.split()
-        if len(fields) < 2: continue
-        id1,id2 = fields[0:2]
-        if not id1.isdigit() or not id2.isdigit(): continue
-        do_it(int(id1), int(id2), fields[2:])
-        if args.flush: sys.stdout.flush()
+        # print(str(len(l1)) + ' : ' + str(l1))
+        # print(str(len(l2)) + ' : '  + str(l2))
+        # print(str(counts))
+        print('x: %d, y: %d, xy: %d' % (len(l1), len(l2), len(joint)))
+
+    print(str(cos) + '\t' + str(id1) + '\t' + str(len(refs)))
+    sys.stdout.flush()
+
+for line in sys.stdin:
+    rline = line.rstrip()
+    fields = rline.split()
+    if len(fields) < 1: continue
+    id1 = fields[0]
+    do_it(int(id1))
 
 print('%0.0f sec: done' % (time.time() - t0), file=sys.stderr)

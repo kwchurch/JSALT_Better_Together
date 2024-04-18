@@ -16,17 +16,33 @@ parser.add_argument("-G", "--graph", help=".npz file", required=True)
 parser.add_argument("--citations", help=".npy file", default=None)
 parser.add_argument("-o", "--output", help="output filename", required=True)
 parser.add_argument("-T", "--threshold", type=int, help="threshold on size on number of citations (defaults to 0)", default=0)
+parser.add_argument("--make_symmetric", action='store_true')
 # parser.add_argument("-S", "--sample", type=float, help="fraction of edges", default=1.0)
 args = parser.parse_args()
+
+def map_ints(fn):
+    fn_len = os.path.getsize(fn)
+    return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
 
 def my_load(f):
     print(str(time.time() - t0) + ' shrink_matrix: my_load: ' + f, file=sys.stderr)
     sys.stderr.flush()
-    return scipy.sparse.load_npz(f)
+    if f.endswith('.npz'):
+        return scipy.sparse.load_npz(f)
+    X = map_ints(f + '.X.i')
+    Y = map_ints(f + '.Y.i')
+    N = len(X)
+    V = np.ones(N, dtype=bool)
+    return scipy.sparse.csr_matrix((V, (X, Y)), shape=(N, N), dtype=bool)
 
 M = my_load(args.graph)
 print(str(time.time() - t0) + ' new_shrink_matrix: finished loading', file=sys.stderr)
 sys.stderr.flush()
+
+if args.make_symmetric:
+    print(str(time.time() - t0) + ' making symmetric', file=sys.stderr)
+    sys.stderr.flush()
+    M = M + M.T
 
 if args.citations is None:
     citationCounts = np.array(np.sum(M, axis=0))

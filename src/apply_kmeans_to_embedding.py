@@ -11,6 +11,9 @@ from sklearn.metrics.pairwise import euclidean_distances
 
 t0 = time.time()
 
+print('apply_kmeans_to_embedding.py: ' + str(sys.argv), file=sys.stderr)
+sys.stderr.flush()
+
 # example usage:
 # cd /work/k.church/JSALT-2023/semantic_scholar/embeddings/specter.K280
 # sbatch -p debug -t 19 /work/k.church/githubs/JSALT_Better_Together/src/create_rotation_matrix.py -i ../specter.K280,../proposed -N 100000 -o rot
@@ -68,13 +71,19 @@ if args.brute_force:
     for row in range(embedding.shape[0]):
         print(np.argmin(euclidean_distances(normalize(embedding[row,:].reshape(1,-1)), kmeans_obj['centroids'])))
 else:
+    print('row\tclass\tdistance')
+    sys.stdout.flush()
+    print('%0.f sec: about to index' % (time.time() -t0), file=sys.stderr)
+    sys.stderr.flush()
     index = faiss.IndexFlatL2(embedding.shape[1]) 
+    print('%0.f sec: about to add centroids with shape: %s' % (time.time() -t0, str(kmeans_obj['centroids'].shape)), file=sys.stderr)
+    sys.stderr.flush()
     index.add(kmeans_obj['centroids'])
+    print('%0.f sec: finished adding centroids' % (time.time() -t0), file=sys.stderr)
+    sys.stderr.flush()
     end = embedding.shape[0]
     if args.end >= 0:
         end = args.end
-    print('row\tclass\tdistance')
-    sys.stdout.flush()
     for row in range(args.start, end):
         q = normalize(embedding[row,:].reshape(1,-1))
         D,I = index.search(q,args.topN)

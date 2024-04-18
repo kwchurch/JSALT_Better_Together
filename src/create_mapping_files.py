@@ -19,7 +19,8 @@ if args.longs:
     sys.exit(0)
 
 try:
-    x = np.load(args.input, converters=np.int32, dtype=int)
+    x = np.load(args.input)
+    # x = np.load(args.input, converters=np.int32, dtype=int)
     x['old_to_new'].tofile(args.input + '.old_to_new.i')
     x['new_to_old'].tofile(args.input + '.new_to_old.i')
 except:

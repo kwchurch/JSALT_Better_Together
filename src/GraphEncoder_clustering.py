@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-import sys,os,argparse,scipy
+import sys,os,argparse,scipy,psutil
 import numpy as np
 import copy
 from numpy import linalg as LA
 from tensorflow import keras
 from tensorflow.keras.utils import to_categorical
 from sklearn.metrics.cluster import adjusted_rand_score
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans,MiniBatchKMeans
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn import metrics
 import time
@@ -19,6 +19,8 @@ from scipy import sparse
 #early stop
 from keras.callbacks import EarlyStopping
 from tensorflow.keras.callbacks import ModelCheckpoint
+
+print('GraphEncoder_clustering: ' + str(sys.argv), file=sys.stderr)
 
 JSALTsrc=os.environ.get('JSALTsrc')
 
@@ -336,10 +338,17 @@ def kwc_save(Y, Z, W):
 def maybe_save_X(X):
   global kwc_save_offset
   assert not args.save_prefix is None, '--save_prefix must be specified'
-  X0path = args.save_prefix + '.X0.%d.i' % kwc_save_offset
-  if args.safe_mode == 0 and os.path.exists(X0path): return
-  X1path = args.save_prefix + '.X1.%d.i' % kwc_save_offset
-  X2path = args.save_prefix + '.X2.%d.f' % kwc_save_offset
+
+  if args.safe_mode > 0:
+    X0path = args.save_prefix + '.X0.%d.i' % kwc_save_offset
+    X1path = args.save_prefix + '.X1.%d.i' % kwc_save_offset
+    X2path = args.save_prefix + '.X2.%d.f' % kwc_save_offset
+    if os.path.exists(X0path):
+      return X0path,X1path,X2path
+  else:
+    X0path = args.save_prefix + '.X0.i'
+    X1path = args.save_prefix + '.X1.i'
+    X2path = args.save_prefix + '.X2.f'
 
   X0 = X[:,0].astype(np.int32)
   X1 = X[:,1].astype(np.int32)
@@ -358,6 +367,8 @@ def graph_encoder_embed_kwc2(X, Y,n,**kwargs):
   global kwc_save_offset
   defaultKwargs = {'Correlation': True}
   kwargs = { **defaultKwargs, **kwargs}
+
+  kwc_gee_t0 = time.time()          # added by kwc
   
   X0path,X1path,X2path = maybe_save_X(X)
 
@@ -390,17 +401,14 @@ def graph_encoder_embed_kwc2(X, Y,n,**kwargs):
   #     if k_i >=0:
   #       W[i,k_i] = nk2[k_i]
 
-  kwc_gee_t0 = time.time()          # added by kwc
-
   # cmd = '%s/C/GEE %s.X0.i %s.X1.i %s.X2.f %s.Y.i > %s.Z.f' % (JSALTsrc, args.save_prefix, args.save_prefix, args.save_prefix, args.save_prefix, args.save_prefix)
   cmd = '%s/C/GEE %s %s %s %s > %s' % (JSALTsrc, X0path, X1path, X2path, Ypath, Zpath)
   print(cmd, file=sys.stderr)
   os.system(cmd)
 
-  Z = np.memmap(Zpath, dtype=np.float32, shape=(n, k), mode='r')
+  assert os.path.exists(Zpath), 'cmd failed'    
 
-  print('gee kwc: %0.3f; time so far: %0.3f' % (time.time() - kwc_gee_t0, time.time() - t0), file=sys.stderr) # added by kwc
-  sys.stderr.flush()            # added by kwc
+  Z = np.memmap(Zpath, dtype=np.float32, shape=(n, k), mode='r')
 
   # Calculate each row's 2-norm (Euclidean distance).
   # e.g.row_x: [ele_i,ele_j,ele_k]. norm2 = sqr(sum(ele_i^2+ele_i^2+ele_i^2))
@@ -412,6 +420,11 @@ def graph_encoder_embed_kwc2(X, Y,n,**kwargs):
     Z = np.nan_to_num(Z/reshape_row_norm)
 
   kwc_save(YY, Z, W)
+
+  print('gee kwc (plus time for saving): %0.3f; time so far: %0.3f; memory = %0.2f GBs' % (time.time() - kwc_gee_t0, time.time() - t0, psutil.Process().memory_info().rss / 1e9), file=sys.stderr) # added by kwc
+  print(psutil.virtual_memory(), file=sys.stderr)
+  sys.stderr.flush()            # added by kwc
+
   return Z, W
 
 
@@ -1285,8 +1298,11 @@ class Clustering:
           Zt = np.concatenate((Zt, DataSets.U), axis=1)
 
         kmeans_t0 = time.time()
-        kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
-        print('KMeans with K = %d, replica: %d, iteration: %d, took %0.3f sec; time so far: %0.3f sec' % (K, i, r, time.time() - kmeans_t0, time.time() - t0), file=sys.stderr)  # added by kwc
+        # kmeans = KMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
+        kmeans = MiniBatchKMeans(n_clusters=K, max_iter = kwargs['MaxIter']).fit(Zt)
+
+        print('MiniBatchKMeans with K = %d, replica: %d, iteration: %d, took %0.3f sec; time so far: %0.3f sec; memory = %0.2f GBs' % (K, i, r, time.time() - kmeans_t0, time.time() - t0, psutil.Process().memory_info().rss /1e9), file=sys.stderr)  # added by kwc
+        print(psutil.virtual_memory(), file=sys.stderr)
         sys.stderr.flush()
 
         labels = kmeans.labels_ # shape(n,)
