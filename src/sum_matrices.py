@@ -31,6 +31,7 @@ newM = [ m.resize(new_shape) for m in M ]
 print(str(time.time() - t0) + ' finished reshaping ', file=sys.stderr)
 sys.stderr.flush()
 
+# where summation happens
 MM = sum(M)
 
 GB = (MM.data.nbytes + MM.indices.nbytes + MM.indptr.nbytes)/1e9

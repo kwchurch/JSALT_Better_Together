@@ -2,4 +2,4 @@
 
 # echo hostname: `hostname`
 
-$JSALTsrc/C/invert_landmarks $*
+/bin/time $JSALTsrc/C/invert_landmarks $*

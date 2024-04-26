@@ -215,4 +215,9 @@ int main(int ac, char **av)
   fprintf(stderr, "about to output results\n");
   fflush(stderr);
   output_ints(result, nlandmarks, filename(filename_buf, postings, "i"));
+  fprintf(stderr, "done\n");
+  fflush(stderr);
+
+  return 0;
+
 }

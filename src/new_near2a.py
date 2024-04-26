@@ -103,12 +103,16 @@ def postings_from_dir(dir):
                                  args.number_of_landmarks),  
                           dtype=np.int32, mode='r')
     fn = dir + args.landmarks_dir + '/postings.i'
+    assert os.path.exists(fn), str(fn) + ' does not exist'
     fn_len = os.path.getsize(fn)
     postings = np.memmap(fn, shape=(int(fn_len/4)),  dtype=np.int32, mode='r')
+    print('postings.shape: ' + str(postings.shape), file=sys.stderr)
 
     fn = dir + args.landmarks_dir + '/postings.idx.i'
+    assert os.path.exists(fn), str(fn) + ' does not exist'
     fn_len = os.path.getsize(fn)
     postings_idx = np.memmap(fn, shape=(int(fn_len/8)),  dtype=int, mode='r')
+    print('postings_idx.shape: ' + str(postings_idx.shape), file=sys.stderr)
 
     return { 'landmarks' : landmarks,
              'postings' : postings,
