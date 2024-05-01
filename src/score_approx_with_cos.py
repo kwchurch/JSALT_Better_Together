@@ -112,11 +112,10 @@ def get_vec(id):
 
 def do_it(ids):
     vec1 = get_vec(int(ids[0]))
-    if vec1 is None: return -1,0
     vec2 = [get_vec(int(v)) for v in ids[1:]]
     vec2 = [ v for v in vec2 if not v is None ]
     n = len(vec2)
-    if len(vec2) == 0: return -1,n
+    if vec1 is None or len(vec2) == 0: return -1,n
     vec2 = sum(vec2)
     cos = cosine_similarity(vec1.reshape(1,-1),vec2.reshape(1,-1))[0,0]
     return cos,n
