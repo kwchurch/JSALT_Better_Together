@@ -32,10 +32,12 @@ parser = argparse.ArgumentParser()
 # parser.add_argument("--seed", type=int, help='set seet', default=None)
 parser.add_argument("--start", type=int, help='row to start on', default=0)
 parser.add_argument("--end", type=int, help='row to end on', default=-1)
-parser.add_argument("-i", "--input_directory", help="a directory", required=True)
+parser.add_argument("-i", "--input_directory", help="a directory", default=None)
+parser.add_argument("--embedding", help="a binary file of floats (not needed if input directory is specified)", default=None)
+parser.add_argument("--record_size", type=int, help="hidden dimensions (not needed if input directory is specified)", default=None)
 parser.add_argument("--kmeans", help="output from embeddings_to_kmeans.py", required=True)
 parser.add_argument("--brute_force", action='store_true')
-parser.add_argument("--topN", type=int, default=1)
+parser.add_argument("--topN", type=int, default=200)
 
 args = parser.parse_args()
 
@@ -62,9 +64,21 @@ def directory_to_config(dir):
              'map' : map_from_dir(dir),
              'embedding' : embedding_from_dir(dir, K)}
 
-config = directory_to_config(args.input_directory)
-embedding = config['embedding']
+def config_without_directory():
+    K = args.record_size
+    fn = args.embedding
+    fn_len = os.path.getsize(fn)
+    config = { 'record_size' : K,
+               'embedding' : np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')}
+    return config
+               
 
+if not args.input_directory is None:
+    config = directory_to_config(args.input_directory)
+else:
+    config = config_without_directory()
+
+embedding = config['embedding']
 kmeans_obj = np.load(args.kmeans)
 
 if args.brute_force:

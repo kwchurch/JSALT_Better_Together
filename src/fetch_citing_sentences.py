@@ -10,6 +10,8 @@ apikey=os.environ.get('SPECTER_API_KEY')
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--verbose", help="query", action='store_true')
+parser.add_argument("--offset", type=int,  help="start of papers to return (defaults to 0)", default=0)
+parser.add_argument("--limit", type=int,  help="number of papers to return (max is 1000)", default=100)
 args = parser.parse_args()
 
 def id_ify(s):
@@ -21,7 +23,7 @@ def id_ify(s):
     return 'CorpusId:' + s
 
 def one_line_ify(s):
-    return s.replace('\r', ' ').replace('\n', ' ')
+    return str(s).replace('\r', ' ').replace('\n', ' ').replace('\t', ' ')
 
 def print_paper(paper, link_type, query):
     # print(paper)
@@ -34,22 +36,32 @@ for line in sys.stdin:
     query=line.rstrip()
     my_id = id_ify(query)
 
-    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/?fields=citations.externalIds'
+    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/citations?fields=contexts,referenceCount,citationCount,title,externalIds'
 
+    if not args.offset is None:
+        cmd = cmd + '&offset=' + str(args.offset)
+
+    if not args.limit is None:
+        cmd = cmd + '&limit=' + str(args.limit)
 
     j = requests.get(cmd, headers={"x-api-key": apikey}).json()
     if args.verbose:
         print(cmd)
         print(j)
 
-    print('\t'.join(map(str,['query', str(j['referenceCount']) + ' references', str(j['citationCount']) + ' citations', one_line_ify(j['title'])])))
+    if 'data' in j:
+        for rec in j['data']:
+            p = rec['citingPaper']
+            print('\t'.join(map(one_line_ify, [p['externalIds']['CorpusId'], p['citationCount'], p['referenceCount'], p['title'], rec['contexts']])))
 
-    if 'references' in j and not j['references'] is None:
-        for reference in j['references']:
-            print_paper(reference, 'reference', query)
+    # # print('\t'.join(map(str,['query', str(j['referenceCount']) + ' references', str(j['citationCount']) + ' citations', one_line_ify(j['title'])])))
 
-    if 'citations' in j and not j['citations'] is None:
-        for citation in j['citations']:
-            print_paper(citation, 'citation', query)
+    # if 'references' in j and not j['references'] is None:
+    #     for reference in j['references']:
+    #         print_paper(reference, 'reference', query)
+
+    # if 'citations' in j and not j['citations'] is None:
+    #     for citation in j['citations']:
+    #         print_paper(citation, 'citation', query)
 
 
