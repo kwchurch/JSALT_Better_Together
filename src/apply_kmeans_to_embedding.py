@@ -45,7 +45,7 @@ args = parser.parse_args()
 
 def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
-        return int(fd.read().split('\t')[0])
+        return int(fd.read().split()[0])
 
 def map_from_dir(dir):
     fn = dir + '/map.old_to_new.i'
