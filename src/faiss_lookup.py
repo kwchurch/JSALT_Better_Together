@@ -6,12 +6,12 @@
 import faiss
 import os,sys,argparse,time,glob
 import numpy as np
-from sklearn.preprocessing import normalize
-from sklearn.metrics.pairwise import euclidean_distances
+# from sklearn.preprocessing import normalize
+# from sklearn.metrics.pairwise import euclidean_distances
 
 t0 = time.time()
 
-print('apply_faiss.py: ' + str(sys.argv), file=sys.stderr)
+print('faiss_lookup.py: ' + str(sys.argv), file=sys.stderr)
 sys.stderr.flush()
 
 # assumes the input directory contain 
@@ -46,6 +46,7 @@ def indexes_from_dir(dir):
     files = glob.glob(dir + '/faiss.*.index.[0-9][0-9][0-9]')
     indexes = [ faiss.read_index(f) for f in files]
     print('%0.f sec: loaded %d indexes' % (time.time() -t0, len(files)), file=sys.stderr)
+    sys.stderr.flush()
     return indexes
 
 def directory_to_config(dir):
@@ -59,9 +60,6 @@ def directory_to_config(dir):
 
 config = directory_to_config(args.input_directory)
 embedding = config['embedding']
-
-print('%0.f sec: indexes loaded' % (time.time() -t0), file=sys.stderr)
-sys.stderr.flush()
 
 print('row\tclass\tdistance')
 d=embedding.shape[1]
