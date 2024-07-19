@@ -20,7 +20,7 @@ int main(int ac, char **av)
   int max_option = 0;
   int sum_option = 0;
   if(ac == 2 && strcmp(av[1], "--max") == 0) max_option=1;
-  if(ac == 2 && strcmp(av[1], "--sum") == 0) sum_option=1;
+  else if(ac == 2 && strcmp(av[1], "--sum") == 0) sum_option=1;
   else if(ac != 1) usage();
   struct bigram b;
   struct bigram out;
