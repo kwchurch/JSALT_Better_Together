@@ -5,15 +5,16 @@
 # from nodevectors (prone.py)
 # ~/venv/gft/lib/python3.8/site-packages/nodevectors/prone.py
 
+import sys
+print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
+
 import numpy as np
-import csrgraph as cg
+# import csrgraph as cg
 from scipy import sparse
 from scipy.sparse import load_npz, csr_matrix
 from sklearn import preprocessing
 from sklearn.utils.extmath import randomized_svd
-import sys,argparse,time,socket,os
-
-print('prefactor_graph.py: sys.argv = ' + str(sys.argv), file=sys.stderr)
+import argparse,time,socket,os
 
 t0 = time.time()
 

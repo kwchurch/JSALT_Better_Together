@@ -77,7 +77,7 @@ print('%0.2f sec: garbage collect returned %d' % (time.time() - t0, ngc), file=s
 print(gc.get_stats(), file=sys.stderr)
 
 
-emb = svd_dense(mm, K)
+emb = svd_dense(mm, K).astype(np.float32)
 
 # changed by kwc to float32
 # emb = svd_dense(mm, K).astype(np.float32)

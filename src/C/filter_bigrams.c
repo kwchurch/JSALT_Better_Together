@@ -45,15 +45,19 @@ double find_val_threshold(struct bigram *bigrams, struct bigram *end)
   }
 
   qsort(buf, nbuf, sizeof(float), float_compare);
-  return buf[topK];
+  double res = buf[topK];
+  free(buf);
+  return res;
 }
   
 struct bigram *end_of_run(struct bigram *bigrams, struct bigram *end)
 {
   struct bigram *b;
+  if(bigrams+1 >= end) return end;
   for(b = bigrams+1;b<end;b++)
     if(b[0].elts[0] != bigrams[0].elts[0])
       return b;
+  if(b >= end) return end;
   return b;
 }
 
@@ -96,7 +100,9 @@ int main(int ac, char **av)
     // fprintf(stderr, "threshold: %f\n", threshold);
     nbuf = fill_buf(buf, b, erun, threshold);
     // fprintf(stderr, "found %d\n", nbuf);
+    if(nbuf <= 0) continue;
     if(fwrite(buf, sizeof(struct bigram), nbuf, stdout) != nbuf)
       fatal("write failed");
   }
+  return 0;
 }
