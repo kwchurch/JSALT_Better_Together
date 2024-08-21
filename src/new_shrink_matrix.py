@@ -31,8 +31,8 @@ def my_load(f):
         return scipy.sparse.load_npz(f)
     X = map_ints(f + '.X.i')
     Y = map_ints(f + '.Y.i')
-    N = len(X)
-    V = np.ones(N, dtype=bool)
+    N = 1+max(np.max(X), np.max(Y))
+    V = np.ones(len(X), dtype=bool)
     return scipy.sparse.csr_matrix((V, (X, Y)), shape=(N, N), dtype=bool)
 
 M = my_load(args.graph)

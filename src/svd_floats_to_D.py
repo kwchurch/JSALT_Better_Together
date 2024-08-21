@@ -13,11 +13,16 @@ t0 = time.time()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input", required=True)
-parser.add_argument("-K", "--K", type=int, help='number of hidden dimensions', required=True)
+parser.add_argument("-K", "--K", type=int, help='number of hidden dimensions', default=-1)
 
 args = parser.parse_args()
 
-M = np.fromfile(args.input, np.float32).reshape(-1, args.K)
+
+if args.input.endswith('.npy'):
+    M = np.load(args.input)
+else:
+    assert K > 0, 'Need to specify K (hidden dimensions)'
+    M = np.fromfile(args.input, np.float32).reshape(-1, args.K)
 
 print(str(time.time() - t0) + ' loaded M with shape: ' + str(M.shape), file=sys.stderr)
 sys.stderr.flush()
