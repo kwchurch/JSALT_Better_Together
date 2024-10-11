@@ -6,7 +6,7 @@
 import faiss
 import os,sys,argparse,time
 import numpy as np
-from sklearn.preprocessing import normalize
+# from sklearn.preprocessing import normalize
 from sklearn.metrics.pairwise import euclidean_distances
 
 t0 = time.time()
