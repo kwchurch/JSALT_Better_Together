@@ -32,17 +32,18 @@ def print_paper(paper, link_type, query):
     else:
         print('\t'.join(map(str, [link_type, query, '*** ERROR ***', paper])))
 
-for line in sys.stdin:
-    query=line.rstrip()
-    my_id = id_ify(query)
+def do_it(my_id, low, hi):
+    print('do_it: my_id = %s, low = %s, hi  = %s' % (str(my_id), str(low), str(hi)), file=sys.stderr)
+    if low >= hi: return
+    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/citations?fields=contexts,referenceCount,citationCount,title,externalIds,year'
+    cmd = cmd + '&offset=' + str(low)
+    cmd = cmd + '&limit=' + str(hi-low)
 
-    cmd = 'https://api.semanticscholar.org/graph/v1/paper/' + my_id + '/citations?fields=contexts,referenceCount,citationCount,title,externalIds'
+    # if not args.offset is None:
+    #     cmd = cmd + '&offset=' + str(args.offset)
 
-    if not args.offset is None:
-        cmd = cmd + '&offset=' + str(args.offset)
-
-    if not args.limit is None:
-        cmd = cmd + '&limit=' + str(args.limit)
+    # if not args.limit is None:
+    #     cmd = cmd + '&limit=' + str(args.limit)
 
     j = requests.get(cmd, headers={"x-api-key": apikey}).json()
     if args.verbose:
@@ -50,9 +51,44 @@ for line in sys.stdin:
         print(j)
 
     if 'data' in j:
-        for rec in j['data']:
-            p = rec['citingPaper']
-            print('\t'.join(map(one_line_ify, [p['externalIds']['CorpusId'], p['citationCount'], p['referenceCount'], p['title'], rec['contexts']])))
+        if not 'data' in j:
+            print('*** ERROR (no data) ***: ' + str(j))
+        else:
+            for rec in j['data']:
+                if 'citingPaper' in rec:
+                    p = rec['citingPaper']
+                    if p is None: continue
+                    try:
+                        print('\t'.join(map(one_line_ify, [p['externalIds']['CorpusId'],
+                                                           p['year'], 
+                                                           p['citationCount'], 
+                                                           p['referenceCount'], 
+                                                           p['title'], 
+                                                           rec['contexts']])))
+                    except:
+                        print('*** ERROR ***: ' + str(p))
+
+
+for line in sys.stdin:
+    query=line.rstrip()
+    my_id = id_ify(query)
+
+    cites = 0
+    cmd='https://recommendpapers.xyz/api/lookup_paper?id=' + my_id + '&fields=title,citationCount'
+    print('cmd=' + str(cmd), file=sys.stderr)
+    j = requests.get(cmd, headers={"x-api-key": apikey}).json()
+    print('j=' + str(j), file=sys.stderr)
+    if 'papers' in j:
+        for p in j['papers']:
+            if 'citationCount' in p:
+                cites = p['citationCount']
+                print('cites=' + str(cites), file=sys.stderr)
+
+                step=1000
+                if cites > 0:
+                    for i in range(0, cites, step):
+                        do_it(my_id, i, min(i+step, cites))
+    
 
     # # print('\t'.join(map(str,['query', str(j['referenceCount']) + ' references', str(j['citationCount']) + ' citations', one_line_ify(j['title'])])))
 
