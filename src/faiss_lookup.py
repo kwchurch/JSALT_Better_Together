@@ -22,9 +22,11 @@ sys.stderr.flush()
 parser = argparse.ArgumentParser()
 parser.add_argument("--start", type=int, help='row to start on', default=0)
 parser.add_argument("--end", type=int, help='row to end on', default=-1)
+parser.add_argument("--input_vectors", help='npy file (alternative to --input_directory)', default=None)
 parser.add_argument("-i", "--input_directory", help="a directory", default=None)
 parser.add_argument("--topN", type=int, default=20)
 parser.add_argument("--nprobe", help="how many nearest cells to search (for IVF and HNSW)", type=int, default=8)
+parser.add_argument("--suffix", help="magic (suggest you use the default)", default="")
 args = parser.parse_args()
 
 def record_size_from_dir(dir):
@@ -38,12 +40,13 @@ def map_from_dir(dir):
 
 def embedding_from_dir(dir, K):
     fn = dir + '/embedding.norm.f'
+    # fn = dir + '/embedding.f'
     fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
 
 def indexes_from_dir(dir):
     print('%0.f sec: about to load indexes' % (time.time() -t0), file=sys.stderr)
-    files = glob.glob(dir + '/faiss.*.index.[0-9][0-9][0-9]')
+    files = glob.glob(dir + '/faiss.*.index.[0-9][0-9][0-9]' + args.suffix)
     indexes = [ faiss.read_index(f) for f in files]
     print('%0.f sec: loaded %d indexes' % (time.time() -t0, len(files)), file=sys.stderr)
     sys.stderr.flush()
@@ -59,16 +62,25 @@ def directory_to_config(dir):
          }
 
 config = directory_to_config(args.input_directory)
-embedding = config['embedding']
 
 print('row\tclass\tdistance')
-d=embedding.shape[1]
 
-end = embedding.shape[0]
-if args.end >= 0:
-    end = min(args.end, embedding.shape[0])
+if args.input_vectors:
+    queries = np.load(args.input_vectors)
+    from sklearn.preprocessing import normalize
+    queries = normalize(queries)
+    end = len(queries)
+    if args.end >= 0:
+        end = min(args.end, end)
 
-queries = embedding[args.start:end,:]
+else:
+    embedding = config['embedding']
+    d=embedding.shape[1]
+    end = embedding.shape[0]
+    if args.end >= 0:
+        end = min(args.end, end)
+        queries = embedding[args.start:end,:]
+
 result_heap = faiss.ResultHeap(nq=len(queries), k=args.topN)
 indexes = config['indexes']
 z = np.zeros(1, dtype=int)

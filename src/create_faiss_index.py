@@ -3,6 +3,9 @@
 # https://github.com/matsui528/faiss_tips
 # https://www.pinecone.io/learn/series/faiss/vector-indexes/
 
+# https://github.com/facebookresearch/faiss/wiki/Faiss-indexes#inverted-file-with-pq-refinement
+
+
 import faiss
 import os,sys,argparse,time
 import numpy as np
@@ -42,6 +45,7 @@ def map_from_dir(dir):
 
 def embedding_from_dir(dir, K):
     fn = dir + '/embedding.norm.f'
+    # fn = dir + '/embedding.f'
     fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.float32, shape=(int(fn_len/(4*K)), K), mode='r')
 
@@ -80,6 +84,8 @@ elif args.index_method == "HNSW":
         M = 40 
     elif d == 768:
         M = 48
+    elif d == 1024:
+        M = 64
     else:
         M = 1
 
@@ -93,14 +99,57 @@ elif args.index_method == "HNSW":
 
     index.train(Xt)
 
+elif args.index_method == "HNSW.new":
+
+    if d == 280 or d == 200:
+        M = 40 
+    elif d == 768:
+        M = 48
+    elif d == 1024:
+        M = 64
+    else:
+        M = 1
+
+    ef_search = 32  # depth of layers explored during search
+    ef_construction = 64  # depth of layers explored during index construction
+
+    # initialize index (d == 128)
+    index = faiss.IndexHNSWFlat(d, M)
+    # set efConstruction and efSearch parameters
+    index.hnsw.efConstruction = ef_construction
+    index.hnsw.efSearch = ef_search
+
 else:
     assert False, 'bad --index_method should be IVR or HNSW: ' + str(args.index_method)
 
 print('%0.f sec: about to add centroids with shape: %s' % (time.time() -t0, str(embedding.shape)), file=sys.stderr)
+# and levels (or layers) are now populated
+
+try:
+    levels = faiss.vector_to_array(index.hnsw.levels)
+    print('%0.f sec: levels: %s' % (time.time() -t0, str(np.bincount(levels))), file=sys.stderr)
+except:
+    print('%0.f sec: levels NA')
+
 sys.stderr.flush()
 
 index.add(embedding)
 index.nprobe = args.nprobe
+
+# Show params
+print("D:", index.d, file=sys.stderr)
+print("N:", index.ntotal, file=sys.stderr)
+print("M:", index.pq.M, file=sys.stderr)
+print("nbits:", index.pq.nbits, file=sys.stderr)
+print("nlist:", index.nlist, file=sys.stderr)
+print("nprobe:", index.nprobe, file=sys.stderr)
+
+try:
+    levels = faiss.vector_to_array(index.hnsw.levels)
+    print('%0.f sec: levels: %s' % (time.time() -t0, str(np.bincount(levels))), file=sys.stderr)
+except:
+    print('%0.f sec: levels NA')
+
 faiss.write_index(index, args.output)
 print('%0.f sec: done' % (time.time() -t0), file=sys.stderr)
 

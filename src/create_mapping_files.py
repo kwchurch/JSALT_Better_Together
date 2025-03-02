@@ -24,6 +24,7 @@ try:
     x['old_to_new'].tofile(args.input + '.old_to_new.i')
     x['new_to_old'].tofile(args.input + '.new_to_old.i')
 except:
+    print(str(time.time() - t0) + ' trying to load input as text file', file=sys.stderr)
     new_to_old = np.loadtxt(args.input, converters=np.int32, dtype=np.int32)
     new_to_old.tofile(args.input + '.new_to_old.i')
     N = np.max(new_to_old)+1

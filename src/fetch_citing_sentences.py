@@ -8,6 +8,9 @@ import sys,json,requests,os,argparse
 
 apikey=os.environ.get('SPECTER_API_KEY')
 
+if apikey is None:
+    print('Warning: it is highly recommended that you get an api key from Semantic Scholar, and set it to the environment variable, SPECTER_API_KEY', file=sys.stderr)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--verbose", help="query", action='store_true')
 parser.add_argument("--offset", type=int,  help="start of papers to return (defaults to 0)", default=0)
@@ -45,7 +48,10 @@ def do_it(my_id, low, hi):
     # if not args.limit is None:
     #     cmd = cmd + '&limit=' + str(args.limit)
 
-    j = requests.get(cmd, headers={"x-api-key": apikey}).json()
+    if not apikey is None:
+        j = requests.get(cmd, headers={"x-api-key": apikey}).json()
+    else:
+        j = requests.get(cmd).json()
     if args.verbose:
         print(cmd)
         print(j)
