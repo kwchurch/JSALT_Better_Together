@@ -15,7 +15,14 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--verbose", help="query", action='store_true')
 parser.add_argument("--offset", type=int,  help="start of papers to return (defaults to 0)", default=0)
 parser.add_argument("--limit", type=int,  help="number of papers to return (max is 1000)", default=100)
+parser.add_argument("--output_format", help="json|text", default="text")
+parser.add_argument("--output", help="output file name (required for Windows)", default=None)
 args = parser.parse_args()
+
+if args.output is None:
+    outf = sys.stdout
+else:
+    outf = open(args.output, 'w', encoding="UTF-8")
 
 def id_ify(s):
     if len(s) == 40: return s
@@ -56,9 +63,11 @@ def do_it(my_id, low, hi):
         print(cmd)
         print(j)
 
-    if 'data' in j:
+    if args.output_format == 'json':
+        print(json.dumps(j), file=outf)
+    elif 'data' in j:
         if not 'data' in j:
-            print('*** ERROR (no data) ***: ' + str(j))
+            print('*** ERROR (no data) ***: ' + json.dumps(j), file=outf)
         else:
             for rec in j['data']:
                 if 'citingPaper' in rec:
@@ -70,9 +79,10 @@ def do_it(my_id, low, hi):
                                                            p['citationCount'], 
                                                            p['referenceCount'], 
                                                            p['title'], 
-                                                           rec['contexts']])))
+                                                           rec['contexts']])),
+                              file=outf)
                     except:
-                        print('*** ERROR ***: ' + str(p))
+                        print('*** ERROR ***: ' + json.dumps(j), file=outf)
 
 
 for line in sys.stdin:
