@@ -70,7 +70,7 @@ for line in sys.stdin:
         for new_id,config in zip(new_ids,configs):
             config['new_ids'].append(new_id)
     
-if args.compute_trace or args.compute_cosines:
+if args.compute_trace or args.compute_cosines or not args.output is None:
     trace = []
     vars = []
     l = 0
@@ -80,6 +80,10 @@ if args.compute_trace or args.compute_cosines:
         embedding = config['embedding']
         new_ids = np.array(config['new_ids'], dtype=int)
         Z = embedding[new_ids,:]
+
+        if not args.output is None:
+            np.save(args.output, Z)
+        
         U,D,Vt = np.linalg.svd(normalize(Z))
         trace.append(np.sum(D))
         l = len(new_ids)

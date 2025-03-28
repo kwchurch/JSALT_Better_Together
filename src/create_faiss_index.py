@@ -23,9 +23,12 @@ sys.stderr.flush()
 #   record_size  specifies K
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--embedding", help='filename', default=None)
 parser.add_argument("--output", help='filename', required=True)
 parser.add_argument("--start", type=int, help='row to start on', default=0)
 parser.add_argument("--end", type=int, help='row to end on', default=-1)
+parser.add_argument("--old_ids", help='filename containing old ids', default=None)
+parser.add_argument("--new_ids", help='filename containing new ids', default=None)
 parser.add_argument("-i", "--input_directory", help="a directory", default=None)
 parser.add_argument("--index_method", help="IVF|HNSW", required=True)
 parser.add_argument("--HNSW_sample_size", type=int, help="used to create HNSW index", default=100000)
@@ -56,8 +59,27 @@ def directory_to_config(dir):
              'map' : map_from_dir(dir),
              'embedding' : embedding_from_dir(dir, K)}
 
-config = directory_to_config(args.input_directory)
-embedding = config['embedding'][args.start:args.end,:]
+config=None
+
+if args.embedding is None:
+    config = directory_to_config(args.input_directory)
+
+if not args.new_ids is None:
+    new_ids = np.loadtxt(args.new_ids, dtype=int)
+    embedding = config['embedding'][new_ids,:]
+elif not args.old_ids is None:
+    old_ids = np.loadtxt(args.old_ids, dtype=int)
+    M = config['map']
+    old_ids = old_ids[old_ids < len(M)]
+    new_ids = M[old_ids]
+    new_ids = new_ids[new_ids > 0]
+    embedding = config['embedding'][new_ids,:]
+elif not args.embedding is None:
+    embedding = np.load(args.embedding)
+    if args.embedding.endswith('npz') and 'embedding' in embedding:
+        embedding = embedding['embedding']
+else:
+    embedding = config['embedding'][args.start:args.end,:]
 
 print('%0.f sec: about to index' % (time.time() -t0), file=sys.stderr)
 sys.stderr.flush()
@@ -139,10 +161,13 @@ index.nprobe = args.nprobe
 # Show params
 print("D:", index.d, file=sys.stderr)
 print("N:", index.ntotal, file=sys.stderr)
-print("M:", index.pq.M, file=sys.stderr)
-print("nbits:", index.pq.nbits, file=sys.stderr)
-print("nlist:", index.nlist, file=sys.stderr)
-print("nprobe:", index.nprobe, file=sys.stderr)
+try:
+    print("M:", index.pq.M, file=sys.stderr)
+    print("nbits:", index.pq.nbits, file=sys.stderr)
+    print("nlist:", index.nlist, file=sys.stderr)
+    print("nprobe:", index.nprobe, file=sys.stderr)
+except:
+    print("warning, failed to print params", file=sys.stderr)
 
 try:
     levels = faiss.vector_to_array(index.hnsw.levels)

@@ -20,6 +20,10 @@ sys.stderr.flush()
 #   record_size  specifies K
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--embedding", help='filename', default=None)
+parser.add_argument("--indexes", help='comma separated filenames', default=None)
+parser.add_argument("--old_ids", help='filename containing old ids', default=None)
+parser.add_argument("--new_ids", help='filename containing new ids', default=None)
 parser.add_argument("--start", type=int, help='row to start on', default=0)
 parser.add_argument("--end", type=int, help='row to end on', default=-1)
 parser.add_argument("--input_vectors", help='npy file (alternative to --input_directory)', default=None)
@@ -46,20 +50,31 @@ def embedding_from_dir(dir, K):
 
 def indexes_from_dir(dir):
     print('%0.f sec: about to load indexes' % (time.time() -t0), file=sys.stderr)
-    files = glob.glob(dir + '/faiss.*.index.[0-9][0-9][0-9]' + args.suffix)
+    if args.indexes is None:
+        files = glob.glob(dir + '/faiss.*.index.[0-9][0-9][0-9]' + args.suffix)
+    else:
+        files = args.indexes.split(',')
     indexes = [ faiss.read_index(f) for f in files]
     print('%0.f sec: loaded %d indexes' % (time.time() -t0, len(files)), file=sys.stderr)
     sys.stderr.flush()
     return indexes
 
 def directory_to_config(dir):
-    K = record_size_from_dir(dir)
-    return { 'record_size' : K,
-             'dir' : dir,
-             'map' : map_from_dir(dir),
-             'embedding' : embedding_from_dir(dir, K),
-             'indexes': indexes_from_dir(dir),
-         }
+    if dir is None:
+        embedding = np.load(args.embedding)
+        K = embedding.shape[-1]
+        return { 'record_size': K,
+                 'map' : None,
+                 'embedding' : embedding,
+                 'indexes': [ faiss.read_index(f) for f in args.indexes.split(',')],
+        }
+    else:
+        return { 'record_size' : K,
+                 'dir' : dir,
+                 'map' : map_from_dir(dir),
+                 'embedding' : embedding_from_dir(dir, K),
+                 'indexes': indexes_from_dir(dir),
+        }
 
 config = directory_to_config(args.input_directory)
 
@@ -76,9 +91,22 @@ if args.input_vectors:
 else:
     embedding = config['embedding']
     d=embedding.shape[1]
-    end = embedding.shape[0]
-    if args.end >= 0:
-        end = min(args.end, end)
+    if not args.new_ids is None:
+        new_ids = np.loadtxt(args.new_ids, dtype=int)
+        queries = config['embedding'][new_ids,:]
+        end = len(queries)
+    elif not args.old_ids is None:
+        old_ids = np.loadtxt(args.old_ids, dtype=int)
+        M = config['map']
+        old_ids = old_ids[old_ids < len(M)]
+        new_ids = M[old_ids]
+        new_ids = new_ids[new_ids > 0]
+        queries = config['embedding'][new_ids,:]
+        end = len(queries)
+    else:
+        end = embedding.shape[0]
+        if args.end >= 0:
+            end = min(args.end, end)
         queries = embedding[args.start:end,:]
 
 result_heap = faiss.ResultHeap(nq=len(queries), k=args.topN)
