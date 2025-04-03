@@ -4,6 +4,9 @@ infile=$1
 tmpdir=$2.$$.`hostname`
 topN=$3
 K=$4
+outdir=$5
+
+mkdir -p $outdir
 
 mkdir -p $tmpdir
 
@@ -29,4 +32,6 @@ $JSALTsrc/ProNE_finish.py -G $G.npz -U $U --temp_file_prefix $tmp -O $U.finished
 $JSALTsrc/trace_and_quantiles.py "$U.finished.i$i"*
 done
 
+mv "$U.finished.i$i"* $outdir
+mv $G.npz $G.shrunk.npz $outdir
 rm -rf $tmpdir
