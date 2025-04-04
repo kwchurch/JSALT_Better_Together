@@ -21,15 +21,19 @@ for f in sys.argv[2:]:
     if len(X) > T:
         X = X[0:T,:]
 
-    if o is None:
-        Z = hierarchy.ward(X)
-        o = hierarchy.leaves_list(Z)
+    # if o is None:
+    #     Z = hierarchy.ward(X)
+    #     o = hierarchy.leaves_list(Z)
 
-    X = X[o,:]
+    # X = X[o,:]
     S = cosine_similarity(X)
+    S1 = S.reshape(-1)
+
+    m = np.quantile(S1, 0.95)
+    S1 = S1[S1 > m]
 
     plt.clf()
-    plt.hist(S.reshape(-1), bins=100)
+    plt.hist(S1, bins=100)
     plt.savefig(f + '.hist.jpg')
 
     plt.clf()
@@ -44,4 +48,4 @@ for f in sys.argv[2:]:
 
     U,D,Vt = svd(Z)
 
-    print('trace: %0.2f\t(cosines > 0.2)/T: %0.2f\tT:%d\t%s' % (np.sum(D), np.sum(S > 0.2)/float(T), T, f))
+    print('trace: %0.2f\tlarge values/T: %0.2f, where T=%d, and threshold for large value is %f\t%s' % (np.sum(D), len(S1)/float(T), T, m, f))

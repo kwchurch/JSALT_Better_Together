@@ -11,6 +11,7 @@ parser.add_argument("-i", "--input", help="filename", required=True)
 parser.add_argument("-o", "--output", help="filename", required=True)
 parser.add_argument("--topN", type=int, help="number of values to keep", required=True)
 parser.add_argument("--n_components", type=int, help="number of values to keep", default=None)
+parser.add_argument("--jpeg", help="filename", default=None)
 args = parser.parse_args()
 
 f=args.input
@@ -32,6 +33,18 @@ for i in range(len(S)):
     S2[i,o] = S[i,o]
 
 S2 = np.maximum(S2,S2.T)
+
+if not args.jpeg is None:
+    from matplotlib import pyplot as plt
+    before = S.reshape(-1)
+    after = S2.reshape(-1)
+    m = np.median(after)
+    s = after > m
+    plt.scatter(before[s], after[s])
+    plt.savefig(args.jpeg)
+    resid = after[s] - before[s]
+    rms = np.sqrt(np.mean(resid * resid))
+    print('RMS error: %f, computed over %d values over %f, filename: %s' % (rms, np.sum(s), m, args.input))
 
 U,D,Vt = svd(S2)
 
