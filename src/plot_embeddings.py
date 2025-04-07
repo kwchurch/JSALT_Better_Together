@@ -30,7 +30,7 @@ for f in sys.argv[2:]:
     S1 = S.reshape(-1)
 
     m = np.quantile(S1, 0.95)
-    S1 = S1[S1 > m]
+    # S1 = S1[S1 > m]
 
     plt.clf()
     plt.hist(S1, bins=100)
