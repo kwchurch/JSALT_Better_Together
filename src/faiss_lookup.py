@@ -34,6 +34,17 @@ parser.add_argument("--suffix", help="magic (suggest you use the default)", defa
 parser.add_argument("--output", help="outputs to stdout as text if not specified", default=None)
 args = parser.parse_args()
 
+if not args.output is None:
+    assert not os.path.exists(args.output + '.X.i'), 'no need to run faiss_lookup again on ' + args.output
+
+    Xfd = open(args.output + '.X.i', 'wb')
+    Yfd = open(args.output + '.Y.i', 'wb')
+    Vfd = open(args.output + '.V.f', 'wb')
+else:
+    print('row\tclass\tdistance')
+
+
+
 def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
         return int(fd.read().split()[0])
@@ -118,13 +129,6 @@ for idx,tot in zip(indexes, totals):
     D,I = idx.search(queries,args.topN)
     result_heap.add_result(D=D, I=I + tot)
 result_heap.finalize()
-
-if not args.output is None:
-    Xfd = open(args.output + '.X.i', 'wb')
-    Yfd = open(args.output + '.Y.i', 'wb')
-    Vfd = open(args.output + '.V.f', 'wb')
-else:
-    print('row\tclass\tdistance')
 
 def my_output(row,I,D):
     if args.output is None:

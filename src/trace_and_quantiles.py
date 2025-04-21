@@ -17,7 +17,7 @@ for f in sys.argv[1:]:
     if f.endswith('npz'):
         Z=np.load(f)['embeddings'].astype('float32')
     else:
-        Z=np.load(f)
+        Z=np.load(f).astype('float32')
     nZ = normalize(Z)
     U,D,Vt = np.linalg.svd(nZ)
     S = cosine_similarity(Z)
