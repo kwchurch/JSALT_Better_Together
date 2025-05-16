@@ -73,6 +73,18 @@ def get_HF_embeddings(batch_texts):
 
 
 def unjsonify(s, fields):
+    if fields is None: return str(s)
+    j = ast.literal_eval(s)
+    res = []
+    for f in fields.split(','):
+        try:
+            if f in j and not j[f] is None:
+                res.append(j[f].encode('unicode-escape').decode('ascii'))
+        except:
+            print('unable to find %s in %s' % (str(f), str(j)), file=sys.stderr)
+    return args.sep.join(map(str,res))
+
+def old_unjsonify(s, fields):
     if fields is None: return s
     j = ast.literal_eval(s)
     res = []
