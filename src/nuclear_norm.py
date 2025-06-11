@@ -21,7 +21,7 @@ for f in sys.argv[1:]:
         Z=np.load(f).astype('float32')
     nZ = normalize(Z)
     # U,D,Vt = np.linalg.svd(nZ)
-    U, D, VtT = randomized_svd(smat, 
+    U, D, VtT = randomized_svd(nZ,
                                n_components=Z.shape[1],
                                n_iter=5, random_state=None)
     # S = cosine_similarity(Z)
