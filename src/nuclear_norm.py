@@ -3,7 +3,8 @@
 import numpy as np
 import sys
 from sklearn.preprocessing import normalize
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.utils.extmath import randomized_svd
+# from sklearn.metrics.pairwise import cosine_similarity
 
 def H(D):
     P = D/np.sum(D)
@@ -19,7 +20,10 @@ for f in sys.argv[1:]:
     else:
         Z=np.load(f).astype('float32')
     nZ = normalize(Z)
-    U,D,Vt = np.linalg.svd(nZ)
+    # U,D,Vt = np.linalg.svd(nZ)
+    U, D, VtT = randomized_svd(smat, 
+                               n_components=Z.shape[1],
+                               n_iter=5, random_state=None)
     # S = cosine_similarity(Z)
     # print('\t'.join(map(str, [f, np.sum(D), np.var(S), '\t'.join(map(str, np.quantile(S, deciles)))])))
     print('\t'.join(map(str, [f, np.sum(D), np.sum(D[0:280]), H(D), H(D[0:280]), len(D), len(Z)])))
