@@ -266,9 +266,10 @@ def my_cos(v1, v2):
 
 # numpy.unique(ar, return_index=False, return_inverse=False, return_counts=False, axis=None, *, equal_nan=True)
 
-def output_nears(nears, file):
+def output_nears(nears, fn):
+    print('output_nears: ' + fn, file=sys.stderr)
     for i,n in enumerate(nears):
-        n.tofile('%s.%03d.i' % (file, i))
+        n.tofile('%s.%03d.i' % (fn, i))
 
 def summarize_nears(nears):
     if not args.verbose_save is None:
