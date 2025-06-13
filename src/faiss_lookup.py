@@ -31,7 +31,19 @@ parser.add_argument("-i", "--input_directory", help="a directory", default=None)
 parser.add_argument("--topN", type=int, default=20)
 parser.add_argument("--nprobe", help="how many nearest cells to search (for IVF and HNSW)", type=int, default=8)
 parser.add_argument("--suffix", help="magic (suggest you use the default)", default="")
+parser.add_argument("--output", help="outputs to stdout as text if not specified", default=None)
 args = parser.parse_args()
+
+if not args.output is None:
+    assert not os.path.exists(args.output + '.X.i'), 'no need to run faiss_lookup again on ' + args.output
+
+    Xfd = open(args.output + '.X.i', 'wb')
+    Yfd = open(args.output + '.Y.i', 'wb')
+    Vfd = open(args.output + '.V.f', 'wb')
+else:
+    print('row\tclass\tdistance')
+
+
 
 def record_size_from_dir(dir):
     with open(dir + '/record_size', 'r') as fd:
@@ -69,6 +81,7 @@ def directory_to_config(dir):
                  'indexes': [ faiss.read_index(f) for f in args.indexes.split(',')],
         }
     else:
+        K = record_size_from_dir(dir)
         return { 'record_size' : K,
                  'dir' : dir,
                  'map' : map_from_dir(dir),
@@ -77,8 +90,6 @@ def directory_to_config(dir):
         }
 
 config = directory_to_config(args.input_directory)
-
-print('row\tclass\tdistance')
 
 if args.input_vectors:
     queries = np.load(args.input_vectors)
@@ -119,8 +130,19 @@ for idx,tot in zip(indexes, totals):
     result_heap.add_result(D=D, I=I + tot)
 result_heap.finalize()
 
+def my_output(row,I,D):
+    if args.output is None:
+        print(str(row) + '\t' + '|'.join(map(str, I.reshape(-1))) + '\t' + '|'.join(map(str, D.reshape(-1))))
+    else:
+        X = np.repeat(row, len(I)).astype(np.int32)
+        Y = I.astype(np.int32)
+        V = D.astype(np.float32)
+        X.tofile(Xfd)
+        Y.tofile(Yfd)
+        V.tofile(Vfd)
+
 for row,I,D in zip(range(args.start,end),result_heap.I,result_heap.D):
-    print(str(row) + '\t' + '|'.join(map(str, I.reshape(-1))) + '\t' + '|'.join(map(str, D.reshape(-1))))
+    my_output(row, I, D)
 
 print('%0.f sec: done' % (time.time() -t0), file=sys.stderr)
 

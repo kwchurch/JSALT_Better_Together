@@ -11,20 +11,24 @@ def H(D):
     return np.sum(P * logP)/-np.log(2)
 
 # deciles = np.arange(11)/10
-q = [0.9, 0.95, 0.99, 0.999]
+# q = [0.9, 0.95, 0.99, 0.999]
 
 for f in sys.argv[1:]:
     if f.endswith('npz'):
         Z=np.load(f)['embeddings'].astype('float32')
     else:
         Z=np.load(f).astype('float32')
-    nZ = normalize(Z)
-    U,D,Vt = np.linalg.svd(nZ)
-    S = cosine_similarity(Z)
-    # print('\t'.join(map(str, [f, np.sum(D), np.var(S), '\t'.join(map(str, np.quantile(S, deciles)))])))
-    print('\t'.join(map(str, [f, np.sum(D), np.sum(D[0:280]), H(D), H(D[0:280]), np.var(S), '\t'.join(map(str, np.quantile(S, q)))])))
-    print('#D: ' + ' '.join(map(str, D)))
-    sys.stdout.flush()
+
+    for i in range(10):
+        for j in range(10):
+            n,d = Z.shape
+            n = int((i+1) * n/10)
+            d = int((j+1) * d/10)
+            nZ = normalize(Z[0:n,0:d])
+            _,D,_ = np.linalg.svd(nZ)
+            print('\t'.join(map(str, [f, np.sum(D), n, d, *Z.shape])))
+            print('#D: ' + ' '.join(map(str, D)))
+            sys.stdout.flush()
 
 
 

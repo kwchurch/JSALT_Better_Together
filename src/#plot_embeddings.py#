@@ -21,8 +21,9 @@ for f in sys.argv[2:]:
     if len(X) > T:
         X = X[0:T,:]
 
-    Z = hierarchy.ward(X)
-    o = hierarchy.leaves_list(Z)
+    if o is None:
+        Z = hierarchy.ward(X)
+        o = hierarchy.leaves_list(Z)
 
     X = X[o,:]
     S = cosine_similarity(X)
@@ -47,6 +48,4 @@ for f in sys.argv[2:]:
 
     U,D,Vt = svd(Z)
 
-    # print('trace: %0.2f\tlarge values/T: %0.2f, where T=%d, and threshold for large value is %f\t%s' % (np.sum(D), len(S1)/float(T), T, m, f))
-
-    print('trace: %0.2f; z.shape: %s' % (np.sum(D), str(Z.shape)))
+    print('trace: %0.2f\tlarge values/T: %0.2f, where T=%d, and threshold for large value is %f\t%s' % (np.sum(D), len(S1)/float(T), T, f))

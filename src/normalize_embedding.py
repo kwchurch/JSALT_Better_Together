@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+x1#!/usr/bin/env python
 
 import os,sys,argparse,time
 import numpy as np
@@ -16,6 +16,7 @@ sys.stderr.flush()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input_directory", help="a directory", required=True)
+parser.add_argument("--batch_size", type=int, help="do it in pieces", default=None)
 args = parser.parse_args()
 
 def record_size_from_dir(dir):
@@ -41,10 +42,16 @@ def directory_to_config(dir):
 
 config = directory_to_config(args.input_directory)
 embedding = config['embedding']
-norm = normalize(embedding)
-norm.tofile(args.input_directory + '/embedding.norm.f')
+
+if args.batch_size is None:
+    norm = normalize(embedding)
+    norm.tofile(args.input_directory + '/embedding.norm.f')
+
+else:
+    with open(args.input_directory + '/embedding.norm.f', 'wb') as fd:
+        for i in range(0, len(embedding), args.batch_size):
+            end = min(len(embedding), i+ args.batch_size)
+            norm = normalize(embedding[i:end,:])
+            norm.tofile(fd)
 
 print('%0.f sec: done' % (time.time() -t0), file=sys.stderr)
-
-
-
