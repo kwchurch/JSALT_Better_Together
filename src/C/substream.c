@@ -9,6 +9,8 @@ void usage()
 }
 
 
+#define BUFSIZE 65536
+
 int main(int ac, char **av)
 {
   long start=0, end=0, i, N;
@@ -43,7 +45,23 @@ int main(int ac, char **av)
     
   N = end - start;
 
-  for(i=0;i<N;i++) {
+  char buf[BUFSIZE];
+  i=0;
+  for(;;){
+    if(i+BUFSIZE > N) break;
+    int found = fread(buf, sizeof(char), BUFSIZE, stdin);
+    if(found != BUFSIZE) {
+      fprintf(stderr, "confusion: found = %d\n", found);
+      exit(2);
+    }
+    i+=found;
+    if(fwrite(buf, sizeof(char), found, stdout) != found) {
+      fprintf(stderr, "write failed\n");
+      exit(2);
+    }
+  }
+
+  for(;i<N;i++) {
     int c = getchar();
     putchar(c);
   }

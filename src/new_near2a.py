@@ -29,6 +29,7 @@ parser.add_argument('--limit', type=int, default=100000)
 parser.add_argument('--number_of_landmarks', type=int, default=50)
 parser.add_argument('--landmarks_dir', default='/class_pieces/top100')
 parser.add_argument("--use_references", help="never|always|when_necessary", default="never")
+parser.add_argument("--verbose_save", help="filename", default=None)
 # parser.add_argument("--directory_to_find_references", help="use Semantic Scholar API if None", default=None)
 parser.add_argument("-G", "--graph", help="file (without .X.i and .Y.i)", default=None)
 
@@ -265,7 +266,13 @@ def my_cos(v1, v2):
 
 # numpy.unique(ar, return_index=False, return_inverse=False, return_counts=False, axis=None, *, equal_nan=True)
 
+def output_nears(nears, file):
+    for i,n in enumerate(nears):
+        n.tofile('%s.%03d.i' % (file, i))
+
 def summarize_nears(nears):
+    if not args.verbose_save is None:
+        output_nears(nears, args.verbose_save)
     l = sum([len(n) for n in nears])
     res = np.zeros(l, dtype=np.int32)
     i=0    
