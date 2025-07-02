@@ -18,6 +18,7 @@ parser.add_argument("--end", type=int, help='line to end on', default=None)
 parser.add_argument("--model", help='name of model on HuggingFace', required=True)
 # parser.add_argument("--adapter", help='name of adapter on HuggingFace', default=None)
 parser.add_argument("--sep", help='sep token', default='[SEP]')
+parser.add_argument("--reconstitute", help="", action='store_true')
 # parser.add_argument("--binary_output", help="output float32", action='store_true')
 
 args = parser.parse_args()
@@ -49,7 +50,10 @@ if end is None: end = len(lines)
 if args.start < end: 
     for i, text in enumerate(lines[args.start:end]):
         try:
-            print(tokenizer.decode(tokenizer(text)['input_ids']))
+            tok = tokenizer(text)['input_ids']
+            if args.reconstitute: print(tokenizer.decode(tok))
+            else: print(tok)
+            # print(tokenizer.decode(tokenizer(text)['input_ids']))
         except:
             print('*** Error *** on line: ' + str(i))
             # print(text.encode('unicode-escape').decode('ascii'))
