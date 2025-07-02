@@ -90,7 +90,7 @@ for line in sys.stdin:
     my_id = id_ify(query)
 
     cites = 0
-    cmd='http://recommendpapers.xyz/api/lookup_paper?id=' + my_id + '&fields=title,citationCount'
+    cmd='http://recommendpapers.xyz:8080/api/lookup_paper?id=' + my_id + '&fields=title,citationCount'
     print('cmd=' + str(cmd), file=sys.stderr)
     j = requests.get(cmd, headers={"x-api-key": apikey}).json()
     print('j=' + str(j), file=sys.stderr)
