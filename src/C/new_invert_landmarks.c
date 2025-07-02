@@ -167,7 +167,7 @@ int main(int ac, char **av)
     for(j=0;j<number_of_landmarks;j++) {
       long offset = doc*number_of_landmarks+j;
       if(offset >= nlandmarks) {
-	fprintf(stderr, "offset is too large: offset = %ld, doc = %d, j = %d, nlandmarks = %ld\n", offset, doc, j, nlandmarks);
+	fprintf(stderr, "offset is too large: offset = %ld, doc = %ld, j = %d, nlandmarks = %ld\n", offset, doc, j, nlandmarks);
 	fatal("assertion failed");
       }
       

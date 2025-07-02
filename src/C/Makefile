@@ -7,7 +7,8 @@ files=freq_row_piece freq_row check_order XY_to_bigrams gram_matrix \
 	brute_force_with_floats idx_to_pairs pairs_to_cos find_in_sorted_lines score_pairs select_vectors id_to_floats create_years_vector venn filter_edges BFS \
 	x_to_y vector_near_with_floats XY_data_to_bigrams bigrams_to_XY_data killroy generate_pairs_from_idx filter_records sum_bigrams sum_lbigrams nbest_bigrams authors_to_authors \
 	print_bigrams unprint_bigrams sort_bigrams uniq_bigrams uniq_bigrams_by_hashing \
-	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing center_floats invert_landmarks new_invert_landmarks GEE filter_bigrams
+	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing center_floats invert_landmarks new_invert_landmarks GEE filter_bigrams uniq_sorted_ints \
+	merge_transposed_ints
 
 # random_bigrams 
 
@@ -243,3 +244,10 @@ GEE: GEE.c util.o
 
 filter_bigrams: filter_bigrams.c util.o
 	cc -o filter_bigrams filter_bigrams.c util.o
+
+uniq_sorted_ints: uniq_sorted_ints.c util.o
+	cc -o uniq_sorted_ints uniq_sorted_ints.c util.o
+
+merge_transposed_ints: merge_transposed_ints.c util.o
+	cc -o merge_transposed_ints merge_transposed_ints.c util.o
+

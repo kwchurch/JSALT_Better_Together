@@ -76,7 +76,7 @@ int main(int ac, char **av)
 
   if(mode == ASCII_MODE)
     for(i=1;i<nidx;i++) {
-      printf("%06d\t%10d\t%d\n", i, idx[i],  my_cos(floats + idx[i-1] *N, floats + idx[i] *N, N));
+      printf("%06ld\t%10ld\t%f\n", i, idx[i],  my_cos(floats + idx[i-1] *N, floats + idx[i] *N, N));
     }
   else if(mode == BINARY_MODE)
     for(i=1;i<nidx;i++) {
