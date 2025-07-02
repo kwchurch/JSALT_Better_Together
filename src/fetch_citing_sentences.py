@@ -74,15 +74,15 @@ def do_it(my_id, low, hi):
                     p = rec['citingPaper']
                     if p is None: continue
                     try:
-                        print('\t'.join(map(one_line_ify, [p['externalIds']['CorpusId'],
-                                                           p['year'], 
-                                                           p['citationCount'], 
-                                                           p['referenceCount'], 
-                                                           p['title'], 
-                                                           rec['contexts']])),
+                        print('\t'.join(map(one_line_ify, [p['externalIds']['CorpusId'] if 'externalIds' in p and not p['externalIds'] is None and 'CorpusId' in p['externalIds'] else "NA",
+                                                           p['year'] if 'year' in p else "NA", 
+                                                           p['citationCount'] if 'citationCount' in p else "NA", 
+                                                           p['referenceCount'] if 'referenceCount' in p else "NA", 
+                                                           p['title'] if 'title' in p else "NA", 
+                                                           rec['contexts'] if 'contexts' in rec else "NA"])),
                               file=outf)
                     except:
-                        print('*** ERROR ***: ' + json.dumps(j), file=outf)
+                        print('*** ERROR ***: ' + json.dumps(rec), file=outf)
 
 
 for line in sys.stdin:
