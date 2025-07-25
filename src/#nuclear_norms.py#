@@ -26,7 +26,7 @@ for f in sys.argv[1:]:
             n = int((i+1) * n/10)
             d = int((j+1) * d/10)
             nZ = normalize(Z[0:n,0:d])
-            print('\t'.join(map(str, [f, norm(nZ, ord='nuc'), n, d, *Z.shape])))
+            print('\t'.join(map(str, [f, norm(nZ, ord='nuc'), *nZ.shape])))
             # _,D,_ = np.linalg.svd(nZ)
             # print('\t'.join(map(str, [f, np.sum(D), n, d, *Z.shape])))
             # print('#D: ' + ' '.join(map(str, D)))

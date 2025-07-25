@@ -1,4 +1,4 @@
-x1#!/usr/bin/env python
+#!/usr/bin/env python
 
 import os,sys,argparse,time
 import numpy as np
@@ -37,7 +37,7 @@ def directory_to_config(dir):
     K = record_size_from_dir(dir)
     return { 'record_size' : K,
              'dir' : dir,
-             'map' : map_from_dir(dir),
+             # 'map' : map_from_dir(dir),
              'embedding' : embedding_from_dir(dir, K)}
 
 config = directory_to_config(args.input_directory)

@@ -76,7 +76,10 @@ kmeans.train(queries)
 print('%0.f sec: finished kmeans' % (time.time() -t0), file=sys.stderr)
 
 if not args.output_centroids is None:
-    np.save(args.output_centroids, kmeans.centroids)
+    if args.output_centroids.endswith('.f'):
+        kmeans.centroids.astype(np.float32).tofile(args.output_centroids)
+    else:
+        np.save(args.output_centroids, kmeans.centroids)
 
 if not args.output_faiss_index is None:
     faiss.write_index(kmeans.index, args.output_faiss_index)
