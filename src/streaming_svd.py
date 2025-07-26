@@ -51,6 +51,35 @@
 # np.linalg.norm(MM, "nuc")
 # 1593.7762
 
+# The method is based on the assumption
+# that singular values scale a predictable way
+# Let D0 be the singular values based on a sample (the size of a batch).
+# Let D be the singular values of the final answer.
+# We assume D approx sqrt(nB) * D0,
+# where nB is the number of batches.
+# This approximation is based on two assumptions:
+#  (a) rows of M are i.i.d, and
+#  (b) rows are unit length
+
+# Related work:
+# Google search on streaming svd returns a number of papers,
+# though these papers are more complicated since
+# they don't use the approximation above.
+
+# https://arxiv.org/pdf/2108.08845
+# https://arxiv.org/abs/2010.14226
+# https://dspace.mit.edu/handle/1721.1/30429
+# https://github.com/Romit-Maulik/PyParSVD
+# https://github.com/pens/libssvd
+
+# Here is a review of some of the work above (it was rejected)
+# https://openreview.net/forum?id=4lLyoISm9M
+
+# The review mentions some more references
+# Yu, Gu, Li, Liu, Li, "Single-Pass PCA of Large High-Dimensional Data". IJCAI '17, https://doi.org/10.24963/ijcai.2017/468
+# Ghashami, Liberty, Phillips, Woodruff, "Frequent directions: Simple and deterministic matrix sketching". SIAM Journal on Computing. 2016;45(5):1762-92.
+# Martinsson, Tropp. "Randomized numerical linear algebra: Foundations and algorithms". Acta Numerica. 2020 May;29:403-572.
+
 import numpy as np
 import os,sys,argparse
 from sklearn.preprocessing import normalize
