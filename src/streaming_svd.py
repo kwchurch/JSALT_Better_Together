@@ -11,21 +11,16 @@
 
 # The input matrix and the output matrix are stored as a sequence of
 # floats (because they are big and we need to be able to stream them).
-# The other matrices will be stores as numpy (.npy) matrices
-
-# That is, M, the input matrix, is stored on disk as a sequence of floats.
-# The output file, args.output + '.U.f', will also be written as a sequence of floats.
-# We will also output D and Vt matrices, but since they are small,
-# they will be stored as npy files.
+# The other matrices will be stores as numpy (.npy) matrices (because they are small).
 
 # We will refer to n as hidden_dimensions.  That needs to be specified as an input argument.
 
 # Thus, there are three output files:
-#  args.output + '.U.f'
-#  args.output + '.D.npy'
-#  args.output + '.Vt.npy'
+#  args.output + '.U.f' (a sequence of np.float32 which can be reshaped as (m, n))
+#  args.output + '.D.npy' (numpy matrix with shape: (n,))
+#  args.output + '.Vt.npy' (numpy matrix with shape: (n, n))
 
-# where normalize(M) approx U @ D @ Vt
+# When we are done U @ D @ Vt should be close to normalize(M)
 
 # Usage, create an input file
 # X = np.random.random((30000,280)).astype(np.float32)
