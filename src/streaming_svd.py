@@ -108,6 +108,7 @@ else:
     U0,D0,Vt0 = randomized_svd(normalize(sample), n_components=M.shape[1])
 
     # singular values scale with sqrt(nbatches)
+    # Peter comment - the line requiring empirical or mathematic justification
     D = np.sqrt(nbatches) * D0
     Dinv = np.diag(1/D)
 
