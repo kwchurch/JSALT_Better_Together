@@ -138,3 +138,53 @@ else:
             UlastRot = Mlast @ Vt0.T @ Dinv
             extraRows = nrows - nbatches * args.batch_size
             UiRot[-extraRows:,:].astype(np.float32).tofile(Ufd)
+
+
+# More comments:
+
+# Da : singular values of A
+# Db : singular values of B
+# Dab : singular values of A+B
+
+# what are the singular values of A+B? what is Dab?
+
+# if A and B are i.i.d samples of the same process
+# and A and B have unit length
+# then Dab approx sqrt(2) * Da approx sqrt(2) * Db
+
+# but if A is a matrix of 0s (so it is not a sample of the same process)
+# then A+B = B
+# Da: vectors of 0s
+# Db: something interesting
+# Dab = Db (without the sqrt(2))
+
+# reasonable assumptions: n >> b >> m
+# where input matrix M has shape (n,m)
+# tall skinny means n >> m
+
+
+# combos rules
+# 1. AB = A + B
+# 2. AB = np.vstack([A, B])
+# 3. AB = np.hstack([A, B])
+
+# In all 3 cases, Dab approx sqrt(2) * Da approx sqrt(2) * Db
+
+# Assume A.shape == B.shape
+# Let zeros be a matrix of zeros with shape A.shape
+# Let A' be np.vstack([A, zeros])
+# and B' be np.vstack([zeros, B])
+
+# Note, the singular values of zeros are 0
+
+# Singular values are invariant to:
+# 1. padding with zeros (either rows or columns)
+# 2. swapping rows
+# 3. swapping columns
+
+# Note the singular values of A' are the same as the singular values of A
+# and similarly, the singular values of B' are the same as the singular values of B
+
+# Then singular values of np.stack([A, B]) = A' + B'
+            
+            
