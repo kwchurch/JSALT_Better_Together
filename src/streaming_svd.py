@@ -191,3 +191,58 @@ else:
 # more refs
 # https://www.stat.uchicago.edu/~lekheng/courses/302/demmel/
 # https://arxiv.org/pdf/2009.00761
+
+
+# MORE COMMENTS
+
+# d is the number of components arg to SVD
+
+# M = U @ D @ V.T
+# D is diag, aka singular values, sorted so the larger values come before smaller values
+# U @ U.T = I
+# V @ V.T = I
+
+# M.shape = (n,m)   # big because n is big
+# U.shape = (n, d)  # big because n is big
+# D.shape = (d,d)   # small
+# V.T.shape = (d, m) # small
+
+# assume n >> d >= m 
+
+# dimension reduction
+# set the smaller values in D to 0
+# alternatively, reduce d
+
+# M = U @ D @ V.T
+# M @ V.T.T = U @ D @ V.T @ V.T.T
+# M @ V = U @ D @ V.T @ V
+# M @ V = U @ D @ I
+# M @ V = U @ D
+# M @ V @ D^{-1} = U @ D @ D^{-1}
+# M @ V @ D^{-1} = U
+
+# TODO
+
+# 1) show approx empirically
+#    a) generate random matrics, R (of size (n, m)) to get D
+#    b) compute SVD on sample of R (of b rows) to get D0
+#    c) compute SVD on sample and compare sum(D0) to sum(D); claim alpha * sum(D0) = sum(D), where alpha = sqrt(n/b)
+#    d) alternatively, instread of random R, use LLMs from HuggingFace and standard datasets to get lots of matrices; there are vectors from openai at DBPEDIA in HuggingFace; repeat expeiments above on these matrices
+#    e) estimate error bars on the approx; can you justify those error bars based on sampling process
+# 2) do a literature search for this approx; has it been discussed
+# 3) can we justify this approximation theoretically?
+# 4) what assumptions does it depend on?
+#    a) i.i.d rows in M
+#    b) unit length rows in M
+#    c) n >> b >> m, where M.shape = (n, m) and b is the batch size
+
+# D approx sqrt(nbatches) * D0
+
+# conjectures
+# a)
+# in general, norm(A + B) <= norm(A) + norm(B)
+# but when A and B are unit length and i.i,d, then
+# norm(A + B) approx sqrt(norm(A)^2 + norm(B)^2)
+# b)
+# D approx sqrt(nbatches) * D0 follows from above
+
