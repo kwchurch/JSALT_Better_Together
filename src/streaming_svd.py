@@ -188,3 +188,6 @@ else:
 # Then singular values of np.stack([A, B]) = A' + B'
             
             
+# more refs
+# https://www.stat.uchicago.edu/~lekheng/courses/302/demmel/
+# https://arxiv.org/pdf/2009.00761
