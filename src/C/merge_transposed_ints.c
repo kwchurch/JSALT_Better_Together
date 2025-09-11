@@ -112,7 +112,8 @@ int main(int ac, char **av)
     else my_output(f2);
   }
 
-  for(int i=0;i<3;i++)
+  int i;
+  for(i=0;i<3;i++)
     fprintf(stderr, "stats[%d] = %ld\n", i, stats[i]);
 
   return 0;
