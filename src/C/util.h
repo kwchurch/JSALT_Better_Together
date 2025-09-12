@@ -31,6 +31,8 @@ struct lbigram {
 
 
 int bigram_compare(struct bigram *a, struct bigram *b);
+int _bigram_compare(const void *a, const void *b);
+int _lbigram_compare(const void *a, const void *b);
 int lbigram_compare(struct lbigram *a, struct lbigram *b);
 
 #define TABLE_SIZE 999983

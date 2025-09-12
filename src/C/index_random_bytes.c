@@ -35,11 +35,21 @@ int index_compare(long *a, long *b)
   return permuted_memcmp(random_bytes + *a * N, random_bytes + *b * N);
 }
 
+int _index_compare(const void *a, const void *b)
+{
+  return index_compare((long *)a, (long *)b);
+}
+
 int mem_compare(long *a, long *b)
 {
   char *aa = random_bytes + *a * N;
   char *bb = random_bytes + *b * N;
   return memcmp(aa, bb, N);
+}
+
+int _mem_compare(const void *a, const void *b)
+{
+  return mem_compare((long *)a, (long *)b);
 }
 
 void simple_case(int ac, char **av)
@@ -62,7 +72,7 @@ void simple_case(int ac, char **av)
 
   fprintf(stderr, "calling qsort\n");
 
-  qsort(idx, nrandom_bytes, sizeof(long), mem_compare);
+  qsort(idx, nrandom_bytes, sizeof(long), _mem_compare);
   // qsort(idx, nrandom_bytes, sizeof(long), (__compar_fn_t)mem_compare);
 
   fprintf(stderr, "finished qsort\n");
@@ -103,7 +113,7 @@ int main(int ac, char **av)
 
   fprintf(stderr, "calling qsort\n");
 
-  qsort(idx, nrandom_bytes, sizeof(long), index_compare);
+  qsort(idx, nrandom_bytes, sizeof(long), _index_compare);
   // qsort(idx, nrandom_bytes, sizeof(long), (__compar_fn_t)index_compare);
 
   fprintf(stderr, "finished qsort\n");

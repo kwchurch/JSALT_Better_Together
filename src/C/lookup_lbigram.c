@@ -6,7 +6,7 @@
 
 double lookup(struct lbigram *query, struct lbigram *bigrams, long N)
 {
-  struct lbigram *found = (struct lbigram *)bsearch(query, bigrams, N, sizeof(struct lbigram), lbigram_compare);
+  struct lbigram *found = (struct lbigram *)bsearch(query, bigrams, N, sizeof(struct lbigram), _lbigram_compare);
   if(!found) return 0;
   return found->val;
 }

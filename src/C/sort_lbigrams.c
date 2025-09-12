@@ -89,7 +89,7 @@ int main(int ac, char **av)
   N /= sizeof(struct lbigram);
   fprintf(stderr, "found %ld lbigrams in %s\n", N, av[1]);
 
-  qsort(b, N, sizeof(struct lbigram), lbigram_compare);
+  qsort(b, N, sizeof(struct lbigram), _lbigram_compare);
   // qsort(b, N, sizeof(struct lbigram), (__compar_fn_t)bigram_compare);
   
   if(fwrite(b, sizeof(struct lbigram), N, stdout) != N)

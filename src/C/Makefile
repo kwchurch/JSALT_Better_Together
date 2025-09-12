@@ -1,4 +1,4 @@
-files=freq_row_piece freq_row check_order XY_to_bigrams gram_matrix \
+files=freq_row check_order XY_to_bigrams gram_matrix \
 	uniq_bigrams_by_hashing substream substream_records hist_bigrams bincount_bigrams split_binary_records check_bigrams extract_row lookup_bigram lookup_lbigram \
 	cocitations floats_to_random_bytes floats_to_random_bytes_stats \
 	index_random_bytes print_random_bytes_index print_floats_index calibrate_random_bytes_index invert_permutation \
@@ -10,6 +10,7 @@ files=freq_row_piece freq_row check_order XY_to_bigrams gram_matrix \
 	print_lbigrams unprint_lbigrams sort_lbigrams uniq_lbigrams uniq_lbigrams_by_hashing center_floats invert_landmarks new_invert_landmarks GEE filter_bigrams uniq_sorted_ints \
 	merge_transposed_ints
 
+# freq_row_piece 
 # random_bigrams 
 
 all: ${files}

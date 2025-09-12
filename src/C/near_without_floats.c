@@ -42,6 +42,12 @@ int long_compare(long *a, long *b)
   return 0;
 }
 
+int _long_compare(const void *a, const void *b)
+{
+  return long_compare((long *)a, (long *)b);
+}
+
+
 long *new_map = NULL;
 long nnew_map = 0;
 
@@ -61,7 +67,7 @@ long new_map_node(long node, int new_to_old)
     return new_map[node];
   }
   else { 
-    long *found = bsearch(&node, new_map, nnew_map, sizeof(long), long_compare);
+    long *found = bsearch(&node, new_map, nnew_map, sizeof(long), _long_compare);
     // long *found = bsearch(&node, new_map, nnew_map, sizeof(long), (__compar_fn_t)long_compare);
     if(!found) return -1;
     if(found < new_map || found >= new_map + nnew_map) return -1; /* fatal("confusion in new_map_node"); */
@@ -121,7 +127,7 @@ long map_node(long node, int new_to_old, int no_map)
 
       // fprintf(stderr, "map_node: node = %ld, binary search\n", node, new_to_old);
 
-      long *found = bsearch(&node, MM, N, sizeof(long), long_compare);
+      long *found = bsearch(&node, MM, N, sizeof(long), _long_compare);
       // long *found = bsearch(&node, new_map, nnew_map, sizeof(long), (__compar_fn_t)long_compare);
 
       if(!found) {
@@ -147,6 +153,7 @@ long map_node(long node, int new_to_old, int no_map)
   }
   
   else fatal("confusion in map_node");
+  return 0;			/* cannot get here, but compiler can't figure that out */
 }
 
 int good_index(struct idx *idx)

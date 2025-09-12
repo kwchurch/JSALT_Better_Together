@@ -19,6 +19,12 @@ long ngood_records = 0;
 int record_compare(char *a, char *b) {
   return memcmp(a, b, record_size);
 }
+
+int _record_compare(const void *a, const void *b) {
+  return record_compare((char *)a, (char *)b);
+}
+
+
   
 int main(int ac, char **av)
 {
@@ -46,7 +52,7 @@ int main(int ac, char **av)
   fprintf(stderr, "record_size = %d\n", record_size);
   fprintf(stderr, "ngood_records = %ld\n", ngood_records);
 
-  qsort(good_records, ngood_records, record_size, record_compare);
+  qsort(good_records, ngood_records, record_size, _record_compare);
 
   fprintf(stderr, "qsort done\n");
 
@@ -56,7 +62,7 @@ int main(int ac, char **av)
   // without count_flag option, simply output records in good_records (in binary)
   if(count_flag == 0) {
     while(fread(buf, record_size, 1, stdin) == 1) {
-      if(bsearch(buf, good_records, ngood_records, record_size, record_compare) != NULL) {
+      if(bsearch(buf, good_records, ngood_records, record_size, _record_compare) != NULL) {
 	matches++;
 	if(fwrite(buf, record_size, 1, stdout) != 1)
 	  fatal("write failed");
@@ -79,7 +85,7 @@ int main(int ac, char **av)
       
     while(fread(buf, record_size, 1, stdin) == 1) {
       input_records++;
-      char *found = (char *)bsearch(buf, good_records, ngood_records, record_size, record_compare);
+      char *found = (char *)bsearch(buf, good_records, ngood_records, record_size, _record_compare);
       if(found != NULL) {
 	matches++;
 	counts[(found - good_records)/record_size]++;

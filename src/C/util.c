@@ -97,6 +97,10 @@ int bigram_compare(struct bigram *a, struct bigram *b)
   return 0;
 }
 
+int _bigram_compare(const void *a, const void *b) {
+  return bigram_compare((struct bigram *)a, (struct bigram *)b);
+}
+
 int lbigram_compare(struct lbigram *a, struct lbigram *b)
 {
   if(a->elts[0] < b->elts[0]) return -1;
@@ -106,3 +110,6 @@ int lbigram_compare(struct lbigram *a, struct lbigram *b)
   return 0;
 }
 
+int _lbigram_compare(const void *a, const void *b) {
+  return lbigram_compare((struct lbigram *)a, (struct lbigram *)b);
+}

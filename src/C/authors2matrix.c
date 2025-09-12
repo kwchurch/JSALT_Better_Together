@@ -15,6 +15,11 @@ int long_compare(long *a, long *b)
   return 0;
 }
 
+int _long_compare(const void *a, const void *b)
+{
+  return long_compare((long *)a, (long *)b);
+}
+
 struct node_map{
   int *old_to_new;
   int *new_to_old;
@@ -54,7 +59,7 @@ long map_node(long node, int new_to_old)
 
 long map_author(long author_id, long *authors, long nauthors)
 {
-  long *found = bsearch(&author_id, authors, nauthors, sizeof(long), long_compare);
+  long *found = bsearch(&author_id, authors, nauthors, sizeof(long), _long_compare);
   // long *found = bsearch(&author_id, authors, nauthors, sizeof(long), (__compar_fn_t)long_compare);
   if(found) return found - authors;
   else return -1;

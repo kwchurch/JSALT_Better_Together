@@ -26,6 +26,12 @@ int long_compare(long *a, long *b)
   return 0;
 }
 
+int _long_compare(const void *a, const void *b)
+{
+  return long_compare((long *)a, (long *)b);
+}
+
+
 long *new_map = NULL;
 long nnew_map = 0;
 
@@ -44,7 +50,7 @@ long new_map_node(long node, int new_to_old)
     return new_map[node];
   }
   else { 
-    long *found = bsearch(&node, new_map, nnew_map, sizeof(long), long_compare);
+    long *found = bsearch(&node, new_map, nnew_map, sizeof(long), _long_compare);
     // long *found = bsearch(&node, new_map, nnew_map, sizeof(long), (__compar_fn_t)long_compare);
     if(!found) return -1;
     if(found < new_map || found >= new_map + nnew_map) fatal("confusion in new_map_node");

@@ -38,6 +38,10 @@ int intcomp(int *a,  int *b)
   return 0;
 }
 
+int _intcomp(const void *a,  const void *b) {
+  return intcomp((int *)a, (int *)b);
+}
+
 // return 1 on success
 int check_order(int *X, long N)
 {
@@ -131,7 +135,7 @@ int intersect(int *X, int Nx, int *Y, int Ny)
   int *tmp = malloc_ints(N);
   memcpy(tmp, X, Nx * sizeof(int));
   memcpy(tmp + Nx, Y, Ny * sizeof(int));
-  qsort(tmp, N, sizeof(int), intcomp);
+  qsort(tmp, N, sizeof(int), _intcomp);
   // qsort(tmp, N, sizeof(int), (__compar_fn_t)intcomp);
   int res = count_dups(tmp, N);
   free(tmp);

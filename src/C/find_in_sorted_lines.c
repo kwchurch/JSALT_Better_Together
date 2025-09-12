@@ -105,7 +105,6 @@ int my_compare(long *a, long *b)
     bb = file + *b;
   else bb = query;
 
-
   int comp = my_strcmp(aa, bb);
   if(verbose) {
     putline(stderr, aa, file + nfile);
@@ -114,6 +113,11 @@ int my_compare(long *a, long *b)
   }
 
   return comp;
+}
+
+int _my_compare(const void *a, const void *b)
+{
+  return my_compare((long *)a, (long *)b);
 }
 
 void my_output(long offset, FILE *fd)
@@ -242,7 +246,7 @@ int main(int ac, char **av)
     if(!new_offsets) fatal("malloc failed");
     memcpy(new_offsets, offsets, noffsets * sizeof(long));
     
-    qsort(new_offsets, noffsets, sizeof(long), my_compare);
+    qsort(new_offsets, noffsets, sizeof(long), _my_compare);
     // qsort(new_offsets, noffsets, sizeof(long), (__compar_fn_t)my_compare);
     char *fn = my_filename(buf, filename, "L");
     FILE *fd = fopen(fn, "wb");

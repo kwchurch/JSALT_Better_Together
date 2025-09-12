@@ -33,6 +33,11 @@ if(a->key > b->key) return 1;
  return 0;
 }
 
+int _idx_compare(const void *a, const void *b)
+{
+  return idx_compare((struct idx *)a, (struct idx *)b);
+}
+
 void create_idx(char *outfile, char *infile)
 {
 
@@ -59,7 +64,7 @@ void create_idx(char *outfile, char *infile)
       start++;
     }
   
-  qsort(idx, nidx, sizeof(struct idx), idx_compare);
+  qsort(idx, nidx, sizeof(struct idx), _idx_compare);
   // qsort(idx, nidx, sizeof(struct idx), (__compar_fn_t)idx_compare);
   if(fwrite(idx, sizeof(struct idx), nidx, outfd) != nidx)
     fatal("write failed");
@@ -117,7 +122,7 @@ char *lookup(char *buf,char *piece, char *file, long nfile, struct idx *idx, lon
 
   struct idx *found = NULL;
   if(sscanf(piece, "%ld", &query.key) == 1)
-    found = bsearch(&query, idx, nidx, sizeof(struct idx), idx_compare);
+    found = bsearch(&query, idx, nidx, sizeof(struct idx), _idx_compare);
     // found = bsearch(&query, idx, nidx, sizeof(struct idx), (__compar_fn_t)idx_compare);
   if(!found) {
     // fprintf(stderr, "lookup: not found, query.key = %ld\n", query.key);
@@ -173,7 +178,7 @@ int main(int ac, char **av)
 
   if(fields == NULL)
     while(scanf("%ld", &query.key) == 1) {
-      struct idx *found = bsearch(&query, idx, nidx, sizeof(struct idx), idx_compare);
+      struct idx *found = bsearch(&query, idx, nidx, sizeof(struct idx), _idx_compare);
       // struct idx *found = bsearch(&query, idx, nidx, sizeof(struct idx), (__compar_fn_t)idx_compare);
       if(multiple_matches == 0) {
 	if(found) {

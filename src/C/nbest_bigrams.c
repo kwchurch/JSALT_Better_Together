@@ -16,6 +16,11 @@ int bigram_freq_compare(struct bigram *a, struct bigram *b)
   return 0;
 }
 
+int _bigram_freq_compare(const void *a, const void *b)
+{
+  return bigram_freq_compare((struct bigram *)a, (struct bigram *)b);
+}
+
 int freq(struct bigram *b, struct bigram *bend)
 {
   struct bigram *bstart = b;
@@ -56,7 +61,7 @@ int main(int ac, char **av)
       if(!bcopy) fatal("malloc failed");
     }
     memcpy(bcopy, b, sizeof(struct bigram) * f);
-    qsort(bcopy, f, sizeof(struct bigram), bigram_freq_compare);
+    qsort(bcopy, f, sizeof(struct bigram), _bigram_freq_compare);
     int nout = nbest;
     if(nout > f) nout=f;
     if(fwrite(bcopy, sizeof(struct bigram), nout, stdout) != nout)

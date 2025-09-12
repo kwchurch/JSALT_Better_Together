@@ -13,7 +13,7 @@ double lookup(struct bigram *query, char *fn)
   long N;
   struct bigram *b = (struct bigram *)mmapfile(fn, &N);
   N /= sizeof(struct bigram);
-  struct bigram *found = (struct bigram *)bsearch(query, b, N, sizeof(struct bigram), bigram_compare);
+  struct bigram *found = (struct bigram *)bsearch(query, b, N, sizeof(struct bigram), _bigram_compare);
   // struct bigram *found = (struct bigram *)bsearch(query, b, N, sizeof(struct bigram), (__compar_fn_t)bigram_compare);
   if(!found) return 0;
   return found->val;
@@ -31,6 +31,11 @@ int float_compare(float *a, float *b)
   return 0;
 }
 
+int _float_compare(const void *a, const void *b)
+{
+  return float_compare((float *)a, (float *)b);
+}
+
 double find_val_threshold(struct bigram *bigrams, struct bigram *end)
 {
   int nbuf = 0;
@@ -44,7 +49,7 @@ double find_val_threshold(struct bigram *bigrams, struct bigram *end)
       buf[nbuf++] = b->val;
   }
 
-  qsort(buf, nbuf, sizeof(float), float_compare);
+  qsort(buf, nbuf, sizeof(float), _float_compare);
   double res = buf[topK];
   free(buf);
   return res;

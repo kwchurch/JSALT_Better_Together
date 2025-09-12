@@ -22,8 +22,11 @@ int pair_compare(struct pair *a, struct pair *b)
   if(a->id > b->id) return 1;
   return 0;
 }
-  
 
+int _pair_compare(const void *a, const void *b)
+{
+  return pair_compare((struct pair *)a, (struct pair *)b);
+}
 
 int my_max(int *vec, long n)
 {
@@ -181,7 +184,7 @@ int main(int ac, char **av)
 
   fprintf(stderr, "about to sort\n");
   fflush(stderr);
-  qsort(pairs, p-pairs, sizeof(*p), pair_compare);
+  qsort(pairs, p-pairs, sizeof(*p), _pair_compare);
 
   fprintf(stderr, "about to output results\n");
   fflush(stderr);

@@ -21,6 +21,11 @@ int my_compare(long *a, long *b)
   return 0;
 }
 
+int _my_compare(const void *a, const void *b)
+{
+  return my_compare((long *)a, (long *)b);
+}
+
 int main(int ac, char **av)
 {
   long i;
@@ -34,7 +39,7 @@ int main(int ac, char **av)
   for(i=1;i<nidx;i++) 
     result[i] = i;
 
-  qsort(result, nidx, sizeof(long), my_compare);
+  qsort(result, nidx, sizeof(long), _my_compare);
   // qsort(result, nidx, sizeof(long), (__compar_fn_t)my_compare);
 
   if(fwrite(result, sizeof(long), nidx, stdout) != nidx)
