@@ -74,7 +74,8 @@ def do_it(my_id, low, hi):
                     p = rec['citingPaper']
                     if p is None: continue
                     try:
-                        print('\t'.join(map(one_line_ify, [p['externalIds']['CorpusId'] if 'externalIds' in p and not p['externalIds'] is None and 'CorpusId' in p['externalIds'] else "NA",
+                        print('\t'.join(map(one_line_ify, [my_id,
+                                                           p['externalIds']['CorpusId'] if 'externalIds' in p and not p['externalIds'] is None and 'CorpusId' in p['externalIds'] else "NA",
                                                            p['year'] if 'year' in p else "NA", 
                                                            p['citationCount'] if 'citationCount' in p else "NA", 
                                                            p['referenceCount'] if 'referenceCount' in p else "NA", 
@@ -84,6 +85,9 @@ def do_it(my_id, low, hi):
                     except:
                         print('*** ERROR ***: ' + json.dumps(rec), file=outf)
 
+
+if args.output_format == 'text':
+    print('citedPaper\tciting\tyear\tcitations\treferences\ttitle\tcitingSentences', file=outf)
 
 for line in sys.stdin:
     query=line.rstrip()

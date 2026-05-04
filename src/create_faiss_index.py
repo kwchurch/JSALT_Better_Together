@@ -14,7 +14,7 @@ from sklearn.metrics.pairwise import euclidean_distances
 
 t0 = time.time()
 
-print('apply_faiss.py: ' + str(sys.argv), file=sys.stderr)
+print('create_faiss_index.py: ' + str(sys.argv), file=sys.stderr)
 sys.stderr.flush()
 
 # assumes the input directory contain 
@@ -43,8 +43,9 @@ def record_size_from_dir(dir):
 
 def map_from_dir(dir):
     fn = dir + '/map.old_to_new.i'
-    fn_len = os.path.getsize(fn)
-    return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
+    if os.path.exists(fn):
+        fn_len = os.path.getsize(fn)
+        return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
 
 def embedding_from_dir(dir, K):
     fn = dir + '/embedding.norm.f'

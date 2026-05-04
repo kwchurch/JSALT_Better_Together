@@ -6,7 +6,7 @@
 # ~/venv/gft/lib/python3.8/site-packages/nodevectors/prone.py
 
 import numpy as np
-import csrgraph as cg
+# import csrgraph as cg
 from scipy import sparse,special
 from scipy.sparse import load_npz, csr_matrix, save_npz
 from sklearn import preprocessing

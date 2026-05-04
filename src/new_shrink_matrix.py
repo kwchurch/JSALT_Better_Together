@@ -12,7 +12,7 @@ sys.stderr.flush()
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-G", "--graph", help=".npz file", required=True)
+parser.add_argument("-G", "--graph", help="<file>.npz or <file>.[XY].i", required=True)
 parser.add_argument("--citations", help=".npy file", default=None)
 parser.add_argument("-o", "--output", help="output filename", required=True)
 parser.add_argument("-T", "--threshold", type=int, help="threshold on size on number of citations (defaults to 0)", default=0)
