@@ -21,6 +21,10 @@ parser.add_argument("--make_symmetric", action='store_true')
 args = parser.parse_args()
 
 def map_ints(fn):
+    # fn_len = os.path.getsize(fn)
+    return np.memmap(fn, dtype=int, mode='r')
+
+def old_map_ints(fn):
     fn_len = os.path.getsize(fn)
     return np.memmap(fn, dtype=np.int32, shape=(int(fn_len/4)), mode='r')
 
@@ -29,8 +33,10 @@ def my_load(f):
     sys.stderr.flush()
     if f.endswith('.npz'):
         return scipy.sparse.load_npz(f)
-    X = map_ints(f + '.X.i')
-    Y = map_ints(f + '.Y.i')
+    # X = map_ints(f + '.X.i')
+    # Y = map_ints(f + '.Y.i')
+    X = map_ints(f + '.X')
+    Y = map_ints(f + '.Y')
     N = 1+max(np.max(X), np.max(Y))
     V = np.ones(len(X), dtype=bool)
     return scipy.sparse.csr_matrix((V, (X, Y)), shape=(N, N), dtype=bool)

@@ -16,7 +16,7 @@ sys.stderr.flush()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input_directory", help="a directory", required=True)
-parser.add_argument("--batch_size", type=int, help="do it in pieces", default=None)
+parser.add_argument("--batch_size", type=int, help="do it in pieces", default=10000)
 args = parser.parse_args()
 
 def record_size_from_dir(dir):
